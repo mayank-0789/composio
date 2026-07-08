@@ -6,6 +6,9 @@
 # Dependencies
 node_modules/
 
+# SDD internal scratch (ledger, task briefs, review diffs)
+.superpowers/
+
 # Build output
 dist/
 public/
