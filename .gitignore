@@ -1,0 +1,18 @@
+# Secrets — never commit
+.env
+.env.local
+*.local
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+public/
+site/dist/
+
+# OS / editor
+.DS_Store
+*.log
+.vscode/
+.idea/
