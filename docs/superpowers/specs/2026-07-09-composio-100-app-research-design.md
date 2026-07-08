@@ -128,7 +128,12 @@ For each app, Claude runs a short **tool-calling loop** with Composio tools:
 
 - **Model:** Claude **Sonnet 5** for research/extraction (accuracy matters, volume is only 100).
 - **Concurrency:** ~5–8 apps in parallel, rate-limit aware.
-- **Caching:** every search/scrape response cached to `data/raw/<id>/` so reruns and `--dry-run` are deterministic and free.
+- **Caching (two layers, for reproducibility + cost):**
+  - *(a) Web I/O* — every search/scrape response cached to `data/raw/<id>/`, freezing the evidence snapshot.
+  - *(b) LLM output* — each app's extracted record cached content-addressed by `hash(model + prompt version + inputs)`.
+  - A **`--dry-run` / cache-hit replay returns byte-identical results at zero cost** (reads frozen evidence + saved answers; recomputes nothing).
+  - A **cold re-run that re-hits the web + LLM is NOT guaranteed identical**: the live web changes, and Claude is only *near*-deterministic even at `temperature: 0` (provider-side batching/FP). We therefore **pin the model ID**, set `temperature: 0`, and **commit the cache + `results.json`/`verified.json`** so the *reported* run is exactly reproducible by the reviewer.
+  - A **`--refresh` flag** intentionally busts the cache when fresh data is wanted.
 - **Human-in-the-loop (reported honestly):** the agent flags low-confidence / ambiguous cases for human adjudication — expected on obscure fintech (Paygent, iPayX, fanbasis), OSS-vs-SaaS traps (Sherlock, Mermaid CLI), and enterprise-gated apps (PitchBook, NotebookLM).
 
 ## 8. Verification loops (the crux — graded hardest)
