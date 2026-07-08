@@ -8,25 +8,33 @@ import { join } from "node:path";
 const cache = () => createFileCache(mkdtempSync(join(tmpdir(), "cx-")));
 
 describe("createSearcher", () => {
-  it("maps COMPOSIO_SEARCH results to SearchResult[] and caches", async () => {
+  it("maps COMPOSIO_SEARCH_WEB answer + citations to WebSearch and caches", async () => {
     const execute = vi.fn().mockResolvedValue({
-      data: { results: [{ title: "Docs", url: "https://x.com", content: "auth via api key" }] },
+      data: { answer: "Stripe uses API keys via HTTP Basic.", citations: [{ title: "Auth", url: "https://stripe.com/docs" }] },
     });
     const s = createSearcher({ execute }, cache());
-    const out = await s.search("x API auth");
-    expect(out[0]).toEqual({ title: "Docs", url: "https://x.com", snippet: "auth via api key" });
+    const out = await s.search("stripe auth");
+    expect(out.answer).toBe("Stripe uses API keys via HTTP Basic.");
+    expect(out.results[0]).toEqual({ title: "Auth", url: "https://stripe.com/docs", snippet: "" });
     expect(execute).toHaveBeenCalledOnce();
   });
+  it("drops citations without an http(s) url", async () => {
+    const execute = vi.fn().mockResolvedValue({
+      data: { answer: "x", citations: [{ title: "bad", url: "notaurl" }, { title: "ok", url: "https://a.com" }] },
+    });
+    const out = await createSearcher({ execute }, cache()).search("q");
+    expect(out.results.map((r) => r.url)).toEqual(["https://a.com"]);
+  });
   it("does not re-call execute on a cache hit", async () => {
-    const execute = vi.fn().mockResolvedValue({ data: { results: [] } });
+    const execute = vi.fn().mockResolvedValue({ data: { answer: "", citations: [] } });
     const c = cache();
     await createSearcher({ execute }, c).search("same query");
     await createSearcher({ execute }, c).search("same query");
     expect(execute).toHaveBeenCalledOnce();
   });
-  it("returns [] instead of throwing when the response shape is unexpected", async () => {
-    const execute = vi.fn().mockResolvedValue({ data: { items: [{ title: "x" }] } });
+  it("returns empty answer/results instead of throwing on an unexpected shape", async () => {
+    const execute = vi.fn().mockResolvedValue({ data: { foo: "bar" } });
     const out = await createSearcher({ execute }, cache()).search("q");
-    expect(out).toEqual([]);
+    expect(out).toEqual({ answer: "", results: [] });
   });
 });

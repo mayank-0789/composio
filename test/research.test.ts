@@ -15,10 +15,12 @@ const extracted = {
   confidence: 0.9, flags: [],
 };
 
+const webSearch = () => ({ answer: "Stripe uses API keys for auth.", results: [{ title: "Docs", url: "https://stripe.com/docs/api", snippet: "" }] });
+
 describe("researchApp", () => {
   it("assembles evidence, extracts, and returns a valid AppResearch with id/name merged", async () => {
     const deps = {
-      search: { search: vi.fn().mockResolvedValue([{ title: "Docs", url: "https://stripe.com/docs/api", snippet: "api key auth" }]) },
+      search: { search: vi.fn().mockResolvedValue(webSearch()) },
       scrape: { scrape: vi.fn().mockResolvedValue({ url: "https://stripe.com/docs/api", markdown: "# API\nUse your API key." }) },
       llm: { extract: vi.fn().mockResolvedValue(extracted) },
     };
@@ -30,18 +32,18 @@ describe("researchApp", () => {
     expect(deps.scrape.scrape).toHaveBeenCalled();
   });
 
-  it("feeds the scraped docs and search snippets into the extraction prompt", async () => {
+  it("feeds the search answer, citation URLs, and scraped docs into the extraction prompt", async () => {
     const deps = {
-      search: { search: vi.fn().mockResolvedValue([{ title: "Docs", url: "https://stripe.com/docs/api", snippet: "api key auth" }]) },
+      search: { search: vi.fn().mockResolvedValue(webSearch()) },
       scrape: { scrape: vi.fn().mockResolvedValue({ url: "https://stripe.com/docs/api", markdown: "# API\nUse your API key." }) },
       llm: { extract: vi.fn().mockResolvedValue(extracted) },
     };
     await researchApp(app, deps as any);
     const passed: any = deps.llm.extract.mock.calls[0][0];
     expect(passed.model).toBe("claude-sonnet-5");
-    expect(passed.user).toContain("Use your API key.");
+    expect(passed.user).toContain("Stripe uses API keys for auth.");
     expect(passed.user).toContain("https://stripe.com/docs/api");
-    expect(passed.user).toContain("api key auth");
+    expect(passed.user).toContain("Use your API key.");
   });
 
   it("survives a failed search without aborting the whole app", async () => {

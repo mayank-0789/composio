@@ -7,7 +7,7 @@ const Extracted = AppResearch.omit({ id: true, name: true, website: true, catego
 
 export function buildResearchPrompt(app: AppInput, evidence: string): { system: string; user: string } {
   const system =
-    "You research SaaS apps for an AI-agent tooling company. Given search snippets and scraped docs, " +
+    "You research SaaS apps for an AI-agent tooling company. Given web-search answers and scraped docs, " +
     "determine auth methods, whether a developer can self-serve credentials, the API surface, whether an " +
     "MCP server exists, and whether an agent toolkit is buildable today. Cite evidence URLs from the material. " +
     "Set confidence honestly (low when the material is thin). Prefer 'unknown' over guessing.";
@@ -20,16 +20,19 @@ export async function researchApp(
   deps: { search: Searcher; scrape: Scraper; llm: Llm },
 ): Promise<AppResearch> {
   const queries = [
-    `${app.name} API documentation authentication`,
-    `${app.name} pricing free tier developer API access`,
+    `${app.name} API documentation authentication method`,
+    `${app.name} pricing free tier developer API access self-serve`,
     `${app.name} MCP server model context protocol`,
   ];
-  const searchHits = (await Promise.all(queries.map((q) => deps.search.search(q).catch(() => [])))).flat();
-  const urls = dedupe(searchHits.map((h) => h.url).filter(Boolean)).slice(0, 4);
+  const searches = await Promise.all(queries.map((q) => deps.search.search(q).catch(() => ({ answer: "", results: [] }))));
+  const answers = searches.map((s, i) => (s.answer ? `SEARCH — ${queries[i]}\n${s.answer}` : "")).filter(Boolean);
+  const hits = searches.flatMap((s) => s.results);
+  const urls = dedupe(hits.map((h) => h.url).filter(Boolean)).slice(0, 2);
   const pages = await Promise.all(urls.map((u) => deps.scrape.scrape(u).catch(() => null)));
 
   const evidence = [
-    ...searchHits.slice(0, 12).map((h) => `- ${h.title} — ${h.url}\n  ${h.snippet}`),
+    ...answers,
+    ...hits.slice(0, 12).map((h) => `- ${h.title} — ${h.url}`),
     ...pages.filter((p): p is NonNullable<typeof p> => p !== null).map((p) => `--- ${p.url} ---\n${p.markdown.slice(0, 4000)}`),
   ].join("\n\n");
 
