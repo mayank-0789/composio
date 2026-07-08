@@ -18,7 +18,7 @@ describe("createLlm.extract", () => {
     const body: any = create.mock.calls[0][0];
     expect(body.tools[0].input_schema.type).toBe("object");
     expect(body.tools[0].input_schema.properties).toHaveProperty("auth");
-    expect(body.temperature).toBe(0);
+    expect(body.temperature).toBeUndefined();
   });
   it("returns validated tool_use input and caches it", async () => {
     const create = vi.fn().mockResolvedValue(toolUse({ auth: "API key" }));

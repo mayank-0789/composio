@@ -25,7 +25,7 @@ export function createLlm(deps: { apiKey: string; client?: AnthropicLike }, cach
       let lastErr = "";
       for (let attempt = 0; attempt < 2; attempt++) {
         const res = await client.messages.create({
-          model: args.model, max_tokens: 4096, temperature: 0,
+          model: args.model, max_tokens: 4096,
           system: args.system,
           tools: [{ name: tool, description: "Emit the structured result.", input_schema: inputSchema }],
           tool_choice: { type: "tool", name: tool },
