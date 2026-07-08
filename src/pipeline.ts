@@ -14,6 +14,7 @@ import { computeClusters } from "./cluster.js";
 
 const STAGES = ["all", "research", "verify", "cluster"] as const;
 type Stage = (typeof STAGES)[number];
+const CONCURRENCY = 5;
 
 export function parseArgs(argv: string[]) {
   const has = (f: string) => argv.includes(f);
@@ -23,6 +24,14 @@ export function parseArgs(argv: string[]) {
   const limNum = val("--limit") !== undefined ? Number(val("--limit")) : undefined;
   const limit = limNum !== undefined && Number.isFinite(limNum) && limNum > 0 ? limNum : undefined;
   return { stage, dryRun: has("--dry-run"), refresh: has("--refresh"), limit };
+}
+
+async function inBatches<T, R>(items: T[], size: number, fn: (item: T) => Promise<R>): Promise<R[]> {
+  const out: R[] = [];
+  for (let i = 0; i < items.length; i += size) {
+    out.push(...await Promise.all(items.slice(i, i + size).map(fn)));
+  }
+  return out;
 }
 
 function env(k: string): string {
@@ -42,12 +51,13 @@ async function runResearch(opts: { dryRun: boolean; refresh: boolean; limit?: nu
   };
   let apps = loadApps();
   if (opts.limit) apps = apps.slice(0, opts.limit);
-  const out: AppResearch[] = [];
-  for (const app of apps) {
-    try { out.push(await researchApp(app, deps)); console.log(`ok ${app.id} ${app.name}`); }
-    catch (e) { console.error(`FAIL ${app.id} ${app.name}: ${(e as Error).message}`); }
-  }
+  const results = await inBatches(apps, CONCURRENCY, async (app) => {
+    try { const r = await researchApp(app, deps); console.log(`ok ${app.id} ${app.name}`); return r; }
+    catch (e) { console.error(`FAIL ${app.id} ${app.name}: ${(e as Error).message}`); return null; }
+  });
+  const out = results.filter((x): x is AppResearch => x !== null).sort((a, b) => a.id - b.id);
   writeFileSync("data/results.json", JSON.stringify(out, null, 2));
+  console.log(`research done: ${out.length}/${apps.length}`);
 }
 
 async function runVerify(opts: { dryRun: boolean; refresh: boolean }) {
@@ -56,8 +66,7 @@ async function runVerify(opts: { dryRun: boolean; refresh: boolean }) {
     const cache = createFileCache("data/raw", { refresh: opts.refresh });
     const llm = createLlm({ apiKey: env("ANTHROPIC_API_KEY") }, cache);
     const scraper = createScraper({ apiKey: env("FIRECRAWL_API_KEY") }, cache);
-    const revised: AppResearch[] = [];
-    for (const r of records) {
+    const revised = await inBatches(records, CONCURRENCY, async (r) => {
       const pages = await Promise.all(r.evidence.map((e) =>
         scraper.scrape(e.url)
           .then((p) => `--- ${e.url} ---\n${p.markdown.slice(0, 4000)}`)
@@ -73,9 +82,10 @@ async function runVerify(opts: { dryRun: boolean; refresh: boolean }) {
           rev = { ...rev, self_serve: check.self_serve, self_serve_notes: `[loop2] ${check.signal} @ ${check.evidence_url}` };
         } catch {}
       }
-      revised.push(rev);
       console.log(`verified ${r.id} ${r.name}`);
-    }
+      return rev;
+    });
+    revised.sort((a, b) => a.id - b.id);
     writeFileSync("data/verified.json", JSON.stringify(revised, null, 2));
   }
   const verified = AppResearch.array().parse(JSON.parse(readFileSync("data/verified.json", "utf8")));
@@ -84,11 +94,13 @@ async function runVerify(opts: { dryRun: boolean; refresh: boolean }) {
   const firstPass = scoreAccuracy(records, truth);
   const afterLoops = scoreAccuracy(verified, truth);
   writeFileSync("data/accuracy.json", JSON.stringify({ firstPass, afterLoops }, null, 2));
+  console.log(`accuracy: first=${(firstPass.overall * 100).toFixed(0)}% verified=${(afterLoops.overall * 100).toFixed(0)}%`);
 }
 
 function runCluster() {
   const verified = AppResearch.array().parse(JSON.parse(readFileSync("data/verified.json", "utf8")));
   writeFileSync("data/clusters.json", JSON.stringify(computeClusters(verified), null, 2));
+  console.log("clusters written");
 }
 
 async function main() {
