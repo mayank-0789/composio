@@ -59,5 +59,4 @@ src/      pipeline modules (schema, cache, SDK wrappers, research, verify/, clus
 site/     self-contained HTML case-study renderer
 test/     vitest unit tests
 data/     apps.json input + cached & generated outputs
-docs/     design spec + task-by-task implementation plan
 ```

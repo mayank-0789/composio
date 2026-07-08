@@ -19,3 +19,5 @@ site/dist/
 *.log
 .vscode/
 .idea/
+
+docs/
