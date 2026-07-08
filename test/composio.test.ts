@@ -17,4 +17,16 @@ describe("createSearcher", () => {
     expect(out[0]).toEqual({ title: "Docs", url: "https://x.com", snippet: "auth via api key" });
     expect(execute).toHaveBeenCalledOnce();
   });
+  it("does not re-call execute on a cache hit", async () => {
+    const execute = vi.fn().mockResolvedValue({ data: { results: [] } });
+    const c = cache();
+    await createSearcher({ execute }, c).search("same query");
+    await createSearcher({ execute }, c).search("same query");
+    expect(execute).toHaveBeenCalledOnce();
+  });
+  it("returns [] instead of throwing when the response shape is unexpected", async () => {
+    const execute = vi.fn().mockResolvedValue({ data: { items: [{ title: "x" }] } });
+    const out = await createSearcher({ execute }, cache()).search("q");
+    expect(out).toEqual([]);
+  });
 });

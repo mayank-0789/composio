@@ -8,12 +8,12 @@ export type SelfServeCheck = { app_id: number; self_serve: SelfServeValue; signa
 
 export function classifySelfServe(md: string): { hint: SelfServeValue; matched: string } | null {
   const t = md.toLowerCase();
-  const gated = ["contact sales", "request access", "request a demo", "talk to sales", "contact us for pricing"];
-  const free = ["start for free", "sign up free", "free tier", "get your api key", "create a free account", "free plan"];
-  const trial = ["free trial", "start your trial", "try free for"];
-  for (const p of gated) if (t.includes(p)) return { hint: "partnership-contact-sales", matched: p };
+  const free = ["start for free", "sign up free", "sign up for free", "free tier", "get your api key", "create a free account", "free plan"];
+  const trial = ["free trial", "start your trial", "try free for", "start free trial"];
+  const gated = ["contact sales", "request access", "request a demo", "talk to sales", "contact us for pricing", "book a demo"];
   for (const p of free) if (t.includes(p)) return { hint: "self-serve-free", matched: p };
   for (const p of trial) if (t.includes(p)) return { hint: "self-serve-trial", matched: p };
+  for (const p of gated) if (t.includes(p)) return { hint: "partnership-contact-sales", matched: p };
   return null;
 }
 

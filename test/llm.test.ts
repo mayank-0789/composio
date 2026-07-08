@@ -11,10 +11,18 @@ const schema = z.object({ auth: z.string() });
 const toolUse = (input: object) => ({ content: [{ type: "tool_use", name: "emit", input }] });
 
 describe("createLlm.extract", () => {
+  it("passes a JSON Schema derived from the zod schema as the tool input_schema", async () => {
+    const create = vi.fn().mockResolvedValue(toolUse({ auth: "API key" }));
+    const llm = createLlm({ apiKey: "x", client: { messages: { create } } }, cache());
+    await llm.extract({ model: "claude-sonnet-5", system: "s", user: "u", schema, schemaName: "auth" });
+    const body: any = create.mock.calls[0][0];
+    expect(body.tools[0].input_schema.type).toBe("object");
+    expect(body.tools[0].input_schema.properties).toHaveProperty("auth");
+    expect(body.temperature).toBe(0);
+  });
   it("returns validated tool_use input and caches it", async () => {
     const create = vi.fn().mockResolvedValue(toolUse({ auth: "API key" }));
-    const client = { messages: { create } };
-    const llm = createLlm({ apiKey: "x", client }, cache());
+    const llm = createLlm({ apiKey: "x", client: { messages: { create } } }, cache());
     const out = await llm.extract({ model: "claude-sonnet-5", system: "s", user: "u", schema, schemaName: "auth" });
     expect(out).toEqual({ auth: "API key" });
     expect(create).toHaveBeenCalledOnce();

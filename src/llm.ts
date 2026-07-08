@@ -1,5 +1,6 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { z } from "zod";
+import { zodToJsonSchema } from "zod-to-json-schema";
 import type { Cache } from "./cache.js";
 
 export interface AnthropicLike {
@@ -19,14 +20,16 @@ export function createLlm(deps: { apiKey: string; client?: AnthropicLike }, cach
       const hit = await cache.get<unknown>("llm", key);
       if (hit !== null) return args.schema.parse(hit);
       const tool = args.toolName ?? "emit";
+      const inputSchema = zodToJsonSchema(args.schema, { $refStrategy: "none" }) as Record<string, unknown>;
+      delete inputSchema["$schema"];
       let lastErr = "";
       for (let attempt = 0; attempt < 2; attempt++) {
         const res = await client.messages.create({
-          model: args.model, max_tokens: 2048, temperature: 0,
+          model: args.model, max_tokens: 4096, temperature: 0,
           system: args.system,
-          tools: [{ name: tool, description: "Emit the structured result.", input_schema: { type: "object" } }],
+          tools: [{ name: tool, description: "Emit the structured result.", input_schema: inputSchema }],
           tool_choice: { type: "tool", name: tool },
-          messages: [{ role: "user", content: attempt === 0 ? args.user : `${args.user}\n\nPrevious output was invalid: ${lastErr}. Return valid data.` }],
+          messages: [{ role: "user", content: attempt === 0 ? args.user : `${args.user}\n\nPrevious output was invalid: ${lastErr}. Return valid data matching the tool schema exactly.` }],
         });
         const block = (res.content ?? []).find((b) => b.type === "tool_use");
         const parsed = args.schema.safeParse(block?.input);

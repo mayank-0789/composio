@@ -16,7 +16,7 @@ export function createScraper(deps: { apiKey: string; client?: FirecrawlLike }, 
       if (hit) return hit;
       const res = await client.scrapeUrl(url, { formats: ["markdown"] });
       const page: ScrapedPage = { url, markdown: res.markdown ?? "", title: res.metadata?.title };
-      await cache.set("scrape", key, page);
+      if (page.markdown) await cache.set("scrape", key, page);
       return page;
     },
   };

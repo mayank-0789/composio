@@ -19,9 +19,13 @@ export function createSearcher(deps: { execute: ExecFn }, cache: Cache): Searche
       const hit = await cache.get<SearchResult[]>("search", key);
       if (hit) return hit;
       const res = await deps.execute("COMPOSIO_SEARCH_SEARCH", { query });
-      const rows = res?.data?.results ?? res?.data ?? [];
+      const data = res?.data;
+      const rows: any[] = Array.isArray(data?.results) ? data.results
+        : Array.isArray(data) ? data
+        : Array.isArray(res?.results) ? res.results
+        : [];
       const out: SearchResult[] = rows.map((r: any) => ({
-        title: r.title ?? "", url: r.url ?? r.link ?? "", snippet: r.content ?? r.snippet ?? "",
+        title: r.title ?? "", url: r.url ?? r.link ?? "", snippet: r.content ?? r.snippet ?? r.description ?? "",
       }));
       await cache.set("search", key, out);
       return out;

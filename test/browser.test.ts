@@ -10,6 +10,10 @@ describe("classifySelfServe", () => {
     const r = classifySelfServe("Start for free. Sign up and get your API key instantly.");
     expect(r?.hint).toBe("self-serve-free");
   });
+  it("prefers self-serve when a page shows both a free tier and a contact-sales CTA", () => {
+    const r = classifySelfServe("Start for free. Enterprise? Contact sales to talk to sales.");
+    expect(r?.hint).toBe("self-serve-free");
+  });
   it("returns null when ambiguous", () => {
     expect(classifySelfServe("We build software for teams.")).toBeNull();
   });

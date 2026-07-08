@@ -24,7 +24,7 @@ export async function researchApp(
     `${app.name} pricing free tier developer API access`,
     `${app.name} MCP server model context protocol`,
   ];
-  const searchHits = (await Promise.all(queries.map((q) => deps.search.search(q)))).flat();
+  const searchHits = (await Promise.all(queries.map((q) => deps.search.search(q).catch(() => [])))).flat();
   const urls = dedupe(searchHits.map((h) => h.url).filter(Boolean)).slice(0, 4);
   const pages = await Promise.all(urls.map((u) => deps.scrape.scrape(u).catch(() => null)));
 

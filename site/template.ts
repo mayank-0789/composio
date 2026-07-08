@@ -9,6 +9,8 @@ type PageData = { records: AppResearch[]; clusters: Clusters; accuracy: Accuracy
 const esc = (s: unknown): string =>
   String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
+const safeUrl = (u: unknown): string => { const s = String(u ?? ""); return /^https?:\/\//i.test(s) ? s : ""; };
+
 const pct = (n: number) => Math.round(n * 100);
 
 function selfServeClass(v: string): string {
@@ -26,8 +28,8 @@ function buildClass(v: string): string {
 function matrixRows(records: AppResearch[]): string {
   return records.map((r) => {
     const auth = r.auth_methods.map((a) => esc(a.method)).join(", ");
-    const ev = r.evidence[0]?.url ? `<a href="${esc(r.evidence[0].url)}" target="_blank" rel="noopener">docs ↗</a>` : "";
-    const mcp = r.existing_mcp.exists === "yes" ? "yes" : r.existing_mcp.exists;
+    const evUrl = safeUrl(r.evidence[0]?.url);
+    const ev = evUrl ? `<a href="${esc(evUrl)}" target="_blank" rel="noopener">docs ↗</a>` : "";
     return `<tr data-category="${esc(r.category)}" data-name="${esc(r.name.toLowerCase())}">
       <td class="num">${r.id}</td>
       <td class="app"><span class="app-name">${esc(r.name)}</span><span class="one-liner">${esc(r.one_liner)}</span></td>
@@ -35,7 +37,7 @@ function matrixRows(records: AppResearch[]): string {
       <td class="mono">${auth}</td>
       <td><span class="badge ${selfServeClass(r.self_serve)}">${esc(r.self_serve)}</span></td>
       <td class="mono">${esc(r.api_surface.type)}<span class="dim"> / ${esc(r.api_surface.breadth)}</span></td>
-      <td class="mono">${esc(mcp)}</td>
+      <td class="mono">${esc(r.existing_mcp.exists)}</td>
       <td><span class="badge ${buildClass(r.buildability)}">${esc(r.buildability)}</span></td>
       <td class="blocker">${r.main_blocker ? esc(r.main_blocker) : "<span class=\"dim\">—</span>"}</td>
       <td>${ev}</td>
@@ -80,7 +82,8 @@ function demoBlock(demo?: Demo): string {
   }
   const steps = demo.steps.map((s) =>
     `<div class="step"><span class="mono">${esc(s.tool ?? "tool")}</span></div>`).join("");
-  const link = demo.pageUrl ? `<p><a href="${esc(demo.pageUrl)}" target="_blank" rel="noopener">Open the page the agent created ↗</a></p>` : "";
+  const linkUrl = safeUrl(demo.pageUrl);
+  const link = linkUrl ? `<p><a href="${esc(linkUrl)}" target="_blank" rel="noopener">Open the page the agent created ↗</a></p>` : "";
   return `<div class="demo">${steps}</div>${link}`;
 }
 
@@ -188,7 +191,7 @@ ${headlineList(clusters)}
 
 <section>
 <p class="kicker">The findings</p>
-<h2>All 100 apps</h2>
+<h2>All ${records.length} apps</h2>
 <div class="controls">
 <input id="q" type="text" placeholder="Search app…" aria-label="Search apps">
 <select id="cat" aria-label="Filter by category"><option value="">All categories</option>${categories.map((c) => `<option value="${esc(c)}">${esc(c)}</option>`).join("")}</select>

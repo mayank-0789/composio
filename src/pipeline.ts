@@ -8,14 +8,20 @@ import { createScraper } from "./firecrawl.js";
 import { createLlm } from "./llm.js";
 import { researchApp } from "./research.js";
 import { criticReview } from "./verify/critic.js";
+import { checkSelfServe } from "./verify/browser.js";
 import { scoreAccuracy, type GroundTruth } from "./verify/audit.js";
 import { computeClusters } from "./cluster.js";
+
+const STAGES = ["all", "research", "verify", "cluster"] as const;
+type Stage = (typeof STAGES)[number];
 
 export function parseArgs(argv: string[]) {
   const has = (f: string) => argv.includes(f);
   const val = (k: string) => argv.find((a) => a.startsWith(`${k}=`))?.split("=")[1];
-  const stage = (val("--stage") as "all" | "research" | "verify" | "cluster") ?? "all";
-  const limit = val("--limit") ? Number(val("--limit")) : undefined;
+  const rawStage = val("--stage");
+  const stage: Stage = (STAGES as readonly string[]).includes(rawStage ?? "") ? (rawStage as Stage) : "all";
+  const limNum = val("--limit") !== undefined ? Number(val("--limit")) : undefined;
+  const limit = limNum !== undefined && Number.isFinite(limNum) && limNum > 0 ? limNum : undefined;
   return { stage, dryRun: has("--dry-run"), refresh: has("--refresh"), limit };
 }
 
@@ -49,11 +55,26 @@ async function runVerify(opts: { dryRun: boolean; refresh: boolean }) {
   if (!opts.dryRun) {
     const cache = createFileCache("data/raw", { refresh: opts.refresh });
     const llm = createLlm({ apiKey: env("ANTHROPIC_API_KEY") }, cache);
+    const scraper = createScraper({ apiKey: env("FIRECRAWL_API_KEY") }, cache);
     const revised: AppResearch[] = [];
     for (const r of records) {
-      const evidence = r.evidence.map((e) => `${e.url}: ${e.supports}`).join("\n");
-      try { revised.push((await criticReview(r, evidence, { llm })).revised); }
-      catch { revised.push(r); }
+      const pages = await Promise.all(r.evidence.map((e) =>
+        scraper.scrape(e.url)
+          .then((p) => `--- ${e.url} ---\n${p.markdown.slice(0, 4000)}`)
+          .catch(() => `--- ${e.url} --- (unavailable)`)));
+      const evidenceText = pages.join("\n\n");
+      let rev: AppResearch;
+      try { rev = (await criticReview(r, evidenceText, { llm })).revised; }
+      catch { rev = r; }
+      if (rev.confidence < 0.6) {
+        const homepage = `https://${rev.website.split("/")[0]}`;
+        try {
+          const check = await checkSelfServe(rev, homepage, { scrape: scraper, llm });
+          rev = { ...rev, self_serve: check.self_serve, self_serve_notes: `[loop2] ${check.signal} @ ${check.evidence_url}` };
+        } catch {}
+      }
+      revised.push(rev);
+      console.log(`verified ${r.id} ${r.name}`);
     }
     writeFileSync("data/verified.json", JSON.stringify(revised, null, 2));
   }
