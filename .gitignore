@@ -23,3 +23,6 @@ docs/
 
 # scraped doc pages mirror third-party docs verbatim (incl. example API keys); re-fetched on cold run
 data/raw/scrape/
+
+# Local Netlify folder
+.netlify

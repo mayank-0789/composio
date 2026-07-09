@@ -75,10 +75,16 @@
     "blocker": "Salesforce's official Hosted MCP Server is still in pilot, so production-grade MCP integration may require using the Beta DX MCP server or building a custom MCP wrapper around the stable REST/GraphQL/SOAP APIs in the interim.",
     "count": 1
   },
+  "blockerThemes": {
+    "enterprise / partnership / approval gate": 17,
+    "requires a paid plan": 5,
+    "MCP still maturing (pilot / beta / none)": 1,
+    "no hosted public API (open-source / CLI)": 5
+  },
   "headlines": [
     "OAuth2 is the dominant auth method (71 of 100 apps) — a managed-auth layer covers most of the field.",
     "76/100 apps are self-serve — the easy wins; the rest need paid plans or outreach.",
-    "72/100 apps are buildable into an agent toolkit today; 26 come with caveats and 2 are blocked outright.",
-    "70/100 apps are instant wins — self-serve credentials AND buildable now — while 14 need a paid plan, admin approval, or a sales conversation first."
+    "70/100 apps are instant wins — self-serve credentials AND buildable now — while 14 need a paid plan, admin approval, or a sales conversation first.",
+    "The most common blocker isn't technical — it's enterprise / partnership / approval gate (17 of the 28 not-buildable-now apps); the work there is outreach, not engineering."
   ]
 }
