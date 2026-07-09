@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://growthengineer.ai/mcp-servers/intapp-celeste",
+  "reason": "There are dedicated MCP servers for DealCloud, though not a single generic public one. Two enterprise platforms provide MCP servers specifically for DealCloud integration: (1) Intapp's Celeste MCP server (part of their Celeste architecture, in limited release) which provides access to DealCloud CRM data, and (2) Louisa AI's MCP server that integrates DealCloud with AI clients like Claude, Cursor, and Microsoft Copilot to surface relationship graphs and opportunity data. Both require vendor enrollment and enterprise configuration due to the sensitive business data involved, but they are distinct, well-documented MCP server implementations for DealCloud."
+}

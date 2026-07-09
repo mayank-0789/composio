@@ -1,0 +1,45 @@
+{
+  "answer": "DataForSEO uses Basic Authentication to secure API requests [1][2]. You must provide your API login (the email used during registration) and your unique, automatically generated API password in the Authorization header of every request [1][2][3].\n\nTo authenticate, combine your login and password into the string login:password, then encode that entire string in Base64 [1][2]. Pass the result in the header as shown below [1][4]:\n\nAuthorization: Basic <base64_encoded_credentials>\n\nYou can obtain your credentials at the API Access tab in your account dashboard [1][3]. Do not pass credentials as URL parameters [1].",
+  "results": [
+    {
+      "title": "Authentication – DataForSEO API v.3",
+      "url": "https://docs.dataforseo.com/v3/auth/",
+      "snippet": ""
+    },
+    {
+      "title": "How to Authenticate with DataForSEO Google Search SERP API: API Key Setup and Code Examples – DataForSEO",
+      "url": "https://dataforseo.com/help-center/how-to-authenticate-with-dataforseo-google-search-serp-api-api-key-setup-and-code-examples",
+      "snippet": ""
+    },
+    {
+      "title": "A Kickstart Guide to Using DataForSEO APIs – DataForSEO",
+      "url": "https://dataforseo.com/blog/a-kickstart-guide-to-using-dataforseo-apis",
+      "snippet": ""
+    },
+    {
+      "title": "serp/endpoints – DataForSEO API v.3",
+      "url": "https://docs.dataforseo.com/v3/serp-endpoints/",
+      "snippet": ""
+    },
+    {
+      "title": "DataForSEO API v.3",
+      "url": "https://docs.dataforseo.com/v3/",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication – DataForSEO API v.2",
+      "url": "https://docs.dataforseo.com/v2/auth/",
+      "snippet": ""
+    },
+    {
+      "title": "DataForSEO API v.3",
+      "url": "https://dataforseo.com/docs",
+      "snippet": ""
+    },
+    {
+      "title": "README.md at master · dataforseo/PythonClient",
+      "url": "https://github.com/dataforseo/PythonClient/blob/master/README.md",
+      "snippet": ""
+    }
+  ]
+}

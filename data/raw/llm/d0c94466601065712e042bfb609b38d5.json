@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://github.com/ramp-public/ramp-mcp",
+  "reason": "Ramp has a dedicated official MCP server called \"ramp-mcp\" that exposes Ramp's Developer API capabilities over MCP. This server enables AI assistants to interact with Ramp's financial data through tools like load_transactions and execute_query, using an internal ETL pipeline and SQLite database. The server is available at https://github.com/ramp-public/ramp-mcp and requires authentication via Ramp API credentials. Additionally, Ramp offers a \"Developer MCP\" server that provides unauthenticated, read-only access to Ramp's public API documentation."
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "Several NotebookLM MCP servers exist, all functioning as bridges between the Model Context Protocol (MCP) and Google NotebookLM's unofficial API [1][2]. These servers allow AI assistants like Claude, Cursor, and VS Code to programmatically manage notebooks, ingest sources, and generate artifacts (audio overviews, quizzes, and slide decks) [3][4][5][2].\n\nWhile implementation details vary, most projects use a combination of the `notebooklm-py` library, browser automation (Playwright/Patchright), and a framework like FastMCP to handle tool exposure and auth via Google session cookies [3][1][2]. You can generally connect these servers to clients using either stdio or Streamable-HTTP transports [3][2]. To use one, install the chosen package, authenticate via the CLI, and register the server in your MCP client's configuration file [4][5][6][2].",
+  "results": [
+    {
+      "title": "mulyg/notebooklm-mcp",
+      "url": "https://github.com/mulyg/notebooklm-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Cezial/notebooklm-mcp-server",
+      "url": "https://github.com/Cezial/notebooklm-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "PleasePrompto/notebooklm-mcp",
+      "url": "https://github.com/PleasePrompto/notebooklm-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "jacob-bd/notebooklm-mcp-cli",
+      "url": "https://github.com/jacob-bd/notebooklm-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "myakwang/notebooklm-mcp",
+      "url": "https://github.com/myakwang/notebooklm-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "julianoczkowski/notebooklm-mcp-2026",
+      "url": "https://github.com/julianoczkowski/notebooklm-mcp-2026",
+      "snippet": ""
+    },
+    {
+      "title": "PavelGuzenfeld/notebooklm-mcp",
+      "url": "https://github.com/PavelGuzenfeld/mcp-notebooklm",
+      "snippet": ""
+    },
+    {
+      "title": "mukundajmera/notebooklm-mcp",
+      "url": "https://github.com/mukundajmera/notebooklm-mcp",
+      "snippet": ""
+    }
+  ]
+}

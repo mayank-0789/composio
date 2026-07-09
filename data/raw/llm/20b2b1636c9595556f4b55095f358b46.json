@@ -1,0 +1,50 @@
+{
+  "one_liner": "Copper CRM offers a REST-based Developer API secured by API keys (with HMAC-signed requests) or OAuth 2.0, but API access is gated behind paid Professional/Business plans rather than being free/self-serve.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Requires Authorization: ApiKey header plus X-Timestamp and X-Signature (HMAC-SHA256 of timestamp+method+path+body) headers on every request. Generated via System settings > API Keys in the Copper web app."
+    },
+    {
+      "method": "OAuth2",
+      "notes": "Authorization Code Grant flow producing a Bearer token; preferred for partner integrations rather than individual users."
+    }
+  ],
+  "self_serve": "paid-plan",
+  "self_serve_notes": "No permanent free tier for API access; API access is gated to Professional and Business subscription plans. A 14-day free trial (no credit card required) is available on paid plans, which would allow a developer to self-serve an API key during the trial period.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "medium",
+    "notes": "Platform API covers CRM entities such as people, companies, opportunities, projects, tasks, and orders. Endpoint structure uses /platform/ prefix; docs include Getting Started and API reference for entities."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://developer.copper.co/api-reference/getting-started"
+  },
+  "buildability": "buildable-with-caveats",
+  "main_blocker": "API access requires a paid Professional/Business subscription (though a no-credit-card 14-day trial can provide temporary self-serve access), and the API key auth scheme requires implementing HMAC-SHA256 request signing rather than simple bearer token auth.",
+  "evidence": [
+    {
+      "url": "https://developer.copper.com/introduction/authentication.html",
+      "supports": "Describes both API Key and OAuth2.0 authentication methods for the Copper Developer API."
+    },
+    {
+      "url": "https://developer.copper.co/api-reference/authentication",
+      "supports": "Details the required Authorization, X-Signature, and X-Timestamp headers and HMAC-SHA256 signature generation process for API key auth."
+    },
+    {
+      "url": "https://developer.copper.com/introduction/oauth/flow.html",
+      "supports": "Documents OAuth2.0 Authorization Code Grant flow for partner integrations."
+    },
+    {
+      "url": "https://copperpricing.com/",
+      "supports": "Indicates API access is gated behind paid Professional/Business plans with no permanent free tier, though trials are available."
+    }
+  ],
+  "confidence": 0.62,
+  "flags": [
+    "No official first-party MCP server confirmed; only third-party (ViaSocket, Zapier) and community MCP integrations found.",
+    "Self-serve API access effectively requires either a paid plan or use of the 14-day trial window.",
+    "HMAC request-signing adds implementation complexity beyond typical bearer-token APIs."
+  ]
+}

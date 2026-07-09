@@ -1,0 +1,45 @@
+{
+  "answer": "Pumble API authentication typically requires two headers for every request: x-app-token and token [1][2]. The x-app-token is your application's unique identifier [1][3], while the token is the access token generated for a specific user or bot [1][2].\n\nFor applications, Pumble uses OAuth2 [4][5]. To obtain an access token, you redirect the user to the Pumble consent screen [4][5]. After the user authorizes, they are redirected to your specified URL with a code parameter [4][5]. You then exchange this code, along with your clientSecret, at the endpoint below to receive the access token [4][5]:\n\n```\nPOST https://api-ga.pumble.com/oauth2/access\n```\n\nAlternatively, the Pumble API addon allows users to generate API keys directly within the Pumble workspace for simpler, direct requests [6].",
+  "results": [
+    {
+      "title": "API Client | Pumble SDK",
+      "url": "https://cake-com.github.io/pumble-node-sdk/api-client.html",
+      "snippet": ""
+    },
+    {
+      "title": "docs/api-client.md at 581a6e3e · CAKE-com/pumble-node-sdk",
+      "url": "https://github.com/CAKE-com/pumble-node-sdk/blob/581a6e3e/docs/api-client.md",
+      "snippet": ""
+    },
+    {
+      "title": "Overview | Pumble SDK",
+      "url": "https://cake-com.github.io/pumble-node-sdk/manifest.html",
+      "snippet": ""
+    },
+    {
+      "title": "Authorization | Pumble SDK",
+      "url": "https://cake-com.github.io/pumble-node-sdk/authorization.html",
+      "snippet": ""
+    },
+    {
+      "title": "Advanced Concepts - CAKE.com Marketplace Documentation",
+      "url": "https://dev-docs.marketplace.cake.com/pumble/build/advanced-concepts.html",
+      "snippet": ""
+    },
+    {
+      "title": "Pumble API Overview - Pumble Help",
+      "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+      "snippet": ""
+    },
+    {
+      "title": "Overview - CAKE.com Marketplace Documentation",
+      "url": "https://dev-docs.marketplace.cake.com/pumble/build/manifest.html",
+      "snippet": ""
+    },
+    {
+      "title": "Basic Concepts | Pumble SDK",
+      "url": "https://cake-com.github.io/pumble-node-sdk/basic-concepts.html",
+      "snippet": ""
+    }
+  ]
+}

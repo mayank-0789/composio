@@ -1,0 +1,45 @@
+{
+  "answer": "The Pinterest API is free to use with no subscription or per-call fees [1][2]. Access is granted through an application process rather than a self-serve tier selection [3][2].\n\nYou start with Trial access, which allows you to test endpoints in a sandbox environment where Pins are visible only to the creator [4][1]. To transition to a production-ready state, you must request Standard access by submitting a video demo of your app’s end-to-end OAuth authentication flow and live Pinterest integration for manual review [4][1][5]. Both tiers are free [1].",
+  "results": [
+    {
+      "title": "Pinterest API Pricing: Complete Guide for 2026 - Blotato",
+      "url": "https://www.blotato.com/blog/pinterest-api-pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Pinterest API Pricing: What You're Actually Paying For | Data365.co",
+      "url": "https://data365.co/blog/pinterest-api-pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Pinterest Developers | Welcome",
+      "url": "https://developers.pinterest.com/docs/overview/welcome/",
+      "snippet": ""
+    },
+    {
+      "title": "Pinterest Developers",
+      "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+      "snippet": ""
+    },
+    {
+      "title": "Frequently Asked Questions: Pinterest API - Developers - Pinterest Business Community",
+      "url": "https://community.pinterest.biz/t/frequently-asked-questions-pinterest-api/2083",
+      "snippet": ""
+    },
+    {
+      "title": "Developer guidelines | Pinterest Policy",
+      "url": "https://policy.pinterest.com/en/developer-guidelines",
+      "snippet": ""
+    },
+    {
+      "title": "Pinterest Developers",
+      "url": "https://developers.pinterest.com/docs/key-concepts/best-practices/",
+      "snippet": ""
+    },
+    {
+      "title": "Pinterest API Essentials",
+      "url": "https://rollout.com/integration-guides/pinterest/api-essentials",
+      "snippet": ""
+    }
+  ]
+}

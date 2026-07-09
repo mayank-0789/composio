@@ -1,0 +1,45 @@
+{
+  "answer": "The Sentry MCP server is a middleware service that bridges the Model Context Protocol to Sentry’s API, enabling AI agents to access performance data, manage issues, and trigger AI-driven analysis [1][2]. Sentry provides an official remote MCP server hosted on the Sentry platform, which is recommended for most users due to its support for OAuth and superior stability [2][3].\n\nFor configuration in clients supporting OAuth, use the URL https://mcp.sentry.dev/mcp [2]. For environments requiring local execution, you can use the `npx` command:\n\n```\nnpx -y mcp-remote@latest https://mcp.sentry.dev/mcp\n```\n\nSentry also offers tools to monitor and trace your MCP integrations [4]. While self-hosted or unofficial alternatives exist for specific use cases like private Sentry installations, the official remote server is the primary solution for standard workflows [5][6].",
+  "results": [
+    {
+      "title": "getsentry/sentry-mcp",
+      "url": "https://github.com/getsentry/sentry-mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "Yes, Sentry has an MCP Server (...and it’s pretty good) | Sentry Blog",
+      "url": "https://blog.sentry.io/yes-sentry-has-an-mcp-server-and-its-pretty-good/",
+      "snippet": ""
+    },
+    {
+      "title": "Architecture overview - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/learn/architecture",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://docs.sentry.dev/ai/monitoring/mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "getsentry/sentry-mcp-stdio",
+      "url": "https://github.com/getsentry/sentry-mcp-stdio",
+      "snippet": ""
+    },
+    {
+      "title": "stubbedev/sentry-mcp",
+      "url": "https://github.com/stubbedev/sentry-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "@sentry/mcp-server",
+      "url": "https://registry.npmjs.org/@sentry/mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "sentry-official/sentry-mcp",
+      "url": "https://github.com/sentry-official/sentry-mcp",
+      "snippet": ""
+    }
+  ]
+}

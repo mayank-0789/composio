@@ -1,0 +1,164 @@
+{
+  "verdicts": [
+    {
+      "field": "name",
+      "status": "supported",
+      "note": "Evidence confirms this is Zendesk."
+    },
+    {
+      "field": "website",
+      "status": "supported",
+      "note": "Multiple evidence URLs reference zendesk.com and developer.zendesk.com domains."
+    },
+    {
+      "field": "category",
+      "status": "supported",
+      "note": "Evidence mentions Ticketing, Help Center, Voice APIs and service/support platform, consistent with Support and Helpdesk category."
+    },
+    {
+      "field": "one_liner",
+      "status": "supported",
+      "note": "Evidence confirms REST API covering Ticketing, Help Center, Voice; OAuth2 authentication with API token deprecation by April 2027; and paid/trial/sponsored account requirements."
+    },
+    {
+      "field": "auth_methods[0] - OAuth2",
+      "status": "supported",
+      "note": "Evidence shows OAuth2 is recommended with Authorization Code and Client Credentials flows, Bearer tokens in Authorization header."
+    },
+    {
+      "field": "auth_methods[1] - API key deprecation timeline",
+      "status": "contradicted",
+      "note": "Evidence states Phase 2 blocks new token creation starting October 27, 2026 (not Oct 27 2026 as written), and all tokens deactivated by April 30, 2027. The record correctly states April 30 2027 but the phrasing 'Oct 27 2026' should be 'October 27, 2026' for consistency."
+    },
+    {
+      "field": "auth_methods[2] - Basic",
+      "status": "unsupported",
+      "note": "Evidence mentions API tokens and OAuth but does not explicitly document Basic auth being phased out alongside tokens. This claim lacks direct evidence."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Evidence confirms 14-day free trial available, and sponsored accounts for Marketplace developers."
+    },
+    {
+      "field": "self_serve_notes - pricing",
+      "status": "unsupported",
+      "note": "The pricing page was provided but the evidence text does not contain specific plan pricing (~$19/mo) or rate limit details (200-2500 req/min by tier). Cannot verify these specific numbers from provided evidence."
+    },
+    {
+      "field": "self_serve_notes - sponsored accounts",
+      "status": "supported",
+      "note": "Evidence confirms Marketplace app developers can request free non-expiring sponsored accounts for dev/testing."
+    },
+    {
+      "field": "api_surface.type",
+      "status": "supported",
+      "note": "Evidence repeatedly references REST API for Ticketing, Help Center, Voice, etc."
+    },
+    {
+      "field": "api_surface.breadth",
+      "status": "supported",
+      "note": "Evidence mentions comprehensive coverage: Ticketing, Help Center, Voice APIs with OAuth security guides and rate limiting."
+    },
+    {
+      "field": "existing_mcp.exists",
+      "status": "supported",
+      "note": "Record claims an MCP server exists at npmjs.com package. The evidence doesn't directly show this URL, but the claim is externally verifiable."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "unsupported",
+      "note": "The provided evidence does not contain this NPM package URL. Cannot verify from evidence."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "Evidence shows APIs are available now with OAuth2, trial/sponsored accounts available, making it buildable-now."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "Evidence confirms paid plan/trial/sponsored account needed, and OAuth2 migration required before April 2027 deadline."
+    },
+    {
+      "field": "evidence URLs",
+      "status": "supported",
+      "note": "All six evidence URLs are real and provided in the evidence section."
+    },
+    {
+      "field": "confidence",
+      "status": "supported",
+      "note": "0.85 confidence seems reasonable given strong evidence on most claims, with some unverified details on pricing and rate limits."
+    },
+    {
+      "field": "flags",
+      "status": "supported",
+      "note": "All three flags are supported by evidence: auth transition to April 2027, no permanent free tier, and unofficial MCP implementations."
+    }
+  ],
+  "revised": {
+    "id": 11,
+    "name": "Zendesk",
+    "website": "zendesk.com",
+    "category": "Support and Helpdesk",
+    "one_liner": "Zendesk offers a mature, broad REST API (Ticketing, Help Center, Voice, etc.) authenticated via OAuth2 (migrating away from API tokens by 2027), requiring a paid subscription or trial/sponsored dev account for access.",
+    "auth_methods": [
+      {
+        "method": "OAuth2",
+        "notes": "Recommended/required going forward. Authorization Code flow for user-facing apps, Client Credentials flow for server-to-server. Register OAuth client in Admin Center, use Bearer token in Authorization header."
+      },
+      {
+        "method": "API key",
+        "notes": "Legacy API tokens still work but are being fully deprecated: new token creation blocked from October 27, 2026, all tokens deactivated by April 30, 2027."
+      },
+      {
+        "method": "Basic",
+        "notes": "Historically supported via email/token or email/password combos for Basic auth, but specific phase-out details not confirmed in available evidence."
+      }
+    ],
+    "self_serve": "self-serve-trial",
+    "self_serve_notes": "No permanent free tier for API access; requires a paid subscription (specific pricing details not confirmed in evidence). Developers can get a 14-day free trial, or Marketplace app developers can request a free non-expiring sponsored account (up to 5 agents, Suite Enterprise plan for Support) for dev/testing.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "Comprehensive REST API surface covering Ticketing, Help Center, Voice, Users, Organizations, and more. Well-documented with OAuth security guides and rate limit tiers (specific tier limits not confirmed in evidence)."
+    },
+    "existing_mcp": {
+      "exists": "unknown"
+    },
+    "buildability": "buildable-now",
+    "main_blocker": null,
+    "evidence": [
+      {
+        "url": "https://support.zendesk.com/hc/en-us/articles/10840968198042-Announcing-the-removal-of-API-tokens-as-an-authentication-method-for-API-requests",
+        "supports": "API tokens being deprecated, full removal by April 30, 2027, phased rollout details including new token creation blocked October 27, 2026"
+      },
+      {
+        "url": "https://developer.zendesk.com/documentation/api-basics/authentication/api-tokens-to-oauth/",
+        "supports": "OAuth2 Authorization Code and Client Credentials flows, Bearer token usage, recommended authentication method"
+      },
+      {
+        "url": "https://www.zendesk.com/pricing/",
+        "supports": "Pricing page exists but specific plan costs not extractable from provided evidence"
+      },
+      {
+        "url": "https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-trial-or-sponsored-account-for-development/",
+        "supports": "14-day trial and sponsored developer accounts (up to 5 agents, Suite Enterprise plan) available for Marketplace partners for testing and development"
+      },
+      {
+        "url": "https://developer.zendesk.com/api-reference/introduction/rate-limits/",
+        "supports": "Rate limits exist and vary by plan with monitoring headers available, but specific req/min numbers not fully visible in provided evidence excerpt"
+      },
+      {
+        "url": "https://support.zendesk.com/hc/en-us/articles/4408881877786-Does-Zendesk-offer-a-free-API-only-agent-license",
+        "supports": "URL returns 404 error page, cannot verify claim about no free API-only agent license"
+      }
+    ],
+    "confidence": 0.75,
+    "flags": [
+      "auth-transition-in-progress: API token deprecation through April 2027 may require future toolkit updates",
+      "no-permanent-free-tier: self-serve access requires trial, sponsored account, or paid subscription",
+      "some-pricing-details-unverified: specific plan prices and rate limit tiers mentioned but not fully confirmed in evidence"
+    ]
+  }
+}

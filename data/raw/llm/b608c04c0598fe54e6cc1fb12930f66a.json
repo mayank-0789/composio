@@ -1,0 +1,49 @@
+{
+  "one_liner": "ClickUp is a project management platform with a broad REST API (v2/v3) supporting personal API tokens or OAuth2 for building integrations.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Personal API token (pk_...) passed directly in Authorization header, generated self-serve from account settings; never expires."
+    },
+    {
+      "method": "OAuth2",
+      "notes": "Authorization Code grant flow for third-party apps acting on behalf of other users; requires creating an OAuth app (Workspace owner/admin) to get client_id/secret."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "API access is available on the Free Forever plan; personal tokens can be generated instantly from account settings without manual approval. OAuth app creation requires Workspace owner/admin role. Rate limits and some endpoints vary by plan (e.g., 100 req/min on Free plan).",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "REST API v2 (with some v3 endpoints) covering tasks, docs, goals, custom fields, time tracking, chat, and more; OpenAPI spec published."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://github.com/taazkareem/clickup-mcp-server"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://developer.clickup.com/docs/authentication",
+      "supports": "Describes personal API token and OAuth2 authorization code flow, header usage."
+    },
+    {
+      "url": "https://developer.clickup.com/docs/Getting%20Started.md",
+      "supports": "Confirms API v2/v3 REST surface, authentication requirement, rate limits by plan."
+    },
+    {
+      "url": "https://developer.clickup.com/docs/apis-available-by-plan",
+      "supports": "Confirms API is available across plans including Free Forever, with variations."
+    },
+    {
+      "url": "https://help.clickup.com/hc/en-us/articles/6303422883095-Create-your-own-app-with-the-ClickUp-API",
+      "supports": "Details on creating OAuth apps and self-serve token generation."
+    }
+  ],
+  "confidence": 0.9,
+  "flags": [
+    "Multiple community-built MCP servers exist (taazkareem, helbertparanhos, Kirra01, Nazruden, bravoure) but no official ClickUp-maintained MCP server confirmed.",
+    "API endpoint/rate-limit availability varies by Workspace plan tier."
+  ]
+}

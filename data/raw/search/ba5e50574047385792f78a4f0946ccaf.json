@@ -1,0 +1,45 @@
+{
+  "answer": "The Apify API supports authentication via a personal API token generated in the Integrations section of the Apify Console [1][2][3]. The recommended and most secure method is to include the token in your request's Authorization header as a Bearer token [1][2][4]. Alternatively, you can pass the token as a URL query parameter, though this is less secure as it may be logged or stored in browser history [1][2].\n\nExample using the Authorization header:\n\n```bash\ncurl -X POST -H 'Authorization: Bearer <YOUR_API_TOKEN>' 'https://api.apify.com/v2/actors/<ACTOR_ID>/runs'\n```\n\nIf using the official Apify SDK clients for JavaScript or Python, provide your token directly to the client constructor [5][6][7]:\n\n```javascript\nconst client = new ApifyClient({\n    token: 'MY-APIFY-TOKEN',\n});\n```\n\nAdditionally, the platform supports OAuth 2.0 for third-party integrations [3].",
+  "results": [
+    {
+      "title": "Apify API | Apify Documentation",
+      "url": "https://docs.apify.com/api/v2",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://docs.apify.com/platform/integrations/api.md",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://docs.apify.com/platform/integrations/integrate.md",
+      "snippet": ""
+    },
+    {
+      "title": "The Apify API | Academy | Apify Documentation",
+      "url": "https://docs.apify.com/academy/getting-started/apify-api",
+      "snippet": ""
+    },
+    {
+      "title": "Apify Documentation",
+      "url": "https://docs.apify.com/api",
+      "snippet": ""
+    },
+    {
+      "title": "Quick start | API client for Python | Apify Documentation",
+      "url": "https://docs.apify.com/api/client/python/docs/introduction/quick-start",
+      "snippet": ""
+    },
+    {
+      "title": "ApifyClient | API | API client for Python | Apify Documentation",
+      "url": "https://docs.apify.com/api/client/python/reference/class/ApifyClient",
+      "snippet": ""
+    },
+    {
+      "title": "Apify API documentation",
+      "url": "https://docs.apify.com/api.md",
+      "snippet": ""
+    }
+  ]
+}

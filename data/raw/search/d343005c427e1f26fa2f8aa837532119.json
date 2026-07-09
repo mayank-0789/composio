@@ -1,0 +1,45 @@
+{
+  "answer": "The Gladly MCP server is a production-ready integration that allows AI agents to access and manipulate Gladly data using the Model Context Protocol (MCP) [1]. It provides 65 pre-built actions for reading, creating, updating, and deleting data, designed to help agents manage customer service workflows and context [1].\n\nWhile the protocol itself is an open standard for connecting AI to business tools [2][3], the Gladly-specific MCP server is provided by StackOne [1]. It manages authentication, tool execution, and security, and integrates with major AI clients like Claude Desktop, Cursor, and various agent frameworks [1].",
+  "results": [
+    {
+      "title": "",
+      "url": "https://www.stackone.com/connectors/gladly/mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "Agentic commerce protocols MCP ACP and UCP explained | Gladly",
+      "url": "https://www.gladly.ai/blog/making-sense-of-agentic-commerce/",
+      "snippet": ""
+    },
+    {
+      "title": "What Is Gladly MCP? Exploring the Model Context Protocol and AI Integration",
+      "url": "https://www.getguru.com/reference/gladly-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Understanding MCP servers",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts",
+      "snippet": ""
+    },
+    {
+      "title": "Architecture overview - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/learn/architecture",
+      "snippet": ""
+    },
+    {
+      "title": "Gladly Is A $34M Bet On The AI Commerce Rails The Market Is Ignoring",
+      "url": "https://www.ainvest.com/news/gladly-34m-bet-ai-commerce-rails-market-ignoring-2605/",
+      "snippet": ""
+    },
+    {
+      "title": "Architecture - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/specification/2025-06-18/architecture",
+      "snippet": ""
+    },
+    {
+      "title": "modelcontextprotocol/servers",
+      "url": "https://github.com/modelcontextprotocol/servers?alltoolsdirectory=",
+      "snippet": ""
+    }
+  ]
+}

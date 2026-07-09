@@ -1,0 +1,45 @@
+{
+  "answer": "WooCommerce supports three primary authentication methods for its REST API [1][2][3].\n\nFor sites using HTTPS, use HTTP Basic Authentication by providing your Consumer Key as the username and Consumer Secret as the password [1][2]. If your server fails to parse the Authorization header, you may pass these keys as query string parameters:\n\n`https://example.com/wp-json/wc/v3/orders?consumer_key=ck_xxx&consumer_secret=cs_xxx` [1][4]\n\nFor non-HTTPS sites, use OAuth 1.0a \"one-legged\" authentication, which requires signing requests with a generated signature, timestamp, and nonce [2][3]. \n\nFinally, you can use the /wc-auth/v1/authorize endpoint to allow users to generate API keys through a browser-based flow for third-party application integration [1][5].",
+  "results": [
+    {
+      "title": "Authentication | WooCommerce developer docs",
+      "url": "https://developer.woocommerce.com/docs/apis/rest-api/authentication/",
+      "snippet": ""
+    },
+    {
+      "title": "WooCommerce REST API Documentation v3",
+      "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/v3.html?php=",
+      "snippet": ""
+    },
+    {
+      "title": "WooCommerce Code Reference",
+      "url": "https://woocommerce.github.io/code-reference/classes/WC-REST-Authentication.html",
+      "snippet": ""
+    },
+    {
+      "title": "WooCommerce REST API | WooCommerce developer docs",
+      "url": "https://developer.woocommerce.com/docs/apis/rest-api/",
+      "snippet": ""
+    },
+    {
+      "title": "source/includes/v3/_authentication-endpoint.md at master · woocommerce/woocommerce-rest-api-docs",
+      "url": "https://github.com/woocommerce/woocommerce-rest-api-docs/blob/master/source/includes/v3/_authentication-endpoint.md",
+      "snippet": ""
+    },
+    {
+      "title": "WooCommerce REST API Documentation - WP REST API v3",
+      "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/",
+      "snippet": ""
+    },
+    {
+      "title": "REST API v3 | WooCommerce developer docs",
+      "url": "https://developer.woocommerce.com/docs/apis/rest-api/v3/",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://developer.woocommerce.com/docs/apis/rest-api/v3/api-reference/",
+      "snippet": ""
+    }
+  ]
+}

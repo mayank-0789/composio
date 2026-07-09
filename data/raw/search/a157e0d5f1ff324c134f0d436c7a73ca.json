@@ -1,0 +1,45 @@
+{
+  "answer": "Yes, Mailchimp provides self-serve API access for all account tiers, including the Free plan [1]. You can generate an API key directly from your account settings once logged in [1][2]. Access is programmatic and allows you to manage audiences, sync data, and handle campaigns [1]. While the Marketing API is available to all users, note that Mailchimp Transactional API features typically require a Standard plan or higher [2]. Be aware that all API usage is subject to request limits and the specific permissions associated with your account's user role [1].",
+  "results": [
+    {
+      "title": "Fundamentals Documentation | Mailchimp Developer",
+      "url": "https://mailchimp.com/developer/marketing/docs/fundamentals/",
+      "snippet": ""
+    },
+    {
+      "title": "Fundamentals Documentation | Mailchimp Developer",
+      "url": "https://mailchimp.com/developer/transactional/docs/fundamentals/",
+      "snippet": ""
+    },
+    {
+      "title": "Mailchimp Pricing Plans | Get Started Today | Mailchimp",
+      "url": "https://mailchimp.com/pricing/marketing/?currency=SGD",
+      "snippet": ""
+    },
+    {
+      "title": "About Mailchimp Pricing Plans | Mailchimp",
+      "url": "https://mailchimp.com/help/about-mailchimp-pricing-plans/",
+      "snippet": ""
+    },
+    {
+      "title": "Mailchimp Getting Started: API Keys & First Request (2026)",
+      "url": "https://apispine.com/mailchimp/getting-started",
+      "snippet": ""
+    },
+    {
+      "title": "Free Email Marketing Tools | Mailchimp",
+      "url": "https://mailchimp.com/resources/free-marketing-features-overview/",
+      "snippet": ""
+    },
+    {
+      "title": "Email & SMS Marketing Platform | Mailchimp",
+      "url": "https://mailchimp.com/",
+      "snippet": ""
+    },
+    {
+      "title": "Mailchimp Standard Plan: Drive High-Value Actions | Mailchimp",
+      "url": "https://mailchimp.com/landers/pricing/standard/",
+      "snippet": ""
+    }
+  ]
+}

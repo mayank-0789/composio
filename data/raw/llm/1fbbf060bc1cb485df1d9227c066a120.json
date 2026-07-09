@@ -1,0 +1,104 @@
+{
+  "verdicts": [
+    {
+      "field": "existing_mcp.exists",
+      "status": "contradicted",
+      "note": "The record claims 'yes' and provides a GitHub URL https://github.com/googleads/google-ads-mcp. However, none of the evidence pages mention or link to any Model Context Protocol (MCP) server. The provided evidence only covers Google Ads API authentication, developer tokens, access levels, OAuth workflows, and rate sheets. Without evidence of an MCP server, this should be 'no' or 'unknown'."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "unsupported",
+      "note": "The URL https://github.com/googleads/google-ads-mcp is not mentioned anywhere in the provided evidence. The evidence only links to Google Ads API documentation pages on developers.google.com."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence confirms OAuth2 is required, along with a developer-token header and login-customer-id header when using manager accounts. Service account and multi-user OAuth workflows are documented."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Evidence confirms that developer tokens require a Google Ads manager account and an access level application/approval process (Basic/Standard), which aligns with 'admin-approval'."
+    },
+    {
+      "field": "api_surface",
+      "status": "supported",
+      "note": "Evidence references REST endpoints and the auth documentation confirms broad API coverage. The rate-sheet mentions query/report operations and mutate requests, supporting the 'broad' breadth claim."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "'buildable-with-caveats' is appropriate given the developer token approval process adds friction before live API access."
+    },
+    {
+      "field": "main_blocker",
+      "status": "contradicted",
+      "note": "The blocker mentions 'official MCP server is read-only' but there is zero evidence in the provided pages about any MCP server. The developer token approval process is correctly identified as a blocker, but the MCP claim is unsupported."
+    },
+    {
+      "field": "one_liner",
+      "status": "supported",
+      "note": "The one-liner accurately reflects the OAuth2 + developer-token auth requirement, broad REST/gRPC access, free usage, and approval process documented in the evidence."
+    },
+    {
+      "field": "flags",
+      "status": "contradicted",
+      "note": "The flags 'official_mcp_read_only' and 'community_mcp_forks_exist_for_write_access' are not supported by any evidence. Only 'requires_developer_token_approval' is validated by the evidence."
+    }
+  ],
+  "revised": {
+    "id": 31,
+    "name": "Google Ads",
+    "website": "developers.google.com/google-ads",
+    "category": "Marketing, Ads, Email and Social",
+    "one_liner": "Google Ads API provides broad REST/gRPC access to campaign management and reporting via OAuth2 + developer-token auth, free to use but gated by a manager-account developer token application and access-level approval.",
+    "auth_methods": [
+      {
+        "method": "OAuth2",
+        "notes": "Requires OAuth 2.0 access token plus a developer-token header; supports service account, single-user, and multi-user OAuth workflows with scope https://www.googleapis.com/auth/adwords. login-customer-id header required when using a manager account."
+      }
+    ],
+    "self_serve": "admin-approval",
+    "self_serve_notes": "API usage itself is free, but developers must obtain a developer token via a Google Ads manager account and apply for an access level (Basic/Standard) through the API Center; this involves a Google review/approval process (Required Minimum Functionality compliance) rather than instant self-serve API key generation.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "Also gRPC/client libraries (Java, Python, etc.); GAQL query language for reporting; broad coverage of campaign, ad group, keyword, budget, and reporting resources."
+    },
+    "existing_mcp": {
+      "exists": "unknown"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "Developer token approval process (manager account setup + access level application) adds friction before an agent toolkit can call the live API.",
+    "evidence": [
+      {
+        "url": "https://developers.google.com/google-ads/api/rest/auth",
+        "supports": "OAuth2 + developer-token + login-customer-id header requirements"
+      },
+      {
+        "url": "https://developers.google.com/google-ads/api/docs/api-policy/developer-token",
+        "supports": "Developer token required, obtained via manager account"
+      },
+      {
+        "url": "https://developers.google.com/google-ads/api/docs/productionize/access-levels",
+        "supports": "Access levels and RMF approval process for API access"
+      },
+      {
+        "url": "https://developers.google.com/google-ads/api/docs/rate-sheet",
+        "supports": "API is free to use at all access levels"
+      },
+      {
+        "url": "https://developers.google.com/google-ads/api/docs/oauth/service-accounts",
+        "supports": "Service account OAuth workflow support"
+      },
+      {
+        "url": "https://developers.google.com/google-ads/api/docs/oauth/multi-user-authentication",
+        "supports": "Multi-user OAuth workflow support"
+      }
+    ],
+    "confidence": 0.9,
+    "flags": [
+      "requires_developer_token_approval"
+    ]
+  }
+}

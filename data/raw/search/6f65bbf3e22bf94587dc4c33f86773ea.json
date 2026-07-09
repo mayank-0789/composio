@@ -1,0 +1,45 @@
+{
+  "answer": "Zoho Cliq’s implementation of the Model Context Protocol (MCP) enables AI agents to interact with Cliq data and workflows using standardized natural language instructions [1][2]. You can configure a Zoho Cliq MCP server through the official Zoho MCP console, which provides a unique, secure URL endpoint for your MCP client [3][4].\n\nTo integrate:\n1. Create a server in the Zoho MCP console and select Zoho Cliq to add relevant tools [3][5].\n2. Copy the generated MCP URL [3][5].\n3. Add the URL to your AI client’s configuration (e.g., in VS Code via GitHub Copilot) to execute tasks like sending messages or checking activity [6][5].",
+  "results": [
+    {
+      "title": "Guide to Zoho Cliq's MCP Server",
+      "url": "https://www.zoho.com/cliq/help/platform/zoho-cliq-mcp.html",
+      "snippet": ""
+    },
+    {
+      "title": "Zoho MCP | Zoho's Model Context Protocol to empower AI Agents",
+      "url": "https://www.zoho.com/mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "Configuring Your Zoho MCP Server",
+      "url": "https://www.zoho.com/cliq/help/platform/configure-zoho-cliq-mcp.html",
+      "snippet": ""
+    },
+    {
+      "title": "Supported Zoho services | Zoho MCP",
+      "url": "https://www.zoho.com/mcp/services/zoho-services.html",
+      "snippet": ""
+    },
+    {
+      "title": "Zoho MCP - Model Context Protocol Server for AI Agents | Official Zoho | a2a mcp",
+      "url": "https://a2a-mcp.org/entry/zoho-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Connecting Zoho Cliq MCP with VS Code",
+      "url": "https://www.zoho.com/cliq/help/platform/connect-zoho-cliq-mcp-with-vs-code.html",
+      "snippet": ""
+    },
+    {
+      "title": "rohansen856/cliq-mcp",
+      "url": "https://github.com/rohansen856/cliq-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://zapier.com/mcp/zoho-cliq",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "The Help Scout MCP server allows AI assistants to interact with your Help Scout data, including inboxes, conversations, customers, and organizations. It enables searching tickets, retrieving thread history, and summarizing conversations directly from your editor or chat window [1][2].\n\nTo set up the server in your MCP client configuration (e.g., Claude Desktop), use the following structure:\n\n```json\n{\n  \"mcpServers\": {\n    \"helpscout\": {\n      \"command\": \"npx\",\n      \"args\": [\"help-scout-mcp-server\"],\n      \"env\": {\n        \"HELPSCOUT_APP_ID\": \"your-app-id\",\n        \"HELPSCOUT_APP_SECRET\": \"your-app-secret\"\n      }\n    }\n  }\n}\n```\n\nKey tools include searchConversations for filtered ticket lists, comprehensiveConversationSearch for keyword lookups, structuredConversationFilter for specific ticket IDs, and getConversationSummary for quick previews [3][4]. The server automatically discovers your inboxes upon connection [1][5]. Requirements include Node.js 18+ and a Help Scout OAuth2 App [3][6].",
+  "results": [
+    {
+      "title": "README.md at aec1f578 · drewburchfield/help-scout-mcp-server",
+      "url": "https://github.com/drewburchfield/help-scout-mcp-server/blob/aec1f578/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "Help Scout",
+      "url": "https://mcpservers.org/servers/drewburchfield/help-scout-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "GitHub - drewburchfield/help-scout-mcp-server at ea5ee1b327ceb127157899a944a166716e78df3d · GitHub",
+      "url": "https://github.com/drewburchfield/help-scout-mcp-server/tree/ea5ee1b327ceb127157899a944a166716e78df3d",
+      "snippet": ""
+    },
+    {
+      "title": "GitHub - drewburchfield/help-scout-mcp-server at 913c2f61766d31e8fb2c78f0ead69a11a1b338aa · GitHub",
+      "url": "https://github.com/drewburchfield/help-scout-mcp-server/tree/913c2f61766d31e8fb2c78f0ead69a11a1b338aa",
+      "snippet": ""
+    },
+    {
+      "title": "src/index.ts at aec1f578 · drewburchfield/help-scout-mcp-server",
+      "url": "https://github.com/drewburchfield/help-scout-mcp-server/blob/aec1f578/src/index.ts",
+      "snippet": ""
+    },
+    {
+      "title": "@gravitykit/help-scout-mcp",
+      "url": "https://registry.npmjs.org/@gravitykit/help-scout-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "guides/architecture/mcp-tool-contract.md",
+      "url": "https://github.com/drewburchfield/help-scout-mcp-server/blob/main/guides/architecture/mcp-tool-contract.md",
+      "snippet": ""
+    },
+    {
+      "title": "Understanding MCP servers",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts",
+      "snippet": ""
+    }
+  ]
+}

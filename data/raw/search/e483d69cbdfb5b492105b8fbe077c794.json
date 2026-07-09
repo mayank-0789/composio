@@ -1,0 +1,45 @@
+{
+  "answer": "The Gumroad MCP server is an implementation of the Model Context Protocol that allows AI assistants, such as Claude Desktop, to interact with the Gumroad API [1][2][3]. It enables users to perform tasks like listing products, viewing sales data, managing subscription details, and handling offer codes directly through natural language prompts [2][4][5].\n\nTo configure the server manually for an MCP-compatible client, add this to your configuration file [1][5]:\n\n```json\n{\n  \"mcpServers\": {\n    \"gumroad\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"gumroad-mcp@latest\"],\n      \"env\": {\n        \"GUMROAD_ACCESS_TOKEN\": \"<YOUR_TOKEN>\"\n      }\n    }\n  }\n}\n```\n\nInstallation for Claude Desktop can also be performed via the interactive command `npx gumroad-mcp@latest init` [5]. Prerequisities include Node.js 18 or later and a Gumroad access token [4][5].",
+  "results": [
+    {
+      "title": "rmarescu/gumroad-mcp",
+      "url": "https://github.com/rmarescu/gumroad-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "keithah/gumroad-mcp",
+      "url": "https://github.com/keithah/gumroad-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://mcpservers.org/servers/rmarescu/gumroad-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Gumroad MCP Server - rmarescu/gumroad-mcp",
+      "url": "https://playbooks.com/mcp/rmarescu/gumroad-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Gumroad Server – README | MCP Marketplace",
+      "url": "https://ubos.tech/mcp/gumroad/",
+      "snippet": ""
+    },
+    {
+      "title": "LiZhuBin/gumroad-mcp",
+      "url": "https://github.com/LiZhuBin/gumroad-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "gumroad-mcp",
+      "url": "https://registry.npmjs.org/gumroad-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Gumroad MCP Server - An MCP integration tool that supports AI assistants to connect to the Gumroad API and manage product sales data",
+      "url": "https://mcp.aibase.com/en/server/1916343466965311490",
+      "snippet": ""
+    }
+  ]
+}

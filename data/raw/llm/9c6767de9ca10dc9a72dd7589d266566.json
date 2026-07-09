@@ -1,0 +1,50 @@
+{
+  "one_liner": "Klaviyo is a marketing/email/SMS platform offering a broad REST API with private-key, OAuth, and public-key auth, free self-serve developer access, and an official remote-hosted MCP server.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Private API key sent via 'Authorization: Klaviyo-API-Key your-private-api-key' header for /api server-side endpoints; supports custom scopes (read-only, full access, custom)."
+    },
+    {
+      "method": "OAuth2",
+      "notes": "Recommended for tech partners/integrations calling server-side APIs; provides better security, usability, rate limits, and App Marketplace listing eligibility."
+    },
+    {
+      "method": "Other",
+      "notes": "Public key (6-character company/site ID) passed as a query parameter for /client (client-side) endpoints."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Klaviyo has a permanent free tier; developers can sign up on klaviyo.com without a sales call, create a test account, and generate private/public API keys or set up OAuth directly from account Settings > API keys (requires Owner/Admin/Manager role).",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Extensive REST API covering campaigns, flows, profiles, events, segments, etc., with published OpenAPI spec and Postman collection; separate client-side and server-side endpoint sets."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://mcp.klaviyo.com/mcp"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+      "supports": "Describes the three auth methods: private key, OAuth, and public key, plus scope management and key creation steps."
+    },
+    {
+      "url": "https://developers.klaviyo.com/en/reference/api_overview",
+      "supports": "Confirms API authentication methods, OpenAPI spec availability, and Postman collection for broad REST API surface."
+    },
+    {
+      "url": "https://developers.klaviyo.com/en/v2026-01-15/docs/set_up_oauth",
+      "supports": "Details on setting up OAuth for tech partner integrations."
+    },
+    {
+      "url": "https://www.klaviyo.com/pricing",
+      "supports": "Confirms permanent free tier enabling self-serve developer access without sales contact."
+    }
+  ],
+  "confidence": 0.9,
+  "flags": []
+}

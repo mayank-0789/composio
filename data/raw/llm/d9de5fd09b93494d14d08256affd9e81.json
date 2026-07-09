@@ -1,0 +1,120 @@
+{
+  "verdicts": [
+    {
+      "field": "existing_mcp.exists",
+      "status": "contradicted",
+      "note": "The record claims exists='yes' with url='https://cake-com.github.io/pumble-node-sdk/manifest.html'. However, this URL points to Pumble's own app manifest documentation for building Pumble integrations (their SDK). It is NOT a Model Context Protocol (MCP) server for Pumble. The evidence shows no dedicated MCP server exists for this app."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "contradicted",
+      "note": "The provided URL is Pumble's own SDK documentation page about app manifests, not an MCP server repository or implementation. This should be removed."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Evidence confirms free tier exists but full API/integration access requires Pro or Business paid plans. The 'paid-plan' classification is accurate."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "supported",
+      "note": "Evidence from pumble.com/learn/pumble/free-plan-explained/ confirms 'Free plan...includes...Plaky and Clockify integrations' (limited native integrations) and pumble.com/learn/pumble/business-plan-explained/ confirms unlimited integrations require paid plans."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Both OAuth2 (authorization.html) and API key methods (api-keys-integration/) are documented in evidence. OAuth2 uses consent screen + token exchange; API keys generated via Pumble API addon within workspace."
+    },
+    {
+      "field": "api_surface.type",
+      "status": "supported",
+      "note": "Evidence shows REST API endpoints (api-client.html, manifest.html) with methods for messages, channels, files, etc."
+    },
+    {
+      "field": "api_surface.breadth",
+      "status": "supported",
+      "note": "Evidence shows REST API covering messages, channels, files, reactions, scheduled messages, user management, search, shortcuts, slash commands, and event subscriptions. 'medium' breadth is reasonable."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "Evidence supports 'buildable-with-caveats': API exists and is accessible, but full integration access requires paid plans (not instant free self-serve), and OAuth2 app creation requires manifest/registration process."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "Evidence confirms integration access gated by pricing tier (free plan limited to native integrations like Clockify/Plaky; full access requires Pro/Business) and OAuth2 apps require manifest registration process."
+    },
+    {
+      "field": "confidence",
+      "status": "unsupported",
+      "note": "Evidence strongly supports all major claims about API, auth methods, and pricing restrictions. Confidence of 0.6 appears conservative; should be higher (0.85+) given clear documentation."
+    },
+    {
+      "field": "flags",
+      "status": "supported",
+      "note": "All three flags are supported by evidence: integration access restricted by pricing tier (confirmed), OAuth2 requires app registration via manifest (confirmed), and no official MCP server exists (confirmed - the cited URL was SDK docs, not MCP)."
+    }
+  ],
+  "revised": {
+    "id": 25,
+    "name": "Pumble",
+    "website": "pumble.com",
+    "category": "Communications and Messaging",
+    "one_liner": "Pumble is a team messaging platform offering a REST API (with Node SDK) supporting OAuth2 app tokens or workspace-generated API keys for bots/messages/channels, with integration access gated by paid plans.",
+    "auth_methods": [
+      {
+        "method": "OAuth2",
+        "notes": "OAuth2 flow via consent screen and POST https://api-ga.pumble.com/oauth2/access to exchange code for access token, used for full apps."
+      },
+      {
+        "method": "API key",
+        "notes": "Pumble API addon allows generating API keys/tokens directly within a workspace (x-app-token + token headers) for simpler direct requests."
+      }
+    ],
+    "self_serve": "paid-plan",
+    "self_serve_notes": "Free tier exists but third-party app/integration access is restricted to a limited set of native integrations (e.g., Clockify, Plaky); full API/app integration access requires upgrading to Pro or Business plan.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "medium",
+      "notes": "REST API with SDK (pumble-node-sdk) covering messages, channels, files, reactions, scheduled messages, shortcuts, slash commands, event subscriptions, etc. Also has an app manifest/trigger framework for building integrations."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "Full API/integration access is gated behind paid Pro/Business plans, and OAuth2 app creation requires going through Pumble's app manifest/marketplace process rather than instant self-serve key generation.",
+    "evidence": [
+      {
+        "url": "https://cake-com.github.io/pumble-node-sdk/api-client.html",
+        "supports": "Describes x-app-token and token headers required for every API request, and lists API methods/scopes."
+      },
+      {
+        "url": "https://cake-com.github.io/pumble-node-sdk/authorization.html",
+        "supports": "Details OAuth2 authorization flow for obtaining user/bot access tokens."
+      },
+      {
+        "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+        "supports": "Describes the Pumble API addon allowing users to generate API keys directly within a workspace."
+      },
+      {
+        "url": "https://pumble.com/learn/pumble/free-plan-explained/",
+        "supports": "Confirms free plan limits integrations to specific native apps like Clockify and Plaky."
+      },
+      {
+        "url": "https://pumble.com/learn/pumble/business-plan-explained/",
+        "supports": "Confirms unlimited/full integration access requires paid Business or Pro plan."
+      },
+      {
+        "url": "https://cake-com.github.io/pumble-node-sdk/manifest.html",
+        "supports": "Describes the app manifest and SDK framework used to build Pumble apps/integrations."
+      }
+    ],
+    "confidence": 0.88,
+    "flags": [
+      "Integration/API access restricted by pricing tier",
+      "OAuth2 app creation process not fully self-serve instant (requires app registration via manifest)",
+      "No official MCP server exists; previously cited URL was Pumble's own SDK documentation"
+    ]
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "verdicts": [
+    {
+      "field": "name",
+      "status": "supported",
+      "note": "Evidence confirms this is Linear's developer platform."
+    },
+    {
+      "field": "website",
+      "status": "supported",
+      "note": "Evidence URLs confirm developers.linear.app is the correct developer site."
+    },
+    {
+      "field": "category",
+      "status": "supported",
+      "note": "Linear is clearly a productivity/project management tool based on evidence describing issues, projects, teams, cycles."
+    },
+    {
+      "field": "one_liner",
+      "status": "contradicted",
+      "note": "The record claims an 'official hosted MCP server' but the evidence URL https://mcp.linear.app/mcp does not appear in any of the provided evidence documents. The evidence only shows GraphQL API, SDK, OAuth2, and personal API keys—no mention of MCP server."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence confirms both personal API keys (Authorization: <API_KEY>, no Bearer prefix) and OAuth2 (Authorization: Bearer <ACCESS_TOKEN>)."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Pricing page confirms 'API and webhook access' on Free plan; GraphQL docs confirm personal API keys created in Security & Access settings with no approval needed."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "supported",
+      "note": "Free plan shows '2 teams' and '250 issues' limit; personal API keys and OAuth app registration are self-serve per evidence."
+    },
+    {
+      "field": "api_surface",
+      "status": "supported",
+      "note": "Evidence confirms GraphQL endpoint at api.linear.app/graphql, supports introspection, covers issues/projects/teams/comments/files/webhooks, TypeScript SDK available, explorable via Apollo Studio."
+    },
+    {
+      "field": "existing_mcp",
+      "status": "unsupported",
+      "note": "No evidence of a Model Context Protocol server in any of the provided documents. The URL https://mcp.linear.app/mcp is not mentioned anywhere. Evidence only discusses GraphQL API, SDK, OAuth, and webhooks."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "GraphQL API is accessible via self-serve personal API keys or OAuth2, free plan available, comprehensive docs provided—buildable now."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "No blockers evident; API is accessible on free plan."
+    },
+    {
+      "field": "evidence",
+      "status": "supported",
+      "note": "All evidence URLs are present and support the claims about GraphQL, auth, SDK, pricing, and API/webhook availability."
+    },
+    {
+      "field": "flags",
+      "status": "supported",
+      "note": "Free plan limit (2 teams/250 issues) is confirmed in pricing page. However, the flag about 'Official MCP server is centrally hosted by Linear' is not supported by evidence."
+    }
+  ],
+  "revised": {
+    "id": 73,
+    "name": "Linear",
+    "website": "developers.linear.app",
+    "category": "Productivity and Project Management",
+    "one_liner": "Linear offers a GraphQL API with personal API keys or OAuth2 for building integrations and agents, available self-serve on the Free plan.",
+    "auth_methods": [
+      {
+        "method": "API key",
+        "notes": "Personal API keys created in Security & Access settings; passed via 'Authorization: <API_KEY>' header (no Bearer prefix)."
+      },
+      {
+        "method": "OAuth2",
+        "notes": "For apps built for others; standard OAuth2 flow, access token passed as 'Authorization: Bearer <ACCESS_TOKEN>'."
+      }
+    ],
+    "self_serve": "self-serve-free",
+    "self_serve_notes": "API and webhook access is available on the Free plan (limited to 2 teams / 250 issues); personal API keys can be generated instantly from account settings with no approval process. OAuth app registration is also self-serve via developer console.",
+    "api_surface": {
+      "type": "GraphQL",
+      "breadth": "broad",
+      "notes": "Single GraphQL endpoint (api.linear.app/graphql) covering issues, projects, teams, comments, file storage, webhooks, and agent interactions. Official TypeScript SDK wraps the schema. Supports introspection and is explorable via Apollo Studio."
+    },
+    "existing_mcp": {
+      "exists": "unknown"
+    },
+    "buildability": "buildable-now",
+    "main_blocker": null,
+    "evidence": [
+      {
+        "url": "https://linear.app/developers/graphql?noRedirect=1",
+        "supports": "GraphQL endpoint, personal API key and OAuth2 authentication details, SDK reference"
+      },
+      {
+        "url": "https://linear.app/developers",
+        "supports": "Overview of developer resources including Authentication, Agents, TypeScript SDK, and Agent Interaction Guidelines"
+      },
+      {
+        "url": "https://linear.app/developers/oauth-2-0-authentication",
+        "supports": "OAuth 2.0 authentication flow documentation"
+      },
+      {
+        "url": "https://linear.app/pricing",
+        "supports": "Free plan includes API and webhook access"
+      },
+      {
+        "url": "https://linear.app/docs/api-and-webhooks",
+        "supports": "API and webhooks documentation confirming availability across plans"
+      }
+    ],
+    "confidence": 0.85,
+    "flags": [
+      "Free plan API access limited to 2 teams/250 issues, may require paid plan for larger workspaces"
+    ]
+  }
+}

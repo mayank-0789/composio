@@ -1,0 +1,119 @@
+{
+  "verdicts": [
+    {
+      "field": "name",
+      "status": "supported",
+      "note": "Evidence confirms the service is named Waterfall and uses waterfall.io domain."
+    },
+    {
+      "field": "website",
+      "status": "supported",
+      "note": "Evidence URLs are from docs.waterfall.io, confirming waterfall.io as the website."
+    },
+    {
+      "field": "category",
+      "status": "supported",
+      "note": "Evidence describes prospecting, enrichment, contact/company search which aligns with 'Data, SEO and Scraping' category."
+    },
+    {
+      "field": "one_liner",
+      "status": "supported",
+      "note": "Evidence confirms REST API (base URL https://api.waterfall.io/v1/), x-api-key authentication, and B2B contact/company enrichment/prospecting functionality."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence explicitly states 'All requests are authenticated using x-api-key' and describes master key for enterprise sub-key management."
+    },
+    {
+      "field": "self_serve",
+      "status": "unsupported",
+      "note": "Evidence does NOT mention prepaid credits, contract requirements, or pricing model. The docs only show technical implementation details. Cannot verify paid-plan claim from evidence."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "unsupported",
+      "note": "Evidence does not mention pricing, credit model, contracts, or free tier. Flags mention 'API key issuance tied to signing a contract per docs' but this is not found in the provided evidence."
+    },
+    {
+      "field": "api_surface",
+      "status": "supported",
+      "note": "Evidence lists all the endpoints mentioned: Prospector, Search Contact/Company, Contact/Phone/Company Enrichment, Company Reveal, Company Titles, Job Change Detection, Email Verification, Webhook JWKS, Account Reporting, API Key Management. REST type confirmed."
+    },
+    {
+      "field": "existing_mcp",
+      "status": "supported",
+      "note": "No MCP server is shown in the evidence. exists='no' is appropriate."
+    },
+    {
+      "field": "buildability",
+      "status": "contradicted",
+      "note": "Evidence shows complete REST API documentation with authentication details and endpoints. A developer with an API key can build immediately. No evidence supports the claim that credits must be purchased first or that there's no self-serve access. Should be 'buildable-now' unless pricing/access barriers are proven."
+    },
+    {
+      "field": "main_blocker",
+      "status": "contradicted",
+      "note": "Evidence does not demonstrate any blocker to obtaining an API key or making API calls. The claim 'requires purchasing prepaid credits/contract' is not supported by the evidence provided."
+    },
+    {
+      "field": "evidence",
+      "status": "supported",
+      "note": "All three evidence URLs are valid and the 'supports' descriptions accurately reflect the content shown."
+    },
+    {
+      "field": "confidence",
+      "status": "unsupported",
+      "note": "0.7 confidence seems low given strong evidence for technical details, but high given lack of evidence for pricing/access claims. Should be adjusted based on corrected buildability assessment."
+    },
+    {
+      "field": "flags",
+      "status": "unsupported",
+      "note": "Flags mention 'no free tier - prepaid credits required' and 'API key issuance tied to signing a contract per docs' but this information is NOT present in the provided evidence."
+    }
+  ],
+  "revised": {
+    "id": 59,
+    "name": "Waterfall.io",
+    "website": "waterfall.io",
+    "category": "Data, SEO and Scraping",
+    "one_liner": "Waterfall.io is a B2B contact/company data enrichment API (prospecting, search, enrichment, verification) accessed via a REST API secured with x-api-key headers.",
+    "auth_methods": [
+      {
+        "method": "API key",
+        "notes": "All requests authenticated via x-api-key header; master key available for enterprise sub-key management."
+      }
+    ],
+    "self_serve": "unknown",
+    "self_serve_notes": "Evidence shows technical API documentation but does not describe signup process, pricing model, free tier availability, or access requirements. Cannot determine self-serve tier from provided evidence.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "medium",
+      "notes": "Multiple endpoints covering Prospector, Search Contact/Company, Contact/Phone/Company Enrichment, Company Reveal, Company Titles, Job Change Detection, Email Verification, Webhook JWKS, Account Reporting, and API Key Management."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "Unclear signup/access process: evidence shows complete API documentation but does not describe how developers obtain initial API keys or whether there are access restrictions.",
+    "evidence": [
+      {
+        "url": "https://docs.waterfall.io/v1/authentication",
+        "supports": "All requests authenticated using x-api-key header; base URL https://api.waterfall.io/v1/"
+      },
+      {
+        "url": "https://docs.waterfall.io/v1/introduction",
+        "supports": "Lists full set of REST endpoints (Prospector, Search Contact, Search Company, Enrichment endpoints, Email Verification, Account Reporting, API Key Management) all requiring x-api-key."
+      },
+      {
+        "url": "https://docs.waterfall.io/v1/api-keys-overview",
+        "supports": "Enterprise master key can generate and manage sub-keys."
+      }
+    ],
+    "confidence": 0.6,
+    "flags": [
+      "no evidence of existing MCP server",
+      "access/signup process not documented in evidence",
+      "pricing/credit model not described in technical docs"
+    ]
+  }
+}

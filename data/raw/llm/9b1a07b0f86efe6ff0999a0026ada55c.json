@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://github.com/deyikong/sendgrid-mcp",
+  "reason": "Multiple well-documented community MCP servers exist for SendGrid. These are distinct packages that expose SendGrid's capabilities over the Model Context Protocol, allowing AI agents to manage email workflows, marketing campaigns, contacts, and analytics via the SendGrid v3 API. Implementations are available in both Node.js and Python from various developers."
+}

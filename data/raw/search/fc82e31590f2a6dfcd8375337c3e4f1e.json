@@ -1,0 +1,45 @@
+{
+  "answer": "Squarespace does not offer a free tier [1][2]. While they provide a 14-day free trial for new websites, access to Commerce APIs generally requires a paid subscription, specifically the Commerce Advanced plan for custom application development [3][1].\n\nDevelopers can utilize the Squarespace Developer Platform to customize templates and enable Developer Mode [4][5]. Notably, trial sites with Developer Mode enabled do not expire, allowing for extended time to build custom sites [5]. To access Commerce APIs, you must generate an API key within your site settings or use OAuth 2.0 to build Squarespace Extensions [3].",
+  "results": [
+    {
+      "title": "Squarespace Pricing April 2026 (from $16/mo) — Plans & Costs Compared | TemperStack",
+      "url": "https://www.temperstack.com/plans/squarespace/",
+      "snippet": ""
+    },
+    {
+      "title": "Squarespace Pricing 2026: Breakdown of Plan Costs & Fees",
+      "url": "https://www.websitebuilderexpert.com/website-builders/squarespace-pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "Developer Portal",
+      "url": "https://commerce-apis.squarespace.com/commerce-apis/authentication-and-permissions",
+      "snippet": ""
+    },
+    {
+      "title": "Home — Squarespace Developers",
+      "url": "https://developers.squarespace.com/",
+      "snippet": ""
+    },
+    {
+      "title": "Developer Portal",
+      "url": "https://developers.squarespace.com/quick-start",
+      "snippet": ""
+    },
+    {
+      "title": "Squarespace Pricing Plans & Features — Squarespace",
+      "url": "https://www.squarespace.com/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Developer Portal",
+      "url": "https://commerce-apis.squarespace.com/commerce-apis/faq",
+      "snippet": ""
+    },
+    {
+      "title": "Developer Terms — Squarespace",
+      "url": "https://www.squarespace.com/developer-terms",
+      "snippet": ""
+    }
+  ]
+}

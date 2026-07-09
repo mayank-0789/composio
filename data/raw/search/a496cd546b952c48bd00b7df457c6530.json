@@ -1,0 +1,45 @@
+{
+  "answer": "Twenty supports three primary authentication methods for its API. API keys are best for internal scripts and server-to-server integrations, created via Settings in the Twenty workspace [1][2]. OAuth 2.0 is used for external apps acting on behalf of users, supporting authorization code flow with PKCE or client credentials for server-to-server access [2]. Additionally, JWT tokens are available for session-based web application authentication [1].\n\nFor API keys, include the key in the request header [3][4]:\n\n```http\nAuthorization: Bearer YOUR_API_KEY\n```\n\nFor OAuth, apps must be registered via the dynamic registration endpoint [2]. Once authorized, use the returned access token in the same `Authorization: Bearer` header format for your requests [1][2]. For GraphQL, this header is passed within the request configuration, such as the HttpLink for Apollo or connection params for WebSockets [5].",
+  "results": [
+    {
+      "title": "Authentication - Twenty",
+      "url": "https://twentyhq-twenty.mintlify.app/developers/api/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "OAuth - Twenty Documentation",
+      "url": "https://docs.twenty.com/developers/extend/oauth",
+      "snippet": ""
+    },
+    {
+      "title": "APIs - Twenty Documentation",
+      "url": "https://docs.twenty.com/developers/extend/api",
+      "snippet": ""
+    },
+    {
+      "title": "REST API - Twenty",
+      "url": "https://twentyhq-twenty.mintlify.app/developers/api/rest-api",
+      "snippet": ""
+    },
+    {
+      "title": "GraphQL API - Twenty",
+      "url": "https://twentyhq-twenty.mintlify.app/developers/api/graphql-api",
+      "snippet": ""
+    },
+    {
+      "title": "JavaScript SDK - Twenty",
+      "url": "https://twentyhq-twenty.mintlify.app/developers/api/sdk",
+      "snippet": ""
+    },
+    {
+      "title": "Import Data via API - Twenty Documentation",
+      "url": "https://docs.twenty.com/user-guide/data-migration/how-tos/import-data-via-api",
+      "snippet": ""
+    },
+    {
+      "title": "graphql/twenty-graphql.md",
+      "url": "https://github.com/api-evangelist/twenty/blob/main/graphql/twenty-graphql.md",
+      "snippet": ""
+    }
+  ]
+}

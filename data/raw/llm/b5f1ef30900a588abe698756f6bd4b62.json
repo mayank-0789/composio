@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://github.com/clay-inc/clay-mcp",
+  "reason": "Clay has an official MCP server available. The evidence shows multiple sources confirming the existence of the Clay MCP server, which can be accessed via Clay's official URL (https://mcp.clay.earth/mcp) or installed via npm as @clayhq/clay-mcp. The server is maintained by Clay (clayhq) and provides integration with Clay's relationship intelligence data, supporting features like searching contacts, managing groups, retrieving notes and calendar events, and adding new entries."
+}

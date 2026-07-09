@@ -1,0 +1,50 @@
+{
+  "one_liner": "Meta Ads (Marketing API) lets developers programmatically manage Facebook/Instagram advertising campaigns via a broad REST API secured by OAuth2, free to use but gated by tiered rate limits requiring Meta App Review for production-scale access.",
+  "auth_methods": [
+    {
+      "method": "OAuth2",
+      "notes": "User, System User, or Page access tokens with ads_management/ads_read scopes; passed as access_token query param or Authorization: Bearer header."
+    }
+  ],
+  "self_serve": "admin-approval",
+  "self_serve_notes": "Development Access tier is self-serve with a Facebook developer app (limited quota, 60 points/300s), but production-grade Standard/Advanced Access requires Meta App Review, business verification, and use-case approval.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Graph API-based Marketing API covering campaigns, ad sets, ads, creatives, insights, audiences, etc. Also has an official PHP Business SDK and other language SDKs."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://mcp.facebook.com/ads"
+  },
+  "buildability": "buildable-with-caveats",
+  "main_blocker": "Full production access requires Meta App Review and business verification; default dev access is heavily rate-limited (60 points/300s) and only usable for testing on owned accounts.",
+  "evidence": [
+    {
+      "url": "https://github.com/gupsammy/meta-ads-cli/blob/master/api-inventory.md",
+      "supports": "OAuth2 auth details, scopes, rate limits, REST API surface"
+    },
+    {
+      "url": "https://github.com/facebook/facebook-php-business-sdk/blob/main/DEVELOPER_GUIDE.md",
+      "supports": "Official SDK usage with app ID/secret/access token"
+    },
+    {
+      "url": "https://singhamandeep.com/what-is-meta-advanced-access/",
+      "supports": "App Review process required for Advanced Access"
+    },
+    {
+      "url": "https://www.get-ryze.ai/blog/meta-marketing-api-free-tier-limitations-and-quotas",
+      "supports": "Tiered access model: Development, Standard, Advanced"
+    },
+    {
+      "url": "https://github.com/pipeboard-co/meta-ads-mcp/tree/main",
+      "supports": "Existence of open-source Meta Ads MCP servers"
+    }
+  ],
+  "confidence": 0.75,
+  "flags": [
+    "requires_app_review_for_production",
+    "multiple_competing_open_source_mcp_implementations",
+    "official_meta_mcp_exists"
+  ]
+}

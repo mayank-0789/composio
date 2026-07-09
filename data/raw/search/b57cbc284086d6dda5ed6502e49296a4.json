@@ -1,0 +1,45 @@
+{
+  "answer": "There are three distinct projects commonly referred to as a Sherlock MCP server:\n\nThe Sherlock OSINT tool integration [1][2] allows AI assistants to search for social media profiles across 400+ platforms using the `search_username` tool.\n\nThe Covertlabs infostealer intelligence platform server [3][4] provides deep access to a database of compromised credentials, victim profiles, and stolen artifacts (cookies, history) via 12 specific search and detail-retrieval tools.\n\nThe.NET assembly introspection server [5] uses reflection to help LLMs analyze.NET types, methods, and metadata.\n\nEnsure you select the server matching your specific intelligence or development requirements [1][3][5].",
+  "results": [
+    {
+      "title": "Burnsedia/sherlock-mcp",
+      "url": "https://github.com/Burnsedia/sherlock-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "README.md at master · Burnsedia/sherlock-mcp",
+      "url": "https://github.com/Burnsedia/sherlock-mcp/blob/master/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "H4RR1SON/sherlock-mcp",
+      "url": "https://github.com/H4RR1SON/sherlock-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Sherlock MCP Server | Conare",
+      "url": "https://conare.ai/marketplace/mcp/sherlock-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "jcucci/dotnet-sherlock-mcp",
+      "url": "https://github.com/jcucci/dotnet-sherlock-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Sherlock MCP Server – README | MCP Marketplace",
+      "url": "https://ubos.tech/mcp/sherlock-mcp-server/",
+      "snippet": ""
+    },
+    {
+      "title": "Imsxm15/osint-tools-mcp-server",
+      "url": "https://github.com/Imsxm15/osint-tools-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "frishtik/osint-tools-mcp-server",
+      "url": "https://github.com/frishtik/osint-tools-mcp-server",
+      "snippet": ""
+    }
+  ]
+}

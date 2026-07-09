@@ -1,0 +1,45 @@
+{
+  "answer": "There is no official LinkedIn-provided MCP server; however, several open-source implementations exist to connect AI agents like Claude to the LinkedIn Marketing API [1][2].\n\nThese servers generally fall into two categories:\n\nRead-only tools: Focused on performance reporting, analytics, and campaign listing. Examples include flin-linkedin-ads-mcp [3] and Insightful Pipe’s server [2].\n\nRead/Write tools: Support campaign creation, status updates, and budgeting. Examples include mharnett/mcp-linkedin-ads [4], Nuraveda-Labs/linkedin-ads-mcp [1], and the multi-platform ads-mcp [5].\n\nMost implementations require a LinkedIn Developer account for OAuth credentials [4][2][5], though hosted options like Mesh Pilot provide pre-approved access [1][6].",
+  "results": [
+    {
+      "title": "Nuraveda-Labs/linkedin-ads-mcp",
+      "url": "https://github.com/Nuraveda-Labs/linkedin-ads-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "README.md at main · insightfulpipe/linkedin-ads-mcp-server",
+      "url": "https://github.com/insightfulpipe/linkedin-ads-mcp-server/blob/main/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "flin-linkedin-ads-mcp v0.1.1",
+      "url": "https://pypi.org/project/flin-linkedin-ads-mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "mharnett/mcp-linkedin-ads",
+      "url": "https://github.com/mharnett/mcp-linkedin-ads",
+      "snippet": ""
+    },
+    {
+      "title": "manlikemuneeb/ads-mcp",
+      "url": "https://github.com/manlikemuneeb/ads-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "linkedin-ads-mcp v0.3.0",
+      "url": "https://pypi.org/project/linkedin-ads-mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "danielpopamd/linkedin-ads-mcp",
+      "url": "https://github.com/danielpopamd/linkedin-ads-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "mcp-linkedin-ads",
+      "url": "https://www.npmjs.com/package/mcp-linkedin-ads",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "verdicts": [
+    {
+      "field": "name",
+      "status": "supported",
+      "note": "Evidence confirms this is 'Freshdesk' throughout all sources."
+    },
+    {
+      "field": "website",
+      "status": "supported",
+      "note": "Multiple evidence sources reference freshdesk.com as the website (e.g., 'sample.freshdesk.com' domains, pricing page at www.freshworks.com/freshdesk/pricing/)."
+    },
+    {
+      "field": "category",
+      "status": "supported",
+      "note": "Evidence describes Freshdesk as a 'customer support/helpdesk platform' and 'customer support space' player, confirming the Support and Helpdesk category."
+    },
+    {
+      "field": "one_liner",
+      "status": "contradicted",
+      "note": "The one-liner references 'API (v2)' but the evidence shows the current production API is v2, while the developer.freshdesk.com evidence actually shows 'API Reference' documentation for v1 (urls contain /api/v1/). The Truto article mentions 'The current production API is v2' but the first evidence link is v1 docs. The one-liner should be corrected to note API v2 as current, and the SDK evidence supports Basic Auth."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "SDK documentation confirms 'HTTP basic authentication' (basicAuth) and the NPM example shows api_key parameter usage. The Truto article would likely detail the specific username/password pattern but that section was cut off. The authentication method is confirmed as Basic Auth with API keys."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "The pricing page shows trial signup links with 'Try it free' buttons, and the Free Program article mentions a 14-day period is implied through trial access. The self-serve-trial classification is appropriate."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "contradicted",
+      "note": "The Free Program article states 'available for free for 6 months' not 14 days, and describes it as '$0 for 1-2 agents for 6 months'. The article also confirms 'API rate limit set to zero calls per minute' effectively disabling API access on the permanent free plan. The trial duration appears to be different from what's stated in the record (6 months vs 14 days)."
+    },
+    {
+      "field": "api_surface.type",
+      "status": "supported",
+      "note": "Truto article explicitly states 'The API itself is logically structured' and 'Freshdesk APIs are RESTful', and the developer docs show REST endpoints. SDK evidence shows a JavaScript SDK wrapper is available."
+    },
+    {
+      "field": "api_surface.breadth",
+      "status": "supported",
+      "note": "Developer docs show comprehensive coverage: tickets, users, agents, companies, conversations, notes, contact fields, ticket fields. Truto article lists 'Tickets, Contacts, Companies, Conversations, Agents and Groups' as core resources. This supports 'broad' classification."
+    },
+    {
+      "field": "api_surface.notes",
+      "status": "supported",
+      "note": "Evidence confirms REST API v2 (per Truto, though first dev docs link shows v1), JSON format, CORS support, standard HTTP verbs (GET, POST, PUT, DELETE mentioned in dev docs), and JS SDK existence confirmed via NPM package @freshworks/freshdesk."
+    },
+    {
+      "field": "existing_mcp.exists",
+      "status": "supported",
+      "note": "The record claims an MCP server exists at npmjs.com/package/freshdesk-mcp, though this specific URL is not verified in the provided evidence. The evidence doesn't contradict it."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "unsupported",
+      "note": "The specific NPM package 'freshdesk-mcp' is not mentioned in the evidence provided. Evidence only shows '@freshworks/freshdesk' SDK package. Cannot verify the MCP package exists."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "The 'buildable-with-caveats' assessment is reasonable given the confirmed API rate limit restrictions on free tier and complexity noted in Truto article about rate limits, pagination, and webhook gaps."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "Free Program article explicitly states 'API rate limit set to zero calls per minute' for the permanent free plan, and clarifies this is after the 6-month free period. Paid plan requirement is confirmed."
+    },
+    {
+      "field": "evidence[0].url",
+      "status": "contradicted",
+      "note": "The URL shows /api/v1/ but the record claims this supports 'REST API v2 documentation'. The evidence actually shows v1 documentation, not v2."
+    },
+    {
+      "field": "confidence",
+      "status": "supported",
+      "note": "0.75 confidence is reasonable given the evidence provides strong support for most claims, though some details like trial duration and API version documentation have inconsistencies."
+    },
+    {
+      "field": "flags",
+      "status": "supported",
+      "note": "Free Program article confirms '0 calls per minute' API rate limit. The flags about unofficial MCP servers and rate limit variations are not directly contradicted by evidence, though not fully proven either."
+    }
+  ],
+  "revised": {
+    "id": 13,
+    "name": "Freshdesk",
+    "website": "freshdesk.com",
+    "category": "Support and Helpdesk",
+    "one_liner": "Freshdesk is a customer support/helpdesk platform offering a broad, well-documented REST API (v2 current production) secured via HTTP Basic Auth with per-agent API keys, self-serve during trial/paid plans, with community SDK and MCP implementations available.",
+    "auth_methods": [
+      {
+        "method": "Basic",
+        "notes": "HTTP Basic Auth using API key. SDK documentation shows domain + api_key configuration pattern for authentication."
+      }
+    ],
+    "self_serve": "self-serve-trial",
+    "self_serve_notes": "Free program offers $0 for 1-2 agents for 6 months with essential helpdesk features. The permanent Free Program sets API rate limit to zero calls per minute, effectively disabling API access after the free period. Continued API use requires a paid plan (Growth, Pro, or Enterprise).",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "RESTful API v2 (current production) covering tickets, contacts, companies, conversations, agents, groups, knowledge base articles; JSON in/out, supports CORS, standard HTTP verbs (GET, POST, PUT, DELETE). Official JavaScript SDK (@freshworks/freshdesk) available via NPM. API v1 documentation still accessible but v2 is current."
+    },
+    "existing_mcp": {
+      "exists": "unknown",
+      "url": "https://www.npmjs.com/package/freshdesk-mcp"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "API access is disabled on the permanent Free plan (0 calls/min); a paid plan or active 6-month free program period is required for programmatic access. Additional complexity from strict rate limits, pagination constraints, and multi-call requirements for complete data assembly.",
+    "evidence": [
+      {
+        "url": "https://developer.freshdesk.com/api/v1/",
+        "supports": "Freshdesk REST API documentation (v1 visible, though v2 is current production), Basic Auth via API key, comprehensive endpoint coverage"
+      },
+      {
+        "url": "https://developers.freshworks.com/freshdesk-sdk/",
+        "supports": "Official JavaScript SDK with HTTP basic authentication, domain + api_key usage pattern"
+      },
+      {
+        "url": "https://www.freshworks.com/freshdesk/pricing/",
+        "supports": "Pricing plans including free trial, Growth ($19/agent/month), Pro ($55/agent/month), and Enterprise ($89/agent/month) tiers"
+      },
+      {
+        "url": "https://support.freshdesk.com/support/solutions/articles/50000010099-explore-freshdesk-free-program-freshdesk-only-",
+        "supports": "Free Program details: $0 for 1-2 agents for 6 months, API rate limit set to zero calls per minute on permanent free plan"
+      },
+      {
+        "url": "https://preview.truto.one/blog/how-to-integrate-with-the-freshdesk-api-2026-engineering-guide/",
+        "supports": "RESTful architecture, v2 as current production API, rate limits, pagination constraints, core resources (Tickets, Contacts, Companies, Conversations, Agents, Groups), JSON format, CORS support, multi-call requirement for complete data"
+      }
+    ],
+    "confidence": 0.72,
+    "flags": [
+      "Free plan disables API access entirely after 6-month period (0 calls/min)",
+      "Free program is 6 months for 1-2 agents, not a traditional ongoing free tier",
+      "MCP server existence at npmjs.com/package/freshdesk-mcp not verified in evidence",
+      "API v1 documentation still visible but v2 is current production version",
+      "Rate limits and multi-call requirements add integration complexity"
+    ]
+  }
+}

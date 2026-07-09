@@ -1,0 +1,45 @@
+{
+  "answer": "The Stripe Model Context Protocol (MCP) server enables AI agents to interact with Stripe APIs and documentation via standardized function calls [1][2]. Stripe hosts a remote server at https://mcp.stripe.com, which is the recommended method for most users, supporting OAuth for secure, granular authentication [2][3].\n\nFor local execution, you can run the server using npx:\n\n```bash\nnpx -y @stripe/mcp --api-key=YOUR_STRIPE_SECRET_KEY\n```\n\nThis server provides tools to search Stripe resources, perform read and write API operations, manage account info, and search documentation [2][4]. For Connect platforms, you can act on behalf of connected accounts by passing the --stripe-account flag or header [2][5].",
+  "results": [
+    {
+      "title": "ai/tools/modelcontextprotocol at main · stripe/ai · GitHub",
+      "url": "https://github.com/stripe/ai/tree/main/tools/modelcontextprotocol",
+      "snippet": ""
+    },
+    {
+      "title": "Model Context Protocol (MCP) | Stripe Documentation",
+      "url": "https://docs.stripe.com/mcp?locale=en-GB",
+      "snippet": ""
+    },
+    {
+      "title": "Stripe MCP Server - Official Model Context Protocol for AI Agents & Stripe API | a2a mcp",
+      "url": "https://a2a-mcp.org/entry/stripe-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Model Context Protocol (MCP) | Stripe Documentation",
+      "url": "https://docs.stripe.com/mcp?mcp-client=claudecode",
+      "snippet": ""
+    },
+    {
+      "title": "@stripe/mcp",
+      "url": "https://www.npmjs.com/package/@stripe/mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Stripe — MCP server | explainx.ai | explainx.ai",
+      "url": "https://explainx.ai/mcp-servers/stripe",
+      "snippet": ""
+    },
+    {
+      "title": "udaykapur/stripe-mcp-server",
+      "url": "https://github.com/udaykapur/stripe-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Stripe MCP Server – Setup, Features & Integration Guide",
+      "url": "https://mcpserver.dev/s/stripe_si9ef3j",
+      "snippet": ""
+    }
+  ]
+}

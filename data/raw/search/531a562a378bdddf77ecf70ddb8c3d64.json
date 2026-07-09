@@ -1,0 +1,45 @@
+{
+  "answer": "The official PitchBook Model Context Protocol (MCP) server provides AI agents with standardized, secure access to private market data, including company details, financial data, deals, and investor information [1][2]. It is maintained by PitchBook and requires an active PitchBook license for Premium access [1][3].\n\nTo configure the server in an MCP-compatible client like Claude Desktop or Cursor, add the following to your configuration file [1]:\n\n```json\n{\n  \"mcpServers\": {\n    \"pitchbook\": {\n      \"url\": \"https://premium.mcp.pitchbook.com/mcp\"\n    }\n  }\n}\n```\n\nThe server enables tools such as get_company, get_financials, search_companies, search_deals, and search_investors [1]. Usage is primarily intended for private equity, venture capital, and investment banking workflows [3]. While the Premium version requires a direct license, PitchBook also offers an Essential MCP connector with limited data access [3].",
+  "results": [
+    {
+      "title": "PitchBook MCP Server - Official Setup Guide | Apigene",
+      "url": "https://apigene.ai/mcp/official/pitchbook",
+      "snippet": ""
+    },
+    {
+      "title": "PitchBook Premium MCP Server | Tool Junction",
+      "url": "https://www.tooljunction.io/mcp/pitchbook",
+      "snippet": ""
+    },
+    {
+      "title": "Morningstar, Inc. - How has MCP adoption of PitchBook and Morningstar data trended since integration? What verticals are the biggest users of MORN data via MCP app integration? Are unit economics (or pricing to MORN) different in this form of consumption? I assume you still have to have a Morningstar/PitchBook license, so is this just a change in how users interact with Morningstar's data or are there meaningful changes in KPIs (such as licenses) or financials (margins, pricing, user count growth, etc.)?",
+      "url": "https://shareholders.morningstar.com/investor-resources/investor-qa/qa-details/2026/How-has-MCP-adoption-of-PitchBook-and-Morningstar-data-trended-since-integration-What-verticals-are-the-biggest-users-of-MORN-data-via-MCP-app-integration-Are-unit-economics-or-pricing-to-MORN-different-in-this-form-of-consumption-I-assume-you-still-/default.aspx",
+      "snippet": ""
+    },
+    {
+      "title": "Pitchbook MCP Server - Gong Collective",
+      "url": "https://collective.gong.io/integrations/pitchbookmcp",
+      "snippet": ""
+    },
+    {
+      "title": "PitchBook Premium MCP Server — AI Agent Integration | TeamDay.ai - TeamDay.ai",
+      "url": "https://www.teamday.ai/mcp-servers/anthropic-com-pitchbook-mcp-premium-pitchbook-premium",
+      "snippet": ""
+    },
+    {
+      "title": "PitchBook MCP Server – ChatGPT App | Top MCPs",
+      "url": "https://top-mcps.com/mcp/pitchbook",
+      "snippet": ""
+    },
+    {
+      "title": "PitchBook MCP for AI Agents — Private Market Intelligence",
+      "url": "https://vinkius.com/apps/pitchbook-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Equiforte MCP Hub | Equiforte",
+      "url": "https://www.equiforte.com/platform/mcp-hub",
+      "snippet": ""
+    }
+  ]
+}

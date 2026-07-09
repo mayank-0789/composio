@@ -1,0 +1,45 @@
+{
+  "answer": "There are two distinct projects referred to as a Copper MCP server.\n\nThe viaSocket Copper MCP server allows you to connect Copper CRM actions to AI assistants like Claude, ChatGPT, and Cursor. It provides a managed, secure endpoint that handles authentication and API integration, allowing you to trigger Copper tasks directly from your AI assistant [1].\n\nThe copper-mountain-vna-mcp server is a specialized tool for controlling Copper Mountain Vector Network Analyzers [2]. It communicates via TCP/IP SCPI to expose 45 tools for tasks such as sweep configuration, calibration, marker math, and S-parameter measurement to MCP-compatible AI clients [2].",
+  "results": [
+    {
+      "title": "Copper MCP | viaSocket",
+      "url": "https://viasocket.com/mcp/copper",
+      "snippet": ""
+    },
+    {
+      "title": "RFingAdam/copper-mountain-vna-mcp",
+      "url": "https://github.com/RFingAdam/copper-mountain-vna-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Build an MCP server - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/develop/build-server",
+      "snippet": ""
+    },
+    {
+      "title": "MCP Metal Prices and Forecasts",
+      "url": "https://agmetalminer.com/mcp-metal-prices/",
+      "snippet": ""
+    },
+    {
+      "title": "modelcontextprotocol/python-sdk",
+      "url": "http://github.com/modelcontextprotocol/python-sdk?tab=readme-ov-file",
+      "snippet": ""
+    },
+    {
+      "title": "modelcontextprotocol/servers",
+      "url": "https://github.com/ModelContextProtocol/servers",
+      "snippet": ""
+    },
+    {
+      "title": "modelcontextprotocol/example-remote-server",
+      "url": "https://github.com/modelcontextprotocol/example-remote-server",
+      "snippet": ""
+    },
+    {
+      "title": "rust-sdk/examples/servers at main · modelcontextprotocol/rust-sdk · GitHub",
+      "url": "https://github.com/modelcontextprotocol/rust-sdk/tree/main/examples/servers",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "one_liner": "Waterfall.io is a B2B contact/company data enrichment API (prospecting, search, enrichment, verification) accessed via a REST API secured with x-api-key headers, sold on a prepaid credit model.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "All requests authenticated via x-api-key header; master key available for enterprise sub-key management."
+    }
+  ],
+  "self_serve": "paid-plan",
+  "self_serve_notes": "No free tier; prepaid usage-based credit model with no long-term contract required. Developers sign up to receive an API key, but purchase is required (contract/credits) to use the API. Some account reporting endpoints are free of credit charge.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "medium",
+    "notes": "Multiple endpoints covering Prospector, Search Contact/Company, Contact/Phone/Company Enrichment, Company Reveal, Company Titles, Job Change Detection, Email Verification, Webhook JWKS, Account Reporting, and API Key Management."
+  },
+  "existing_mcp": {
+    "exists": "no"
+  },
+  "buildability": "buildable-with-caveats",
+  "main_blocker": "No self-serve free access; requires purchasing prepaid credits/contract to obtain an API key, and no existing MCP server was found.",
+  "evidence": [
+    {
+      "url": "https://docs.waterfall.io/v1/authentication",
+      "supports": "All requests authenticated using x-api-key header; base URL https://api.waterfall.io/v1/"
+    },
+    {
+      "url": "https://docs.waterfall.io/v1/introduction",
+      "supports": "Lists full set of REST endpoints (Prospector, Search Contact, Search Company, Enrichment endpoints, Email Verification, Account Reporting, API Key Management) all requiring x-api-key."
+    },
+    {
+      "url": "https://docs.waterfall.io/v1/api-keys-overview",
+      "supports": "Enterprise master key can generate and manage sub-keys."
+    }
+  ],
+  "confidence": 0.7,
+  "flags": [
+    "no free tier - prepaid credits required",
+    "no evidence of existing MCP server",
+    "API key issuance tied to signing a contract per docs"
+  ]
+}

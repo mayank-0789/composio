@@ -1,0 +1,54 @@
+{
+  "one_liner": "Brex offers a broad REST API (with an official MCP server) for managing corporate card, expense, and accounting data, secured via self-serve bearer tokens or OAuth2 for partners.",
+  "auth_methods": [
+    {
+      "method": "Token",
+      "notes": "User token (bearer token, prefixed bxt_) generated via Brex dashboard (Settings > Developer) by an account/card admin; passed as 'Authorization: Bearer <token>' header. Expires after 90 days of inactivity."
+    },
+    {
+      "method": "OAuth2",
+      "notes": "Used for partner integrations via Authorization Code Grant or Client Credentials Grant flows."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "API access included free in Essentials, Premium, and Enterprise tiers. Any account/card admin can generate a user token directly from the dashboard after accepting the developer API agreement — no sales contact needed for standard token access. Partner OAuth2 flows likely require a partnership agreement.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "REST APIs covering Team, Accounting, Payments, Expenses, Budgets, Cards, Transactions, etc., documented via OpenAPI specs."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://api.brex.com/mcp"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://developer.brex.com/guides/authentication.md",
+      "supports": "Bearer token auth via self-serve dashboard token generation; OAuth2 for partners"
+    },
+    {
+      "url": "https://developer.brex.com/guides/quickstart",
+      "supports": "Self-serve token generation and first API call example"
+    },
+    {
+      "url": "https://developer.brex.com/guides/partner_authentication",
+      "supports": "OAuth2 Authorization Code / Client Credentials grant for partner integrations"
+    },
+    {
+      "url": "https://www.brex.com/pricing",
+      "supports": "API access included in free Essentials tier as well as Premium/Enterprise"
+    },
+    {
+      "url": "https://developer.brex.com/openapi/accounting_api",
+      "supports": "Broad REST API surface including Accounting API"
+    },
+    {
+      "url": "https://developer.brex.com/openapi/team_api",
+      "supports": "Broad REST API surface including Team API"
+    }
+  ],
+  "confidence": 0.9,
+  "flags": []
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "FanBasis offers a free version and starts with free pricing [1]. It provides self-serve developer access to a full REST API, including a comprehensive sandbox environment for testing [2][1]. \n\nTo access the API, you must obtain an API key from your FanBasis dashboard [3]. All requests require an `x-api-key` header [4].\n\nFor production requests, use the base URL `https://www.fanbasis.com`, and for the sandbox environment, use `https://qa.dev-fan-basis.com` [4]. Example integration via `curl`:\n\n```bash\ncurl -X POST https://www.fanbasis.com/public-api/checkout-sessions \\\n  -H \"x-api-key: YOUR_API_KEY\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"product\": { \"title\": \"Product Name\" },\n    \"amount_cents\": 2999\n  }'\n``` \n\nSDKs are available for Node, Python, PHP, Ruby, and TypeScript [2][5].",
+  "results": [
+    {
+      "title": "FanBasis",
+      "url": "https://www.fanbasis.com/",
+      "snippet": ""
+    },
+    {
+      "title": "FanBasis Reviews in 2026",
+      "url": "https://sourceforge.net/software/product/FanBasis/",
+      "snippet": ""
+    },
+    {
+      "title": "FanBasis — Payments Infrastructure That Makes You More Money",
+      "url": "https://www.fanbasis.com/enterprises",
+      "snippet": ""
+    },
+    {
+      "title": "docs/gateways/fanbasis.md at main · subtain-haider/laravel-payments",
+      "url": "https://github.com/subtain-haider/laravel-payments/blob/main/docs/gateways/fanbasis.md",
+      "snippet": ""
+    },
+    {
+      "title": "Api docs",
+      "url": "https://raw.githubusercontent.com/otniel-bit/fbnewapi/main/api-docs.md",
+      "snippet": ""
+    },
+    {
+      "title": "@fanbasis/checkout-sdk",
+      "url": "https://registry.npmjs.org/%40fanbasis%2Fcheckout-sdk",
+      "snippet": ""
+    },
+    {
+      "title": "@fanbasis/checkout-react",
+      "url": "https://registry.npmjs.org/@fanbasis/checkout-react",
+      "snippet": ""
+    },
+    {
+      "title": "Fanbasis Integration - AdRecon",
+      "url": "https://matthewsabia1-adrecon.mintlify.app/integrations/fanbasis",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "verdicts": [
+    {
+      "field": "name",
+      "status": "supported",
+      "note": "Evidence confirms this is the Google Ads API."
+    },
+    {
+      "field": "website",
+      "status": "supported",
+      "note": "Multiple evidence URLs confirm developers.google.com/google-ads as the correct domain."
+    },
+    {
+      "field": "category",
+      "status": "supported",
+      "note": "Google Ads is clearly a marketing and advertising platform."
+    },
+    {
+      "field": "one_liner",
+      "status": "supported",
+      "note": "Evidence confirms REST/gRPC access, OAuth2 + developer-token auth, free API, and manager account/access-level approval process."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence explicitly documents OAuth 2.0 requirement, developer-token header, login-customer-id header for manager accounts, service account support, and multi-user OAuth workflow support."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Evidence confirms developer token requires manager account setup and access level application/approval (Basic/Standard), not instant self-serve."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "supported",
+      "note": "Evidence confirms API is free, developer token obtained via manager account, and access level approval process (RMF compliance for Standard access)."
+    },
+    {
+      "field": "api_surface",
+      "status": "supported",
+      "note": "Evidence confirms REST API exists (developers.google.com/google-ads/api/rest), plus gRPC and GAQL query language, with broad campaign management and reporting coverage."
+    },
+    {
+      "field": "existing_mcp.exists",
+      "status": "unsupported",
+      "note": "The record claims exists='yes' with URL 'https://github.com/googleads/google-ads-mcp', but the provided evidence contains no mention of any Model Context Protocol (MCP) server. The evidence only covers the Google Ads API documentation itself. Without evidence of a dedicated MCP server, this must be marked 'unknown'."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "unsupported",
+      "note": "No evidence provided for the existence of an MCP server at the claimed GitHub URL. The evidence URLs are all official Google Ads API docs, not MCP server repos."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "Evidence supports 'buildable-with-caveats' due to the developer token approval process requiring manager account setup and access level application."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "Evidence confirms developer token approval process (manager account + access level application) is required. The claim about official MCP server being read-only is unsupported by evidence but the first part of the blocker is accurate."
+    },
+    {
+      "field": "evidence",
+      "status": "supported",
+      "note": "All evidence URLs are valid Google Ads API documentation pages that support the claims made."
+    },
+    {
+      "field": "confidence",
+      "status": "supported",
+      "note": "0.8 is reasonable given the comprehensive evidence for most fields, though MCP server claims lack evidence."
+    },
+    {
+      "field": "flags",
+      "status": "supported",
+      "note": "First flag (requires_developer_token_approval) is supported by evidence. The other two flags about MCP are unsupported by the provided evidence."
+    }
+  ],
+  "revised": {
+    "id": 31,
+    "name": "Google Ads",
+    "website": "developers.google.com/google-ads",
+    "category": "Marketing, Ads, Email and Social",
+    "one_liner": "Google Ads API provides broad REST/gRPC access to campaign management and reporting via OAuth2 + developer-token auth, free to use but gated by a manager-account developer token application and access-level approval.",
+    "auth_methods": [
+      {
+        "method": "OAuth2",
+        "notes": "Requires OAuth 2.0 access token plus a developer-token header; supports service account, single-user, and multi-user OAuth workflows with scope https://www.googleapis.com/auth/adwords. login-customer-id header required when using a manager account."
+      }
+    ],
+    "self_serve": "admin-approval",
+    "self_serve_notes": "API usage itself is free, but developers must obtain a developer token via a Google Ads manager account and apply for an access level (Basic/Standard) through the API Center; this involves a Google review/approval process (Required Minimum Functionality compliance) rather than instant self-serve API key generation.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "Also gRPC/client libraries (Java, Python, etc.); GAQL query language for reporting; broad coverage of campaign, ad group, keyword, budget, and reporting resources."
+    },
+    "existing_mcp": {
+      "exists": "unknown"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "Developer token approval process (manager account setup + access level application) adds friction before an agent toolkit can call the live API.",
+    "evidence": [
+      {
+        "url": "https://developers.google.com/google-ads/api/rest/auth",
+        "supports": "OAuth2 + developer-token + login-customer-id header requirements"
+      },
+      {
+        "url": "https://developers.google.com/google-ads/api/docs/api-policy/developer-token",
+        "supports": "Developer token required, obtained via manager account"
+      },
+      {
+        "url": "https://developers.google.com/google-ads/api/docs/productionize/access-levels",
+        "supports": "Access levels and RMF approval process for API access"
+      },
+      {
+        "url": "https://developers.google.com/google-ads/api/docs/rate-sheet",
+        "supports": "API is free to use at all access levels"
+      },
+      {
+        "url": "https://developers.google.com/google-ads/api/docs/oauth/service-accounts",
+        "supports": "Service account OAuth workflow support"
+      },
+      {
+        "url": "https://developers.google.com/google-ads/api/docs/oauth/multi-user-authentication",
+        "supports": "Multi-user OAuth workflow support"
+      }
+    ],
+    "confidence": 0.75,
+    "flags": [
+      "requires_developer_token_approval"
+    ]
+  }
+}

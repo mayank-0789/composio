@@ -1,0 +1,45 @@
+{
+  "answer": "Netlify offers a self-serve Free tier that includes API access as part of its standard platform features [1]. The Free plan provides 300 credits per month for various services, including deployments, compute resources, and API-related activities [1][2]. You can deploy from Git or via the API without requiring a credit card [1][3]. If you exceed your monthly credit limit, your projects will pause until the next billing cycle, or you can manually upgrade to a paid plan to restore service [4][5].",
+  "results": [
+    {
+      "title": "Pricing and Plans | Netlify",
+      "url": "https://www.netlify.com/pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "Credit-based pricing plans | Netlify Docs",
+      "url": "https://docs.netlify.com/manage/accounts-and-billing/billing/billing-for-credit-based-plans/credit-based-pricing-plans",
+      "snippet": ""
+    },
+    {
+      "title": "Introducing Netlify’s Free plan",
+      "url": "https://www.netlify.com/blog/introducing-netlify-free-plan/",
+      "snippet": ""
+    },
+    {
+      "title": "Personal vs Free Plan Comparison | Netlify",
+      "url": "https://www.netlify.com/pricing/personal-vs-free/",
+      "snippet": ""
+    },
+    {
+      "title": "Billing FAQ for Credit-based pricing plans | Netlify Docs",
+      "url": "https://docs.netlify.com/manage/accounts-and-billing/billing/billing-for-credit-based-plans/billing-faq-for-credit-based-plans",
+      "snippet": ""
+    },
+    {
+      "title": "Credit-based pricing on Netlify, built for today’s AI development workflows",
+      "url": "https://www.netlify.com/blog/new-pricing-credits/",
+      "snippet": ""
+    },
+    {
+      "title": "Netlify pricing update: Introducing credit-based plans | Netlify Changelog",
+      "url": "https://www.netlify.com/changelog/netlify-pricing-update-introducing-credit-based-plans/",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing updates for Credit-based plans",
+      "url": "https://www.netlify.com/changelog/2026-04-14-pricing-updates-april-2026/",
+      "snippet": ""
+    }
+  ]
+}

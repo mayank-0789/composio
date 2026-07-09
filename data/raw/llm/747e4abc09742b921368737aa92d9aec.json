@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://github.com/makenotion/notion-mcp-server/",
+  "reason": "Notion has both an official MCP server (makenotion/notion-mcp-server) and multiple well-known community-maintained MCP servers. The official server is available at https://github.com/makenotion/notion-mcp-server/ and supports OAuth-based authentication. Additionally, there are several community servers (awkoy/notion-mcp-server, KokomiSensei/notion-mcp-server, suekou/mcp-notion-server, schulle01/notion-mcp-server) that provide alternative implementations with token-based authentication for headless workflows."
+}

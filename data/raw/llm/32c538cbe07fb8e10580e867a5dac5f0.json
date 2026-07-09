@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://github.com/abekdwight/mermaid-mcp-server",
+  "reason": "Multiple dedicated MCP servers exist for Mermaid CLI. The evidence shows several community-developed MCP server implementations across different languages (Node.js, Python, Java) that expose Mermaid diagram capabilities over MCP. These servers provide tools for validating Mermaid syntax and rendering diagrams to various formats (SVG, PNG). Notable examples include abekdwight/mermaid-mcp-server (Node.js), rtuin/mcp-mermaid-validator (Node.js), andrewginns/mermaid-mcp-server (Node.js), mermaid-mcp on PyPI (Python), peng-shawn/mermaid-mcp-server, and aviciot/mcp_mermaid. These are distinct MCP server packages designed specifically to integrate Mermaid capabilities into MCP clients like Claude Desktop."
+}

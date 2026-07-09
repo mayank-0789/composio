@@ -1,0 +1,110 @@
+{
+  "verdicts": [
+    {
+      "field": "existing_mcp.exists",
+      "status": "contradicted",
+      "note": "The record claims exists='yes' and provides a URL to the Pumble Node SDK manifest documentation (https://cake-com.github.io/pumble-node-sdk/manifest.html). However, this is NOT a Model Context Protocol (MCP) server—it is simply the documentation for Pumble's own app manifest/SDK framework. The evidence contains no mention of an MCP server for Pumble. The URL points to Pumble's own developer documentation, not a separate MCP integration."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "contradicted",
+      "note": "The URL provided (https://cake-com.github.io/pumble-node-sdk/manifest.html) is to Pumble's own SDK documentation for building Pumble apps, not an MCP server. This should be removed."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence confirms OAuth2 flow (https://cake-com.github.io/pumble-node-sdk/authorization.html) and API key generation via the Pumble API addon (https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/). Both methods are accurately described."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Evidence confirms that free plan limits integrations to specific native apps (Clockify, Plaky) per https://pumble.com/learn/pumble/free-plan-explained/, and full API/integration access requires paid Pro or Business plans per https://pumble.com/learn/pumble/business-plan-explained/. 'paid-plan' is correct."
+    },
+    {
+      "field": "api_surface",
+      "status": "supported",
+      "note": "Evidence shows REST API with Node SDK (pumble-node-sdk) covering messages, channels, files, reactions, scheduled messages, etc. per https://cake-com.github.io/pumble-node-sdk/api-client.html. Type 'REST' and breadth 'medium' are reasonable."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "Buildability 'buildable-with-caveats' is accurate given that full API access requires paid plans and OAuth2 app creation involves an app manifest/registration process rather than instant key generation."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "Main blocker accurately reflects that full API/integration access is gated behind paid plans and OAuth2 app creation requires going through an app manifest/marketplace process."
+    },
+    {
+      "field": "one_liner",
+      "status": "supported",
+      "note": "The one_liner accurately summarizes Pumble's offering: team messaging with REST API and Node SDK, OAuth2 and API key auth, and integration access gated by paid plans."
+    },
+    {
+      "field": "confidence",
+      "status": "supported",
+      "note": "Confidence of 0.6 is reasonable given the evidence provided covers the key claims but some details about the exact OAuth2 app registration process and free-tier limitations are inferred."
+    }
+  ],
+  "revised": {
+    "id": 25,
+    "name": "Pumble",
+    "website": "pumble.com",
+    "category": "Communications and Messaging",
+    "one_liner": "Pumble is a team messaging platform offering a REST API (with Node SDK) supporting OAuth2 app tokens or workspace-generated API keys for bots/messages/channels, with integration access gated by paid plans.",
+    "auth_methods": [
+      {
+        "method": "OAuth2",
+        "notes": "OAuth2 flow via consent screen and POST https://api-ga.pumble.com/oauth2/access to exchange code for access token, used for full apps."
+      },
+      {
+        "method": "API key",
+        "notes": "Pumble API addon allows generating API keys/tokens directly within a workspace (x-app-token + token headers) for simpler direct requests."
+      }
+    ],
+    "self_serve": "paid-plan",
+    "self_serve_notes": "Free tier exists but third-party app/integration access is restricted to a limited set of native integrations (e.g., Clockify, Plaky); full API/app integration access requires upgrading to Pro or Business plan.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "medium",
+      "notes": "REST API with SDK (pumble-node-sdk) covering messages, channels, files, reactions, scheduled messages, etc. Also has an app manifest/trigger framework for building integrations."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "Full API/integration access is gated behind paid Pro/Business plans, and OAuth2 app creation requires going through Pumble's app manifest/marketplace process rather than instant self-serve key generation.",
+    "evidence": [
+      {
+        "url": "https://cake-com.github.io/pumble-node-sdk/api-client.html",
+        "supports": "Describes x-app-token and token headers required for every API request, and lists API methods/scopes."
+      },
+      {
+        "url": "https://cake-com.github.io/pumble-node-sdk/authorization.html",
+        "supports": "Details OAuth2 authorization flow for obtaining user/bot access tokens."
+      },
+      {
+        "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+        "supports": "Describes the Pumble API addon allowing users to generate API keys directly within a workspace."
+      },
+      {
+        "url": "https://pumble.com/learn/pumble/free-plan-explained/",
+        "supports": "Confirms free plan limits integrations to specific native apps like Clockify and Plaky."
+      },
+      {
+        "url": "https://pumble.com/learn/pumble/business-plan-explained/",
+        "supports": "Confirms unlimited/full integration access requires paid Business or Pro plan."
+      },
+      {
+        "url": "https://cake-com.github.io/pumble-node-sdk/manifest.html",
+        "supports": "Describes the app manifest and SDK framework used to build Pumble apps/integrations."
+      }
+    ],
+    "confidence": 0.75,
+    "flags": [
+      "Integration/API access restricted by pricing tier",
+      "OAuth2 app creation process not fully self-serve instant (requires app registration via manifest)",
+      "No official MCP server found—only Pumble's own SDK/app framework documented"
+    ]
+  }
+}

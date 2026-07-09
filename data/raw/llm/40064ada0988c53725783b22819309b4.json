@@ -1,0 +1,45 @@
+{
+  "one_liner": "MrScraper is an AI-powered web scraping platform with a REST API and hosted MCP server, authenticated via API tokens, for programmatically creating and running scrapers and retrieving structured data.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Token-based auth via 'x-api-token' HTTP header for most endpoints; analytics endpoints require the token as a query parameter 'apiTokenName' instead."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Free tier includes 100 API tokens/month, no credit card required. API token generated self-serve via user profile's API Tokens section. 10 concurrent requests allowed on free tier; no residential proxies or priority support.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "medium",
+    "notes": "REST API for creating/running scrapers (AI and standard), retrieving results, analytics endpoints, pagination, error handling. Token-scoped to V3 platform and sync endpoints; other hosts require contacting support."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://mcp.mrscraper.com/mcp"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://docs.mrscraper.com/docs/api/authentication",
+      "supports": "API token auth via x-api-token header; analytics endpoints use apiTokenName query parameter"
+    },
+    {
+      "url": "https://docs.mrscraper.com/docs/features/activating-api",
+      "supports": "REST API for running scrapers with parameters like scraperId, url, maxRetry, maxPages, timeout, stream"
+    },
+    {
+      "url": "https://docs.mrscraper.com/docs/getting-started/api-token",
+      "supports": "Self-serve API token generation and free tier token plan details"
+    },
+    {
+      "url": "https://docs.mrscraper.com/docs/guides/programmatically",
+      "supports": "Programmatic scraper creation and execution via API"
+    }
+  ],
+  "confidence": 0.85,
+  "flags": [
+    "Existing hosted MCP server already available at mcp.mrscraper.com, reducing need to build one from scratch",
+    "Free tier has limited scope (no residential proxies, 10 concurrent requests) which may affect production use cases"
+  ]
+}

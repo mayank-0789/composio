@@ -1,0 +1,45 @@
+{
+  "answer": "The Pumble Model Context Protocol (MCP) server allows AI agents to interact with your Pumble workspace, enabling tasks like searching messages, managing channels, and executing actions [1]. There are three primary ways to implement this:\n\nUsing the official Pumble MCP server: You create an application within your Pumble workspace, copy the required tokens, and configure your AI client (e.g., Claude, Gemini, or Codex) to connect via the provided HTTP URL [1].\n\nUsing community-built servers: Options include open-source packages like @shoutkol/pumble-mcp-server (via npm) [2] or more comprehensive versions like pumble-mcp, which offers full SDK-based access to messaging, file operations, and real-time events [3].\n\nUsing managed services: Platforms like Vinkius, Pipedream, and viaSocket provide hosted, ready-to-use MCP endpoints that handle infrastructure and authentication for you [4][5][6].",
+  "results": [
+    {
+      "title": "How to use the Pumble MCP server - Pumble Help",
+      "url": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server/",
+      "snippet": ""
+    },
+    {
+      "title": "shoutkol/pumble-mcp-server",
+      "url": "https://github.com/shoutkol/pumble-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "nitindermohan/pumble-mcp",
+      "url": "https://github.com/nitindermohan/pumble-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Pumble MCP Server | Pipedream",
+      "url": "https://mcp.pipedream.com/app/pumble",
+      "snippet": ""
+    },
+    {
+      "title": "Pumble MCP Server Ready to Use!",
+      "url": "https://vinkius.com/apps/pumble-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Pumble MCP | viaSocket",
+      "url": "https://viasocket.com/mcp/pumble",
+      "snippet": ""
+    },
+    {
+      "title": "How to Use Pumble MCP Server with Claude Desktop",
+      "url": "https://vinkius.com/apps/pumble-mcp/with/claude-desktop",
+      "snippet": ""
+    },
+    {
+      "title": "Understanding MCP servers - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "verdicts": [
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence confirms OAuth2 (3-legged flow) and API key (personal access tokens) as Bearer tokens are supported authentication methods."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Evidence confirms API access requires paid Business/Enterprise/Advanced Work Management plans, with self-serve token generation via Personal Settings or OAuth2 implementation once on a qualifying plan."
+    },
+    {
+      "field": "api_surface",
+      "status": "supported",
+      "note": "Evidence confirms REST API at base URL https://api.smartsheet.com/2.0 with OpenAPI spec, covering sheets, rows, workspaces, users, alternate emails, etc., and mentions multiple SDKs."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "contradicted",
+      "note": "The URL https://mcp.smartsheet.com resolves but the evidence page content is empty/blank. No concrete evidence of a dedicated MCP server implementation is visible. The evidence does not demonstrate this is an actual MCP server - it could be a placeholder domain. Without verifiable MCP server code, documentation, or implementation details, this should be marked as 'unknown' with no URL."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "Evidence confirms 'buildable-with-caveats' is appropriate - API access requires a paid Business/Enterprise/Advanced Work Management plan with no free tier, which is a clear caveat to building."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "Evidence confirms API access is restricted to Business and Enterprise plans with no free tier for API access, matching the stated main blocker."
+    },
+    {
+      "field": "evidence",
+      "status": "supported",
+      "note": "All evidence URLs are accessible and support their stated claims, except mcp.smartsheet.com which shows no visible content to confirm an MCP server exists."
+    }
+  ],
+  "revised": {
+    "id": 79,
+    "name": "Smartsheet",
+    "website": "smartsheet.com/developers",
+    "category": "Productivity and Project Management",
+    "one_liner": "Smartsheet offers a comprehensive REST API with OAuth2 or personal access tokens authentication, but API access requires a paid Business/Enterprise/Advanced Work Management plan.",
+    "auth_methods": [
+      {
+        "method": "OAuth2",
+        "notes": "3-legged OAuth 2.0 flow for third-party apps requiring user consent; Bearer token used in Authorization header."
+      },
+      {
+        "method": "API key",
+        "notes": "Personal access token generated via Smartsheet UI (Personal Settings) for machine-to-machine integrations; used as Bearer token."
+      }
+    ],
+    "self_serve": "paid-plan",
+    "self_serve_notes": "No free tier for API access; requires Business, Enterprise, or Advanced Work Management plan. Once on a qualifying plan, developers can self-serve generate a personal access token via Personal Settings or implement OAuth2 without needing sales approval.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "Full REST API (base https://api.smartsheet.com/2.0) with OpenAPI spec covering sheets, rows, workspaces, users, alternate emails, etc. SDKs available in multiple languages (Java, C#, PHP, Go, Ruby, R, Python, Node.js/JS). Multi-region endpoints available (US/EU/AU)."
+    },
+    "existing_mcp": {
+      "exists": "unknown"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "API access is gated behind a paid Business/Enterprise/Advanced Work Management plan; no free-tier self-serve credentials.",
+    "evidence": [
+      {
+        "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+        "supports": "OAuth2 and API access token (Bearer) authentication methods"
+      },
+      {
+        "url": "https://developers.smartsheet.com/api/smartsheet/openapi/tokens",
+        "supports": "Personal access token generation and API restricted to Business/Enterprise plans"
+      },
+      {
+        "url": "https://developers.smartsheet.com/api/smartsheet/guides/advanced-topics/oauth",
+        "supports": "3-legged OAuth2 flow for third-party apps"
+      },
+      {
+        "url": "https://www.smartsheet.com/pricing",
+        "supports": "No free tier includes API access; requires paid plan"
+      },
+      {
+        "url": "https://mcp.smartsheet.com",
+        "supports": "URL exists but no visible content to confirm MCP server implementation"
+      }
+    ],
+    "confidence": 0.75,
+    "flags": [
+      "requires-paid-plan",
+      "multi-region-endpoints"
+    ]
+  }
+}

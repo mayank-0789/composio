@@ -1,0 +1,50 @@
+{
+  "one_liner": "Gorgias is a customer support/helpdesk platform offering a REST API (Basic auth via API key or OAuth2 for public apps) that is self-serve for existing customers and has an official MCP server.",
+  "auth_methods": [
+    {
+      "method": "Basic",
+      "notes": "Private apps use HTTP Basic Auth with email as username and API key as password, base64-encoded in Authorization header."
+    },
+    {
+      "method": "OAuth2",
+      "notes": "Mandatory for public apps; uses Bearer tokens after OAuth2 authorization flow."
+    }
+  ],
+  "self_serve": "self-serve-trial",
+  "self_serve_notes": "Existing Gorgias customers (account owner or admins) can generate API keys directly from helpdesk Settings > Account > REST API, available on all Helpdesk plans, no free tier but 7-day trial without credit card. For third-party developers building public/OAuth2 apps, must register on Developer Portal, create a draft app, and contact techpartners@gorgias.com to convert a trial into a Developer Sandbox account, adding a partial admin-approval step for that path.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Full REST API for helpdesk tickets, customers, and account settings; API key/basic auth usable directly from API reference; Postman collection available."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://mcp.gorgias.com/mcp?gorgias_subdomain=YOUR-SUBDOMAIN"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://developers.gorgias.com/reference/authentication",
+      "supports": "Describes two auth methods: private app API key (Basic auth) and public app OAuth2 (Bearer token)."
+    },
+    {
+      "url": "https://docs.gorgias.com/en-US/rest-api-208286",
+      "supports": "Details how to access/create REST API credentials (Basic auth with email + API key) from helpdesk settings, available on all Helpdesk plans."
+    },
+    {
+      "url": "https://developers.gorgias.com/docs/1-register-on-developer-portal",
+      "supports": "Describes developer portal registration and sandbox account process for building public/OAuth2 apps."
+    },
+    {
+      "url": "https://developers.gorgias.com/docs/set-up-oauth2-app-store",
+      "supports": "OAuth2 setup process for public apps."
+    }
+  ],
+  "confidence": 0.85,
+  "flags": [
+    "Official MCP server exists at mcp.gorgias.com",
+    "No free tier; 7-day trial only for new accounts",
+    "Public/OAuth2 app development requires manual approval via techpartners@gorgias.com for sandbox account, though private app API key self-serve is instant for existing customers"
+  ]
+}

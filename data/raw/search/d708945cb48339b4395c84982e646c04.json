@@ -1,0 +1,45 @@
+{
+  "answer": "Supabase Auth uses two primary schemes for API access [1]:\n\nAPI Key Authentication: Public endpoints (e.g., /signup, /token) require an apikey header containing either the anon (public) or service_role (private) key [2][1].\n\nBearer Token Authentication: User-specific endpoints (e.g., /user) require a valid JWT access token provided in the Authorization header [2][1].\n\nTo authenticate via the REST API for a password-based sign-in, send a POST request to the /token endpoint [2][3]:\n\n```bash\ncurl -X POST 'https://<PROJECT_REF>.supabase.co/auth/v1/token?grant_type=password' \\\n  -H \"apikey: YOUR_ANON_KEY\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"email\": \"user@example.com\", \"password\": \"password1\"}'\n```\n\nAfter obtaining an access token, include it in the Authorization header for subsequent requests to secure your database and API endpoints [2].",
+  "results": [
+    {
+      "title": "API Reference | supabase/auth | DeepWiki",
+      "url": "https://deepwiki.com/supabase/auth/3-api-reference",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication",
+      "url": "https://supabase-supabase.mintlify.app/api/rest/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "openapi.yaml at f3425cf7 · supabase/auth",
+      "url": "https://github.com/supabase/auth/blob/f3425cf7/openapi.yaml",
+      "snippet": ""
+    },
+    {
+      "title": "Auth | Supabase Docs",
+      "url": "https://supabase.com/docs/guides/auth",
+      "snippet": ""
+    },
+    {
+      "title": "openapi.yaml at master · supabase/auth",
+      "url": "https://github.com/supabase/auth/blob/master/openapi.yaml",
+      "snippet": ""
+    },
+    {
+      "title": "Password-based Auth | Supabase Docs",
+      "url": "https://supabase.com/docs/guides/auth/passwords",
+      "snippet": ""
+    },
+    {
+      "title": "Multi-Factor Authentication | Supabase Docs",
+      "url": "https://supabase.com/docs/guides/auth/auth-mfa",
+      "snippet": ""
+    },
+    {
+      "title": "Anonymous Sign-Ins | Supabase Docs",
+      "url": "https://supabase.com/docs/guides/auth/auth-anonymous?language=python&queryGroups=language",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "verdicts": [
+    {
+      "field": "existing_mcp.exists",
+      "status": "unsupported",
+      "note": "The evidence provides official Discord developer documentation (API reference, OAuth2 docs, quick-start guide, monetization page) but contains NO mention of any Model Context Protocol (MCP) server. The url https://github.com/pasympa/discord-mcp points to a third-party GitHub repo, not official Discord documentation or a confirmed MCP server in the evidence. Without evidence of an actual MCP server, this should be 'no' or 'unknown'."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "unsupported",
+      "note": "The provided URL is not mentioned or linked in any of the evidence documents. The evidence contains only official Discord developer documentation links, none of which reference this community MCP server."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence from https://docs.discord.com/developers/reference confirms both 'Bot token authentication via Authorization: Bot TOKEN header' and 'Bearer token authentication via Authorization: Bearer TOKEN header'. The OAuth2 page confirms the OAuth2 authorization code flow with client_id/client_secret exchanged at /api/oauth2/token."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Evidence from https://docs.discord.com/developers/quick-start/getting-started shows a free self-serve process for building a bot and obtaining a token via the Developer Portal. The monetization page confirms that Premium Apps/SKUs are optional features requiring verification but separate from basic API access."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "supported",
+      "note": "Evidence supports that developers can create applications and bot tokens for free via the Developer Portal. The monetization page confirms that Premium Apps features are optional and require additional verification, but are not needed for basic API usage."
+    },
+    {
+      "field": "api_surface.type",
+      "status": "supported",
+      "note": "Evidence from https://docs.discord.com/developers/reference confirms a REST API with base URL https://discord.com/api and versioned endpoints. Multiple references to REST endpoints and HTTP-based authentication."
+    },
+    {
+      "field": "api_surface.breadth",
+      "status": "supported",
+      "note": "While the evidence excerpts don't enumerate all API endpoints, the OAuth2 page lists numerous scopes covering guilds, channels, messages, roles, users, commands, activities, builds, entitlements, etc., supporting a broad API surface claim."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "Evidence shows free self-serve bot creation, clear authentication methods (Bot tokens, OAuth2), and public REST API with no mention of access barriers for basic usage. This supports 'buildable-now' status."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "Evidence shows no blockers for basic API access. Monetization features requiring verification are optional, not required for core API functionality. null blocker is appropriate."
+    }
+  ],
+  "revised": {
+    "id": 26,
+    "name": "Discord",
+    "website": "discord.com",
+    "category": "Communications and Messaging",
+    "one_liner": "Discord provides a broad, free, self-serve REST + Gateway API authenticated via bot tokens or OAuth2 bearer tokens, with multiple community-built MCP servers available (not official).",
+    "auth_methods": [
+      {
+        "method": "Token",
+        "notes": "Bot token authentication via 'Authorization: Bot TOKEN' header, created and managed in the Developer Portal for a registered application."
+      },
+      {
+        "method": "OAuth2",
+        "notes": "OAuth2 authorization code flow producing a Bearer access token, used for user-authenticated actions; exchanged via /api/oauth2/token with client_id/client_secret."
+      }
+    ],
+    "self_serve": "self-serve-free",
+    "self_serve_notes": "Developers can create an application and bot token for free via the Discord Developer Portal with no paid plan required for basic API access. Monetization features (Premium Apps/SKUs) require additional verification but are not needed for basic API/bot usage.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "Discord REST API covers guilds, channels, messages, roles, users, webhooks, interactions, plus Gateway (WebSocket) for real-time events. Also has OAuth2 API and Social SDK."
+    },
+    "existing_mcp": {
+      "exists": "unknown"
+    },
+    "buildability": "buildable-now",
+    "main_blocker": null,
+    "evidence": [
+      {
+        "url": "https://docs.discord.com/developers/reference",
+        "supports": "Base URL, API versioning, and Authorization header format (Bot / Bearer tokens)."
+      },
+      {
+        "url": "https://docs.discord.com/developers/topics/oauth2",
+        "supports": "OAuth2 bearer token flow for user-authenticated actions."
+      },
+      {
+        "url": "https://docs.discord.com/developers/quick-start/getting-started",
+        "supports": "Free self-serve process for building a bot and obtaining a token."
+      },
+      {
+        "url": "https://docs.discord.com/developers/platform/app-monetization",
+        "supports": "Optional monetization (Premium Apps/SKUs) requiring verification, separate from basic free API access."
+      }
+    ],
+    "confidence": 0.9,
+    "flags": [
+      "Multiple community MCP servers exist (cappylab, PaSympa, rayenking) but none are verified in the provided evidence; no official first-party Discord MCP server confirmed.",
+      "Monetization/verification requirements apply only if building paid premium app features, not for core API usage."
+    ]
+  }
+}

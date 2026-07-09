@@ -1,0 +1,45 @@
+{
+  "answer": "Salesforce provides two distinct approaches to Model Context Protocol (MCP) servers for Commerce Cloud. The PWA Kit MCP Server (and the broader B2C Developer Tooling MCP) is a local, developer-focused tool designed to assist with storefront development, SCAPI exploration, and code generation within IDEs like Cursor [1][2][3]. Conversely, the B2C Commerce MCP Shopper Service is a fully hosted, enterprise-grade service aimed at the shopper experience, enabling AI agents to perform real-time cart operations, product searches, and checkout integrations via authenticated SLAS tokens [4][5]. Additionally, community-led MCP implementations exist for custom OCAPI/SCAPI integrations [6][7].",
+  "results": [
+    {
+      "title": "Accelerate PWA Kit Development with the PWA Kit MCP Server (Developer Preview) | Composable Storefront | B2C Commerce API | Salesforce Developers",
+      "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/mcp-server-intro.html",
+      "snippet": ""
+    },
+    {
+      "title": "b2c-developer-tooling/packages/b2c-dx-mcp at main · SalesforceCommerceCloud/b2c-developer-tooling · GitHub",
+      "url": "https://github.com/SalesforceCommerceCloud/b2c-developer-tooling/tree/main/packages/b2c-dx-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "packages/b2c-dx-mcp/README.md",
+      "url": "https://github.com/SalesforceCommerceCloud/b2c-developer-tooling/blob/main/packages/b2c-dx-mcp/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "Agentic MCP Shopper Tools Quick Start (Pilot) | B2C Commerce | B2C Commerce API | Salesforce Developers",
+      "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/agentic-mcp-shopper-tools-quick-start.html",
+      "snippet": ""
+    },
+    {
+      "title": "Agentic MCP Shopper Tools Quick Start (Pilot) | B2C Commerce | B2C Commerce Storefront Reference Architecture | Salesforce Developers",
+      "url": "https://developer.salesforce.com/docs/commerce/sfra/guide/agentic-mcp-shopper-tools-quick-start.html",
+      "snippet": ""
+    },
+    {
+      "title": "brinzl/commercecloud-mcp-server",
+      "url": "https://github.com/BrinsilElias/commercecloud-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "ZaUtre/sfcc-mcp-server",
+      "url": "https://github.com/ZaUtre/sfcc-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "vinkius-labs/salesforce-commerce-mcp",
+      "url": "https://github.com/vinkius-labs/salesforce-commerce-mcp",
+      "snippet": ""
+    }
+  ]
+}

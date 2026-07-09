@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://viasocket.com/mcp/copper",
+  "reason": "There are two distinct MCP servers for Copper:\n\n1. **viaSocket Copper MCP server** for Copper CRM - A managed MCP server that connects Copper CRM actions to AI assistants like Claude, ChatGPT, and Cursor, handling authentication and API integration.\n\n2. **copper-mountain-vna-mcp** - A specialized MCP server for controlling Copper Mountain Vector Network Analyzers, exposing 45 tools via TCP/IP SCPI for tasks like sweep configuration, calibration, and S-parameter measurement.\n\nBoth are distinct MCP server implementations that expose their respective app capabilities over the Model Context Protocol."
+}

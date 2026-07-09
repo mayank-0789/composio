@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://github.com/ModelContextProtocol/servers",
+  "reason": "There are actually TWO distinct MCP servers for Consensus-related apps:\n\n1. **Consensus AI Connect MCP Server** (@modelcontextprotocol/server-consensus) - An official/well-known MCP server that enables AI platforms to query the Consensus research database of 200 million papers via OAuth2-secured connections. This is available via `npx @modelcontextprotocol/server-consensus -s` and appears to be part of the official Model Context Protocol servers collection.\n\n2. **@consensus-tools/mcp** - A separate MCP adapter package that exposes agent management, job lifecycles, and workflow execution capabilities from the consensus-tools toolkit as MCP tools, resources, and prompts for LLM agents.\n\nBoth are dedicated MCP server implementations, not just product repos or REST APIs."
+}

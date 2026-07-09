@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://github.com/BusyBee3333/squarespace-mcp-2026-complete",
+  "reason": "Multiple dedicated MCP servers exist for Squarespace. Notable examples include BusyBee3333/squarespace-mcp-2026-complete (comprehensive TypeScript server with 67 tools), timncox/squarespace-mcp (extensive server with 141+ tools), and several other community implementations from providers like StackOne, MCPEngage, DataFaucet, and Vinkius. These are distinct packages that expose Squarespace's capabilities over MCP for AI agents to interact with website/commerce data."
+}

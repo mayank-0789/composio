@@ -1,0 +1,45 @@
+{
+  "answer": "The Help Scout Mailbox API v2 uses OAuth 2.0 with Authorization Code and Client Credentials flows [1]. You must create an OAuth2 application via Your Profile > My apps to obtain a client ID and secret [1]. All requests require an Authorization header [1]:\n\n```\nAuthorization: Bearer {access_token}\n```\n\nThe separate Docs API uses API keys via HTTP Basic Authentication, where the key is the username and a dummy value is the password [2]:\n\n```\ncurl --user API_KEY:X https://docsapi.helpscout.net/v1/collections\n```\n\nRestricted Docs sites use a custom JWT-based callback authentication flow [3].",
+  "results": [
+    {
+      "title": "Authentication\n      \n      | Help Scout Developers",
+      "url": "https://developer.helpscout.com/mailbox-api/overview/authentication/",
+      "snippet": ""
+    },
+    {
+      "title": "Docs API Overview\n      \n      | Help Scout Developers",
+      "url": "https://developer.helpscout.com/docs-api/",
+      "snippet": ""
+    },
+    {
+      "title": "Restricted Docs\n      \n      | Help Scout Developers",
+      "url": "https://developer.helpscout.com/docs-api/restricted-docs/",
+      "snippet": ""
+    },
+    {
+      "title": "README.md",
+      "url": "https://github.com/helpscout/helpscout-api-php/blob/master/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "helpscout/helpscout-api-php-laravel",
+      "url": "https://github.com/helpscout/helpscout-api-php-laravel",
+      "snippet": ""
+    },
+    {
+      "title": "Help Scout User Management API Guide | Stitchflow",
+      "url": "https://www.stitchflow.com/user-management/help-scout/api",
+      "snippet": ""
+    },
+    {
+      "title": "Help Scout API Essentials",
+      "url": "https://rollout.com/integration-guides/help-scout/api-essentials",
+      "snippet": ""
+    },
+    {
+      "title": "helpscout/api - Packagist.org",
+      "url": "https://packagist.org/packages/helpscout/api",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "Reducto is an agentic document platform for parsing, extracting, splitting, and editing files via API [1][2]. Access is self-serve; you can create an account and generate an API key directly in Reducto Studio [3][4].\n\nWhile there is no recurring free tier, new users receive a one-time onboarding allotment of 15,000 credits [2]. Beyond this, pricing is usage-based at $0.015 per credit [1][2]. You can authenticate your API requests by setting your generated key as an environment variable [3][4].\n\n```python\nimport os\nfrom reducto import Reducto\n\n# The client automatically reads from REDUCTO_API_KEY\nclient = Reducto()\nfile_ref = client.upload(\"document.pdf\")\nresult = client.parse.run(file_ref)\n```\n\nQualifying startups may be eligible for additional free credits for production workflows [5].",
+  "results": [
+    {
+      "title": "Pricing | Reducto Agentic Document Platform",
+      "url": "https://reducto.ai/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Reducto API: Pricing, Capabilities & Alternatives (2026) · apio",
+      "url": "https://apio.sh/apis/reducto",
+      "snippet": ""
+    },
+    {
+      "title": "API Quickstart",
+      "url": "https://reducto.mintlify.app/quickstart",
+      "snippet": ""
+    },
+    {
+      "title": "Python SDK Overview - Reducto",
+      "url": "https://docs.reducto.ai/sdk/python/overview",
+      "snippet": ""
+    },
+    {
+      "title": "Reducto's Startup Program",
+      "url": "https://reducto.ai/startups",
+      "snippet": ""
+    },
+    {
+      "title": "Studio | Build Document Pipelines Visually | Reducto",
+      "url": "https://reducto.ai/studio",
+      "snippet": ""
+    },
+    {
+      "title": "Credit Usage - Reducto",
+      "url": "https://reducto.mintlify.app/reference/credit-usage",
+      "snippet": ""
+    },
+    {
+      "title": "Overview - Reducto",
+      "url": "https://docs.reducto.ai/overview",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from "vitest";
-import { criticReview } from "../src/verify/critic.js";
+import { criticReview, gateRevision } from "../src/verify/critic.js";
 
 const record: any = {
   id: 5, name: "Twenty", website: "twenty.com", category: "CRM and Sales",
@@ -20,5 +20,29 @@ describe("criticReview", () => {
     expect(out.app_id).toBe(5);
     expect(out.verdicts[0].status).toBe("supported");
     expect(extract.mock.calls[0][0].model).toBe("claude-opus-4-8");
+  });
+});
+
+describe("gateRevision", () => {
+  const revised = { ...record, self_serve: "partnership-contact-sales", buildability: "blocked", main_blocker: "no hosted API", confidence: 0.4 };
+
+  it("keeps the first-pass value when the verdict is merely 'unsupported'", () => {
+    const out = gateRevision(record, revised, [
+      { field: "self_serve", status: "unsupported", note: "" },
+      { field: "buildability", status: "unsupported", note: "" },
+    ]);
+    expect(out.self_serve).toBe("self-serve-free");
+    expect(out.buildability).toBe("buildable-now");
+  });
+
+  it("accepts the edit when the verdict is 'contradicted'", () => {
+    const out = gateRevision(record, revised, [{ field: "buildability", status: "contradicted", note: "it's a CLI" }]);
+    expect(out.buildability).toBe("blocked");
+    expect(out.self_serve).toBe("self-serve-free"); // untouched field stays first-pass
+  });
+
+  it("still adopts safe non-categorical fields (lowered confidence) regardless of verdict", () => {
+    const out = gateRevision(record, revised, [{ field: "self_serve", status: "unsupported", note: "" }]);
+    expect(out.confidence).toBe(0.4);
   });
 });

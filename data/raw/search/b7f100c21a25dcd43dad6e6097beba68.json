@@ -1,0 +1,45 @@
+{
+  "answer": "Bright Data provides a recurring free tier for all new accounts, granting 5,000 credits per month that can be used across the Web Unlocker API, SERP API, Web Scraper API, Scraper Studio, and MCP server [1][2]. These credits are automatically applied upon signup with no credit card required [1][3].\n\nEach API call or request generally consumes one credit [1]. While this covers the primary web access APIs, proxy products and the Browser API are excluded from these monthly credits [1]. To access proxy networks and Web Unlocker functionality without restriction, you must add a payment method to your account [4]. You can retrieve your API tokens through the user settings page in the Bright Data control panel [2].",
+  "results": [
+    {
+      "title": "Free tier - Bright Data Docs",
+      "url": "https://docs.brightdata.com/general/account/billing-and-pricing/free-tier",
+      "snippet": ""
+    },
+    {
+      "title": "MCP Server Pricing - Bright Data",
+      "url": "https://brightdata.com/pricing/mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Web access APIs",
+      "url": "https://docs.brightdata.com/scraping-automation/introduction",
+      "snippet": ""
+    },
+    {
+      "title": "Billing and pricing FAQs - Bright Data Docs",
+      "url": "https://docs.brightdata.com/general/account/billing-and-pricing/faqs",
+      "snippet": ""
+    },
+    {
+      "title": "Web Unlocker Pricing – Bright Data",
+      "url": "https://brightdata.com/pricing/web-unlocker",
+      "snippet": ""
+    },
+    {
+      "title": "Web Scraper API Pricing Plans",
+      "url": "https://brightdata.com/pricing/web-scraper",
+      "snippet": ""
+    },
+    {
+      "title": "SERP API Pricing Plans",
+      "url": "https://brightdata.com/pricing/serp",
+      "snippet": ""
+    },
+    {
+      "title": "Crawl API Pricing – Bright Data",
+      "url": "https://brightdata.com/pricing/crawl-api",
+      "snippet": ""
+    }
+  ]
+}

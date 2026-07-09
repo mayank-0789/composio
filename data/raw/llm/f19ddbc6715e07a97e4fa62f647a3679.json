@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://github.com/mattcoatsworth/zendesk-mcp-server",
+  "reason": "Multiple dedicated MCP servers exist for Zendesk. Notable community implementations include: mattcoatsworth/zendesk-mcp-server (feature-complete with tickets, users, macros support), @fruggr/zendesk-mcp-server (OAuth-focused with two-way Help Center integration), and Sajiiidddd/zendesk-mcp (60+ tools). These allow AI clients like Claude Desktop to interact with Zendesk via MCP. Additionally, Zendesk offers an official early-access program for native MCP server integration through Admin Center."
+}

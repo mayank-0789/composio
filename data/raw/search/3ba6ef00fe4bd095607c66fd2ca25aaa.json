@@ -1,0 +1,45 @@
+{
+  "answer": "The PitchBook API authenticates requests using a unique API key provided by your account manager [1]. You must include this key in the Authorization header of every request using the format PB-Token {API_KEY} [1]. To obtain your credentials, contact your PitchBook account manager to purchase access, which will provide you with either a production or sandbox key [1]. Ensure your account has sufficient purchased credits to perform these requests [1]. Below is a conceptual example of how to include the required header in a REST request:\n\n```\nAuthorization: PB-Token your_api_key_here\n```",
+  "results": [
+    {
+      "title": "PitchBook Python API Docs | dltHub",
+      "url": "https://dlthub.com/context/source/pitchbook-api",
+      "snippet": ""
+    },
+    {
+      "title": "PitchBook connector - Writer AI Studio",
+      "url": "https://dev.writer.com/connectors/pitchbook",
+      "snippet": ""
+    },
+    {
+      "title": "PitchBook API - Developer docs, APIs, SDKs, and auth. | API Tracker",
+      "url": "https://apitracker.io/a/pitchbook",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://pathlit.mintlify.app/docs/nodes/pitchbook-search",
+      "snippet": ""
+    },
+    {
+      "title": "PitchBook Retrieve Company Node - Pathlit",
+      "url": "https://pathlit.mintlify.app/docs/nodes/pitchbook-org-info",
+      "snippet": ""
+    },
+    {
+      "title": "How Direct Data brings PitchBook to your full workflow - PitchBook",
+      "url": "https://pitchbook.com/blog/what-is-direct-data",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://pathlit.mintlify.app/docs/nodes/pitchbook-agent",
+      "snippet": ""
+    },
+    {
+      "title": "Pitchbook | Matia Documentation",
+      "url": "https://docs.matia.io/docs/connectors/etl/pitchbook",
+      "snippet": ""
+    }
+  ]
+}

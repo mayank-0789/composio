@@ -1,0 +1,45 @@
+{
+  "answer": "Yes, QuickBooks provides a free tier for developer API access through the Builder tier of the Intuit App Partner Program [1][2]. This tier is uncharged and automatically assigned to all apps [1][2].\n\nKey details of the Builder tier:\n- It includes 500,000 monthly CorePlus API credits [3][2].\n- Core API calls are unmetered and free for all tiers [4][2].\n- If you exceed the 500,000 limit, additional CorePlus calls are blocked until the next month [3][2][5].\n- Premium APIs are not accessible in the Builder tier; these require upgrading to Silver, Gold, or Platinum tiers [6][7].",
+  "results": [
+    {
+      "title": "Intuit App Partner Program FAQ",
+      "url": "https://developer.intuit.com/app/developer/qbo/docs/get-started/partner-faq",
+      "snippet": ""
+    },
+    {
+      "title": "Introducing the Intuit App Partner Program | by Intuit Developer | Intuit Developer | Medium",
+      "url": "https://medium.com/intuitdev/introducing-the-intuit-app-partner-program-63bfbcf3b386",
+      "snippet": ""
+    },
+    {
+      "title": "Platform service fees for the Intuit App Partner Program",
+      "url": "https://help.developer.intuit.com/s/article/platform-service-fees",
+      "snippet": ""
+    },
+    {
+      "title": "API classification for the Intuit App Partner Program",
+      "url": "https://help.developer.intuit.com/s/article/API-classification-for-the-Intuit-App-Partner-Program",
+      "snippet": ""
+    },
+    {
+      "title": "Understanding Builder Tier API limits for you and your customers | by Intuit Developer | Intuit Developer | Medium",
+      "url": "https://medium.com/intuitdev/understanding-builder-tier-api-limits-for-you-and-your-customers-1dc75733985a",
+      "snippet": ""
+    },
+    {
+      "title": "Premium APIs",
+      "url": "https://developer.intuit.com/app/developer/qbo/docs/learn/premium-apis",
+      "snippet": ""
+    },
+    {
+      "title": "Get started",
+      "url": "https://developer.intuit.com/app/developer/qbo/docs/get-started",
+      "snippet": ""
+    },
+    {
+      "title": "Intuit Launches New App Partner Program to Drive Growth for Third-Party Developers and Enhance Customer Experiences :: Intuit Inc. (INTU)",
+      "url": "https://investors.intuit.com/news-events/press-releases/detail/1261/intuit-launches-new-app-partner-program-to-drive-growth-for-third-party-developers-and-enhance-customer-experiences",
+      "snippet": ""
+    }
+  ]
+}

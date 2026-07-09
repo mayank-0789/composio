@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://github.com/iPAYX-Technologies/mcp-fx-audit",
+  "reason": "A dedicated MCP server exists for iPayX called \"iPayX FX Audit MCP server\". It is a forensic tool for auditing foreign exchange transactions with the endpoint URL https://mcp.ipayx.ai/mcp. The server provides tools like audit_fx_transaction and check_fx_mid_market_rate, and is available as a distinct MCP package on GitHub at iPAYX-Technologies/mcp-fx-audit."
+}

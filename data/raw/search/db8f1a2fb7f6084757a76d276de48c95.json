@@ -1,0 +1,45 @@
+{
+  "answer": "The Smartsheet API uses OAuth 2.0 and API access tokens for authentication [1][2]. All API requests require an Authorization HTTP header containing a Bearer token, formatted as shown below [3][4]:\n\n`Authorization: REDACTED_EXAMPLE`\n\nFor machine-to-machine integrations, you can generate a personal access token directly in the Smartsheet UI under Personal Settings [3][5]. For third-party applications requiring user consent and interaction, you must implement a 3-legged OAuth 2.0 flow to retrieve access tokens on behalf of users [3][6][7]. Both methods utilize the same Authorization header structure for API requests [3][1].",
+  "results": [
+    {
+      "title": "Tokens",
+      "url": "https://developers.smartsheet.com/api/smartsheet/openapi/tokens",
+      "snippet": ""
+    },
+    {
+      "title": "Smartsheet OpenAPI Reference",
+      "url": "https://developers.smartsheet.com/api/smartsheet/openapi/schemas/index",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication",
+      "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://developers.smartsheet.com/api/smartsheet/guides/basics/http-and-rest",
+      "snippet": ""
+    },
+    {
+      "title": "Get Started",
+      "url": "https://developers.smartsheet.com/api/smartsheet/guides/getting-started",
+      "snippet": ""
+    },
+    {
+      "title": "OAuth",
+      "url": "https://developers.smartsheet.com/api/smartsheet/guides/advanced-topics/oauth",
+      "snippet": ""
+    },
+    {
+      "title": "5 steps for getting started with the Smartsheet API | Smartsheet",
+      "url": "https://www.smartsheet.com/content-center/best-practices/tips-tricks/api-getting-started",
+      "snippet": ""
+    },
+    {
+      "title": "Smartsheet OpenAPI Reference",
+      "url": "https://developers.smartsheet.com/api/smartsheet/openapi.md",
+      "snippet": ""
+    }
+  ]
+}

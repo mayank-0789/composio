@@ -1,0 +1,45 @@
+{
+  "answer": "Copper does not offer a free tier for API access [1][2]. API access is a paid feature that is gated behind the Professional and Business subscription plans [1][3][2]. While there is no permanent free plan, Copper does provide a 14-day free trial on all paid plans, which does not require a credit card to initiate [1][2]. Accessing the platform API requires authentication and subscription to a qualifying tier [4][1][3].",
+  "results": [
+    {
+      "title": "Copper CRM Pricing 2026 — All Plans, Calculator & Comparisons | CopperPricing.com",
+      "url": "https://copperpricing.com/",
+      "snippet": ""
+    },
+    {
+      "title": "Copper CRM: Pricing, Reviews, Pros & Cons (2026)",
+      "url": "https://prospeo.io/s/copper-pricing-reviews-pros-and-cons",
+      "snippet": ""
+    },
+    {
+      "title": "Copper CRM Pricing 2026: What Enterprises Actually Pay",
+      "url": "https://vendorbenchmark.com/vendors/copper-crm-pricing",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://developer.copper.co/api-reference/getting-started",
+      "snippet": ""
+    },
+    {
+      "title": "Llms",
+      "url": "https://developer.copper.co/llms.txt",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://developer.copper.co/api-reference/portfolios/create-portfolio",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://developer.copper.co/api-reference/currencies/currency-trading-fees-for-amount",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://developer.copper.co/api-reference/currencies/get-currency",
+      "snippet": ""
+    }
+  ]
+}

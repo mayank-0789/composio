@@ -1,0 +1,45 @@
+{
+  "answer": "An Amazon Selling Partner (SP) API Model Context Protocol (MCP) server is an intermediary that exposes Amazon Seller Central and Vendor Central data and operations as tools for AI agents like Claude Desktop, Cursor, or ChatGPT [1][2][3][4]. These servers translate natural language requests into authenticated SP-API calls, enabling agents to retrieve analytics or perform actions like updating listings and managing orders [1][5][4].\n\nThere are two primary ways to use this:\n\nSelf-Hosted Servers: You run the server locally or on your own infrastructure. This requires an Amazon Developer account, SP-API application registration, and management of OAuth 2.0 (LWA) credentials [5][6][7]. Popular implementations include:\n- christian-ramos/mcp-amazon-sp-api [1]\n- mansournorouzi/amazon-sp-mcp [5]\n- jay-trivedi/amazon_sp_mcp [6]\n- berrydev-ai/sp-api-mcp-go (Go implementation) [3]\n\nHosted Services: Platforms like DataDoe act as a managed bridge, handling the SP-API developer approval process, authentication, rate limiting, and infrastructure on your behalf, allowing for setup in under a minute via a single URL [4].\n\nTo configure a local server, you typically add an entry to your MCP client configuration file:\n\n```json\n{\n  \"mcpServers\": {\n    \"amazon-seller\": {\n      \"command\": \"node\",\n      \"args\": [\"/path/to/server/index.js\"],\n      \"env\": {\n        \"LWA_CLIENT_ID\": \"your_client_id\",\n        \"LWA_CLIENT_SECRET\": \"your_client_secret\",\n        \"LWA_REFRESH_TOKEN\": \"your_refresh_token\"\n      }\n    }\n  }\n}\n```\n\nMost servers provide 50+ tools covering catalog, inventory, order, and report endpoints [1][4]. For security, many implement \"safe writes,\" requiring explicit confirmation (e.g., `confirm=True`) before performing account-mutating actions [1][4].",
+  "results": [
+    {
+      "title": "christian-ramos/mcp-amazon-sp-api",
+      "url": "https://github.com/christian-ramos/mcp-amazon-sp-api",
+      "snippet": ""
+    },
+    {
+      "title": "enginterzi/amazon-seller-mcp",
+      "url": "https://github.com/enginterzi/amazon-seller-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "berrydev-ai/sp-api-mcp-go",
+      "url": "https://github.com/berrydev-ai/sp-api-mcp-go",
+      "snippet": ""
+    },
+    {
+      "title": "Deltologic/datadoe-mcp",
+      "url": "https://github.com/Deltologic/datadoe-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "mansournorouzi/amazon-sp-mcp",
+      "url": "https://github.com/mansournorouzi/amazon-sp-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "jay-trivedi/amazon_sp_mcp",
+      "url": "https://github.com/jay-trivedi/amazon_sp_mcp",
+      "snippet": ""
+    },
+    {
+      "title": "mattcoatsworth/AmazonSeller-mcp-server",
+      "url": "https://github.com/mattcoatsworth/AmazonSeller-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "sakshsiw/SellerBridge",
+      "url": "https://github.com/sakshsiw/SellerBridge",
+      "snippet": ""
+    }
+  ]
+}

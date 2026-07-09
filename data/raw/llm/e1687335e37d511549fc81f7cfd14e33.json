@@ -1,0 +1,50 @@
+{
+  "one_liner": "AI agent monetization and cost-tracking platform with usage-based billing, metering, and gating via API",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Uses API keys as Bearer tokens in Authorization header. Keys are environment-specific (sk_test_ for sandbox, sk_live_ for production on Paygentic; pg_live_ for Paygent backend). Generated from dashboard settings."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Offers a free tier with 100,000 events per month and 1 year data retention. Developers can sign up at the website to obtain API keys and access full programmatic plan configuration and user management.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "medium",
+    "notes": "REST API with endpoints for plan configuration, usage events, metering, gating, and user management. Multiple services with different base URLs (api.paygentic.io, api.paygent.to). Supports JSON payloads with idempotency keys."
+  },
+  "existing_mcp": {
+    "exists": "no"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://docs.paygentic.io/authentication",
+      "supports": "API key authentication using Bearer tokens, self-serve key generation from dashboard"
+    },
+    {
+      "url": "https://docs.paygent.to/reference/api-reference/",
+      "supports": "Backend API with Bearer token authentication (pg_live_ prefix)"
+    },
+    {
+      "url": "https://www.withpaygent.com/pricing",
+      "supports": "Free tier with 100,000 events per month"
+    },
+    {
+      "url": "https://docs.paygent.to/getting-started/quickstart/",
+      "supports": "Self-serve API access for plan configuration and metering via POST endpoints"
+    },
+    {
+      "url": "https://docs.paygentic.io/api-reference/payments/create-payment",
+      "supports": "REST API endpoints with JSON payloads for payment operations"
+    }
+  ],
+  "confidence": 0.85,
+  "flags": [
+    "fintech",
+    "ai-monetization",
+    "usage-based-billing",
+    "metering"
+  ]
+}

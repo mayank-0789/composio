@@ -1,0 +1,45 @@
+{
+  "answer": "Several Model Context Protocol (MCP) servers exist for Adobe Commerce and Magento 2, each serving different administrative or development needs.\n\nKey options include:\nThomastx05/magento-mcp [1][2] and Magendooro/magemcp [3] provide comprehensive tools for business-level administration, such as managing catalog, promotions, CMS, and orders. These support specific authentication methods like OAuth 1.0 or Bearer tokens.\nRafaelstz/adobe-commerce-dev-mcp [4][5] focuses on development, providing tools to introspect GraphQL and REST API schemas and prompts to help write and validate API integrations.\nSeandearnaley/mcp-warden-magento-ts [6] is designed for Warden-based local environments, allowing you to execute CLI operations like cache management, reindexing, and container commands.\n\nTo use these, configure your MCP client (e.g., Claude Desktop, Cursor) with the appropriate command and environment variables in your configuration file. For instance, to use the development server via npx:\n\n```json\n{\n  \"mcpServers\": {\n    \"adobe-commerce-dev-mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@rafaelcg/adobe-commerce-dev-mcp@latest\"],\n      \"env\": {\n        \"ADOBE_COMMERCE_VERSION\": \"2.4.8\"\n      }\n    }\n  }\n}\n```",
+  "results": [
+    {
+      "title": "thomastx05/magento-mcp",
+      "url": "https://github.com/thomastx05/magento-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Magento MCP Server | Conare",
+      "url": "https://conare.ai/marketplace/mcp/magento-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "magendooro/magemcp",
+      "url": "https://github.com/magendooro/magemcp",
+      "snippet": ""
+    },
+    {
+      "title": "rafaelstz/adobe-commerce-dev-mcp",
+      "url": "https://github.com/rafaelstz/adobe-commerce-dev-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "colombinis/adobe-commerce-dev-mcp",
+      "url": "https://github.com/colombinis/adobe-commerce-dev-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "seandearnaley/mcp-warden-magento-ts",
+      "url": "https://github.com/seandearnaley/mcp-warden-magento-ts",
+      "snippet": ""
+    },
+    {
+      "title": "Codexpect/adobe-commerce-mcp",
+      "url": "https://github.com/Codexpect/adobe-commerce-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Adobe Commerce MCP Server: Orders, Products, Customers — MCP Server — MCP Catalog",
+      "url": "https://mcp-hub.ink/servers/adobe-commerce/",
+      "snippet": ""
+    }
+  ]
+}

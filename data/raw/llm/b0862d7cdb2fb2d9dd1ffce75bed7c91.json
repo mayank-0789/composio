@@ -1,0 +1,46 @@
+{
+  "one_liner": "Cloudflare offers a broad, self-serve REST API (v4) for managing DNS, Workers, Pages, KV, D1, Durable Objects, and more, authenticated via scoped Bearer API tokens, with an official MCP server platform and managed MCP catalog already available.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Recommended: scoped API Token via 'Authorization: Bearer <API_TOKEN>' header, self-serve creation via dashboard or API with granular permissions and TTL/IP restrictions."
+    },
+    {
+      "method": "Other",
+      "notes": "Legacy Global API Key auth using X-Auth-Email and X-Auth-Key headers; broader/unscoped access, less recommended for security reasons."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Developers can self-serve API tokens directly from the Cloudflare dashboard (My Profile > API Tokens or Account > API Tokens) or via the API itself, with no approval process required. Free tier plans exist for many products (Workers, Pages, KV, D1, Durable Objects) with usage limits; paid plans unlock higher limits starting at $5/mo for Workers.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Cloudflare's REST API (v4) covers a huge range of resources across DNS, Zones, Workers, Pages, KV, D1, Durable Objects, Accounts, Users, Tokens, billing/usage, and more. First-party SDKs available in Go, TypeScript, and Python, plus a Terraform provider."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://developers.cloudflare.com/agents/model-context-protocol/"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://developers.cloudflare.com/fundamentals/api/how-to/make-api-calls/",
+      "supports": "Documents Bearer token auth method, base URL, versioning, pagination, and first-party SDKs (Go, TypeScript, Python, Terraform)."
+    },
+    {
+      "url": "https://developers.cloudflare.com/fundamentals/api/get-started/create-token/",
+      "supports": "Shows self-serve API token creation flow via dashboard with granular scoped permissions, TTL, and IP restrictions; no approval needed."
+    },
+    {
+      "url": "https://developers.cloudflare.com/api/",
+      "supports": "Full API reference confirming broad REST API surface across many Cloudflare products/resources."
+    },
+    {
+      "url": "https://developers.cloudflare.com/workers/platform/pricing/",
+      "supports": "Confirms free tier availability for Workers with paid plan starting at $5/month."
+    }
+  ],
+  "confidence": 0.85,
+  "flags": []
+}

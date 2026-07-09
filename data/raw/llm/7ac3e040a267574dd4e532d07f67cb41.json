@@ -1,0 +1,50 @@
+{
+  "one_liner": "Apify is a self-serve web scraping/automation platform with a broad REST API secured by personal API tokens, plus an official hosted MCP server exposing Actors as agent tools.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Personal API token generated in Apify Console (Integrations page), sent as Authorization: Bearer <token> (recommended) or as a token URL query parameter."
+    },
+    {
+      "method": "OAuth2",
+      "notes": "Supported for third-party integrations and used by the hosted MCP server (mcp.apify.com) as an alternative to API token."
+    },
+    {
+      "method": "Other",
+      "notes": "Agentic payment protocols (x402 PAYMENT-SIGNATURE header, Skyfire skyfire-pay-id header) allow AI agents to authenticate/pay for Actor runs without a full Apify account."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Permanent free tier with no credit card required, includes $5/month platform credits; API tokens are self-generated instantly in the Console. Paid plans start at $29/month for higher limits.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Full REST API (OpenAPI spec available) covering Actors, runs, datasets, key-value stores, storage, webhooks, etc. Official JS and Python SDK clients wrap the REST endpoints. Thousands of Actors available in the Store act as pre-built scraping/automation tools."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://mcp.apify.com"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://docs.apify.com/api/v2",
+      "supports": "Describes REST API, authentication via API token (Bearer header or token query param), and agentic payment support."
+    },
+    {
+      "url": "https://docs.apify.com/platform/integrations/api.md",
+      "supports": "Details API token generation, authentication methods, token expiration and rotation, confirming self-serve API access."
+    },
+    {
+      "url": "https://apify.com/pricing",
+      "supports": "Confirms free tier with $5 monthly credits, no credit card required, and paid plans starting at $29/month."
+    },
+    {
+      "url": "https://mcp.apify.com",
+      "supports": "Official hosted MCP server exposing Apify Actors as tools for AI agents, supporting OAuth or API token auth."
+    }
+  ],
+  "confidence": 0.9,
+  "flags": []
+}

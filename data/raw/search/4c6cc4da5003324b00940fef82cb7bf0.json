@@ -1,0 +1,45 @@
+{
+  "answer": "Authentication for Salesforce Commerce Cloud APIs depends on whether you are accessing Admin or Shopper endpoints.\n\nAdmin APIs are secured via Account Manager [1][2]. You request an access token from the oauth2 resource using a client_credentials grant type, providing your client ID and secret in the request [1].\n\n```bash\ncurl \"https://account.demandware.com/dwsso/oauth2/access_token\" \\\n--request 'POST' \\\n--user \"client_id:client_secret\" \\\n--header 'Content-Type: application/x-www-form-urlencoded' \\\n--data \"grant_type=client_credentials\" \\\n--data-urlencode \"scope=SALESFORCE_COMMERCE_API:realm_instance_id [scopes]\"\n```\n\nShopper APIs use the Shopper Login and API Access Service (SLAS) [2][3]. Authorization flows vary by client type and user authentication method (e.g., authorization_code_pkce for public clients or client_credentials for private systems) [3].",
+  "results": [
+    {
+      "title": "Authorization for SCAPI Admin APIs | SCAPI | B2C Commerce API | Salesforce Developers",
+      "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-admin-apis.html",
+      "snippet": ""
+    },
+    {
+      "title": "Authorization for Shopper APIs | SCAPI | B2C Commerce API | Salesforce Developers",
+      "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-shopper-apis.html",
+      "snippet": ""
+    },
+    {
+      "title": "Shopper Login (SLAS) | SCAPI | B2C Commerce API | Salesforce Developers",
+      "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/slas.html",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication and Authorization | SCAPI | B2C Commerce Solutions | Salesforce Developers",
+      "url": "https://developer.salesforce.com/docs/commerce/commerce-solutions/guide/custom-api-authentication.html",
+      "snippet": ""
+    },
+    {
+      "title": "Secure Your Site | SCAPI | B2C Commerce | Salesforce Developers",
+      "url": "https://developer.salesforce.com/docs/commerce/b2c-commerce/guide/security.html",
+      "snippet": ""
+    },
+    {
+      "title": "Get trusted agent access token | Shopper Login (SLAS) | B2C Commerce API | Salesforce Developers",
+      "url": "https://developer.salesforce.com/docs/commerce/commerce-api/references/auth?meta=getTrustedAgentAccessToken",
+      "snippet": ""
+    },
+    {
+      "title": "Trusted System on Behalf Authorization | SCAPI | B2C Commerce API | Salesforce Developers",
+      "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/slas-trusted-system.html",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication and Authorization | SCAPI | Composable Storefront | Salesforce Developers",
+      "url": "https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/custom-api-authentication.html",
+      "snippet": ""
+    }
+  ]
+}

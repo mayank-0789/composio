@@ -1,0 +1,45 @@
+{
+  "answer": "The Model Context Protocol (MCP) server for Meta Ads allows AI assistants to interact with the Meta Marketing API for managing Facebook and Instagram advertising. You can choose between Meta’s first-party remote MCP server at mcp.facebook.com/ads [1] or various open-source implementations [2][3][4][5][6][7].\n\nTo configure a local MCP server, add it to your client's configuration file (e.g., Claude Desktop's config) using the stdio transport. A typical JSON configuration includes your access token and account ID:\n\n```json\n{\n  \"mcpServers\": {\n    \"meta-ads\": {\n      \"command\": \"meta-ads-mcp-server\",\n      \"env\": {\n        \"META_ADS_ACCESS_TOKEN\": \"your-access-token\",\n        \"META_AD_ACCOUNT_ID\": \"act_123456789\"\n      }\n    }\n  }\n}\n```\n\nOptions vary by project: Meta’s official server provides a managed, cloud-hosted interface [1], while self-hosted options like Pipeboard [3], serkanhaslak/meta-mcp [4], or brmh/Meta-MCP [5] offer varying tool counts and features for campaign management, creative uploads, and performance analytics.",
+  "results": [
+    {
+      "title": "byadsco/meta-ads-mcp",
+      "url": "https://github.com/MaxterPC/meta-ads-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "richardpowellus/meta-ads-mcp-server",
+      "url": "https://github.com/richardpowellus/meta-ads-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "GitHub - pipeboard-co/meta-ads-mcp: MCP server to manage Facebook and Instagram Ads (Meta Ads) · GitHub",
+      "url": "https://github.com/pipeboard-co/meta-ads-mcp/tree/main",
+      "snippet": ""
+    },
+    {
+      "title": "serkanhaslak/meta-mcp",
+      "url": "https://github.com/serkanhaslak/meta-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "brmh/Meta-MCP",
+      "url": "https://github.com/brmh/Meta-MCP",
+      "snippet": ""
+    },
+    {
+      "title": "0xfabrica/mcp-meta-ads",
+      "url": "https://github.com/0xfabrica/mcp-meta-ads",
+      "snippet": ""
+    },
+    {
+      "title": "meta-ads-mcp-server v0.1.0",
+      "url": "https://pypi.org/project/meta-ads-mcp-server/",
+      "snippet": ""
+    },
+    {
+      "title": "dengineproblem/meta-ads-mcp-extended",
+      "url": "https://github.com/dengineproblem/meta-ads-mcp-extended",
+      "snippet": ""
+    }
+  ]
+}

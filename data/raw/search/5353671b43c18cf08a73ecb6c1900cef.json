@@ -1,0 +1,45 @@
+{
+  "answer": "Yes, Zoho Cliq offers a free tier that includes access to developer APIs [1][2]. You can build custom extensions or integrations using their REST API and serverless platform at no additional setup or maintenance cost [3]. To get started, register your application in the Zoho API Console to obtain your Client ID and Client Secret [4][5]. The latest API version is v3, with the root endpoint located at `https://cliq.zoho.com/api/v3` [6]. Authentication is handled via the OAuth 2.0 protocol using the Bearer scheme with the prefix \"Zoho-oauthtoken\" [5][2].",
+  "results": [
+    {
+      "title": "Cliq - Chat Pricing | Free Chat plans for all Teams size",
+      "url": "https://www.zoho.com/cliq/pricing.html",
+      "snippet": ""
+    },
+    {
+      "title": "Introduction | Zoho Cliq | API Documentation",
+      "url": "https://www.zoho.com/cliq/help/restapi/v2/introduction/",
+      "snippet": ""
+    },
+    {
+      "title": "Internal Tool Builder Platform to Automate Workflows | Zoho Cliq",
+      "url": "https://www.zoho.com/cliq/platform.html",
+      "snippet": ""
+    },
+    {
+      "title": "Register your application | Zoho Cliq | API Documentation",
+      "url": "https://www.zoho.com/cliq/help/restapi/v2/registerclient/",
+      "snippet": ""
+    },
+    {
+      "title": "Introduction to OAuth 2.0 | Zoho Cliq | API Documentation",
+      "url": "https://www.zoho.com/cliq/help/restapi/v3/oauth/",
+      "snippet": ""
+    },
+    {
+      "title": "Introduction | Zoho Cliq | API Documentation",
+      "url": "https://www.zoho.com/cliq/help/restapi/v3/introduction/",
+      "snippet": ""
+    },
+    {
+      "title": "Postman Collection | Zoho Cliq | API Documentation",
+      "url": "https://www.zoho.com/cliq/help/restapi/v3/postman/",
+      "snippet": ""
+    },
+    {
+      "title": "Support plans | Zoho Cliq",
+      "url": "https://www.zoho.com/cliq/pricing/support-plans.html",
+      "snippet": ""
+    }
+  ]
+}

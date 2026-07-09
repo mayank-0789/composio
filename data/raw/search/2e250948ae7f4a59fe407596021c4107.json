@@ -1,0 +1,45 @@
+{
+  "answer": "Adobe Commerce and Magento Open Source support three primary authentication methods depending on your environment and use case. For standard installations, third-party applications use OAuth 1.0a [1][2], mobile and automated applications use token-based authentication [1][3], and administrators or customers authenticate via login credentials to obtain access tokens [1][2].\n\nIn Adobe Commerce as a Cloud Service, all REST API requests must be authenticated using Adobe Identity Management Service (IMS) via OAuth 2.0 protocols [1][4]. This requires signing every request with an IMS Access Token passed in the Authorization header [1][4]:\n\n```http\nAuthorization: Bearer <access_token>\n```\n\nFor non-cloud setups, integrations can also use OAuth 1.0a or bearer tokens if explicitly enabled in the admin configuration [5][6][3].",
+  "results": [
+    {
+      "title": "REST API Overview",
+      "url": "https://developer.adobe.com/commerce/webapi/rest/",
+      "snippet": ""
+    },
+    {
+      "title": "Getting Started with Adobe Commerce Web APIs",
+      "url": "https://developer.adobe.com/commerce/webapi/get-started/",
+      "snippet": ""
+    },
+    {
+      "title": "src/guides/v2.4/get-started/authentication/gs-authentication-token.md at master · magento/devdocs",
+      "url": "https://github.com/magento/devdocs/blob/master/src/guides/v2.4/get-started/authentication/gs-authentication-token.md",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication in Adobe Commerce as a Cloud Service",
+      "url": "https://developer.adobe.com/commerce/webapi/rest/authentication/",
+      "snippet": ""
+    },
+    {
+      "title": "Token-Based Authentication",
+      "url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-token",
+      "snippet": ""
+    },
+    {
+      "title": "OAuth-Based Authentication",
+      "url": "https://developer.adobe.com/commerce/webapi/get-started/authentication/gs-authentication-oauth",
+      "snippet": ""
+    },
+    {
+      "title": "Construct a Request",
+      "url": "https://developer.adobe.com/commerce/webapi/get-started/gs-web-api-request",
+      "snippet": ""
+    },
+    {
+      "title": "User Authentication",
+      "url": "https://developer.adobe.com/commerce/webapi/rest/authentication/user",
+      "snippet": ""
+    }
+  ]
+}

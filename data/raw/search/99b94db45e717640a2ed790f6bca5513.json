@@ -1,0 +1,45 @@
+{
+  "answer": "Binance developer API access is free and self-serve for all users [1][2]. There are no subscription fees, per-call charges, or costs to generate an API key [1][2]. You only pay standard trading fees when executing trades via the API, identical to those on the web interface [1][2].\n\nTo get started, create an account, complete identity verification, enable two-factor authentication, and make a deposit to your Spot Wallet [3]. You can then generate API keys through the API Management section of your account [3][1]. Public market data is available without authentication, while private operations require signed requests using your API key and secret [1][2].",
+  "results": [
+    {
+      "title": "Binance API Pricing: Free Tier, Costs & Limits — VoiceOfChain Academy",
+      "url": "https://voiceofchain.com/academy/binance-api-pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Is Binance API Free? Costs & Limits Explained — VoiceOfChain Academy",
+      "url": "https://voiceofchain.com/academy/is-binance-api-free",
+      "snippet": ""
+    },
+    {
+      "title": "How to Create API Keys on Binance? | Binance",
+      "url": "https://www.binance.info/en-NG/support/faq/detail/360002502072",
+      "snippet": ""
+    },
+    {
+      "title": "rest-api.md at master · binance/binance-spot-api-docs",
+      "url": "https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md",
+      "snippet": ""
+    },
+    {
+      "title": "binance/binance-spot-api-docs",
+      "url": "https://github.com/binance/binance-spot-api-docs/",
+      "snippet": ""
+    },
+    {
+      "title": "Rate limits | Binance Open Platform",
+      "url": "https://developers.binance.com/docs/binance-spot-api-docs/testnet/websocket-api/rate-limits",
+      "snippet": ""
+    },
+    {
+      "title": "sbe-market-data-streams.md at master · binance/binance-spot-api-docs",
+      "url": "https://github.com/binance/binance-spot-api-docs/blob/master/sbe-market-data-streams.md",
+      "snippet": ""
+    },
+    {
+      "title": "web-socket-api.md at 7c0cc76a7ca9a729461d73f20ac4a77c7b18d007 · binance/binance-spot-api-docs",
+      "url": "https://github.com/binance/binance-spot-api-docs/blob/7c0cc76a7ca9a729461d73f20ac4a77c7b18d007/web-socket-api.md",
+      "snippet": ""
+    }
+  ]
+}

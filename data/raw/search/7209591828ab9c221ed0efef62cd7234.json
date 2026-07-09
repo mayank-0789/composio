@@ -1,0 +1,45 @@
+{
+  "answer": "Multiple open-source Model Context Protocol (MCP) servers exist for SendGrid, enabling AI agents to manage email workflows, marketing campaigns, contact lists, and analytics via the SendGrid v3 API [1][2][3][4][5][6]. While features vary by implementation, common capabilities include sending transactional and template-based emails, retrieving performance metrics, and managing suppression lists [2][3][6][7].\n\nTo use these servers, you must configure your MCP client—such as Claude Desktop or VS Code extensions like Cline—to execute the server and provide your SendGrid API key via environment variables [1][2][3][5][6]. Most implementations default to a read-only mode for safety [1][2][4]. For example, a basic Claude Desktop configuration looks like this:\n\n```json\n{\n  \"mcpServers\": {\n    \"sendgrid\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"sendgrid-mcp\"],\n      \"env\": {\n        \"SENDGRID_API_KEY\": \"SG.your_api_key_here\"\n      }\n    }\n  }\n}\n```\n\nImplementations are available in both Node.js (e.g., `deyikong/sendgrid-mcp`) and Python (e.g., `FINCH285/SendGrid-MCP-Server`) [1][6]. Always verify specific safety features like write-approval tokens or test-mode allowlists in the documentation for your chosen repository [2].",
+  "results": [
+    {
+      "title": "deyikong/sendgrid-mcp",
+      "url": "https://github.com/deyikong/sendgrid-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "iPraBhu/mcp-sendgrid-server",
+      "url": "https://github.com/iPraBhu/mcp-sendgrid-server",
+      "snippet": ""
+    },
+    {
+      "title": "coopersully/sendgrid-mcp",
+      "url": "https://github.com/coopersully/sendgrid-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "garethcull/sendgrid-mcp",
+      "url": "https://github.com/garethcull/sendgrid-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "mseep-ai/sendgrid-mcp",
+      "url": "https://github.com/mseep-ai/sendgrid-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "FINCH285/SendGrid-MCP-Server",
+      "url": "https://github.com/FINCH285/SendGrid-MCP-Server",
+      "snippet": ""
+    },
+    {
+      "title": "sendgrid-api-mcp-server",
+      "url": "https://registry.npmjs.org/sendgrid-api-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "ericabouaf/sendgrid-mcp",
+      "url": "https://github.com/ericabouaf/sendgrid-mcp",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "Waterfall.io is not mentioned in the provided search results. The Model Context Protocol (MCP) is an open standard that enables AI applications (hosts) to connect to external data sources and tools (servers) via JSON-RPC 2.0.\n\nServers provide three core primitives:\n- Tools: Executable functions for LLMs to perform actions [1][2].\n- Resources: Read-only data sources like files or database records [1][3].\n- Prompts: Pre-built interaction templates [4][2].\n\nServers use either Stdio (local) or Streamable HTTP (remote) transports to communicate with MCP clients [5][2].",
+  "results": [
+    {
+      "title": "Understanding MCP servers",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts",
+      "snippet": ""
+    },
+    {
+      "title": "Architecture overview - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/learn/architecture",
+      "snippet": ""
+    },
+    {
+      "title": "Specification - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/specification/2025-11-25/index",
+      "snippet": ""
+    },
+    {
+      "title": "Build an MCP server - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/develop/build-server",
+      "snippet": ""
+    },
+    {
+      "title": "server | MCP TypeScript SDK",
+      "url": "https://ts.sdk.modelcontextprotocol.io/documents/server.html",
+      "snippet": ""
+    },
+    {
+      "title": "Server Guide | MCP TypeScript SDK (V2)",
+      "url": "https://ts.sdk.modelcontextprotocol.io/v2/documents/Documents.Server_Guide.html",
+      "snippet": ""
+    },
+    {
+      "title": "modelcontextprotocol/servers",
+      "url": "https://github.com/modelcontextprotocol/servers?alltoolsdirectory=",
+      "snippet": ""
+    },
+    {
+      "title": "Architecture - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/specification/2025-06-18/architecture",
+      "snippet": ""
+    }
+  ]
+}

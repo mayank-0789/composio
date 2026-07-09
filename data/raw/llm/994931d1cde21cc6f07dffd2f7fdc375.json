@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://github.com/hashcott/freshdesk-mcp",
+  "reason": "Multiple dedicated MCP servers exist for Freshdesk, including well-documented open-source implementations. Notable examples include hashcott/freshdesk-mcp (194 tools), wyre-technology/freshdesk-mcp (with decision-tree navigation), mindstone/mcp-server-freshdesk, and ArcaneSK/freshdesk-mcp-server. Additionally, Freshworks offers an official MCP integration currently in Beta via an Early Access Program. These are distinct MCP server packages that expose Freshdesk's capabilities over the Model Context Protocol, not just API documentation or product repos."
+}

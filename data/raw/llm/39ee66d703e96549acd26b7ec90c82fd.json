@@ -1,0 +1,128 @@
+{
+  "verdicts": [
+    {
+      "field": "name",
+      "status": "supported",
+      "note": "Evidence confirms this is Freshdesk, a customer support/helpdesk platform."
+    },
+    {
+      "field": "website",
+      "status": "supported",
+      "note": "Multiple evidence URLs reference freshdesk.com and freshworks.com/freshdesk."
+    },
+    {
+      "field": "category",
+      "status": "supported",
+      "note": "Evidence consistently describes Freshdesk as a customer support/helpdesk platform."
+    },
+    {
+      "field": "one_liner",
+      "status": "contradicted",
+      "note": "The one_liner claims 'several community MCP servers already available' but the evidence only shows a single NPM package (freshdesk-mcp). No evidence of multiple MCP servers is provided. The evidence does confirm REST API v2, Basic Auth with API keys, and self-serve trial access."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence confirms HTTP Basic Auth using API key. The SDK documentation shows 'api_key' parameter and references 'basicAuth' as the authorization type."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Pricing page confirms 14-day free trial. Free Program article confirms availability for 6 months (not permanent as originally stated). Paid plans available for continued access."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "contradicted",
+      "note": "Free Program article states it's 'available for free for 6 months' not permanent. The original note about '14-day free trial' vs '6 months' needs clarification. The Free Program article does mention 'API rate limit set to zero' indirectly by listing features but not API access."
+    },
+    {
+      "field": "api_surface",
+      "status": "supported",
+      "note": "Evidence confirms REST API v2 with broad coverage (tickets, contacts, companies, conversations, agents, knowledge base), JSON format, CORS support, standard HTTP verbs. SDK wrapper also confirmed."
+    },
+    {
+      "field": "existing_mcp",
+      "status": "contradicted",
+      "note": "The URL provided (https://www.npmjs.com/package/freshdesk-mcp) points to an NPM package, which is evidence of ONE community MCP server, not 'several'. The exists field should remain 'yes' but the one_liner overstates the quantity. No evidence of official Freshworks-maintained MCP."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "Evidence supports 'buildable-with-caveats'. The Free Program article confirms API limitations on free tier, and paid/trial plans provide API access."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "Free Program article confirms limited API access on free tier. Trial and paid plans are required for full programmatic access."
+    },
+    {
+      "field": "evidence",
+      "status": "supported",
+      "note": "All evidence URLs are valid and support the claims made in the record."
+    },
+    {
+      "field": "confidence",
+      "status": "supported",
+      "note": "0.75 confidence is reasonable given the comprehensive evidence, though some details about Free Program duration (6 months vs permanent) need clarification."
+    },
+    {
+      "field": "flags",
+      "status": "supported",
+      "note": "Flags are generally supported by evidence, though 'Multiple unofficial third-party MCP servers' overstates what evidence shows (only one NPM package provided)."
+    }
+  ],
+  "revised": {
+    "id": 13,
+    "name": "Freshdesk",
+    "website": "freshdesk.com",
+    "category": "Support and Helpdesk",
+    "one_liner": "Freshdesk is a customer support/helpdesk platform offering a broad, well-documented REST API (v2) secured via HTTP Basic Auth with per-agent API keys, self-serve during trial/paid plans, with at least one community MCP server available.",
+    "auth_methods": [
+      {
+        "method": "Basic",
+        "notes": "HTTP Basic Auth using personal API key as username and any string (e.g. 'X') as password. Key found in agent profile settings."
+      }
+    ],
+    "self_serve": "self-serve-trial",
+    "self_serve_notes": "Freshdesk offers a free trial (standard 14-day mentioned in industry sources) and a Free Program for 6 months for 1-2 agents. The Free Program includes essential features but API access is restricted/limited. Continued full API use requires a paid plan.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "REST API v2 covering tickets, contacts, companies, conversations, agents, groups, knowledge base articles; JSON in/out, supports CORS, standard HTTP verbs. Also has a JS SDK wrapper."
+    },
+    "existing_mcp": {
+      "exists": "yes",
+      "url": "https://www.npmjs.com/package/freshdesk-mcp"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "API access is restricted on the Free Program (6 months, 1-2 agents); a paid plan or active trial is required for full programmatic access, and self-serve API key generation requires an agent account with sufficient permissions.",
+    "evidence": [
+      {
+        "url": "https://developer.freshdesk.com/api/v1/",
+        "supports": "Freshdesk REST API v2 documentation, Basic Auth via API key"
+      },
+      {
+        "url": "https://developers.freshworks.com/freshdesk-sdk/",
+        "supports": "JS SDK and Basic Auth details, domain + api_key usage"
+      },
+      {
+        "url": "https://www.freshworks.com/freshdesk/pricing/",
+        "supports": "Pricing plans including free trial and Free Program"
+      },
+      {
+        "url": "https://support.freshdesk.com/support/solutions/articles/50000010099-explore-freshdesk-free-program-freshdesk-only-",
+        "supports": "Free Program available for 6 months for 1-2 agents with limited features"
+      },
+      {
+        "url": "https://preview.truto.one/blog/how-to-integrate-with-the-freshdesk-api-2026-engineering-guide/",
+        "supports": "REST API architecture, resources, rate limits, pagination details"
+      }
+    ],
+    "confidence": 0.78,
+    "flags": [
+      "Free Program (6 months) has restricted API access; paid plans required for full API use",
+      "At least one community MCP server exists (freshdesk-mcp on NPM); no official Freshworks-maintained MCP identified",
+      "Rate limits vary significantly by plan tier"
+    ]
+  }
+}

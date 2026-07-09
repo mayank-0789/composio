@@ -1,0 +1,45 @@
+{
+  "answer": "Yes, private applications used by sellers or vendors to access their own business data remain free and exempt from Selling Partner API (SP-API) fees [1][2].\n\nFor third-party developers, Amazon implemented an annual fee of $1,400 effective January 31, 2026 [1][2]. While a tiered structure for GET call volume was introduced, per-call overage fees have been postponed indefinitely following developer feedback [2]. All developers, regardless of subscription status, retain free access to core resources such as documentation, software development kits (SDKs), and sandbox testing environments [1].",
+  "results": [
+    {
+      "title": "Amazon introduces fees for third-party developer API access in 2026",
+      "url": "https://ppc.land/amazon-introduces-fees-for-third-party-developer-api-access-in-2026/",
+      "snippet": ""
+    },
+    {
+      "title": "Amazon SP-API Free Tier 2026: Limits, Pricing & What Changed | AgentDeals",
+      "url": "https://agentdeals.dev/vendor/amazon-sp-api",
+      "snippet": ""
+    },
+    {
+      "title": "Amazon Selling Partner API (SP-API)",
+      "url": "https://developer.amazonservices.com/?mons_sel_locale=en_US",
+      "snippet": ""
+    },
+    {
+      "title": "SP-API General FAQ",
+      "url": "https://developer-docs.amazon.com/sp-api/lang-en_EN/docs/general-faq",
+      "snippet": ""
+    },
+    {
+      "title": "Amazon Selling Partner API (SP-API)",
+      "url": "https://developer.amazonservices.com/private-developer?lang=en-US",
+      "snippet": ""
+    },
+    {
+      "title": "Amazon Seller Data Access",
+      "url": "https://developer-docs.amazon.com/sp-api/docs/amazon-seller-data-access",
+      "snippet": ""
+    },
+    {
+      "title": "Usage Plans and Rate Limits",
+      "url": "https://developer-docs.amazon.com/sp-api/docs/usage-plans-and-rate-limits",
+      "snippet": ""
+    },
+    {
+      "title": "Tutorial: Test Selling Partner API Endpoints",
+      "url": "https://developer-docs.amazon.com/sp-api/docs/tutorial-test-selling-partner-api-endpoints",
+      "snippet": ""
+    }
+  ]
+}

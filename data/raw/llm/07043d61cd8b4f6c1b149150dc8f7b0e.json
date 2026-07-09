@@ -1,0 +1,50 @@
+{
+  "one_liner": "Front is a customer communication/helpdesk platform with a well-documented REST Core API supporting Bearer token and OAuth2 authentication, a free developer sandbox for building integrations, and an official MCP server for AI agent access to conversation data.",
+  "auth_methods": [
+    {
+      "method": "OAuth2",
+      "notes": "Required for public integrations distributed via Front App Store; Basic auth used to exchange authorization code for tokens, then Bearer token used for API calls."
+    },
+    {
+      "method": "API key",
+      "notes": "Personal/private API tokens can be generated directly in Front account settings for private integrations or testing; referred to as Bearer tokens."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Front offers a free developer account (separate from production, limited to 3 teammates) specifically for building and testing integrations without a paid subscription. Production usage requires a paid plan (no free production tier, but 14-day trial available).",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Core API covers conversations, contacts, inboxes, tags, teams, accounts, drafts, attachments, and more, with OpenAPI spec available (llms.txt index)."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://mcp.frontapp.com/mcp"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://dev.frontapp.com/me/docs/authentication",
+      "supports": "Describes Bearer token auth, API tokens vs OAuth2, and OAuth requirement for public integrations."
+    },
+    {
+      "url": "https://dev.frontapp.com/docs/core-api-getting-started",
+      "supports": "Shows self-serve API token generation and OAuth setup steps for building integrations, including free developer account link."
+    },
+    {
+      "url": "https://dev.frontapp.com/docs/oauth",
+      "supports": "OAuth implementation guide for public integrations."
+    },
+    {
+      "url": "https://dev.frontapp.com/docs/welcome",
+      "supports": "Reference to free developer account setup (#developer-accounts)."
+    }
+  ],
+  "confidence": 0.85,
+  "flags": [
+    "Official MCP server exists at mcp.frontapp.com requiring OAuth 2.1 with PKCE, distinct from standard Core API OAuth2 flow.",
+    "Production API access tied to paid subscription plan; free tier only available via developer sandbox account.",
+    "No free production plan; 14-day trial only for paid tiers."
+  ]
+}

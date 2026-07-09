@@ -1,0 +1,45 @@
+{
+  "answer": "Notion provides free developer API access regardless of your workspace plan. You can build custom automations and integrations using internal connections, public connections, or personal access tokens (PATs) at no cost.\n\nTo start, visit the Notion Developer portal to create your preferred authentication model. While the API itself is free, note that the ability to create PATs is subject to your workspace's specific settings; on a Free plan, only workspace owners can create them by default. If you need to build more complex workflows, Notion also offers \"Notion Workers\" and AI agent tools, which currently have free trial periods before potentially incurring credit-based costs starting August 11.",
+  "results": [
+    {
+      "title": "Notion Pricing Plans: Free, Plus, Business, & Enterprise.",
+      "url": "https://www.notion.com/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Overview - Notion Docs",
+      "url": "https://developers.notion.com/guides/get-started/overview",
+      "snippet": ""
+    },
+    {
+      "title": "API quickstart - Notion Docs",
+      "url": "https://developers.notion.com/guides/get-started/quick-start",
+      "snippet": ""
+    },
+    {
+      "title": "Personal access tokens - Notion Docs",
+      "url": "https://developers.notion.com/guides/get-started/personal-access-tokens",
+      "snippet": ""
+    },
+    {
+      "title": "Public connections - Notion Docs",
+      "url": "https://developers.notion.com/guides/get-started/public-connections",
+      "snippet": ""
+    },
+    {
+      "title": "Frequently asked questions - Notion Docs",
+      "url": "https://developers.notion.com/page/frequently-asked-questions",
+      "snippet": ""
+    },
+    {
+      "title": "Change your plan – Notion Help Center",
+      "url": "https://www.notion.com/help/upgrade-or-downgrade-your-plan",
+      "snippet": ""
+    },
+    {
+      "title": "Notion Pricing Plans: Free, Plus, Business and Enterprise.",
+      "url": "https://www.notion.com/en-gb/pricing",
+      "snippet": ""
+    }
+  ]
+}

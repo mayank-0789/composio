@@ -21,7 +21,8 @@ export const AppResearch = z.object({
   website: z.string(),
   category: z.string(),
   one_liner: z.string().min(1),
-  auth_methods: z.array(z.object({ method: AuthMethod, notes: z.string().optional() })).min(1),
+  auth_methods: z.array(z.object({ method: AuthMethod, notes: z.string().optional() })).min(1)
+    .transform((arr) => arr.filter((a, i) => arr.findIndex((b) => b.method === a.method) === i)),
   self_serve: SelfServe,
   self_serve_notes: z.string().optional(),
   api_surface: z.object({ type: ApiType, breadth: Breadth, notes: z.string().optional() }),

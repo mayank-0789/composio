@@ -1,0 +1,45 @@
+{
+  "answer": "LiveAgent provides two API versions, v1 and v3, which require separate, version-specific API keys managed in your account dashboard [1][2]. \n\nTo authenticate, include your valid API key as a parameter in your request [3][4]. For v3, generate your key under Configuration, System, API, and assign necessary scopes to the key [1][5]. For the deprecated v1, generate the key within the Settings for API v1 section on the same configuration page [1]. Ensure the key version matches the endpoint being called to avoid 403 errors [1]. You can access interactive documentation at https://YOURDOMAIN.ladesk.com/docs/api/v3/#/ [5].",
+  "results": [
+    {
+      "title": "LiveAgent API v1 vs v3: Authentication Differences, API Key Management, and Resolving 403 Errors",
+      "url": "https://faq.liveagent.com/535002-LiveAgent-API-v1-vs-v3-Authentication-Differences-API-Key-Management-and-Resolving-403-Errors",
+      "snippet": ""
+    },
+    {
+      "title": "Miscellaneous",
+      "url": "https://faq.liveagent.com/652307-Miscellaneous",
+      "snippet": ""
+    },
+    {
+      "title": "Complete API reference",
+      "url": "https://support.liveagent.com/840770-Complete-API-reference",
+      "snippet": ""
+    },
+    {
+      "title": "How to make REST calls in PHP",
+      "url": "https://support.liveagent.com/061754-How-to-make-REST-calls-in-PHP",
+      "snippet": ""
+    },
+    {
+      "title": "Documentation",
+      "url": "https://support.liveagent.com/567924-Documentation",
+      "snippet": ""
+    },
+    {
+      "title": "Documentation",
+      "url": "https://support.liveagent.com/167733-Documentation",
+      "snippet": ""
+    },
+    {
+      "title": "Swagger API descriptor",
+      "url": "https://support.liveagent.com/094128-Swagger-API-descriptor",
+      "snippet": ""
+    },
+    {
+      "title": "API features | LiveAgent - Help Desk Software & Live Chat",
+      "url": "https://www.liveagent.com/features/api/",
+      "snippet": ""
+    }
+  ]
+}

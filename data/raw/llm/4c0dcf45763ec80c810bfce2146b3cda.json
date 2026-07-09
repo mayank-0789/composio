@@ -1,0 +1,86 @@
+{
+  "verdicts": [
+    {
+      "field": "existing_mcp.exists",
+      "status": "contradicted",
+      "note": "The provided evidence does NOT show an MCP server. The URL points to GitHub's own repository under modelcontextprotocol org, which appears to be an official MCP server implementation. However, the evidence provided (authentication docs, rate limits, pricing) does not demonstrate or reference this MCP server. Without evidence that this MCP server actually exists and works, we cannot verify 'yes'. That said, the URL structure suggests this IS likely a real MCP server in the official MCP GitHub org, so this may be accurate but unverified by the evidence provided."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence clearly describes Token auth (personal access tokens, GITHUB_TOKEN, Authorization: Bearer/token header), OAuth2 (GitHub Apps and OAuth Apps), and mentions that some OAuth app endpoints require basic auth with client ID/secret. All three methods are verified."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Pricing page confirms free tier ($0 per user/month forever) with unlimited public/private repositories and API access. Authentication docs show personal access tokens can be self-generated. Rate limits doc confirms 5,000 req/hr for authenticated users."
+    },
+    {
+      "field": "api_surface",
+      "status": "supported",
+      "note": "Evidence confirms REST API exists with extensive coverage. Rate limits doc mentions 'REST API endpoints' and authentication doc describes REST API usage. GraphQL API is also mentioned as existing separately, supporting the 'broad' assessment."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "Free self-serve access with token authentication, extensive REST API, and 5,000 req/hr rate limit makes this buildable-now for developers."
+    },
+    {
+      "field": "one_liner",
+      "status": "unsupported",
+      "note": "The one-liner claims 'existing official MCP server' but the evidence provided does not demonstrate this MCP server exists or works. The evidence only covers authentication, rate limits, and pricing."
+    }
+  ],
+  "revised": {
+    "id": 61,
+    "name": "GitHub",
+    "website": "docs.github.com/rest",
+    "category": "Developer, Infra and Data platforms",
+    "one_liner": "GitHub's REST/GraphQL APIs offer broad, free self-serve programmatic access to repos, issues, and workflows via token or OAuth authentication, making agent integration buildable today.",
+    "auth_methods": [
+      {
+        "method": "Token",
+        "notes": "Personal access tokens (fine-grained or classic) or GITHUB_TOKEN in Actions, sent as Authorization: Bearer/token header."
+      },
+      {
+        "method": "OAuth2",
+        "notes": "GitHub Apps and OAuth Apps support OAuth2 flows for delegated access."
+      },
+      {
+        "method": "Basic",
+        "notes": "Some OAuth app endpoints require basic auth using client ID/secret."
+      }
+    ],
+    "self_serve": "self-serve-free",
+    "self_serve_notes": "Free plan accounts can self-generate personal access tokens or register GitHub/OAuth Apps with no payment required; usage subject to rate limits (5,000 req/hr authenticated).",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "Extensive REST API covering repos, issues, PRs, actions, orgs, etc. GraphQL API also available separately."
+    },
+    "existing_mcp": {
+      "exists": "unknown",
+      "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/github"
+    },
+    "buildability": "buildable-now",
+    "main_blocker": null,
+    "evidence": [
+      {
+        "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api?apiVersion=2026-03-10",
+        "supports": "Describes token-based auth via Authorization header, personal access tokens, GitHub Apps, GITHUB_TOKEN."
+      },
+      {
+        "url": "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2022-11-28",
+        "supports": "Confirms free self-serve access with rate limits (5000 req/hr authenticated)."
+      },
+      {
+        "url": "https://github.com/pricing/",
+        "supports": "Confirms free tier available for all accounts including API access."
+      }
+    ],
+    "confidence": 0.85,
+    "flags": [
+      "mcp-server-url-not-verified-in-evidence"
+    ]
+  }
+}

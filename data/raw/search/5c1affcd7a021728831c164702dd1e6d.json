@@ -1,0 +1,45 @@
+{
+  "answer": "Plaid provides two official Model Context Protocol (MCP) servers [1][2]. The Dashboard MCP server is a remote, production-focused tool for diagnostics and analytics, accessible at `https://api.dashboard.plaid.com/mcp/` using the Streamable HTTP protocol [1][2]. It requires an OAuth token with the `mcp:dashboard` scope [2]. The second is a local Plaid AI coding toolkit for development, which runs as a subprocess to provide mock data, documentation search, and sandbox utilities [1][2]. Numerous independent, third-party MCP servers also exist to bridge Plaid's financial APIs with AI clients like Claude Desktop [3][4].",
+  "results": [
+    {
+      "title": "Resources - MCP Server | Plaid Docs",
+      "url": "https://plaid.com/docs/resources/mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "Dashboard MCP server",
+      "url": "https://plaid.com/docs/resources/mcp/index.html.md",
+      "snippet": ""
+    },
+    {
+      "title": "ymcrcat/plaid-mcp-server",
+      "url": "https://github.com/ymcrcat/plaid-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "jsbarton/plaid-mcp-server",
+      "url": "https://github.com/jsbarton/plaid-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "The Plaid internal MCP server. Maximizing the leverage of internal AI… | by Plaid Eng | Plaid Engineering",
+      "url": "https://plaid.com/blog/plaid-internal-mcp-server-productivity/",
+      "snippet": ""
+    },
+    {
+      "title": "Plaid — MCP Server — MCP.Directory",
+      "url": "https://mcp.directory/servers/plaid",
+      "snippet": ""
+    },
+    {
+      "title": "mcp-server-plaid v0.1.0",
+      "url": "https://pypi.org/project/mcp-server-plaid/",
+      "snippet": ""
+    },
+    {
+      "title": "argotdev/plaid-mcp-ts",
+      "url": "https://github.com/argotdev/plaid-mcp-ts",
+      "snippet": ""
+    }
+  ]
+}

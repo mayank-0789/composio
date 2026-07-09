@@ -1,0 +1,49 @@
+{
+  "one_liner": "Pylon is a support/helpdesk platform offering a token-based REST API (accounts, tickets, tasks, custom fields) plus an official hosted MCP server for AI agent integration.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Bearer token generated in Pylon dashboard (Settings > API Tokens), passed as 'Authorization: Bearer <token>' header. Verify via /me endpoint."
+    },
+    {
+      "method": "OAuth2",
+      "notes": "Official hosted MCP server (mcp.usepylon.com) reportedly supports OAuth 2.0 in addition to token auth, per search results."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Developers can generate API tokens directly from the Pylon dashboard without needing sales/admin approval. No explicit mention of API pricing tiers gating access to the core support/helpdesk REST API (the x402/micropayment and 'Pylon AI'/pylonapi.com pricing model appears to be a separate, differently-branded product from usepylon.com's helpdesk API and should not be conflated).",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "medium",
+    "notes": "REST API at api.usepylon.com covering accounts, tickets/issues, tasks & projects, custom fields, contacts, knowledge base, etc. OpenAPI spec available."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://mcp.usepylon.com"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+      "supports": "Bearer token auth generated from dashboard, verify with /me endpoint"
+    },
+    {
+      "url": "https://docs.usepylon.com/pylon-docs/developer/api/api-reference/accounts.md",
+      "supports": "REST API with OpenAPI spec, bearerAuth security scheme, accounts endpoints"
+    },
+    {
+      "url": "https://docs.withwillow.ai/docs/mcp-servers/built-in/pylon",
+      "supports": "Official hosted MCP server at mcp.usepylon.com and community implementations exist"
+    },
+    {
+      "url": "https://app.getpylon.com/docs/api",
+      "supports": "API reference documentation confirming REST API surface"
+    }
+  ],
+  "confidence": 0.75,
+  "flags": [
+    "Search results conflate two potentially distinct products: usepylon.com (support/helpdesk, this evaluation target) and pylonapi.com ('Pylon — The Action Layer for AI Agents', x402 micropayment model) — these may be unrelated companies sharing a name; pricing info about x402/USDC likely does not apply to usepylon.com's helpdesk API.",
+    "OAuth2 support for MCP server auth is asserted in search summary but not directly confirmed by scraped docs excerpts provided."
+  ]
+}

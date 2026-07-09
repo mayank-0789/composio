@@ -1,0 +1,45 @@
+{
+  "answer": "The Gumroad API uses OAuth 2.0 for authentication [1][2][3]. For third-party integrations, you must implement the full OAuth 2.0 flow to obtain an access token [1][3]. For personal use or single-account integrations, you can manually generate an access token directly within your Gumroad account settings under Advanced > Applications [2][3][4].\n\nOnce you have an access token, it must be included in every API request using the Authorization: Bearer header [1][5][2].\n\nExample request:\n```bash\ncurl https://api.gumroad.com/v2/user \\\n  -H \"Authorization: Bearer YOUR_ACCESS_TOKEN\"\n```",
+  "results": [
+    {
+      "title": "Authentication - Gumroad",
+      "url": "https://www.mintlify.com/antiwork/gumroad/api/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Gumroad API for AI Agents: Methods, Permissions & Safe Access | Bollard AI",
+      "url": "https://bollardai.com/resources/gumroad",
+      "snippet": ""
+    },
+    {
+      "title": "Gumroad API Essentials",
+      "url": "https://rollout.com/integration-guides/gumroad/api-essentials",
+      "snippet": ""
+    },
+    {
+      "title": "fivetran_connector_sdk/connectors/gumroad at main · fivetran/fivetran_connector_sdk · GitHub",
+      "url": "https://github.com/fivetran/fivetran_connector_sdk/tree/main/connectors/gumroad",
+      "snippet": ""
+    },
+    {
+      "title": "API Overview - Gumroad",
+      "url": "https://mintlify.wiki/antiwork/gumroad/api/overview",
+      "snippet": ""
+    },
+    {
+      "title": "Gumroad credentials | n8n Docs",
+      "url": "https://docs.n8n.io/integrations/builtin/credentials/gumroad/",
+      "snippet": ""
+    },
+    {
+      "title": "app/javascript/pages/Public/Api.tsx",
+      "url": "https://github.com/antiwork/gumroad/blob/61b39346/app/javascript/pages/Public/Api.tsx",
+      "snippet": ""
+    },
+    {
+      "title": "Alofoxx/oauth2-gumroad",
+      "url": "https://github.com/Alofoxx/oauth2-gumroad",
+      "snippet": ""
+    }
+  ]
+}

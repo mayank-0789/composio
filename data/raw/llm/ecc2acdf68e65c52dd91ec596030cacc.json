@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://api.ahrefs.com/mcp/mcp",
+  "reason": "Ahrefs has an official MCP server that is a remote service hosted at https://api.ahrefs.com/mcp/mcp. This server enables AI assistants to securely access Ahrefs SEO and marketing data for keyword research, backlink analysis, rank tracking, and site audits. It requires an active Ahrefs plan (Lite or higher) and uses API key authentication. Note that older self-hosted npm packages were archived in February 2026 and the official remote service should be used instead."
+}

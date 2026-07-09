@@ -1,0 +1,45 @@
+{
+  "answer": "Vonage APIs primarily use Basic Authentication or JSON Web Tokens (JWT) depending on the specific product and use case. Basic Authentication requires sending your API key and secret as a Base64-encoded string in the Authorization header.\n\n```\nAuthorization: Basic base64(API_KEY:API_SECRET)\n```\n\nJWT authentication is recommended for production environments, as it supports webhooks and advanced features like ACLs. It uses a token signed with your application's private key, sent in the Authorization header.\n\n```\nAuthorization: Bearer <JWT>\n```\n\nSIP Trunking uses Digest Authentication, where the API key serves as the user and the secret as the password.",
+  "results": [
+    {
+      "title": "Authentication - API Concepts | Vonage API Documentation",
+      "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication API Guide | Vonage API Documentation",
+      "url": "https://developer.vonage.com/en/verify/concepts/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Getting Started With Vonage APIs (New User Guide)",
+      "url": "https://developer.vonage.com/en/getting-started/overview",
+      "snippet": ""
+    },
+    {
+      "title": "Vonage Messages API (v1.0) Reference | Vonage API Documentation",
+      "url": "https://developer.vonage.com/en/api/messages",
+      "snippet": ""
+    },
+    {
+      "title": "Messages API - Technical Details",
+      "url": "https://developer.vonage.com/en/messages/technical-details",
+      "snippet": ""
+    },
+    {
+      "title": "Vonage Network Auth v.0 API Reference | Vonage API Documentation",
+      "url": "https://developer.vonage.com/en/api/camara/auth",
+      "snippet": ""
+    },
+    {
+      "title": "Vonage Numbers API Reference | Vonage API Documentation",
+      "url": "https://developer.vonage.com/en/api/numbers",
+      "snippet": ""
+    },
+    {
+      "title": "API Errors",
+      "url": "https://developer.vonage.com/en/api-errors",
+      "snippet": ""
+    }
+  ]
+}

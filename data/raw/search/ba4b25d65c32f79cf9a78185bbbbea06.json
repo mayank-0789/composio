@@ -1,0 +1,45 @@
+{
+  "answer": "Neo4j supports several authentication methods, including basic (username and password), bearer (token-based), Kerberos, and custom schemes [1][2][3][4]. You can also opt for no authentication if the server configuration allows it [1][2][4].\n\nWhen using the HTTP API, you must include an Authorization header using the Basic scheme with a base64-encoded username:password string [5][6]. For official language drivers, use the provided helper functions during driver initialization [2][4][7].\n\nExample using the JavaScript driver:\n```javascript\nconst driver = neo4j.driver(URI, neo4j.auth.basic(USER, PASSWORD));\n```\n\nExample using the Python driver:\n```python\nfrom neo4j import GraphDatabase\ndriver = GraphDatabase.driver(URI, auth=(USER, PASSWORD))\n```\n\nAuthentication is enabled by default in Neo4j [5][3][6]. Detailed configuration for providers like LDAP, OIDC, or custom plugins is handled through server-side settings [3].",
+  "results": [
+    {
+      "title": "AuthTokens (Neo4j Java Driver 6.2 API)",
+      "url": "https://neo4j.com/docs/api/java-driver/current/org.neo4j.driver/org/neo4j/driver/AuthTokens.html",
+      "snippet": ""
+    },
+    {
+      "title": "Advanced connection information - Neo4j Python Driver Manual",
+      "url": "https://neo4j.com/docs/python-manual/5/connect-advanced/",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication and authorization - Operations Manual",
+      "url": "https://neo4j.com/docs/operations-manual/2026.02/authentication-authorization/",
+      "snippet": ""
+    },
+    {
+      "title": "Advanced connection information - Neo4j JavaScript Driver Manual",
+      "url": "https://neo4j.com/docs/javascript-manual/5/connect-advanced/",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication and authorization - HTTP API",
+      "url": "https://neo4j.com/docs/http-api/4.2/security/",
+      "snippet": ""
+    },
+    {
+      "title": "5.2. Authentication and authorization - Chapter 5. HTTP API",
+      "url": "https://neo4j.com/docs/developer-manual/3.4/http-api/authentication/",
+      "snippet": ""
+    },
+    {
+      "title": "API Documentation — Neo4j Python Driver 4.2",
+      "url": "https://neo4j.com/docs/api/python-driver/4.2/api.html",
+      "snippet": ""
+    },
+    {
+      "title": "AuthToken (Neo4j Java Driver 6.1 API)",
+      "url": "https://neo4j.com/docs/api/java-driver/current/org.neo4j.driver/org/neo4j/driver/AuthToken.html",
+      "snippet": ""
+    }
+  ]
+}

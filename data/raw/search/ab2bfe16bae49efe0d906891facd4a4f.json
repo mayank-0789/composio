@@ -1,0 +1,45 @@
+{
+  "answer": "LiveAgent does not provide API access on its free plan [1][2]. The free tier is restricted to basic features, including a single agent seat, one integration, and seven days of ticket history [1][3]. API access is available on their paid subscription plans [4][5]. You can test the API and all platform features during the 30-day free trial, which requires no credit card [6][7]. The REST API allows for operations such as retrieving agent information, managing conversations, and accessing knowledgebase articles [8].",
+  "results": [
+    {
+      "title": "Free plan | LiveAgent - Help Desk Software & Live Chat",
+      "url": "https://www.liveagent.com/free-plan/",
+      "snippet": ""
+    },
+    {
+      "title": "LiveAgent Review 2026 | EuropeanStack",
+      "url": "https://europeanstack.com/software/liveagent",
+      "snippet": ""
+    },
+    {
+      "title": "Free Live Chat Software | LiveAgent - Help Desk Software & Live Chat",
+      "url": "https://www.liveagent.com/free-live-chat-software/",
+      "snippet": ""
+    },
+    {
+      "title": "Helpdesk Software for SaaS Industry | LiveAgent - Help Desk Software & Live Chat",
+      "url": "https://www.liveagent.com/industry/saas/",
+      "snippet": ""
+    },
+    {
+      "title": "Helpdesk Software for Software & Internet Industry | LiveAgent - Help Desk Software & Live Chat",
+      "url": "https://www.liveagent.com/industry/software-internet/",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing | LiveAgent - Help Desk Software & Live Chat",
+      "url": "https://www.liveagent.com/pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "Free Trial | LiveAgent - Help Desk Software & Live Chat",
+      "url": "https://www.liveagent.com/customer-support-glossary/free-trial/",
+      "snippet": ""
+    },
+    {
+      "title": "Complete API reference",
+      "url": "https://support.liveagent.com/840770-Complete-API-reference",
+      "snippet": ""
+    }
+  ]
+}

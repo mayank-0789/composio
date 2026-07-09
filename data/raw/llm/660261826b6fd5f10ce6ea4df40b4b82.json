@@ -1,0 +1,50 @@
+{
+  "one_liner": "Gumroad's REST API (api.gumroad.com/v2) offers self-serve OAuth2 or personal access tokens for managing products, sales, subscribers, and offer codes, with an existing community MCP server (gumroad-mcp) already available.",
+  "auth_methods": [
+    {
+      "method": "OAuth2",
+      "notes": "Standard OAuth2 authorization code flow via gumroad.com/oauth/authorize and api.gumroad.com/oauth/token, scoped (view_profile, view_sales, edit_products, edit_sales, mark_sales_as_shipped, account)."
+    },
+    {
+      "method": "Token",
+      "notes": "Sellers can generate a personal access token directly in Gumroad account settings (Advanced > Applications) without the full OAuth redirect flow, useful for single-account/personal integrations."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "No tiered pricing or paywall for API access; any Gumroad account can create an OAuth application or generate a personal access token via Advanced Settings. Gumroad itself charges a flat 10% + $0.50 fee per sale, not for API access.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "medium",
+    "notes": "REST API at api.gumroad.com/v2, ~40 endpoints across products, sales, subscribers, licenses, offer codes; plus resource subscriptions (webhooks) for events like sales/refunds."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://www.npmjs.com/package/gumroad-mcp"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://www.mintlify.com/antiwork/gumroad/api/authentication",
+      "supports": "OAuth 2.0 Bearer token auth, personal access token generation via account settings"
+    },
+    {
+      "url": "https://bollardai.com/resources/gumroad",
+      "supports": "Detailed API surface: REST at api.gumroad.com/v2, OAuth2 scopes, resource subscriptions/webhooks, 40 endpoints"
+    },
+    {
+      "url": "https://rollout.com/integration-guides/gumroad/api-essentials",
+      "supports": "Self-serve token generation and RESTful API documentation location"
+    },
+    {
+      "url": "https://github.com/Alofoxx/oauth2-gumroad",
+      "supports": "Existence of OAuth2 provider implementation for Gumroad"
+    },
+    {
+      "url": "https://gumroad.com/pricing",
+      "supports": "No tiered pricing, flat fee model, no cost barrier to API access"
+    }
+  ],
+  "confidence": 0.85,
+  "flags": []
+}

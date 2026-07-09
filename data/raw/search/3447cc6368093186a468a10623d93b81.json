@@ -1,0 +1,45 @@
+{
+  "answer": "Shopify provides free access for developers through the Shopify Partner Program. You can create an unlimited number of development stores for free to build, test, and preview apps using Shopify APIs [1]. While these stores are free, they are restricted to installing free or Partner-friendly apps [1]. API usage remains subject to rate limits, which scale based on the store's plan tier [2][3]. Developers can test billing logic and API integrations in these environments without incurring charges, though specific app store listing features may require a one-time registration fee [4][5][6].",
+  "results": [
+    {
+      "title": "",
+      "url": "https://shopify.dev/docs/api/development-stores/index",
+      "snippet": ""
+    },
+    {
+      "title": "About Shopify APIs",
+      "url": "https://shopify.dev/docs/api/usage",
+      "snippet": ""
+    },
+    {
+      "title": "Shopify API limits",
+      "url": "https://shopify.dev/docs/api/usage/limits",
+      "snippet": ""
+    },
+    {
+      "title": "About billing for your app",
+      "url": "https://shopify.dev/docs/apps/launch/billing",
+      "snippet": ""
+    },
+    {
+      "title": "Offer free trials",
+      "url": "https://shopify.dev/docs/apps/launch/billing/manual-pricing/subscription-billing/offer-free-trials",
+      "snippet": ""
+    },
+    {
+      "title": "Managed App Pricing in development mode - Shopify App Store - Shopify Developer Community Forums",
+      "url": "https://community.shopify.dev/t/managed-app-pricing-in-development-mode/23009",
+      "snippet": ""
+    },
+    {
+      "title": "Shopify Pricing: Find the Right Plan for Your Business - Shopify",
+      "url": "https://www.shopify.com/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Shopify API License and Terms of Use - Shopify",
+      "url": "https://www.shopify.com/legal/api-terms",
+      "snippet": ""
+    }
+  ]
+}

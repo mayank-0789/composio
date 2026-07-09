@@ -1,0 +1,84 @@
+{
+  "authDistribution": {
+    "OAuth2": 71,
+    "Basic": 17,
+    "API key": 56,
+    "Token": 32,
+    "Other": 21
+  },
+  "selfServeByCategory": {
+    "CRM and Sales": {
+      "self-serve-free": 7,
+      "self-serve-trial": 1,
+      "paid-plan": 1,
+      "admin-approval": 1
+    },
+    "Support and Helpdesk": {
+      "self-serve-trial": 4,
+      "self-serve-free": 4,
+      "paid-plan": 1,
+      "admin-approval": 1
+    },
+    "Communications and Messaging": {
+      "self-serve-free": 6,
+      "self-serve-trial": 2,
+      "paid-plan": 2
+    },
+    "Marketing, Ads, Email and Social": {
+      "admin-approval": 4,
+      "self-serve-trial": 2,
+      "self-serve-free": 4
+    },
+    "Ecommerce": {
+      "self-serve-free": 5,
+      "self-serve-trial": 1,
+      "admin-approval": 2,
+      "paid-plan": 2
+    },
+    "Data, SEO and Scraping": {
+      "self-serve-free": 5,
+      "self-serve-trial": 1,
+      "paid-plan": 3,
+      "unknown": 1
+    },
+    "Developer, Infra and Data platforms": {
+      "self-serve-free": 9,
+      "self-serve-trial": 1
+    },
+    "Productivity and Project Management": {
+      "self-serve-free": 9,
+      "paid-plan": 1
+    },
+    "Finance and Fintech": {
+      "self-serve-free": 8,
+      "admin-approval": 1,
+      "partnership-contact-sales": 1
+    },
+    "AI, Research and Media-native": {
+      "self-serve-free": 4,
+      "partnership-contact-sales": 2,
+      "self-serve-trial": 3,
+      "paid-plan": 1
+    }
+  },
+  "mcpCoverage": {
+    "yes": 97,
+    "no": 3,
+    "unknown": 0
+  },
+  "buildability": {
+    "buildable-now": 72,
+    "buildable-with-caveats": 26,
+    "blocked": 2
+  },
+  "topBlocker": {
+    "blocker": "Salesforce's official Hosted MCP Server is still in pilot, so production-grade MCP integration may require using the Beta DX MCP server or building a custom MCP wrapper around the stable REST/GraphQL/SOAP APIs in the interim.",
+    "count": 1
+  },
+  "headlines": [
+    "OAuth2 is the dominant auth method (71 of 100 apps) — a managed-auth layer covers most of the field.",
+    "76/100 apps are self-serve — the easy wins; the rest need paid plans or outreach.",
+    "72/100 apps are buildable into an agent toolkit today; 26 come with caveats and 2 are blocked outright.",
+    "70/100 apps are instant wins — self-serve credentials AND buildable now — while 14 need a paid plan, admin approval, or a sales conversation first."
+  ]
+}

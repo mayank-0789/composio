@@ -1,0 +1,45 @@
+{
+  "answer": "Klaviyo offers three authentication methods depending on the API endpoint being used [1][2].\n\nFor server-side requests to /api endpoints, use private key authentication by setting the Authorization header [1][2]:\n\n```\nAuthorization: Klaviyo-API-Key your-private-api-key\n```\n\nTech partners building integrations are encouraged to use OAuth to obtain access tokens for server-side calls, which provides improved security and rate limits [1][3].\n\nFor client-side requests to /client endpoints, use your 6-character public key (company ID) as a query parameter [2][4]:\n\n```\nhttps://a.klaviyo.com/client/endpoint/?company_id=YOUR_PUBLIC_KEY\n```\n\nPrivate keys can be configured with specific access scopes to limit data exposure [1][2].",
+  "results": [
+    {
+      "title": "Authenticate API requests",
+      "url": "https://developers.klaviyo.com/en/docs/authenticate_",
+      "snippet": ""
+    },
+    {
+      "title": "API overview",
+      "url": "https://developers.klaviyo.com/en/reference/api_overview",
+      "snippet": ""
+    },
+    {
+      "title": "Make API calls using OAuth",
+      "url": "https://developers.klaviyo.com/en/v2026-01-15/docs/set_up_oauth",
+      "snippet": ""
+    },
+    {
+      "title": "Authenticate API requests",
+      "url": "https://developers.klaviyo.com/en/v2026-01-15/docs/authenticate_",
+      "snippet": ""
+    },
+    {
+      "title": "Authenticate API requests",
+      "url": "https://developers.klaviyo.com/en/v2025-10-15/docs/authenticate_",
+      "snippet": ""
+    },
+    {
+      "title": "Authenticate API requests",
+      "url": "https://developers.klaviyo.com/en/v2025-01-15/docs/authenticate_",
+      "snippet": ""
+    },
+    {
+      "title": "Authenticate API requests",
+      "url": "https://developers.klaviyo.com/en/v2024-10-15/docs/authenticate_",
+      "snippet": ""
+    },
+    {
+      "title": "API overview",
+      "url": "https://developers.klaviyo.com/en/v2025-10-15/reference/api_overview",
+      "snippet": ""
+    }
+  ]
+}

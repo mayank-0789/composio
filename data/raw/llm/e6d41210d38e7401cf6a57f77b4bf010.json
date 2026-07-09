@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://github.com/Burnsedia/sherlock-mcp",
+  "reason": "There are multiple dedicated MCP servers for different \"Sherlock\" projects: (1) Burnsedia/sherlock-mcp for OSINT username searches across 400+ social media platforms, (2) H4RR1SON/sherlock-mcp for Covertlabs infostealer intelligence platform access, and (3) jcucci/dotnet-sherlock-mcp for .NET assembly introspection. All are distinct MCP server implementations exposing their respective Sherlock tools' capabilities over the Model Context Protocol."
+}

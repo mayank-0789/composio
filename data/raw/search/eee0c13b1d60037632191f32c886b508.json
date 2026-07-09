@@ -1,0 +1,30 @@
+{
+  "answer": "HubSpot APIs primarily support OAuth 2.0 and private app access tokens for authentication [1][2]. \n\nFor OAuth, apps must use the Authorization Code grant type [3][4]. To authenticate, include the access token in the Authorization header as a Bearer token [1][2]. To generate or refresh tokens, send a URL-form encoded POST request to the OAuth token endpoint (e.g., /oauth/v3/token) [5][6].\n\n```shell\ncurl --header \"Authorization: Bearer YOUR_ACCESS_TOKEN\" \\\nhttps://api.hubapi.com/crm/v3/objects/contacts\n```\n\nPrivate app access tokens are configured in app settings and used identically in the header [1][2]. Service keys are also available for simple, direct REST API requests [7].",
+  "results": [
+    {
+      "title": "HubSpot APIs | Authentication methods on HubSpot - HubSpot docs",
+      "url": "https://developers.hubspot.com/docs/apps/legacy-apps/authentication/intro-to-auth",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication overview - HubSpot docs",
+      "url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/overview",
+      "snippet": ""
+    },
+    {
+      "title": "OAuth Quickstart Guide - HubSpot docs",
+      "url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/oauth/oauth-quickstart-guide",
+      "snippet": ""
+    },
+    {
+      "title": "Working with OAuth | OAuth Quickstart Guide - HubSpot docs",
+      "url": "https://developers.hubspot.com/docs/apps/legacy-apps/authentication/oauth-quickstart-guide",
+      "snippet": ""
+    },
+    {
+      "title": "Make API requests using a service key (BETA) - HubSpot docs",
+      "url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/account-service-keys",
+      "snippet": ""
+    }
+  ]
+}

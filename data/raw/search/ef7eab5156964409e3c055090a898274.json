@@ -1,0 +1,45 @@
+{
+  "answer": "Telegram API authentication for user accounts is based on an encryption key identifier (auth_key_id) [1]. The standard login flow begins by invoking auth.sendCode, which returns a phone_code_hash used to verify the user via auth.signIn [1][2]. If two-factor authentication is enabled, the server returns a SESSION_PASSWORD_NEEDED error, requiring the client to verify the password using the Secure Remote Password (SRP) protocol via auth.checkPassword [1][3][4]. Alternative login methods include QR code and passkey flows [1]. For the separate Gateway API, authentication is managed via an access token passed in the header or as a parameter [5].",
+  "results": [
+    {
+      "title": "User Authorization",
+      "url": "https://core.telegram.org/api/auth",
+      "snippet": ""
+    },
+    {
+      "title": "auth.signIn",
+      "url": "https://core.telegram.org/method/auth.signIn",
+      "snippet": ""
+    },
+    {
+      "title": "Two-factor authentication",
+      "url": "https://core.telegram.org/api/srp",
+      "snippet": ""
+    },
+    {
+      "title": "auth.checkPassword",
+      "url": "https://core.telegram.org/method/auth.checkPassword",
+      "snippet": ""
+    },
+    {
+      "title": "Telegram Gateway API",
+      "url": "https://core.telegram.org/gateway/api",
+      "snippet": ""
+    },
+    {
+      "title": "Telegram APIs",
+      "url": "https://core.telegram.org/api",
+      "snippet": ""
+    },
+    {
+      "title": "Telegram Bot API",
+      "url": "https://core.telegram.org/bots/API",
+      "snippet": ""
+    },
+    {
+      "title": "auth.signUp",
+      "url": "https://core.telegram.org/method/auth.signUp",
+      "snippet": ""
+    }
+  ]
+}

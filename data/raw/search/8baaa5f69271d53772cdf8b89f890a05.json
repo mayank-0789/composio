@@ -1,0 +1,45 @@
+{
+  "answer": "The Front Core API uses Bearer token authentication for all requests [1]. You must include the token in the Authorization header of every request, formatted as follows:\n\n```curl\ncurl --request GET \\\n  --url https://api2.frontapp.com/conversations/cnv_123/drafts \\\n  --header 'Authorization: Bearer [YOUR_TOKEN]'\n```\n\nYou can obtain a token either by generating an API token directly within your Front account settings for personal or private use, or by implementing OAuth 2.0 [1][2]. OAuth is required for all public integrations available to other Front customers [1][2]. When using OAuth, you initially use Basic authentication—with your Base64-encoded Client ID and Client Secret—to exchange a temporary authorization code for your API and refresh tokens [3]. Subsequent API requests then revert to using the Bearer token method [3].",
+  "results": [
+    {
+      "title": "Authentication",
+      "url": "https://dev.frontapp.com/me/docs/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Getting Started with the Core API",
+      "url": "https://dev.frontapp.com/docs/core-api-getting-started",
+      "snippet": ""
+    },
+    {
+      "title": "OAuth",
+      "url": "https://dev.frontapp.com/docs/oauth",
+      "snippet": ""
+    },
+    {
+      "title": "API Token details",
+      "url": "https://dev.frontapp.com/me/reference/api-token-details",
+      "snippet": ""
+    },
+    {
+      "title": "How to create and revoke API tokens",
+      "url": "https://help.front.com/en/articles/2331",
+      "snippet": ""
+    },
+    {
+      "title": "Fundamentals of Application Channels",
+      "url": "https://dev.frontapp.com/me/docs/creating-a-partner-channel",
+      "snippet": ""
+    },
+    {
+      "title": "Check user credentials - Frontcore REST API Methods",
+      "url": "https://app.frontcore.com/api/docs/v2/check-user-credentials-post/",
+      "snippet": ""
+    },
+    {
+      "title": "Front Contact API (Product description) - Front Information AS",
+      "url": "https://fro.no/contact-api/",
+      "snippet": ""
+    }
+  ]
+}

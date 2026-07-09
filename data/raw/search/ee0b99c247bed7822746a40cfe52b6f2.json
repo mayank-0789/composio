@@ -1,0 +1,45 @@
+{
+  "answer": "Yes, monday.com provides self-serve access to its GraphQL API for all users, including those on the Free plan [1][2].\n\nWhile the Free plan for monday work management includes a daily API call limit of 1,000 requests, developers can access a dedicated, free-to-sign-up developer account to build, test, and experiment with the platform's API and SDK without needing a paid subscription [3][4][2]. Note that API usage is subject to complexity-based rate limits; for instance, free accounts have a 1,000,000 complexity point limit per minute when using the API playground [4]. Additional developer resources and documentation are available at the monday.com developer platform portal [1].",
+  "results": [
+    {
+      "title": "Developer Platform - monday.com",
+      "url": "https://developer.monday.com/",
+      "snippet": ""
+    },
+    {
+      "title": "Develop apps & agents on monday.com’s marketplace",
+      "url": "https://monday.com/w/app-developers",
+      "snippet": ""
+    },
+    {
+      "title": "monday.com pricing and plans",
+      "url": "https://monday.com/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Rate limits",
+      "url": "https://developer.monday.com/api-reference/docs/rate-limits",
+      "snippet": ""
+    },
+    {
+      "title": "monday dev pricing: unlimited boards, no add-ons",
+      "url": "https://monday.com/dev/pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "Available plan types on monday dev – Support",
+      "url": "https://support.monday.com/hc/en-us/articles/26061127699730-Available-plan-types-on-monday-dev",
+      "snippet": ""
+    },
+    {
+      "title": "monday products pricing and features",
+      "url": "https://support.monday.com/hc/en-us/articles/4407832195602-monday-products-pricing-and-features",
+      "snippet": ""
+    },
+    {
+      "title": "How Much Does monday.com Cost? monday.com Pricing Plans",
+      "url": "https://monday.com/blog/product/how-much-does-monday-com-cost/",
+      "snippet": ""
+    }
+  ]
+}

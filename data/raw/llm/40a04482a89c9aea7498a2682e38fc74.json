@@ -1,0 +1,55 @@
+{
+  "one_liner": "AI-powered meeting assistant that records, transcribes, and summarizes video meetings with searchable transcripts and team collaboration features.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Generated via user settings, passed using X-Api-Key header or apiKeyAuth security scheme in SDKs"
+    },
+    {
+      "method": "Token",
+      "notes": "Bearer token authentication via Authorization header or bearerAuth security configuration"
+    },
+    {
+      "method": "OAuth2",
+      "notes": "OAuth 2.0 for public integrations requiring registered app client ID and secret"
+    }
+  ],
+  "self_serve": "self-serve-trial",
+  "self_serve_notes": "Fathom AI (fathom.video) appears to offer a free-forever plan. Note: The evidence mentions confusion between Fathom Analytics (website analytics, paid) and Fathom AI (meeting assistant, free plan available). API access is self-serve once authenticated.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "medium",
+    "notes": "REST API with TypeScript and Python SDKs. Endpoints include list_meetings, get_transcript, get_summary, list_teams, list_team_members. Clear documentation for developers."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://api.fathom.ai/mcp"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://developers.fathom.ai/sdks/authentication",
+      "supports": "API key and Bearer token authentication methods documented with SDK examples"
+    },
+    {
+      "url": "https://developers.fathom.ai/sdks/oauth",
+      "supports": "OAuth 2.0 authentication for multi-user integrations requiring app registration"
+    },
+    {
+      "url": "https://developers.fathom.ai/api-overview",
+      "supports": "REST API with available methods and quickstart documentation"
+    },
+    {
+      "url": "https://api.fathom.ai/mcp",
+      "supports": "Official Model Context Protocol (MCP) server for connecting meeting data to AI assistants"
+    }
+  ],
+  "confidence": 0.85,
+  "flags": [
+    "official-mcp-exists",
+    "well-documented-api",
+    "multiple-auth-methods",
+    "sdk-available"
+  ]
+}

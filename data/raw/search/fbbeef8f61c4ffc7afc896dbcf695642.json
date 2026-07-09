@@ -1,0 +1,45 @@
+{
+  "answer": "Cloudflare supports two primary authentication methods for its API. The recommended approach is using an API Token via the Authorization: Bearer header. Alternatively, some legacy or specific endpoints support Global API Key authentication using X-Auth-Email and X-Auth-Key headers.\n\nFor API Token authentication, provide the token in your request headers:\n\n```bash\ncurl \"https://api.cloudflare.com/client/v4/user/tokens/verify\" \\\n--header \"Authorization: Bearer <API_TOKEN>\"\n```\n\nFor Global API Key authentication, provide your email and key:\n\n```bash\ncurl \"https://api.cloudflare.com/client/v4/user\" \\\n--header \"X-Auth-Email: <EMAIL>\" \\\n--header \"X-Auth-Key: <API_KEY>\"\n```\n\nAPI Tokens are preferred for security as they support granular permissions and scoping. You should never store these credentials in plaintext or public repositories; use environment variables instead. Always use the latest version of the API, which is Version 4.",
+  "results": [
+    {
+      "title": "Make API calls · Cloudflare Fundamentals docs",
+      "url": "https://developers.cloudflare.com/fundamentals/api/how-to/make-api-calls/",
+      "snippet": ""
+    },
+    {
+      "title": "Create API token · Cloudflare Fundamentals docs",
+      "url": "https://developers.cloudflare.com/fundamentals/api/get-started/create-token/",
+      "snippet": ""
+    },
+    {
+      "title": "API Reference | Cloudflare API",
+      "url": "https://developers.cloudflare.com/api/",
+      "snippet": ""
+    },
+    {
+      "title": "Create tokens via API · Cloudflare Fundamentals docs",
+      "url": "https://developers.cloudflare.com/fundamentals/api/how-to/create-via-api/",
+      "snippet": ""
+    },
+    {
+      "title": "Tokens | Cloudflare API",
+      "url": "https://developers.cloudflare.com/api/resources/accounts/subresources/tokens/",
+      "snippet": ""
+    },
+    {
+      "title": "Accounts | Cloudflare API",
+      "url": "https://developers.cloudflare.com/api/resources/accounts/",
+      "snippet": ""
+    },
+    {
+      "title": "User | Cloudflare API",
+      "url": "https://developers.cloudflare.com/api/resources/user/",
+      "snippet": ""
+    },
+    {
+      "title": "Cloudflare Python API library | Cloudflare API",
+      "url": "https://developers.cloudflare.com/api/python",
+      "snippet": ""
+    }
+  ]
+}

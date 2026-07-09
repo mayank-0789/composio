@@ -1,0 +1,45 @@
+{
+  "answer": "The Harvest V2 API uses either Personal Access Tokens or OAuth2 for authentication [1]. Personal Access Tokens are generated in the Developers section of Harvest ID and are recommended for personal scripts [1]. For public integrations, you must implement an OAuth2 flow (Authorization Code for server-side or Implicit Grant for client-side) [1].\n\nEvery request requires the `Authorization: Bearer $ACCESS_TOKEN` and `Harvest-Account-Id: $ACCOUNT_ID` headers, along with a custom `User-Agent` string [1][2][3].\n\nExample header authentication:\n```bash\ncurl -H \"Authorization: Bearer $ACCESS_TOKEN\" \\\n     -H \"Harvest-Account-Id: $ACCOUNT_ID\" \\\n     -H \"User-Agent: MyApp (you@example.com)\" \\\n     https://api.harvestapp.com/v2/users/me\n```",
+  "results": [
+    {
+      "title": "Authentication – Harvest API V2 Documentation",
+      "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+      "snippet": ""
+    },
+    {
+      "title": "Overview – Harvest API V2 Documentation",
+      "url": "https://help.getharvest.com/api-v2/introduction/overview/general/",
+      "snippet": ""
+    },
+    {
+      "title": "API V1 to API V2 Migration Guide – Harvest API V1 Documentation",
+      "url": "https://help.getharvest.com/api-v1/introduction/overview/migration-guide/",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication – Harvest API V2 Documentation",
+      "url": "https://help.getharvest.com/api-v2/authentication-api/",
+      "snippet": ""
+    },
+    {
+      "title": "Harvest API V2 Documentation",
+      "url": "https://help.getharvest.com/api-v2/",
+      "snippet": ""
+    },
+    {
+      "title": "For Server Side Applications – Harvest API V1 Documentation",
+      "url": "https://help.getharvest.com/api-v1/authentication/authentication/server-side-apps/",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication/OAuth%202.0.md at master · harvesthq/api",
+      "url": "https://github.com/harvesthq/api/blob/master/Authentication/OAuth%202.0.md",
+      "snippet": ""
+    },
+    {
+      "title": "Users – Harvest API V2 Documentation",
+      "url": "https://help.getharvest.com/api-v2/users-api/users/users/",
+      "snippet": ""
+    }
+  ]
+}

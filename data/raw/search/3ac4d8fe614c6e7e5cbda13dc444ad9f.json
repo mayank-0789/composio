@@ -1,0 +1,45 @@
+{
+  "answer": "Xero offers a free Starter tier for developers that includes no monthly fee, a maximum of 5 connections, and access to developer tools, resources, and standard API features [1][2]. This tier is designed to support early innovation and is available for apps that do not require premium features [1][3]. To begin, you can sign up for a free Xero developer account to access SDKs, documentation, and the demo company for testing [4][5]. Moving beyond the Starter tier requires adding a valid credit card to your developer portal account [1][3].",
+  "results": [
+    {
+      "title": "Pricing — Xero Developer",
+      "url": "https://developer.xero.com/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing and Policy Updates FAQs — Xero Developer",
+      "url": "https://developer.xero.com/faq/pricing-and-policy-updates",
+      "snippet": ""
+    },
+    {
+      "title": "Xero Developer migration timelines and next steps | by Annie Terry | Xero Developer",
+      "url": "https://devblog.xero.com/xero-developer-migration-timelines-and-next-steps-9e0c6c0c913f",
+      "snippet": ""
+    },
+    {
+      "title": "Xero Developer Platform",
+      "url": "https://developer.xero.com/",
+      "snippet": ""
+    },
+    {
+      "title": "Getting started FAQs — Xero Developer",
+      "url": "https://developer.xero.com/faq/getting-started",
+      "snippet": ""
+    },
+    {
+      "title": "Updates to Xero Developer pricing and Terms & Conditions | by Xero Developer | Xero Developer",
+      "url": "https://devblog.xero.com/updates-to-xero-developer-pricing-and-terms-conditions-3bad2f05215c",
+      "snippet": ""
+    },
+    {
+      "title": "Xero Developer Platform Commercial Terms — Xero Developer",
+      "url": "https://developer.xero.com/xero-developer-platform-commercial-terms",
+      "snippet": ""
+    },
+    {
+      "title": "Migrating from XASS billing to our new pricing structure | by Corey Leung | Xero Developer",
+      "url": "https://devblog.xero.com/migrating-from-xass-to-our-new-pricing-structure-fa2d045f02c1",
+      "snippet": ""
+    }
+  ]
+}

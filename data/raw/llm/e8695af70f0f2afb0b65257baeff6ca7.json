@@ -1,0 +1,99 @@
+{
+  "verdicts": [
+    {
+      "field": "existing_mcp.exists",
+      "status": "supported",
+      "note": "Evidence does not mention any MCP server. Setting 'unknown' is appropriate when no information is found."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence confirms OAuth 2.0 authorization code flow with refresh tokens, and mentions product-limited test tokens for 24-hour trial testing without full OAuth setup."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Evidence confirms admin-approval model: 'Application requests are reviewed each business day' and Standard access requires 'a video recording of your app completing an action using the Pinterest API'."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "supported",
+      "note": "Evidence confirms: developers register via My Apps → Trial access granted after review → Standard access requires video demo showing OAuth + live integration. No paid tiers mentioned."
+    },
+    {
+      "field": "api_surface.type",
+      "status": "supported",
+      "note": "Evidence confirms REST API (Pinterest API v5) with OAuth 2.0."
+    },
+    {
+      "field": "api_surface.breadth",
+      "status": "supported",
+      "note": "Evidence shows broad coverage: 'Pin Analytics, ads, audiences, boards, Pins, catalogs' and mentions OpenAPI spec. Python SDK is mentioned."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "Evidence supports buildable-with-caveats: Trial access is granted after initial review (business days), Standard requires video demo approval. Not instant self-serve, but accessible."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "Evidence confirms: 'Application requests are reviewed each business day' for Trial, and Standard requires 'a video recording' for manual review. This matches the stated blocker."
+    },
+    {
+      "field": "evidence[2].url (api-quickstart)",
+      "status": "supported",
+      "note": "GitHub quickstart repo is confirmed in evidence and supports OAuth examples and client credentials."
+    },
+    {
+      "field": "evidence[3].url (openapi.yaml)",
+      "status": "unsupported",
+      "note": "Raw GitHub content returned 429 Too Many Requests. Cannot verify OpenAPI spec claim from this URL, though the quickstart repo reference supports its existence."
+    }
+  ],
+  "revised": {
+    "id": 38,
+    "name": "Pinterest",
+    "website": "developers.pinterest.com",
+    "category": "Marketing, Ads, Email and Social",
+    "one_liner": "Pinterest provides a public REST API (v5) with OAuth 2.0 authentication, requiring app registration and manual approval (Trial then Standard access) rather than instant self-serve keys.",
+    "auth_methods": [
+      {
+        "method": "OAuth2",
+        "notes": "OAuth 2.0 authorization code flow with refresh tokens; product-limited (test) tokens available for 24-hour trial testing without full OAuth setup."
+      }
+    ],
+    "self_serve": "admin-approval",
+    "self_serve_notes": "Developers register an app via My Apps and are granted free Trial access after business-day review, but must submit a video demo of OAuth + live integration for manual review to reach Standard (production) access. No paid tiers, but approval gating exists.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "Pinterest API v5 covers Pins, Boards, Ads/Campaigns, Catalogs, Analytics, and more, documented via OpenAPI spec; Python SDK available."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "Requires manual app approval (Trial access reviewed each business day, then Standard access review with video demo) before production-level API/OAuth access is granted, which slows self-serve automation.",
+    "evidence": [
+      {
+        "url": "https://developers.pinterest.com/docs/getting-started/authentication/",
+        "supports": "OAuth 2.0 flow, app registration, trial access, product-limited tokens, redirect URI setup"
+      },
+      {
+        "url": "https://developers.pinterest.com/docs/key-concepts/access-tiers/",
+        "supports": "Trial vs Standard access tiers and review process"
+      },
+      {
+        "url": "https://github.com/pinterest/api-quickstart?tab=readme-ov-file",
+        "supports": "Official quickstart repo with OAuth and API examples, including client credentials support"
+      }
+    ],
+    "confidence": 0.8,
+    "flags": [
+      "approval-required-for-production",
+      "no-confirmed-official-MCP-server",
+      "third-party-MCP-servers-may-exist-for-public-data"
+    ]
+  }
+}

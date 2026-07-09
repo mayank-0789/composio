@@ -1,0 +1,45 @@
+{
+  "answer": "Multiple LinkedIn Ads MCP servers exist, providing varying levels of read-only access or full campaign management capabilities [1][2][3][4]. These servers generally act as middleware that connects AI clients like Claude, Cursor, or ChatGPT to the LinkedIn Marketing API, allowing for natural language queries regarding performance, analytics, and campaign structure [2][5][3][4].\n\nWhile some servers are strictly read-only [6][7], others like the mharnett [1] and Nuraveda-Labs [2] implementations support write operations, often gated behind environment variables (e.g., `LINKEDIN_ADS_MCP_WRITE=true`) to prevent accidental changes [1][2]. Authentication is typically handled via OAuth 2.0, with some projects offering managed hosting to bypass local API application and token management requirements [2][5].",
+  "results": [
+    {
+      "title": "mharnett/mcp-linkedin-ads",
+      "url": "https://github.com/mharnett/mcp-linkedin-ads/",
+      "snippet": ""
+    },
+    {
+      "title": "Nuraveda-Labs/linkedin-ads-mcp",
+      "url": "https://github.com/Nuraveda-Labs/linkedin-ads-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "LinkedIn Ads MCP Server",
+      "url": "https://himcp.ai/server/linkedin-ads-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "README.md at main · insightfulpipe/linkedin-ads-mcp-server",
+      "url": "https://github.com/insightfulpipe/linkedin-ads-mcp-server/blob/main/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "dhawalshah/linkedin-ads-mcp",
+      "url": "https://github.com/dhawalshah/linkedin-ads-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "CData's LinkedIn Ads MCP Server: Expose Data via JDBC, Support LLM Natural Language Query",
+      "url": "https://mcp.aibase.com/server/1482472324757463084",
+      "snippet": ""
+    },
+    {
+      "title": "flin-linkedin-ads-mcp v0.1.1",
+      "url": "https://pypi.org/project/flin-linkedin-ads-mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "mcp-linkedin-ads",
+      "url": "https://www.npmjs.com/package/mcp-linkedin-ads",
+      "snippet": ""
+    }
+  ]
+}

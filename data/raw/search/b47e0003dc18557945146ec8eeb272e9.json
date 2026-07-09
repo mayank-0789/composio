@@ -1,0 +1,45 @@
+{
+  "answer": "Ramp provides two distinct types of Model Context Protocol (MCP) servers: the `ramp-mcp` server for account-specific financial data and the `Developer MCP` server for documentation [1][2].\n\nThe `ramp-mcp` server allows AI assistants to interact with your business financial data, such as transactions, reimbursements, and bills [3]. It uses an ETL pipeline to load data into an ephemeral in-memory SQLite database, which the LLM can then query using natural language [4][5]. It requires Ramp API credentials and specific OAuth scopes [4][3].\n\nThe `Developer MCP` is an unauthenticated server that provides live access to Ramp’s public API reference, documentation, and OpenAPI schemas to assist with coding and integration tasks [2]. It does not require a Ramp account or API key [2].",
+  "results": [
+    {
+      "title": "Mcp",
+      "url": "https://docs.ramp.com/llms-guides/mcp.txt",
+      "snippet": ""
+    },
+    {
+      "title": "Developer mcp",
+      "url": "https://docs.ramp.com/llms-guides/developer-mcp.txt",
+      "snippet": ""
+    },
+    {
+      "title": "ramp-mcp - MCP Hub | Model Context Protocol Hub",
+      "url": "https://www.aimcp.info/en/g/7d502fc8-9f5d-423a-a9e5-e9dd0c7d8147",
+      "snippet": ""
+    },
+    {
+      "title": "ramp-public/ramp_mcp",
+      "url": "https://github.com/ramp-public/ramp-mcp?tab=readme-ov-file",
+      "snippet": ""
+    },
+    {
+      "title": "Building Ramp's MCP server | Ramp Builders",
+      "url": "https://builders.ramp.com/post/ramp-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://mcpservers.org/servers/ramp-public/ramp%5Fmcp",
+      "snippet": ""
+    },
+    {
+      "title": "ramp-mcp - MCP Hub | Model Context Protocol Hub",
+      "url": "https://www.aimcp.info/en/g/3ea0d266-ba59-4b59-9a95-74fc270d812f",
+      "snippet": ""
+    },
+    {
+      "title": "Ramp MCP – README | MCP Marketplace",
+      "url": "https://ubos.tech/mcp/ramp-mcp-2/",
+      "snippet": ""
+    }
+  ]
+}

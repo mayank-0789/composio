@@ -1,0 +1,45 @@
+{
+  "answer": "The Linear MCP server is a standardized interface that allows AI agents and models to interact with Linear data, including issues, projects, teams, and comments [1][2][3]. Official support is provided via a centrally hosted, authenticated remote MCP server at https://mcp.linear.app/mcp [1].\n\nYou can integrate this server using the following configuration in your MCP settings [1]:\n\n```json\n{\n  \"mcpServers\": {\n    \"linear\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"mcp-remote\", \"https://mcp.linear.app/mcp\"]\n    }\n  }\n}\n```\n\nThe server supports Streamable HTTP and authenticated API access via `Authorization: Bearer` headers [1][4]. Numerous open-source, TypeScript-based implementations also exist via npm [5][4][2][3].",
+  "results": [
+    {
+      "title": "MCP server",
+      "url": "https://linear.app/docs/mcp.md",
+      "snippet": ""
+    },
+    {
+      "title": "@sylphx/linear-mcp",
+      "url": "https://registry.npmjs.org/%40sylphx%2Flinear-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "@mkusaka/mcp-server-linear",
+      "url": "https://www.npmjs.com/package/@mkusaka/mcp-server-linear",
+      "snippet": ""
+    },
+    {
+      "title": "@kkaminsk/linear-mcp",
+      "url": "https://registry.npmjs.org/@kkaminsk/linear-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "tlaakso07/linear-mcp",
+      "url": "https://github.com/tlaakso07/linear-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "linear-mcp-server",
+      "url": "https://registry.npmjs.org/linear-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "tiovikram/linear-mcp",
+      "url": "https://github.com/tiovikram/linear-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "alleneubank/linear-mcp",
+      "url": "https://github.com/alleneubank/linear-mcp",
+      "snippet": ""
+    }
+  ]
+}

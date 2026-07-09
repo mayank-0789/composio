@@ -1,0 +1,45 @@
+{
+  "answer": "The Model Context Protocol (MCP) is an open standard that provides a universal, standardized interface for connecting AI models to external data and tools [1][2]. In the Shopify ecosystem, MCP servers act as bridges that allow AI agents to interact with store data—such as products, inventory, orders, and customer information—in real-time without custom integrations [1][2].\n\nShopify provides four official MCP servers active by default as of 2026: Storefront (product discovery), Customer Accounts (order/account management), Checkout (cart and purchase flows), and Dev (developer tooling) [2]. Additionally, several community-developed MCP servers exist for managing Shopify store operations via the Admin GraphQL API [3][4][5].\n\nTo integrate an MCP server, you typically configure the client (such as Claude Desktop or Cursor) to point to the server endpoint. For community servers, this is often done by adding the following configuration to your client's settings [6]:\n\n```json\n{\n  \"mcpServers\": {\n    \"shopify-server-name\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"package-name@latest\"]\n    }\n  }\n}\n```\n\nThese servers require proper authentication, typically through Shopify Admin API access tokens or OAuth credentials, to ensure secure access to store data [3][5].",
+  "results": [
+    {
+      "title": "About Storefront MCP",
+      "url": "https://shopify.dev/docs/apps/build/storefront-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Model Context Protocol (MCP) for Ecommerce Stores: What It Is and Why It Matters",
+      "url": "https://aiadvantageagency.com/model-context-protocol-mcp-for-ecommerce/",
+      "snippet": ""
+    },
+    {
+      "title": "aserper/shopify-mcp",
+      "url": "https://github.com/aserper/shopify-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "benwmerritt/shopify-mcp",
+      "url": "https://github.com/benwmerritt/shopify-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "AdnaneAhmimou/shopify-mcp",
+      "url": "https://github.com/adnaneahmimou/shopify-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "nicobailon/dev-mcp",
+      "url": "https://github.com/nicobailon/dev-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "arunlakshmikabilan1982/mcp-server",
+      "url": "https://github.com/arunlakshmikabilan1982/mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "About Storefront MCP",
+      "url": "https://shopify.dev/docs/apps/build/storefront-mcp/index",
+      "snippet": ""
+    }
+  ]
+}

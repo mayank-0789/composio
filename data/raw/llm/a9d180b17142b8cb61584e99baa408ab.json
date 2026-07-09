@@ -1,0 +1,49 @@
+{
+  "one_liner": "BigCommerce offers broad, self-serve REST and GraphQL Admin/Storefront APIs authenticated via OAuth-issued access tokens, with an official MCP server already available.",
+  "auth_methods": [
+    {
+      "method": "OAuth2",
+      "notes": "Store-level or app-level API accounts issue OAuth access tokens used via X-Auth-Token header for REST/GraphQL Admin APIs."
+    },
+    {
+      "method": "Token",
+      "notes": "GraphQL Storefront API uses Authorization: Bearer token; B2B APIs use X-Store-Hash plus X-Auth-Token."
+    }
+  ],
+  "self_serve": "self-serve-trial",
+  "self_serve_notes": "No free production tier, but a 15-day free trial store allows creating API accounts and access tokens self-serve via Settings > API Accounts in the control panel. Paid plans required for production use, with rate limits varying by tier (20k-60k req/hr).",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Broad REST Admin APIs (Catalog, Content, Management, Webhooks, Storefront Token Management) plus GraphQL Admin API and GraphQL Storefront API."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://docs.bigcommerce.com/_mcp/server"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://developer-center-bigcommerce-dx.vercel.app/docs/start/authentication",
+      "supports": "OAuth access tokens via X-Auth-Token header for REST/GraphQL Admin APIs; API accounts required."
+    },
+    {
+      "url": "https://docs.bigcommerce.com/developer/learn/courses/intro-to-bc-development/apis/admin-apis.md",
+      "supports": "Broad REST Admin API surface (Catalog, Content, Management, Webhooks) authenticated via OAuth store-level API accounts."
+    },
+    {
+      "url": "https://docs.bigcommerce.com/developer/learn/courses/graphql-storefront-api/auth/authentication",
+      "supports": "GraphQL Storefront API uses Authorization Bearer token."
+    },
+    {
+      "url": "https://www.bigcommerce.com/pricing/",
+      "supports": "No free production tier; paid plans required, 15-day free trial available for development/testing."
+    }
+  ],
+  "confidence": 0.75,
+  "flags": [
+    "Official BigCommerce MCP server exists (docs.bigcommerce.com/_mcp/server) plus a separate Storefront MCP in Early Access and multiple community MCP servers.",
+    "Self-serve credential creation requires either a paid plan or 15-day trial store; no permanent free tier for production use."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "Otter.ai offers an official, provider-hosted Model Context Protocol (MCP) server that enables AI assistants to access, search, and summarize your meeting transcripts [1][2][3].\n\nTo connect, add the following endpoint to any MCP-compatible client like Claude, Cursor, or VS Code [2][3]:\n\n`https://mcp.otter.ai/mcp`\n\nThe server utilizes OAuth for secure authentication [2][3]. Upon the first connection, your client will prompt you to authorize access; subsequent sessions reuse these credentials [2][3]. This setup provides tools for listing meetings, retrieving full transcripts, and fetching AI-generated summaries and action items [3][4]. Note that this feature is typically available on Otter Business or Enterprise plans [3].",
+  "results": [
+    {
+      "title": "Otter for Enterprise: Connect AI-to-AI with Otter’s MCP | Otter.ai",
+      "url": "https://otter.ai/blog/otter-for-enterprise-connect-ai-to-ai-with-otters-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Otter.ai Official Remote MCP Server — Setup Guide",
+      "url": "https://mcpservers.org/remote-mcp-servers/otter-ai",
+      "snippet": ""
+    },
+    {
+      "title": "Otter.ai MCP Server - Setup, Use Cases & Examples",
+      "url": "https://growthengineer.ai/mcp-servers/otterai",
+      "snippet": ""
+    },
+    {
+      "title": "DarrenZal/otter-mcp",
+      "url": "https://github.com/DarrenZal/otter-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Otter.ai MCP Server",
+      "url": "https://www.gamut.so/mcp/communication/otter-ai",
+      "snippet": ""
+    },
+    {
+      "title": "Otter.ai MCP | viaSocket",
+      "url": "https://viasocket.com/mcp/otter-ai",
+      "snippet": ""
+    },
+    {
+      "title": "Otter for Enterprise: Connect AI-to-AI with Otter’s MCP | Otter.ai",
+      "url": "https://home.otter.ai/blog/otter-for-enterprise-connect-ai-to-ai-with-otters-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Understanding MCP servers",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "verdicts": [
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence confirms OAuth2 (Authorization Code and Client Credentials flows), API key (legacy API tokens being deprecated by April 30, 2027), and Basic auth (historically supported, being phased out)."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Evidence confirms no permanent free tier, 14-day trial available, and sponsored accounts for Marketplace developers. Pricing page reference exists but detailed pricing not in evidence; trial and sponsored options are clearly documented."
+    },
+    {
+      "field": "api_surface",
+      "status": "supported",
+      "note": "Evidence confirms REST API (Ticketing, Help Center, Voice, Users APIs mentioned), rate limits 200-2500 req/min by plan tier, broad coverage. Type=REST, breadth=broad is accurate."
+    },
+    {
+      "field": "existing_mcp",
+      "status": "contradicted",
+      "note": "The URL provided (npmjs.com/package/@markusvankempen/zendesk-mcp-server) points to an unofficial third-party npm package, NOT an official Zendesk MCP server. No evidence shows an official dedicated MCP server from Zendesk. Should be exists='no' with no URL, or 'unknown' if considering unofficial implementations."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "Evidence confirms developers can access API via trial (14 days) or sponsored account (for Marketplace partners), or paid subscription. API is publicly accessible with proper credentials. Buildable-now is accurate."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "Evidence supports that trial/paid/sponsored accounts are accessible, and OAuth2 migration timeline is documented. The main_blocker field correctly notes the need for account access and auth migration planning."
+    },
+    {
+      "field": "pricing_details",
+      "status": "unsupported",
+      "note": "The pricing page URL is cited but the evidence content shows only navigation structure, no actual pricing tiers or $19/mo figure. The sponsored account evidence confirms no free API-only license exists, but specific pricing cannot be verified from provided evidence."
+    }
+  ],
+  "revised": {
+    "id": 11,
+    "name": "Zendesk",
+    "website": "zendesk.com",
+    "category": "Support and Helpdesk",
+    "one_liner": "Zendesk offers a mature, broad REST API (Ticketing, Help Center, Voice, etc.) authenticated via OAuth2 (migrating away from API tokens by 2027), requiring a paid subscription or trial/sponsored dev account for access.",
+    "auth_methods": [
+      {
+        "method": "OAuth2",
+        "notes": "Recommended/required going forward. Authorization Code flow for user-facing apps, Client Credentials flow for server-to-server. Register OAuth client in Admin Center, use Bearer token in Authorization header."
+      },
+      {
+        "method": "API key",
+        "notes": "Legacy API tokens still work but are being fully deprecated: new token creation blocked from Oct 27 2026, all tokens deactivated by April 30 2027."
+      },
+      {
+        "method": "Basic",
+        "notes": "Historically supported via email/token or email/password combos for Basic auth, but being phased out alongside API tokens."
+      }
+    ],
+    "self_serve": "self-serve-trial",
+    "self_serve_notes": "No permanent free tier for API access; requires a paid subscription. Developers can get a 14-day free trial, or Marketplace app developers can request a free non-expiring sponsored account (up to 5 agents, Suite Enterprise plan features) for dev/testing.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "Comprehensive REST API surface covering Ticketing, Help Center, Voice, Users, Organizations, and more. Well-documented with OAuth security guides and rate limit tiers (200-2500 req/min depending on plan)."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-now",
+    "main_blocker": null,
+    "evidence": [
+      {
+        "url": "https://support.zendesk.com/hc/en-us/articles/10840968198042-Announcing-the-removal-of-API-tokens-as-an-authentication-method-for-API-requests",
+        "supports": "API tokens being deprecated, full removal by April 30, 2027, phased rollout details"
+      },
+      {
+        "url": "https://developer.zendesk.com/documentation/api-basics/authentication/api-tokens-to-oauth/",
+        "supports": "OAuth2 Authorization Code and Client Credentials flows, Bearer token usage"
+      },
+      {
+        "url": "https://www.zendesk.com/pricing/",
+        "supports": "No free tier; paid plans required for API access (specific pricing not visible in evidence)"
+      },
+      {
+        "url": "https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-trial-or-sponsored-account-for-development/",
+        "supports": "14-day trial and sponsored developer accounts (5 agents, Suite Enterprise) available for Marketplace partners"
+      },
+      {
+        "url": "https://developer.zendesk.com/api-reference/introduction/rate-limits/",
+        "supports": "Rate limits ranging 200-2500 requests/min depending on plan tier"
+      },
+      {
+        "url": "https://support.zendesk.com/hc/en-us/articles/4408881877786-Does-Zendesk-offer-a-free-API-only-agent-license",
+        "supports": "No free API-only agent license offered (page not found but URL confirms topic)"
+      }
+    ],
+    "confidence": 0.82,
+    "flags": [
+      "auth-transition-in-progress: API token deprecation through April 2027 may require future toolkit updates",
+      "no-permanent-free-tier: self-serve access requires trial, sponsored account, or paid subscription",
+      "unofficial-mcp-implementations-exist: third-party npm package found but no official MCP server"
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "Yes, Jira's free plan includes full access to the Jira REST API [1][2]. You can use the API for integrations, scripts, or custom apps on a self-serve basis [3].\n\nTo authenticate your API calls, generate an API token through your Atlassian account settings [1]. This token serves as your credentials for requests directed at your Jira cloud instance (e.g., `https://your-domain.atlassian.net/rest/api/3/issue`) [3][1]. You can find documentation and specific endpoint examples on the Atlassian developer platform [4]. No special developer license is required to use the REST API on a standard free Jira cloud instance [5][3][1].",
+  "results": [
+    {
+      "title": "Solved: Use REST API with Jira instance on Free Plan?",
+      "url": "https://community.atlassian.com/forums/Jira-questions/Use-REST-API-with-Jira-instance-on-Free-Plan/qaq-p/2955396",
+      "snippet": ""
+    },
+    {
+      "title": "Free Atlassian Cloud Software Plans | Atlassian",
+      "url": "https://www.atlassian.com/software/free",
+      "snippet": ""
+    },
+    {
+      "title": "About Jira Cloud platform",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/index/",
+      "snippet": ""
+    },
+    {
+      "title": "The Jira Cloud platform REST API",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v2/",
+      "snippet": ""
+    },
+    {
+      "title": "Cloud and Data Center for developers",
+      "url": "https://developer.atlassian.com/developer-guide/cloud-and-data-center-for-developers/",
+      "snippet": ""
+    },
+    {
+      "title": "Explore Jira Cloud plans | Atlassian Support",
+      "url": "https://support.atlassian.com/jira-cloud-administration/docs/explore-jira-cloud-plans/",
+      "snippet": ""
+    },
+    {
+      "title": "Unlock the Best Jira Pricing Plans for Your Team Today | Atlassian",
+      "url": "https://www.atlassian.com/software/jira/pricing?tab=self-managed",
+      "snippet": ""
+    },
+    {
+      "title": "Unlock the Best Jira Pricing Plans for Your Team Today | Atlassian",
+      "url": "https://www.atlassian.com/software/jira/pricing?tab=host-on-your-server",
+      "snippet": ""
+    }
+  ]
+}

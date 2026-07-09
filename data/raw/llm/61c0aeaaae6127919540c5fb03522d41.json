@@ -1,0 +1,58 @@
+{
+  "one_liner": "LiveAgent is a helpdesk/live-chat platform offering REST APIs (v1 deprecated, v3 current) with API-key auth, plus a native remote MCP server for AI-agent integration.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Two separate versions: API v1 key (legacy, generated in 'Settings for API v1') and API v3 key (current, generated under Configuration > System > API, with assignable scopes). Keys are version-specific and not interchangeable, causing 403 errors if mismatched."
+    },
+    {
+      "method": "OAuth2",
+      "notes": "Used specifically for the MCP server's OAuth 2.1 flow, where the client handles authorization via a consent screen."
+    },
+    {
+      "method": "Token",
+      "notes": "MCP server also supports a Bearer token generated in the user's LiveAgent profile as an alternative to OAuth for MCP access."
+    }
+  ],
+  "self_serve": "self-serve-trial",
+  "self_serve_notes": "API access requires a paid plan; not available on the free tier. However, a 30-day free trial with no credit card required grants full access to test the API and generate keys, making it self-serve during the trial period.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "REST API v3 (current) and v1 (deprecated) covering tickets/conversations, contacts, agents, departments, knowledgebase articles, and more. Interactive Swagger/OpenAPI docs available per-account at https://YOURDOMAIN.ladesk.com/docs/api/v3/#/."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://YOUR_ACCOUNT.ladesk.com/public/api/mcp"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": "None significant; API requires a paid plan (or trial) rather than being fully free, and developers must be careful to match API key version (v1 vs v3) to the correct endpoints.",
+  "evidence": [
+    {
+      "url": "https://faq.liveagent.com/535002-LiveAgent-API-v1-vs-v3-Authentication-Differences-API-Key-Management-and-Resolving-403-Errors",
+      "supports": "Details on two API versions, version-specific API key generation, permissions/scopes, and 403 troubleshooting."
+    },
+    {
+      "url": "https://support.liveagent.com/840770-Complete-API-reference",
+      "supports": "Reference documentation for the REST API surface."
+    },
+    {
+      "url": "https://support.liveagent.com/094128-Swagger-API-descriptor",
+      "supports": "Swagger/OpenAPI descriptor confirming REST API structure."
+    },
+    {
+      "url": "https://www.liveagent.com/features/api/",
+      "supports": "Marketing/feature page describing REST API capabilities like managing conversations, agents, and knowledgebase."
+    },
+    {
+      "url": "https://www.liveagent.com/free-plan/",
+      "supports": "Confirms API access is not included in the free plan, restricted to paid subscriptions."
+    }
+  ],
+  "confidence": 0.8,
+  "flags": [
+    "Two incompatible API versions (v1 and v3) increase integration complexity.",
+    "API access gated behind paid plan or trial, not free tier.",
+    "MCP server existence and details rely on a single aggregated search summary without a direct docs URL citation in provided evidence."
+  ]
+}

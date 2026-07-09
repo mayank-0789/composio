@@ -1,0 +1,45 @@
+{
+  "answer": "Front provides an official MCP server at the endpoint https://mcp.frontapp.com/mcp that allows AI agents to interact with Front conversation data [1]. The server utilizes Streamable HTTP transport and requires OAuth 2.1 with PKCE for user-scoped authentication, where an agent's permissions are limited to the specific teammate authorizing the connection [1].\n\nTo connect an AI assistant, you must create a Front developer app with the MCP Server feature enabled and configure the necessary scopes, such as read, write, or send [1]. You can then configure your MCP client by providing the server URL and your app's credentials [1]. \n\nAdditionally, FrontMCP is a separate, TypeScript-first framework designed for building MCP servers using decorators and dependency injection, supporting both local and remote deployments with built-in features like session management and hot reloading [2][3][4].",
+  "results": [
+    {
+      "title": "MCP Server",
+      "url": "https://dev.frontapp.com/docs/mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "agentfront/frontmcp",
+      "url": "https://github.com/agentfront/frontmcp/",
+      "snippet": ""
+    },
+    {
+      "title": "frontmcp",
+      "url": "https://registry.npmjs.org/frontmcp",
+      "snippet": ""
+    },
+    {
+      "title": "MCP Client Configuration - AgentFront",
+      "url": "https://frontegg-7f203039.mintlify.app/frontmcp/v/1.1/deployment/mcp-clients",
+      "snippet": ""
+    },
+    {
+      "title": "The FrontMCP Server - AgentFront",
+      "url": "https://frontegg-7f203039.mintlify.app/frontmcp/servers/server",
+      "snippet": ""
+    },
+    {
+      "title": "jp-pfh/front-mcp-server",
+      "url": "https://github.com/jp-pfh/front-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Architecture overview - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/learn/architecture",
+      "snippet": ""
+    },
+    {
+      "title": "Architecture - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/specification/2025-06-18/architecture",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "Brex APIs utilize Bearer token authentication [1][2]. For standard client access, you generate a user token via the Brex dashboard (Settings > Developer) and pass it in the request header [1][2]. For partner integrations, Brex supports OAuth 2.0 via Authorization Code Grant or Client Credentials Grant flows to obtain access tokens [3].\n\nIn all cases, you must include the token in your API call headers as follows [1][2]:\n\n```\nAuthorization: Bearer <your_token_here>\n```\n\nThe production base URL for all API requests is https://api.brex.com [1][4].",
+  "results": [
+    {
+      "title": "",
+      "url": "https://developer.brex.com/guides/authentication.md",
+      "snippet": ""
+    },
+    {
+      "title": "Quickstart",
+      "url": "https://developer.brex.com/guides/quickstart",
+      "snippet": ""
+    },
+    {
+      "title": "Partner authentication",
+      "url": "https://developer.brex.com/guides/partner_authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Accounting API",
+      "url": "https://developer.brex.com/openapi/accounting_api",
+      "snippet": ""
+    },
+    {
+      "title": "Team API",
+      "url": "https://developer.brex.com/openapi/team_api",
+      "snippet": ""
+    },
+    {
+      "title": "User roles and permissions",
+      "url": "https://developer.brex.com/guides/roles_permissions_scopes",
+      "snippet": ""
+    },
+    {
+      "title": "Postman",
+      "url": "https://developer.brex.com/docs/postman",
+      "snippet": ""
+    },
+    {
+      "title": "Overview",
+      "url": "https://developer.brex.com/",
+      "snippet": ""
+    }
+  ]
+}

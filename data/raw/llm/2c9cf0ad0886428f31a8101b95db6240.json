@@ -1,0 +1,116 @@
+{
+  "verdicts": [
+    {
+      "field": "existing_mcp.exists",
+      "status": "contradicted",
+      "note": "The evidence URL points to Salesforce's own authorization documentation for shopper APIs, not a dedicated Model Context Protocol (MCP) server. This is the app's API documentation, not an MCP server implementation."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "contradicted",
+      "note": "The provided URL is the app's own API authorization guide, not an MCP server repository or implementation."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence confirms OAuth2 for Admin APIs via Account Manager (client_credentials) and SLAS for Shopper APIs with multiple OAuth2 flows (authorization_code_pkce, client_credentials, trusted-agent)."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Evidence from pricing page shows 'Contact for pricing' for all editions with no free tier mentioned, confirming admin-approval/sales-gate model."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "unsupported",
+      "note": "Evidence mentions no free tier and contact-for-pricing model, but doesn't explicitly detail sandbox credit purchase requirements or the sandbox API provisioning process described in the record."
+    },
+    {
+      "field": "api_surface.type",
+      "status": "supported",
+      "note": "Evidence confirms SCAPI (Shopper Commerce API) and OCAPI are REST APIs with detailed endpoint documentation."
+    },
+    {
+      "field": "api_surface.breadth",
+      "status": "supported",
+      "note": "Evidence shows extensive API coverage including shopper operations (search, cart, checkout), admin operations (merchandising/configuration), inventory, orders, products, promotions, etc."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "The record correctly identifies 'buildable-with-caveats' given the evidence shows functional REST APIs but no self-serve access path."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "Evidence confirms no free tier (pricing page shows 'Contact for pricing') and commercial contract requirement, supporting the stated blocker."
+    },
+    {
+      "field": "one_liner",
+      "status": "supported",
+      "note": "Evidence confirms SCAPI/OCAPI REST APIs, OAuth2/SLAS security, and enterprise-contract-only access model."
+    },
+    {
+      "field": "category",
+      "status": "supported",
+      "note": "Evidence confirms this is an ecommerce platform with B2C/B2B commerce capabilities."
+    }
+  ],
+  "revised": {
+    "id": 44,
+    "name": "Salesforce Commerce Cloud",
+    "website": "developer.salesforce.com/docs/commerce",
+    "category": "Ecommerce",
+    "one_liner": "Salesforce Commerce Cloud (B2C/B2B) exposes REST APIs (SCAPI/OCAPI) for shoppers and admins, secured via OAuth2 through Account Manager and SLAS, but access requires an enterprise contract with no free/self-serve developer tier.",
+    "auth_methods": [
+      {
+        "method": "OAuth2",
+        "notes": "Admin APIs use OAuth2 client_credentials grant via Account Manager (Salesforce's identity service) to obtain access tokens scoped to a realm/instance."
+      },
+      {
+        "method": "Other",
+        "notes": "Shopper APIs use SLAS (Shopper Login and API Access Service), which is OAuth2-based but supports multiple flows depending on client type: authorization_code_pkce for public/guest shopper clients, client_credentials for private/trusted systems, and trusted-agent flows for on-behalf-of access tokens."
+      }
+    ],
+    "self_serve": "partnership-contact-sales",
+    "self_serve_notes": "No free tier exists; all editions require custom/enterprise pricing (pricing page shows 'Contact for pricing' for all offerings). Access to the Commerce Cloud APIs requires an existing commercial contract with Salesforce. While the evidence doesn't detail sandbox credit requirements, the pricing model clearly indicates a sales-gated approach with no self-serve trial or free developer access.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "SCAPI (Shopper Commerce API) covers shopper-facing operations (product search, cart, checkout) and Admin APIs cover merchandising/configuration; OCAPI is a legacy REST API also still in use."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "No free/self-serve trial: obtaining API access requires an existing commercial Salesforce Commerce Cloud contract (all editions show 'Contact for pricing' with no free tier), plus Account Manager client setup, before OAuth2 credentials can be issued for either Admin (SCAPI Admin) or Shopper (SLAS) APIs.",
+    "evidence": [
+      {
+        "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-admin-apis.html",
+        "supports": "Admin APIs secured via Account Manager using OAuth2 client_credentials grant with client ID/secret and scoped access tokens."
+      },
+      {
+        "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-shopper-apis.html",
+        "supports": "Shopper APIs use SLAS with authorization flows varying by client type (authorization_code_pkce, client_credentials, trusted-agent)."
+      },
+      {
+        "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/slas.html",
+        "supports": "Details on Shopper Login and API Access Service (SLAS) as the shopper auth mechanism."
+      },
+      {
+        "url": "https://developer.salesforce.com/docs/commerce/commerce-api/references/auth?meta=getTrustedAgentAccessToken",
+        "supports": "Trusted agent access token endpoint enabling AI-agent-style on-behalf-of shopper authorization flows."
+      },
+      {
+        "url": "https://www.salesforce.com/commerce/pricing/",
+        "supports": "No free tier; all editions show 'Contact for pricing' requiring sales engagement."
+      }
+    ],
+    "confidence": 0.75,
+    "flags": [
+      "no-free-tier",
+      "enterprise-sales-gate",
+      "contact-sales-required"
+    ]
+  }
+}

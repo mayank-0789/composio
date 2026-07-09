@@ -1,0 +1,45 @@
+{
+  "answer": "Zoho CRM APIs use OAuth 2.0 for authentication [1][2]. To access protected resources, you must obtain an access token using an authorization code (grant token) [3].\n\nThere are three primary ways to generate a grant token depending on your application type:\n\nWeb-based applications use a redirection-based flow where users log in via the Zoho login page [3].\nSelf-client options are used for standalone server-side applications or when no domain/redirect URL is available [3]. This is configured in the Zoho Developer Console [3][4].\nClient Credentials flow is also supported for specific scenarios [3].\n\nFor API calls, the access token is passed in the authorization header:\n\n```http\nAuthorization: Zoho-oauthtoken {access_token}\n```\n\nThe SDKs streamline this by managing token persistence and refresh flows [2]. You initialize the SDK by providing your client ID, client secret, redirect URI, and the initial grant or refresh token [5][4][6][2].",
+  "results": [
+    {
+      "title": "OpenAPI Specification (OAS) for Zoho CRM APIs",
+      "url": "https://www.zoho.com/crm/developer/docs/api/v8/openapi-specification.html",
+      "snippet": ""
+    },
+    {
+      "title": "Server SDK - Python | Online Help - Zoho CRM",
+      "url": "https://www.zoho.com/crm/developer/docs/sdk/server-side/python-sdk.html",
+      "snippet": ""
+    },
+    {
+      "title": "Authorization Request | Zoho CRM API | V8",
+      "url": "https://www.zoho.com/crm/developer/docs/api/v8/auth-request.html",
+      "snippet": ""
+    },
+    {
+      "title": "Initialize App - Node JS SDKs | Online Help - Zoho CRM",
+      "url": "https://www.zoho.com/crm/developer/docs/nodejs-sdk/v1/initialize.html",
+      "snippet": ""
+    },
+    {
+      "title": "Initialize App - PHP SDKs | Online Help - Zoho CRM",
+      "url": "https://www.zoho.com/crm/developer/docs/php-sdk/v1/initialize.html",
+      "snippet": ""
+    },
+    {
+      "title": "Initialize App - TypeScript SDK | Online Help - Zoho CRM",
+      "url": "https://www.zoho.com/crm/developer/docs/api2.1/typescript-sdk/v1/initialize.html",
+      "snippet": ""
+    },
+    {
+      "title": "Client Credentials | Zoho CRM API | V8",
+      "url": "https://www.zoho.com/crm/developer/docs/api/v8/client-credentials.html",
+      "snippet": ""
+    },
+    {
+      "title": "List Available APIs | Zoho CRM API | V8",
+      "url": "https://www.zoho.com/crm/developer/docs/api/v8/list-available-rest-apis.html",
+      "snippet": ""
+    }
+  ]
+}

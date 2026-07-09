@@ -1,0 +1,111 @@
+{
+  "verdicts": [
+    {
+      "field": "existing_mcp.exists",
+      "status": "contradicted",
+      "note": "The record claims 'yes' with a URL to Salesforce's own API documentation for shopper authorization. This is NOT an MCP server—it's just the product's API documentation. The URL does not point to a dedicated Model Context Protocol server implementation. No evidence of an actual MCP server exists in the provided materials."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "contradicted",
+      "note": "The URL provided (https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-shopper-apis.html) is Salesforce Commerce Cloud's own API authorization documentation, not an MCP server. Must be removed since exists='no'."
+    },
+    {
+      "field": "self_serve",
+      "status": "contradicted",
+      "note": "The record states 'admin-approval', but the pricing evidence shows 'Contact for pricing' for all editions with no self-serve signup option. This is more accurately 'partnership-contact-sales' since it requires an enterprise sales engagement and commercial contract before any access is granted."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence confirms Admin APIs use OAuth2 client_credentials via Account Manager, and Shopper APIs use SLAS (OAuth2-based) with multiple flows (authorization_code_pkce, client_credentials, trusted-agent). Both OAuth2 and Other categories are appropriate."
+    },
+    {
+      "field": "api_surface",
+      "status": "supported",
+      "note": "Evidence confirms REST APIs (SCAPI and OCAPI) with broad coverage of shopper operations (search, cart, checkout) and admin operations (merchandising, configuration)."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "Evidence supports 'buildable-with-caveats': APIs exist and are documented, but access requires commercial contract and purchased sandbox credits before OAuth2 credentials can be obtained."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "Evidence confirms no free tier exists (pricing page shows 'Contact for pricing' for all editions), sandbox credits must be purchased through sales, and Account Manager/SLAS client setup requires an existing commercial relationship."
+    },
+    {
+      "field": "one_liner",
+      "status": "supported",
+      "note": "Accurately describes SCAPI/OCAPI REST APIs, OAuth2/SLAS authentication, and enterprise contract requirement."
+    },
+    {
+      "field": "flags",
+      "status": "supported",
+      "note": "First three flags are supported by evidence. The last two flags about 'existing-mcp-servers-from-salesforce-and-community' and 'dual-mcp-offerings-devtooling-vs-shopper-service' are not supported by any evidence—no MCP servers are mentioned. These should be removed."
+    },
+    {
+      "field": "confidence",
+      "status": "supported",
+      "note": "Raised from 0.6 to 0.8 as evidence strongly supports auth methods, API surface, pricing model, and buildability constraints. Only uncertainty is around any unofficial MCP implementations not visible in the evidence."
+    }
+  ],
+  "revised": {
+    "id": 44,
+    "name": "Salesforce Commerce Cloud",
+    "website": "developer.salesforce.com/docs/commerce",
+    "category": "Ecommerce",
+    "one_liner": "Salesforce Commerce Cloud (B2C/B2B) exposes REST APIs (SCAPI/OCAPI) for shoppers and admins, secured via OAuth2 through Account Manager and SLAS, but access requires an enterprise contract with no free/self-serve developer tier.",
+    "auth_methods": [
+      {
+        "method": "OAuth2",
+        "notes": "Admin APIs use OAuth2 client_credentials grant via Account Manager (Salesforce's identity service) to obtain access tokens scoped to a realm/instance."
+      },
+      {
+        "method": "Other",
+        "notes": "Shopper APIs use SLAS (Shopper Login and API Access Service), which is OAuth2-based but supports multiple flows depending on client type: authorization_code_pkce for public/guest shopper clients, client_credentials for private/trusted systems, and trusted-agent flows for on-behalf-of access tokens."
+      }
+    ],
+    "self_serve": "partnership-contact-sales",
+    "self_serve_notes": "No free tier or self-serve trial exists. The pricing page states 'Contact for pricing' for all editions. All editions require custom/enterprise pricing (often % of GMV). Sandbox environments for development require purchasing sandbox credits through a sales rep before provisioning. Initial access is gated behind a sales/commercial relationship.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "SCAPI (Shopper Commerce API) covers shopper-facing operations (product search, cart, checkout) and Admin APIs cover merchandising/configuration; OCAPI is a legacy REST API also still in use."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "No free/self-serve trial: obtaining API access requires an existing commercial Salesforce Commerce Cloud contract and purchased sandbox credits, plus Account Manager client setup, before OAuth2 credentials can be issued for either Admin (SCAPI Admin) or Shopper (SLAS) APIs.",
+    "evidence": [
+      {
+        "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-admin-apis.html",
+        "supports": "Admin APIs secured via Account Manager using OAuth2 client_credentials grant with client ID/secret and scoped access tokens."
+      },
+      {
+        "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-shopper-apis.html",
+        "supports": "Shopper APIs use SLAS with authorization flows varying by client type (authorization_code_pkce, client_credentials, trusted-agent)."
+      },
+      {
+        "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/slas.html",
+        "supports": "Details on Shopper Login and API Access Service (SLAS) as the shopper auth mechanism."
+      },
+      {
+        "url": "https://developer.salesforce.com/docs/commerce/commerce-api/references/auth?meta=getTrustedAgentAccessToken",
+        "supports": "Trusted agent access token endpoint enabling AI-agent-style on-behalf-of shopper authorization flows."
+      },
+      {
+        "url": "https://www.salesforce.com/commerce/pricing/",
+        "supports": "No free tier; custom pricing required for all Commerce Cloud editions (all show 'Contact for pricing')."
+      }
+    ],
+    "confidence": 0.8,
+    "flags": [
+      "no-free-tier",
+      "sandbox-requires-purchased-credits",
+      "enterprise-sales-gate"
+    ]
+  }
+}

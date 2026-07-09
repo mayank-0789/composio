@@ -1,0 +1,45 @@
+{
+  "answer": "There are multiple approaches to using the Model Context Protocol (MCP) with Salesforce Commerce Cloud depending on your use case.\n\nFor developer tasks, Salesforce provides an official B2C DX MCP server, which is part of the B2C Developer Toolkit. It supports cartridge deployment, Managed Runtime (MRT) operations, and SCAPI integration [1][2]. You can configure it in your MCP client using:\n\n```json\n{\n  \"mcpServers\": {\n    \"b2c-dx-mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@salesforce/b2c-dx-mcp@latest\", \"--allow-non-ga-tools\"]\n    }\n  }\n}\n```\n\nA separate B2C Commerce MCP Shopper Service is available as a pilot for agentic shopper experiences, such as product search and cart management, using HTTP-based JSON RPC [3]. Additionally, community-developed options exist, such as the commercecloud-mcp-server for OCAPI-based interactions [4] and Vinkius's enterprise-focused MCP solution [5].",
+  "results": [
+    {
+      "title": "Build B2C Storefronts Faster with the B2C DX MCP Server | Composable Storefront | B2C Commerce Solutions | Salesforce Developers",
+      "url": "https://developer.salesforce.com/docs/commerce/commerce-solutions/guide/mcp-dx-intro.html",
+      "snippet": ""
+    },
+    {
+      "title": "b2c-developer-tooling/packages/b2c-dx-mcp at main · SalesforceCommerceCloud/b2c-developer-tooling · GitHub",
+      "url": "https://github.com/SalesforceCommerceCloud/b2c-developer-tooling/tree/main/packages/b2c-dx-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Agentic MCP Shopper Tools Quick Start (Pilot) | B2C Commerce | B2C Commerce API | Salesforce Developers",
+      "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/agentic-mcp-shopper-tools-quick-start.html",
+      "snippet": ""
+    },
+    {
+      "title": "brinzl/commercecloud-mcp-server",
+      "url": "https://github.com/BrinsilElias/commercecloud-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "vinkius-labs/salesforce-commerce-mcp",
+      "url": "https://github.com/vinkius-labs/salesforce-commerce-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Accelerate PWA Kit Development with the PWA Kit MCP Server (Developer Preview) | Composable Storefront | B2C Commerce API | Salesforce Developers",
+      "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/mcp-server-intro.html",
+      "snippet": ""
+    },
+    {
+      "title": "Accelerate PWA Kit Development with the PWA Kit MCP Server (Developer Preview) | Composable Storefront | B2C Commerce Storefront Reference Architecture | Salesforce Developers",
+      "url": "https://developer.salesforce.com/docs/commerce/sfra/guide/mcp-server-intro.html",
+      "snippet": ""
+    },
+    {
+      "title": "packages/b2c-dx-mcp/README.md",
+      "url": "https://github.com/SalesforceCommerceCloud/b2c-developer-tooling/blob/main/packages/b2c-dx-mcp/README.md",
+      "snippet": ""
+    }
+  ]
+}

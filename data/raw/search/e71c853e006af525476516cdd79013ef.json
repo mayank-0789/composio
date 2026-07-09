@@ -1,0 +1,45 @@
+{
+  "answer": "The MongoDB MCP server is a tool that allows AI-powered development environments to interact directly with MongoDB databases and Atlas clusters using the Model Context Protocol [1][2]. It enables agents to perform data operations—such as querying, aggregation, and index management—as well as administrative tasks like managing Atlas cluster resources [2][3].\n\nTo use it, you must provide either a MongoDB connection string or Atlas API service account credentials (client ID and secret) [1][3]. The server can run locally via Node.js or in a Docker container [1][4].\n\nConfiguration example for your MCP client:\n\n```json\n{\n  \"mcpServers\": {\n    \"MongoDB\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"mongodb-mcp-server@latest\"],\n      \"env\": {\n        \"MDB_MCP_API_CLIENT_ID\": \"your-client-id\",\n        \"MDB_MCP_API_CLIENT_SECRET\": \"your-client-secret\"\n      }\n    }\n  }\n}\n```\n\nAtlas-specific administrative tools are only available when authenticating with Atlas API credentials [1][3]. You can restrict access by using the --readOnly flag in your configuration to disable write operations [4][3].",
+  "results": [
+    {
+      "title": "mongodb-js/mongodb-mcp-server",
+      "url": "https://github.com/mongodb-js/mongodb-mcp-server?tab=readme-ov-file",
+      "snippet": ""
+    },
+    {
+      "title": "Announcing The MongoDB MCP Server | MongoDB",
+      "url": "https://www.mongodb.com/company/blog/announcing-mongodb-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "mongodb/mongodb-mcp-server - Docker Image",
+      "url": "https://hub.docker.com/r/mongodb/mongodb-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "mongodb-mcp-server - npm",
+      "url": "https://www.npmjs.com/package/mongodb-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Get Started with the MongoDB MCP Server - MongoDB MCP Server - MongoDB Docs",
+      "url": "https://www.mongodb.com/docs/mcp-server/get-started/",
+      "snippet": ""
+    },
+    {
+      "title": "MongoDB MCP Server | Docker MCP Catalog",
+      "url": "https://hub.docker.com/mcp/server/mongodb/overview",
+      "snippet": ""
+    },
+    {
+      "title": "mcp/mongodb - Docker Image",
+      "url": "https://hub.docker.com/r/mcp/mongodb",
+      "snippet": ""
+    },
+    {
+      "title": "MongoDB MCP Server - mongodb-js/mongodb-mcp-server",
+      "url": "https://playbooks.com/mcp/mongodb-js/mongodb-mcp-server",
+      "snippet": ""
+    }
+  ]
+}

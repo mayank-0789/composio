@@ -1,0 +1,45 @@
+{
+  "answer": "Cloudflare provides a Free plan for its developer platform, including Workers, Pages, KV, D1, and Durable Objects [1][2][3]. These services feature daily usage limits that, if exceeded, will result in errors or service suspension until the limits reset at 00:00 UTC [2][3]. The Workers Paid plan starts at $5 per month, offering higher usage allowances and removing hard limits [1][4].\n\nRegarding developer API access, Cloudflare provides an alpha-stage endpoint for retrieving billing and usage data for self-serve accounts [5]. You can query usage data using the following endpoint [5]:\n\n`GET /accounts/{account_id}/billable/usage`\n\nThis returns metered consumption data, including usage that falls within free-tier allowances [5]. Note that as an alpha resource, it is subject to change and may not yet display pricing fields for all accounts [5].",
+  "results": [
+    {
+      "title": "Pricing · Cloudflare Workers docs",
+      "url": "https://developers.cloudflare.com/workers/platform/pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing",
+      "url": "https://developers.cloudflare.com/d1/platform/pricing/index.md",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing · Cloudflare Durable Objects docs",
+      "url": "https://developers.cloudflare.com/durable-objects/platform/pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "Our Plans | Pricing | Cloudflare",
+      "url": "https://www.cloudflare.com/en-gb/plans/",
+      "snippet": ""
+    },
+    {
+      "title": "Usage | Cloudflare API",
+      "url": "https://developers.cloudflare.com/api/resources/billing/subresources/usage/",
+      "snippet": ""
+    },
+    {
+      "title": "How charges accrue · Cloudflare Billing docs",
+      "url": "https://developers.cloudflare.com/billing/understand/how-charges-accrue/",
+      "snippet": ""
+    },
+    {
+      "title": "Workers & Pages Pricing | Cloudflare",
+      "url": "https://www.cloudflare.com/plans/developer-platform/",
+      "snippet": ""
+    },
+    {
+      "title": "Billing FAQ · Cloudflare Billing docs",
+      "url": "https://developers.cloudflare.com/billing/understand/faq/",
+      "snippet": ""
+    }
+  ]
+}

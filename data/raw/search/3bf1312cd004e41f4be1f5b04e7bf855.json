@@ -1,0 +1,45 @@
+{
+  "answer": "Slack Web API requests are authenticated using bearer tokens passed as a parameter named `token` or via an HTTP Authorization header [1][2][3]. Applications typically obtain these tokens through the OAuth 2.0 authorization flow, which involves exchanging a temporary authorization code for an access token using methods like `oauth.v2.access` [4][5]. During development, you may use test tokens [1][2]. For sensitive exchanges, Slack recommends using the HTTP Basic authentication scheme for `client_id` and `client_secret` rather than passing them as request parameters [4][6].",
+  "results": [
+    {
+      "title": "index_web.md",
+      "url": "https://github.com/slackhq/slack-api-docs/blob/master/index_web.md",
+      "snippet": ""
+    },
+    {
+      "title": "index_faq.md at master · slackhq/slack-api-docs",
+      "url": "https://github.com/slackhq/slack-api-docs/blob/master/index_faq.md",
+      "snippet": ""
+    },
+    {
+      "title": "auth.test method",
+      "url": "https://docs.slack.dev/reference/methods/auth.test.md",
+      "snippet": ""
+    },
+    {
+      "title": "oauth.v2.access method",
+      "url": "https://docs.slack.dev/reference/methods/oauth.v2.access.md",
+      "snippet": ""
+    },
+    {
+      "title": "page_oauth.md",
+      "url": "https://github.com/slackhq/slack-api-docs/blob/master/page_oauth.md",
+      "snippet": ""
+    },
+    {
+      "title": "oauth.access method",
+      "url": "https://docs.slack.dev/reference/methods/oauth.access.md",
+      "snippet": ""
+    },
+    {
+      "title": "Slack Web API | Slack Developer Docs",
+      "url": "https://docs.slack.dev/apis/web-api/",
+      "snippet": ""
+    },
+    {
+      "title": "openid.connect.token method",
+      "url": "https://docs.slack.dev/reference/methods/openid.connect.token.md",
+      "snippet": ""
+    }
+  ]
+}

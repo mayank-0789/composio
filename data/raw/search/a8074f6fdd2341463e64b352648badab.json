@@ -1,0 +1,45 @@
+{
+  "answer": "The MongoDB Atlas Administration API supports two primary authentication methods: OAuth2-based service accounts and HTTP Digest-based API keys [1][2]. Service accounts are the recommended method due to their use of short-lived access tokens, while API keys are considered a legacy option [1][3]. To use a service account, exchange your client ID and secret for a Bearer token via the OAuth 2.0 Client Credentials flow at the following endpoint [1][3]:\n\n```\nPOST https://cloud.mongodb.com/api/oauth/token\n```\n\nWhen using legacy API keys, you must provide your public and private keys using HTTP Digest authentication [2][4]. It is recommended to implement IP access lists and rotate keys regularly when using this method [2].",
+  "results": [
+    {
+      "title": "Atlas Admin API v2 documentation",
+      "url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/",
+      "snippet": ""
+    },
+    {
+      "title": "Guidance for Atlas Authentication - Atlas Architecture Center - MongoDB Docs",
+      "url": "https://www.mongodb.com/docs/atlas/architecture/current/auth/authentication/",
+      "snippet": ""
+    },
+    {
+      "title": "2025 03 12",
+      "url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/2025-03-12.md",
+      "snippet": ""
+    },
+    {
+      "title": "AtlasGov Programmatic Access - MongoDB Atlas for Government - MongoDB Docs",
+      "url": "https://www.mongodb.com/docs/atlas/government/api/",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication | Atlas Admin API v2 documentation (2024-11-13)",
+      "url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/2024-11-13/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication | Atlas Admin API v2 documentation (2023-10-01)",
+      "url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/2023-10-01/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication | MongoDB Atlas App Services Admin API 3.0 documentation",
+      "url": "https://www.mongodb.com/docs/api/doc/atlas-app-services-admin-api-v3/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/2025-02-19.md",
+      "snippet": ""
+    }
+  ]
+}

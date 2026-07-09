@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://github.com/github/github-mcp-server",
+  "reason": "GitHub has an official MCP server (github/github-mcp-server) that exposes GitHub's capabilities over the Model Context Protocol. The server enables AI agents to interact with GitHub's platform for reading repositories, managing issues and pull requests, and automating workflows. It's available as both a remote server (https://api.githubcopilot.com/mcp/) and a local version."
+}

@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://github.com/PaSympa/discord-mcp",
+  "reason": "Multiple dedicated MCP servers exist for Discord, including well-documented implementations from PaSympa (@pasympa/discord-mcp on npm), cappylab, rexendz, rayenking, and NickyHeC. These servers expose Discord's REST API as MCP tools, enabling actions like sending messages, managing channels, and moderating members through MCP-compatible clients. The servers use stdio transport and require Discord bot tokens for authentication."
+}

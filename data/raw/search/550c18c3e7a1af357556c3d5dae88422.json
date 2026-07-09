@@ -1,0 +1,45 @@
+{
+  "answer": "The PitchBook MCP server integrates PitchBook’s private capital market intelligence into AI agents like Claude and ChatGPT [1][2]. It enables users to perform natural language queries for company profiles, deal histories, funding rounds, and investor information directly within their AI workflows [1][2]. The server functions as a bridge that allows the AI to discover and invoke tools, returning structured data and referenced insights [2]. Deployment typically utilizes OAuth 2.1 for secure entitlement checks, ensuring only licensed users access premium financial data [2]. It is accessible via standard MCP-compatible clients and the ChatGPT Apps SDK [3][2].",
+  "results": [
+    {
+      "title": "PitchBook Premium MCP Server | Tool Junction",
+      "url": "https://www.tooljunction.io/mcp/pitchbook",
+      "snippet": ""
+    },
+    {
+      "title": "Morningstar and PitchBook MCP Apps in ChatGPT: Trusted Data Meets AI | Windows Forum",
+      "url": "https://windowsforum.com/threads/morningstar-and-pitchbook-mcp-apps-in-chatgpt-trusted-data-meets-ai.394246/",
+      "snippet": ""
+    },
+    {
+      "title": "PitchBook MCP Server – ChatGPT App | Top MCPs",
+      "url": "https://top-mcps.com/mcp/pitchbook",
+      "snippet": ""
+    },
+    {
+      "title": "Pitchbook MCP Server - Gong Collective",
+      "url": "https://collective.gong.io/integrations/pitchbookmcp",
+      "snippet": ""
+    },
+    {
+      "title": "PitchBook Premium MCP Server — AI Agent Integration | TeamDay.ai - TeamDay.ai",
+      "url": "https://www.teamday.ai/mcp-servers/anthropic-com-pitchbook-mcp-premium-pitchbook-premium",
+      "snippet": ""
+    },
+    {
+      "title": "PitchBook MCP for AI Agents — Private Market Intelligence",
+      "url": "https://vinkius.com/apps/pitchbook-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Morningstar posts investor Q&A on MCP and PitchBook | MORN 8-K Filing",
+      "url": "https://www.stocktitan.net/sec-filings/MORN/8-k-morningstar-inc-reports-material-event-f60128754ae2.html",
+      "snippet": ""
+    },
+    {
+      "title": "MCP Server — Pitch",
+      "url": "https://pitch.vc/docs/mcp",
+      "snippet": ""
+    }
+  ]
+}

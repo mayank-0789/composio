@@ -1,0 +1,50 @@
+{
+  "one_liner": "Podio is a customizable work/CRM platform offering a broad REST API with OAuth2, API key (app), and basic auth options, self-serve free-tier API access, and an official MCP server for AI-agent integration.",
+  "auth_methods": [
+    {
+      "method": "OAuth2",
+      "notes": "Server-side flow (web apps) and client-side flow (SPA) via redirect to podio.com"
+    },
+    {
+      "method": "API key",
+      "notes": "App authentication flow using app ID + app token for single-app, no-user-interaction access"
+    },
+    {
+      "method": "Basic",
+      "notes": "Password authentication (username/password) for testing or batch jobs, deprecated/discouraged for production"
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Free plan includes API access with baseline 1,000 calls/day; developers can self-serve generate client_id/client_secret at podio.com/settings/api. Higher throughput requires paid API Growth add-ons on paid plans.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Podio REST API covers organizations, workspaces, apps, items, tasks, files, etc., with official SDKs for .NET, JS/Node, PHP, Android, Objective-C."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://mcp.podio.com/mcp"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "http://podio.github.io/podio-dotnet/authentication/",
+      "supports": "Details server-side, app, and password authentication flows, and client_id/client_secret setup"
+    },
+    {
+      "url": "https://podio.github.io/podio-js/authentication/",
+      "supports": "Describes server-side, client-side, app auth, and password auth flows for JS SDK"
+    },
+    {
+      "url": "https://podio.com/settings/api",
+      "supports": "Self-serve generation of client_id and client_secret"
+    },
+    {
+      "url": "https://mcp.podio.com/mcp",
+      "supports": "Official Podio MCP server URL enabling AI agent integration with 22 tools"
+    }
+  ],
+  "confidence": 0.85,
+  "flags": []
+}

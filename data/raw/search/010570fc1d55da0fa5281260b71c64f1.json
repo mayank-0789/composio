@@ -1,0 +1,45 @@
+{
+  "answer": "An Airtable MCP server is an integration that allows AI models to interact directly with your Airtable bases using the Model Context Protocol [1][2]. These servers enable LLMs to perform operations such as listing bases and tables, managing schemas, and performing CRUD operations on records [1][3][4].\n\nTo use one, you typically install it via npm and configure your MCP client (such as Claude Desktop or Cursor) with your Airtable Personal Access Token (PAT) as an environment variable [2][5]. Multiple implementations exist with varying features, ranging from standard record management to advanced tools like AI-powered analytics, batch processing, and governance controls [1][3][6][7].",
+  "results": [
+    {
+      "title": "rashidazarang/airtable-mcp",
+      "url": "https://github.com/rashidae/airtable-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "domdomegg/airtable-mcp-server",
+      "url": "https://github.com/domdomegg/airtable-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "jordan-huffman/airtable-mcp-server",
+      "url": "https://github.com/jordan-huffman/airtable-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "@felores/airtable-mcp-server",
+      "url": "https://registry.npmjs.org/%40felores%2Fairtable-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "@loticdigital/airtable-mcp-server",
+      "url": "https://registry.npmjs.org/@loticdigital/airtable-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "marchi-lau/mcp-airtable",
+      "url": "https://github.com/marchi-lau/mcp-airtable",
+      "snippet": ""
+    },
+    {
+      "title": "@rashidazarang/airtable-mcp",
+      "url": "https://registry.npmjs.org/%40rashidazarang%2Fairtable-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Using the Airtable MCP server",
+      "url": "https://support.airtable.com/docs/using-the-airtable-mcp-server",
+      "snippet": ""
+    }
+  ]
+}

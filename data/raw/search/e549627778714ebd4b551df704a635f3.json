@@ -1,0 +1,45 @@
+{
+  "answer": "Fathom offers an official Model Context Protocol (MCP) server that connects your meeting data to AI assistants [1]. You can access this official server via the URL https://api.fathom.ai/mcp [1].\n\nIn addition to the official server, various community-maintained MCP servers are available on GitHub, offering features like enhanced analytics, full-text transcript searching, and webhook management [2][3][4][5]. These implementations generally require a Fathom API key for authentication [2][6][3][7]. Typical tools provided across these implementations include:\n\n* list_meetings: Filter meetings by date, team, or participants [2][8][5].\n* get_transcript: Retrieve full meeting transcripts [2][6][8].\n* get_summary: Access AI-generated meeting summaries [2][6][7].\n* list_teams/list_team_members: Manage and explore organizational team structures [2][3][8].",
+  "results": [
+    {
+      "title": "Overview - Fathom API",
+      "url": "https://developers.fathom.ai/mcp-docs",
+      "snippet": ""
+    },
+    {
+      "title": "jerichosequitin/fathom-ai-mcp",
+      "url": "https://github.com/jerichosequitin/fathom-ai-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Dot-Fun/fathom-mcp",
+      "url": "https://github.com/Dot-Fun/fathom-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "rittmananalytics/mcp-fathom-server-remote",
+      "url": "https://github.com/rittmananalytics/mcp-fathom-server-remote",
+      "snippet": ""
+    },
+    {
+      "title": "mamba-mental/fathom-mcp-enhanced",
+      "url": "https://github.com/mamba-mental/fathom-mcp-enhanced",
+      "snippet": ""
+    },
+    {
+      "title": "bondjacobbond/fathom-mcp",
+      "url": "https://github.com/bondjacobbond/fathom-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "druellan/Fathom-Simple-MCP",
+      "url": "https://github.com/druellan/Fathom-Simple-MCP",
+      "snippet": ""
+    },
+    {
+      "title": "Sanjeev4523/fathom-mcp",
+      "url": "https://github.com/Sanjeev4523/fathom-mcp",
+      "snippet": ""
+    }
+  ]
+}

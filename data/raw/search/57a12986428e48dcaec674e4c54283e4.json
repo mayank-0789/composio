@@ -1,0 +1,40 @@
+{
+  "answer": "MrScraper uses token-based authentication for all API requests. For most endpoints, you must include your API token in the HTTP request headers using the key x-api-token [1][2].\n\nFor example:\n```\nx-api-token: YOUR_API_TOKEN\n```\n\nA specific subset of endpoints, namely those for analytics such as /analytic/statuses and /analytic/timeline, requires you to pass your token as a query parameter instead of a header [1]. For these endpoints, use the following parameter:\n\n```\napiTokenName=YOUR_API_TOKEN\n```\n\nAlways store your API token securely and avoid exposing it in client-side code [3].",
+  "results": [
+    {
+      "title": "Authentication | MrScraper Documentation",
+      "url": "https://docs.mrscraper.com/docs/api/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Scraper API | MrScraper Documentation",
+      "url": "https://docs.mrscraper.com/docs/features/activating-api",
+      "snippet": ""
+    },
+    {
+      "title": "Token Plan | MrScraper Documentation",
+      "url": "https://docs.mrscraper.com/docs/getting-started/api-token",
+      "snippet": ""
+    },
+    {
+      "title": "Create and Run a Scraper Programmatically | MrScraper Documentation",
+      "url": "https://docs.mrscraper.com/docs/guides/programmatically",
+      "snippet": ""
+    },
+    {
+      "title": "Create and Run AI Scraper | MrScraper Documentation",
+      "url": "https://docs.mrscraper.com/docs/api/v3/scraper/ai-init",
+      "snippet": ""
+    },
+    {
+      "title": "Error Handling | MrScraper Documentation",
+      "url": "https://docs.mrscraper.com/docs/api/error-handling",
+      "snippet": ""
+    },
+    {
+      "title": "CLI | MrScraper Documentation",
+      "url": "https://docs.mrscraper.com/docs/getting-started/cli",
+      "snippet": ""
+    }
+  ]
+}

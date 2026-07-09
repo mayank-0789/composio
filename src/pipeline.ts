@@ -9,6 +9,7 @@ import { createLlm } from "./llm.js";
 import { researchApp } from "./research.js";
 import { criticReview } from "./verify/critic.js";
 import { checkSelfServe } from "./verify/browser.js";
+import { checkMcp } from "./verify/mcp.js";
 import { scoreAccuracy, type GroundTruth } from "./verify/audit.js";
 import { computeClusters } from "./cluster.js";
 
@@ -47,7 +48,7 @@ async function runResearch(opts: { dryRun: boolean; refresh: boolean; limit?: nu
   const deps = {
     search: createSearcher({ execute }, cache),
     scrape: createScraper({ apiKey: env("FIRECRAWL_API_KEY") }, cache),
-    llm: createLlm({ apiKey: env("ANTHROPIC_API_KEY") }, cache),
+    llm: createLlm({ apiKey: process.env.ANTHROPIC_API_KEY }, cache),
   };
   let apps = loadApps();
   if (opts.limit) apps = apps.slice(0, opts.limit);
@@ -62,26 +63,42 @@ async function runResearch(opts: { dryRun: boolean; refresh: boolean; limit?: nu
 
 async function runVerify(opts: { dryRun: boolean; refresh: boolean }) {
   const records = AppResearch.array().parse(JSON.parse(readFileSync("data/results.json", "utf8")));
+  const truth: GroundTruth[] = existsSync("data/ground-truth.json")
+    ? JSON.parse(readFileSync("data/ground-truth.json", "utf8")) : [];
+  const truthIds = new Set(truth.map((t) => t.app_id));
+  const needsCritic = (r: AppResearch) => truthIds.has(r.id) || r.confidence < 0.6 || r.buildability !== "buildable-now";
   if (!opts.dryRun) {
     const cache = createFileCache("data/raw", { refresh: opts.refresh });
-    const llm = createLlm({ apiKey: env("ANTHROPIC_API_KEY") }, cache);
+    const llm = createLlm({ apiKey: process.env.ANTHROPIC_API_KEY }, cache);
     const scraper = createScraper({ apiKey: env("FIRECRAWL_API_KEY") }, cache);
+    const { execute } = createComposio(env("COMPOSIO_API_KEY"));
+    const searcher = createSearcher({ execute }, cache);
     const revised = await inBatches(records, CONCURRENCY, async (r) => {
+      if (!needsCritic(r)) return r;
       const pages = await Promise.all(r.evidence.map((e) =>
         scraper.scrape(e.url)
           .then((p) => `--- ${e.url} ---\n${p.markdown.slice(0, 4000)}`)
           .catch(() => `--- ${e.url} --- (unavailable)`)));
-      const evidenceText = pages.join("\n\n");
       let rev: AppResearch;
-      try { rev = (await criticReview(r, evidenceText, { llm })).revised; }
-      catch { rev = r; }
+      try { rev = (await criticReview(r, pages.join("\n\n"), { llm })).revised; }
+      catch (e) { console.error(`critic fell back to first-pass for ${r.id} ${r.name}: ${(e as Error).message}`); rev = r; }
       if (rev.confidence < 0.6) {
         const homepage = `https://${rev.website.split("/")[0]}`;
         try {
           const check = await checkSelfServe(rev, homepage, { scrape: scraper, llm });
-          rev = { ...rev, self_serve: check.self_serve, self_serve_notes: `[loop2] ${check.signal} @ ${check.evidence_url}` };
+          // Loop 2 only *confirms* self-serve access (a strong positive signal). A bare "contact sales"
+          // on a marketing page is not evidence against self-serve — enterprise sales coexists with it —
+          // so we never downgrade toward gated on that alone.
+          const confirmsSelfServe = check.self_serve === "self-serve-free" || check.self_serve === "self-serve-trial";
+          if (confirmsSelfServe && check.self_serve !== rev.self_serve) {
+            rev = { ...rev, self_serve: check.self_serve, self_serve_notes: `[loop2] ${check.signal} @ ${check.evidence_url}` };
+          }
         } catch {}
       }
+      try {
+        const mcp = await checkMcp(rev, { search: searcher, llm });
+        rev = { ...rev, existing_mcp: { exists: mcp.exists, ...(mcp.url && /^https?:\/\//i.test(mcp.url) ? { url: mcp.url } : {}) } };
+      } catch {}
       console.log(`verified ${r.id} ${r.name}`);
       return rev;
     });
@@ -89,12 +106,10 @@ async function runVerify(opts: { dryRun: boolean; refresh: boolean }) {
     writeFileSync("data/verified.json", JSON.stringify(revised, null, 2));
   }
   const verified = AppResearch.array().parse(JSON.parse(readFileSync("data/verified.json", "utf8")));
-  const truth: GroundTruth[] = existsSync("data/ground-truth.json")
-    ? JSON.parse(readFileSync("data/ground-truth.json", "utf8")) : [];
   const firstPass = scoreAccuracy(records, truth);
   const afterLoops = scoreAccuracy(verified, truth);
   writeFileSync("data/accuracy.json", JSON.stringify({ firstPass, afterLoops }, null, 2));
-  console.log(`accuracy: first=${(firstPass.overall * 100).toFixed(0)}% verified=${(afterLoops.overall * 100).toFixed(0)}%`);
+  console.log(`critiqued ${records.filter(needsCritic).length}/100 | accuracy: first=${(firstPass.overall * 100).toFixed(0)}% verified=${(afterLoops.overall * 100).toFixed(0)}%`);
 }
 
 function runCluster() {

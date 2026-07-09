@@ -1,0 +1,45 @@
+{
+  "answer": "The Lark OpenAPI MCP is an official tool that enables AI agents to connect to the Feishu/Lark platform, providing access to APIs for messaging, documents, calendar management, and more [1][2]. You can configure it by adding the following to your MCP client configuration [1][3]:\n\n```json\n{\n  \"mcpServers\": {\n    \"lark-mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@larksuiteoapi/lark-mcp\",\n        \"mcp\",\n        \"-a\", \"<your_app_id>\",\n        \"-s\", \"<your_app_secret>\"\n      ]\n    }\n  }\n}\n```\n\nThe tool supports stdio and HTTP/SSE modes [4]. You can filter available tools or enable specific presets using the -t parameter [1][3]. Detailed tool naming follows the `biz.version.resource.method` convention, which you can verify via the \"Try it out\" feature in the Lark Open Platform API documentation [2][5]. Community alternatives like Lark Master MCP also exist to provide broader tool coverage [6].",
+  "results": [
+    {
+      "title": "larksuite/lark-openapi-mcp",
+      "url": "https://github.com/larksuite/lark-openapi-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://open-sg.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/mcp_integration/mcp_introduction",
+      "snippet": ""
+    },
+    {
+      "title": "README.md",
+      "url": "https://github.com/larksuite/lark-openapi-mcp/blob/main/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "@larksuiteoapi/lark-mcp - npm",
+      "url": "https://www.npmjs.com/package/@larksuiteoapi/lark-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://open-quic-sg.larkoffice.com/document/uAjLw4CM/ukTMukTMukTM/mcp_integration/mcp_introduction",
+      "snippet": ""
+    },
+    {
+      "title": "IvyGain/lark-master-mcp",
+      "url": "https://github.com/IvyGain/lark-master-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://open.larksuite.com/document/uAjLw4CM/ukTMukTMukTM/mcp_integration/quick-start-guides/quick-integration-with-openapi-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "haudnn/lark-mcp",
+      "url": "https://github.com/haudnn/lark-mcp",
+      "snippet": ""
+    }
+  ]
+}

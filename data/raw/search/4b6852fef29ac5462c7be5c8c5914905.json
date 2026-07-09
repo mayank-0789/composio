@@ -1,0 +1,45 @@
+{
+  "answer": "The Podio API supports multiple authentication methods depending on your application requirements [1][2][3][4]. All methods require initialization with your API client ID and secret [1][2][3][4].\n\n1. Server-side flow: Used for web applications where users authenticate via a redirect to Podio [1][2][3].\n2. App authentication: Used for automated scripts or accessing a single app without user interaction by providing an app ID and app token [1][2][3][4].\n3. Password authentication: Used for testing, batch jobs, or scenarios where other flows are unavailable; it uses user credentials [1][2][3][4].\n4. Client-side flow: Used specifically for browser-based single-page applications [2].",
+  "results": [
+    {
+      "title": "Podio-dotnet • C# client for Podio",
+      "url": "http://podio.github.io/podio-dotnet/authentication/",
+      "snippet": ""
+    },
+    {
+      "title": "PlatformJS • Podio Platform client for NodeJS and the browser",
+      "url": "https://podio.github.io/podio-js/authentication/",
+      "snippet": ""
+    },
+    {
+      "title": "podio-php • PHP client for Podio",
+      "url": "https://podio-community.github.io/podio-php/authentication/",
+      "snippet": ""
+    },
+    {
+      "title": "podio/podio-dotnet",
+      "url": "https://github.com/podio/podio-dotnet",
+      "snippet": ""
+    },
+    {
+      "title": "Podio Android SDK • The Android client for Podio",
+      "url": "https://podio.github.io/podio-android/authentication/",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication & Session Management",
+      "url": "https://podio.github.io/podio-objc-platform/authentication/",
+      "snippet": ""
+    },
+    {
+      "title": "PlatformJS • Podio Platform client for NodeJS and the browser",
+      "url": "https://podio.github.io/podio-js/api-requests/",
+      "snippet": ""
+    },
+    {
+      "title": "Podio-dotnet • C# client for Podio",
+      "url": "https://podio.github.io/podio-dotnet/",
+      "snippet": ""
+    }
+  ]
+}

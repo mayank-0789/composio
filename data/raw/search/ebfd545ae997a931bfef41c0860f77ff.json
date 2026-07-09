@@ -1,0 +1,45 @@
+{
+  "answer": "Gorgias supports two authentication methods depending on your app type [1]. \n\nFor private apps, use HTTP Basic Authentication with your email address as the username and your API key as the password [2][3]. The header must contain a base64-encoded string of the credentials [4].\n\n```curl\ncurl --request GET \\\n  --url https://your-customer-account.gorgias.com/api/account \\\n  --header 'Authorization: Basic base64encode(USERNAME:API_KEY)'\n```\n\nFor public apps, you must use OAuth2 [1][4]. This method uses Bearer tokens provided after a user authorizes your app [5][6].\n\n```curl\ncurl --request GET \\\n  --url https://your-customer-account.gorgias.com/api/account \\\n  --header 'Authorization: REDACTED_EXAMPLE'\n```\n\nYou can generate API keys within your account settings under REST API [4][2].",
+  "results": [
+    {
+      "title": "Authentication",
+      "url": "https://developers.gorgias.com/reference/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Access your Gorgias REST API credentials",
+      "url": "https://docs.gorgias.com/en-US/rest-api-208286",
+      "snippet": ""
+    },
+    {
+      "title": "Search for resources",
+      "url": "https://developers.gorgias.com/reference/search-1",
+      "snippet": ""
+    },
+    {
+      "title": "Access Tokens (API Keys)",
+      "url": "https://developers.gorgias.com/docs/access-tokens-api-keys",
+      "snippet": ""
+    },
+    {
+      "title": "OAuth2 Bearer Token",
+      "url": "https://developers.gorgias.com/docs/oauth2-bearer-token",
+      "snippet": ""
+    },
+    {
+      "title": "3. Set up OAuth2",
+      "url": "https://developers.gorgias.com/docs/set-up-oauth2-app-store",
+      "snippet": ""
+    },
+    {
+      "title": "Private vs. Public App",
+      "url": "https://developers.gorgias.com/docs/private-vs-public-app",
+      "snippet": ""
+    },
+    {
+      "title": "Introduction",
+      "url": "https://developers.gorgias.com/reference/introduction",
+      "snippet": ""
+    }
+  ]
+}

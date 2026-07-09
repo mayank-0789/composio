@@ -1,0 +1,45 @@
+{
+  "answer": "The Gladly API uses token-based Basic Authentication [1]. To authenticate, you must use your Gladly login email as the username and your generated API token as the password [2]. These credentials must be passed via the Authorization HTTP header for all requests, which must be performed over HTTPS [1].\n\nYou can generate an API token by navigating to Settings, then selecting API Tokens under the App Developer Tools category [3]. Ensure the user account has at least the API User permission [1][4].\n\nExample using curl:\n\n```bash\ncurl -u user@organization.com:$GLADLY_API_TOKEN \\\nhttps://organization.gladly.com/api/v1/organization\n```",
+  "results": [
+    {
+      "title": "Gladly API",
+      "url": "https://developer.gladly.com/rest/index.html",
+      "snippet": ""
+    },
+    {
+      "title": "Gladly Python API Docs | dltHub",
+      "url": "https://dlthub.com/context/source/gladly",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://help.gladly.com/docs/generate-api-tokens-and-create-webhooks",
+      "snippet": ""
+    },
+    {
+      "title": "Generate API Tokens and Create Webhooks",
+      "url": "https://help.gladly.com/generate-api-tokens-and-create-webhooks",
+      "snippet": ""
+    },
+    {
+      "title": "gladly/rest-api-examples",
+      "url": "https://github.com/gladly/rest-api-examples",
+      "snippet": ""
+    },
+    {
+      "title": "Integrate Gladly's API using Konfig's TypeScript SDK | Konfig",
+      "url": "https://konfigthis.com/sdk/gladly/typescript/",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://help.gladly.com/docs/set-up-ada-integration",
+      "snippet": ""
+    },
+    {
+      "title": "Main Home - Gladly Developer",
+      "url": "https://developer.gladly.com/",
+      "snippet": ""
+    }
+  ]
+}

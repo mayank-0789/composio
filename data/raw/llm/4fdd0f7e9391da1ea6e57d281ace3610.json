@@ -1,0 +1,46 @@
+{
+  "one_liner": "Netlify offers a broad, self-serve REST API (OAuth2/PAT auth) for managing sites, deploys, and infra, with an official MCP server already available for AI agent integration.",
+  "auth_methods": [
+    {
+      "method": "OAuth2",
+      "notes": "Full OAuth2 flow via https://app.netlify.com/authorize for public/third-party integrations."
+    },
+    {
+      "method": "Token",
+      "notes": "Personal access tokens (PATs) generated in user settings, used as Bearer token for manual/direct API access; self-serve, no credit card required."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Free tier includes API access with 300 credits/month, no credit card required. PATs can be generated instantly from user account settings.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Extensive REST API covering sites, deploys, builds, DNS, env vars, functions, database, webhooks, etc. OpenAPI spec published with Go and JS client libraries."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://netlify-mcp.netlify.app/mcp"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api",
+      "supports": "OAuth2 and PAT authentication details, self-serve token generation, REST API base URL and usage."
+    },
+    {
+      "url": "https://open-api.netlify.com/",
+      "supports": "Broad REST API surface covering sites, deploys, DNS, env vars, functions, database, webhooks, etc."
+    },
+    {
+      "url": "https://www.netlify.com/pricing/",
+      "supports": "Self-serve free tier pricing with API access included, no credit card required."
+    },
+    {
+      "url": "https://docs.netlify.com/manage/accounts-and-billing/billing/billing-for-credit-based-plans/credit-based-pricing-plans",
+      "supports": "Credit-based free plan details enabling self-serve API usage."
+    }
+  ],
+  "confidence": 0.93,
+  "flags": []
+}

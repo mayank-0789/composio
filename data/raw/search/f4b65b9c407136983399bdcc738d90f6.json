@@ -1,0 +1,45 @@
+{
+  "answer": "Squarespace Commerce APIs support authentication via either an API key or an OAuth 2.0 access token [1][2]. API keys are generated within a site's developer settings for custom applications, while OAuth 2.0 is required for Squarespace Extensions and provides authorized access for third-party applications [1][3].\n\nFor all API requests, you must include an Authorization header using the Bearer schema [4][5].\n\n```\nAuthorization: REDACTED_EXAMPLE\n```\n\nNote that some specific functionality, such as webhook subscriptions, requires an OAuth access token and does not support API keys [5]. Always verify the requirements for your specific endpoint [1].",
+  "results": [
+    {
+      "title": "Developer Portal",
+      "url": "https://commerce-apis.squarespace.com/commerce-apis/authentication-and-permissions",
+      "snippet": ""
+    },
+    {
+      "title": "Developer Portal",
+      "url": "https://developers.squarespace.com/commerce-apis/website-overview",
+      "snippet": ""
+    },
+    {
+      "title": "Developer Portal",
+      "url": "https://developers.squarespace.com/commerce-apis/oauth",
+      "snippet": ""
+    },
+    {
+      "title": "Developer Portal",
+      "url": "https://developers.squarespace.com/commerce-apis/websites",
+      "snippet": ""
+    },
+    {
+      "title": "Developer Portal",
+      "url": "http://developers.squarespace.com/commerce-apis/webhooksubscriptions",
+      "snippet": ""
+    },
+    {
+      "title": "Developer Portal",
+      "url": "https://commerce-apis.squarespace.com/commerce-apis/faq",
+      "snippet": ""
+    },
+    {
+      "title": "Developer Portal",
+      "url": "https://commerce-apis.squarespace.com/commerce-apis",
+      "snippet": ""
+    },
+    {
+      "title": "Developer Portal",
+      "url": "https://developers.squarespace.com/commerce-apis/orders-overview",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "The recommended authentication method for Jira REST API integrations is OAuth 2.0 [1][2][3]. Atlassian Connect apps use JWT (JSON Web Tokens) [1][4][5], while personal access tokens (PATs) are supported for Data Center instances [2][3]. Basic authentication using an email address and API token is available but discouraged for production use due to lower security, and it should be reserved for simple scripts or bots [1][6][5]. For browser-based JavaScript, Jira uses standard cookie-based authentication [1][2][3]. \n\nTo use basic authentication, encode your email and API token string as Base64 and include it in the header:\n\n```bash\ncurl -D- \\\n   -X GET \\\n   -H \"Authorization: Basic <base64_encoded_credentials>\" \\\n   -H \"Content-Type: application/json\" \\\n   \"https://your-domain.atlassian.net/rest/api/2/issue/QA-31\"\n```\n\nReference [6] provides further details on generating tokens and constructing headers.",
+  "results": [
+    {
+      "title": "The Jira Software Cloud REST API",
+      "url": "https://developer.atlassian.com/cloud/jira/software/rest/intro/",
+      "snippet": ""
+    },
+    {
+      "title": "Jira 9.14.0",
+      "url": "https://docs.atlassian.com/software/jira/docs/api/REST/9.14.0/",
+      "snippet": ""
+    },
+    {
+      "title": "The Jira Data Center REST API",
+      "url": "https://developer.atlassian.com/server/jira/platform/rest/v10002/intro/",
+      "snippet": ""
+    },
+    {
+      "title": "JIRA Cloud REST API Reference",
+      "url": "https://docs.atlassian.com/software/jira/docs/api/REST/1000.1424.0/",
+      "snippet": ""
+    },
+    {
+      "title": "Security overview",
+      "url": "https://developer.atlassian.com/cloud/jira/software/security-overview/",
+      "snippet": ""
+    },
+    {
+      "title": "Basic auth for REST APIs",
+      "url": "https://developer.atlassian.com/cloud/jira/software/basic-auth-for-rest-apis/",
+      "snippet": ""
+    },
+    {
+      "title": "Jira 9.13.0",
+      "url": "https://docs.atlassian.com/software/jira/docs/api/REST/9.13.0/",
+      "snippet": ""
+    },
+    {
+      "title": "Basic auth for REST APIs",
+      "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+      "snippet": ""
+    }
+  ]
+}

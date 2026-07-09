@@ -1,0 +1,110 @@
+{
+  "verdicts": [
+    {
+      "field": "name",
+      "status": "supported",
+      "note": "Evidence confirms 'Stripe' is the correct name (seen across all URLs and content)."
+    },
+    {
+      "field": "website",
+      "status": "supported",
+      "note": "The evidence URLs confirm stripe.com/docs/api is a valid website for API documentation."
+    },
+    {
+      "field": "category",
+      "status": "supported",
+      "note": "Evidence from stripe.com/pricing confirms payments, billing, and fintech operations, consistent with 'Finance and Fintech' category."
+    },
+    {
+      "field": "one_liner",
+      "status": "unsupported",
+      "note": "Evidence does NOT show or confirm an official hosted MCP server at the claimed URL https://mcp.stripe.com. The evidence is blocked by hCaptcha pages and does not substantiate this claim."
+    },
+    {
+      "field": "auth_methods",
+      "status": "unsupported",
+      "note": "The evidence pages are all blocked by hCaptcha and do not show actual authentication documentation. Claims about HTTP Basic Auth, Bearer token, and OAuth2 cannot be verified from the provided evidence."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "The stripe.com/pricing page shows 'No setup fees, monthly fees, or hidden fees' and 'Get started' / 'Sign up' buttons, confirming self-serve free signup. The pricing page confirms pay-as-you-go with no monthly fee."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "supported",
+      "note": "The pricing evidence confirms 'pay-as-you-go pricing. No setup fees, monthly fees, or hidden fees' which aligns with the claim about test mode being free and no setup/monthly fees."
+    },
+    {
+      "field": "api_surface",
+      "status": "unsupported",
+      "note": "The evidence pages are blocked by hCaptcha and do not show the actual API documentation to confirm REST API breadth, endpoints, or SDKs. The claim cannot be verified from the provided evidence."
+    },
+    {
+      "field": "existing_mcp.exists",
+      "status": "contradicted",
+      "note": "The record claims exists='yes' with url='https://mcp.stripe.com'. The evidence does NOT show any MCP server. One evidence URL mentions 'Model Context Protocol' in a navigation menu (docs.stripe.com/mcp), but this is just a docs page, NOT a hosted MCP server. Setting exists='no' and removing url."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "The pricing page confirms self-serve signup with immediate access ('Get started'), consistent with 'buildable-now'."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "null is appropriate given buildability is 'buildable-now' and self-serve access is confirmed."
+    },
+    {
+      "field": "evidence",
+      "status": "contradicted",
+      "note": "All four evidence URLs are blocked by hCaptcha and do not actually provide the content they claim to support. The authentication and API docs pages cannot be verified."
+    },
+    {
+      "field": "confidence",
+      "status": "contradicted",
+      "note": "Given the evidence is blocked and the MCP server claim is unsubstantiated, confidence should be lowered significantly."
+    }
+  ],
+  "revised": {
+    "id": 81,
+    "name": "Stripe",
+    "website": "stripe.com/docs/api",
+    "category": "Finance and Fintech",
+    "one_liner": "Stripe offers a REST API for payments and fintech operations with self-serve API key access and pay-as-you-go pricing.",
+    "auth_methods": [
+      {
+        "method": "API key",
+        "notes": "Authentication method mentioned in docs (exact mechanism not verified from evidence)."
+      }
+    ],
+    "self_serve": "self-serve-free",
+    "self_serve_notes": "Sign up with no setup fees, monthly fees, or hidden fees. Pay-as-you-go pricing model allows immediate API access (test mode is free).",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "unknown",
+      "notes": "Evidence blocked by hCaptcha; API documentation not accessible to verify breadth or specific endpoints."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-now",
+    "main_blocker": null,
+    "evidence": [
+      {
+        "url": "https://stripe.com/pricing",
+        "supports": "Confirms pay-as-you-go pricing with no setup, monthly, or hidden fees. Self-serve signup available."
+      },
+      {
+        "url": "https://docs.stripe.com/mcp",
+        "supports": "Docs mention Model Context Protocol but this is a documentation page, not a hosted MCP server."
+      }
+    ],
+    "confidence": 0.5,
+    "flags": [
+      "evidence-blocked-by-captcha",
+      "mcp-claim-unverified",
+      "auth-details-not-confirmed"
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "To authenticate with the Twilio SendGrid v3 API, you must use an API key provided in an HTTP Authorization header as a Bearer token [1][2][3].\n\nInclude the header in your request as follows:\nAuthorization: Bearer <YOUR_API_KEY_HERE>\n\nFor example, using cURL:\n```bash\ncurl -X \"GET\" \"https://api.sendgrid.com/v3/templates\" \\\n     -H \"Authorization: Bearer <YOUR_API_KEY_HERE>\" \\\n     -H \"Content-Type: application/json\"\n```\n\nTwilio SendGrid no longer accepts account username and password credentials for API authentication [4][5]. For SMTP integrations, use the username apikey and your generated API key as the password [2][5]. You must also enable two-factor authentication on your account [2][6].",
+  "results": [
+    {
+      "title": "Authentication | SendGrid Docs | Twilio",
+      "url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://www.twilio.com/docs/sendgrid/for-developers/sending-email/authentication.md",
+      "snippet": ""
+    },
+    {
+      "title": "Migrate from Twilio SendGrid API v2 to v3 | SendGrid Docs | Twilio",
+      "url": "https://www.twilio.com/docs/sendgrid/for-developers/migration-guides/v2-to-v3-api",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://www.twilio.com/docs/sendgrid/for-developers/sending-email/api-getting-started.md",
+      "snippet": ""
+    },
+    {
+      "title": "Upgrade your authentication method to API keys",
+      "url": "https://www.twilio.com/docs/sendgrid/for-developers/sending-email/upgrade-your-authentication-method-to-api-keys.md",
+      "snippet": ""
+    },
+    {
+      "title": "Email API Quickstart for Node.js | SendGrid Docs | Twilio",
+      "url": "https://www.twilio.com/docs/sendgrid/for-developers/sending-email/quickstart-nodejs",
+      "snippet": ""
+    },
+    {
+      "title": "Mail Send | SendGrid Docs | Twilio",
+      "url": "https://static0.twilio.com/docs/sendgrid/api-reference/mail-send/mail-send",
+      "snippet": ""
+    },
+    {
+      "title": "v2 Mail Send | SendGrid Docs | Twilio",
+      "url": "https://docs.sendgrid.com/v2-api/mail",
+      "snippet": ""
+    }
+  ]
+}

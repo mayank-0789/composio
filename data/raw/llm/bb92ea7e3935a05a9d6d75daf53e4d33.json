@@ -1,0 +1,58 @@
+{
+  "one_liner": "Pumble is a team messaging platform offering a REST API (with Node SDK) supporting OAuth2 app tokens or workspace-generated API keys for bots/messages/channels, with integration access gated by paid plans.",
+  "auth_methods": [
+    {
+      "method": "OAuth2",
+      "notes": "OAuth2 flow via consent screen and POST https://api-ga.pumble.com/oauth2/access to exchange code for access token, used for full apps."
+    },
+    {
+      "method": "API key",
+      "notes": "Pumble API addon allows generating API keys/tokens directly within a workspace (x-app-token + token headers) for simpler direct requests."
+    }
+  ],
+  "self_serve": "paid-plan",
+  "self_serve_notes": "Free tier exists but third-party app/integration access is restricted to a limited set of native integrations (e.g., Clockify, Plaky); full API/app integration access requires upgrading to Pro or Business plan.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "medium",
+    "notes": "REST API with SDK (pumble-node-sdk) covering messages, channels, files, reactions, scheduled messages, etc. Also has an app manifest/trigger framework for building integrations."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://cake-com.github.io/pumble-node-sdk/manifest.html"
+  },
+  "buildability": "buildable-with-caveats",
+  "main_blocker": "Full API/integration access is gated behind paid Pro/Business plans, and OAuth2 app creation requires going through Pumble's app manifest/marketplace process rather than instant self-serve key generation.",
+  "evidence": [
+    {
+      "url": "https://cake-com.github.io/pumble-node-sdk/api-client.html",
+      "supports": "Describes x-app-token and token headers required for every API request, and lists API methods/scopes."
+    },
+    {
+      "url": "https://cake-com.github.io/pumble-node-sdk/authorization.html",
+      "supports": "Details OAuth2 authorization flow for obtaining user/bot access tokens."
+    },
+    {
+      "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+      "supports": "Describes the Pumble API addon allowing users to generate API keys directly within a workspace."
+    },
+    {
+      "url": "https://pumble.com/learn/pumble/free-plan-explained/",
+      "supports": "Confirms free plan limits integrations to specific native apps like Clockify and Plaky."
+    },
+    {
+      "url": "https://pumble.com/learn/pumble/business-plan-explained/",
+      "supports": "Confirms unlimited/full integration access requires paid Business or Pro plan."
+    },
+    {
+      "url": "https://cake-com.github.io/pumble-node-sdk/manifest.html",
+      "supports": "Describes the app manifest and SDK framework used to build Pumble apps/integrations, indicating an existing developer toolkit/SDK layer akin to an MCP-style integration."
+    }
+  ],
+  "confidence": 0.6,
+  "flags": [
+    "Integration/API access restricted by pricing tier",
+    "OAuth2 app creation process not fully self-serve instant (requires app registration via manifest)",
+    "No official first-party MCP server confirmed; only community/SDK-based possibilities mentioned in search summary"
+  ]
+}

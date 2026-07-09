@@ -1,0 +1,45 @@
+{
+  "answer": "Plaid offers a free Sandbox environment for unlimited testing with test data [1][2][3]. For production data, developers in the US and Canada can use the free Trial plan, which supports up to 10 connected items and access to core products [1][2][4]. Previously created accounts may instead use Limited Production, which allows 200 live API calls per product for testing [5][2]. Beyond these limits, Plaid uses a Pay-as-you-go model with no upfront commitments or minimum spend, as well as tiered plans for higher volumes [5][1][6]. You can manage your access via the Plaid Dashboard [1][7].",
+  "results": [
+    {
+      "title": "Account - Pricing and billing | Plaid Docs",
+      "url": "https://plaid.com/docs/account/billing/",
+      "snippet": ""
+    },
+    {
+      "title": "Can I use Plaid for free? – Plaid Customer Help Center",
+      "url": "https://support.plaid.com/hc/en-us/articles/16194695660311-Can-I-use-Plaid-for-free",
+      "snippet": ""
+    },
+    {
+      "title": "Power your app with consumer-permissioned financial data | Plaid",
+      "url": "https://plaid.com/build-with-plaid/",
+      "snippet": ""
+    },
+    {
+      "title": "What is the Plaid Trial plan? – Plaid Customer Help Center",
+      "url": "https://support.plaid.com/hc/en-us/articles/39994173227159-What-is-the-Plaid-Trial-plan",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing - United States & Canada | Plaid",
+      "url": "https://plaid.com/pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "How do I upgrade from the Trial plan to a paid Production plan? – Plaid Customer Help Center",
+      "url": "https://support.plaid.com/hc/en-us/articles/39917307426967-How-do-I-upgrade-from-the-Trial-plan-to-a-paid-Production-plan",
+      "snippet": ""
+    },
+    {
+      "title": "API Reference",
+      "url": "https://plaid.com/docs/api/index.html.md",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing | Plaid",
+      "url": "https://plaid.com/en-eu/pricing/",
+      "snippet": ""
+    }
+  ]
+}

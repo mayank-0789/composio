@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://mcp.higgsfield.ai/mcp",
+  "reason": "Higgsfield has an official MCP server hosted at https://mcp.higgsfield.ai/mcp. This is a dedicated MCP server that exposes image and video generation capabilities from over 30 AI models through the Model Context Protocol. It supports OAuth authentication and can be integrated with MCP-compatible clients like Claude Desktop, Claude Code, and Cursor."
+}

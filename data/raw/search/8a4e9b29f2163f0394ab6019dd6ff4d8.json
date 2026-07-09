@@ -1,0 +1,45 @@
+{
+  "answer": "The Clay MCP server is an integration that allows AI assistants to interact with your Clay relationship intelligence data [1][2]. You can connect via Clay's official URL (https://mcp.clay.earth/mcp) by following the guided login flow in your client, or via Smithery [3][4][5]. Alternatively, you can configure it locally in your config file using npx [6][7]:\n\n```json\n{\n  \"mcpServers\": {\n    \"clay-mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"@clayhq/clay-mcp@latest\"],\n      \"env\": {\n        \"CLAY_API_KEY\": \"YOUR_CLAY_API_KEY\"\n      }\n    }\n  }\n}\n```\n\nIt supports features like searching contacts, managing groups, retrieving notes and calendar events, and adding new entries [3][6].",
+  "results": [
+    {
+      "title": "Clay — MCP server | explainx.ai | explainx.ai",
+      "url": "https://explainx.ai/mcp-servers/clay",
+      "snippet": ""
+    },
+    {
+      "title": "Clay MCP MCP Server | Price Per Token",
+      "url": "https://pricepertoken.com/mcp-servers/clay-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "mesh/clay-mcp",
+      "url": "https://github.com/clay-inc/clay-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "mesh/clay-mcp",
+      "url": "https://github.com/mesh/clay-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Clay MCP Server - MCP Server",
+      "url": "https://mcprepository.com/mesh/clay-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "@clayhq/clay-mcp",
+      "url": "https://registry.npmjs.org/@clayhq/clay-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "@iflow-mcp/clay-mcp v1.0.4",
+      "url": "https://registry.npmjs.org/%40iflow-mcp%2Fclay-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "@mseep/clay-mcp",
+      "url": "https://registry.npmjs.org/@mseep/clay-mcp",
+      "snippet": ""
+    }
+  ]
+}

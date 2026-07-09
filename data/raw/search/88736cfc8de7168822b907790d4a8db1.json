@@ -1,0 +1,45 @@
+{
+  "answer": "Multiple open-source Mermaid CLI MCP servers exist, all functioning as interfaces between AI assistants and the official Mermaid CLI (mmdc) to validate, render, and manage Mermaid diagrams [1][2][3][4]. These servers typically use Puppeteer for headless browser rendering and provide tools for syntax validation and exporting diagrams to formats like PNG, SVG, or PDF [1][3][5][6].\n\nInstallation generally requires Node.js and the global package `@mermaid-js/mermaid-cli` [1][2][3][5]. Configuration involves adding the server to your MCP client’s (e.g., Claude Desktop, Cursor) configuration file, often using `npx` or a local path to the server executable [2][3][4][6]. Common implementations include those by andrewginns [1], Narasimhaponnada [2], abekdwight [3], and hustcc [4].",
+  "results": [
+    {
+      "title": "andrewginns/mermaid-mcp-server",
+      "url": "https://github.com/andrewginns/mermaid-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Narasimhaponnada/mermaid-mcp",
+      "url": "https://github.com/Narasimhaponnada/mermaid-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "abekdwight/mermaid-mcp-server",
+      "url": "https://github.com/abekdwight/mermaid-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "hustcc/mcp-mermaid",
+      "url": "https://github.com/hustcc/mcp-mermaid",
+      "snippet": ""
+    },
+    {
+      "title": "aviciot/mcp_mermaid",
+      "url": "https://github.com/aviciot/mcp_mermaid",
+      "snippet": ""
+    },
+    {
+      "title": "README.md at 26f515bcfba0121d5b30c298c112ee4dd2e8be3f · peng-shawn/mermaid-mcp-server",
+      "url": "https://github.com/peng-shawn/mermaid-mcp-server/blob/26f515bcfba0121d5b30c298c112ee4dd2e8be3f/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "mermaid-mcp v0.1.2",
+      "url": "https://pypi.org/project/mermaid-mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "unravel-team/mcp-mermaidjs-server",
+      "url": "https://github.com/unravel-team/mcp-mermaidjs-server",
+      "snippet": ""
+    }
+  ]
+}

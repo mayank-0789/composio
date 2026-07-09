@@ -1,0 +1,45 @@
+{
+  "answer": "Yes, ClickUp provides API access on the Free Forever plan [1][2]. You can self-serve this access by generating a personal API token through the platform to authenticate your requests [3]. While the API is available to all users, specific endpoints, parameters, and rate limits are determined by your Workspace plan [4][3][5]. For Free Forever workspaces, the API is subject to a rate limit of 100 requests per minute per token [5]. You can manage your API integration directly through your ClickUp account settings without requiring manual approval for initial access [3].",
+  "results": [
+    {
+      "title": "ClickUp Pricing and Plans",
+      "url": "https://clickup.com/pricing?gad=1",
+      "snippet": ""
+    },
+    {
+      "title": "ClickUp Pricing and Plans",
+      "url": "https://clickup.com/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Get Started with the ClickUp API",
+      "url": "https://developer.clickup.com/docs/Getting%20Started.md",
+      "snippet": ""
+    },
+    {
+      "title": "API availability by Plan",
+      "url": "https://developer.clickup.com/docs/apis-available-by-plan",
+      "snippet": ""
+    },
+    {
+      "title": "Rate Limits",
+      "url": "https://developer.clickup.com/docs/rate-limits.md",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing per user role and plan – ClickUp Help",
+      "url": "https://help.clickup.com/hc/en-us/articles/6303244318999-Pricing-per-user-role-and-plan",
+      "snippet": ""
+    },
+    {
+      "title": "ClickUp",
+      "url": "https://developer.clickup.com/?metaafH=glucotnc_rGGwLlhVD4",
+      "snippet": ""
+    },
+    {
+      "title": "ClickUp™ | Developer Terms of Use",
+      "url": "https://clickup.com/terms/developer-terms",
+      "snippet": ""
+    }
+  ]
+}

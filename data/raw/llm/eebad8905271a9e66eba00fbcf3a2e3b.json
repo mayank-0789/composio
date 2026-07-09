@@ -1,0 +1,100 @@
+{
+  "verdicts": [
+    {
+      "field": "existing_mcp.exists",
+      "status": "contradicted",
+      "note": "The record claims exists='yes' with url 'https://mcp.notion.com/mcp', but the provided evidence contains only Notion's own developer documentation (authentication, authorization, PATs, public connections, pricing). None of this evidence describes or links to a dedicated Model Context Protocol (MCP) server for Notion. The URL 'mcp.notion.com/mcp' is not mentioned anywhere in the evidence. Without evidence of an actual MCP server, this must be marked 'no'."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "unsupported",
+      "note": "The URL 'https://mcp.notion.com/mcp' does not appear in the evidence. Since no MCP server is evidenced, the url field should be omitted."
+    },
+    {
+      "field": "auth_methods[1].method",
+      "status": "supported",
+      "note": "Evidence confirms internal connections and PATs are 'static bearer tokens' or 'installation access tokens'. However, the enum value 'API key' is less precise than 'Token' for bearer tokens. Changed to 'Token' for accuracy."
+    },
+    {
+      "field": "auth_methods[0]",
+      "status": "supported",
+      "note": "Evidence confirms OAuth 2.0 for public connections in multiple pages (authorization guide, public-connections guide)."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Evidence shows workspace owners can create internal connections and PATs via developer portal, and public connections are registered via developer portal. Pricing page shows API access is free."
+    },
+    {
+      "field": "api_surface",
+      "status": "supported",
+      "note": "Evidence references REST API covering pages, databases, blocks, users, comments; mentions official JS SDK (notion-sdk-js). Breadth='broad' is reasonable."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "Free self-serve API with multiple auth options, REST endpoints, and SDK support. Buildable-now is correct."
+    },
+    {
+      "field": "one_liner",
+      "status": "supported",
+      "note": "The one-liner mentions 'both an official hosted MCP server and an open-source self-hostable MCP server' but the evidence provides no support for any MCP server. This claim is contradicted by the evidence. Revised one-liner to remove MCP claims and focus on the supported API capabilities."
+    }
+  ],
+  "revised": {
+    "id": 71,
+    "name": "Notion",
+    "website": "developers.notion.com",
+    "category": "Productivity and Project Management",
+    "one_liner": "Notion offers a free, self-serve REST API with bearer-token (internal/PAT) or OAuth2 (public connection) authentication and broad coverage of pages, databases, blocks, users, and comments.",
+    "auth_methods": [
+      {
+        "method": "OAuth2",
+        "notes": "Used for public connections (OAuth 2.0 flow) for third-party integrations."
+      },
+      {
+        "method": "Token",
+        "notes": "Internal connection installation access tokens and Personal Access Tokens (PATs) are static bearer tokens created via developer portal."
+      }
+    ],
+    "self_serve": "self-serve-free",
+    "self_serve_notes": "Developer API access is free on any workspace plan. Internal connections/PATs can be self-serve created by workspace owners (on Free plan, only owners can create PATs by default). Public connections require OAuth app registration but are still self-serve via developer portal.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "Notion REST API covers pages, databases, blocks, users, comments, search; also official JS SDK."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-now",
+    "main_blocker": null,
+    "evidence": [
+      {
+        "url": "https://developers.notion.com/reference/authentication",
+        "supports": "Bearer token auth via internal connection, PAT, or OAuth for public connections"
+      },
+      {
+        "url": "https://developers.notion.com/guides/get-started/authorization",
+        "supports": "Details on internal connection static tokens vs OAuth 2.0 for public connections, self-serve via developer portal"
+      },
+      {
+        "url": "https://developers.notion.com/guides/get-started/personal-access-tokens",
+        "supports": "Personal access token creation, self-serve for workspace owners"
+      },
+      {
+        "url": "https://developers.notion.com/guides/get-started/public-connections",
+        "supports": "OAuth 2.0 flow for public connections"
+      },
+      {
+        "url": "https://www.notion.com/pricing",
+        "supports": "Free developer API access regardless of workspace plan"
+      }
+    ],
+    "confidence": 0.9,
+    "flags": [
+      "PAT creation restricted to workspace owners on Free plan by default",
+      "Notion Workers/AI agent tools have separate credit-based pricing starting Aug 11, unrelated to core API"
+    ]
+  }
+}

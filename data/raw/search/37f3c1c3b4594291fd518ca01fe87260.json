@@ -1,0 +1,45 @@
+{
+  "answer": "Snowflake APIs support four primary authentication methods: key pair authentication, OAuth, programmatic access tokens (PAT), and workload identity federation [1].\n\nFor all methods, include the authentication credentials in the request header using the format Authorization: Bearer <token> [1][2]. You may optionally include the header X-Snowflake-Authorization-Token-Type with values KEYPAIR_JWT, OAUTH, or PROGRAMMATIC_ACCESS_TOKEN to specify the method explicitly [1][2]. For workload identity federation, use the header X-Snowflake-Authorization-Token-Type: WORKLOAD_IDENTITY_FEDERATION [1].\n\nKey pair authentication requires generating a JWT locally using a private key and a public key fingerprint [2]. OAuth and PAT use generated tokens provided by Snowflake, while workload identity federation uses tokens from your cloud provider [1][3].",
+  "results": [
+    {
+      "title": "Authenticating Snowflake REST APIs with Snowflake | Snowflake Documentation",
+      "url": "https://docs.snowflake.com/en/en/developer-guide/snowflake-rest-api/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Authenticating to the server | Snowflake Documentation",
+      "url": "https://docs.snowflake.com/en/developer-guide/sql-api/authenticating",
+      "snippet": ""
+    },
+    {
+      "title": "Using programmatic access tokens for authentication | Snowflake Documentation",
+      "url": "https://docs.snowflake.com/en/en/user-guide/programmatic-access-tokens",
+      "snippet": ""
+    },
+    {
+      "title": "External API authentication and secrets | Snowflake Documentation",
+      "url": "https://docs.snowflake.com/en/user-guide/api-authentication",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/snowflake-rest-api.md",
+      "snippet": ""
+    },
+    {
+      "title": "Authenticating connections | Snowflake Documentation",
+      "url": "https://docs.snowflake.com/en/developer-guide/node-js/nodejs-driver-authenticate",
+      "snippet": ""
+    },
+    {
+      "title": "CREATE AUTHENTICATION POLICY | Snowflake Documentation",
+      "url": "https://docs.snowflake.com/en/sql-reference/sql/create-authentication-policy",
+      "snippet": ""
+    },
+    {
+      "title": "Snowflake SQL API reference | Snowflake Documentation",
+      "url": "https://docs.snowflake.com/en/developer-guide/sql-api/reference",
+      "snippet": ""
+    }
+  ]
+}

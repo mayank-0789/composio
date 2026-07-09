@@ -1,0 +1,45 @@
+{
+  "answer": "A WhatsApp Business MCP server is a bridge that connects AI assistants like Claude to the official Meta WhatsApp Cloud API via the Model Context Protocol [1][2][3]. These servers expose WhatsApp functionality—such as sending text, media, interactive messages, and managing templates—as tools that an AI can invoke through natural language [1][2][4].\n\nWhile most implementations directly interface with the official Meta Graph API to ensure compliance and reliability [1][2][5], some utilize third-party intermediaries like GreenAPI [6]. Deployment typically occurs via stdio for local clients like Claude Desktop or via HTTP/SSE for remote environments [1][5][6].",
+  "results": [
+    {
+      "title": "tkhattar14/whatsapp-business-mcp",
+      "url": "https://github.com/tkhattar14/whatsapp-business-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "FredShred7/whatsapp-mcp-server",
+      "url": "https://github.com/fredshred7/whatsapp-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "rukman7/whatsapp-mcp-server",
+      "url": "https://github.com/rukman7/whatsapp-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "ampcome-mcps/whatsapp-mcp",
+      "url": "https://github.com/ampcome-mcps/whatsapp-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Gonzalez8/whatsapp-business-mcp",
+      "url": "https://github.com/Gonzalez8/whatsapp-business-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "msaelices/whatsapp-mcp-server",
+      "url": "https://github.com/msaelices/whatsapp-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "spirit122/whatsapp-mcp-server",
+      "url": "https://github.com/spirit122/whatsapp-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Harikrishnan46624/WHATSAPP-MCP-SERVER",
+      "url": "https://github.com/Harikrishnan46624/WHATSAPP-MCP-SERVER",
+      "snippet": ""
+    }
+  ]
+}

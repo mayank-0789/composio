@@ -1,0 +1,45 @@
+{
+  "answer": "Sentry offers a free Developer plan that includes 5,000 errors and 10,000 transactions per month for a single user [1][2]. This plan is self-serve and does not require a credit card to initiate [2]. However, the free Developer plan does not support pay-as-you-go billing or additional quota purchases; if you reach your usage limits, you must upgrade to a paid Team or Business plan to increase your capacity [3][4]. API access is available to all users, but data ingestion is strictly limited by the quotas defined in your selected plan [5].",
+  "results": [
+    {
+      "title": "Sentry Monitoring & Observability Pricing | API Price Tracker",
+      "url": "https://pricingapis.com/monitoring/sentry",
+      "snippet": ""
+    },
+    {
+      "title": "Sentry Pricing ($26–$80/mo): All 3 Plans Explained [2026] | ProPicked",
+      "url": "https://propicked.com/hosting/sentry/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "How does Pay-As-You-Go work? | Sentry Help Center",
+      "url": "https://www.sentry.help/en/articles/13964878-how-does-pay-as-you-go-work",
+      "snippet": ""
+    },
+    {
+      "title": "Manage Your Replay Quota",
+      "url": "https://docs.sentry.io/pricing/quotas/manage-replay-quota/",
+      "snippet": ""
+    },
+    {
+      "title": "Billing Quota Management",
+      "url": "https://docs.sentry.io/pricing/quotas.md",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing & Billing",
+      "url": "https://docs.sentry.dev/pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing | Sentry Documentation",
+      "url": "https://sentry-docs.vercel.app/product/accounts/pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing & Billing (before June 11, 2024)",
+      "url": "https://docs.sentry.io/pricing/legacy-pricing.md",
+      "snippet": ""
+    }
+  ]
+}

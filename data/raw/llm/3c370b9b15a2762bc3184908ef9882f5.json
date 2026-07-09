@@ -1,0 +1,107 @@
+{
+  "verdicts": [
+    {
+      "field": "existing_mcp.exists",
+      "status": "contradicted",
+      "note": "The record marks exists='yes' with a URL to the /releases page. However, the evidence shows only an *announcement* of a 'DealCloud MCP Server client preview starting July 2026' (available only with 'DealCloud with Celeste' license). The /releases page is not itself an MCP server implementation or repository; it is a changelog. Per the instructions, a link to the app's own docs/homepage is NOT an MCP server. The MCP server is in limited preview, not a publicly available dedicated MCP server repo."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "contradicted",
+      "note": "The URL points to the DealCloud API release notes page, not a dedicated MCP server repository or implementation. This should be removed or set to a proper MCP server repo if one exists."
+    },
+    {
+      "field": "one_liner",
+      "status": "contradicted",
+      "note": "The one_liner states 'official MCP server in client preview as of mid-2026' but the evidence clearly says 'client preview starting July 2026' (which is mid-2026, so timing is correct) BUT describes it as a feature available only with a 'DealCloud with Celeste' license, not a general MCP server. The characterization should reflect that this is a licensed feature in preview, not a generally available MCP server."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence confirms OAuth2 client credentials flow (client_id, apiKey/client_secret, scopes, 900s token expiry) and that apiKey is used as the client_secret. The dual-method characterization (OAuth2 + API key) is accurate per the docs."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Evidence confirms no public self-serve signup; API keys are obtained via the user's DealCloud site admin (Admin > User Management, user profile). This matches 'admin-approval' and the notes about requiring an enterprise subscription."
+    },
+    {
+      "field": "api_surface",
+      "status": "supported",
+      "note": "Evidence clearly describes REST APIs organized into functional areas (User Management, Schema, Data, Backups, Publications, Relationship Intelligence) plus Swagger/OpenAPI spec. Type=REST, breadth=broad is well-supported."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "'buildable-with-caveats' is appropriate: the API is functional and documented, but requires an existing enterprise subscription and admin-issued credentials. The main_blocker accurately describes these constraints."
+    },
+    {
+      "field": "evidence",
+      "status": "supported",
+      "note": "All four evidence URLs are cited correctly and their 'supports' descriptions align with the content shown."
+    },
+    {
+      "field": "confidence",
+      "status": "supported",
+      "note": "0.7 is reasonable given the enterprise-only access model and the MCP server being in preview (not GA)."
+    },
+    {
+      "field": "flags",
+      "status": "supported",
+      "note": "Flags accurately reflect no free-tier, MCP server in preview (July 2026), and mention of third-party integrations. Evidence confirms the first two; third-party integrations are mentioned in flags but not in the evidence excerpts (acceptable as contextual notes)."
+    }
+  ],
+  "revised": {
+    "id": 10,
+    "name": "DealCloud",
+    "website": "api.docs.dealcloud.com",
+    "category": "CRM and Sales",
+    "one_liner": "DealCloud is an enterprise deal/relationship CRM offering a broad REST API (data, schema, user management, publications, backups) secured via OAuth2 client credentials; MCP integration available via licensed Celeste feature in client preview as of July 2026.",
+    "auth_methods": [
+      {
+        "method": "OAuth2",
+        "notes": "Client Credentials flow; POST client_id, apiKey/client_secret, and scope(s) to /api/rest/v1/oauth/token; returns bearer token valid 900 seconds, used in Authorization header."
+      },
+      {
+        "method": "API key",
+        "notes": "apiKey used as the client_secret in the OAuth2 client credentials request; obtained via site admin (Admin > User Management, user profile)."
+      }
+    ],
+    "self_serve": "admin-approval",
+    "self_serve_notes": "No free tier or public self-serve signup; DealCloud is an enterprise CRM requiring an existing subscription/enterprise agreement. Developers get client_id/apiKey via their DealCloud site admin, not an open developer portal.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "REST APIs organized into functional areas: User Management, Schema, Data, Backups, Publications, Relationship Intelligence, plus Swagger/OpenAPI spec exposed per-site."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "Requires an existing enterprise DealCloud subscription and admin-issued client_id/apiKey; no open self-serve developer signup. MCP integration available only via licensed 'DealCloud with Celeste' feature in limited client preview (July 2026).",
+    "evidence": [
+      {
+        "url": "https://api.docs.dealcloud.com/docs/token",
+        "supports": "OAuth2 client credentials flow, scopes, 900s token expiry, Authorization header usage"
+      },
+      {
+        "url": "https://api.docs.dealcloud.com/docs",
+        "supports": "Overview of REST API functional areas: auth, user management, schema, data, backups, publications, relationship intelligence; Swagger/Postman/VSCode tooling"
+      },
+      {
+        "url": "https://api.docs.dealcloud.com/docs/apikeys",
+        "supports": "API key acquisition documentation"
+      },
+      {
+        "url": "https://api.docs.dealcloud.com/releases",
+        "supports": "Announcement of DealCloud MCP Server client preview starting July 2026, available as part of DealCloud with Celeste license"
+      }
+    ],
+    "confidence": 0.7,
+    "flags": [
+      "No public free-tier/self-serve signup found — enterprise agreement required",
+      "MCP server feature requires separate 'DealCloud with Celeste' license and is in client preview (July 2026), not generally available",
+      "Third-party MCP integrations exist via Intapp Celeste (limited release) and Louisa AI"
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "HubSpot provides two distinct types of Model Context Protocol (MCP) servers to bridge AI agents with its platform. The HubSpot MCP Server (Remote) enables AI clients to securely read and write CRM data (contacts, deals, engagements, etc.) via OAuth or private app tokens [1][2][3]. It is designed for CRM integration and data automation [2][3]. Separately, the Developer MCP Server is a CLI-based tool accessed via `hs mcp setup` intended for scaffolding and managing projects on the HubSpot Developer Platform [1][3].\n\nFor the remote server, you can connect using the official npm package or by pointing your MCP client to the HubSpot-hosted endpoint [3]. A minimal configuration example for the local `@hubspot/mcp-server` using an access token follows [4][3]:\n\n```json\n{\n  \"mcpServers\": {\n    \"hubspot\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@hubspot/mcp-server\"],\n      \"env\": {\n        \"PRIVATE_APP_ACCESS_TOKEN\": \"<your-private-app-access-token>\"\n      }\n    }\n  }\n}\n```\n\nThis server supports operations like searching, creating, and updating CRM objects, managing associations, and logging engagements [4][3]. Sensitive data properties and highly sensitive standard records are excluded from MCP access [1][3].",
+  "results": [
+    {
+      "title": "HubSpot MCP Server",
+      "url": "https://developers.hubspot.com/ai-tools/mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Integrate AI tools with the HubSpot MCP server - HubSpot docs",
+      "url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/integrate-with-the-remote-hubspot-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "HubSpot MCP Server - Setup, Use Cases & Examples",
+      "url": "https://growthengineer.ai/mcp-servers/hubspot",
+      "snippet": ""
+    },
+    {
+      "title": "@hubspot/mcp-server",
+      "url": "https://registry.npmjs.org/%40hubspot%2Fmcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "SanketSKasar/HubSpot-MCP-Server",
+      "url": "https://github.com/SanketSKasar/HubSpot-MCP-Server",
+      "snippet": ""
+    },
+    {
+      "title": "axonops/hubspot-mcp",
+      "url": "https://github.com/axonops/hubspot-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "cunha-ambisis/hubspot-mcp",
+      "url": "https://github.com/cunha-ambisis/hubspot-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "prixieroxanbooc/hubspot-mcp-server",
+      "url": "https://github.com/prixieroxanbooc/hubspot-mcp-server",
+      "snippet": ""
+    }
+  ]
+}

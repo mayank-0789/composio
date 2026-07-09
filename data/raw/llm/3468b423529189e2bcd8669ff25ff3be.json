@@ -1,0 +1,140 @@
+{
+  "verdicts": [
+    {
+      "field": "name",
+      "status": "supported",
+      "note": "Evidence confirms the service name is 'Pumble' (multiple pages reference pumble.com, Pumble API, Pumble workspace)."
+    },
+    {
+      "field": "website",
+      "status": "supported",
+      "note": "Multiple URLs reference pumble.com as the main domain."
+    },
+    {
+      "field": "category",
+      "status": "supported",
+      "note": "Evidence describes Pumble as a 'team messaging platform' with channels, DMs, and collaboration features, fitting Communications and Messaging category."
+    },
+    {
+      "field": "one_liner",
+      "status": "contradicted",
+      "note": "The one-liner states 'with integration access gated by paid plans' but evidence shows API addon is 'Available on all plans' and can be used by Owner, Admin, Member. The Free plan page shows integrations are limited to Clockify and Plaky specifically, but API addon access is not explicitly restricted to paid plans only."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence confirms both OAuth2 (with POST to https://api-ga.pumble.com/oauth2/access) and API key methods (via x-app-token + token headers through the Pumble API addon)."
+    },
+    {
+      "field": "self_serve",
+      "status": "contradicted",
+      "note": "Evidence shows API addon is 'Available on all plans' and can be installed by Owner, Admin, Member. The Free plan page mentions integration limits (Clockify, Plaky) but does not explicitly state API access requires paid plans. The Business plan page mentions advanced features but does not gate basic API access."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "contradicted",
+      "note": "The API addon help page states 'Available on all plans', contradicting the claim that 'full API/app integration access requires upgrading to Pro or Business plan'. The Free plan limits integrations to native integrations like Clockify/Plaky, but API addon access is not explicitly restricted."
+    },
+    {
+      "field": "api_surface",
+      "status": "supported",
+      "note": "Evidence confirms REST API with pumble-node-sdk covering messages, channels, files, reactions, scheduled messages, etc., and describes app manifest/trigger framework."
+    },
+    {
+      "field": "existing_mcp.exists",
+      "status": "contradicted",
+      "note": "The URL provided (https://cake-com.github.io/pumble-node-sdk/manifest.html) is documentation for the Pumble Node SDK manifest system, NOT an MCP (Model Context Protocol) server. This is Pumble's own app integration framework, not an MCP implementation."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "contradicted",
+      "note": "The URL points to Pumble's app manifest documentation, not an MCP server repository or implementation."
+    },
+    {
+      "field": "buildability",
+      "status": "unsupported",
+      "note": "Evidence does not clearly support or contradict whether API access is limited by pricing tier for basic integration building. API addon is stated as 'Available on all plans' but context around full API capabilities vs. native integrations is unclear."
+    },
+    {
+      "field": "main_blocker",
+      "status": "contradicted",
+      "note": "Evidence shows API addon is 'Available on all plans' and API keys can be generated self-serve within workspace. OAuth2 app creation requires manifest registration but API key method provides simpler access. The claim that full API access requires paid plans is not clearly supported."
+    },
+    {
+      "field": "evidence",
+      "status": "supported",
+      "note": "All provided evidence URLs are valid and contain relevant information about Pumble's API, authentication, features, and plans."
+    },
+    {
+      "field": "confidence",
+      "status": "unsupported",
+      "note": "Given the contradictions found regarding plan restrictions and MCP existence, the confidence should be lower or the record should be revised."
+    },
+    {
+      "field": "flags",
+      "status": "contradicted",
+      "note": "Flag 'Integration/API access restricted by pricing tier' is contradicted by evidence showing API addon 'Available on all plans'. Flag about 'No official first-party MCP server' is correct but the existing_mcp field incorrectly says 'yes'."
+    }
+  ],
+  "revised": {
+    "id": 25,
+    "name": "Pumble",
+    "website": "pumble.com",
+    "category": "Communications and Messaging",
+    "one_liner": "Pumble is a team messaging platform offering a REST API (with Node SDK) supporting OAuth2 or workspace-generated API keys for bots/messages/channels, with the API addon available on all plans but native integrations limited on free tier.",
+    "auth_methods": [
+      {
+        "method": "OAuth2",
+        "notes": "OAuth2 flow via consent screen and POST https://api-ga.pumble.com/oauth2/access to exchange code for access token, used for full apps."
+      },
+      {
+        "method": "API key",
+        "notes": "Pumble API addon allows generating API keys/tokens directly within a workspace (x-app-token + token headers) for simpler direct requests. Available on all plans."
+      }
+    ],
+    "self_serve": "self-serve-free",
+    "self_serve_notes": "API addon is available on all plans and allows self-serve generation of API keys by Owner, Admin, or Member roles. Free plan limits native integrations to Clockify and Plaky, but API access via the addon is not restricted to paid plans. Rate limit is 1000 requests per minute per user.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "medium",
+      "notes": "REST API with SDK (pumble-node-sdk) covering messages, channels, files, reactions, scheduled messages, etc. Also has an app manifest/trigger framework for building integrations. File uploads support up to 20 files per message, 512MB each."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-now",
+    "main_blocker": null,
+    "evidence": [
+      {
+        "url": "https://cake-com.github.io/pumble-node-sdk/api-client.html",
+        "supports": "Describes x-app-token and token headers required for every API request, and lists API methods/scopes covering messages, channels, files, reactions, scheduled messages."
+      },
+      {
+        "url": "https://cake-com.github.io/pumble-node-sdk/authorization.html",
+        "supports": "Details OAuth2 authorization flow for obtaining user/bot access tokens via consent screen and token exchange."
+      },
+      {
+        "url": "https://pumble.com/help/integrations/automation-workflow-integrations/api-keys-integration/",
+        "supports": "Describes the Pumble API addon for generating API keys directly within a workspace. States it is 'Available on all plans' with rate limit of 1000 requests per minute per user."
+      },
+      {
+        "url": "https://pumble.com/learn/pumble/free-plan-explained/",
+        "supports": "Confirms free plan includes unlimited users, channels, message history, and mentions Clockify and Plaky integrations. Does not explicitly restrict API addon access."
+      },
+      {
+        "url": "https://pumble.com/learn/pumble/business-plan-explained/",
+        "supports": "Describes Business plan features including advanced permissions, user groups, increased storage, and 100-participant calls. Does not state API access requires paid plans."
+      },
+      {
+        "url": "https://cake-com.github.io/pumble-node-sdk/manifest.html",
+        "supports": "Describes the app manifest and SDK framework used to build Pumble apps/integrations, including shortcuts, slash commands, event subscriptions, and dynamic menus."
+      }
+    ],
+    "confidence": 0.75,
+    "flags": [
+      "Native integrations (beyond Clockify/Plaky) limited on free plan, but API addon available on all plans",
+      "OAuth2 app creation requires manifest registration; API key method is simpler self-serve",
+      "No official MCP server exists; SDK documentation describes Pumble's own app framework"
+    ]
+  }
+}

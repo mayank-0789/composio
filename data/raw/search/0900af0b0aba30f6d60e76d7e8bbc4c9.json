@@ -1,0 +1,45 @@
+{
+  "answer": "Ahrefs does not offer a free-tier plan for its API. Access to the Ahrefs API is restricted to eligible paid subscription plans [1][2].\n\nWhile there is no free tier, all users have access to limited free test queries to facilitate development and testing [1][2]. These queries allow you to test API endpoints without consuming paid API units, provided the requests use specific domains (such as ahrefs.com) or keywords as targets [3]. To use these test queries, you must still generate an API key via your workspace account settings [1][3]. Full production access, including higher row limits and broader data access, requires an active paid subscription [1][4].",
+  "results": [
+    {
+      "title": "Introduction | Ahrefs for Developers",
+      "url": "https://docs.ahrefs.com/en/api/docs/introduction",
+      "snippet": ""
+    },
+    {
+      "title": "Limits consumption | Ahrefs for Developers",
+      "url": "https://docs.ahrefs.com/en/api/docs/limits-consumption",
+      "snippet": ""
+    },
+    {
+      "title": "Free test queries | Ahrefs for Developers",
+      "url": "https://docs.ahrefs.com/en/api/docs/free-test-queries",
+      "snippet": ""
+    },
+    {
+      "title": "How To Choose the Right Ahrefs Plan in 2026",
+      "url": "https://ahrefs.com/blog/ahrefs-pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "Plans & Pricing - Ahrefs",
+      "url": "https://ahrefs.com/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Ahrefs for Developers",
+      "url": "https://docs.ahrefs.com/",
+      "snippet": ""
+    },
+    {
+      "title": "What's the difference between all Ahrefs subscription plans? | Help Center - Ahrefs",
+      "url": "https://help.ahrefs.com/en/articles/6117209-what-s-the-difference-between-all-ahrefs-subscription-plans",
+      "snippet": ""
+    },
+    {
+      "title": "Ahrefs FAQ | Frequently asked questions",
+      "url": "https://ahrefs.com/faq",
+      "snippet": ""
+    }
+  ]
+}

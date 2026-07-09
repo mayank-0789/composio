@@ -1,0 +1,45 @@
+{
+  "answer": "Authentication to the Clay platform itself requires an API key found in your account settings under the Account tab [1][2]. To interact with external services via Clay's HTTP API actions, you have two primary methods [3][4][5].\n\nFor services requiring static credentials, use the standard HTTP API action by adding your API key or bearer token as a header in the request configuration [3][4][5]. For services requiring dynamically generated tokens, use the HTTP API with JWT Authentication action [3][6]. This two-step process involves:\n\n1. Configuring a JWT account with your provider's token endpoint, username, and password [3][6].\n2. Providing the dot-notation path to the token in the API response (e.g., access_token) [3][6].\n\nClay then automatically fetches and injects the token into your request headers [3][6].",
+  "results": [
+    {
+      "title": "Find your Clay API key - Clay Docs",
+      "url": "https://university.clay.com/docs/guide-find-clay-api-key",
+      "snippet": ""
+    },
+    {
+      "title": "Clay - How do I link my account? - Nango Docs",
+      "url": "https://nango.dev/docs/api-integrations/clay/connect",
+      "snippet": ""
+    },
+    {
+      "title": "HTTP API with JWT authentication - Clay Docs",
+      "url": "https://university.clay.com/docs/http-api-with-jwt-authentication-integration-overview",
+      "snippet": ""
+    },
+    {
+      "title": "Use http api | Clay",
+      "url": "https://community.clay.com/x/content-and-events/r9j0fusg8d8l/use-http-api",
+      "snippet": ""
+    },
+    {
+      "title": "Octave | Your Agentic GTM Brain",
+      "url": "https://www.octavehq.com/post/clay-http-api-integration-connecting-data-sources",
+      "snippet": ""
+    },
+    {
+      "title": "HTTP API with JWT authentication - Clay Docs",
+      "url": "https://www.clay.com/university/guide/http-api-with-jwt-authentication-integration-overview",
+      "snippet": ""
+    },
+    {
+      "title": "Does Clay have an API? - Clay Docs",
+      "url": "https://university.clay.com/docs/using-clay-as-an-api",
+      "snippet": ""
+    },
+    {
+      "title": "Clay API Limits, Authentication & Rate Limits Explained",
+      "url": "https://bitscale.ai/blogs/clay-api-limits-authentication-rate-limits-explained",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "The Fanbasis API requires authentication via an x-api-key header [1]. You must include your unique API key in every request to the server [1][2]. While some implementations may pass the key via an Authorization bearer token [3], the primary documented method is the x-api-key header [1]. There is no support for OAuth or client ID and secret pairs [2].\n\nExample using cURL:\n```bash\ncurl -X GET https://www.fanbasis.com/public-api/ \\\n  -H \"x-api-key: YOUR_API_KEY\"\n```\n\nFor server-side TypeScript or JavaScript, you can use the official Checkout SDK by initializing the client with your key [4]:\n```js\nconst client = new FanbasisCheckout({\n  apiKey: process.env['FANBASIS_CHECKOUT_API_KEY']\n});\n```",
+  "results": [
+    {
+      "title": "Api docs",
+      "url": "https://raw.githubusercontent.com/otniel-bit/fbnewapi/main/api-docs.md",
+      "snippet": ""
+    },
+    {
+      "title": "docs/gateways/fanbasis.md at main · subtain-haider/laravel-payments",
+      "url": "https://github.com/subtain-haider/laravel-payments/blob/main/docs/gateways/fanbasis.md",
+      "snippet": ""
+    },
+    {
+      "title": "Fanbasis Integration - AdRecon",
+      "url": "https://matthewsabia1-adrecon.mintlify.app/integrations/fanbasis",
+      "snippet": ""
+    },
+    {
+      "title": "@fanbasis/checkout-sdk",
+      "url": "https://registry.npmjs.org/%40fanbasis%2Fcheckout-sdk",
+      "snippet": ""
+    },
+    {
+      "title": "FanBasis — Payments Infrastructure That Makes You More Money",
+      "url": "https://www.fanbasis.com/enterprises",
+      "snippet": ""
+    },
+    {
+      "title": "FanBasis Integration with Emergent | Build Creator Monetization Apps by Prompt",
+      "url": "https://emergent.sh/integrations/fanbasis",
+      "snippet": ""
+    },
+    {
+      "title": "@fanbasis/checkout-react",
+      "url": "https://registry.npmjs.org/@fanbasis/checkout-react",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://zapier.com/apps/fanbasis/integrations/webhook",
+      "snippet": ""
+    }
+  ]
+}

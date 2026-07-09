@@ -1,0 +1,45 @@
+{
+  "answer": "The Clay Model Context Protocol (MCP) server allows AI assistants like Claude, Cursor, and ChatGPT to interact with your Clay CRM data [1][2]. There are two primary approaches for setup: the official Clay-provided server and a community-built alternative [3][4].\n\nFor the official version, you can install it via Smithery or by adding the `@clayhq/clay-mcp` package to your MCP client configuration using your Clay API key [3][5]. It enables features such as contact searching, managing groups, adding notes, and retrieving event data [1][5].\n\nAlternatively, a community-maintained server exists that maps Clay's internal surface, including tables and workflows, by authenticating via your browser session cookie [4].",
+  "results": [
+    {
+      "title": "mesh/clay-mcp",
+      "url": "https://github.com/clay-inc/clay-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Clay MCP Server — Install & Setup — MCP.Directory",
+      "url": "https://mcp.directory/servers/clay",
+      "snippet": ""
+    },
+    {
+      "title": "@clayhq/clay-mcp",
+      "url": "https://registry.npmjs.org/@clayhq/clay-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "shanefirek/clay-mcp-public",
+      "url": "https://github.com/shanefirek/clay-mcp-public",
+      "snippet": ""
+    },
+    {
+      "title": "Clay | MCP Directory",
+      "url": "https://www.8004.directory/mcp/server/clay",
+      "snippet": ""
+    },
+    {
+      "title": "mesh/clay-mcp",
+      "url": "https://github.com/mesh/clay-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Clay — MCP server | explainx.ai | explainx.ai",
+      "url": "https://explainx.ai/mcp-servers/clay",
+      "snippet": ""
+    },
+    {
+      "title": "@iflow-mcp/clay-mcp v1.0.4",
+      "url": "https://registry.npmjs.org/%40iflow-mcp%2Fclay-mcp",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "Multiple Model Context Protocol (MCP) servers exist for Aircall, allowing AI assistants like Claude, Cursor, and ChatGPT to interact with Aircall's API [1][2][3]. These servers provide tools for managing calls, contacts, teams, and conversation intelligence, such as transcripts and AI summaries [1][4][5].\n\nYou can integrate these servers using their respective installation methods, such as adding the server configuration to your MCP settings file [6]. For example, to use the server by themobilefirstco, add this to your configuration [1][6]:\n\n```json\n{\n  \"mcpServers\": {\n    \"themobilefirstco-aircall-mcp-server\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"themobilefirstco-aircall-mcp-server\"]\n    }\n  }\n}\n```\n\nOther options include servers hosted by platforms like Pipedream or viaSocket, which provide secure, authenticated endpoints for your AI clients [7][2]. Ensure you have the required API credentials, such as `AIRCALL_API_ID` and `AIRCALL_API_TOKEN`, prepared for your chosen implementation [8][6].",
+  "results": [
+    {
+      "title": "themobilefirstco/aircall-mcp-server",
+      "url": "https://github.com/themobilefirstco/aircall-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Aircall MCP | viaSocket",
+      "url": "https://viasocket.com/mcp/aircall",
+      "snippet": ""
+    },
+    {
+      "title": "Aircall MCP - Manage Calls, Contacts & Teams",
+      "url": "https://vinkius.com/apps/aircall-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "AI agent for Aircall — automate via MCP | WorkAist",
+      "url": "https://workaist.com/en/integrations/aircall",
+      "snippet": ""
+    },
+    {
+      "title": "Aircall MCP Server & Skill",
+      "url": "https://www.mcpbundles.com/skills/aircall",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://market.lobehub.com/s/plugins/themobilefirstco-aircall-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Aircall MCP Server | Pipedream",
+      "url": "https://mcp.pipedream.com/app/aircall",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://market.lobehub.com/s/plugins/itaygadot111-aircall-mcp-server",
+      "snippet": ""
+    }
+  ]
+}

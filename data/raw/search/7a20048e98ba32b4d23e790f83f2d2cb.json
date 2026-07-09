@@ -1,0 +1,45 @@
+{
+  "answer": "GitHub offers free, self-serve access to its REST API for all accounts, including those on the Free plan [1][2]. You do not need a paid subscription to access the API, though your usage is subject to rate limits [3].\n\nFor authenticated users, the primary rate limit is 5,000 requests per hour [3]. To make requests, you can use a personal access token or authorize a GitHub App [3]. The API is intended for developing, testing, and supporting integrations between your services and GitHub [4].\n\nExample of an API request using a personal access token:\n\n```bash\ncurl -H \"Authorization: Bearer YOUR_TOKEN\" \\\n     -H \"Accept: application/vnd.github+json\" \\\n     https://api.github.com/user\n```\n\nAdditional details on rate limits and endpoints are available in the GitHub REST API documentation [3][5].",
+  "results": [
+    {
+      "title": "Pricing · Plans for every developer · GitHub",
+      "url": "https://github.com/pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "GitHub's plans - GitHub Docs",
+      "url": "https://docs.github.com/en/get-started/learning-about-github/githubs-plans",
+      "snippet": ""
+    },
+    {
+      "title": "Rate limits for the REST API - GitHub Docs",
+      "url": "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2022-11-28",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://docs.github.com/en/site-policy/github-terms/github-registered-developer-agreement",
+      "snippet": ""
+    },
+    {
+      "title": "Billing usage - GitHub Docs",
+      "url": "https://docs.github.com/en/rest/billing/usage?apiVersion=2026-03-10",
+      "snippet": ""
+    },
+    {
+      "title": "Product usage included with each plan - GitHub Docs",
+      "url": "https://docs.github.com/en/billing/reference/product-usage-included",
+      "snippet": ""
+    },
+    {
+      "title": "content/billing/concepts/product-billing/github-models.md",
+      "url": "https://github.com/github/docs/blob/main/content/billing/concepts/product-billing/github-models.md",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://docs.github.com/en/enterprise-cloud@latest/get-started/learning-about-github/faq-about-changes-to-githubs-plans",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "one_liner": "Amazon Selling Partner API (SP-API) lets developers manage Amazon Seller/Vendor Central data (orders, listings, inventory, reports) via OAuth-based (Login with Amazon) REST APIs, with self-serve registration for private apps and OAuth flow for public apps.",
+  "auth_methods": [
+    {
+      "method": "OAuth2",
+      "notes": "Login with Amazon (LWA) OAuth2. Public apps use standard OAuth2 authorization code flow with sellers; private apps self-authorize via Solution Provider Portal. Refresh tokens (long-lived) exchanged for short-lived (1hr) access tokens via POST to https://api.amazon.com/auth/o2/token. Grantless operations use client_credentials grant. Restricted/PII operations require an additional Restricted Data Token (RDT) via the Tokens API, included via x-amz-access-token header."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Private applications (for a seller's own business data) remain free with self-serve registration and self-authorization via the Solution Provider Portal/Amazon Developer account. Public/third-party apps require Amazon developer registration and, starting Jan 31 2026, an annual $1,400 fee; per-call overage fees have been postponed. Docs, SDKs, and sandbox are free for all.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Broad REST API surface covering catalog, orders, inventory, listings, pricing, reports, notifications, tokens, finances, and more across Seller Central and Vendor Central. SDKs available in multiple languages (Java, C#, etc.), plus sandbox testing environment."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://github.com/mansournorouzi/amazon-sp-mcp"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": "None fundamental; requires Amazon developer account registration, app approval (for public apps), and OAuth/LWA credential management, plus new annual fee ($1,400) for third-party developers starting 2026. Multiple community MCP server implementations already exist.",
+  "evidence": [
+    {
+      "url": "https://developer-docs.amazon.com/sp-api/docs/connecting-to-the-selling-partner-api",
+      "supports": "Describes LWA OAuth2 token exchange, refresh_token and client_credentials grant types, and RDT for restricted PII operations."
+    },
+    {
+      "url": "https://developer-docs.amazon.com/sp-api/docs/onboarding-step-6-set-up-the-authorization-workflow",
+      "supports": "Details public app OAuth2 authorization workflow vs private app self-authorization via Solution Provider Portal."
+    },
+    {
+      "url": "https://developer-docs.amazon.com/sp-api/docs/self-authorization",
+      "supports": "Private applications can self-authorize directly, supporting self-serve-free path."
+    },
+    {
+      "url": "https://ppc.land/amazon-introduces-fees-for-third-party-developer-api-access-in-2026/",
+      "supports": "Third-party developers face new $1,400 annual fee starting Jan 31 2026; private apps remain free."
+    },
+    {
+      "url": "https://agentdeals.dev/vendor/amazon-sp-api",
+      "supports": "Confirms free tier limits and fee structure changes for 2026."
+    },
+    {
+      "url": "https://github.com/mansournorouzi/amazon-sp-mcp",
+      "supports": "Example of an existing community-built MCP server for Amazon SP-API."
+    }
+  ],
+  "confidence": 0.8,
+  "flags": [
+    "Multiple unofficial/community MCP servers exist but no official Amazon-provided MCP server",
+    "New annual fee for third-party developers starting 2026 may affect cost model",
+    "Restricted/PII data requires additional RDT token flow, adding complexity"
+  ]
+}

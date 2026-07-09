@@ -1,0 +1,45 @@
+{
+  "answer": "To authenticate with the Systeme.io Public API, you must use a public API key generated within your account's profile settings under the Public API keys section [1][2]. Include this key in every request by adding it to the X-API-Key HTTP header [3][2].\n\nExample using JavaScript:\n\n```javascript\nfetch('https://api.systeme.io/api/contacts', {\n    headers: {\n        'X-API-Key': 'your_api_key'\n    }\n})\n.then(response => response.json())\n.then(data => console.log(data))\n.catch(error => console.error('Error:', error));\n```\n\nThe key can only be copied immediately after creation; if you lose it, you must delete it and generate a new one [4][3].",
+  "results": [
+    {
+      "title": "Public API",
+      "url": "https://developer.systeme.io/reference/api",
+      "snippet": ""
+    },
+    {
+      "title": "Retrieves the collection of Contact resources.",
+      "url": "https://developer.systeme.io/reference/api_contacts_get_collection-1",
+      "snippet": ""
+    },
+    {
+      "title": "SystemeIO Python API Docs | dltHub",
+      "url": "https://dlthub.com/context/source/systeme-io",
+      "snippet": ""
+    },
+    {
+      "title": "How to create a public API key in systeme.io - Help pages",
+      "url": "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io",
+      "snippet": ""
+    },
+    {
+      "title": "How to use systeme.io's public API - Help pages",
+      "url": "https://help.systeme.io/article/2329-how-to-use-systeme-io-public-api?sa=sa0010017036324e48f2243a8ef850ae53d47e994d&sc=16412676c3ae7716d887d0ecc3c20e17d8469849",
+      "snippet": ""
+    },
+    {
+      "title": "Reference",
+      "url": "https://developer.systeme.io/reference",
+      "snippet": ""
+    },
+    {
+      "title": "How to build a systeme.io API integration",
+      "url": "https://rollout.com/integration-guides/systeme.io/how-to-build-a-public-systemeio-integration-building-the-auth-flow",
+      "snippet": ""
+    },
+    {
+      "title": "How to build a systeme.io API integration",
+      "url": "https://rollout.com/integration-guides/systeme.io/sdk/step-by-step-guide-to-building-a-systeme.io-api-integration-in-php",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "one_liner": "GitHub's REST/GraphQL APIs offer broad, free self-serve programmatic access to repos, issues, and workflows via token or OAuth authentication, with an existing official MCP server making agent integration buildable today.",
+  "auth_methods": [
+    {
+      "method": "Token",
+      "notes": "Personal access tokens (fine-grained or classic) or GITHUB_TOKEN in Actions, sent as Authorization: Bearer/token header."
+    },
+    {
+      "method": "OAuth2",
+      "notes": "GitHub Apps and OAuth Apps support OAuth2 flows for delegated access."
+    },
+    {
+      "method": "Basic",
+      "notes": "Some OAuth app endpoints require basic auth using client ID/secret."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Free plan accounts can self-generate personal access tokens or register GitHub/OAuth Apps with no payment required; usage subject to rate limits (5,000 req/hr authenticated).",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Extensive REST API covering repos, issues, PRs, actions, orgs, etc. GraphQL API also available separately."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/github"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api?apiVersion=2026-03-10",
+      "supports": "Describes token-based auth via Authorization header, personal access tokens, GitHub Apps, GITHUB_TOKEN."
+    },
+    {
+      "url": "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2022-11-28",
+      "supports": "Confirms free self-serve access with rate limits (5000 req/hr authenticated)."
+    },
+    {
+      "url": "https://github.com/pricing/",
+      "supports": "Confirms free tier available for all accounts including API access."
+    }
+  ],
+  "confidence": 0.9,
+  "flags": []
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "Mailchimp supports two primary authentication methods: API keys and OAuth 2.0 tokens [1]. Use an API key for applications tightly coupled to a single account [1][2], and use OAuth 2.0 when accessing data on behalf of other Mailchimp users [2][3].\n\nRequests can be authenticated via HTTP Basic Authentication (using your API key) or Bearer Authentication (using an OAuth token or API key) [1].\n\nFor Basic Authentication, provide your key as the password [1]:\n```bash\ncurl --request GET \\\n--url 'https://<dc>.api.mailchimp.com/3.0/' \\\n--user 'anystring:YOUR_API_KEY'\n```\n\nFor Bearer Authentication, pass the token in the header [1]:\n```bash\ncurl --request GET \\\n--url 'https://<dc>.api.mailchimp.com/3.0/' \\\n--header \"Authorization: Bearer <TOKEN>\"\n```\n\nAPI access is tied to the authorizing user's role and account permissions [1][4].",
+  "results": [
+    {
+      "title": "Fundamentals Documentation | Mailchimp Developer",
+      "url": "https://mailchimp.com/developer/marketing/docs/fundamentals/",
+      "snippet": ""
+    },
+    {
+      "title": "Access Data on Behalf of Other Users with OAuth 2 Guide | Mailchimp Developer",
+      "url": "https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/",
+      "snippet": ""
+    },
+    {
+      "title": "Integrations Documentation | Mailchimp Developer",
+      "url": "https://mailchimp.com/developer/marketing/docs/integrations/",
+      "snippet": ""
+    },
+    {
+      "title": "Errors Documentation | Mailchimp Developer",
+      "url": "https://mailchimp.com/developer/marketing/docs/errors/",
+      "snippet": ""
+    },
+    {
+      "title": "Marketing API Quick Start Guide | Mailchimp Developer",
+      "url": "https://mailchimp.com/developer/marketing/guides/quick-start/",
+      "snippet": ""
+    },
+    {
+      "title": "README.md at master · mailchimp/mailchimp-marketing-php",
+      "url": "https://github.com/mailchimp/mailchimp-marketing-php/blob/master/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "mailchimp/mailchimp-marketing-python",
+      "url": "https://github.com/mailchimp/mailchimp-marketing-python",
+      "snippet": ""
+    },
+    {
+      "title": "Methods and Parameters Documentation | Mailchimp Developer",
+      "url": "https://mailchimp.com/developer/marketing/docs/methods-parameters/",
+      "snippet": ""
+    }
+  ]
+}

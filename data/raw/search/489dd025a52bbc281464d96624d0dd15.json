@@ -1,0 +1,45 @@
+{
+  "answer": "The authentication method for iPayX/iPAYX technologies depends on the specific service. For the MCP FX Audit tool, authentication is optional and performed using a Bearer token provided via an IPAYX_API_KEY environment variable, which is required only for live provider quotes [1][2][3].\n\nConversely, IXOPAY platform APIs (Transaction, Provisioning, and Settlement) utilize HTTP Basic Authentication [4][5][6]. You must concatenate your API username (or key) and password with a colon, then Base64 encode the string to include in the Authorization header [4][5][7]. The Gateway API requires a Hash HMAC signature in the Authorization header [8].",
+  "results": [
+    {
+      "title": "README.md",
+      "url": "https://github.com/iPAYX-Technologies/mcp-fx-audit/blob/main/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "Ipayx-stellar/mcp-fx-audit",
+      "url": "https://github.com/Ipayx-stellar/mcp-fx-audit",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://mcpservers.org/servers/ipayx-technologies/mcp-fx-audit",
+      "snippet": ""
+    },
+    {
+      "title": "Transaction API | IXOPAY Developer Hub",
+      "url": "https://documentation.ixopay.com/api/transaction/transaction-api",
+      "snippet": ""
+    },
+    {
+      "title": "Provisioning API | IXOPAY Developer Hub",
+      "url": "https://documentation.ixopay.com/api/provisioning/provisioning-api",
+      "snippet": ""
+    },
+    {
+      "title": "Settlement API | IXOPAY Developer Hub",
+      "url": "https://documentation.ixopay.com/api/settlement/settlement-api",
+      "snippet": ""
+    },
+    {
+      "title": "API Keys | IXOPAY User Manual",
+      "url": "https://documentation.ixopay.com/manual/docs/system-setup/api-keys",
+      "snippet": ""
+    },
+    {
+      "title": "API Documentation :: IXOPAY Gateway",
+      "url": "https://gateway.ixopay.com/documentation/api",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "Grain Analytics provides three authentication strategies for SDK data ingestion [1][2][3]:\n\n* NONE: For development and public demos [1][2].\n* SERVER_SIDE: Uses a secret key passed in the `secretKey` parameter; requires the `Authorization: Chase {SECRET}` header [1][2].\n* JWT: Uses an `authProvider` object with a `getToken` method to supply tokens; requires the `Authorization: Bearer {TOKEN}` header [1][2][3].\n\nSeparately, the Query API requires an API key generated in the dashboard, provided via the `X-API-Key` header [4][5]. Other Grain services may use OAuth 2.1 or Personal/Workspace Access Tokens via the `Authorization: Bearer` header [6][7].",
+  "results": [
+    {
+      "title": "Authentication - Grain Analytics",
+      "url": "https://docs.grainql.com/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://docs.grainql.com/advanced/security",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://docs.grainql.com/advanced/configuration",
+      "snippet": ""
+    },
+    {
+      "title": "Query API Overview - Grain Analytics",
+      "url": "https://docs.grainql.com/api-reference/query-api/overview",
+      "snippet": ""
+    },
+    {
+      "title": "Query API - Grain Analytics",
+      "url": "https://docs.grainql.com/guides/query-api",
+      "snippet": ""
+    },
+    {
+      "title": "Grain API",
+      "url": "https://developers.grain.com/",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://docs.grainledger.com/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Security & connections - Grain Analytics",
+      "url": "https://docs.grainql.com/ai-tools/mcp/security",
+      "snippet": ""
+    }
+  ]
+}

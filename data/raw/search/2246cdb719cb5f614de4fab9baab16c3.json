@@ -1,0 +1,45 @@
+{
+  "answer": "Twilio APIs use HTTP Basic authentication [1][2]. For production applications, Twilio recommends using an API key as the username and its corresponding API key secret as the password [1][3]. For local testing, you may use your Account SID as the username and your Auth Token as the password [1][2]. You can generate API keys or retrieve your Account SID and Auth Token through the Twilio Console [1][4].\n\n```bash\ncurl -G https://api.twilio.com/2010-04-01/Accounts \\\n  -u $YOUR_API_KEY:$YOUR_API_KEY_SECRET\n```",
+  "results": [
+    {
+      "title": "Twilio API requests",
+      "url": "https://www.twilio.com/docs/usage/requests-to-twilio.md",
+      "snippet": ""
+    },
+    {
+      "title": "Our API: the basics | Twilio",
+      "url": "https://www.twilio.com/docs/iam/api",
+      "snippet": ""
+    },
+    {
+      "title": "Messaging API Overview | Twilio",
+      "url": "https://static1.twilio.com/docs/messaging/api",
+      "snippet": ""
+    },
+    {
+      "title": "REST API: Key Resource v2010 | Twilio",
+      "url": "https://www.twilio.com/docs/iam/api-keys/key-resource-v2010",
+      "snippet": ""
+    },
+    {
+      "title": "Verify API | Twilio",
+      "url": "https://www.twilio.com/docs/verify/api",
+      "snippet": ""
+    },
+    {
+      "title": "REST API: Auth Token",
+      "url": "https://www.twilio.com/docs/iam/api/authtoken.md",
+      "snippet": ""
+    },
+    {
+      "title": "Twilio API overview | Twilio",
+      "url": "https://www.twilio.com/docs/usage/api?code-sample=code-send-a-simple-sms-using-the-programmable-sms-api&amp;code-language=Node.js&amp;code-sdk-version=3.x",
+      "snippet": ""
+    },
+    {
+      "title": "Restricted API keys",
+      "url": "https://www.twilio.com/docs/iam/api-keys/restricted-api-keys.md",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "There are two distinct entities related to Consensus and the Model Context Protocol (MCP):\n\nThe Consensus AI Connect MCP server is a stateless, enterprise-grade intermediary that allows AI platforms to query the Consensus research database (200 million papers) via OAuth2-secured connections [1]. It acts as an enhancement layer, respecting existing RBAC permission structures without storing user data [1]. You can integrate it into projects using the following command [2]:\n\n```bash\nnpx @modelcontextprotocol/server-consensus -s\n```\n\nSeparately, the @consensus-tools/mcp package is an adapter for consensus-tools that exposes agent management, job lifecycles, and workflow execution as MCP tools, resources, and prompts for LLM agents [3][4]. You install it via npm or pnpm [3][5]:\n\n```json\n\"mcpServers\": {\n  \"consensus-tools\": {\n    \"command\": \"npx\",\n    \"args\": [\"@consensus-tools/mcp\"]\n  }\n}\n```",
+  "results": [
+    {
+      "title": "Consensus AI Connect - MCP Server Security Information",
+      "url": "https://support.goconsensus.com/mcp-server-security-information",
+      "snippet": ""
+    },
+    {
+      "title": "How to Access 200 Million Research Papers Using Claude and the Consensus MCP Tool - copyprompt.id",
+      "url": "https://copyprompt.id/how-to-access-200-million-research-papers-using-claude-and-the-consensus-mcp-tool.html",
+      "snippet": ""
+    },
+    {
+      "title": "toolkit/packages/adapters/mcp at main · consensus-tools/toolkit · GitHub",
+      "url": "https://github.com/consensus-tools/toolkit/tree/main/packages/adapters/mcp",
+      "snippet": ""
+    },
+    {
+      "title": "packages/adapters/mcp/README.md at 0a5cd16669a4abb131cf314f29be2d708accd610 · consensus-tools/toolkit",
+      "url": "https://github.com/consensus-tools/toolkit/blob/0a5cd16669a4abb131cf314f29be2d708accd610/packages/adapters/mcp/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "@consensus-tools/mcp - npmx",
+      "url": "https://npmx.dev/package/@consensus-tools/mcp",
+      "snippet": ""
+    },
+    {
+      "title": "modelcontextprotocol/servers",
+      "url": "https://github.com/ModelContextProtocol/servers",
+      "snippet": ""
+    },
+    {
+      "title": "Understanding MCP servers - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts",
+      "snippet": ""
+    },
+    {
+      "title": "Build an MCP server - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/develop/build-server",
+      "snippet": ""
+    }
+  ]
+}

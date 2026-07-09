@@ -1,0 +1,120 @@
+{
+  "verdicts": [
+    {
+      "field": "name",
+      "status": "supported",
+      "note": "Evidence consistently refers to 'Twilio' throughout all documentation pages."
+    },
+    {
+      "field": "website",
+      "status": "supported",
+      "note": "Multiple evidence URLs from twilio.com domain confirm the website."
+    },
+    {
+      "field": "category",
+      "status": "supported",
+      "note": "Evidence shows Twilio provides messaging (SMS, WhatsApp, Email) and voice communications APIs, supporting the Communications and Messaging category."
+    },
+    {
+      "field": "one_liner",
+      "status": "contradicted",
+      "note": "The one-liner claims an 'official/alpha MCP server available' but the evidence URL https://mcp.twilio.com/docs returns a 405 error 'The requested resource /docs does not support the attempted HTTP method GET', indicating the MCP server may not exist or is not accessible as claimed."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence from requests-to-twilio.md and iam/api clearly confirms HTTP Basic authentication using API Key/Secret (recommended) or Account SID/Auth Token (local testing only). API keys can be created in Console or via API."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Evidence from trials page confirms 30-day free trial with no credit card required, supporting 'self-serve-trial' classification."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "supported",
+      "note": "Evidence confirms 30-day trial with no credit card, includes 100 SMS, 3,000 emails, 75 voice minutes. Account SID, Auth Token accessible in Console. Evidence mentions trial expires after 30 days and upgrade required, though the 'perpetual free units' after trial is not explicitly confirmed in the evidence."
+    },
+    {
+      "field": "api_surface",
+      "status": "supported",
+      "note": "Evidence shows REST API with base URL https://api.twilio.com/2010-04-01, covering messaging, voice, verify, phone numbers, usage, account management. The iam/api page lists numerous subresources. 'Broad' breadth is reasonable."
+    },
+    {
+      "field": "existing_mcp",
+      "status": "contradicted",
+      "note": "The URL https://mcp.twilio.com/docs returns a 405 HTTP error, not valid documentation. The evidence does not support the existence of an accessible MCP server."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "Evidence shows self-serve trial signup, API key creation in Console, and REST API documentation. No significant blockers to building are evident."
+    },
+    {
+      "field": "main_blocker",
+      "status": "contradicted",
+      "note": "The main_blocker mentions 'alpha MCP package' and 'filtering tools with --services/--tags', but there is no evidence supporting the existence of an MCP package or these technical details."
+    },
+    {
+      "field": "evidence[4]",
+      "status": "contradicted",
+      "note": "The evidence URL https://mcp.twilio.com/docs returns a 405 error and does not support the claim of a 'Hosted read-only MCP server for documentation and API discovery'."
+    },
+    {
+      "field": "flags",
+      "status": "contradicted",
+      "note": "The first flag mentions '@twilio-alpha/mcp' and tool filtering requirements, but no evidence supports the existence of this package or these technical details. The second flag about trial restrictions is reasonable given trial account limitations mentioned in evidence."
+    }
+  ],
+  "revised": {
+    "id": 22,
+    "name": "Twilio",
+    "website": "twilio.com",
+    "category": "Communications and Messaging",
+    "one_liner": "Twilio provides broad REST APIs for messaging, voice, verify, and account management, authenticated via HTTP Basic auth (API Key/Secret or Account SID/Auth Token), with self-serve trial signup.",
+    "auth_methods": [
+      {
+        "method": "Basic",
+        "notes": "HTTP Basic auth using API Key as username and API Key Secret as password (recommended for production); Account SID + Auth Token supported for local testing only."
+      },
+      {
+        "method": "API key",
+        "notes": "API keys (Main, Standard, Restricted) can be created via Console or REST API and used as the Basic auth username/password pair."
+      }
+    ],
+    "self_serve": "self-serve-trial",
+    "self_serve_notes": "Twilio offers a 30-day free trial with no credit card required, including free units (100 SMS, 3,000 emails, 75 voice minutes). Account SID, Auth Token, and API keys can be created directly in the Console. Trial expires after 30 days.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "REST API with base URL https://api.twilio.com/2010-04-01 covering messaging, voice, verify, phone numbers, usage, and account management with numerous subresources. Also offers SDKs and CLI."
+    },
+    "existing_mcp": {
+      "exists": "unknown"
+    },
+    "buildability": "buildable-now",
+    "main_blocker": null,
+    "evidence": [
+      {
+        "url": "https://www.twilio.com/docs/usage/requests-to-twilio.md",
+        "supports": "HTTP Basic auth with API Key/Secret (recommended) or Account SID/Auth Token (local testing)."
+      },
+      {
+        "url": "https://www.twilio.com/docs/iam/api",
+        "supports": "REST API basics, base URL https://api.twilio.com/2010-04-01, and authentication method with curl example."
+      },
+      {
+        "url": "https://www.twilio.com/docs/usage/trials",
+        "supports": "30-day free trial details with product-specific free units (100 SMS, 3,000 emails, 75 voice minutes), no credit card required."
+      },
+      {
+        "url": "https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account",
+        "supports": "Free trial account setup, Console access to Account SID and Auth Token, 30-day expiration."
+      }
+    ],
+    "confidence": 0.9,
+    "flags": [
+      "Trial account has restrictions (e.g., limited to verified numbers) before upgrading to paid."
+    ]
+  }
+}

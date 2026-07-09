@@ -1,0 +1,49 @@
+{
+  "one_liner": "Lark (Larksuite) offers a broad REST API with tenant/app/user access tokens and OAuth2 flows, self-serve via developer console, and has an official open-source MCP server for AI agent integration.",
+  "auth_methods": [
+    {
+      "method": "OAuth2",
+      "notes": "user_access_token obtained via OAuth-style authorization code flow for acting on behalf of a user."
+    },
+    {
+      "method": "Token",
+      "notes": "tenant_access_token (t-) and app_access_token (a-/t-) are custom bearer tokens obtained via app_id/app_secret, used for server-to-server calls."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Developers can create custom apps in the Lark Developer Console, obtain app_id/app_secret, and call free/basic APIs without sales contact. Basic APIs are free up to 10,000 calls/month on Standard edition; advanced APIs require a paid plan and usage-based quota package.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Extensive server API covering Contacts, Messaging, Group Chat, Docs, Calendar, Video Conferencing, Approval, Attendance, Tasks, Email, Search, AI, Admin, OKR, and more, documented at open.larksuite.com."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://open.larksuite.com/document/mcp_open_tools/overview-of-lark-agent-integration-capabilities"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": "None significant for basic use; advanced API tiers require a paid Lark plan and purchased quota package, which could gate some functionality behind admin/paid approval.",
+  "evidence": [
+    {
+      "url": "https://open.larksuite.com/document/server-docs/getting-started/api-access-token/app-access-token-development-guide",
+      "supports": "Describes tenant_access_token, app_access_token, user_access_token and how to obtain them for API auth."
+    },
+    {
+      "url": "https://open.larksuite.com/document/uAjLw4CM/ukTMukTMukTM/api-call-guide/api-billing",
+      "supports": "Details free/basic/advanced API tiers, free 10,000 calls/month limit on Standard edition, and paid quota packages for advanced APIs."
+    },
+    {
+      "url": "https://open.larksuite.com/document/common-capabilities/sso/api/obtain-oauth-code",
+      "supports": "Documents OAuth-style authorization code flow for obtaining user_access_token."
+    },
+    {
+      "url": "https://open.larksuite.com/llms.txt",
+      "supports": "Lists official Lark OpenAPI MCP tool (@larksuiteoapi/lark-mcp) enabling AI agents to connect via stdio/HTTP/SSE."
+    }
+  ],
+  "confidence": 0.8,
+  "flags": [
+    "Advanced API tier requires paid plan + purchased quota, may limit some agent capabilities on free tier.",
+    "Official MCP server exists but community alternatives (e.g., Lark Master MCP) also referenced, suggesting coverage gaps in official tool."
+  ]
+}

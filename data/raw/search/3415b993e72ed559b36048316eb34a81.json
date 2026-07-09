@@ -1,0 +1,45 @@
+{
+  "answer": "Higgsfield MCP is a tool surface that integrates over 30 image and video generation models into any Model Context Protocol-compatible AI agent, allowing for direct creation of visual content within a chat interface [1][2][3].\n\nThe primary, official method is to use their hosted server at `https://mcp.higgsfield.ai/mcp` [1][2][4]. This method uses OAuth authentication via your Higgsfield account, requiring no manual API keys or local installation [1][5][4].\n\nFor most clients (e.g., Claude Desktop, Cursor), you add the URL to your configuration or settings, authenticate through your browser, and gain access to tools like generate_image and generate_video [1][2][4][3]. For Claude Code, you can use the terminal command:\n\n```bash\nclaude mcp add --transport http --scope user higgsfield https://mcp.higgsfield.ai/mcp\n```\n\nWhile some third-party or older local implementations involve manual Python environments and API key management [6], the official Higgsfield-maintained approach is the recommended, simplified hosted path [4][3][7].",
+  "results": [
+    {
+      "title": "Higgsfield MCP | AI Image & Video Generation for Any Agent",
+      "url": "https://higgsfield.ai/mcp?fp_sid=mcp&fpr=3066",
+      "snippet": ""
+    },
+    {
+      "title": "Higgsfield MCP: Agentic Image and Video Generation (2026) — MCP.Directory",
+      "url": "https://mcp.directory/blog/higgsfield-mcp-guide",
+      "snippet": ""
+    },
+    {
+      "title": "Higgsfield MCP: Connect 30+ AI Models to Claude Code and Cursor (2026 Setup Guide)",
+      "url": "https://www.promptzone.com/elena_martinez_a2d049d5/higgsfield-mcp-connect-30-ai-models-to-claude-code-and-cursor-2026-setup-guide-m4o",
+      "snippet": ""
+    },
+    {
+      "title": "Higgsfield MCP for Claude Code: 60-Second Setup | TECHSY",
+      "url": "https://techsy.io/en/blog/higgsfield-mcp-claude-code",
+      "snippet": ""
+    },
+    {
+      "title": "How To Generate AI Videos Straight From Claude with Higgsfield's MCP",
+      "url": "https://higgsfield.ai/blog/Generate-AI-Videos-From-Claude-with-Higgsfield-MCP",
+      "snippet": ""
+    },
+    {
+      "title": "Higgsfield AI MCP: Complete Visual Content Guide for Claude 2026 | SoloSoft",
+      "url": "https://www.solosoft.dev/post/higgsfield-ai-mcp-guide-2026/",
+      "snippet": ""
+    },
+    {
+      "title": "Higgsfield MCP - Hosted AI Image and Video MCP Server for Claude | a2a mcp",
+      "url": "https://a2a-mcp.org/entry/higgsfield-mcp-is-now-free",
+      "snippet": ""
+    },
+    {
+      "title": "s0uvik/higgsfield-mcp",
+      "url": "https://github.com/s0uvik/higgsfield-mcp",
+      "snippet": ""
+    }
+  ]
+}

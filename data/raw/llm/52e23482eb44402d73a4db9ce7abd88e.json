@@ -1,0 +1,49 @@
+{
+  "one_liner": "Airtable offers a well-documented REST Web API for managing bases, tables, and records, authenticated via personal access tokens or OAuth2, self-serve on the Free plan with rate/usage limits.",
+  "auth_methods": [
+    {
+      "method": "Token",
+      "notes": "Personal access tokens (PAT) passed as Authorization: Bearer header; self-serve creation at /create/tokens, scoped to specific bases/workspaces."
+    },
+    {
+      "method": "OAuth2",
+      "notes": "OAuth access tokens for third-party integrations where end-users grant access; registered at /create/oauth, standard OAuth2 grant flow."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Free plan includes API access with a limit of 1,000 API calls/month per workspace; rate limited to 5 req/sec (50 req/sec with PATs). Tokens can be created immediately via developer portal without approval.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Covers base/table/record CRUD, metadata API (create/list tables, bases), scopes system, webhooks, and per-base dynamic API docs."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://airtable.com/developers/web/api/introduction"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": "None significant; Free plan API call limits (1,000/month) may require paid plan for higher-volume agent usage.",
+  "evidence": [
+    {
+      "url": "https://airtable.com/developers/web/api/authentication",
+      "supports": "Token-based auth via Bearer header, PAT and OAuth token types described"
+    },
+    {
+      "url": "https://airtable.com/developers/web/guides/personal-access-tokens",
+      "supports": "Self-serve PAT creation at /create/tokens with configurable scopes and resource access"
+    },
+    {
+      "url": "https://airtable.com/developers/web/api/oauth-reference",
+      "supports": "OAuth authorization endpoint and flow for third-party integrations"
+    },
+    {
+      "url": "https://airtable.com/pricing",
+      "supports": "Free plan includes API access with monthly call limits, confirming self-serve free tier"
+    }
+  ],
+  "confidence": 0.85,
+  "flags": [
+    "Multiple community-built MCP servers exist (npm packages) rather than an official Airtable-maintained MCP server",
+    "Free plan API call limit (1,000/month) is quite low for production agent workloads"
+  ]
+}

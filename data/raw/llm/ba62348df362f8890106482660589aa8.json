@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://github.com/Nuraveda-Labs/linkedin-ads-mcp",
+  "reason": "While there is no official LinkedIn-provided MCP server, several well-known community implementations exist that expose LinkedIn Ads capabilities over MCP. These include both read-only servers (flin-linkedin-ads-mcp, insightfulpipe/linkedin-ads-mcp-server) and read/write servers (mharnett/mcp-linkedin-ads, Nuraveda-Labs/linkedin-ads-mcp, manlikemuneeb/ads-mcp). These are distinct packages that provide MCP server functionality for LinkedIn Ads, not just API documentation or the product homepage."
+}

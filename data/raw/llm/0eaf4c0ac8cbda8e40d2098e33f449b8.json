@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://mcp.otter.ai/mcp",
+  "reason": "There is an official Otter.ai MCP server that is a dedicated hosted remote server accessible at https://mcp.otter.ai/mcp. This server allows AI assistants to securely access meeting transcripts, summaries, and action items directly through the Model Context Protocol. Authentication is handled via OAuth. This is distinct from Otter.ai's product website or REST API documentation."
+}

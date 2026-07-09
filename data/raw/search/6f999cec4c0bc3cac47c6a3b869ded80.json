@@ -1,0 +1,45 @@
+{
+  "answer": "There are multiple unofficial Model Context Protocol (MCP) servers available for the Meta Threads API, including implementations by developers such as quinnjr [1], MetaThreads [2], and sergekostenchuk [3]. These servers enable AI assistants like Claude to programmatically manage Threads content, including publishing posts (text, image, video), managing replies, and retrieving engagement analytics [1][2][4].\n\nTo use these servers, you must first create a Meta Developer app and configure OAuth 2.0 credentials [1][3]. Integration typically requires adding the server to your MCP client configuration file:\n\n```json\n{\n  \"mcpServers\": {\n    \"threads\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@pegasusheavy/threads-mcp\"],\n      \"env\": {\n        \"THREADS_APP_ID\": \"your-app-id\",\n        \"THREADS_APP_SECRET\": \"your-app-secret\"\n      }\n    }\n  }\n}\n```\n\nBe aware that specific permissions like `threads_keyword_search` may require Meta's App Review process for production use [5]. Always consult the specific repository's documentation for its unique feature set and setup requirements [1][4][6].",
+  "results": [
+    {
+      "title": "quinnjr/threads-mcp",
+      "url": "https://github.com/quinnjr/threads-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "MetaThreads/meta-threads-mcp",
+      "url": "https://github.com/MetaThreads/meta-threads-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "sergekostenchuk/threads-mcp",
+      "url": "https://github.com/sergekostenchuk/threads-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "SvetimFM/threads-mcp-server",
+      "url": "https://github.com/SvetimFM/threads-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "griffinwork40/threads-mcp",
+      "url": "https://github.com/griffinwork40/threads-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "baguskto/threads-mcp",
+      "url": "https://github.com/baguskto/threads-mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "poisonstefani-dev/threads-mcp",
+      "url": "https://github.com/poisonstefani-dev/threads-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "meta-threads-mcp v0.1.0",
+      "url": "https://pypi.org/project/meta-threads-mcp/",
+      "snippet": ""
+    }
+  ]
+}

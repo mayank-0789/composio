@@ -1,0 +1,45 @@
+{
+  "answer": "The Twilio MCP server allows AI coding agents to access Twilio's API surface and documentation directly within an IDE or agent [1][2]. It indexes public OpenAPI specifications across 30+ products, eliminating the need for web scraping or manual documentation lookups [1][2].\n\nThere are two primary ways to access this:\n1. Hosted Server: For documentation and API schema retrieval only (no authentication required), point your IDE to https://mcp.twilio.com/docs [1].\n2. Alpha MCP Server: For executing API calls, use the `@twilio-alpha/mcp` package [3][4].\n\nTo configure the Alpha server in your client:\n```json\n{\n  \"mcpServers\": {\n    \"twilio\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@twilio-alpha/mcp\",\n        \"YOUR_ACCOUNT_SID/YOUR_API_KEY:YOUR_API_SECRET\",\n        \"--services\",\n        \"twilio_api_v2010\"\n      ]\n    }\n  }\n}\n```\nBecause of LLM context limits, use `--services` and `--tags` to filter the tools [3][5]. Note that the Alpha server is a beta tool that may increase token costs due to context caching [2][6].",
+  "results": [
+    {
+      "title": "Twilio MCP server | Twilio",
+      "url": "https://www.twilio.com/docs/ai/mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Building with AI? Why You Should Connect Twilio's MCP Server | Twilio",
+      "url": "https://www.twilio.com/en-us/blog/developers/best-practices/why-connect-twilio-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Use the Twilio Alpha MCP Server to Automate Development | Twilio",
+      "url": "https://www.twilio.com/en-us/blog/introducing-twilio-alpha-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "@twilio-alpha/mcp",
+      "url": "https://registry.npmjs.org/@twilio-alpha/mcp",
+      "snippet": ""
+    },
+    {
+      "title": "mcp/packages/mcp at a0ab1527c5f7a0ed0b7c9d86306839f09f9f7e8e · twilio-labs/mcp · GitHub",
+      "url": "https://github.com/twilio-labs/mcp/tree/a0ab1527c5f7a0ed0b7c9d86306839f09f9f7e8e/packages/mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Model Context Protocol: Real-World Performance Testing of Twilio Alpha's MCP Server | Twilio",
+      "url": "https://www.twilio.com/en-us/blog/developers/twilio-alpha-mcp-server-real-world-performance",
+      "snippet": ""
+    },
+    {
+      "title": "twilio-labs/mcp",
+      "url": "https://github.com/twilio-labs/mcp",
+      "snippet": ""
+    },
+    {
+      "title": "function-templates/mcp-server at main · twilio-labs/function-templates · GitHub",
+      "url": "https://github.com/twilio-labs/function-templates/tree/main/mcp-server",
+      "snippet": ""
+    }
+  ]
+}

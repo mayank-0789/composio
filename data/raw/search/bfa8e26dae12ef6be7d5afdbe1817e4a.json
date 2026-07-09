@@ -1,0 +1,45 @@
+{
+  "answer": "Salesforce leverages the open-source Model Context Protocol (MCP) to provide a standardized, secure way for AI agents and assistants—such as Claude, ChatGPT, or Cursor—to interact with Salesforce data and logic without custom API integrations [1][2][3].\n\nThe ecosystem includes three primary offerings:\n1. Salesforce Hosted MCP Servers: A platform-native, admin-configurable service currently in pilot that enables per-user OAuth 2.0 authentication and governs access to SObjects, Flows, Apex, and analytics [1][2][4].\n2. Salesforce DX MCP Server: A developer-focused implementation (Beta) used to run deployment and environment management tasks via natural language [2][5].\n3. Custom/Third-Party MCP Servers: Developers can build their own servers using existing Apex logic or deploy custom wrappers via infrastructure like Heroku, which connect to Agentforce or other MCP hosts [2][4][6].\n\nThese servers operate via a client-server architecture where the host manages the AI interaction and the server acts as a secure interface to Salesforce resources [2][3]. Configuration typically involves pointing your MCP client to the server command or URL and ensuring the required authentication—often OAuth—is set [7][4][8]. For local testing with specific implementations like the Salesforce DX server, you configure your client’s MCP JSON file with the `--orgs` flag to specify authorized instances [7][5].",
+  "results": [
+    {
+      "title": "Get Started | Hosted MCP Servers | Salesforce Developers",
+      "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/hosted-mcp-servers-overview.html",
+      "snippet": ""
+    },
+    {
+      "title": "Introducing MCP Support Across Salesforce | Salesforce Developers Blog",
+      "url": "https://developer.salesforce.com/blogs/2025/06/introducing-mcp-support-across-salesforce",
+      "snippet": ""
+    },
+    {
+      "title": "Model Context Protocol: What Is MCP for Generative AI? | Salesforce",
+      "url": "https://www.salesforce.com/agentforce/mcp-support/model-context-protocol/",
+      "snippet": ""
+    },
+    {
+      "title": "Build Custom MCP Servers | Hosted MCP Servers | Salesforce Developers",
+      "url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/custom-servers.html",
+      "snippet": ""
+    },
+    {
+      "title": "GitHub - salesforcecli/mcp: MCP Server for interacting with Salesforce instances · GitHub",
+      "url": "https://github.com/salesforcecli/mcp/tree/main",
+      "snippet": ""
+    },
+    {
+      "title": "monchrome/sfdcmcpsrv",
+      "url": "https://github.com/monchrome/sfdcmcpsrv",
+      "snippet": ""
+    },
+    {
+      "title": "salesforcecli/mcp",
+      "url": "https://github.com/salesforcecli/mcp?tab=readme-ov-file",
+      "snippet": ""
+    },
+    {
+      "title": "ampcome-mcps/salesforce-mcp",
+      "url": "https://github.com/ampcome-mcps/salesforce-mcp",
+      "snippet": ""
+    }
+  ]
+}

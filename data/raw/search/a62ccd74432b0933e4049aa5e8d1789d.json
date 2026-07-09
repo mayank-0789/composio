@@ -1,0 +1,45 @@
+{
+  "answer": "The iPayX FX Audit MCP server is a forensic tool designed to audit foreign exchange transactions, detect hidden bank markups, and generate FINTRAC-certified reports [1][2]. It functions as a rail-agnostic layer for B2B payments across platforms like SWIFT, SEPA, and stablecoins [1][2].\n\nTo integrate it, add the server to your MCP client configuration using the endpoint URL `https://mcp.ipayx.ai/mcp` [3].\n\nExample configuration:\n\n```json\n{\n  \"mcpServers\": {\n    \"ipayx-fx\": {\n      \"url\": \"https://mcp.ipayx.ai/mcp\"\n    }\n  }\n}\n```\n\nKey tools include `audit_fx_transaction` and `check_fx_mid_market_rate` [4][5].",
+  "results": [
+    {
+      "title": "README.md",
+      "url": "https://github.com/iPAYX-Technologies/mcp-fx-audit/blob/main/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://mcpservers.org/servers/ipayx-technologies/mcp-fx-audit",
+      "snippet": ""
+    },
+    {
+      "title": "bb30c87 fix(server.json): correct remote URL to mcp.ipayx.ai/mcp (the /mcp path) + bump v1.3.4",
+      "url": "https://github.com/iPAYX-Technologies/mcp-fx-audit/commit/bb30c87f2bdfe8a2f8d18b051b2d34c61ba7b7a6",
+      "snippet": ""
+    },
+    {
+      "title": "iPayX FX Audit - MCP Connector | Glama",
+      "url": "https://glama.ai/mcp/connectors/io.github.Ipayx-stellar/fx-audit",
+      "snippet": ""
+    },
+    {
+      "title": "iPayX FX Audit - MCP Connector | Glama",
+      "url": "https://glama.ai/mcp/connectors/co.supabase.hvujzsdwcoweirroubeh/i-pay-x-fx-audit",
+      "snippet": ""
+    },
+    {
+      "title": "Ipayx-stellar/mcp-fx-audit",
+      "url": "https://github.com/Ipayx-stellar/mcp-fx-audit",
+      "snippet": ""
+    },
+    {
+      "title": "iPAYX-Technologies",
+      "url": "https://github.com/iPAYX-Technologies",
+      "snippet": ""
+    },
+    {
+      "title": "Understanding MCP servers - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts",
+      "snippet": ""
+    }
+  ]
+}

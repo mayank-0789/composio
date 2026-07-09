@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://developer.salesforce.com/docs/commerce/commerce-solutions/guide/mcp-dx-intro.html",
+  "reason": "Salesforce provides an official B2C DX MCP server as part of the B2C Developer Toolkit. This dedicated MCP server supports cartridge deployment, Managed Runtime (MRT) operations, and SCAPI integration for Salesforce Commerce Cloud. It can be installed via npm using @salesforce/b2c-dx-mcp. Additionally, Salesforce offers a separate B2C Commerce MCP Shopper Service (pilot) for agentic shopper experiences. There are also community-developed MCP servers available for different Commerce Cloud interaction patterns."
+}

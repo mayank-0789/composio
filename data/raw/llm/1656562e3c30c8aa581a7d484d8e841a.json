@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://www.stackone.com/connectors/gladly/mcp/",
+  "reason": "A dedicated Model Context Protocol (MCP) server for Gladly exists, provided by StackOne. This is a production-ready MCP server that enables AI agents to connect to Gladly and perform read, write, update, and delete operations on customer service data. It includes 65 pre-built actions, managed authentication, and built-in security features, allowing agents to interact with Gladly through standard MCP clients like Claude Desktop, Cursor, or VS Code."
+}

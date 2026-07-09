@@ -1,0 +1,45 @@
+{
+  "answer": "Devin provides a self-serve platform that includes a free tier for individuals [1][2]. The Free plan offers limited usage, access to specific features like Devin Review and DeepWiki, unlimited inline edits, and unlimited Tab completions [3][1]. It does not provide the ongoing paid usage or higher quotas available in the Pro, Max, or Teams plans [3][4][5].\n\nThere is no dedicated developer API tier; however, paid self-serve users receive a usage quota that refreshes automatically [3][6]. If you exceed your included quota, you can purchase extra usage billed at model-specific API pricing [3][6]. Enterprise customers maintain access through custom agreements [2][6].",
+  "results": [
+    {
+      "title": "Self-serve plans - Devin Docs",
+      "url": "https://docs.devin.ai/admin/billing/self-serve",
+      "snippet": ""
+    },
+    {
+      "title": "Billing - Devin Docs",
+      "url": "https://docs.devin.ai/admin/billing",
+      "snippet": ""
+    },
+    {
+      "title": "Plans and Pricing | Devin",
+      "url": "https://devin.ai/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "New self-serve plans for Devin | Cognition",
+      "url": "https://cognition.com/blog/new-self-serve-plans-for-devin",
+      "snippet": ""
+    },
+    {
+      "title": "Cognition revamps Devin pricing with new tiers, compute billing | Augmenter.dev",
+      "url": "https://augmenter.dev/articles/cognition-revamps-devin-pricing-with-new-tiers-compute-billing-1776262728623/",
+      "snippet": ""
+    },
+    {
+      "title": "Quota-Based Usage - Devin Docs",
+      "url": "https://docs.devin.ai/desktop/accounts/quota",
+      "snippet": ""
+    },
+    {
+      "title": "Plans and Usage - Devin Docs",
+      "url": "https://docs.devin.ai/desktop/accounts/usage",
+      "snippet": ""
+    },
+    {
+      "title": "An Update to Our Free Plan | Devin",
+      "url": "https://devin.ai/blog/update-to-free-plan",
+      "snippet": ""
+    }
+  ]
+}

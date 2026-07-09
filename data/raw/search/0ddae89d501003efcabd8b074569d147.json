@@ -1,0 +1,45 @@
+{
+  "answer": "The Model Context Protocol (MCP) server for Slack allows AI assistants to securely interact with your workspace by reading channels, searching messages, and taking actions like posting replies or managing files [1][2].\n\nSeveral open-source MCP server implementations exist, each with varying features, authentication methods, and configuration requirements [3][4][5][6][7][8]. Some implementations, such as the one by karbassi, provide comprehensive access to nearly all Slack Web API methods [4], while others like korotovsky's offer specialized features like stealth mode and smart history filtering [3].\n\nTo get started, you generally need to:\n1. Choose an MCP server implementation (e.g., [3][4][5][6][7][8]).\n2. Create a Slack App to obtain the necessary OAuth tokens or bot tokens [7][8].\n3. Configure your AI client (such as Claude Desktop or Cursor) by adding the server to your configuration file (e.g., `claude_desktop_config.json`) with the required environment variables like `SLACK_BOT_TOKEN` or `SLACK_XOXP_TOKEN` [4][5][8].",
+  "results": [
+    {
+      "title": "Guide to Model Context Protocol in Slack | Slack",
+      "url": "https://slack.com/help/articles/48855576908307-Guide-to-Model-Context-Protocol-in-Slack",
+      "snippet": ""
+    },
+    {
+      "title": "Guide to Model Context Protocol in Slack | Slack",
+      "url": "https://slack.com/help/articles/48855576908307-Guide-to-the-Slack-MCP-server",
+      "snippet": ""
+    },
+    {
+      "title": "korotovsky/slack-mcp-server",
+      "url": "https://github.com/korotovsky/slack-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "karbassi/slack-mcp",
+      "url": "https://github.com/karbassi/slack-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "@modelcontextprotocol/server-slack",
+      "url": "https://registry.npmjs.org/%40modelcontextprotocol%2Fserver-slack",
+      "snippet": ""
+    },
+    {
+      "title": "zencoderai/slack-mcp-server",
+      "url": "https://github.com/zencoderai/slack-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "jimloco/slack-mcp",
+      "url": "https://github.com/jimloco/slack-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "brandonj-taboola/slack-mcp",
+      "url": "https://github.com/brandonj-taboola/slack-mcp",
+      "snippet": ""
+    }
+  ]
+}

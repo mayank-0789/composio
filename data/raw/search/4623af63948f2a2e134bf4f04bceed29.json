@@ -1,0 +1,45 @@
+{
+  "answer": "Pipedrive supports two primary authentication methods: Personal API Tokens and OAuth 2.0.\n\nFor API token integrations, provide the token in the x-api-token header [1].\n\n```curl\ncurl --request GET \\\n--url \"https://companydomain.pipedrive.com/api/v2/deals\" \\\n--header \"x-api-token: your_api_token\"\n```\n\nOAuth 2.0 is required for apps published in the Pipedrive Marketplace [2][3]. This involves redirecting users to Pipedrive’s authorization server to obtain an authorization code, which is then exchanged for access and refresh tokens [2][3]. Once obtained, the access token must be provided in the Authorization header for all API requests [3]:\n\n```text\nAuthorization: Bearer <access_token>\n```\n\nIf both methods are present, the API token takes precedence [4].",
+  "results": [
+    {
+      "title": "Authentication",
+      "url": "https://pipedrive.readme.io/docs/core-api-concepts-authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Pipedrive API v1 Dev References (Oauth) - Learn - Test - Try Now",
+      "url": "https://developers.pipedrive.com/docs/api/v1/Oauth",
+      "snippet": ""
+    },
+    {
+      "title": "OAuth authorization",
+      "url": "https://pipedrive.readme.io/docs/marketplace-oauth-authorization",
+      "snippet": ""
+    },
+    {
+      "title": "README.md",
+      "url": "https://github.com/pipedrive/client-nodejs/blob/master/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "About the Pipedrive API",
+      "url": "https://pipedrive.readme.io/docs/core-api-concepts-about-pipedrive-api",
+      "snippet": ""
+    },
+    {
+      "title": "Requests",
+      "url": "https://pipedrive.readme.io/docs/core-api-concepts-requests",
+      "snippet": ""
+    },
+    {
+      "title": "Queries around API authentication (current baseUrl, tokens) - API - Pipedrive Developers' Community",
+      "url": "https://devcommunity.pipedrive.com/t/queries-around-api-authentication-current-baseurl-tokens/5662",
+      "snippet": ""
+    },
+    {
+      "title": "Pipedrive API v1 Dev References (Users) - View 'me' GET Requests & More - Learn - Test - Try",
+      "url": "https://developers.pipedrive.com/docs/api/v1/Users",
+      "snippet": ""
+    }
+  ]
+}

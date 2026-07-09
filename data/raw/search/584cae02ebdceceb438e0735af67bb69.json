@@ -1,0 +1,45 @@
+{
+  "answer": "Zendesk does not offer a free, permanent tier for API access or free API-only agent licenses. You can access the API by purchasing a subscription plan, which includes account-level rate limits ranging from 200 to 2,500 requests per minute depending on the tier.\n\nDevelopers building apps for the Zendesk Marketplace can request a sponsored account, which provides a free, non-expiring instance for development and testing. Otherwise, you can use a 14-day free trial for initial exploration. Higher API limits are available via the High Volume API add-on for eligible paid plans.",
+  "results": [
+    {
+      "title": "Zendesk Pricing Plans | Starting from $19/month",
+      "url": "https://www.zendesk.com/pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "Getting a trial or sponsored account for development | Zendesk Developer Docs",
+      "url": "https://developer.zendesk.com/documentation/api-basics/getting-started/getting-a-trial-or-sponsored-account-for-development/",
+      "snippet": ""
+    },
+    {
+      "title": "Rate limits | Zendesk Developer Docs",
+      "url": "https://developer.zendesk.com/api-reference/introduction/rate-limits/",
+      "snippet": ""
+    },
+    {
+      "title": "Does Zendesk offer a free API-only agent license? – Zendesk help",
+      "url": "https://support.zendesk.com/hc/en-us/articles/4408881877786-Does-Zendesk-offer-a-free-API-only-agent-license",
+      "snippet": ""
+    },
+    {
+      "title": "Managing API usage in your Zendesk account – Zendesk help",
+      "url": "https://support.zendesk.com/hc/en-us/articles/4408836402074-Managing-API-usage-in-your-Zendesk-account",
+      "snippet": ""
+    },
+    {
+      "title": "ZIS Frequently Asked Questions (FAQs) | Zendesk Developer Docs",
+      "url": "https://developer.zendesk.com/documentation/integration-services/getting-started/zis-faqs/",
+      "snippet": ""
+    },
+    {
+      "title": "Zendesk for startups: AI customer service solution that scales",
+      "url": "https://www.zendesk.com/business/startups/",
+      "snippet": ""
+    },
+    {
+      "title": "Zendesk API Pricing & Rate Limits in 2026: What Developers and Ops Teams Need to Know | CorePiper",
+      "url": "https://corepiper.com/blog/zendesk-api-pricing/",
+      "snippet": ""
+    }
+  ]
+}

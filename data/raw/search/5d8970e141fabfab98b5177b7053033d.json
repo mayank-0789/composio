@@ -1,0 +1,45 @@
+{
+  "answer": "Lark offers a free tier for self-built applications, though usage is subject to API classification. Server-side APIs are categorized into free, basic, and advanced types. \n\nFor basic APIs, Lark Standard Edition provides a free limit of 10,000 calls per month, while higher versions have no limits. If a standard tenant exceeds this limit, calls will fail with error code 99991403. Advanced APIs require the purchase of a usage-based quota package, available only to paid versions of Lark. Free APIs have no usage limits or costs. \n\nDevelopers can manage API access and view usage metrics directly via the Lark Developer Console.",
+  "results": [
+    {
+      "title": "Documentation -  Lark Developer",
+      "url": "https://open.larksuite.com/document/uAjLw4CM/ukTMukTMukTM/api-call-guide/api-billing",
+      "snippet": ""
+    },
+    {
+      "title": "Documentation -  Lark Developer",
+      "url": "https://open.larksuite.com/document/ugTOwEjL4kDMx4CO5ATM/uMzMyYjLzMjM24yMzIjN",
+      "snippet": ""
+    },
+    {
+      "title": "Lark | Pricing Plans - Best Priced All-in-one Solution",
+      "url": "https://www.larksuite.com/en_us/plans?from=topics_meeting-glossary_touchpoint",
+      "snippet": ""
+    },
+    {
+      "title": "Lark Developer",
+      "url": "https://open.larksuite.com/llms.txt",
+      "snippet": ""
+    },
+    {
+      "title": "Documentation -  Lark Developer",
+      "url": "https://open.larksuite.com/document/home/introduction-to-scope-and-authorization/permission",
+      "snippet": ""
+    },
+    {
+      "title": "README.md",
+      "url": "https://github.com/larksuite/lark-openapi-mcp/blob/main/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "Documentation -  Lark Developer",
+      "url": "https://open.larksuite.com/document/isv-guides/publish-your-app/step4-set-billing-plans",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing plans | Run your entire business on one Lark base",
+      "url": "https://www.larksuite.com/lp/en/base-plans?from=base_solution",
+      "snippet": ""
+    }
+  ]
+}

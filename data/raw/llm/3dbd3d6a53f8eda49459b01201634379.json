@@ -1,0 +1,42 @@
+{
+  "one_liner": "DataForSEO offers a broad self-serve REST API suite for SEO, SERP, keyword, backlink, and business data with Basic Auth and an official MCP server for AI agent integration.",
+  "auth_methods": [
+    {
+      "method": "Basic",
+      "notes": "Login (email) and auto-generated API password combined as login:password and Base64-encoded, passed in the Authorization header. No OAuth flow; credentials cannot be passed as URL params."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Free self-serve registration grants API login/password immediately via dashboard API Access tab. No recurring subscription; pay-as-you-go with $1 trial credit on signup and a $50 minimum top-up for continued usage. Sandbox available for testing at higher volumes.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Wide range of REST APIs covering SERP, Keyword Data, Domain Analytics, On-Page, Labs, Business Data, Merchant, Backlinks, App Data, Content Analysis, AI Optimization."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://mcp.dataforseo.com/http"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://docs.dataforseo.com/v3/auth/",
+      "supports": "Details Basic Authentication scheme using Base64-encoded login:password in Authorization header, and self-serve credential retrieval from dashboard."
+    },
+    {
+      "url": "https://dataforseo.com/help-center/how-to-authenticate-with-dataforseo-google-search-serp-api-api-key-setup-and-code-examples",
+      "supports": "Explains free account registration, $1 trial credit, and API password/Basic Auth setup process."
+    },
+    {
+      "url": "https://dataforseo.com/help-center/how-does-your-free-unlimited-trial-work",
+      "supports": "Describes self-serve free trial credit and pay-as-you-go model."
+    },
+    {
+      "url": "https://docs.dataforseo.com/v3/",
+      "supports": "Broad REST API surface across multiple SEO/data verticals."
+    }
+  ],
+  "confidence": 0.9,
+  "flags": []
+}

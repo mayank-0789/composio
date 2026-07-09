@@ -1,0 +1,45 @@
+{
+  "answer": "Yes, there are several unofficial Model Context Protocol (MCP) servers available for Meta's Threads API, including implementations by sergekostenchuk [1], quinnjr [2], MetaThreads [3], SvetimFM [4], griffinwork40 [5], poisonstefani-dev [6], and baguskto [7].\n\nThese servers generally enable AI assistants like Claude to read posts, publish content (text, image, video, carousel), manage replies, and retrieve analytics. Setup typically requires a Meta Developer account and OAuth 2.0 credentials [2][7]. Some advanced features, such as keyword search or profile discovery, may require Meta's App Review process for production use [5].",
+  "results": [
+    {
+      "title": "sergekostenchuk/threads-mcp",
+      "url": "https://github.com/sergekostenchuk/threads-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "quinnjr/threads-mcp",
+      "url": "https://github.com/quinnjr/threads-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "MetaThreads/meta-threads-mcp",
+      "url": "https://github.com/MetaThreads/meta-threads-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "SvetimFM/threads-mcp-server",
+      "url": "https://github.com/SvetimFM/threads-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "griffinwork40/threads-mcp",
+      "url": "https://github.com/griffinwork40/threads-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "poisonstefani-dev/threads-mcp",
+      "url": "https://github.com/poisonstefani-dev/threads-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "baguskto/threads-mcp",
+      "url": "https://github.com/baguskto/threads-mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "meta-threads-mcp v0.1.0",
+      "url": "https://pypi.org/project/meta-threads-mcp/",
+      "snippet": ""
+    }
+  ]
+}

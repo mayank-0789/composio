@@ -1,0 +1,45 @@
+{
+  "answer": "Aircall does not provide a free tier that includes API access. Aircall is a paid subscription service with pricing tiers such as Essentials, Professional, and Custom. While the company offers a free trial for its services, there is no ongoing free account tier. Access to the Aircall API is included in paid plans, but advanced features like dedicated API developer support are reserved for Custom enterprise-level plans. Developers can utilize the open API and OAuth through standard paid subscriptions, but specific integrations like the WhatsApp Public API require a Professional plan and an active add-on.",
+  "results": [
+    {
+      "title": "Aircall Pricing & Plans: AI-Powered Calling, Voice Agents & 250+ Integrations | Aircall",
+      "url": "https://aircall.io/pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "Aircall Help Center | Aircall plans: pricing and flexibility",
+      "url": "https://support.aircall.io/en-gb/articles/30599733509277",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://aircall.io/en-gb/partners/technology/",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://aircall.io/en-gb/pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "Aircall Help Center | The Aircall Starter AI Plan",
+      "url": "https://support.aircall.io/en-gb/articles/36572078998941",
+      "snippet": ""
+    },
+    {
+      "title": "Aircall Help Center | Getting started with the WhatsApp Public API",
+      "url": "https://support.aircall.io/en-gb/articles/36194129344541",
+      "snippet": ""
+    },
+    {
+      "title": "Aircall Review & API Analysis | GTM Tools",
+      "url": "https://gtmtools.dev/tools/aircall/",
+      "snippet": ""
+    },
+    {
+      "title": "Aircall Help Center | Understanding your AI Voice Agent charges",
+      "url": "https://support.aircall.io/en-gb/articles/28888299272733",
+      "snippet": ""
+    }
+  ]
+}

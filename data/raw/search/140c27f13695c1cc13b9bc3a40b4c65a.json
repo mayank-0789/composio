@@ -1,0 +1,45 @@
+{
+  "answer": "Netlify uses OAuth 2.0 for API authentication [1][2]. For manual requests, you must include a personal access token (PAT) in the Authorization header using the Bearer scheme [1][3].\n\nExample request:\n\n```bash\ncurl -X GET 'https://api.netlify.com/api/v1/sites' \\\n  -H 'Authorization: Bearer YOUR_NETLIFY_TOKEN' \\\n  -H 'Content-Type: application/json'\n```\n\nYou can generate a PAT in your Netlify user settings under Applications > Personal access tokens [1][4]. For public integrations, you must use the OAuth 2.0 flow via the authorization endpoint at https://app.netlify.com/authorize [1]. If you reset your password, all existing tokens are invalidated [4].",
+  "results": [
+    {
+      "title": "Get started with the Netlify API | Netlify Docs",
+      "url": "https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api",
+      "snippet": ""
+    },
+    {
+      "title": "Netlify API documentation",
+      "url": "https://open-api.netlify.com/",
+      "snippet": ""
+    },
+    {
+      "title": "Netlify REST API Reference | netlify.rest",
+      "url": "https://netlify.rest/",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://docs.netlify.com/api-and-cli-guides/cli-guides/get-started-with-cli",
+      "snippet": ""
+    },
+    {
+      "title": "Swagger.yml",
+      "url": "https://raw.githubusercontent.com/netlify/open-api/master/swagger.yml",
+      "snippet": ""
+    },
+    {
+      "title": "netlify/open-api",
+      "url": "https://github.com/netlify/open-api?tab=readme-ov-file",
+      "snippet": ""
+    },
+    {
+      "title": "docs/commands/api.md",
+      "url": "https://github.com/netlify/cli/blob/HEAD/docs/commands/api.md",
+      "snippet": ""
+    },
+    {
+      "title": "build/packages/js-client at main · netlify/build · GitHub",
+      "url": "https://github.com/netlify/build/tree/main/packages/js-client",
+      "snippet": ""
+    }
+  ]
+}

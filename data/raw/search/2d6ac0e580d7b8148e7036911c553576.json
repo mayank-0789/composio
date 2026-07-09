@@ -1,0 +1,45 @@
+{
+  "answer": "Attio offers a self-serve free tier that includes access to their API [1][2]. You can sign up for this tier directly on their website without a credit card [3].\n\nWhile the API is available to free-tier users, it is subject to rate limits [1]. You can authenticate your integrations using OAuth 2.0 to access the REST API, webhooks, and App SDK [4]. Full documentation for building on the platform is available at the Attio Developer Platform website [4][2].",
+  "results": [
+    {
+      "title": "Attio Review 2026: Modern CRM for Data Teams — Pricing | SyncGTM",
+      "url": "https://syncgtm.com/blog/attio-review",
+      "snippet": ""
+    },
+    {
+      "title": "Attio Review & API Analysis | GTM Tools",
+      "url": "https://gtmtools.dev/tools/attio/",
+      "snippet": ""
+    },
+    {
+      "title": "CRM for the next generation of teams.",
+      "url": "https://attio.com/p/crm-0319-25",
+      "snippet": ""
+    },
+    {
+      "title": "Attio | Developer Platform",
+      "url": "https://attio.com/platform/developers",
+      "snippet": ""
+    },
+    {
+      "title": "Attio Pricing Explained 2026 — Plans, Costs, and What's Worth It",
+      "url": "https://www.craftt.io/blog/attio-pricing-explained",
+      "snippet": ""
+    },
+    {
+      "title": "Attio Pricing Explained (2026) | Sasanova",
+      "url": "https://www.sasanova.com/pricing/attio",
+      "snippet": ""
+    },
+    {
+      "title": "Attio: Ask more from CRM",
+      "url": "https://attio.com/",
+      "snippet": ""
+    },
+    {
+      "title": "Is Attio CRM Worth It? A Founder's Review — The Dench Blog",
+      "url": "https://www.dench.com/blog/is-attio-worth-it",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "A NotebookLM MCP server allows you to programmatically manage your notebooks, ingest sources, perform grounded queries, and generate studio artifacts—like audio overviews or slide decks—directly within AI assistants like Claude, Cursor, or VS Code [1][2][3][4].\n\nBecause these servers typically rely on reverse-engineered, unofficial APIs, they often use Playwright or similar automation to maintain persistent authentication via browser session cookies [5][2][6][4]. Several implementations exist [1][5][2][7][3][4][8]. To connect one, add its command or HTTP endpoint to your MCP client's configuration file (e.g., `claude_desktop_config.json` or `~/.claude.json`) [2][7][3][6].",
+  "results": [
+    {
+      "title": "jacob-bd/notebooklm-mcp-cli",
+      "url": "https://github.com/jacob-bd/notebooklm-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Cezial/notebooklm-mcp-server",
+      "url": "https://github.com/Cezial/notebooklm-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "myakwang/notebooklm-mcp",
+      "url": "https://github.com/myakwang/notebooklm-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "mulyg/notebooklm-mcp",
+      "url": "https://github.com/mulyg/notebooklm-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "PleasePrompto/notebooklm-mcp",
+      "url": "https://github.com/PleasePrompto/notebooklm-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "docs/mcp-guide.md at main · teng-lin/notebooklm-py",
+      "url": "https://github.com/teng-lin/notebooklm-py/blob/main/docs/mcp-guide.md",
+      "snippet": ""
+    },
+    {
+      "title": "julianoczkowski/notebooklm-mcp-2026",
+      "url": "https://github.com/julianoczkowski/notebooklm-mcp-2026",
+      "snippet": ""
+    },
+    {
+      "title": "mukundajmera/notebooklm-mcp",
+      "url": "https://github.com/mukundajmera/notebooklm-mcp",
+      "snippet": ""
+    }
+  ]
+}

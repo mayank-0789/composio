@@ -1,0 +1,45 @@
+{
+  "answer": "The Otter.ai MCP server allows AI assistants to securely access your meeting transcripts, summaries, and action items directly within your workflow [1][2][3].\n\nThere are two primary ways to connect:\n\n1. Official Otter.ai Connector: This is a hosted remote server [3]. You can connect it via your MCP client (such as Claude Desktop) using the URL https://mcp.otter.ai/mcp. Authentication is handled via OAuth [3].\n\n2. OtterAB MCP Server: If you use OtterAB, use your API key to connect via the remote URL: `https://www.otterab.com/mcp/YOUR_API_KEY/v2/mcp` [4].\n\nAlways verify which service provider you are using, as integration methods differ between platforms [3][4].",
+  "results": [
+    {
+      "title": "Otter for Enterprise: Connect AI-to-AI with Otter’s MCP | Otter.ai",
+      "url": "https://otter.ai/blog/otter-for-enterprise-connect-ai-to-ai-with-otters-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Otter.ai MCP Server",
+      "url": "https://www.gamut.so/mcp/communication/otter-ai",
+      "snippet": ""
+    },
+    {
+      "title": "Otter.ai MCP Server - Setup, Use Cases & Examples",
+      "url": "https://growthengineer.ai/mcp-servers/otterai",
+      "snippet": ""
+    },
+    {
+      "title": "MCP Integration Guide | Otter",
+      "url": "https://www.otterab.com/mcp-docs",
+      "snippet": ""
+    },
+    {
+      "title": "DarrenZal/otter-mcp",
+      "url": "https://github.com/DarrenZal/otter-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Otter.ai MCP | viaSocket",
+      "url": "https://viasocket.com/mcp/otter-ai",
+      "snippet": ""
+    },
+    {
+      "title": "Otter for Enterprise: Connect AI-to-AI with Otter’s MCP | Otter.ai",
+      "url": "https://home.otter.ai/blog/otter-for-enterprise-connect-ai-to-ai-with-otters-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Understanding MCP servers - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "one_liner": "Notion offers a free, self-serve REST API with bearer-token (internal/PAT) or OAuth2 (public connection) authentication, plus both an official hosted MCP server and an open-source self-hostable MCP server, making it readily buildable for agent tooling today.",
+  "auth_methods": [
+    {
+      "method": "OAuth2",
+      "notes": "Used for public connections (OAuth 2.0 flow) for third-party integrations."
+    },
+    {
+      "method": "API key",
+      "notes": "Internal connection installation access tokens and Personal Access Tokens (PATs) are static bearer tokens created via developer portal."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Developer API access is free on any workspace plan. Internal connections/PATs can be self-serve created by workspace owners (on Free plan, only owners can create PATs by default). Public connections require OAuth app registration but are still self-serve via developer portal.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Notion REST API covers pages, databases, blocks, users, comments, search; also official JS SDK."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://mcp.notion.com/mcp"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://developers.notion.com/reference/authentication",
+      "supports": "Bearer token auth via internal connection, PAT, or OAuth for public connections"
+    },
+    {
+      "url": "https://developers.notion.com/guides/get-started/authorization",
+      "supports": "Details on internal connection static tokens vs OAuth 2.0 for public connections, self-serve via developer portal"
+    },
+    {
+      "url": "https://developers.notion.com/guides/get-started/personal-access-tokens",
+      "supports": "Personal access token creation, self-serve for workspace owners"
+    },
+    {
+      "url": "https://developers.notion.com/guides/get-started/public-connections",
+      "supports": "OAuth 2.0 flow for public connections"
+    },
+    {
+      "url": "https://www.notion.com/pricing",
+      "supports": "Free developer API access regardless of workspace plan"
+    }
+  ],
+  "confidence": 0.9,
+  "flags": [
+    "PAT creation restricted to workspace owners on Free plan by default",
+    "Notion Workers/AI agent tools have separate credit-based pricing starting Aug 11, unrelated to core API"
+  ]
+}

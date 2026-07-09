@@ -1,0 +1,45 @@
+{
+  "answer": "A Squarespace MCP (Model Context Protocol) server is a bridge that allows AI assistants like Claude, Cursor, and ChatGPT to interact directly with Squarespace websites to perform tasks like managing content, e-commerce operations, and analytics [1][2][3].\n\nMultiple implementations exist, ranging from read-only auditing tools to comprehensive management suites [1][4][5]. Some servers use official Squarespace Commerce APIs requiring OAuth2 or API keys [2][6], while others capture internal API patterns from authenticated browser sessions to bypass manual credential management [1][7]. You connect them by adding the server's command or URL to your MCP client configuration file [2][7][4].",
+  "results": [
+    {
+      "title": "timncox/squarespace-mcp",
+      "url": "https://github.com/timncox/squarespace-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "BusyBee3333/squarespace-mcp-2026-complete",
+      "url": "https://github.com/BusyBee3333/squarespace-mcp-2026-complete",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://www.stackone.com/connectors/squarespace/mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "Squarespace MCP Server & Skill — 24 Tools",
+      "url": "https://www.mcpbundles.com/skills/squarespace",
+      "snippet": ""
+    },
+    {
+      "title": "Squarespace MCP Server Ready to Use!",
+      "url": "https://vinkius.com/apps/squarespace-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "MCPEngage for Squarespace — AI-Power Your Squarespace in 2 Clicks",
+      "url": "https://mcpengage.com/squarespace/",
+      "snippet": ""
+    },
+    {
+      "title": "Squarespace MCP Server: Give AI Agents Access to Your Website and Store Data | DataFaucet",
+      "url": "https://datafaucet.dev/blog/squarespace-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Squarespace MCP | viaSocket",
+      "url": "https://viasocket.com/mcp/squarespace",
+      "snippet": ""
+    }
+  ]
+}

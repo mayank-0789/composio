@@ -1,0 +1,45 @@
+{
+  "answer": "Yes, Slack developer API access is available on the Free plan, allowing you to build and test applications immediately through a self-serve process. While the platform itself is free to use for development, your application's capabilities remain subject to the limitations of the host workspace's plan, such as the 10-app integration limit and 90-day message history. Access is governed by the Slack API Terms of Service, which requires compliance with developer policies and, in some cases, separate agreements for commercial distribution. You can programmatically verify a workspace's current plan using the `team.billing.info` endpoint.",
+  "results": [
+    {
+      "title": "Slack Pricing Plans: Find the Right Fit for Your Team | Slack",
+      "url": "https://slack.com/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Free Plan | Pricing | Slack",
+      "url": "https://slack.com/pricing/free",
+      "snippet": ""
+    },
+    {
+      "title": "Slack Paid vs. Free | Slack",
+      "url": "https://slack.com/pricing/paid-vs-free",
+      "snippet": ""
+    },
+    {
+      "title": "team.billing.info method",
+      "url": "https://docs.slack.dev/reference/methods/team.billing.info.md",
+      "snippet": ""
+    },
+    {
+      "title": "Slack plans and features | Slack",
+      "url": "https://slack.com/help/articles/115003205446-Slack-plans-and-features",
+      "snippet": ""
+    },
+    {
+      "title": "Slack API Terms of Service | Legal | Slack",
+      "url": "https://slack.com/intl/en-gb/policy-archives/terms-of-service-api/2025-05-29",
+      "snippet": ""
+    },
+    {
+      "title": "Updates to feature availability and pricing for Slack subscriptions | Slack",
+      "url": "https://slack.com/intl/en-gb/help/articles/39264531104275-Updates-to-feature-availability-and-pricing-for-Slack-subscriptions",
+      "snippet": ""
+    },
+    {
+      "title": "Slack API Free vs Paid Plans Compared [2026] (slack api free vs paid) | aitoolsatlas.ai",
+      "url": "https://aitoolsatlas.ai/tools/slack-api/free-vs-paid",
+      "snippet": ""
+    }
+  ]
+}

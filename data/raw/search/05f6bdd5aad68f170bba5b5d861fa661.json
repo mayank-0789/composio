@@ -1,0 +1,45 @@
+{
+  "answer": "Binance APIs support three types of authentication keys: Ed25519, RSA, and HMAC [1][2]. Ed25519 is the recommended method for its superior performance and security [1].\n\nAuthentication for signed requests involves using your private key to sign request parameters, which Binance verifies using your public key [1]. For WebSocket connections, you can authenticate via the session.logon method to avoid providing an API key and signature in every subsequent request [3][4]. While HMAC is supported, it is currently deprecated in favor of asymmetric cryptography methods like Ed25519 and RSA [1].",
+  "results": [
+    {
+      "title": "API Key Types | Binance Open Platform",
+      "url": "https://developers.binance.com/docs/binance-spot-api-docs/faqs/api_key_types",
+      "snippet": ""
+    },
+    {
+      "title": "rest-api.md at master · binance/binance-spot-api-docs",
+      "url": "https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication requests | Binance Open Platform",
+      "url": "https://developers.binance.com/docs/binance-spot-api-docs/websocket-api/authentication-requests",
+      "snippet": ""
+    },
+    {
+      "title": "Session Authentication | Binance Open Platform",
+      "url": "https://developers.binance.com/docs/binance-spot-api-docs/websocket-api/session-authentication",
+      "snippet": ""
+    },
+    {
+      "title": "web-socket-api.md at master · binance/binance-spot-api-docs",
+      "url": "https://github.com/binance/binance-spot-api-docs/blob/master/web-socket-api.md",
+      "snippet": ""
+    },
+    {
+      "title": "binance/binance-spot-api-docs",
+      "url": "https://github.com/binance/binance-official-api-docs",
+      "snippet": ""
+    },
+    {
+      "title": "Binance.US API Documentation",
+      "url": "https://docs.binance.us/",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication and Security | binance/binance-spot-api-docs | DeepWiki",
+      "url": "https://deepwiki.com/binance/binance-spot-api-docs/1.2-authentication-and-security",
+      "snippet": ""
+    }
+  ]
+}

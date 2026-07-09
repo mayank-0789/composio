@@ -1,0 +1,45 @@
+{
+  "answer": "The Telegram Bot API is entirely free, with no subscription fees, message costs, or limits on the number of bots or users. Developers can access all features, such as Payments and Mini Apps, without incurring charges from Telegram.\n\nThe Telegram Gateway API, used for sending verification codes, operates on a paid credit-based system. Each successful message delivery incurs a cost, though testing by sending codes to your own phone number is free. Developers must add credits to their balance via Fragment to use this service for production verification requests.",
+  "results": [
+    {
+      "title": "Telegram APIs",
+      "url": "https://core.telegram.org/",
+      "snippet": ""
+    },
+    {
+      "title": "Telegram APIs",
+      "url": "https://core.telegram.org/api",
+      "snippet": ""
+    },
+    {
+      "title": "Telegram Gateway – Fast, Affordable, and Secure User Verification",
+      "url": "https://core.telegram.org/gateway",
+      "snippet": ""
+    },
+    {
+      "title": "Telegram Gateway API",
+      "url": "https://core.telegram.org/gateway/api",
+      "snippet": ""
+    },
+    {
+      "title": "Telegram Bot API Pricing 2026: Free vs Paid Tiers Explained | Optimum Web",
+      "url": "https://www.optimum-web.com/blog/telegram-bot-api-pricing-2026-complete-guide/",
+      "snippet": ""
+    },
+    {
+      "title": "Terms of Service for Telegram Gateway",
+      "url": "https://telegram.org/tos/gateway?setln=en",
+      "snippet": ""
+    },
+    {
+      "title": "Telegram Bots - 2026 Review: Pricing, Features & Compliance",
+      "url": "https://blocksentient.com/review/telegram-bots/",
+      "snippet": ""
+    },
+    {
+      "title": "Bot Payments API for Digital Goods and Services",
+      "url": "https://core.telegram.org/bots/payments-stars",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "one_liner": "Asana's Work Graph API offers full REST CRUD access with self-serve Personal Access Tokens (free tier included) or OAuth2 for multi-user apps, plus an official first-party MCP server.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Personal Access Token (PAT) - long-lived bearer token, generated via developer console, quickest way to authenticate"
+    },
+    {
+      "method": "OAuth2",
+      "notes": "Authorization code grant flow for multi-user apps; endpoints at app.asana.com/-/oauth_authorize and oauth_token"
+    },
+    {
+      "method": "Other",
+      "notes": "Service Accounts - Enterprise-tier only, org-wide programmatic access, created by super admins"
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Free Personal tier can create a PAT immediately via developer console and access the REST API, subject to lower rate limits (150 rpm vs 1500 rpm on paid tiers). Developer sandbox available for testing premium features.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Comprehensive RESTful API with predictable resource-oriented URLs, JSON responses, full CRUD on tasks/projects/workspaces/users etc. OpenAPI spec (oas.yaml) available, plus client libraries and API explorer."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://mcp.asana.com/v2/mcp"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://developers.asana.com/docs/authentication",
+      "supports": "Details PAT, OAuth2, and Service Account authentication methods"
+    },
+    {
+      "url": "https://developers.asana.com/docs/quick-start",
+      "supports": "Describes REST API structure, base URL, and PAT-based quick start"
+    },
+    {
+      "url": "https://developers.asana.com/docs/personal-access-token",
+      "supports": "Self-serve PAT generation via developer console"
+    },
+    {
+      "url": "https://developers.asana.com/docs/oauth",
+      "supports": "OAuth2 flow details for multi-user apps"
+    }
+  ],
+  "confidence": 0.9,
+  "flags": [
+    "Official first-party MCP server exists, reducing need for custom build but still buildable via REST API directly",
+    "Service Accounts restricted to Enterprise tier",
+    "Free tier rate-limited to 150 req/min"
+  ]
+}

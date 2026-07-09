@@ -1,0 +1,45 @@
+{
+  "answer": "All Waterfall.io API requests are authenticated by including an API key in the x-api-key HTTP header [1][2][3]. You must use the key provided in your contract to access the API [3][4][5].\n\n```bash\nx-api-key: <your-api-key>\n```\n\nFor enterprise users, API key management allows the use of a master key to generate and manage sub-keys [6][3]. The master key is required to perform management operations (such as listing or creating keys), and requests made to these management endpoints must include the master key in the x-api-key header [6].",
+  "results": [
+    {
+      "title": "",
+      "url": "https://docs.waterfall.io/v1/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://docs.waterfall.io/v1/introduction",
+      "snippet": ""
+    },
+    {
+      "title": "API Keys - List - Waterfall.io API Documentation",
+      "url": "https://docs.waterfall.io/v1/api-keys-list",
+      "snippet": ""
+    },
+    {
+      "title": "API Keys - Modify - Waterfall.io API Documentation",
+      "url": "https://docs.waterfall.io/v1/api-keys-modify",
+      "snippet": ""
+    },
+    {
+      "title": "Prospector Launcher",
+      "url": "https://docs.waterfall.io/v1/prospector-launcher",
+      "snippet": ""
+    },
+    {
+      "title": "API Keys Management - Waterfall.io API Documentation",
+      "url": "https://docs.waterfall.io/v1/api-keys-overview",
+      "snippet": ""
+    },
+    {
+      "title": "Errors",
+      "url": "https://docs.waterfall.io/v1/errors",
+      "snippet": ""
+    },
+    {
+      "title": "Search Company Finder",
+      "url": "https://docs.waterfall.io/v1/search-company-finder",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "WooCommerce is free, open-source software and does not charge for API access or use platform-based pricing tiers for its core features [1]. Developers can generate API keys directly within the WordPress admin dashboard under WooCommerce, Settings, Advanced, REST API [2]. While the platform is free, recent updates have moved some headless-specific integration tools into premium third-party packages, leading to additional costs for complex headless architectures [3][4]. Two primary APIs are available: the authenticated REST API (v3) for full management of store data [2][5], and the unauthenticated Store API (v1) for customer-facing frontend features [6].",
+  "results": [
+    {
+      "title": "WooCommerce Pricing Puts You In Control - WooCommerce",
+      "url": "https://woocommerce.com/pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "WooCommerce REST API | WooCommerce developer docs",
+      "url": "https://developer.woocommerce.com/docs/apis/rest-api/",
+      "snippet": ""
+    },
+    {
+      "title": "WooCommerce 9.0 Drops Native Headless API, Forcing 40% Cost Spike – Ecommerce Times",
+      "url": "https://ecommerce-times.com/woocommerce-9-0-drops-native-headless-api-forcing-40-cost-spike/",
+      "snippet": ""
+    },
+    {
+      "title": "WooCommerce vs. BigCommerce in 2026: Which Platform Wins? – Ecommerce Times",
+      "url": "https://ecommerce-times.com/woocommerce-vs-bigcommerce-in-2026-which-platform-wins/",
+      "snippet": ""
+    },
+    {
+      "title": "REST API v3 | WooCommerce developer docs",
+      "url": "https://developer.woocommerce.com/docs/apis/rest-api/v3/",
+      "snippet": ""
+    },
+    {
+      "title": "WooCommerce Store API",
+      "url": "https://developer.woocommerce.com/docs/apis/store-api/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication | WooCommerce developer docs",
+      "url": "https://developer.woocommerce.com/docs/apis/rest-api/authentication/",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://developer.woocommerce.com/docs/apis/rest-api/v3/api-reference/",
+      "snippet": ""
+    }
+  ]
+}

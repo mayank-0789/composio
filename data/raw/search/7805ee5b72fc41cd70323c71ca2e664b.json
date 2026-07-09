@@ -1,0 +1,45 @@
+{
+  "answer": "The Twilio Model Context Protocol (MCP) server allows AI agents to interact directly with Twilio’s APIs and documentation within an IDE [1][2]. There are two primary ways to use it depending on your needs.\n\nFor documentation and public API discovery, use the hosted, read-only server at `https://mcp.twilio.com/docs` [1]. This requires no authentication and no installation; simply point your MCP-compatible IDE or agent to that URL [1]. It provides two tools: `twiliosearch` to find API operations or documentation, and `twilioretrieve` to fetch parameter schemas [1].\n\nFor executing API actions against your Twilio account, use the `@twilio-alpha/mcp` package [3][4]. Because Twilio has thousands of APIs, you must filter tools using `--services` and `--tags` parameters to stay within LLM context limits [4][5][6]. Configure it in your `claude_desktop_config.json` as shown below [4][6]:\n\n```json\n{\n  \"mcpServers\": {\n    \"twilio\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"-y\",\n        \"@twilio-alpha/mcp\",\n        \"YOUR_ACCOUNT_SID/YOUR_API_KEY:YOUR_API_SECRET\",\n        \"--services\", \"twilio_api_v2010\",\n        \"--tags\", \"Api20100401IncomingPhoneNumber\"\n      ]\n    }\n  }\n}\n```",
+  "results": [
+    {
+      "title": "Twilio MCP server | Twilio",
+      "url": "https://www.twilio.com/docs/ai/mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Building with AI? Why You Should Connect Twilio's MCP Server | Twilio",
+      "url": "https://www.twilio.com/en-us/blog/developers/best-practices/why-connect-twilio-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "twilio-labs/mcp",
+      "url": "https://github.com/twilio-labs/mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Use the Twilio Alpha MCP Server to Automate Development | Twilio",
+      "url": "https://www.twilio.com/en-us/blog/introducing-twilio-alpha-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "@twilio-alpha/mcp",
+      "url": "https://registry.npmjs.org/@twilio-alpha/mcp",
+      "snippet": ""
+    },
+    {
+      "title": "mcp/packages/mcp at a0ab1527c5f7a0ed0b7c9d86306839f09f9f7e8e · twilio-labs/mcp · GitHub",
+      "url": "https://github.com/twilio-labs/mcp/tree/a0ab1527c5f7a0ed0b7c9d86306839f09f9f7e8e/packages/mcp",
+      "snippet": ""
+    },
+    {
+      "title": "function-templates/mcp-server at main · twilio-labs/function-templates · GitHub",
+      "url": "https://github.com/twilio-labs/function-templates/tree/main/mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "$ twilio update: Model Context Protocol (MCP) | Twilio",
+      "url": "https://www.twilio.com/en-us/blog/developers/twilio-update-e4-mcp",
+      "snippet": ""
+    }
+  ]
+}

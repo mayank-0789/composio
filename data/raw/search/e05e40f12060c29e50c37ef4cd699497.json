@@ -1,0 +1,45 @@
+{
+  "answer": "A Xero MCP (Model Context Protocol) server is an open-source bridge that enables AI agents, such as Claude, to interact with Xero accounting data through standardized protocol commands [1][2]. By integrating with the Xero API, it allows LLMs to perform tasks like creating invoices, managing contacts, and analyzing transaction data [2][3].\n\nSeveral implementations exist, including the official repository [1][4] and community-driven versions like those by d4m14ndx [5] or danielreddd [6], which offer expanded toolsets. Most servers support authentication via Xero OAuth2 or bearer tokens [1][5][6].\n\nTo use the official server in a configuration file like Claude Desktop, you typically provide the command and environment credentials:\n\n```json\n{\n  \"mcpServers\": {\n    \"xero\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@xeroapi/xero-mcp-server\"],\n      \"env\": {\n        \"XERO_CLIENT_ID\": \"your_client_id\",\n        \"XERO_CLIENT_SECRET\": \"your_client_secret\"\n      }\n    }\n  }\n}\n```\n\nReference: [1][7][6]",
+  "results": [
+    {
+      "title": "XeroAPI/xero-mcp-server",
+      "url": "https://github.com/xeroapi/xero-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Xero introduces new Model Context Protocol server for smarter accounting | by Regan Ashworth | Xero Developer",
+      "url": "https://devblog.xero.com/xero-introduces-new-model-context-protocol-server-for-smarter-accounting-4d195ccaeda5",
+      "snippet": ""
+    },
+    {
+      "title": "@xeroapi/xero-mcp-server",
+      "url": "https://registry.npmjs.org/@xeroapi/xero-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "README.md at main · XeroAPI/xero-mcp-server",
+      "url": "https://github.com/xeroapi/xero-mcp-server/blob/main/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "d4m14ndx/xero-mcp-server",
+      "url": "https://github.com/d4m14ndx/xero-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "danielreddd/xero-mcp-enhanced",
+      "url": "https://github.com/danielreddd/xero-mcp-enhanced",
+      "snippet": ""
+    },
+    {
+      "title": "john-zhang-dev/xero-mcp",
+      "url": "https://github.com/john-zhang-dev/xero-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "wyre-technology/xero-mcp",
+      "url": "https://github.com/wyre-technology/xero-mcp",
+      "snippet": ""
+    }
+  ]
+}

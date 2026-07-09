@@ -1,0 +1,45 @@
+{
+  "answer": "Notion provides a hosted Model Context Protocol server for interactive AI use, while also offering an open-source server for programmatic or service-level needs [1][2][3].\n\nFor hosted Notion MCP, use the following endpoints with OAuth 2.0 PKCE:\n- Streamable HTTP: https://mcp.notion.com/mcp\n- Server-Sent Events (SSE): https://mcp.notion.com/sse\n\nFor service-level access, self-host the official open-source server (@notionhq/notion-mcp-server) using a Notion integration token [2][3]. Configure it in your MCP client settings:\n\n```json\n{\n  \"mcpServers\": {\n    \"notionApi\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@notionhq/notion-mcp-server\"],\n      \"env\": {\n        \"NOTION_TOKEN\": \"ntn_\"\n      }\n    }\n  }\n}\n```\n\nThe hosted server is optimized for human-in-the-loop OAuth, whereas self-hosted versions support headless environments like CI/CD and background agents [2][3].",
+  "results": [
+    {
+      "title": "Integrating your own MCP client - Notion Docs",
+      "url": "https://developers.notion.com/guides/mcp/build-mcp-client",
+      "snippet": ""
+    },
+    {
+      "title": "awkoy/notion-mcp-server",
+      "url": "https://github.com/awkoy/notion-mcp-server/",
+      "snippet": ""
+    },
+    {
+      "title": "How to Create an MCP: A Developer’s Guide – The Website Engineer",
+      "url": "https://thewebsiteengineer.com/blog/how-to-create-the-right-mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "makenotion/notion-mcp-server",
+      "url": "https://github.com/makenotion/notion-mcp-server/",
+      "snippet": ""
+    },
+    {
+      "title": "@notionhq/notion-mcp-server",
+      "url": "https://registry.npmjs.org/%40notionhq%2Fnotion-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "MCP Registry | Notion · GitHub",
+      "url": "https://github.com/mcp/makenotion/notion-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "suekou/mcp-notion-server",
+      "url": "https://github.com/suekou/mcp-notion-server",
+      "snippet": ""
+    },
+    {
+      "title": "ramidecodes/mcp-server-notion",
+      "url": "https://github.com/ramidecodes/mcp-server-notion/",
+      "snippet": ""
+    }
+  ]
+}

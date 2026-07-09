@@ -1,0 +1,45 @@
+{
+  "answer": "Discord API authentication is performed using the Authorization HTTP header in the format Authorization: TOKEN_TYPE TOKEN [1][2]. There are two primary methods:\n\nFor server-to-server communication, use a bot token [3]. You must prefix the token with Bot [3][2].\nAuthorization: Bot YOUR_BOT_TOKEN [3]\n\nFor authenticated user actions, use an OAuth2 bearer token obtained through the OAuth2 API [1][2].\nAuthorization: Bearer USER_ACCESS_TOKEN [3]\n\nWhen using OAuth2, you typically exchange an authorization code for an access token via the /api/oauth2/token endpoint [4][3]. This request requires either HTTP Basic authentication (using client_id and client_secret) or the inclusion of these credentials in the form data body [4][5].",
+  "results": [
+    {
+      "title": "API Reference - Documentation - Discord",
+      "url": "https://docs.discord.com/developers/reference",
+      "snippet": ""
+    },
+    {
+      "title": "developers/reference.mdx at f5f9f1cb · discord/discord-api-docs",
+      "url": "https://github.com/discord/discord-api-docs/blob/f5f9f1cb/developers/reference.mdx",
+      "snippet": ""
+    },
+    {
+      "title": "Use with Discord APIs - Documentation - Discord",
+      "url": "https://docs.discord.com/developers/discord-social-sdk/how-to/use-with-discord-apis",
+      "snippet": ""
+    },
+    {
+      "title": "OAuth2 - Documentation - Discord",
+      "url": "https://docs.discord.com/developers/topics/oauth2",
+      "snippet": ""
+    },
+    {
+      "title": "rest/v10/oauth2.ts",
+      "url": "https://github.com/discordjs/discord-api-types/blob/main/rest/v10/oauth2.ts",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication | Discord Social SDK",
+      "url": "https://discord.com/developers/docs/social-sdk/authentication.html",
+      "snippet": ""
+    },
+    {
+      "title": "docs/Reference.md at ff4d9d8ea6493405a8823492338880c47fb02996 · discord/discord-api-docs",
+      "url": "https://github.com/discord/discord-api-docs/blob/ff4d9d8ea6493405a8823492338880c47fb02996/docs/Reference.md",
+      "snippet": ""
+    },
+    {
+      "title": "Account Linking from Your Game - Documentation - Discord",
+      "url": "https://docs.discord.com/developers/discord-social-sdk/development-guides/account-linking-with-discord",
+      "snippet": ""
+    }
+  ]
+}

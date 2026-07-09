@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://github.com/sergekostenchuk/threads-mcp",
+  "reason": "Multiple community MCP servers exist for Meta's Threads. Notable implementations include sergekostenchuk/threads-mcp, quinnjr/threads-mcp, MetaThreads/meta-threads-mcp, SvetimFM/threads-mcp-server, griffinwork40/threads-mcp, and poisonstefani-dev/threads-mcp. These servers enable AI assistants to interact with Threads via MCP, supporting features like reading posts, publishing content, managing replies, and retrieving analytics through the Threads API."
+}

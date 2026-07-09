@@ -1,0 +1,45 @@
+{
+  "answer": "GoHighLevel authenticates API requests primarily through Private Integration Tokens for internal tools or OAuth 2.0 for public marketplace applications [1]. When using standard HTTP requests, authentication is performed by including the access token in the request header as a Bearer token, formatted as Authorization: Bearer {access_token} [2].\n\nFor developers, the official SDKs for TypeScript, Python, and PHP automate these processes, including OAuth flow management and token refreshing [3][4][5]. To initialize the TypeScript client for a private integration, use the following:\n\n```typescript\nimport { HighLevel } from '@gohighlevel/api-client';\n\nconst ghl = new HighLevel({\n  privateIntegrationToken: 'your-private-integration-token'\n});\n```\n\nFor OAuth-based apps, the SDK handles the exchange of authorization codes and session storage [3][5][6]. Documentation for all API endpoints is maintained at the official HighLevel developer portal [7][8].",
+  "results": [
+    {
+      "title": "Deprecating the HighLevel API V1 and migrating to V2",
+      "url": "https://www.gohighlevel.com/post/deprecating-the-highlevel-api-v1-and-migrating-to-v2",
+      "snippet": ""
+    },
+    {
+      "title": "How to get started with the Developer's Marketplace : HighLevel Support Portal",
+      "url": "https://help.gohighlevel.com/support/solutions/articles/155000000136-how-to-get-started-with-the-developer-s-marketplace",
+      "snippet": ""
+    },
+    {
+      "title": "GoHighLevel/highlevel-api-sdk",
+      "url": "https://github.com/GoHighLevel/highlevel-api-sdk",
+      "snippet": ""
+    },
+    {
+      "title": "@gohighlevel/api-client",
+      "url": "https://registry.npmjs.org/@gohighlevel/api-client",
+      "snippet": ""
+    },
+    {
+      "title": "API Center of Excellence| Python and PHP SDks : HighLevel Support Portal",
+      "url": "https://help.gohighlevel.com/support/solutions/articles/155000007096-api-center-of-excellence-python-and-php-sdks",
+      "snippet": ""
+    },
+    {
+      "title": "GoHighLevel/highlevel-api-php",
+      "url": "https://github.com/gohighlevel/highlevel-api-php",
+      "snippet": ""
+    },
+    {
+      "title": "HighLevel API Documentation : HighLevel Support Portal",
+      "url": "https://help.gohighlevel.com/support/solutions/articles/48001060529-highlevel-api-documentation",
+      "snippet": ""
+    },
+    {
+      "title": "GoHighLevel/highlevel-api-docs",
+      "url": "https://github.com/GoHighLevel/highlevel-api-docs",
+      "snippet": ""
+    }
+  ]
+}

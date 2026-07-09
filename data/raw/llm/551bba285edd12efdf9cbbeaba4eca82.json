@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://www.twilio.com/docs/ai/mcp",
+  "reason": "Twilio has an official MCP server implementation. There are two options: (1) A hosted server at https://mcp.twilio.com/docs for documentation/schema retrieval, and (2) An alpha MCP server package @twilio-alpha/mcp available via npm that allows executing API calls. The alpha server indexes 30+ Twilio products and enables AI coding agents to access Twilio's API surface directly within IDEs."
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "Datadog API requests are authenticated using API and application keys or through token-based methods [1][2]. Standard requests utilize the DD-API-KEY header for write access and both DD-API-KEY and DD-APPLICATION-KEY headers for read access [1][2]. Alternatively, you can use Personal Access Tokens (PATs) or Service Access Tokens (SATs) [3][4]. These tokens can be passed as a Bearer token in the Authorization header or via the dd-application-key header [3][4]. When using these tokens, an API key is not required [3][4].",
+  "results": [
+    {
+      "title": "Authentication",
+      "url": "https://docs.datadoghq.com/api/latest/authentication/",
+      "snippet": ""
+    },
+    {
+      "title": "Latest",
+      "url": "https://docs.datadoghq.com/api/latest.md",
+      "snippet": ""
+    },
+    {
+      "title": "Personal Access Tokens",
+      "url": "https://docs.datadoghq.com/account_management/personal-access-tokens.md",
+      "snippet": ""
+    },
+    {
+      "title": "Service Access Tokens",
+      "url": "https://docs.datadoghq.com/account_management/service-access-tokens.md",
+      "snippet": ""
+    },
+    {
+      "title": "Key Management",
+      "url": "https://docs.datadoghq.com/api/latest/key-management.md",
+      "snippet": ""
+    },
+    {
+      "title": "Validate API key",
+      "url": "https://docs.datadoghq.com/api/latest/key-management/validate-api-key/",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication",
+      "url": "https://docs.datadoghq.com/api/latest/authentication.md",
+      "snippet": ""
+    },
+    {
+      "title": "datadog_api_client.v1.api package — Datadog API Client for Python  documentation",
+      "url": "https://datadoghq.dev/datadog-api-client-python/datadog_api_client.v1.api.html",
+      "snippet": ""
+    }
+  ]
+}

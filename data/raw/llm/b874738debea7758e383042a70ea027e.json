@@ -1,0 +1,55 @@
+{
+  "one_liner": "WooCommerce (self-hosted WordPress plugin) offers a full REST API for store management authenticated via Consumer Key/Secret (Basic Auth or OAuth1.0a), with self-serve key generation in the WP admin and emerging native MCP support.",
+  "auth_methods": [
+    {
+      "method": "Basic",
+      "notes": "HTTPS sites use HTTP Basic Auth with Consumer Key as username and Consumer Secret as password; can also be passed as query string params."
+    },
+    {
+      "method": "OAuth2",
+      "notes": "Non-HTTPS sites use OAuth 1.0a 'one-legged' authentication with signature, timestamp, and nonce (not OAuth2, but closest category)."
+    },
+    {
+      "method": "API key",
+      "notes": "Consumer Key/Secret pairs generated via WooCommerce > Settings > Advanced > REST API, or auto-generated via the /wc-auth/v1/authorize browser-based flow for third-party app integration."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "WooCommerce is free, open-source software with no platform-based API pricing. Any store admin can self-generate Consumer Key/Secret API keys directly from the WordPress admin dashboard (WooCommerce > Settings > Advanced > REST API) or via the /wc-auth/v1/authorize endpoint for third-party app flows. No approval process required since it's self-hosted, though a live store/server is needed.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Two REST APIs: authenticated REST API v3 for full management of store data (products, orders, coupons, customers, etc.) and an unauthenticated Store API v1 for customer-facing frontend features."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://developer.woocommerce.com/docs/apis/rest-api/"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": "None significant for self-hosted stores; REST API and self-serve key generation are fully available today. Native MCP support is still gated behind a feature flag (mcp_integration) and depends on self-hosting WordPress/WooCommerce with the Abilities API/MCP adapter, so per-store setup effort varies. Headless-specific tooling may require premium add-ons in newer versions.",
+  "evidence": [
+    {
+      "url": "https://developer.woocommerce.com/docs/apis/rest-api/authentication/",
+      "supports": "Describes Basic Auth via Consumer Key/Secret, OAuth 1.0a for non-HTTPS, and self-serve key generation in WP admin plus auto-generation via /wc-auth/v1/authorize."
+    },
+    {
+      "url": "https://woocommerce.github.io/woocommerce-rest-api-docs/v3.html?php=",
+      "supports": "Full REST API v3 documentation covering coupons, customers, orders, products, etc., confirming broad REST API surface."
+    },
+    {
+      "url": "https://woocommerce.com/pricing/",
+      "supports": "Confirms WooCommerce core software and API access is free/open-source with no platform-based pricing tiers."
+    },
+    {
+      "url": "https://developer.woocommerce.com/docs/apis/rest-api/v3/",
+      "supports": "Details on REST API v3 as primary authenticated API surface."
+    }
+  ],
+  "confidence": 0.7,
+  "flags": [
+    "MCP support is behind a feature flag (mcp_integration) and depends on WordPress Abilities API/MCP adapter setup, so maturity/stability is uncertain.",
+    "Community-maintained MCP servers exist but native support is very recent and evidence is limited to search summaries without direct doc scraping.",
+    "Headless-specific integration tools reportedly moved to premium third-party packages in recent versions, per one search source (ecommerce-times.com), which may affect cost for advanced use cases.",
+    "Self-hosted nature means 'self-serve' applies per-store; there's no centralized WooCommerce.com platform API key issuance for arbitrary third-party apps without each store owner performing setup."
+  ]
+}

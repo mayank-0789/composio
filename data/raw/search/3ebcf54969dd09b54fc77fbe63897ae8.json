@@ -1,0 +1,45 @@
+{
+  "answer": "The Model Context Protocol (MCP) is the standardized agent protocol for Adobe Commerce (Magento), allowing AI assistants like Claude, Cursor, and Windsurf to interact directly with your store [1][2][3]. It enables AI to perform tasks like catalog management, diagnostics, and order processing by executing tools—typically via GraphQL or REST APIs—without manual data exports [1][4][2].\n\nMultiple implementations exist to suit different needs:\n\nStandardized administration servers, such as those from thomastx05/magento-mcp, offer 30+ tools for catalog and promotion management, featuring two-phase commits, audit logging, and built-in guardrails for safety [1][5].\n\nDeveloper-focused servers, such as @rafaelcg/adobe-commerce-dev-mcp, provide schema introspection for both GraphQL and REST APIs and assist in writing or validating integrations [6][7].\n\nLightweight proxy services, such as the one documented at mcp-hub.ink, map RESTful requests to GraphQL operations to simplify automation for agents [4].\n\nTo connect an MCP client, add the server configuration to your `mcp_config.json` or `claude_desktop_config.json` file. For a Node.js-based server, use the following pattern:\n\n```json\n{\n  \"mcpServers\": {\n    \"magento-mcp\": {\n      \"command\": \"node\",\n      \"args\": [\"/path/to/server/dist/index.js\"],\n      \"env\": {\n        \"MAGENTO_BASE_URL\": \"https://your-instance.com\",\n        \"MAGENTO_OAUTH_CONSUMER_KEY\": \"your_key\",\n        \"MAGENTO_OAUTH_CONSUMER_SECRET\": \"your_secret\",\n        \"MAGENTO_OAUTH_TOKEN\": \"your_token\",\n        \"MAGENTO_OAUTH_TOKEN_SECRET\": \"your_token_secret\"\n      }\n    }\n  }\n}\n```\n\nSecurity is typically managed via Magento ACL integration, ensuring AI access is restricted to authorized API permissions [1][2]. Many implementations also use OAuth 1.0 or 2.0 to bypass 2FA prompts while keeping credentials in memory [1][2].",
+  "results": [
+    {
+      "title": "thomastx05/magento-mcp",
+      "url": "https://github.com/thomastx05/magento-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "MCP for Magento 2: Turn Adobe Commerce into an AI Data Hub | Medium",
+      "url": "https://medium.com/@freento/how-model-context-protocol-mcp-turns-adobe-commerce-into-an-ai-queryable-platform-e11fb1851bb6",
+      "snippet": ""
+    },
+    {
+      "title": "Build a Magento 2 MCP Server with Python (2026 Tutorial), C…",
+      "url": "https://kishansavaliya.com/build-magento-2-mcp-server-with-python",
+      "snippet": ""
+    },
+    {
+      "title": "Adobe Commerce MCP Server: Orders, Products, Customers — MCP Server — MCP Catalog",
+      "url": "https://mcp-hub.ink/servers/adobe-commerce/",
+      "snippet": ""
+    },
+    {
+      "title": "Magento MCP Server | Conare",
+      "url": "https://conare.ai/marketplace/mcp/magento-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "rafaelstz/adobe-commerce-dev-mcp",
+      "url": "https://github.com/rafaelstz/adobe-commerce-dev-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "samuel-sung/adobe-commerce-dev-mcp",
+      "url": "https://github.com/samuel-sung/adobe-commerce-dev-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Codexpect/adobe-commerce-mcp",
+      "url": "https://github.com/Codexpect/adobe-commerce-mcp",
+      "snippet": ""
+    }
+  ]
+}

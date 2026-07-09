@@ -1,0 +1,45 @@
+{
+  "answer": "Twilio offers a 30-day free trial that allows you to access their APIs and build proofs of concept without a credit card [1][2]. The trial includes specific, product-based free units, such as 100 SMS messages, 3,000 emails, and 75 voice minutes [1][2]. You can use real API requests and responses during this period [1].\n\nOnce the 30-day trial expires or you choose to scale, you must upgrade your account to continue usage [1][2]. Upon upgrading, you receive a one-time grant of perpetual free units (PUFU) that never expire and are consumed before any usage charges [1]. Twilio uses a pay-as-you-go model for all production usage beyond these free units [3][4]. All accounts include a free developer support plan by default [5].",
+  "results": [
+    {
+      "title": "Twilio trial account | Twilio",
+      "url": "https://www.twilio.com/docs/usage/trials",
+      "snippet": ""
+    },
+    {
+      "title": "Get started with your Twilio free trial account | Twilio",
+      "url": "https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account",
+      "snippet": ""
+    },
+    {
+      "title": "Twilio Pricing | Twilio",
+      "url": "https://www.twilio.com/en-us/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Twilio Pricing | Twilio",
+      "url": "https://www.twilio.com/en-us/pricing/current-rates",
+      "snippet": ""
+    },
+    {
+      "title": "Support Plans for Text, VoIP & Voice APIs - Twilio | Twilio",
+      "url": "https://www.twilio.com/en-us/support-plans",
+      "snippet": ""
+    },
+    {
+      "title": "Serverless Pricing | Twilio",
+      "url": "https://www.twilio.com/en-us/serverless/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Messaging Pricing | Twilio",
+      "url": "https://www.twilio.com/en-us/pricing/messaging",
+      "snippet": ""
+    },
+    {
+      "title": "Account-level OAuth apps | Twilio",
+      "url": "https://www.twilio.com/docs/iam/oauth-apps/account-oauth-apps",
+      "snippet": ""
+    }
+  ]
+}

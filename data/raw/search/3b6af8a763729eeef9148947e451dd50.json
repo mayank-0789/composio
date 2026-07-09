@@ -1,0 +1,45 @@
+{
+  "answer": "The official Mermaid.js library is open-source and free to use without an API or subscription [1]. However, several third-party platforms provide Mermaid-based services with varying pricing models:\n\nBeauty Diagram offers a developer API with a free tier that allows for watermarked exports and rate-limited rendering [2]. You can access it by skipping the Authorization header or using a personal access token for higher quotas [2].\n\n```http\nGET /v1/render?mermaid=... HTTP/1.1\nHost: api.beauty-diagram.com\nAuthorization: Bearer bd_live_...\n```\n\nOther tools like Mermaid Chart and Mermaid Editor offer tiered SaaS plans with AI features and cloud sync [3][4], while Mermaid Studio provides paid plugins for JetBrains IDEs [5][6].",
+  "results": [
+    {
+      "title": "Is Mermaid Free? A Plain-English Answer to Mermaid Pricing in 2026",
+      "url": "https://mermaideditor.com/blog/is-mermaid-free",
+      "snippet": ""
+    },
+    {
+      "title": "API: Beautify Mermaid, Export SVG/PNG, Share | Beauty Diagram",
+      "url": "https://www.beauty-diagram.com/developers/api",
+      "snippet": ""
+    },
+    {
+      "title": "Manage your account — Mermaid Chart",
+      "url": "https://mermaid.ai/docs/workspace-and-admin/manage-your-account",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing — Free & Pro Plans | Mermaid Editor",
+      "url": "https://www.mermaideditor.io/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Editions & Pricing | Mermaid Studio",
+      "url": "https://mermaidstudio.dev/docs/editions/",
+      "snippet": ""
+    },
+    {
+      "title": "Frequently Asked Questions | Mermaid Studio",
+      "url": "https://mermaidstudio.dev/docs/faq/",
+      "snippet": ""
+    },
+    {
+      "title": "peter-daly/mkdocs-mermaid-images",
+      "url": "https://github.com/peter-daly/mkdocs-mermaid-images",
+      "snippet": ""
+    },
+    {
+      "title": "MermaidKit/mermkit",
+      "url": "https://github.com/MermaidKit/mermkit",
+      "snippet": ""
+    }
+  ]
+}

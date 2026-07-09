@@ -1,0 +1,45 @@
+{
+  "answer": "SendGrid no longer offers a permanent free tier for developer API access [1][2]. As of May 27, 2025, the previous free plan was replaced with a one-time 60-day free trial for new accounts [3][1][4]. During this 60-day period, you can use the Email API to send up to 100 emails per day [3][5]. Once the trial expires, you must upgrade to a paid plan to continue sending emails or accessing API features [3][1]. Paid plans for the Email API are self-serve and start at $19.95 per month [6][7][2].",
+  "results": [
+    {
+      "title": "Changes coming to SendGrid’s Free Plan | Twilio",
+      "url": "https://www.twilio.com/en-us/changelog/sendgrid-free-plan",
+      "snippet": ""
+    },
+    {
+      "title": "SendGrid API: Pricing, Capabilities & Alternatives (2026) · apio",
+      "url": "https://apio.sh/apis/sendgrid",
+      "snippet": ""
+    },
+    {
+      "title": "Twilio SendGrid - Trial Account Plan – SendGrid",
+      "url": "https://support.sendgrid.com/hc/en-us/articles/35270136965403-Twilio-SendGrid-Trial-Account-Plan",
+      "snippet": ""
+    },
+    {
+      "title": "SendGrid Email Marketing Pricing: Plans & Costs | Email",
+      "url": "https://www.emailmarketingforbusiness.com/blog/sendgrid-pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Upgrade your plan",
+      "url": "https://www.twilio.com/docs/sendgrid/ui/account-and-settings/upgrading-your-plan.md",
+      "snippet": ""
+    },
+    {
+      "title": "Email API Pricing | Twilio",
+      "url": "https://www.twilio.com/en-us/products/email-api/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Sendgrid pricing",
+      "url": "https://static1.twilio.com/content/dam/sendgrid/global/en/other/sendgrid-pricing/twi121--sendgrid-pricing-pdf-st1.pdf",
+      "snippet": ""
+    },
+    {
+      "title": "Billing | SendGrid Docs | Twilio",
+      "url": "https://www.twilio.com/docs/sendgrid/ui/account-and-settings/billing",
+      "snippet": ""
+    }
+  ]
+}

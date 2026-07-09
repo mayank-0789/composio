@@ -1,0 +1,53 @@
+{
+  "one_liner": "Mailchimp's Marketing API (v3, REST) offers broad, self-serve API key access on all plans plus OAuth2 for third-party integrations, with several community-built MCP servers already available.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Self-serve API key generated from account settings; used via HTTP Basic Auth (key as password) or Bearer auth."
+    },
+    {
+      "method": "OAuth2",
+      "notes": "Authorization Code flow for accessing data on behalf of other Mailchimp users; requires registering an app and redirect URI."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "API key can be generated immediately from account settings on any plan tier, including Free. OAuth2 requires app registration but is also self-serve (no partnership approval needed). Some advanced features (e.g., Transactional API) require paid plans.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Marketing API v3 covers audiences/contacts, campaigns, reports, e-commerce, webhooks, batch/async requests; separate Transactional API and Export API also exist; official SDKs for PHP, Python, Node, etc."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://github.com/mailchimp/mailchimp-marketing-python"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://mailchimp.com/developer/marketing/docs/fundamentals/",
+      "supports": "Describes API key generation, REST structure, API versions, and self-serve access tied to account plan."
+    },
+    {
+      "url": "https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/",
+      "supports": "Details OAuth2 Authorization Code flow for accessing data on behalf of other users vs. using API key directly."
+    },
+    {
+      "url": "https://mailchimp.com/developer/marketing/guides/quick-start/",
+      "supports": "Quick start guide for generating API key and making first API calls."
+    },
+    {
+      "url": "https://mailchimp.com/developer/marketing/docs/methods-parameters/",
+      "supports": "Documents REST API methods and parameters, indicating broad API surface."
+    },
+    {
+      "url": "https://github.com/mailchimp/mailchimp-marketing-python",
+      "supports": "Official Python SDK for Marketing API, indicating mature API surface and existing tooling ecosystem referenced by MCP servers."
+    }
+  ],
+  "confidence": 0.75,
+  "flags": [
+    "Multiple third-party/community MCP servers exist but no single official Mailchimp-maintained MCP server confirmed",
+    "Some advanced features (Transactional API) gated behind higher-tier plans"
+  ]
+}

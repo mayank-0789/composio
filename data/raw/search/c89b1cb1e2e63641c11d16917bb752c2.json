@@ -1,0 +1,45 @@
+{
+  "answer": "The DataForSEO MCP server is an official integration that bridges AI models and applications with DataForSEO APIs, enabling the retrieval of SEO data like SERP results, keyword metrics, and backlink analysis using natural language [1][2][3].\n\nTo connect an AI client (e.g., Claude Desktop or Cursor), you configure the server via npx or an HTTP endpoint [1][2]. For local usage, add the following to your MCP client configuration:\n\n```json\n{\n  \"mcpServers\": {\n    \"dataforseo\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"dataforseo-mcp-server\"],\n      \"env\": {\n        \"DATAFORSEO_USERNAME\": \"your_api_login\",\n        \"DATAFORSEO_PASSWORD\": \"your_api_password\"\n      }\n    }\n  }\n}\n```\n\nThe server supports Stdio, HTTP, and SSE transport modes [3][4]. For remote or web-based clients, use the official endpoint: `https://mcp.dataforseo.com/http` [1].",
+  "results": [
+    {
+      "title": "DataForSEO Model Context Protocol – DataForSEO",
+      "url": "https://dataforseo.com/model-context-protocol",
+      "snippet": ""
+    },
+    {
+      "title": "Setting Up the Official DataForSEO MCP Server: Simple Guide – DataForSEO",
+      "url": "https://dataforseo.com/help-center/setting-up-the-official-dataforseo-mcp-server-simple-guide",
+      "snippet": ""
+    },
+    {
+      "title": "dataforseo/mcp - Docker Image",
+      "url": "https://hub.docker.com/r/dataforseo/mcp",
+      "snippet": ""
+    },
+    {
+      "title": "dataforseo-mcp-server",
+      "url": "https://registry.npmjs.org/dataforseo-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "README.md at master · dataforseo/mcp-server-typescript",
+      "url": "https://github.com/dataforseo/mcp-server-typescript/blob/master/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "DataForSEO MCP Server: Bridging the Gap Between AI Models and SEO Data – DataForSEO",
+      "url": "https://dataforseo.com/blog/dataforseo-mcp-server-bridging-the-gap-between-ai-models-and-seo-data?noamp=mobile",
+      "snippet": ""
+    },
+    {
+      "title": "GitHub - pawneetdev/dataforseo-mcp: A Model Context Protocol (MCP) server that exposes DataForSEO's Research Toolkit API to Claude Desktop. · GitHub",
+      "url": "https://github.com/pawneetdev/dataforseo-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Skobyn/dataforseo-mcp-server",
+      "url": "https://github.com/skobyn/dataforseo-mcp-server",
+      "snippet": ""
+    }
+  ]
+}

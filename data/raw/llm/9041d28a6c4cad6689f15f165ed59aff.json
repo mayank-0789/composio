@@ -1,0 +1,137 @@
+{
+  "verdicts": [
+    {
+      "field": "existing_mcp.exists",
+      "status": "contradicted",
+      "note": "The record claims exists='yes' and links to https://github.com/mermaid-js/mermaid-cli, but that URL is the Mermaid CLI GitHub repo itself—not an MCP server. The evidence from https://mermaid.ai/docs/ai/mcp-server describes a *separate* MCP server (the 'Mermaid MCP Server' hosted at https://mcp.mermaid.ai) that wraps Mermaid functionality, not one dedicated to mermaid-cli. The correct setting is exists='no' or 'unknown' because there is no evidence of a dedicated MCP server *for the Mermaid CLI tool itself*."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "contradicted",
+      "note": "The provided URL points to the Mermaid CLI GitHub repository, not to an MCP server repository or service endpoint. This must be removed."
+    },
+    {
+      "field": "buildability",
+      "status": "contradicted",
+      "note": "The evidence shows Mermaid CLI is an open-source, local-only command-line tool with no hosted API. It requires local installation and runs as a Node.js library or CLI. There is no hosted/public API endpoint for remote calls. Per the skeptical standard, a tool that cannot be called over a hosted API is NOT 'buildable-now'—it should be 'blocked' or 'buildable-with-caveats' with a clear blocker statement."
+    },
+    {
+      "field": "main_blocker",
+      "status": "contradicted",
+      "note": "The record states null, but the evidence clearly shows that Mermaid CLI is a local-only tool with no hosted service or public API. The main blocker is: 'No hosted API; Mermaid CLI is a local command-line tool that must be installed and run on the user's machine.'"
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence confirms no authentication is required for the local Mermaid CLI tool. This field is accurate."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Evidence confirms the tool is freely available on GitHub and npm without registration or API keys. 'self-serve-free' is accurate."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "supported",
+      "note": "The notes accurately describe the installation and availability via npm and GitHub."
+    },
+    {
+      "field": "api_surface.type",
+      "status": "supported",
+      "note": "Evidence confirms the tool provides a Node.js API and CLI; no REST or GraphQL API exists. 'SDK-only' is appropriate."
+    },
+    {
+      "field": "api_surface.breadth",
+      "status": "supported",
+      "note": "'narrow' is appropriate given the tool is focused solely on rendering Mermaid diagrams locally."
+    },
+    {
+      "field": "api_surface.notes",
+      "status": "supported",
+      "note": "The notes accurately describe the Node.js API and CLI functionality, and note the lack of REST/GraphQL APIs."
+    },
+    {
+      "field": "one_liner",
+      "status": "supported",
+      "note": "The description is accurate: it is indeed an open-source CLI tool and Node.js API for rendering Mermaid diagrams locally without authentication."
+    },
+    {
+      "field": "category",
+      "status": "supported",
+      "note": "The evidence confirms this is a tool for rendering diagrams, fitting 'AI, Research and Media-native'."
+    },
+    {
+      "field": "evidence",
+      "status": "supported",
+      "note": "All evidence URLs are valid and support the various claims in the record."
+    },
+    {
+      "field": "confidence",
+      "status": "supported",
+      "note": "0.95 is reasonable given the clear evidence about the tool's nature, though some fields require correction."
+    },
+    {
+      "field": "flags",
+      "status": "supported",
+      "note": "The flags 'open-source', 'local-tool', 'no-cloud-service', 'cli-and-sdk' are all accurate. However, 'existing-mcp-servers' is misleading—the evidence shows an MCP server for Mermaid (the library), not for Mermaid CLI specifically."
+    }
+  ],
+  "revised": {
+    "id": 98,
+    "name": "Mermaid CLI",
+    "website": "github.com/mermaid-js/mermaid-cli",
+    "category": "AI, Research and Media-native",
+    "one_liner": "Open-source CLI tool and Node.js API for rendering Mermaid diagrams locally without authentication",
+    "auth_methods": [
+      {
+        "method": "Other",
+        "notes": "No authentication required. Mermaid CLI is a local rendering tool that runs as a command-line utility or Node.js library without any API authentication."
+      }
+    ],
+    "self_serve": "self-serve-free",
+    "self_serve_notes": "Mermaid CLI is a fully open-source tool available on GitHub and npm. Users can install it globally via npm or use it programmatically without any registration, API keys, or account creation. Simply run 'npm install -g @mermaid-js/mermaid-cli' to get started.",
+    "api_surface": {
+      "type": "SDK-only",
+      "breadth": "narrow",
+      "notes": "Provides a Node.js API via the 'run' function from '@mermaid-js/mermaid-cli' package and a CLI tool (mmdc). The API is focused specifically on rendering Mermaid diagrams to SVG, PNG, or PDF formats. No REST or GraphQL API exists for the CLI itself, though third-party services like Beauty Diagram offer HTTP APIs for Mermaid rendering."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "blocked",
+    "main_blocker": "No hosted API; Mermaid CLI is a local command-line tool that must be installed and run on the user's machine. There is no public/hosted service endpoint to call remotely.",
+    "evidence": [
+      {
+        "url": "https://github.com/mermaid-js/mermaid-cli?tab=readme-ov-file",
+        "supports": "Official GitHub repository for mermaid-cli with 4.8k stars, confirming it's an open-source tool for rendering Mermaid diagrams"
+      },
+      {
+        "url": "https://deepwiki.com/mermaid-js/mermaid-cli/2-installation-and-usage",
+        "supports": "Installation via npm without authentication, usage via CLI (mmdc command) or Node.js API"
+      },
+      {
+        "url": "https://npmx.dev/package/@mermaid-js/mermaid-cli",
+        "supports": "Package available on npm as '@mermaid-js/mermaid-cli', demonstrates self-serve free installation"
+      },
+      {
+        "url": "https://deepwiki.com/mermaid-js/mermaid-cli/2.3-programmatic-api",
+        "supports": "Node.js programmatic API usage with 'run' function for rendering diagrams locally"
+      },
+      {
+        "url": "https://mermaideditor.com/blog/is-mermaid-free",
+        "supports": "Mermaid.js library is open-source and free to use without API or subscription"
+      },
+      {
+        "url": "https://mermaid.ai/docs/ai/mcp-server",
+        "supports": "A separate MCP server exists for Mermaid (the library), hosted at https://mcp.mermaid.ai, but this is not an MCP server dedicated to the Mermaid CLI tool itself."
+      }
+    ],
+    "confidence": 0.92,
+    "flags": [
+      "open-source",
+      "local-tool",
+      "no-cloud-service",
+      "cli-and-sdk"
+    ]
+  }
+}

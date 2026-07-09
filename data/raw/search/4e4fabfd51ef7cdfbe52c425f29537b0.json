@@ -1,0 +1,45 @@
+{
+  "answer": "Front does not offer a free production plan, though it provides a 14-day free trial for its paid tiers [1][2]. To build integrations without a paid subscription, you can sign up for a free developer account at the Front Developer portal [3]. This environment is separate from production, limited to three teammates, and contains the tools necessary to build and test applications using Front’s APIs [3]. While production API usage is tied to your paid subscription plan and its associated rate limits, the developer account provides a safe, free space to build before deploying to a production instance [3][4][5].",
+  "results": [
+    {
+      "title": "Front Pricing Plans and Tiers Compared (2026) | CompareTiers",
+      "url": "https://comparetiers.com/tools/front",
+      "snippet": ""
+    },
+    {
+      "title": "Front Pricing ($19–$99/mo): All 3 Plans Explained [2026] | ProPicked",
+      "url": "https://propicked.com/saas/front-app/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Welcome",
+      "url": "https://dev.frontapp.com/docs/welcome",
+      "snippet": ""
+    },
+    {
+      "title": "Front's API rate limit",
+      "url": "https://help.front.com/en/articles/2438",
+      "snippet": ""
+    },
+    {
+      "title": "Rate limits",
+      "url": "https://dev.frontapp.com/docs/rate-limiting",
+      "snippet": ""
+    },
+    {
+      "title": "Front Pricing and Plans | Front",
+      "url": "https://front.com/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "An all-in-one solution for customer-driven teams",
+      "url": "https://front.com/webassets/pages/pricing/Front-Pricing-One-Pager-2023-03-06.pdf",
+      "snippet": ""
+    },
+    {
+      "title": "Create, manage, and publish apps",
+      "url": "https://dev.frontapp.com/me/docs/create-and-manage-apps",
+      "snippet": ""
+    }
+  ]
+}

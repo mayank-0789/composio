@@ -1,0 +1,45 @@
+{
+  "answer": "The Klaviyo MCP server is a tool that allows AI platforms, such as Claude and Cursor, to securely connect with your Klaviyo data to perform tasks like reporting, campaign creation, and segment analysis [1][2][3].\n\nFor most users, the recommended approach is the remote-hosted server, which uses the URL https://mcp.klaviyo.com/mcp [1][4]. To configure this in a client like Cursor, add the following to your MCP server settings [1][5]:\n\n```json\n{\n  \"mcpServers\": {\n    \"klaviyo\": {\n      \"url\": \"https://mcp.klaviyo.com/mcp\"\n    }\n  }\n}\n```\n\nYou can control server behavior using query parameters like read-only=true to disable write actions [1][4]. For local installations, you will need the uv package manager and a private API key with the appropriate scope permissions [6][4][5].",
+  "results": [
+    {
+      "title": "Klaviyo MCP server",
+      "url": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server",
+      "snippet": ""
+    },
+    {
+      "title": "Klaviyo MCP Server: AI-powered Analytics Insights and Marketing Actions with Customer Data - Klaviyo",
+      "url": "https://www.klaviyo.com/blog/introducing-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Klaviyo MCP Server Helps Marketers Move Faster with AI - Klaviyo",
+      "url": "https://www.klaviyo.com/newsroom/mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Klaviyo MCP server",
+      "url": "https://developers.klaviyo.com/en/v2025-10-15/docs/klaviyo_mcp_server",
+      "snippet": ""
+    },
+    {
+      "title": "Klaviyo MCP server",
+      "url": "https://developers.klaviyo.com/en/v2026-01-15/docs/klaviyo_mcp_server",
+      "snippet": ""
+    },
+    {
+      "title": "klaviyo-mcp-server v0.4.0",
+      "url": "https://pypi.org/project/klaviyo-mcp-server/0.4.0/",
+      "snippet": ""
+    },
+    {
+      "title": "mattcoatsworth/Klaviyo-MCP-Server",
+      "url": "https://github.com/mattcoatsworth/Klaviyo-MCP-Server",
+      "snippet": ""
+    },
+    {
+      "title": "Klaviyo, Inc. - Klaviyo MCP server helps marketers move faster with AI",
+      "url": "https://investors.klaviyo.com/news/news-details/2025/Klaviyo-MCP-server-helps-marketers-move-faster-with-AI-2025-twExpbyTVx/default.aspx",
+      "snippet": ""
+    }
+  ]
+}

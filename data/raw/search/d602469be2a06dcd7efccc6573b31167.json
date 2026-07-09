@@ -1,0 +1,45 @@
+{
+  "answer": "The Fathom API supports three primary authentication methods: API keys, Bearer tokens, and OAuth 2.0 [1][2][3].\n\nAPI keys are generated via the user settings area and are passed using the X-Api-Key header in standard REST requests [4][5]. In the SDKs, they are configured via the apiKeyAuth security scheme [1][6].\n\nBearer token authentication is supported via the Authorization header (using Bearer YOUR_TOKEN) or the bearerAuth security configuration in the SDKs [1][3].\n\nFor public integrations, the API supports OAuth 2.0, requiring a registered app client ID and secret to manage access tokens and refresh flows [2].",
+  "results": [
+    {
+      "title": "Authentication - Fathom API",
+      "url": "https://developers.fathom.ai/sdks/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "OAuth - Fathom API",
+      "url": "https://developers.fathom.ai/sdks/oauth",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication · Fathom Analytics API",
+      "url": "https://usefathom.com/api/v1/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Api overview - Fathom API",
+      "url": "https://developers.fathom.ai/api-overview",
+      "snippet": ""
+    },
+    {
+      "title": "Quickstart - Fathom API",
+      "url": "https://developers.fathom.ai/quickstart",
+      "snippet": ""
+    },
+    {
+      "title": "Advanced Configuration - Fathom API",
+      "url": "https://developers.fathom.ai/sdks/advanced-configuration",
+      "snippet": ""
+    },
+    {
+      "title": "Introduction - Fathom API",
+      "url": "https://developers.fathom.ai/",
+      "snippet": ""
+    },
+    {
+      "title": "Available Methods - Fathom API",
+      "url": "https://developers.fathom.ai/sdks/available-methods",
+      "snippet": ""
+    }
+  ]
+}

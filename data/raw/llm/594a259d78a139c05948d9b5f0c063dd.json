@@ -1,0 +1,45 @@
+{
+  "one_liner": "Coda offers a free, self-serve REST API (Bearer token auth) covering docs/tables/rows/automations, with several community MCP servers already available, making agent toolkits buildable now.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Bearer token generated from account API settings (coda.io/account/apiSettings), used as Authorization: Bearer {token} header."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "API is free to use on any plan (free or paid workspace). Developer self-generates API token instantly from account settings; some actions require Doc Maker/Admin role within workspace.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Coda REST API v1 covers docs, tables, rows, columns, formulas, controls, automations; OpenAPI spec published."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://www.npmjs.com/package/coda-mcp"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://docs.nexla.com/user-guides/connectors/coda_api/coda_api_auth",
+      "supports": "Bearer token auth, self-serve API token generation from account settings"
+    },
+    {
+      "url": "https://coda.io/@oleg/getting-started-guide-coda-api/start-here-5",
+      "supports": "Self-serve API key generation from coda.io/account, example usage"
+    },
+    {
+      "url": "https://coda.io/apis/v1/openapi.yaml",
+      "supports": "OpenAPI spec confirming broad REST API surface"
+    },
+    {
+      "url": "https://help.coda.io/hc/en-us/articles/39555725230989-Billing-and-pricing-basics",
+      "supports": "API free on all plans"
+    }
+  ],
+  "confidence": 0.85,
+  "flags": [
+    "Community-built MCP servers exist but no official first-party MCP from Coda",
+    "Some API endpoints require Doc Maker/Admin role, limiting basic Editor tokens"
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "verdicts": [
+    {
+      "field": "existing_mcp",
+      "status": "contradicted",
+      "note": "The record claims https://mcp.stripe.com is an official hosted MCP server. However, the evidence URLs are all hCaptcha-blocked Stripe documentation pages (authentication, Stripe Apps, pricing, managing products/prices). None of the evidence mentions an MCP server or provides any confirmation that mcp.stripe.com hosts a Model Context Protocol server. The URL might be a Stripe marketing site or documentation hub, but there is zero evidence in the provided sources that it is a dedicated MCP server. This must be marked 'no' or 'unknown' with the url removed."
+    },
+    {
+      "field": "auth_methods",
+      "status": "unsupported",
+      "note": "The evidence URLs are all blocked by hCaptcha and do not display readable content. We cannot verify the claimed auth methods (API key with HTTP Basic, Bearer token, or OAuth2) from the provided evidence. The record may be correct, but the evidence does not support it."
+    },
+    {
+      "field": "self_serve",
+      "status": "unsupported",
+      "note": "The stripe.com/pricing page is blocked by hCaptcha. While the pricing snippet shows 'No setup fees, monthly fees' and pay-as-you-go model, the evidence does not clearly confirm that signup is instant and self-serve-free. Cannot fully verify from the provided evidence."
+    },
+    {
+      "field": "api_surface",
+      "status": "unsupported",
+      "note": "The evidence pages are blocked and do not show the full API surface. We can infer from the table of contents in the authentication page that there are many Core Resources and Payment Methods, but we cannot confirm breadth='broad' or type='REST' from the provided evidence."
+    },
+    {
+      "field": "buildability",
+      "status": "unsupported",
+      "note": "Evidence does not provide clear confirmation that developers can immediately call the API. The pricing page suggests self-serve signup, but the pages are blocked."
+    },
+    {
+      "field": "one_liner",
+      "status": "contradicted",
+      "note": "The one_liner claims 'an official hosted MCP server for AI agent integration.' The evidence does not support the existence of an MCP server at all."
+    }
+  ],
+  "revised": {
+    "id": 81,
+    "name": "Stripe",
+    "website": "stripe.com/docs/api",
+    "category": "Finance and Fintech",
+    "one_liner": "Stripe offers a broad, mature REST API for payments and fintech operations with self-serve API key access.",
+    "auth_methods": [
+      {
+        "method": "API key",
+        "notes": "HTTP Basic Auth using secret API key as username (no password) - claimed but not verified in evidence."
+      },
+      {
+        "method": "Token",
+        "notes": "Bearer token auth with secret API key, recommended for cross-origin requests - claimed but not verified in evidence."
+      },
+      {
+        "method": "OAuth2",
+        "notes": "Available for Stripe Connect platform integrations and Stripe Apps - claimed but not verified in evidence."
+      }
+    ],
+    "self_serve": "unknown",
+    "self_serve_notes": "Evidence suggests pay-as-you-go pricing with no setup/monthly fees, but hCaptcha blocks prevented full verification of self-serve signup flow.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "Evidence suggests a broad API covering payments, billing, customers, disputes, etc., but hCaptcha blocks prevented full verification."
+    },
+    "existing_mcp": {
+      "exists": "unknown"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "Evidence was blocked by hCaptcha and did not provide readable confirmation of API access, auth methods, or MCP server existence. Based on Stripe's public reputation, the API is likely buildable, but evidence does not support 'buildable-now' with high confidence.",
+    "evidence": [
+      {
+        "url": "https://docs.stripe.com/api/authentication?api-version=2025-03-31.basil",
+        "supports": "Page blocked by hCaptcha; no readable content to verify auth methods."
+      },
+      {
+        "url": "https://docs.stripe.com/stripe-apps/api-authentication",
+        "supports": "Page blocked by hCaptcha; no readable content to verify OAuth or Stripe Apps auth."
+      },
+      {
+        "url": "https://stripe.com/pricing",
+        "supports": "Partial content shows pay-as-you-go pricing with no setup/monthly fees, but full self-serve confirmation not visible."
+      },
+      {
+        "url": "https://docs.stripe.com/products-prices/manage-prices?dashboard-or-api=api&locale=en-GB",
+        "supports": "Page blocked by hCaptcha; no readable content to verify API usage."
+      }
+    ],
+    "confidence": 0.3,
+    "flags": [
+      "evidence_blocked_by_captcha",
+      "mcp_server_claim_not_supported"
+    ]
+  }
+}

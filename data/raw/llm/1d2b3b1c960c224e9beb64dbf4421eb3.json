@@ -1,0 +1,55 @@
+{
+  "one_liner": "QuickBooks Online offers a broad REST accounting API secured via OAuth 2.0 (with legacy OAuth 1.0a support), a free self-serve Builder tier with substantial API credits, and both official and third-party MCP servers already available, making it readily buildable today.",
+  "auth_methods": [
+    {
+      "method": "OAuth2",
+      "notes": "Standard protocol since July 2017; requires Client ID/Secret exchange via Intuit OAuth 2.0 server, bearer token in Authorization header, 60-minute access tokens with refresh tokens."
+    },
+    {
+      "method": "Other",
+      "notes": "Legacy OAuth 1.0a supported for apps registered before July 17, 2017, using App Token, Consumer Key, and Consumer Secret."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Builder tier of the Intuit App Partner Program is free and automatically assigned to all apps, including 500,000 monthly CorePlus API credits with unmetered Core API calls. Premium APIs require paid tier upgrade (Silver/Gold/Platinum).",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "QuickBooks Online Accounting API is a broad REST API covering customers, invoices, bills, payments, reports (P&L, Balance Sheet), etc. SDKs available for PHP, Python, and others."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://mcp.quickbooks.intuit.com/mcp"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization",
+      "supports": "OAuth 2.0 as standard authorization protocol for API access"
+    },
+    {
+      "url": "https://intuit.github.io/QuickBooks-V3-PHP-SDK/authorization.html",
+      "supports": "Details OAuth 1.0a (legacy) and OAuth 2.0 authorization mechanisms"
+    },
+    {
+      "url": "https://developer.intuit.com/app/developer/qbo/docs/get-started/partner-faq",
+      "supports": "Builder tier free self-serve access with 500,000 monthly CorePlus API credits"
+    },
+    {
+      "url": "https://help.developer.intuit.com/s/article/platform-service-fees",
+      "supports": "Details on platform service fees and tier structure"
+    },
+    {
+      "url": "https://help.developer.intuit.com/s/article/API-classification-for-the-Intuit-App-Partner-Program",
+      "supports": "API classification distinguishing Core vs Premium APIs across tiers"
+    }
+  ],
+  "confidence": 0.85,
+  "flags": [
+    "Existing official hosted MCP server at mcp.quickbooks.intuit.com plus a local stdio-based Intuit project with 144 tools",
+    "Third-party MCP implementations exist (Cloudflare Workers, CData)",
+    "Premium API access requires paid tier upgrade, limiting free-tier functionality for some use cases",
+    "Program availability restricted to partners in US, UK, Australia, and Canada (excluding Quebec)"
+  ]
+}

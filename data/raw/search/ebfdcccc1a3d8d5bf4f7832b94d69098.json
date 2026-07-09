@@ -1,0 +1,45 @@
+{
+  "answer": "QuickBooks Online uses OAuth 2.0 as its standard authorization protocol for API access [1][2]. To authenticate, you must exchange your app's Client ID and Client Secret for an access token via the Intuit OAuth 2.0 server [1][3].\n\nAll API requests require an Authorization header containing this bearer token [4].\n\n```http\nAuthorization: Bearer <your_access_token>\n```\n\nYou can obtain tokens by directing users to an authorization URL generated using your credentials [5][6][2]. Access tokens are valid for 60 minutes and can be refreshed using a refresh token [5][6][7].",
+  "results": [
+    {
+      "title": "Authorization and authentication",
+      "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization",
+      "snippet": ""
+    },
+    {
+      "title": "Authorization — QuickBooks V3 PHP SDK 4.0.5 documentation",
+      "url": "https://intuit.github.io/QuickBooks-V3-PHP-SDK/authorization.html",
+      "snippet": ""
+    },
+    {
+      "title": "Create and start developing your app",
+      "url": "https://developer.intuit.com/app/developer/qbo/docs/get-started/start-developing-your-app",
+      "snippet": ""
+    },
+    {
+      "title": "Basic schema and data formats for the QuickBooks Online Accounting API",
+      "url": "https://developer.intuit.com/app/developer/qbo/docs/learn/rest-api-features",
+      "snippet": ""
+    },
+    {
+      "title": "Authorization",
+      "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/sdks-and-samples-collections/php/authorization",
+      "snippet": ""
+    },
+    {
+      "title": "Python OAuth Client",
+      "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/sdks-and-samples-collections/python/python_oauth_client",
+      "snippet": ""
+    },
+    {
+      "title": "Set up and test queries in Postman",
+      "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/sandboxes/postman",
+      "snippet": ""
+    },
+    {
+      "title": "Synchronous calls",
+      "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/sdks-and-samples-collections/php/synchronous-calls",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "answer": "The official Threads API by Meta is free, as it has no published paid tier or per-call fees [1]. Developers access it through the Meta for Developers portal by creating an app and requesting permissions [1]. To go beyond development mode and serve users other than invited testers, your application must pass Meta App Review [1]. Usage is subject to rate limits based on impression volume and hard 24-hour caps, such as 250 posts and 1,000 replies per profile [1]. While third-party services like Blotato offer managed alternatives for a monthly subscription, they are distinct from the official Meta developer access [1].",
+  "results": [
+    {
+      "title": "Threads API Pricing 2026: Free, but Rate-Limited - Blotato",
+      "url": "https://www.blotato.com/blog/threads-api-pricing",
+      "snippet": ""
+    }
+  ]
+}

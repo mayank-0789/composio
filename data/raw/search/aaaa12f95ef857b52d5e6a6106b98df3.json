@@ -1,0 +1,45 @@
+{
+  "answer": "Standard Ecwid store plans require a paid subscription to access the REST API. You cannot access the API on a standard free tier. However, if you are a developer, Ecwid provides a free upgrade to a paid plan for your test store if you are building an integration, developing a public application, or working on a store customization project. To request this, you must contact their API support team via email. Once you have a store with access, you can manage your integration and generate access tokens through the application dashboard in your Ecwid admin panel.",
+  "results": [
+    {
+      "title": "Ecwid plans and features – Ecwid Help Center",
+      "url": "https://support.ecwid.com/hc/en-us/articles/207100729-Ecwid-plans-and-features",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid",
+      "snippet": ""
+    },
+    {
+      "title": "REST API overview | REST API Reference | Ecwid Documentation",
+      "url": "https://docs.ecwid.com/api-reference",
+      "snippet": ""
+    },
+    {
+      "title": "Changes to the Ecwid plan pricing after March 2, 2026 – Ecwid Help Center",
+      "url": "https://support.ecwid.com/hc/en-us/articles/25122701806108-Changes-to-the-Ecwid-plan-pricing-after-March-2-2026",
+      "snippet": ""
+    },
+    {
+      "title": "Ecommerce Solutions for WordPress Developers",
+      "url": "https://www.ecwid.com/wordpress/developers",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://docs.ecwid.com/develop-apps/app-settings",
+      "snippet": ""
+    },
+    {
+      "title": "Build with Ecwid apps | Ecwid Documentation",
+      "url": "https://docs.ecwid.com/",
+      "snippet": ""
+    },
+    {
+      "title": "Ecwid plans and features for Wix – Ecwid Help Center",
+      "url": "https://support.ecwid.com/hc/en-us/articles/207808335-Ecwid-plans-and-features-for-Wix",
+      "snippet": ""
+    }
+  ]
+}

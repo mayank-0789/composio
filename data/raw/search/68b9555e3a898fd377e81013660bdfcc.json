@@ -1,0 +1,45 @@
+{
+  "answer": "Zoho CRM provides a free edition for up to three users [1][2] and a separate, fully-featured Developer Edition for testing and building custom solutions [3][4]. The Developer Edition is free forever, does not expire, and is intended strictly for development and training rather than production use [4][5].\n\nFor API access, both the standard Free Edition and the Developer Edition include limits [6]. The Free Edition allows 5,000 API credits per day with a concurrency limit of five [6]. If your needs exceed these limits, you can self-serve to purchase additional credits via the API Dashboard using a pay-as-you-go model [6].",
+  "results": [
+    {
+      "title": "Zoho CRM Pricing and Editions - Free for 3 users",
+      "url": "https://www.zoho.com/crm/zohocrm-pricing.html",
+      "snippet": ""
+    },
+    {
+      "title": "Free CRM software for all your business needs- Zoho CRM",
+      "url": "https://www.zoho.com/crm/free-crm.html",
+      "snippet": ""
+    },
+    {
+      "title": "Zoho CRM | Developer Tools and API",
+      "url": "https://www.zoho.com/crm/developer/",
+      "snippet": ""
+    },
+    {
+      "title": "Get Zoho CRMs free full-featured developer edition",
+      "url": "https://www.zoho.com/crm/developer/developer-edition.html",
+      "snippet": ""
+    },
+    {
+      "title": "Developer Edition - Zoho CRM",
+      "url": "https://www.zoho.com/crm/developer/docs/dev-edition.html",
+      "snippet": ""
+    },
+    {
+      "title": "Limits - API | Zoho CRM API | V8",
+      "url": "https://www.zoho.com/crm/developer/docs/api/v8/api-limits.html",
+      "snippet": ""
+    },
+    {
+      "title": "Pay only for what you use and nothing more with Zoho CRM",
+      "url": "https://www.zoho.com/crm/value-centric-crm.html",
+      "snippet": ""
+    },
+    {
+      "title": "Compare Zoho CRM Editions",
+      "url": "https://www.zoho.com/sites/default/files/crm/n-crm-comparison.pdf",
+      "snippet": ""
+    }
+  ]
+}

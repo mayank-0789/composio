@@ -1,0 +1,45 @@
+{
+  "answer": "The Vonage Model Context Protocol (MCP) servers allow AI agents to discover and utilize Vonage’s developer documentation and communication APIs as tools [1][2]. These servers act as intermediaries, translating natural language requests into API calls for services like SMS, voice, and WhatsApp [2][3].\n\nVonage offers two primary servers:\n\nThe Documentation MCP Server provides AI assistants access to API references, code snippets, and tutorials [4][5]. It is hosted at:\n`https://documentation-mcp.vonage.dev/mcp` [5]\n\nThe Server API Bindings (Tooling) MCP Server enables agents to perform actions such as managing applications, checking balances, and sending messages [4][6]. It is installed as an NPM package via `npx` [3][6].\n\nMinimal configuration example for the Tooling Server:\n\n```json\n\"vonage-tooling\": {\n  \"command\": \"npx\",\n  \"args\": [\"-y\", \"@vonage/vonage-mcp-server-api-bindings\"],\n  \"env\": {\n    \"VONAGE_API_KEY\": \"your_key\",\n    \"VONAGE_API_SECRET\": \"your_secret\"\n  }\n}\n```\n\nThese servers work with any MCP-compatible environment, including Claude Desktop, Cursor, and VS Code [4][3].",
+  "results": [
+    {
+      "title": "Vonage MCP Server Overview | Vonage MCP Server Documenation",
+      "url": "https://developer.vonage.com/en/mcp-server/overview",
+      "snippet": ""
+    },
+    {
+      "title": "Technical Details",
+      "url": "https://developer.vonage.com/en/mcp-server/technical-details",
+      "snippet": ""
+    },
+    {
+      "title": "Introducing the Vonage MCP Tooling Server",
+      "url": "https://developer.vonage.com/en/blog/introducing-the-vonage-mcp-tooling-server",
+      "snippet": ""
+    },
+    {
+      "title": "Introduction to Vonage MCP Servers",
+      "url": "https://developer.vonage.com/en/mcp-server/conceptual-guides/introduction-to-vonage-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Vonage/vonage-mcp-server-documentation",
+      "url": "https://github.com/Vonage/vonage-mcp-server-documentation",
+      "snippet": ""
+    },
+    {
+      "title": "@vonage/vonage-mcp-server-api-bindings",
+      "url": "https://registry.npmjs.org/@vonage/vonage-mcp-server-api-bindings",
+      "snippet": ""
+    },
+    {
+      "title": "Step-by-Step: Adding Vonage APIs to Your AI Agent with MCP",
+      "url": "https://developer.vonage.com/en/blog/step-by-step-adding-vonage-apis-to-your-ai-agent-with-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Telephony MCP Server for Agentic AI and Language Models",
+      "url": "https://developer.vonage.com/en/blog/telephony-mcp-server-for-agentic-ai-and-language-models",
+      "snippet": ""
+    }
+  ]
+}

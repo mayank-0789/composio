@@ -1,0 +1,20 @@
+{
+  "answer": "The Meta Ads API uses OAuth2 access tokens for authentication [1]. You must obtain a valid User, System User, or Page access token that includes the ads_management permission [2][1][3]. Tokens are passed in API requests via the access_token query parameter or the Authorization: Bearer <token> header [1]. When using the Facebook Business SDK for PHP, you initialize the API by providing your app ID, app secret, and access token as shown below [2][3].\n\n```php\nuse FacebookAds\\Api;\n\nApi::init('<APP_ID>', '<APP_SECRET>', '<ACCESS_TOKEN>');\n$api = Api::instance();\n```",
+  "results": [
+    {
+      "title": "api-inventory.md at master · gupsammy/meta-ads-cli",
+      "url": "https://github.com/gupsammy/meta-ads-cli/blob/master/api-inventory.md",
+      "snippet": ""
+    },
+    {
+      "title": "DEVELOPER_GUIDE.md at main · facebook/facebook-php-business-sdk",
+      "url": "https://github.com/facebook/facebook-php-business-sdk/blob/main/DEVELOPER_GUIDE.md",
+      "snippet": ""
+    },
+    {
+      "title": "README.md",
+      "url": "https://github.com/facebook/facebook-php-business-sdk/blob/main/README.md",
+      "snippet": ""
+    }
+  ]
+}

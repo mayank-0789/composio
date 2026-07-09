@@ -1,0 +1,45 @@
+{
+  "answer": "The BigCommerce Storefront Model Context Protocol (MCP) server is an official platform feature that allows AI agents to interact with live storefronts to search catalogs, manage carts, and generate checkout URLs [1]. You can enable it by navigating to Settings, then Early Access in your BigCommerce control panel [1].\n\nBeyond the official storefront server, several community-developed MCP servers exist for developers and store management:\n\nCData provides a server for querying live data via SQL [2].\nCommunity repositories offer comprehensive REST API integration for managing products, customers, and orders [3][4].\nSpecialized servers exist for technical reference, providing direct access to BigCommerce developer documentation, API schemas, and code examples [5].\nHigh-performance implementations using Go offer hierarchical tool discovery for store management [6].",
+  "results": [
+    {
+      "title": "Build AI Shopping Agents with BigCommerce Storefront MCP",
+      "url": "https://www.bigcommerce.com/blog/storefront-mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "CDataSoftware/bigcommerce-mcp-server-by-cdata",
+      "url": "https://github.com/CDataSoftware/bigcommerce-mcp-server-by-cdata",
+      "snippet": ""
+    },
+    {
+      "title": "isaacgounton/bigcommerce-api-mcp",
+      "url": "https://github.com/isaacgounton/bigcommerce-api-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "DJB31st/bigcommerce-api-mcp-writable",
+      "url": "https://github.com/djb31st/bigcommerce-api-mcp-writable",
+      "snippet": ""
+    },
+    {
+      "title": "ackm04/bigcommerce-mcp",
+      "url": "https://github.com/ackm04/bigcommerce-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "roel-c/bc-admin-mcp",
+      "url": "https://github.com/roel-c/bc-admin-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "primrose-mcp/primrose-mcp-bigcommerce",
+      "url": "https://github.com/primrose-mcp/primrose-mcp-bigcommerce",
+      "snippet": ""
+    },
+    {
+      "title": "Model Context Protocol (MCP): The New Standard Every AI Developer Should Know | BigCommerce",
+      "url": "https://www.bigcommerce.com/blog/model-context-protocol/",
+      "snippet": ""
+    }
+  ]
+}

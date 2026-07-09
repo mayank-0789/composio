@@ -1,0 +1,45 @@
+{
+  "answer": "The Coda API uses Bearer token authentication [1]. To authenticate, you must generate an API token from your Coda account settings [1][2]. This token must be included in the Authorization header of every API request using the format Bearer {token} [1]. All API requests must be made over HTTPS [1].\n\nFor Coda Packs development, the SDK provides the CodaApiHeaderBearerToken authentication type, which automates the inclusion of this header [3][4][5].\n\nExample header format:\nAuthorization: Bearer YOUR_API_TOKEN",
+  "results": [
+    {
+      "title": "Authorization | Nexla Docs",
+      "url": "https://docs.nexla.com/user-guides/connectors/coda_api/coda_api_auth",
+      "snippet": ""
+    },
+    {
+      "title": "Start Here · Getting Started Guide: Coda API",
+      "url": "https://coda.io/@oleg/getting-started-guide-coda-api/start-here-5",
+      "snippet": ""
+    },
+    {
+      "title": "API setup samples - Superhuman Packs SDK",
+      "url": "https://coda.io/packs/build/latest/samples/topic/apis/",
+      "snippet": ""
+    },
+    {
+      "title": "Interface: CodaApiBearerTokenAuthentication - Coda Pack SDK",
+      "url": "https://coda.io/packs/build/latest/reference/sdk/core/interfaces/CodaApiBearerTokenAuthentication/",
+      "snippet": ""
+    },
+    {
+      "title": "Enumeration: AuthenticationType - Coda Pack SDK",
+      "url": "https://coda.io/packs/build/latest/reference/sdk/core/enumerations/AuthenticationType/",
+      "snippet": ""
+    },
+    {
+      "title": "Openapi.yaml",
+      "url": "https://coda.io/apis/v1/openapi.yaml",
+      "snippet": ""
+    },
+    {
+      "title": "Coda API | Documentation | Postman API Network",
+      "url": "https://www.postman.com/codaio/coda-workspace/documentation/0vy7uxn/coda-api",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://docs.n8n.io/integrations/builtin/credentials/coda",
+      "snippet": ""
+    }
+  ]
+}

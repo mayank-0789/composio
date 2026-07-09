@@ -1,0 +1,53 @@
+{
+  "one_liner": "Supabase provides a self-serve Postgres-backed backend platform (REST/GraphQL API, Auth, Storage, Realtime) secured via API keys and JWTs, with an official hosted MCP server for AI agent integration.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "apikey header using anon (public) or service_role (private) key for REST/Auth endpoints"
+    },
+    {
+      "method": "Token",
+      "notes": "JWT Bearer access token (Authorization header) obtained via /auth/v1/token, used for user-scoped requests"
+    },
+    {
+      "method": "OAuth2",
+      "notes": "MCP server uses browser-based OAuth flow for client authorization; personal access tokens supported for CI use"
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Free tier available with no credit card required; unlimited API access on all plans including Free (2 active projects, auto-paused after inactivity). Self-serve signup and key generation via dashboard.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Supabase exposes REST (PostgREST-based) and GraphQL APIs plus Auth, Storage, Realtime, and Edge Functions endpoints; also offers client SDKs across multiple languages."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://mcp.supabase.com/mcp"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://supabase-supabase.mintlify.app/api/rest/authentication",
+      "supports": "Details API key (anon/service_role) and JWT bearer token authentication methods for REST/Auth endpoints"
+    },
+    {
+      "url": "https://supabase.com/pricing",
+      "supports": "Free tier with unlimited API access, no credit card required, self-serve project creation"
+    },
+    {
+      "url": "https://supabase.com/docs/guides/auth",
+      "supports": "Documents Supabase Auth capabilities including password, MFA, anonymous sign-in supporting broad API surface"
+    },
+    {
+      "url": "https://deepwiki.com/supabase/auth/3-api-reference",
+      "supports": "Comprehensive API reference covering authentication, user management, MFA, admin, SSO/SAML, and OAuth server endpoints"
+    }
+  ],
+  "confidence": 0.85,
+  "flags": [
+    "Official hosted MCP server exists at mcp.supabase.com, reducing need for custom build",
+    "Service_role key grants full DB access and bypasses RLS—must be handled server-side only, security-sensitive for agent tooling"
+  ]
+}

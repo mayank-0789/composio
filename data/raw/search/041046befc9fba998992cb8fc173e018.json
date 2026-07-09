@@ -1,0 +1,45 @@
+{
+  "answer": "Freshdesk uses HTTP Basic Authentication for all API requests [1][2][3]. To authenticate, you must provide your personal API key (found in your agent profile) as the username [4][2]. For the password, you can use any non-empty string, such as a dummy character like X [5][2].\n\nWhen using tools like curl, the authentication is handled via the -u flag [5][2]. In programmatic requests, you must encode the string \"APIKEY:X\" into base64 and include it in the Authorization header [6].\n\n```bash\ncurl -u YOUR_API_KEY:X -H \"Content-Type: application/json\" https://domain.freshdesk.com/api/v2/tickets\n```",
+  "results": [
+    {
+      "title": "Overview | Freshdesk SDK",
+      "url": "https://developers.freshworks.com/freshdesk-sdk/",
+      "snippet": ""
+    },
+    {
+      "title": "How to Integrate with the Freshdesk API: 2026 Engineering Guide | Truto Blog",
+      "url": "https://preview.truto.one/blog/how-to-integrate-with-the-freshdesk-api-2026-engineering-guide/",
+      "snippet": ""
+    },
+    {
+      "title": "TicketsApi | Freshdesk SDK",
+      "url": "https://developers.freshworks.com/freshdesk-sdk/docs/TicketsApi.html",
+      "snippet": ""
+    },
+    {
+      "title": "Freshdesk API for AI Agents: Methods, Permissions & Safe Access | Bollard AI",
+      "url": "https://bollardai.com/resources/freshdesk",
+      "snippet": ""
+    },
+    {
+      "title": "Help Desk API for Developers | Freshdesk",
+      "url": "https://developer.freshdesk.com/api/v1/",
+      "snippet": ""
+    },
+    {
+      "title": "Problem when making requests to Freshdesk Account - App Platform - Freshworks Developer Community",
+      "url": "https://community.freshworks.dev/t/problem-when-making-requests-to-freshdesk-account/9769",
+      "snippet": ""
+    },
+    {
+      "title": "Freshdesk",
+      "url": "https://developers.freshdesk.com/api/",
+      "snippet": ""
+    },
+    {
+      "title": "Freshdesk",
+      "url": "https://www.freshworks.com/freshdesk/api/users/",
+      "snippet": ""
+    }
+  ]
+}

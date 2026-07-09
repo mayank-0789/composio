@@ -1,0 +1,45 @@
+{
+  "answer": "The official Google Ads MCP server is a Python-based, read-only implementation maintained by Google that allows AI agents to interact with the Google Ads API [1][2]. It provides essential tools for account discovery, metadata retrieval, and GAQL-based searching [1][3].\n\nTo use it, add the following configuration to your MCP client's settings file [2]:\n\n```json\n{\n  \"mcpServers\": {\n    \"google-ads-mcp\": {\n      \"command\": \"pipx\",\n      \"args\": [\"run\", \"--spec\", \"git+https://github.com/googleads/google-ads-mcp.git\", \"google-ads-mcp\"],\n      \"env\": {\n        \"GOOGLE_PROJECT_ID\": \"YOUR_PROJECT_ID\",\n        \"GOOGLE_ADS_DEVELOPER_TOKEN\": \"YOUR_DEVELOPER_TOKEN\"\n      }\n    }\n  }\n}\n```\n\nSeveral third-party MCP servers also exist, such as those by mharnett, FGRibreau, and others, which often include additional capabilities like write operations, campaign management, and built-in safety guardrails [4][5][6]. Requirements typically include a Google Ads developer token and OAuth 2.0 credentials [2][4][5].",
+  "results": [
+    {
+      "title": "googleads/google-ads-mcp",
+      "url": "https://github.com/googleads/google-ads-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Google Ads MCP server: Developer integration guide  |  Google Ads API  |  Google for Developers",
+      "url": "https://developers.google.com/google-ads/api/docs/developer-toolkit/mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "README.md at main · googleads/google-ads-mcp",
+      "url": "https://github.com/googleads/google-ads-mcp/blob/main/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "mharnett/mcp-google-ads",
+      "url": "https://github.com/mharnett/mcp-google-ads/",
+      "snippet": ""
+    },
+    {
+      "title": "FGRibreau/mcp-google-ads",
+      "url": "https://github.com/FGRibreau/mcp-google-ads",
+      "snippet": ""
+    },
+    {
+      "title": "ashathyapriyan/google-ads-mcp",
+      "url": "https://github.com/ashathyapriyan/google-ads-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "johnoconnor0/google-ads-mcp",
+      "url": "https://github.com/johnoconnor0/google-ads-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "VidenGrowth/public-google-ads-mcp",
+      "url": "https://github.com/VidenGlobe/public-google-ads-mcp",
+      "snippet": ""
+    }
+  ]
+}

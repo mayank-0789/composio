@@ -1,0 +1,50 @@
+{
+  "one_liner": "DealCloud is an enterprise deal/relationship CRM offering a broad REST API (data, schema, user management, publications, backups) secured via OAuth2 client credentials, with an official MCP server in client preview as of mid-2026.",
+  "auth_methods": [
+    {
+      "method": "OAuth2",
+      "notes": "Client Credentials flow; POST client_id, apiKey/client_secret, and scope(s) to /api/rest/v1/oauth/token; returns bearer token valid 900 seconds, used in Authorization header."
+    },
+    {
+      "method": "API key",
+      "notes": "apiKey used as the client_secret in the OAuth2 client credentials request; also referenced as standalone API Keys doc."
+    }
+  ],
+  "self_serve": "admin-approval",
+  "self_serve_notes": "No free tier or public self-serve signup; DealCloud is an enterprise CRM requiring an existing subscription/enterprise agreement. Developers get client_id/apiKey via their DealCloud site admin, not an open developer portal.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "REST APIs organized into functional areas: User Management, Schema, Data, Backups, Publications, Relationship Intelligence, plus Swagger/OpenAPI spec exposed per-site."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://api.docs.dealcloud.com/releases"
+  },
+  "buildability": "buildable-with-caveats",
+  "main_blocker": "Requires an existing enterprise DealCloud subscription and admin-issued client_id/apiKey; no open self-serve developer signup, and the official MCP server is only in limited client preview (July 2026).",
+  "evidence": [
+    {
+      "url": "https://api.docs.dealcloud.com/docs/token",
+      "supports": "OAuth2 client credentials flow, scopes, 900s token expiry, Authorization header usage"
+    },
+    {
+      "url": "https://api.docs.dealcloud.com/docs",
+      "supports": "Overview of REST API functional areas: auth, user management, schema, data, backups, publications, relationship intelligence; Swagger/Postman/VSCode tooling"
+    },
+    {
+      "url": "https://api.docs.dealcloud.com/docs/apikeys",
+      "supports": "API key acquisition documentation"
+    },
+    {
+      "url": "https://api.docs.dealcloud.com/releases",
+      "supports": "Announcement of DealCloud MCP Server client preview starting July 2026"
+    }
+  ],
+  "confidence": 0.7,
+  "flags": [
+    "No public free-tier/self-serve signup found — enterprise agreement required",
+    "Official DealCloud MCP server not yet generally available (client preview July 2026)",
+    "Third-party MCP integrations exist via Intapp Celeste (limited release) and Louisa AI"
+  ]
+}

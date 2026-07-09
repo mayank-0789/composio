@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://github.com/shoutkol/pumble-mcp-server",
+  "reason": "Multiple dedicated MCP servers exist for Pumble. There is an official Pumble MCP server (documented at https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server/), as well as well-known community implementations including @shoutkol/pumble-mcp-server (npm package) and pumble-mcp by nitindermohan. These are distinct packages that expose Pumble's capabilities over the Model Context Protocol, enabling AI agents to interact with Pumble workspaces for tasks like searching messages, managing channels, and executing actions."
+}

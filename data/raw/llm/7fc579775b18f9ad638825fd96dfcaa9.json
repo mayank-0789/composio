@@ -1,0 +1,53 @@
+{
+  "one_liner": "Linear offers a GraphQL API with personal API keys or OAuth2 for building integrations/agents, available self-serve on the Free plan, plus an official hosted MCP server.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Personal API keys created in Security & Access settings; passed via 'Authorization: <API_KEY>' header (no Bearer prefix)."
+    },
+    {
+      "method": "OAuth2",
+      "notes": "For apps built for others; standard OAuth2 flow, access token passed as 'Authorization: Bearer <ACCESS_TOKEN>'."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "API and webhook access is available on the Free plan (limited to 2 teams / 250 issues); personal API keys can be generated instantly from account settings with no approval process. OAuth app registration is also self-serve via developer console.",
+  "api_surface": {
+    "type": "GraphQL",
+    "breadth": "broad",
+    "notes": "Single GraphQL endpoint (api.linear.app/graphql) covering issues, projects, teams, comments, file storage, webhooks, and agent interactions. Official TypeScript SDK wraps the schema. Supports introspection and is explorable via Apollo Studio."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://mcp.linear.app/mcp"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://linear.app/developers/graphql?noRedirect=1",
+      "supports": "GraphQL endpoint, personal API key and OAuth2 authentication details, SDK reference"
+    },
+    {
+      "url": "https://linear.app/developers",
+      "supports": "Overview of developer resources including Authentication, Agents, TypeScript SDK, and Agent Interaction Guidelines"
+    },
+    {
+      "url": "https://linear.app/developers/oauth-2-0-authentication",
+      "supports": "OAuth 2.0 authentication flow documentation"
+    },
+    {
+      "url": "https://linear.app/pricing",
+      "supports": "Free plan includes API and webhook access"
+    },
+    {
+      "url": "https://linear.app/docs/api-and-webhooks",
+      "supports": "API and webhooks documentation confirming availability across plans"
+    }
+  ],
+  "confidence": 0.9,
+  "flags": [
+    "Free plan API access limited to 2 teams/250 issues, may require paid plan for larger workspaces",
+    "Official MCP server is centrally hosted by Linear, not self-hosted"
+  ]
+}

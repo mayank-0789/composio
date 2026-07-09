@@ -1,0 +1,58 @@
+{
+  "one_liner": "Salesforce provides a broad, mature REST/SOAP/GraphQL API surface with self-serve free Developer Edition access and OAuth2 authentication, plus emerging (pilot/beta) official MCP servers for AI agent integration.",
+  "auth_methods": [
+    {
+      "method": "OAuth2",
+      "notes": "Recommended method via External Client Apps or Connected Apps; access token used in Authorization header for REST/GraphQL APIs."
+    },
+    {
+      "method": "Basic",
+      "notes": "SOAP API login() call uses username/password plus security token to obtain a session ID; disabled by default on new orgs."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Free Developer Edition orgs are available via self-serve signup at developer.salesforce.com with no contract required, providing full API access (REST, SOAP, GraphQL, Bulk, Tooling, Metadata) and Agentforce/MCP capabilities, subject to standard API call limits.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Salesforce exposes REST, SOAP, GraphQL, Bulk, Tooling, and Metadata APIs across its platform, covering SObjects, queries (SOQL/GraphQL), and org management."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://developer.salesforce.com/blogs/2026/04/new-developer-edition-agentforce-vibes-claude-mcp"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": "Salesforce's official Hosted MCP Server is still in pilot, so production-grade MCP integration may require using the Beta DX MCP server or building a custom MCP wrapper around the stable REST/GraphQL/SOAP APIs in the interim.",
+  "evidence": [
+    {
+      "url": "https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_oauth_and_connected_apps.htm",
+      "supports": "OAuth 2.0 via Connected/External Client Apps is the primary recommended auth method for Salesforce APIs."
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_calls_login.htm",
+      "supports": "SOAP API login() call supports username/password + security token authentication, disabled by default on new orgs."
+    },
+    {
+      "url": "https://developer.salesforce.com/docs/platform/graphql/references/graphql",
+      "supports": "GraphQL API accepts OAuth access token in authorization header, indicating broad modern API surface."
+    },
+    {
+      "url": "https://developer.salesforce.com/signup?d=70130000000EjH",
+      "supports": "Free, self-serve Developer Edition signup with full platform and API access, including Agentforce and Data 360."
+    },
+    {
+      "url": "https://developer.salesforce.com/blogs/2026/04/new-developer-edition-agentforce-vibes-claude-mcp",
+      "supports": "Salesforce Developer Edition now includes MCP support alongside Agentforce Vibes IDE and Claude 4.5 integration."
+    },
+    {
+      "url": "https://developer.salesforce.com/blogs/2024/11/api-limits-and-monitoring-your-api-usage",
+      "supports": "Developers can query REST API Limits resource to monitor API allocation, confirming self-serve API usage model."
+    }
+  ],
+  "confidence": 0.75,
+  "flags": [
+    "MCP hosted server still in pilot status, not GA",
+    "DX MCP server is in Beta and developer/ops-focused rather than general business-data focused",
+    "Multiple API paradigms (REST/SOAP/GraphQL/Bulk) increase integration complexity though all are self-serve"
+  ]
+}

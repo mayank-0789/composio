@@ -1,0 +1,96 @@
+{
+  "verdicts": [
+    {
+      "field": "existing_mcp.exists",
+      "status": "contradicted",
+      "note": "The record marks exists='yes' and points to https://github.com/quinnjr/threads-mcp. The evidence shows that URL is a community-authored MCP server repo (by quinnjr), not an official Meta server. The field description requires a 'dedicated Model Context Protocol (MCP) server for this app' and notes that 'a link to the app's own GitHub repo, homepage, or API docs is NOT an MCP server.' Although a third-party MCP server does exist, the definition requires an official one; the flags correctly note 'Only unofficial/community MCP servers exist; no official Meta-provided MCP server,' so exists must be 'no' with the url dropped."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Evidence confirms no published pricing or per-call fee, developers can create a Meta Developer app and use it in development mode with invited testers, but production requires Meta App Review. This matches 'self-serve-free' with the caveat of App Review gating production use."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "supported",
+      "note": "The evidence from Blotato confirms the Threads API has 'no paid tier, no per-call fee' and that 'Production access waits on Meta App Review.' The note accurately describes the free self-serve onboarding and the App Review gate."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence shows developers need to create a Meta for Developers app and configure OAuth 2.0 credentials (APP_ID/APP_SECRET) to obtain tokens. The GitHub repo for threads-mcp also references requiring 'Meta Developer app creation and OAuth2 credentials (APP_ID/APP_SECRET),' and the Blotato article mentions 'Meta's OAuth flow.' The 60-day long-lived token is confirmed by both sources."
+    },
+    {
+      "field": "api_surface",
+      "status": "supported",
+      "note": "Evidence describes the API as REST-based with a 'limited REST surface for publishing posts/replies (text, image, video) and retrieving insights/engagement analytics' and 'no broad graph-wide access.' This matches type='REST' and breadth='narrow'."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "Marking 'buildable-with-caveats' is appropriate given production use requires Meta App Review, strict rate limits (250 posts/1,000 replies per 24 hours, 4,800x impressions formula), and 60-day token refresh. These are caveats, not absolute blockers, since developers can build in development mode and can potentially pass App Review."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "The blocker text accurately summarizes the evidence: Meta App Review for production, rate limits (250 posts/1,000 replies per 24 hours, 4,800x impressions formula), and 60-day token refresh requirements are all confirmed."
+    },
+    {
+      "field": "one_liner",
+      "status": "supported",
+      "note": "The one-liner is well-supported: OAuth2-authenticated REST calls (confirmed), publish posts/replies and read engagement data (confirmed), free of charge (confirmed), gated by App Review (confirmed), and strict rate/publishing caps (confirmed with specific numbers in evidence)."
+    },
+    {
+      "field": "evidence",
+      "status": "supported",
+      "note": "Both evidence URLs are valid and correctly summarize the content from the provided excerpts. The Blotato article confirms pricing, rate limits, App Review, and token details. The GitHub repo confirms the unofficial MCP server and OAuth2 requirements."
+    },
+    {
+      "field": "confidence",
+      "status": "supported",
+      "note": "A confidence of 0.65 is reasonable given the evidence directly supports most claims but comes from two sources (one third-party explainer and one community GitHub repo), with no direct Meta documentation excerpts provided."
+    }
+  ],
+  "revised": {
+    "id": 39,
+    "name": "Threads (Meta)",
+    "website": "developers.facebook.com/docs/threads",
+    "category": "Marketing, Ads, Email and Social",
+    "one_liner": "Meta's official Threads API lets developers publish posts/replies and read engagement data via OAuth2-authenticated REST calls, free of charge but gated by App Review and strict rate/publishing caps.",
+    "auth_methods": [
+      {
+        "method": "OAuth2",
+        "notes": "Requires creating a Meta for Developers app and configuring OAuth 2.0 credentials (app ID/secret) to obtain long-lived (60-day) access tokens."
+      }
+    ],
+    "self_serve": "self-serve-free",
+    "self_serve_notes": "No published pricing or per-call fees; developers can self-serve by creating a Meta Developer app and using it in development mode with invited testers. However, serving real (non-tester) users in production requires passing Meta's App Review process, which is an approval gate rather than a hard paywall.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "narrow",
+      "notes": "Meta's official Threads API offers a limited REST surface for publishing posts/replies (text, image, video) and retrieving insights/engagement analytics on a user's own Threads profile; no broad graph-wide access."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "Production use requires passing Meta's App Review to move beyond development/tester mode, and usage is capped by strict rate limits (e.g., 250 posts/1,000 replies per 24 hours) and a 4,800x-impressions rate formula, plus 60-day token refresh requirements.",
+    "evidence": [
+      {
+        "url": "https://www.blotato.com/blog/threads-api-pricing",
+        "supports": "Threads API is free with no published paid tier or per-call fee; production access requires Meta App Review; rate limits include 4,800x impressions formula and 24-hour caps of 250 posts/1,000 replies/100 deletions per profile; 60-day long-lived tokens."
+      },
+      {
+        "url": "https://github.com/quinnjr/threads-mcp",
+        "supports": "Unofficial MCP server exists for Threads, requiring Meta Developer app creation and OAuth2 credentials (APP_ID/APP_SECRET) for integration."
+      }
+    ],
+    "confidence": 0.65,
+    "flags": [
+      "Only unofficial/community MCP servers exist; no official Meta-provided MCP server",
+      "Production access gated by Meta App Review approval process",
+      "Strict rate limits and 24-hour publishing caps may constrain agent workflows",
+      "Third-party unified APIs (e.g., Blotato) offer alternative paid access that bypasses App Review"
+    ]
+  }
+}

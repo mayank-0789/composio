@@ -1,0 +1,45 @@
+{
+  "answer": "A QuickBooks MCP server is a tool that allows AI assistants, such as Claude Desktop, to access and manipulate QuickBooks Online data using the Model Context Protocol [1][2][3]. By exposing QuickBooks API functions as callable tools, these servers enable AI to perform CRUD operations on entities like customers, invoices, and bills, as well as generate financial reports like Profit and Loss or Balance Sheets [1][4][5].\n\nSeveral implementations exist:\n- Intuit's official project is a local stdio-based server providing 144 tools for full API coverage [1][5].\n- The Intuit AI Pilot offers a hosted MCP server reachable at https://mcp.quickbooks.intuit.com/mcp [2].\n- Third-party options include servers built on platforms like Cloudflare Workers [6] or provided by CData [3].\n\nMost servers require an OAuth 2.0 handshake via the Intuit Developer Portal [1][2][6]. Configuration typically involves defining the server command and arguments in your MCP client's configuration file [7][6].",
+  "results": [
+    {
+      "title": "intuit/quickbooks-online-mcp-server",
+      "url": "https://github.com/intuit/quickbooks-online-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "IntuitDeveloper/intuit-3p-ai-pilot",
+      "url": "https://github.com/IntuitDeveloper/intuit-3p-ai-pilot",
+      "snippet": ""
+    },
+    {
+      "title": "CData MCP Server for QuickBooks Online -  Introduction to MCP",
+      "url": "https://cdn.cdata.com/help/RNK/mcp/pg_mcpintro.htm",
+      "snippet": ""
+    },
+    {
+      "title": "README.md",
+      "url": "https://github.com/intuit/quickbooks-online-mcp-server/blob/main/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "QuickBooks Online MCP Server - Setup, Use Cases & Examples",
+      "url": "https://growthengineer.ai/mcp-servers/quickbooks-online",
+      "snippet": ""
+    },
+    {
+      "title": "LibreChat-AI/quickbooks-online-mcp",
+      "url": "https://github.com/librechat-ai/quickbooks-online-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "nikhilgy/quickbooks-mcp-server",
+      "url": "https://github.com/nikhilgy/quickbooks-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "wyre-technology/qbo-mcp",
+      "url": "https://github.com/wyre-technology/qbo-mcp",
+      "snippet": ""
+    }
+  ]
+}

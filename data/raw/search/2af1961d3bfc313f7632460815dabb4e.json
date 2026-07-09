@@ -1,0 +1,45 @@
+{
+  "answer": "The Model Context Protocol (MCP) allows AI assistants like Claude and ChatGPT to interact with Pipedrive CRM data [1]. Pipedrive has released a native MCP server [1], and several community-developed open-source servers are also available [2][3][4][5][6][7][8].\n\nThese servers enable natural language interactions for CRUD operations, CRM record management, and pipeline analysis [1][5][6]. Most implementations require a Pipedrive API token and support both v1 and v2 API endpoints to ensure compatibility with different Pipedrive entities [3][4][5][6]. Setup typically involves adding a configuration block to your MCP client settings:\n\n```json\n{\n  \"mcpServers\": {\n    \"pipedrive\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"pipedrive-mcp-package-name\"],\n      \"env\": {\n        \"PIPEDRIVE_API_TOKEN\": \"your-api-token\"\n      }\n    }\n  }\n}\n```\n\nConsult the documentation for the specific repository you choose, as tool counts, architectural features, and configuration parameters vary significantly between implementations [3][5][6][8].",
+  "results": [
+    {
+      "title": "FinancialContent - Pipedrive Launches Native MCP Server, Bringing CRM Workflows Directly Into AI Assistants",
+      "url": "https://markets.financialcontent.com/stocks/article/bizwire-2026-6-30-pipedrive-launches-native-mcp-server-bringing-crm-workflows-directly-into-ai-assistants",
+      "snippet": ""
+    },
+    {
+      "title": "WillDent/pipedrive-mcp-server",
+      "url": "https://github.com/WillDent/pipedrive-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "fabienbutz/pipedrive-mcp",
+      "url": "https://github.com/fabienbutz/pipedrive-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "binarapps/pipedrive-mcp-server",
+      "url": "https://github.com/binarapps/pipedrive-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "comma-compliance/pipedrive-mcp",
+      "url": "https://github.com/comma-compliance/pipedrive-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "nubiia-dev/mcp-pipedrive",
+      "url": "https://github.com/nubiia-dev/mcp-pipedrive",
+      "snippet": ""
+    },
+    {
+      "title": "agranig/pipedrive-mcp-server",
+      "url": "https://github.com/agranig/pipedrive-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "GarethWright/PipeDrive-MCP-Server",
+      "url": "https://github.com/GarethWright/PipeDrive-MCP-Server",
+      "snippet": ""
+    }
+  ]
+}

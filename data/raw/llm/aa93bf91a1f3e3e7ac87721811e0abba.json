@@ -1,0 +1,50 @@
+{
+  "one_liner": "Squarespace Commerce APIs let developers manage products, orders, inventory and website/store data using API keys or OAuth 2.0, but access requires a paid Commerce Advanced plan.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Generated in site developer settings; used as Bearer token for custom applications."
+    },
+    {
+      "method": "OAuth2",
+      "notes": "Required for Squarespace Extensions and third-party apps; also required for webhook subscriptions which don't support API keys."
+    }
+  ],
+  "self_serve": "paid-plan",
+  "self_serve_notes": "No free tier; Commerce API access generally requires the Commerce Advanced paid subscription. A 14-day free trial exists but full commerce API usage needs a paid plan.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "medium",
+    "notes": "Covers Commerce APIs: Website, Products, Orders, Inventory, Webhooks, etc. Read-only in some areas (e.g., Website API)."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://developers.squarespace.com/"
+  },
+  "buildability": "buildable-with-caveats",
+  "main_blocker": "Requires a paid Commerce Advanced plan for full API access; some third-party MCP implementations rely on unofficial/internal API scraping rather than official endpoints.",
+  "evidence": [
+    {
+      "url": "https://commerce-apis.squarespace.com/commerce-apis/authentication-and-permissions",
+      "supports": "Describes API key and OAuth2 Bearer token authentication methods."
+    },
+    {
+      "url": "https://developers.squarespace.com/commerce-apis/website-overview",
+      "supports": "Details Website API resources and OAuth-authenticated member access."
+    },
+    {
+      "url": "https://developers.squarespace.com/commerce-apis/oauth",
+      "supports": "OAuth2 flow required for Extensions and webhook subscriptions."
+    },
+    {
+      "url": "https://www.websitebuilderexpert.com/website-builders/squarespace-pricing/",
+      "supports": "No free tier; paid plans required for commerce features."
+    }
+  ],
+  "confidence": 0.7,
+  "flags": [
+    "No free tier - paid Commerce Advanced plan required for full API access",
+    "Some existing MCP servers reportedly use unofficial/internal API scraping instead of official credentials",
+    "Webhook subscriptions require OAuth2 only, not API keys"
+  ]
+}

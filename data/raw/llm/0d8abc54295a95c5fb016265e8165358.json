@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "mcp.facebook.com/ads",
+  "reason": "Meta offers an official, first-party Model Context Protocol (MCP) server for ads at mcp.facebook.com/ads, designed for single advertisers and accessible directly within supported AI clients like Claude, ChatGPT, and Perplexity. Additionally, multiple community MCP servers exist, including pipeboard-co/meta-ads-mcp (https://github.com/pipeboard-co/meta-ads-mcp), byadsco/meta-ads-mcp (https://github.com/MaxterPC/meta-ads-mcp), and others providing extended functionality for agencies and power users."
+}

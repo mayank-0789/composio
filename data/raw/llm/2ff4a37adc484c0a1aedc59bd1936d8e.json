@@ -1,0 +1,71 @@
+{
+  "one_liner": "iPayX provides an FX forensic-audit MCP server (free, mostly no-signup) plus an underlying IXOPAY-based payments platform (Transaction/Provisioning/Settlement/Gateway APIs) using Basic Auth and HMAC signing.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "MCP FX Audit tool: Bearer token via IPAYX_API_KEY env var, optional, required only for live provider quotes/full reports."
+    },
+    {
+      "method": "Basic",
+      "notes": "IXOPAY Transaction/Provisioning/Settlement APIs use HTTP Basic Auth (Base64 of username:password)."
+    },
+    {
+      "method": "Other",
+      "notes": "IXOPAY Gateway API requires HMAC-SHA hash signature in Authorization header."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Core FX audit MCP tools (mid-market rate lookups) work with no signup/API key. Free API key obtainable via iPayX website for live provider comparisons and forensic reports; some advanced reporting is billed per report. IXOPAY platform credential provisioning process not detailed in evidence (likely partner/admin setup given Basic Auth username+password model typical of PSP platforms).",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "medium",
+    "notes": "MCP server exposes 4 tools (audit_fx_fee, compare_providers, score_invoice, get_mid_market_rate / check_fx_rate). Underlying IXOPAY platform has separate REST APIs: Transaction, Provisioning, Settlement, and Gateway APIs."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://github.com/iPAYX-Technologies/mcp-fx-audit"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://github.com/iPAYX-Technologies/mcp-fx-audit/blob/main/README.md",
+      "supports": "MCP server exists, free/no-signup basic usage, tools list, live endpoint URL"
+    },
+    {
+      "url": "https://github.com/Ipayx-stellar/mcp-fx-audit",
+      "supports": "MCP server package (@ipayx/mcp-fx-audit) exposing 4 FX audit tools"
+    },
+    {
+      "url": "https://mcpservers.org/servers/ipayx-technologies/mcp-fx-audit",
+      "supports": "Third-party MCP registry listing confirming existence of iPayX MCP server"
+    },
+    {
+      "url": "https://documentation.ixopay.com/api/transaction/transaction-api",
+      "supports": "IXOPAY Transaction API uses Basic Auth"
+    },
+    {
+      "url": "https://documentation.ixopay.com/api/provisioning/provisioning-api",
+      "supports": "IXOPAY Provisioning API uses Basic Auth"
+    },
+    {
+      "url": "https://documentation.ixopay.com/api/settlement/settlement-api",
+      "supports": "IXOPAY Settlement API uses Basic Auth"
+    },
+    {
+      "url": "https://documentation.ixopay.com/manual/docs/system-setup/api-keys",
+      "supports": "API key/username setup for Basic Auth credentials"
+    },
+    {
+      "url": "https://gateway.ixopay.com/documentation/api",
+      "supports": "Gateway API requires HMAC signature in Authorization header"
+    }
+  ],
+  "confidence": 0.55,
+  "flags": [
+    "Relationship between iPayX and IXOPAY platform is unclear from evidence - may be a different/underlying vendor rather than iPayX's own API",
+    "MCP server appears to be a lightweight community/vendor-built wrapper around FX rate comparisons, not a full payments API toolkit",
+    "Credential provisioning process for IXOPAY Basic Auth (self-serve vs partnership) not specified in evidence",
+    "Live endpoint URL differs between README (wild-bird-a412.ybolduc.workers.dev) and stated official endpoint (mcp.ipayx.ai/mcp), suggesting in-progress migration"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "Asana provides an official Model Context Protocol (MCP) server that enables AI assistants to access and interact with the Asana Work Graph. The server is available at the endpoint `https://mcp.asana.com/v2/mcp`.\n\nTo use it, configure your MCP client to connect to that URL using Streamable HTTP transport and OAuth authentication. You must pre-register an OAuth app in the Asana developer console to obtain a client ID and secret. The official server is user-authenticated, meaning actions performed via MCP are subject to the permissions of the user who authorized the connection.",
+  "results": [
+    {
+      "title": "Using Asana's MCP Server",
+      "url": "https://developers.asana.com/docs/using-asanas-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "MCP Server",
+      "url": "https://developers.asana.com/docs/mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Integrating with Asana's MCP Server",
+      "url": "https://developers.asana.com/docs/integrating-with-asanas-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "heathweaver/asana-mcp-server-http",
+      "url": "https://github.com/heathweaver/asana-mcp-server-http",
+      "snippet": ""
+    },
+    {
+      "title": "roychri/mcp-server-asana",
+      "url": "https://github.com/roychri/mcp-server-asana",
+      "snippet": ""
+    },
+    {
+      "title": "mryanb/asana-mcp-server",
+      "url": "https://github.com/mryanb/asana-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Avinava/asana-mcp",
+      "url": "https://github.com/Avinava/asana-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Asana — MCP server | explainx.ai | explainx.ai",
+      "url": "https://explainx.ai/mcp-servers/asana",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "verdicts": [
+    {
+      "field": "existing_mcp.exists",
+      "status": "contradicted",
+      "note": "The record claims exists='yes' and links to https://developer.gladly.com/rest/index.html, but that URL is Gladly's REST API documentation, NOT a Model Context Protocol (MCP) server. The evidence does not show any dedicated MCP server for Gladly. The flag mentions a 'Third-party MCP server (StackOne)' but no evidence URL is provided for that claim."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "contradicted",
+      "note": "The URL https://developer.gladly.com/rest/index.html is Gladly's API documentation homepage, not an MCP server repository or implementation."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "All three evidence URLs confirm Basic auth using Gladly login email as username and API token as password via Authorization header over HTTPS."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Evidence confirms API access requires an existing paid account with admin-granted 'API User' permission. The help.gladly.com article states 'Tokens can be accessed and created by users who at least have an API user role' and that an Administrator must create the user account. No public self-serve signup is mentioned."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "supported",
+      "note": "Evidence confirms API tokens are tied to user accounts that must be provisioned by an Administrator with at least 'API User' role. The dlthub article states 'Gladly issues API tokens tied to a Gladly user.' No evidence of a free/self-serve tier is present."
+    },
+    {
+      "field": "api_surface.type",
+      "status": "supported",
+      "note": "All evidence URLs confirm a REST API. The developer.gladly.com page title is 'Introducing the Gladly API' with 'REST API' section, and dlthub explicitly states 'REST APIs'."
+    },
+    {
+      "field": "api_surface.breadth",
+      "status": "supported",
+      "note": "Evidence shows comprehensive REST API covering agents, conversations, customers, tasks, topics, teams, inboxes, exports, webhooks, reports, answer management, business hours, communications, events, audiences, user identity, proactive conversations, and a separate Lookup API. This supports 'broad' classification."
+    },
+    {
+      "field": "api_surface.notes",
+      "status": "supported",
+      "note": "Evidence lists extensive REST endpoints for agents, conversations, customers, tasks, topics, teams, inboxes, exports, webhooks, reports, and Lookup API. Webhooks are documented with events, ping, retry policy, logs, and payloads sections."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "Evidence supports 'buildable-with-caveats' because the API is accessible via REST/HTTPS with standard Basic auth, but requires an existing paid subscription and admin-granted permission to obtain tokens. A developer cannot self-serve sign up."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "Evidence confirms the stated blocker: help.gladly.com states 'API tokens are required' and 'Tokens can be accessed and created by users who at least have an API user role' provisioned by an Administrator. No public self-serve signup path is shown."
+    },
+    {
+      "field": "evidence",
+      "status": "supported",
+      "note": "All three evidence URLs are valid and support the claims: developer.gladly.com for REST API surface and auth, help.gladly.com for token generation and permissions, dlthub.com for auth details and endpoint list."
+    },
+    {
+      "field": "confidence",
+      "status": "supported",
+      "note": "0.75 confidence is reasonable given clear evidence for API surface, auth, and access model, but lack of direct evidence for self-serve trial or MCP server claims (the third-party MCP flag is not substantiated by evidence URLs)."
+    },
+    {
+      "field": "flags",
+      "status": "unsupported",
+      "note": "The flag 'Third-party MCP server (StackOne) exists' is not supported by any provided evidence URL. The sandbox environment flag is mentioned in the record's self_serve_notes but not directly evidenced in the provided URLs (dlthub mentions sandbox usage but does not provide the .gladly.qa URL)."
+    }
+  ],
+  "revised": {
+    "id": 20,
+    "name": "Gladly",
+    "website": "gladly.com",
+    "category": "Support and Helpdesk",
+    "one_liner": "Gladly offers a broad, well-documented REST API (Basic auth via email + API token) for customer service data, but API access requires an existing paid enterprise account with admin-granted permissions rather than open self-serve signup.",
+    "auth_methods": [
+      {
+        "method": "Basic",
+        "notes": "HTTP Basic Auth using Gladly login email as username and generated API token as password, sent via Authorization header over HTTPS."
+      }
+    ],
+    "self_serve": "admin-approval",
+    "self_serve_notes": "No public free/self-serve developer tier for the core enterprise platform; API access requires an existing paid subscription/account with a user granted the 'API User' permission. Tokens are then self-generated via Settings > API Tokens. A separate SMB Shopify-app version offers a 30-day trial but is a different limited product.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "Comprehensive REST API covering agents, conversations, customers, tasks, topics, teams, inboxes, exports, webhooks, reports, and a separate Lookup API. Also has webhook event system."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "Requires an existing paid Gladly subscription and admin-granted 'API User' permission to generate API tokens; no public self-serve signup for API access.",
+    "evidence": [
+      {
+        "url": "https://developer.gladly.com/rest/index.html",
+        "supports": "REST API surface, endpoints, and Basic Auth via Authorization header"
+      },
+      {
+        "url": "https://help.gladly.com/generate-api-tokens-and-create-webhooks",
+        "supports": "How to generate API tokens and required permissions"
+      },
+      {
+        "url": "https://dlthub.com/context/source/gladly",
+        "supports": "Details on auth (Basic auth with email/token), endpoint list, and sandbox usage"
+      }
+    ],
+    "confidence": 0.75,
+    "flags": [
+      "No public self-serve free tier; enterprise/contract-gated access",
+      "Sandbox environment available at {organization}.gladly.qa for testing once account provisioned"
+    ]
+  }
+}

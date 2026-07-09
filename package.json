@@ -15,8 +15,8 @@
     "demo:notion": "tsx src/demo/notion-demo.ts"
   },
   "dependencies": {
+    "@anthropic-ai/bedrock-sdk": "^0.32.0",
     "@anthropic-ai/sdk": "^0.110.0",
-    "@composio/anthropic": "^0.10.0",
     "@composio/core": "^0.13.1",
     "@mendable/firecrawl-js": "^1.0.0",
     "dotenv": "^16.4.0",

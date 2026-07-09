@@ -1,0 +1,45 @@
+{
+  "answer": "Netlify provides an official Model Context Protocol (MCP) server that enables AI agents to interact with the Netlify platform to build, deploy, and manage projects via natural language [1][2].\n\nYou can connect to this server using supported clients like Cursor, Windsurf, or Claude Desktop [1][3]. For a local setup, add this configuration to your MCP settings file [1][3]:\n\n```json\n{\n  \"mcpServers\": {\n    \"netlify\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@netlify/mcp\"]\n    }\n  }\n}\n```\n\nAlternatively, you can connect to the remote instance at `https://netlify-mcp.netlify.app/mcp` using the appropriate HTTP transport configuration for your specific AI tool [4]. The server exposes tools, resources, and prompts, allowing agents to handle tasks like managing environment variables, configuring extensions, and accessing deploy logs [1][2].",
+  "results": [
+    {
+      "title": "netlify/netlify-mcp",
+      "url": "https://github.com/netlify/netlify-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Netlify Launches official MCP Server Setting the Standard for AI-Native Development | Netlify",
+      "url": "https://www.netlify.com/press/netlify-launches-official-mcp-server-setting-the-standard-for-agent-native-development/",
+      "snippet": ""
+    },
+    {
+      "title": "@netlify/mcp",
+      "url": "https://registry.npmjs.org/%40netlify%2Fmcp",
+      "snippet": ""
+    },
+    {
+      "title": "Agent setup overview | Netlify Docs",
+      "url": "https://docs.netlify.com/build/build-with-ai/netlify-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Building MCPs with Netlify | Netlify Developers",
+      "url": "https://developers.netlify.com/guides/write-mcps-on-netlify/",
+      "snippet": ""
+    },
+    {
+      "title": "DynamicEndpoints/Netlify-MCP-Server",
+      "url": "https://github.com/DynamicEndpoints/Netlify-MCP-Server",
+      "snippet": ""
+    },
+    {
+      "title": "Understanding MCP servers",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts",
+      "snippet": ""
+    },
+    {
+      "title": "Architecture overview - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/learn/architecture",
+      "snippet": ""
+    }
+  ]
+}

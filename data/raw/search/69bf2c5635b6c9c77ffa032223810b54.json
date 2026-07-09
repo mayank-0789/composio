@@ -1,0 +1,45 @@
+{
+  "answer": "iPayX provides an MCP server for FX audits that includes free, self-serve access options [1][2]. You can use the MCP server for mid-market rate lookups without an API key [2]. For live provider comparisons and full forensic reports, you can obtain a free API key via the iPayX website [2]. The service is integrated through MCP-compatible AI clients by configuring the server using the endpoint at https://mcp.ipayx.ai/mcp [3]. While basic usage is free, some advanced reporting features require a token and are billed per report [1][4][5].",
+  "results": [
+    {
+      "title": "README.md",
+      "url": "https://github.com/iPAYX-Technologies/mcp-fx-audit/blob/main/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "Ipayx-stellar/mcp-fx-audit",
+      "url": "https://github.com/Ipayx-stellar/mcp-fx-audit",
+      "snippet": ""
+    },
+    {
+      "title": "bb30c87 fix(server.json): correct remote URL to mcp.ipayx.ai/mcp (the /mcp path) + bump v1.3.4",
+      "url": "https://github.com/iPAYX-Technologies/mcp-fx-audit/commit/bb30c87f2bdfe8a2f8d18b051b2d34c61ba7b7a6",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://mcpservers.org/servers/ipayx-technologies/mcp-fx-audit",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://mcpservers.org/ru/servers/ipayx-technologies/mcp-fx-audit",
+      "snippet": ""
+    },
+    {
+      "title": "iPayX FX Audit - MCP Connector | Glama",
+      "url": "https://glama.ai/mcp/connectors/io.github.Ipayx-stellar/fx-audit",
+      "snippet": ""
+    },
+    {
+      "title": "iPayX FX Audit - MCP Connector | Glama",
+      "url": "https://glama.ai/mcp/connectors/co.supabase.hvujzsdwcoweirroubeh/i-pay-x-fx-audit",
+      "snippet": ""
+    },
+    {
+      "title": "iPAYX-Technologies",
+      "url": "https://github.com/iPAYX-Technologies",
+      "snippet": ""
+    }
+  ]
+}

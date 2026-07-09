@@ -1,0 +1,45 @@
+{
+  "answer": "A Jira MCP server is an integration layer that allows AI assistants like Claude, Cursor, or Windsurf to interact with Atlassian Jira using the Model Context Protocol [1][2][3]. These servers expose Jira's functionality as standardized tools, enabling natural language control over issues, projects, sprints, and workflows [2][4][5].\n\nMultiple implementations are available depending on your infrastructure:\n\nSelf-hosted servers run locally or in your environment, providing full control and data privacy [1][5]. For example, you can deploy a Node.js or Bun-based server (such as liteart/jira-mcp or zhiyue/jira-mcp) locally using STDIO transport [1][6][3].\n\nAlternatively, some projects offer hosted instances where you point your MCP client to a URL (e.g., `https://mcp-jira-server.onrender.com/mcp`) and provide your own Jira credentials via request headers [2].\n\nFor Jira Data Center users, native plugins like mrkhachaturov/jira-mcp-plugin run directly inside the Jira JVM, avoiding external proxies by communicating directly with the local REST API [5].\n\nTo integrate with an MCP client, you typically update your configuration file (often `claude_desktop_config.json`):\n\n```json\n{\n  \"mcpServers\": {\n    \"jira\": {\n      \"command\": \"node\",\n      \"args\": [\"/path/to/jira-mcp/index.js\"],\n      \"env\": {\n        \"JIRA_URL\": \"https://your-domain.atlassian.net\",\n        \"JIRA_API_TOKEN\": \"your-api-token\"\n      }\n    }\n  }\n}\n```\n\nMost servers support both Jira Cloud and Data Center by setting environment variables for the instance type and API authentication [6][7][8].",
+  "results": [
+    {
+      "title": "liteart/jira-mcp",
+      "url": "https://github.com/liteart/jira-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "akashyap3c/jira-mcp",
+      "url": "https://github.com/akashyap3c/jira-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "stolostron/jira-mcp-server",
+      "url": "https://github.com/stolostron/jira-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "ronidas39/jira-mcp-server",
+      "url": "https://github.com/ronidas39/jira-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "mrkhachaturov/jira-mcp-plugin",
+      "url": "https://github.com/mrkhachaturov/jira-mcp-plugin",
+      "snippet": ""
+    },
+    {
+      "title": "zhiyue/jira-mcp",
+      "url": "https://github.com/zhiyue/jira-mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "cosmix/jira-mcp",
+      "url": "https://github.com/cosmix/jira-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "noesskeetit/mcp-jira",
+      "url": "https://github.com/noesskeetit/mcp-jira",
+      "snippet": ""
+    }
+  ]
+}

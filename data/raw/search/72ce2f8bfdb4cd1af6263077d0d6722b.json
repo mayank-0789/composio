@@ -1,0 +1,45 @@
+{
+  "answer": "Airtable provides developer API access on its Free plan, which is a self-serve tier managed directly through your workspace settings [1][2][3]. The Free plan includes a monthly limit of 1,000 API calls per workspace [4][3]. While you can access most Base Data endpoints, the Public API limit is actively enforced for Free plan users [5]. Additionally, all API traffic is subject to a rate limit of 5 requests per second, or 50 requests per second when using personal access tokens [6].",
+  "results": [
+    {
+      "title": "Airtable Pricing | Compare Plans, Features & Costs",
+      "url": "https://airtable.com/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Airtable Billing Overview | Airtable Support",
+      "url": "https://support.airtable.com/airtable-billing-overview",
+      "snippet": ""
+    },
+    {
+      "title": "Airtable Pricing Guide 2026: Plans, Costs & Hidden Fees | Get AI Perks",
+      "url": "https://www.getaiperks.com/en/articles/airtable-pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Updates to Our Pricing Plans | Airtable Community",
+      "url": "https://community.airtable.com/announcements-6/updates-to-our-pricing-plans-1517?postid=59459",
+      "snippet": ""
+    },
+    {
+      "title": "Airtable Web API",
+      "url": "https://airtable.com/developers/web/api/billing-plans",
+      "snippet": ""
+    },
+    {
+      "title": "Airtable Web API",
+      "url": "https://airtable.com/developers/web/api/rate-limits",
+      "snippet": ""
+    },
+    {
+      "title": "Airtable plans overview",
+      "url": "https://support.airtable.com/docs/en/airtable-plans",
+      "snippet": ""
+    },
+    {
+      "title": "Managing API Call Limits in Airtable",
+      "url": "https://support.airtable.com/v1/docs/managing-api-call-limits-in-airtable",
+      "snippet": ""
+    }
+  ]
+}

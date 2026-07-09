@@ -1,0 +1,45 @@
+{
+  "answer": "There are two distinct types of Pinterest MCP servers.\n\nPinterest maintains an internal, production-scale MCP ecosystem for its employees to automate engineering workflows, such as querying data or debugging jobs via Presto and Spark [1][2]. These are cloud-hosted, managed through a central internal registry, and governed by strict security policies [1][2].\n\nFor external users, several open-source and third-party MCP servers exist to bridge LLMs with the Pinterest API:\n\nThird-party servers include:\n- pinterest-mcp: An open-source tool for creating pins, managing boards, and tracking analytics [3].\n- mcp-pinterest: A tool focused on image search and information retrieval, including headless browser support [4].\n- collactivelabs/pinterest-mcp-server: Provides API-based management for boards and pins [5].\n- CData MCP Server for Pinterest: A professional, read-write capable server that connects Pinterest data to LLMs like Claude Desktop via JDBC [6][7].",
+  "results": [
+    {
+      "title": "Building an MCP Ecosystem at Pinterest | by Pinterest Engineering | Pinterest Engineering Blog | Medium",
+      "url": "https://medium.com/pinterest-engineering/building-an-mcp-ecosystem-at-pinterest-d881eb4c16f1",
+      "snippet": ""
+    },
+    {
+      "title": "Pinterest Deploys Production-Scale Model Context Protocol Ecosystem for AI Agent Workflows - InfoQ",
+      "url": "https://www.infoq.com/news/2026/04/pinterest-mcp-ecosystem/",
+      "snippet": ""
+    },
+    {
+      "title": "clugtu/pinterest-mcp",
+      "url": "https://github.com/clugtu/pinterest-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "terryso/mcp-pinterest",
+      "url": "https://github.com/terryso/mcp-pinterest",
+      "snippet": ""
+    },
+    {
+      "title": "collactivelabs/pinterest-mcp-server",
+      "url": "https://github.com/collactivelabs/pinterest-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "README.md at main · CDataSoftware/pinterest-mcp-server-by-cdata",
+      "url": "https://github.com/CDataSoftware/pinterest-mcp-server-by-cdata/blob/main/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "CData MCP Server for Pinterest -  Introduction to MCP",
+      "url": "https://cdn.cdata.com/help/UPK/mcp/pg_mcpintro.htm",
+      "snippet": ""
+    },
+    {
+      "title": "Pinterest MCP Server - RemoteMCPList",
+      "url": "https://remotemcplist.com/servers/pinterest-mcp",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "SE Ranking does not offer a permanent free tier for its API [1]. Instead, you can access a 14-day free trial that includes 100,000 credits to test all API endpoints [2][3][1].\n\nAPI access is self-serve and available through three models:\n1. Pay-as-you-go: One-time credit pack purchases starting at $50 for 250,000 credits [4][5].\n2. Subscription Add-on: Monthly credit allowances added to existing SE Ranking plans [4][6].\n3. Standalone Plan: Dedicated API access without a web application subscription, starting from approximately $155–$179 per month billed annually [6][1].\n\nYou can generate your API key directly via the dashboard to access both Data and Project APIs [4][3].",
+  "results": [
+    {
+      "title": "SE Ranking API: Pricing, Capabilities & Alternatives (2026) · apio",
+      "url": "https://apio.sh/apis/se-ranking",
+      "snippet": ""
+    },
+    {
+      "title": "SE Ranking API Pricing: Free Trial, Wallet, Annual Plans",
+      "url": "https://seranking.com/api-pricing.html",
+      "snippet": ""
+    },
+    {
+      "title": "Getting Started with SE Ranking's API – Knowledge Base",
+      "url": "https://help.seranking.com/hc/en-us/articles/22447958135068-Getting-Started-with-SE-Ranking-s-API",
+      "snippet": ""
+    },
+    {
+      "title": "Getting API access - SE Ranking API Documentation",
+      "url": "https://seranking.com/api/how-to-get-api/",
+      "snippet": ""
+    },
+    {
+      "title": "SEO API by SE Ranking: SEO & GEO Data at Scale",
+      "url": "https://seranking.com/api.html",
+      "snippet": ""
+    },
+    {
+      "title": "SE Ranking Pricing Plans",
+      "url": "https://seranking.com/subscription.html",
+      "snippet": ""
+    },
+    {
+      "title": "Add SEO intelligence to your product without building the data layer – Knowledge Base",
+      "url": "https://help.seranking.com/hc/en-us/articles/26081421453596-Add-SEO-intelligence-to-your-product-without-building-the-data-layer",
+      "snippet": ""
+    },
+    {
+      "title": "SE Ranking API Reference - SE Ranking API Documentation",
+      "url": "https://seranking.com/api/data/reference/",
+      "snippet": ""
+    }
+  ]
+}

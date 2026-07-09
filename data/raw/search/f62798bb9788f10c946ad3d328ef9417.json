@@ -1,0 +1,45 @@
+{
+  "answer": "To authenticate requests to the Attio REST API, you must use an access token passed in the Authorization header [1][2]. The standard method is Bearer authentication [1][3]:\n\n```http\nAuthorization: Bearer <access_token>\n```\n\nYou can obtain an access token using one of two methods [1]:\n\n1. OAuth 2.0 Flow: Recommended for apps serving multiple workspaces; involves a standard authorization code exchange [1][4].\n2. API Key: Suitable for apps targeting a single workspace; can be generated via your app's developer settings [1].\n\nWhile HTTP Basic Authentication is technically supported, Bearer authentication is the recommended approach [1].",
+  "results": [
+    {
+      "title": "Authenticating requests - Attio Docs",
+      "url": "https://docs.attio.com/rest-api/guides/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Attio API Token - Attio Docs",
+      "url": "https://docs.attio.com/sdk/server/attio-api-token",
+      "snippet": ""
+    },
+    {
+      "title": "Introspect - Attio Docs",
+      "url": "https://docs.attio.com/docs/oauth/introspect",
+      "snippet": ""
+    },
+    {
+      "title": "Connect an app to Attio through OAuth - Attio Docs",
+      "url": "https://docs.attio.com/rest-api/tutorials/connect-an-app-through-oauth",
+      "snippet": ""
+    },
+    {
+      "title": "Overview - Attio Docs",
+      "url": "https://docs.attio.com/rest-api/overview",
+      "snippet": ""
+    },
+    {
+      "title": "Authorize - Attio Docs",
+      "url": "https://docs.attio.com/docs/oauth/authorize",
+      "snippet": ""
+    },
+    {
+      "title": "Making HTTP requests - Attio Docs",
+      "url": "https://docs.attio.com/sdk/guides/making-http-requests",
+      "snippet": ""
+    },
+    {
+      "title": "Authenticating to external services - Attio Docs",
+      "url": "https://docs.attio.com/sdk/guides/authenticating-to-external-services",
+      "snippet": ""
+    }
+  ]
+}

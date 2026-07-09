@@ -1,0 +1,45 @@
+{
+  "answer": "The Pylon MCP server enables AI tools like Claude, Cursor, and ChatGPT to interact with Pylon data using the Model Context Protocol [1]. There is an official hosted version provided by Pylon at `https://mcp.usepylon.com` [1], alongside various open-source implementations [2][3][4][5][6][7][8].\n\nOfficial tools cover core functionality including issue management, accounts, and contacts [1]. Community-developed versions often provide expanded coverage of the full Pylon API, such as knowledge base articles and custom objects [2][4]. Authentication varies by implementation, ranging from standard OAuth 2.0 [1] and API tokens [6] to x402-based micropayments [7].",
+  "results": [
+    {
+      "title": "Pylon MCP | Pylon",
+      "url": "https://docs.usepylon.com/pylon-docs/integrations/pylon-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Carter-S/pylon-mcp",
+      "url": "https://github.com/Carter-S/pylon-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "JustinBeckwith/pylon-mcp",
+      "url": "https://github.com/justinbeckwith/pylon-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "marcinwyszynski/pylon-mcp",
+      "url": "https://github.com/marcinwyszynski/pylon-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "mgmonteleone/pylon-mcp",
+      "url": "https://github.com/mgmonteleone/pylon-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "seamapi/pylon-mcp",
+      "url": "https://github.com/seamapi/pylon-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "pylonapi/pylon-mcp",
+      "url": "https://github.com/pylonapi/pylon-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "gasconc/pylon-mcp-server",
+      "url": "https://github.com/gasconc/pylon-mcp-server",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "verdicts": [
+    {
+      "field": "name",
+      "status": "supported",
+      "note": "Evidence refers to 'Waterfall API' and the domain waterfall.io is consistently used."
+    },
+    {
+      "field": "website",
+      "status": "supported",
+      "note": "Evidence URLs all use docs.waterfall.io subdomain, confirming waterfall.io is the correct domain."
+    },
+    {
+      "field": "category",
+      "status": "supported",
+      "note": "Evidence shows endpoints for B2B contact/company data enrichment, prospecting, search, which aligns with 'Data, SEO and Scraping' category."
+    },
+    {
+      "field": "one_liner",
+      "status": "supported",
+      "note": "Evidence confirms REST API with x-api-key authentication, multiple endpoints for contact/company enrichment, prospecting, search, and verification. The prepaid credit model is mentioned in the record but not directly in the evidence (unsupported but not contradicted)."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence explicitly states 'All requests are authenticated using x-api-key' and confirms master key can manage sub-keys for enterprise users."
+    },
+    {
+      "field": "self_serve",
+      "status": "unsupported",
+      "note": "Evidence does not describe the signup or purchasing process. The paid-plan designation is reasonable given enterprise features are mentioned, but no direct evidence of prepaid credits or self-serve signup flow."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "unsupported",
+      "note": "Evidence does not mention prepaid credits, free tier, or contract requirements. These details are not confirmed by the provided evidence."
+    },
+    {
+      "field": "api_surface.type",
+      "status": "supported",
+      "note": "Evidence confirms REST API with base URL https://api.waterfall.io/v1/."
+    },
+    {
+      "field": "api_surface.breadth",
+      "status": "supported",
+      "note": "Evidence shows 12 distinct endpoint types covering prospecting, search, enrichment, verification, webhooks, reporting, and key management. 'Medium' breadth is reasonable."
+    },
+    {
+      "field": "api_surface.notes",
+      "status": "supported",
+      "note": "Evidence confirms all the listed endpoint categories in the introduction page."
+    },
+    {
+      "field": "existing_mcp.exists",
+      "status": "supported",
+      "note": "Evidence contains only API documentation, no mention of an MCP server. exists='no' is correct."
+    },
+    {
+      "field": "buildability",
+      "status": "unsupported",
+      "note": "Evidence shows the API is technically accessible with an API key. The 'buildable-with-caveats' designation depends on unconfirmed payment/contract barriers. Evidence does not show the API key acquisition process requires purchase."
+    },
+    {
+      "field": "main_blocker",
+      "status": "unsupported",
+      "note": "The claim that purchasing prepaid credits/contract is required to obtain an API key is not supported by the evidence. Evidence only shows that API key management is an enterprise feature, not that base API access requires purchase."
+    },
+    {
+      "field": "evidence URLs",
+      "status": "supported",
+      "note": "All three evidence URLs are valid and present in the provided evidence."
+    },
+    {
+      "field": "flags",
+      "status": "unsupported",
+      "note": "The flags mention 'no free tier', 'prepaid credits required', and 'API key issuance tied to signing a contract' but none of these are directly evidenced in the provided documentation."
+    }
+  ],
+  "revised": {
+    "id": 59,
+    "name": "Waterfall.io",
+    "website": "waterfall.io",
+    "category": "Data, SEO and Scraping",
+    "one_liner": "Waterfall.io is a B2B contact/company data enrichment API offering prospecting, search, enrichment, and verification endpoints accessed via a REST API secured with x-api-key headers.",
+    "auth_methods": [
+      {
+        "method": "API key",
+        "notes": "All requests authenticated via x-api-key header; master key available for enterprise sub-key management."
+      }
+    ],
+    "self_serve": "unknown",
+    "self_serve_notes": "Evidence does not describe the signup process or pricing model. API key management is an enterprise feature requiring account manager contact.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "medium",
+      "notes": "Multiple endpoints covering Prospector, Search Contact/Company, Contact/Phone/Company Enrichment, Company Reveal, Company Titles, Job Change Detection, Email Verification, Webhook JWKS, Account Reporting, and API Key Management."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "Pricing model and API key acquisition process not documented; enterprise features require account manager contact. No evidence of free tier or self-serve trial.",
+    "evidence": [
+      {
+        "url": "https://docs.waterfall.io/v1/authentication",
+        "supports": "All requests authenticated using x-api-key header; base URL https://api.waterfall.io/v1/"
+      },
+      {
+        "url": "https://docs.waterfall.io/v1/introduction",
+        "supports": "Lists full set of REST endpoints (Prospector, Search Contact, Search Company, Enrichment endpoints, Email Verification, Account Reporting, API Key Management) all requiring x-api-key."
+      },
+      {
+        "url": "https://docs.waterfall.io/v1/api-keys-overview",
+        "supports": "Enterprise master key can generate and manage sub-keys."
+      }
+    ],
+    "confidence": 0.6,
+    "flags": [
+      "self-serve signup and pricing model not documented in evidence",
+      "no evidence of existing MCP server",
+      "API key management is an enterprise feature per docs"
+    ]
+  }
+}

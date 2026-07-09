@@ -1,0 +1,45 @@
+{
+  "answer": "Datadog provides a free tier that allows monitoring for up to five hosts with one-day metric retention [1][2]. While Datadog offers a 14-day free trial of the full platform [3][2], the permanent free tier is limited in scope and does not include full access to all features or unlimited API capabilities. Access to the Datadog API is a standard platform feature, but usage of specific services like Synthetic Monitoring is billed based on consumption, such as the number of API test runs executed [4][5]. You can sign up for these tiers via the Datadog website for self-serve access [6][3].",
+  "results": [
+    {
+      "title": "Datadog Pricing (2026): The Real Cost Breakdown",
+      "url": "https://hyperping.com/blog/datadog-pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Datadog Review: Features, Pros & Cons, Pricing, and Alternatives",
+      "url": "https://toolstack.io/tools/datadog",
+      "snippet": ""
+    },
+    {
+      "title": "Free Datadog Trial | Datadog",
+      "url": "https://www.datadoghq.com/free-datadog-trial/",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing",
+      "url": "https://docs.datadoghq.com/account_management/billing/pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "Datadog Software Pricing & Plans 2026: See Your Cost",
+      "url": "https://www.vendr.com/marketplace/datadog",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing | Datadog",
+      "url": "https://www.datadog.com/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Datadog Pricing Comparison | Datadog",
+      "url": "https://www.datadoghq.com/pricing/list/",
+      "snippet": ""
+    },
+    {
+      "title": "Datadog Pricing Breakdown: A Complete Guide to 2026 Costs",
+      "url": "https://www.finout.io/blog/datadog-pricing-explained",
+      "snippet": ""
+    }
+  ]
+}

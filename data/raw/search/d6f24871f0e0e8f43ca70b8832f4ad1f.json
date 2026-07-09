@@ -1,0 +1,45 @@
+{
+  "answer": "The MrScraper MCP server allows AI agents to perform web scraping and structured data extraction through a cloud-hosted interface [1]. It uses the Model Context Protocol’s HTTP transport to connect directly to MrScraper’s engine, avoiding the need for local installation [1][2].\n\nTo integrate the server, add the following configuration to your MCP host [1]:\n\n```json\n{\n  \"mcpServers\": {\n    \"mrscraper\": {\n      \"type\": \"http\",\n      \"url\": \"https://mcp.mrscraper.com/mcp\",\n      \"headers\": {\n        \"Authorization\": \"Bearer <MRSCRAPER_API_TOKEN>\"\n      }\n    }\n  }\n}\n```\n\nThe server exposes tools such as create_scraper and rerun_ai_scraper, enabling agents to intelligently extract data from websites [1]. This setup provides a secure, scalable way to manage scraping workflows without infrastructure management [1].",
+  "results": [
+    {
+      "title": "MCP Server | MrScraper Documentation",
+      "url": "https://docs.mrscraper.com/docs/getting-started/mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Architecture overview - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/learn/architecture",
+      "snippet": ""
+    },
+    {
+      "title": "Any Website Listing Page Scraper MCP server · Apify",
+      "url": "https://apify.com/mrscrapercom/mrscraper-listing/api/mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Migrating from Platform v2 to v3 | MrScraper Documentation",
+      "url": "https://docs.mrscraper.com/docs/getting-started/migration-guides",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://apify.com/mrscrapercom/mrscraper-unblocker/api",
+      "snippet": ""
+    },
+    {
+      "title": "Any Website Detail Page Scraper · Apify",
+      "url": "https://apify.com/mrscrapercom/mrscraper-pdp",
+      "snippet": ""
+    },
+    {
+      "title": "cotdp/scraper-mcp",
+      "url": "https://github.com/cotdp/scraper-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "CLI | MrScraper Documentation",
+      "url": "https://docs.mrscraper.com/docs/getting-started/cli",
+      "snippet": ""
+    }
+  ]
+}

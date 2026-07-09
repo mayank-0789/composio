@@ -1,0 +1,45 @@
+{
+  "answer": "BigCommerce does not offer a free tier for production stores. However, you can access the developer API for free by signing up for a 15-day free trial, which allows you to build and test integrations without affecting live data [1][2]. API access is available on all self-serve plans, though rate limits vary by tier, with Standard and Plus limited to 20,000 requests per hour and Pro limited to 60,000 [3]. You can manage API credentials by navigating to Settings and then API Accounts within your store control panel [2].",
+  "results": [
+    {
+      "title": "BigCommerce Pricing and Plan Information | BigCommerce",
+      "url": "https://www.bigcommerce.com/pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://docs.bigcommerce.com/.md",
+      "snippet": ""
+    },
+    {
+      "title": "BigCommerce Pricing in 2026: Complete Cost Breakdown for Every Plan | Swell",
+      "url": "https://www.swell.is/content/bigcommerce-pricing",
+      "snippet": ""
+    },
+    {
+      "title": "About BigCommerce Pricing",
+      "url": "https://support.bigcommerce.com/s/article/Pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Questions and Answers on Plans, Accounts and Store Setup | BigCommerce",
+      "url": "https://www.bigcommerce.com/pricing/faq/",
+      "snippet": ""
+    },
+    {
+      "title": "BigCommerce 2026 Pricing Update (Fees Explained)",
+      "url": "https://www.bigcommerce.com/dm/plan-pricing-updates-2026/",
+      "snippet": ""
+    },
+    {
+      "title": "Setting the Record Straight: What's Actually Changing With Our Pricing on June 1 | BigCommerce",
+      "url": "https://www.bigcommerce.com/blog/bigcommerce-self-serve-pricing-changes/",
+      "snippet": ""
+    },
+    {
+      "title": "BigCommerce Pricing in 2026: Plans, Fees and Real Costs\n | Shero",
+      "url": "https://sherocommerce.com/blogs/insights/bigcommerce-pricing-guide",
+      "snippet": ""
+    }
+  ]
+}

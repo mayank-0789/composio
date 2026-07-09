@@ -1,0 +1,45 @@
+{
+  "answer": "Paygent is an AI agent monetization and cost-tracking platform that allows developers to implement usage-based billing, metering, and gating via API and SDKs [1][2][3].\n\nPaygent offers a free tier that includes 100,000 events per month, 1 year of data retention, and email support [1]. You can access this by signing up at their website to obtain a `pg_live_` API key, which enables full programmatic access to plan configuration and user management [4][5].\n\nYou can self-serve by submitting plan structures via the API:\n\n```http\nPOST https://api.paygent.to/api/v1/config/plans\nAuthorization: Bearer pg_live_...\nContent-Type: application/json\n```\n\nThe configuration defines your usage limits and cost rates, allowing you to gate AI model access (e.g., restricting free users to specific models) [6][4][3].",
+  "results": [
+    {
+      "title": "Paygent - AI Agent Monetization & Cost Tracking",
+      "url": "https://www.withpaygent.com/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Paygent - AI Agent Monetization & Cost Tracking",
+      "url": "https://withpaygent.com/",
+      "snippet": ""
+    },
+    {
+      "title": "Plans and Usage Events - Paygent Documentation",
+      "url": "https://docs.paygent.to/introduction/plans-and-usage-events/",
+      "snippet": ""
+    },
+    {
+      "title": "First Metering and Gating - Paygent Documentation",
+      "url": "https://docs.paygent.to/getting-started/quickstart/",
+      "snippet": ""
+    },
+    {
+      "title": "Backend API Reference - Paygent Documentation",
+      "url": "https://docs.paygent.to/reference/api-reference/",
+      "snippet": ""
+    },
+    {
+      "title": "Configure Your First Plan - Paygent Documentation",
+      "url": "https://docs.paygent.to/getting-started/configure-first-plan/",
+      "snippet": ""
+    },
+    {
+      "title": "Documentation - Paygent | AI Agent Billing Platform",
+      "url": "https://www.withpaygent.com/documentation",
+      "snippet": ""
+    },
+    {
+      "title": "laravel-paygent/mdk - Packagist.org",
+      "url": "https://packagist.org/packages/laravel-paygent/mdk",
+      "snippet": ""
+    }
+  ]
+}

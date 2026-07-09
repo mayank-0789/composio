@@ -1,0 +1,58 @@
+{
+  "one_liner": "Vonage (developer.vonage.com) is a broad communications API platform (SMS, Voice, Messages, Verify, Video, Numbers, etc.) using API Key/Secret Basic Auth or JWT depending on product, with self-serve signup and trial credit, and an existing official MCP server offering.",
+  "auth_methods": [
+    {
+      "method": "Basic",
+      "notes": "API Key and Secret Base64-encoded in Authorization header; simplest to get started but lacks webhook/ACL support for some APIs like Messages and Verify."
+    },
+    {
+      "method": "Token",
+      "notes": "JSON Web Token (JWT) signed with application's private key, sent as Bearer token; recommended for production, supports webhooks and ACLs."
+    },
+    {
+      "method": "Other",
+      "notes": "SIP Trunking uses Digest Authentication with API Key as user and API Secret as password."
+    }
+  ],
+  "self_serve": "self-serve-trial",
+  "self_serve_notes": "Developers can sign up and get API key/secret immediately from the Vonage Dashboard with no credit card required; new accounts receive free trial credit for testing. No permanent free tier — must move to paid plan after trial credit is exhausted. Pricing available via Pricing API or dashboard.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Wide range of APIs: Accounts, Application, Audit, Conversation, Conversion, Device Location, Dispatch, Identity Insights, Media, Messages, Numbers, Number Insight, Pricing v1/v2, Programmable SIP, Quality on Demand, Redact, Reports, SMS, Verify (Legacy/v2), Voice, Video — each with documented REST endpoints and JWT/Basic auth."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://documentation-mcp.vonage.dev/mcp"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://developer.vonage.com/en/getting-started/concepts/authentication",
+      "supports": "Details Basic Auth (API Key/Secret) and JWT authentication methods, varying by API product."
+    },
+    {
+      "url": "https://developer.vonage.com/en/verify/concepts/authentication",
+      "supports": "Confirms Basic Auth and JWT Bearer options for Verify API, with example requests and header format."
+    },
+    {
+      "url": "https://developer.vonage.com/en/getting-started/overview",
+      "supports": "Describes self-serve onboarding and free trial credit for new users."
+    },
+    {
+      "url": "https://www.vonage.com/communications-apis/pricing/",
+      "supports": "Confirms no permanent free tier; usage-based pricing after trial credit."
+    },
+    {
+      "url": "https://developer.vonage.com/en/api/messages",
+      "supports": "Example of REST API surface with JWT/Basic auth support for Messages API."
+    }
+  ],
+  "confidence": 0.85,
+  "flags": [
+    "Existing official MCP servers already provided by Vonage (documentation MCP + tooling/API-bindings MCP via npm package), reducing need to build from scratch.",
+    "No permanent free tier — developers rely on trial credit then must pay, which could affect self-serve sustainability for agent tooling testing.",
+    "Auth method varies per API product (Basic vs JWT vs Digest for SIP), requiring careful handling in a unified toolkit."
+  ]
+}

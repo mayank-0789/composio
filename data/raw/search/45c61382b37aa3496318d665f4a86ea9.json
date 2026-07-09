@@ -1,0 +1,45 @@
+{
+  "answer": "The Notion API authenticates requests using bearer tokens passed in the HTTP Authorization header [1]. Whether using an internal connection, a personal access token (PAT), or an OAuth-based public connection, you must include this header in every REST API request [1][2].\n\nFor manual HTTP requests, provide the token as shown below [1][3]:\n\n```http\nAuthorization: Bearer {YOUR_TOKEN}\nNotion-Version: 2026-03-11\n```\n\nIf using the Notion SDK for JavaScript, initialize the client with your token once [1][4]:\n\n```javascript\nconst { Client } = require('@notionhq/client');\nconst client = new Client({ auth: process.env.NOTION_ACCESS_TOKEN });\n```\n\nPublic connections require an initial OAuth 2.0 flow to exchange a temporary code for an access token [2][5]. Internal connections and PATs use static tokens generated via the Notion developer portal [2][6].",
+  "results": [
+    {
+      "title": "Authentication - Notion Docs",
+      "url": "https://developers.notion.com/reference/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Authorization - Notion Docs",
+      "url": "https://developers.notion.com/guides/get-started/authorization",
+      "snippet": ""
+    },
+    {
+      "title": "API quickstart - Notion Docs",
+      "url": "https://developers.notion.com/guides/get-started/quick-start",
+      "snippet": ""
+    },
+    {
+      "title": "Personal access tokens - Notion Docs",
+      "url": "https://developers.notion.com/guides/get-started/personal-access-tokens",
+      "snippet": ""
+    },
+    {
+      "title": "Public connections - Notion Docs",
+      "url": "https://developers.notion.com/guides/get-started/public-connections",
+      "snippet": ""
+    },
+    {
+      "title": "Overview - Notion Docs",
+      "url": "https://developers.notion.com/guides/get-started/overview",
+      "snippet": ""
+    },
+    {
+      "title": "Introduction - Notion Docs",
+      "url": "https://developers.notion.com/reference/intro",
+      "snippet": ""
+    },
+    {
+      "title": "Create a token - Notion Docs",
+      "url": "https://developers.notion.com/reference/create-a-token",
+      "snippet": ""
+    }
+  ]
+}

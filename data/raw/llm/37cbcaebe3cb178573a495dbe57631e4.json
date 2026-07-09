@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://github.com/tkhattar14/whatsapp-business-mcp",
+  "reason": "Multiple dedicated MCP servers exist for WhatsApp Business that expose its capabilities over the Model Context Protocol. These are distinct packages/servers (not the app itself) that integrate with WhatsApp Business Cloud API to enable AI assistants to send messages, manage contacts, handle templates, and perform other WhatsApp Business operations. Well-documented community implementations include tkhattar14/whatsapp-business-mcp, FredShred7/whatsapp-mcp-server, Gonzalez8/whatsapp-business-mcp, and others, all designed to work with MCP clients like Claude Desktop."
+}

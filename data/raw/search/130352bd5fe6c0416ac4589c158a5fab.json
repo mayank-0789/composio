@@ -1,0 +1,45 @@
+{
+  "answer": "Ramp uses the OAuth 2.0 framework for API authentication [1][2][3]. To access the API, you must first obtain an access token by requesting it from the /developer/v1/token endpoint [1][4]. When requesting this token, you authenticate your application using your Client ID and Client Secret via HTTP Basic Auth [5][4]. The base64-encoded string of client_id:client_secret is typically sent in the Authorization header [5][4]. Once you have your access token, you must include it in the header of your API requests as a Bearer token [4][3].\n\n```http\nAuthorization: Bearer <YOUR_ACCESS_TOKEN>\n```\n\nFor token acquisition requests, the authentication header is formatted as follows [5][4]:\n\n```http\nAuthorization: Basic <BASE64_ENCODED_CLIENT_ID:CLIENT_SECRET>\n```",
+  "results": [
+    {
+      "title": "Ramp API Documentation",
+      "url": "https://docs.ramp.com/developer-api/v1/api/authorization",
+      "snippet": ""
+    },
+    {
+      "title": "Ramp API Documentation",
+      "url": "https://docs.ramp.com/reference/authorization",
+      "snippet": ""
+    },
+    {
+      "title": "Ramp API for AI Agents: Methods, Permissions & Safe Access | Bollard AI",
+      "url": "https://bollardai.com/resources/ramp",
+      "snippet": ""
+    },
+    {
+      "title": "Getting started",
+      "url": "https://docs.ramp.com/llms-guides/getting-started.txt",
+      "snippet": ""
+    },
+    {
+      "title": "Authorization",
+      "url": "https://docs.ramp.com/llms-guides/authorization.txt",
+      "snippet": ""
+    },
+    {
+      "title": "Ramp API Documentation",
+      "url": "https://docs.ramp.com/developer-api/",
+      "snippet": ""
+    },
+    {
+      "title": "Ramp API Documentation",
+      "url": "https://developer-docs.ramp.com/developer-api/v1",
+      "snippet": ""
+    },
+    {
+      "title": "Ramp API Documentation",
+      "url": "https://docs.ramp.com/developer-api/v1/mcp",
+      "snippet": ""
+    }
+  ]
+}

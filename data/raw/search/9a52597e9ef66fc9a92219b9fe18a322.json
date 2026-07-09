@@ -1,0 +1,45 @@
+{
+  "answer": "The Gladly Model Context Protocol (MCP) server provided by StackOne is a production-ready solution that connects AI agents to Gladly, enabling them to perform read, write, update, and delete operations on customer service data [1]. It includes 65 pre-built actions, managed authentication, and built-in security features, allowing agents to interact with Gladly through standard MCP clients like Claude Desktop, Cursor, or VS Code [1]. By utilizing the Model Context Protocol, this server functions as a universal adapter that lets AI agents discover and execute tools within the Gladly ecosystem to improve service efficiency and data access [1][2].",
+  "results": [
+    {
+      "title": "",
+      "url": "https://www.stackone.com/connectors/gladly/mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "What Is Gladly MCP? Exploring the Model Context Protocol and AI Integration",
+      "url": "https://www.getguru.com/reference/gladly-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Agentic commerce protocols MCP ACP and UCP explained | Gladly",
+      "url": "https://www.gladly.ai/blog/making-sense-of-agentic-commerce/",
+      "snippet": ""
+    },
+    {
+      "title": "Build an MCP server - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/develop/build-server",
+      "snippet": ""
+    },
+    {
+      "title": "Understanding MCP servers - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts",
+      "snippet": ""
+    },
+    {
+      "title": "modelcontextprotocol/servers",
+      "url": "https://github.com/modelcontextprotocol/servers?alltoolsdirectory=",
+      "snippet": ""
+    },
+    {
+      "title": "Architecture overview - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/learn/architecture",
+      "snippet": ""
+    },
+    {
+      "title": "modelcontextprotocol/example-remote-server",
+      "url": "https://github.com/modelcontextprotocol/example-remote-server",
+      "snippet": ""
+    }
+  ]
+}

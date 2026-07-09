@@ -1,0 +1,45 @@
+{
+  "answer": "The Devin MCP server is an official authenticated service that provides AI agents and IDEs with programmatic access to the Devin platform, including sessions, playbooks, knowledge, schedules, and repository management [1].\n\nTo use it, connect your MCP-compatible client to the base server URL `https://mcp.devin.ai/mcp` using a service user API key (prefix `cog_`) [1]. If using an enterprise or personal access token, you must include an `X-Org-Id` header to target the correct organization [1]. \n\nExample configuration for an MCP client:\n```json\n{\n  \"mcpServers\": {\n    \"devin\": {\n      \"url\": \"https://mcp.devin.ai/mcp\",\n      \"headers\": {\n        \"Authorization\": \"Bearer cog_your_key_here\",\n        \"X-Org-Id\": \"your_org_id\"\n      }\n    }\n  }\n}\n```\nNote that the field name for the server URL varies by client, commonly `url` or `serverUrl` [1]. Legacy API keys (prefix `apk_` or `apk_user_`) are not supported [1].",
+  "results": [
+    {
+      "title": "Devin MCP - Devin Docs",
+      "url": "https://docs.devin.ai/work-with-devin/devin-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "MCP Overview - Devin Docs",
+      "url": "https://docs.devin.ai/cli/extensibility/mcp/overview",
+      "snippet": ""
+    },
+    {
+      "title": "MCP (Model Context Protocol) Marketplace - Devin Docs",
+      "url": "https://docs.devin.ai/work-with-devin/mcp",
+      "snippet": ""
+    },
+    {
+      "title": "MCP Configuration - Devin Docs",
+      "url": "https://docs.devin.ai/cli/extensibility/mcp/configuration",
+      "snippet": ""
+    },
+    {
+      "title": "jsklan/devin-api-mcp",
+      "url": "https://github.com/jsklan/devin-api-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "ldastey-dev/devin-mcp",
+      "url": "https://github.com/ldastey-dev/devin-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "mjinno09/devin-mcp",
+      "url": "https://github.com/mjinno09/devin-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Cascade MCP Integration",
+      "url": "https://docs.devin.ai/desktop/cascade/mcp",
+      "snippet": ""
+    }
+  ]
+}

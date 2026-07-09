@@ -1,0 +1,45 @@
+{
+  "one_liner": "Harvest offers a full REST API (v2) for time tracking and project management, supporting Personal Access Tokens for self-serve scripting and OAuth2 for public integrations, with API access included on all plans.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Personal Access Token generated in the Developers section of Harvest ID; used as Bearer token plus required Harvest-Account-Id header."
+    },
+    {
+      "method": "OAuth2",
+      "notes": "Full OAuth2 flow (Authorization Code for server-side, Implicit Grant for client-side) required for public/multi-user integrations; requires registering an OAuth2 application."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "API access is included in all Harvest plans including free trial/plan accounts; developers can generate a Personal Access Token immediately from id.getharvest.com/developers without needing approval. Full OAuth2 app registration is also self-serve via the same Developers portal.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "medium",
+    "notes": "REST API v2 covering time entries, projects, tasks, users, invoices, expenses, reports, clients, etc. Supports GET/POST/PATCH/DELETE with JSON. Rate limited to ~100 requests/15s."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://www.npmjs.com/package/@ianaleck/harvest-mcp-server"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/",
+      "supports": "Describes Personal Access Token and OAuth2 authentication methods, header requirements (Authorization Bearer, Harvest-Account-Id, User-Agent)."
+    },
+    {
+      "url": "https://help.getharvest.com/api-v2/introduction/overview/general/",
+      "supports": "Confirms REST API design, supported HTTP methods, JSON responses, and rate limiting via 429 status codes."
+    },
+    {
+      "url": "https://help.getharvest.com/api-v2/",
+      "supports": "General API v2 documentation hub confirming REST surface across multiple resources."
+    }
+  ],
+  "confidence": 0.85,
+  "flags": [
+    "Third-party MCP servers exist but are not officially maintained by Harvest.",
+    "Free plan API access claim is based on help center overview but should be reverified against current pricing page for edge cases (e.g., trial limits)."
+  ]
+}

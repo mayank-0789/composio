@@ -1,0 +1,45 @@
+{
+  "answer": "Higgsfield authentication depends on your method of access. For the official v2 SDK, the recommended approach is using a single credentials string in the format KEY_ID:KEY_SECRET, passed via the config function or the HF_CREDENTIALS environment variable [1][2]. When calling the API directly via HTTP, use the Authorization: Key KEY_ID:KEY_SECRET header [1][2] or a Bearer token [3]. For CLI users, run higgsfield auth login to handle authentication automatically [4][5]. Unofficial integrations may alternatively support Clerk-based session tokens or environment-based API key and secret pairs [6][7][8].",
+  "results": [
+    {
+      "title": "higgsfield-ai/higgsfield-js",
+      "url": "https://github.com/higgsfield-ai/higgsfield-js",
+      "snippet": ""
+    },
+    {
+      "title": "@higgsfield/client",
+      "url": "https://registry.npmjs.org/@higgsfield/client",
+      "snippet": ""
+    },
+    {
+      "title": "How to Use Higgsfield API",
+      "url": "https://apidog.com/blog/higgsfield-api/",
+      "snippet": ""
+    },
+    {
+      "title": "higgsfield-ai/cli",
+      "url": "https://github.com/higgsfield-ai/cli/",
+      "snippet": ""
+    },
+    {
+      "title": "CLAUDE.md at main · higgsfield-ai/skills",
+      "url": "https://github.com/higgsfield-ai/skills/blob/main/CLAUDE.md",
+      "snippet": ""
+    },
+    {
+      "title": "higgsfield-ai/higgsfield-client",
+      "url": "https://github.com/higgsfield-ai/higgsfield-client",
+      "snippet": ""
+    },
+    {
+      "title": "anthonyjohn17/higgsfield-api-client",
+      "url": "https://github.com/anthonyjohn17/higgsfield-api-client",
+      "snippet": ""
+    },
+    {
+      "title": "higgsfield-client v0.1.0",
+      "url": "https://pypi.org/project/higgsfield-client/",
+      "snippet": ""
+    }
+  ]
+}

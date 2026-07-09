@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://docs.stripe.com/mcp",
+  "reason": "Stripe has an official MCP server available. It can be accessed remotely at https://mcp.stripe.com or installed locally via the @stripe/mcp npm package. The server provides tools for managing Stripe resources (customers, products, invoices, refunds, balances) and searching Stripe documentation through the Model Context Protocol."
+}

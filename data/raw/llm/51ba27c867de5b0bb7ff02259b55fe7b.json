@@ -1,0 +1,42 @@
+{
+  "one_liner": "Gladly offers a broad, well-documented REST API (Basic auth via email + API token) for customer service data, but API access requires an existing paid enterprise account with admin-granted permissions rather than open self-serve signup.",
+  "auth_methods": [
+    {
+      "method": "Basic",
+      "notes": "HTTP Basic Auth using Gladly login email as username and generated API token as password, sent via Authorization header over HTTPS."
+    }
+  ],
+  "self_serve": "admin-approval",
+  "self_serve_notes": "No public free/self-serve developer tier for the core enterprise platform; API access requires an existing paid subscription/account with a user granted the 'API User' permission. Tokens are then self-generated via Settings > API Tokens. A separate SMB Shopify-app version offers a 30-day trial but is a different limited product.\"",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Comprehensive REST API covering agents, conversations, customers, tasks, topics, teams, inboxes, exports, webhooks, reports, and a separate Lookup API. Also has webhook event system."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://developer.gladly.com/rest/index.html"
+  },
+  "buildability": "buildable-with-caveats",
+  "main_blocker": "Requires an existing paid Gladly subscription and admin-granted 'API User' permission to generate API tokens; no public self-serve signup for API access.",
+  "evidence": [
+    {
+      "url": "https://developer.gladly.com/rest/index.html",
+      "supports": "REST API surface, endpoints, and Basic Auth via Authorization header"
+    },
+    {
+      "url": "https://help.gladly.com/generate-api-tokens-and-create-webhooks",
+      "supports": "How to generate API tokens and required permissions"
+    },
+    {
+      "url": "https://dlthub.com/context/source/gladly",
+      "supports": "Details on auth (Basic auth with email/token), endpoint list, and sandbox usage"
+    }
+  ],
+  "confidence": 0.75,
+  "flags": [
+    "No public self-serve free tier; enterprise/contract-gated access",
+    "Third-party MCP server (StackOne) exists, not an official first-party Gladly MCP",
+    "Sandbox environment available at {organization}.gladly.qa for testing once account provisioned"
+  ]
+}

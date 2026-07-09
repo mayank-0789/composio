@@ -1,0 +1,45 @@
+{
+  "answer": "No, there is no free tier for Smartsheet API access. Access to the Smartsheet API is restricted to users on Business, Enterprise, or Advanced Work Management plans. While Smartsheet offers a general free plan for project management and free trials for new users, these do not include the permissions required to use the API. To integrate, you must have a qualifying paid plan and generate an API access token via your account's Personal Settings. The base URL for API requests is `https://api.smartsheet.com/2.0`.",
+  "results": [
+    {
+      "title": "Smartsheet API introduction",
+      "url": "https://developers.smartsheet.com/api/smartsheet/introduction",
+      "snippet": ""
+    },
+    {
+      "title": "Smartsheet Pricing | Smartsheet",
+      "url": "https://www.smartsheet.com/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Smartsheet FAQs",
+      "url": "https://www.smartsheet.com/content/smartsheet-faqs",
+      "snippet": ""
+    },
+    {
+      "title": "Smartsheet OpenAPI Reference",
+      "url": "https://developers.smartsheet.com/api/smartsheet/openapi",
+      "snippet": ""
+    },
+    {
+      "title": "5 steps for getting started with the Smartsheet API | Smartsheet",
+      "url": "https://www.smartsheet.com/content-center/best-practices/tips-tricks/api-getting-started",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://developers.smartsheet.com/api/smartsheet/openapi/users/list-user-plans",
+      "snippet": ""
+    },
+    {
+      "title": "Zero to API: Your First Successful Smartsheet Integration in 30 Minutes | Smartsheet",
+      "url": "https://www.smartsheet.com/content-center/managing-work/it-management/api-smartsheet-integration",
+      "snippet": ""
+    },
+    {
+      "title": "Supported plans and add-ons for the user model | Smartsheet Learning Center",
+      "url": "https://help.smartsheet.com/articles/2483340-supported-plans-and-add-ons-user-model",
+      "snippet": ""
+    }
+  ]
+}

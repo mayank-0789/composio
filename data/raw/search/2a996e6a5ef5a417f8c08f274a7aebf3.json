@@ -1,0 +1,35 @@
+{
+  "answer": "Sentry's REST API uses Bearer token authentication [1][2]. You must include an Authorization header with your token in every request [3][1]. DSNs are not supported for the REST API and are used exclusively by SDKs for event ingestion [1][2].\n\nExample request:\n\n```bash\ncurl https://sentry.io/api/0/organizations/ \\\n  -H 'Authorization: Bearer YOUR_TOKEN'\n```\n\nYou can use personal tokens (tied to your user account) or organization tokens (tied to an organization) [1][2]. Tokens can be created via User Settings or Organization Settings, respectively [3][1][2]. For third-party applications, Sentry also supports OAuth2 [3].",
+  "results": [
+    {
+      "title": "",
+      "url": "https://sentrydocs.dev/api/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://sentrydocs.dev/configuration/api-keys",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication",
+      "url": "https://docs.sentry.dev/api/auth/",
+      "snippet": ""
+    },
+    {
+      "title": "API Reference",
+      "url": "https://docs.sentry.io/api.md",
+      "snippet": ""
+    },
+    {
+      "title": "Retrieve an Event for a Project",
+      "url": "https://docs.sentry.io/api/events/retrieve-an-event-for-a-project.md",
+      "snippet": ""
+    },
+    {
+      "title": "getsentry/sentry-api-schema",
+      "url": "https://github.com/getsentry/sentry-api-schema/",
+      "snippet": ""
+    }
+  ]
+}

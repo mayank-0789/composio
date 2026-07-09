@@ -1,0 +1,45 @@
+{
+  "answer": "WooCommerce provides native Model Context Protocol (MCP) support, which exposes store operations as discoverable tools for AI agents [1][2]. This integration uses the WordPress Abilities API and a shared WordPress MCP adapter to bridge AI clients with WooCommerce functionality [1][2].\n\nTo enable this, use the `mcp_integration` feature flag [1][2]. For external MCP servers, you can connect via a local proxy (like `@automattic/mcp-wordpress-remote`) to communicate with your WordPress installation [1][3][2].\n\nExample configuration for an MCP client:\n\n```json\n{\n  \"mcpServers\": {\n    \"woocommerce\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@automattic/mcp-wordpress-remote@latest\"],\n      \"env\": {\n        \"WP_API_URL\": \"https://yourstore.com/wp-json/woocommerce/mcp\",\n        \"CUSTOM_HEADERS\": \"{\\\"X-MCP-API-Key\\\": \\\"key:secret\\\"}\"\n      }\n    }\n  }\n}\n```\n\nSeveral community-maintained MCP servers also exist [4][5][6], allowing you to interact with products, orders, and analytics through dedicated TypeScript-based tools [5][7].",
+  "results": [
+    {
+      "title": "Model Context Protocol (MCP) Integration | WooCommerce developer docs",
+      "url": "https://developer.woocommerce.com/docs/features/mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "Add MCP (Model Context Protocol) integration for WooCommerce",
+      "url": "https://github.com/woocommerce/woocommerce/pull/60901",
+      "snippet": ""
+    },
+    {
+      "title": "ai-experiments/mcp/woo at trunk · Automattic/ai-experiments · GitHub",
+      "url": "https://github.com/Automattic/ai-experiments/tree/trunk/mcp/woo",
+      "snippet": ""
+    },
+    {
+      "title": "wppoland/woocommerce-mcp",
+      "url": "https://github.com/wppoland/woocommerce-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "arbazex/woocommerce-mcp-server",
+      "url": "https://github.com/arbazex/woocommerce-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "opestro/woocommerce-mcp-server",
+      "url": "https://github.com/opestro/woocommerce-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Build an MCP server for WooCommerce: practitioner's guide | wordpress | WPPoland",
+      "url": "https://wppoland.com/en/building-an-mcp-server-for-woocommerce/",
+      "snippet": ""
+    },
+    {
+      "title": "jlfguthrie/woo-mcp",
+      "url": "https://github.com/jlfguthrie/woo-mcp",
+      "snippet": ""
+    }
+  ]
+}

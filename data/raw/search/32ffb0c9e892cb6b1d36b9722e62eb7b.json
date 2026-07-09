@@ -1,0 +1,45 @@
+{
+  "answer": "To authenticate with the Plain API, include your API key in the request header using the Bearer scheme [1][2].\n\nExample:\n```text\nAuthorization: Bearer plainApiKey_xxx\n```\n\nYou can generate API keys by navigating to Settings and then Machine Users in your dashboard [1]. Note that different services sharing similar names (such as PlainID or PlainProxies) utilize different authentication methods, such as token exchange flows or X-API-KEY headers, respectively [3][4]. Always refer to the specific documentation for the service you are integrating [2][5].",
+  "results": [
+    {
+      "title": "",
+      "url": "https://plain.mintlify.app/graphql/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://plain.mintlify.app/graphql/introduction",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication for Management APIs",
+      "url": "https://docs.plainid.io/apidocs/authentication-mgmt-apis",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication",
+      "url": "https://docs.plainproxies.com/api-documentation/overview/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "@team-plain/typescript-sdk",
+      "url": "https://plain-typescript-sdk-docs.vercel.app/",
+      "snippet": ""
+    },
+    {
+      "title": "plain-api/README.md · Docs",
+      "url": "https://plainframework.com/docs/plain-api/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "plain-api/plain/api/views.py · Docs",
+      "url": "https://plainframework.com/docs/plain-api/plain/api/views.py",
+      "snippet": ""
+    },
+    {
+      "title": "plain.api v0.33.5",
+      "url": "https://pypi.org/project/plain.api/0.33.5/",
+      "snippet": ""
+    }
+  ]
+}

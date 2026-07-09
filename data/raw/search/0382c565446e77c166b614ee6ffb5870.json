@@ -1,0 +1,45 @@
+{
+  "answer": "If you are looking for grain commodity market pricing, BlackSeaGrain.io offers a self-serve free tier that provides access to current-day pricing data via a REST API. You can access their endpoints using a demo key without needing a credit card [1][2].\n\nThe BlackSeaGrain.io API base URL is https://blacksea-grain.io/api [1]. A minimal example call using the demo key is:\n\n```\ncurl -H \"X-API-Key: demo\" https://blackseagrain.io/api/prices\n```\n\nThe free tier is limited to 100 requests per hour and current-day data [1]. Other mentioned platforms like GrainBrief provide free read-only access to public endpoints without authentication [3], while Riwe requires a per-request cost and an API key for its market data endpoints [4]. Note that \"Grain\" (grain.com and grainfinance.co) provides APIs for workspace integrations and FX hedging rather than agricultural commodity pricing [5][6].",
+  "results": [
+    {
+      "title": "BlackSeaGrain.io — Real-Time Black Sea Grain & Fertilizer Prices",
+      "url": "https://blackseagrain.io/",
+      "snippet": ""
+    },
+    {
+      "title": "BlackSeaGrain.io — API Documentation",
+      "url": "https://blackseagrain.io/api/docs",
+      "snippet": ""
+    },
+    {
+      "title": "GrainBrief API Documentation — Grain & Livestock Price Data",
+      "url": "https://grainbrief.com/api-docs",
+      "snippet": ""
+    },
+    {
+      "title": "Developer Portal - Riwe",
+      "url": "https://riwe.io/developers/docs/market-data",
+      "snippet": ""
+    },
+    {
+      "title": "Grain API",
+      "url": "https://developers.grain.com/",
+      "snippet": ""
+    },
+    {
+      "title": "Grain Developer Portal - Grain Developer Portal",
+      "url": "https://developer.grainfinance.co/docs/get-started/create-your-first-hedge",
+      "snippet": ""
+    },
+    {
+      "title": "GrainBrief - Ag Input Price Intelligence for Co-op Purchasing Managers",
+      "url": "https://grainbrief.com/",
+      "snippet": ""
+    },
+    {
+      "title": "Commodity Price API — Metals, Energy, Agriculture | SentiSignal",
+      "url": "https://www.sentisignal.com/commodity-api",
+      "snippet": ""
+    }
+  ]
+}

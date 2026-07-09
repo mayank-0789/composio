@@ -1,0 +1,42 @@
+{
+  "one_liner": "PitchBook offers a REST API (companies, deals, people, investors, funds) authenticated via an API key issued by an account manager, but access is enterprise-only with no self-serve signup.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Header format: Authorization: PB-Token {API_KEY}. Key issued by account manager, not self-generated via a dashboard signup flow."
+    }
+  ],
+  "self_serve": "partnership-contact-sales",
+  "self_serve_notes": "No free tier or self-serve API signup; must contact a PitchBook account manager, purchase a custom enterprise contract, and receive credits/API key. Each request consumes purchased credits.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "medium",
+    "notes": "Base URL https://api.pitchbook.com with endpoints for companies, companies/search, deals, deals/search, people, people/search, investors, funds, and account/credits."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://pathlit.mintlify.app/docs/nodes/pitchbook-agent"
+  },
+  "buildability": "buildable-with-caveats",
+  "main_blocker": "API access requires a paid enterprise contract and manual provisioning by a PitchBook account manager; no self-serve key generation, which limits automated onboarding for an agent toolkit.",
+  "evidence": [
+    {
+      "url": "https://dlthub.com/context/source/pitchbook-api",
+      "supports": "Describes REST API v2, base URL, endpoints, PB-Token auth header, credit-based usage, and manual key provisioning via account manager."
+    },
+    {
+      "url": "https://dev.writer.com/connectors/pitchbook",
+      "supports": "Confirms API key authentication and that access requires contacting PitchBook support/account for API key generation."
+    },
+    {
+      "url": "https://easyvc.ai/vs/pitchbook-pricing/",
+      "supports": "Indicates no free tier and enterprise-level custom pricing for PitchBook."
+    }
+  ],
+  "confidence": 0.72,
+  "flags": [
+    "no-self-serve-signup",
+    "credit-based-pricing",
+    "third-party-mcp-integrations-exist-but-no-official-first-party-MCP-confirmed"
+  ]
+}

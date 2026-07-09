@@ -1,0 +1,46 @@
+{
+  "one_liner": "Ramp offers a broad OAuth2-secured REST Developer API for spend/finance data, plus separate MCP servers for documentation and account data access.",
+  "auth_methods": [
+    {
+      "method": "OAuth2",
+      "notes": "OAuth 2.0 with Authorization Code, Refresh Token, and Client Credentials grants. Token endpoint at https://api.ramp.com/developer/v1/token, authenticated via HTTP Basic (base64 client_id:client_secret), returns Bearer access token."
+    }
+  ],
+  "self_serve": "admin-approval",
+  "self_serve_notes": "Requires a Ramp business account and app registration (client ID/secret) to obtain OAuth credentials; production API access may require admin permissions or a support/provisioning request. Sandbox available for testing without full production approval.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Ramp Developer API (v1) covers business financial data: transactions, cards, reimbursements, bills, users, etc. OpenAPI spec published at /openapi/developer-api.json."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://docs.ramp.com/developer-api/v1/mcp"
+  },
+  "buildability": "buildable-with-caveats",
+  "main_blocker": "Production API access requires a Ramp business account, OAuth app registration, and potentially admin approval/support ticket for provisioning; write operations are disabled in sandbox.",
+  "evidence": [
+    {
+      "url": "https://docs.ramp.com/developer-api/v1/api/authorization",
+      "supports": "OAuth2 flow details: client credentials, authorization code, refresh token grants; Basic auth for token endpoint; Bearer token usage."
+    },
+    {
+      "url": "https://docs.ramp.com/developer-api/v1/mcp",
+      "supports": "Existence of Ramp MCP server(s) - both account-specific ramp-mcp and unauthenticated Developer MCP for docs."
+    },
+    {
+      "url": "https://docs.ramp.com/developer-api/v1/getting-started",
+      "supports": "Setup guide referenced for obtaining OAuth credentials and getting started with API."
+    },
+    {
+      "url": "https://ramp.com/pricing",
+      "supports": "Developer API access tied to business account plans, not necessarily free self-serve tier."
+    }
+  ],
+  "confidence": 0.75,
+  "flags": [
+    "MCP server confirmed to exist (two variants: ramp-mcp and Developer MCP)",
+    "Self-serve status ambiguous - requires business account and possibly admin approval for production scopes",
+    "Sandbox environment available but write operations disabled, limiting testing depth"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "one_liner": "Pipedrive is a sales CRM offering a broad REST API secured via personal API tokens or OAuth 2.0, with self-serve token access on any paid plan and both official and community MCP servers available.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Personal API token passed via x-api-token header; tied to a single user/company, only one active token at a time."
+    },
+    {
+      "method": "OAuth2",
+      "notes": "Required for apps published in the Pipedrive Marketplace; standard authorization code flow with access/refresh tokens via Bearer header."
+    }
+  ],
+  "self_serve": "self-serve-trial",
+  "self_serve_notes": "No permanent free tier, but a 14-day free trial is available for all plans, and every paid plan includes REST API access. Personal API tokens can be self-generated instantly from Settings > Personal preferences > API. Rate limits scale with subscription tier; higher limits require plan upgrade or token top-up purchase.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Extensive REST API (v1 and v2) covering deals, persons, organizations, activities, pipelines, products, leads, projects, webhooks, etc."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://pipedrive.readme.io/docs/core-api-concepts-authentication"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://pipedrive.readme.io/docs/core-api-concepts-authentication",
+      "supports": "API token via x-api-token header and OAuth 2.0 requirement for marketplace apps"
+    },
+    {
+      "url": "https://developers.pipedrive.com/docs/api/v1/Oauth",
+      "supports": "OAuth 2.0 authorization, token, and refresh endpoints"
+    },
+    {
+      "url": "https://pipedrive.readme.io/docs/marketplace-oauth-authorization",
+      "supports": "OAuth authorization flow details"
+    },
+    {
+      "url": "https://www.pipedrive.com/en/pricing",
+      "supports": "No permanent free tier; 14-day free trial for all plans"
+    },
+    {
+      "url": "https://www.pipedrive.com/en/features/crm-api",
+      "supports": "REST API included with paid subscription plans"
+    },
+    {
+      "url": "https://pipedrive.readme.io/docs/core-api-concepts-rate-limiting",
+      "supports": "Rate limits scale by subscription tier; upgrade or top-up for higher limits"
+    },
+    {
+      "url": "https://github.com/pipedrive/client-nodejs/blob/master/README.md",
+      "supports": "Official Node.js API client library demonstrating broad REST API surface"
+    }
+  ],
+  "confidence": 0.85,
+  "flags": [
+    "No permanent free tier - requires trial or paid plan for API access",
+    "MCP server ecosystem includes both official and multiple community implementations with varying tool counts/features"
+  ]
+}

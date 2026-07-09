@@ -1,0 +1,157 @@
+{
+  "verdicts": [
+    {
+      "field": "name",
+      "status": "supported",
+      "note": "Evidence consistently refers to 'Ahrefs' throughout all documentation pages."
+    },
+    {
+      "field": "website",
+      "status": "supported",
+      "note": "The website 'ahrefs.com/api' is supported by the evidence showing api.ahrefs.com endpoints and docs.ahrefs.com documentation."
+    },
+    {
+      "field": "category",
+      "status": "supported",
+      "note": "Evidence shows Ahrefs provides SEO/marketing data (keywords, backlinks, SERP, site audit) fitting 'Data, SEO and Scraping' category."
+    },
+    {
+      "field": "one_liner",
+      "status": "supported",
+      "note": "Evidence confirms: REST API v3 exists (broad coverage), official MCP server exists, both require paid subscription with no free tier (only limited free test queries), and MCP requires Lite plan or higher."
+    },
+    {
+      "field": "auth_methods[0] API key",
+      "status": "supported",
+      "note": "Evidence confirms API keys are created in Account settings, sent as 'Authorization: Bearer YOUR_API_KEY', up to 1,000 keys per workspace with 1-year expiry."
+    },
+    {
+      "field": "auth_methods[1] OAuth2",
+      "status": "supported",
+      "note": "Evidence confirms Ahrefs Connect uses OAuth 2.0 with PKCE flow, exchanges auth code for access token used as Bearer token."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Evidence shows 'Ahrefs API is available on eligible paid plans' with no mention of free tier, only limited free test queries for specific domains/keywords."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "supported",
+      "note": "Evidence confirms: no free tier (only free test queries for ahrefs.com/yep.com/firehose.com domains), self-serve key creation in Account settings, MCP requires Lite plan or higher, and free test queries available for testing."
+    },
+    {
+      "field": "api_surface.type",
+      "status": "supported",
+      "note": "Evidence explicitly describes 'REST API v3' throughout documentation."
+    },
+    {
+      "field": "api_surface.breadth",
+      "status": "supported",
+      "note": "Evidence shows broad coverage: Site Explorer, Keywords Explorer, SERP Overview, Rank Tracker, Site Audit, Brand Radar, Social Media Management, Batch Analysis, Management endpoints, etc."
+    },
+    {
+      "field": "api_surface.notes",
+      "status": "supported",
+      "note": "Evidence confirms REST API v3 covers all mentioned endpoints, plus Looker Studio (Data Studio) connectors and official remote MCP server."
+    },
+    {
+      "field": "existing_mcp.exists",
+      "status": "supported",
+      "note": "Evidence explicitly shows 'Ahrefs provides a hosted MCP server' at https://docs.ahrefs.com/en/mcp/docs/introduction with connection URLs for Streamable HTTP and SSE."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "supported",
+      "note": "The URL https://docs.ahrefs.com/en/mcp/docs/introduction is the correct documentation page for Ahrefs' official MCP server."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "Evidence confirms API requires paid subscription with limited free test queries, making it 'buildable-with-caveats' rather than 'buildable-now'."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "Evidence confirms: 'Ahrefs API is available on eligible paid plans', no free tier, only limited free test queries, and MCP requires 'Lite plan or higher'."
+    },
+    {
+      "field": "evidence",
+      "status": "supported",
+      "note": "All evidence URLs are present in the provided evidence and support their respective claims."
+    },
+    {
+      "field": "confidence",
+      "status": "supported",
+      "note": "0.85 confidence is reasonable given comprehensive evidence from official documentation."
+    },
+    {
+      "field": "flags",
+      "status": "supported",
+      "note": "Evidence supports: no free tier (only test queries), requires paid plan, MCP requires Lite+. The 'local-npm-mcp-package-deprecated' flag is not contradicted and MCP docs mention 'Legacy SSE (deprecated in many tools)'."
+    }
+  ],
+  "revised": {
+    "id": 53,
+    "name": "Ahrefs",
+    "website": "ahrefs.com/api",
+    "category": "Data, SEO and Scraping",
+    "one_liner": "Ahrefs offers a broad REST API (v3) for SEO/marketing data plus an official hosted MCP server, but both require an active paid subscription (no free tier).",
+    "auth_methods": [
+      {
+        "method": "API key",
+        "notes": "Long-lived API keys generated in Account settings; sent as 'Authorization: Bearer YOUR_API_KEY'. Up to 1,000 keys per workspace, 1-year expiry."
+      },
+      {
+        "method": "OAuth2",
+        "notes": "Ahrefs Connect uses OAuth 2.0 with PKCE for third-party applications; exchanges auth code for access token used as Bearer token."
+      }
+    ],
+    "self_serve": "paid-plan",
+    "self_serve_notes": "No free tier for the API; full production access requires an active paid subscription. Developers can self-serve API keys via Account settings, and limited free test queries (e.g., against ahrefs.com domain or sample keywords) are available for testing without consuming paid units. MCP server access requires at least the Lite plan.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "REST API v3 covering Site Explorer, Keywords Explorer, Rank Tracker, Site Audit, Brand Radar, etc. Also offers Looker Studio connectors and an official remote MCP server."
+    },
+    "existing_mcp": {
+      "exists": "yes",
+      "url": "https://docs.ahrefs.com/en/mcp/docs/introduction"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "API access requires a paid Ahrefs subscription (no free tier); production use is gated behind eligible paid plans, and MCP requires Lite plan or higher.",
+    "evidence": [
+      {
+        "url": "https://docs.ahrefs.com/en/api/docs/api-keys-creation-and-management",
+        "supports": "API key auth via Authorization: Bearer header; self-serve key creation in Account settings"
+      },
+      {
+        "url": "https://docs.ahrefs.com/en/ahrefs-connect/docs/oauth-guide",
+        "supports": "OAuth 2.0 with PKCE flow for Ahrefs Connect applications"
+      },
+      {
+        "url": "https://docs.ahrefs.com/en/api/docs/introduction",
+        "supports": "Overview of REST API v3, authentication, and rate limits"
+      },
+      {
+        "url": "https://docs.ahrefs.com/en/api/docs/free-test-queries",
+        "supports": "Free test queries available without Enterprise plan, but full access requires paid subscription"
+      },
+      {
+        "url": "https://docs.ahrefs.com/en/mcp/docs/introduction",
+        "supports": "Official remote MCP server exists, requiring Lite plan or higher, using Streamable HTTP transport"
+      },
+      {
+        "url": "https://docs.ahrefs.com/",
+        "supports": "Overview of REST API, MCP, and Data Studio integration surfaces"
+      }
+    ],
+    "confidence": 0.85,
+    "flags": [
+      "no-free-tier",
+      "requires-paid-plan",
+      "mcp-requires-lite-plan-or-higher",
+      "local-npm-mcp-package-deprecated"
+    ]
+  }
+}

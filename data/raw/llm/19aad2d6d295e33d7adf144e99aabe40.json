@@ -1,0 +1,54 @@
+{
+  "one_liner": "SendGrid provides a broad, well-documented REST API (v3) for transactional/marketing email, authenticated via self-serve API keys, with multiple community MCP server implementations already available.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Primary method: API key passed as Bearer token in Authorization header. Created via account settings UI (app.sendgrid.com/settings/api_keys). Permissions can be scoped per key."
+    },
+    {
+      "method": "Basic",
+      "notes": "Supported for some legacy services using 'apikey' as username and the API key as password (SMTP relay). Username/password basic auth was deprecated as of Q4 2020."
+    }
+  ],
+  "self_serve": "self-serve-trial",
+  "self_serve_notes": "Developers can self-serve create API keys immediately from the dashboard. However, as of May 27, 2025, SendGrid replaced its permanent free tier with a one-time 60-day free trial (100 emails/day) for new accounts; after trial expiry a paid plan (starting at $19.95/mo) is required to continue sending/using API features. Two-factor authentication is mandatory on the account.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "SendGrid v3 REST API with broad coverage: mail send, templates, contacts/marketing campaigns, suppression lists, stats, API key management, etc. SDKs available in 7 languages."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://github.com/sendgrid"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
+      "supports": "API key via Bearer token is the primary auth method for v3 API; self-serve key creation in account settings."
+    },
+    {
+      "url": "https://www.twilio.com/docs/sendgrid/for-developers/sending-email/authentication.md",
+      "supports": "Details on Bearer API key auth, Basic auth with 'apikey' username, mandatory 2FA."
+    },
+    {
+      "url": "https://www.twilio.com/en-us/changelog/sendgrid-free-plan",
+      "supports": "Free plan replaced with 60-day trial as of May 27, 2025."
+    },
+    {
+      "url": "https://support.sendgrid.com/hc/en-us/articles/35270136965403-Twilio-SendGrid-Trial-Account-Plan",
+      "supports": "Trial account plan details, 100 emails/day for 60 days."
+    },
+    {
+      "url": "https://apio.sh/apis/sendgrid",
+      "supports": "Paid plans start at $19.95/month, self-serve."
+    }
+  ],
+  "confidence": 0.8,
+  "flags": [
+    "free-tier-removed-as-of-2025",
+    "requires-2FA-on-account",
+    "multiple-unofficial-MCP-implementations-no-single-official-one-confirmed"
+  ]
+}

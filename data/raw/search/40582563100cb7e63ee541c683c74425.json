@@ -1,0 +1,45 @@
+{
+  "answer": "Several providers offer self-serve YouTube transcript APIs with free tiers, though their models vary.\n\nYoutrackTranscript.dev [1][2] and DownloadYouTubeTranscripts.com [3] use credit-based systems. YoutrackTranscript.dev provides 10 free credits monthly, requires an API key, and offers rate limits of 1 request per second on the free plan [2]. DownloadYouTubeTranscripts.com also includes 10 free credits upon sign-up with no credit card required [3]. \n\nYouTube-Transcript.ai [4] offers a keyless, zero-setup service with fair-use limits. You can make GET requests directly to their endpoint without an API key or SDK [4]:\n\n```bash\ncurl https://youtube-transcript.ai/transcript/{VIDEO_ID}.txt\n```\n\nSupadata [5] provides a developer-focused API with a free tier of 100 requests, requiring an API key for access:\n\n```bash\ncurl 'https://api.supadata.ai/v1/transcript?url={VIDEO_URL}' \\\n  -H 'x-api-key: {YOUR_API_KEY}'\n```\n\nEach provider includes documentation for integrating these endpoints into your applications [1][3][5][4].",
+  "results": [
+    {
+      "title": "API Documentation - YouTube Transcript API",
+      "url": "https://www.youtubetranscript.dev/api-docs",
+      "snippet": ""
+    },
+    {
+      "title": "FAQ - Frequently Asked Questions | YouTubeTranscript.dev",
+      "url": "https://www.youtubetranscript.dev/faq",
+      "snippet": ""
+    },
+    {
+      "title": "YouTube Transcript API | Programmatic Access for Developers | YouTube Transcripts",
+      "url": "https://www.downloadyoutubetranscripts.com/api-access",
+      "snippet": ""
+    },
+    {
+      "title": "YouTube Transcript API — Free, Fast, One URL (No Key)",
+      "url": "https://youtube-transcript.ai/youtube-transcript-api",
+      "snippet": ""
+    },
+    {
+      "title": "YouTube Transcript API with Python & JS SDKs | Supadata",
+      "url": "https://supadata.ai/youtube-transcript-api?ref_type=organic",
+      "snippet": ""
+    },
+    {
+      "title": "Youtube-Transcript-Dev/Youtube-Transcript-API",
+      "url": "https://github.com/youtube-transcript-dev/youtube-transcript-api",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing | YouTube Video Transcript Generator",
+      "url": "https://youtubevideotranscript.io/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Youtube-Transcript-Dev/youtube-transcript-sdk",
+      "url": "https://github.com/Youtube-Transcript-Dev/youtube-transcript-sdk",
+      "snippet": ""
+    }
+  ]
+}

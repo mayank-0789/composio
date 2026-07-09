@@ -1,0 +1,49 @@
+{
+  "one_liner": "Bright Data offers web scraping, proxy, SERP, and unlocker APIs with self-serve API key authentication and an official MCP server for AI agent integration.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Bearer token used as Authorization header for REST API access (Web Unlocker, SERP API, Scraper API, Proxy over REST)."
+    },
+    {
+      "method": "Other",
+      "notes": "Native Access via proxy username/password combination for direct proxy protocol connections (non-REST tools)."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "New accounts get 5,000 free credits/month usable across Web Unlocker, SERP API, Web Scraper API, Scraper Studio, and MCP server, no credit card required. API keys can be self-generated in account settings. Proxy products and Browser API are excluded from free credits and require a payment method for unrestricted access.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Covers Web Unlocker, SERP API, Web Scraper API, Proxy networks, Browser API; also Python SDK available."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://docs.brightdata.com/api-reference/SDK"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://docs.brightdata.com/api-reference/authentication",
+      "supports": "Describes API key (Bearer token) and Native Access (proxy username/password) authentication methods, and self-serve API key generation via account settings."
+    },
+    {
+      "url": "https://docs.brightdata.com/api-reference/proxy/proxy_api_auth",
+      "supports": "Confirms two auth methods for proxy networks: username/password and API key over REST."
+    },
+    {
+      "url": "https://docs.brightdata.com/general/account/billing-and-pricing/free-tier",
+      "supports": "Details free tier of 5,000 credits/month across Web Unlocker, SERP API, Web Scraper API, Scraper Studio, and MCP server with no credit card required."
+    },
+    {
+      "url": "https://brightdata.com/pricing/mcp-server",
+      "supports": "Confirms existence of Bright Data's MCP server with free Rapid tier and Pro mode pricing."
+    }
+  ],
+  "confidence": 0.85,
+  "flags": [
+    "Proxy products and Browser API excluded from free credits, requiring payment method for full proxy/unlocker access",
+    "MCP server free tier limited to 5,000 requests/month, Pro mode likely paid"
+  ]
+}

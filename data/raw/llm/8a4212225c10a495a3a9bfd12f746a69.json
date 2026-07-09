@@ -1,0 +1,53 @@
+{
+  "one_liner": "Vercel's REST API and TypeScript SDK let developers manage deployments, projects, and domains using self-serve Bearer access tokens, with an official pattern for building/hosting MCP servers on Vercel Functions.",
+  "auth_methods": [
+    {
+      "method": "Token",
+      "notes": "Access Token used as Bearer token in Authorization header for REST API and SDK; user-generated via account settings (Sign in with Vercel Tokens)."
+    },
+    {
+      "method": "OAuth2",
+      "notes": "OIDC-based tokens used for Vercel Connect, integrations, and service-to-service auth contexts (not the primary REST API auth path)."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Developers can generate personal access tokens directly from their Vercel account dashboard for free (Hobby plan); no approval process needed for basic API access, though some enterprise-grade features require Pro/Enterprise plans.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Covers deployments, projects, domains, DNS, integrations/marketplace, environment variables, teams, and more; also offers an official TypeScript SDK wrapping the REST API."
+  },
+  "existing_mcp": {
+    "exists": "no",
+    "url": "https://vercel.com/docs/mcp"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://vercel.com/docs/sign-in-with-vercel/tokens",
+      "supports": "Describes Access Token, ID Token, and Refresh Token mechanics used for authentication."
+    },
+    {
+      "url": "https://github.com/vercel/sdk?tab=readme-ov-file",
+      "supports": "Shows SDK initialization with bearerToken for authenticating API calls."
+    },
+    {
+      "url": "https://vercel.com/docs/plans/hobby",
+      "supports": "Confirms free Hobby plan available for self-serve access including CLI and Git integrations."
+    },
+    {
+      "url": "https://vercel.com/docs/integrations/create-integration/marketplace-api",
+      "supports": "Details REST API surface for integrations/marketplace functionality."
+    },
+    {
+      "url": "https://vercel.com/docs/oidc/api",
+      "supports": "Describes OIDC token usage for service-to-service and integration contexts."
+    }
+  ],
+  "confidence": 0.75,
+  "flags": [
+    "No dedicated official Vercel-hosted MCP server product found; docs describe how to build/host your own MCP server on Vercel infrastructure rather than an existing first-party MCP offering.",
+    "Some advanced enterprise features (SSO, HIPAA) require paid Pro/Enterprise plans, but core API access is free."
+  ]
+}

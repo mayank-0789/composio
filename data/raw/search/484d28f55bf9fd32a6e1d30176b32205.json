@@ -1,0 +1,45 @@
+{
+  "answer": "The Brex Model Context Protocol (MCP) server allows AI assistants to interact with your Brex account to check expenses, balances, bills, and transaction data [1][2]. It is hosted at https://api.brex.com/mcp [1].\n\nYou can connect to this server using any MCP-compatible client [1][2]. For OAuth-supported clients, authentication is handled automatically through a browser-based flow [1]. Alternatively, account and card admins can use a Brex API token generated from the Developer settings in the Brex Dashboard [1]. Your existing Brex permissions apply automatically [1][2]. Several community-developed servers also exist for broader access to resource data like budgets and spend limits [3][4][5].",
+  "results": [
+    {
+      "title": "Brex MCP",
+      "url": "https://developer.brex.com/docs/mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Brex MCP: Connect Brex to any AI tool that supports MCP",
+      "url": "https://www.brex.com/journal/brex-mcp-connect-brex-to-ai-tools",
+      "snippet": ""
+    },
+    {
+      "title": "crazyrabbitLTC/mcp-brex-server",
+      "url": "https://github.com/crazyrabbitltc/mcp-brex-server",
+      "snippet": ""
+    },
+    {
+      "title": "dennisonbertram/mcp-brex",
+      "url": "https://github.com/dennisonbertram/mcp-brex",
+      "snippet": ""
+    },
+    {
+      "title": "Brex MCP Server - crazyrabbitltc/mcp-brex-server",
+      "url": "https://playbooks.com/mcp/crazyrabbitltc/mcp-brex-server",
+      "snippet": ""
+    },
+    {
+      "title": "Brex API Integration: AI Agent Expense Management",
+      "url": "https://mcpmarket.com/server/brex",
+      "snippet": ""
+    },
+    {
+      "title": "Understanding MCP servers",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts",
+      "snippet": ""
+    },
+    {
+      "title": "Brex MCP Server by dennisonbertram | Glama",
+      "url": "https://glama.ai/mcp/servers/dennisonbertram/mcp-brex",
+      "snippet": ""
+    }
+  ]
+}

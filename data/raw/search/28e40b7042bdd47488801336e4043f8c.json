@@ -1,0 +1,45 @@
+{
+  "answer": "Yes, Linear provides developer API and webhook access on its Free plan [1][2]. You can use the GraphQL API to query and mutate workspace data, including issues, projects, and teams [2][3]. The Free plan supports both personal API keys for internal automation and OAuth for user-authorized applications [2]. While the API is available, keep in mind the Free plan is limited to 2 teams and 250 issues [1][2]. You can access documentation and start using the API at developers.linear.app [2].",
+  "results": [
+    {
+      "title": "Pricing – Linear",
+      "url": "https://linear.app/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Linear API Pricing & Plans [2026] (linear api pricing) | aitoolsatlas.ai",
+      "url": "https://aitoolsatlas.ai/tools/linear-api/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Linear vs Jira vs GitHub Issues 2026 | StackFYI",
+      "url": "https://www.stackfyi.com/guides/linear-vs-jira-vs-github-issues-2026",
+      "snippet": ""
+    },
+    {
+      "title": "Billing and plans – Linear Docs",
+      "url": "https://linear.app/docs/billing-and-plans?collapsible=b6d516b44aa5",
+      "snippet": ""
+    },
+    {
+      "title": "Linear vs Jira vs Asana Pricing 2026 — Issue Tracking Comparison",
+      "url": "https://www.getpricepulse.com/companies/linear-vs-jira-vs-asana-pricing.html",
+      "snippet": ""
+    },
+    {
+      "title": "Monday.com vs. Linear Comparison Guide 2026",
+      "url": "https://www.siit.io/tools/comparison/monday-com-vs-linear",
+      "snippet": ""
+    },
+    {
+      "title": "Linear Company Overview (2026) — Business Model, Funding & Analysis | Swellpulse",
+      "url": "https://swellpulse.ai/companies/linear",
+      "snippet": ""
+    },
+    {
+      "title": "Linear vs Nifty Pricing 2026 | CompareTiers",
+      "url": "https://comparetiers.com/compare/linear-vs-nifty",
+      "snippet": ""
+    }
+  ]
+}

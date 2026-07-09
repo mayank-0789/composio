@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://github.com/drewburchfield/help-scout-mcp-server",
+  "reason": "There is a dedicated MCP server for Help Scout. Multiple sources confirm the existence of both an npm package (@gravitykit/help-scout-mcp) and a GitHub repository (drewburchfield/help-scout-mcp-server) that provide MCP server capabilities for Help Scout. The server enables AI assistants to interact with Help Scout accounts to search conversations, pull customer profiles, and retrieve thread histories. It can be installed via npx and configured with Help Scout OAuth2 credentials."
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "Zoho Cliq uses the OAuth 2.0 protocol for API authentication [1][2]. To authenticate, you must first register your application in the Zoho API Console to receive a Client ID and Client Secret [3][4]. After obtaining an access token via the appropriate OAuth flow (such as authorization code or implicit flow), you must include it in the Authorization header of your API requests [3][5]. Zoho utilizes the Bearer authentication scheme; you must prefix your token with \"Zoho-oauthtoken\" [3][6].\n\n```\n-H \"Authorization: Zoho-oauthtoken YOUR_TOKEN\"\n```",
+  "results": [
+    {
+      "title": "Introduction | Zoho Cliq | API Documentation",
+      "url": "https://www.zoho.com/cliq/help/restapi/v3/introduction/",
+      "snippet": ""
+    },
+    {
+      "title": "Introduction | Zoho Cliq | API Documentation",
+      "url": "https://www.zoho.com/cliq/help/restapi/v2/introduction/",
+      "snippet": ""
+    },
+    {
+      "title": "Introduction to OAuth 2.0 | Zoho Cliq | API Documentation",
+      "url": "https://www.zoho.com/cliq/help/restapi/v3/oauth/",
+      "snippet": ""
+    },
+    {
+      "title": "Register your application | Zoho Cliq | API Documentation",
+      "url": "https://www.zoho.com/cliq/help/restapi/v3/registerclient/",
+      "snippet": ""
+    },
+    {
+      "title": "Introduction to OAuth 2.0 | Zoho Cliq | API Documentation",
+      "url": "https://www.zoho.com/cliq/help/restapi/v2/oauth/",
+      "snippet": ""
+    },
+    {
+      "title": "Errors | Zoho Cliq | API Documentation",
+      "url": "https://www.zoho.com/cliq/help/restapi/v2/errors/",
+      "snippet": ""
+    },
+    {
+      "title": "OpenAPI Specification (OAS) | Zoho Cliq | API Documentation",
+      "url": "https://www.zoho.com/cliq/help/restapi/v3/oascliq/",
+      "snippet": ""
+    },
+    {
+      "title": "Register your application | Zoho Cliq | API Documentation",
+      "url": "https://www.zoho.com/cliq/help/restapi/v2/registerclient/",
+      "snippet": ""
+    }
+  ]
+}

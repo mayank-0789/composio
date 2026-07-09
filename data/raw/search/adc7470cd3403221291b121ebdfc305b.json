@@ -1,0 +1,45 @@
+{
+  "answer": "The Intercom MCP server is an official, remotely hosted service that enables AI agents to securely access and interact with Intercom workspace data, such as conversations and contacts, via the Model Context Protocol [1][2][3]. It is currently supported only for US-hosted workspaces [1][2].\n\nYou can connect to the server using the streamable HTTP endpoint at `https://mcp.intercom.com/mcp` [1][4][2]. Authentication is handled via OAuth or a Bearer token [4][2]. Below is a standard configuration example for an MCP-compatible client:\n\n```json\n{\n  \"mcpServers\": {\n    \"intercom\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"mcp-remote\",\n        \"https://mcp.intercom.com/mcp\"\n      ]\n    }\n  }\n}\n```\n\nThe server exposes tools for universal search and detailed data retrieval, allowing AI assistants to maintain workspace context without requiring local server deployment [1][4][2].",
+  "results": [
+    {
+      "title": "Model Context Protocol (MCP) | Intercom and Fin Developer Platform",
+      "url": "https://developers.intercom.com/docs/guides/mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Intercom MCP Server",
+      "url": "https://www.gamut.so/mcp/crm-sales/intercom",
+      "snippet": ""
+    },
+    {
+      "title": "Intercom MCP Server — Install & Setup — MCP.Directory",
+      "url": "https://mcp.directory/servers/intercom",
+      "snippet": ""
+    },
+    {
+      "title": "intercom/intercom-mcp-server",
+      "url": "https://github.com/intercom/intercom-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Introducing MCP: A new way to connect Fin and your customer data to your business tools - The Intercom Blog",
+      "url": "https://www.intercom.com/blog/introducing-model-context-protocol-fin/",
+      "snippet": ""
+    },
+    {
+      "title": "Intercom — MCP server | explainx.ai | explainx.ai",
+      "url": "https://explainx.ai/mcp-servers/intercom",
+      "snippet": ""
+    },
+    {
+      "title": "Intercom MCP Server - Install & Configure | Model Context Protocol | McpMux - MCP Server Registry",
+      "url": "https://mcpmux.com/servers/io.intercom-mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "ShackletonAnalytics/intercom-mcp-server",
+      "url": "https://github.com/ShackletonAnalytics/intercom-mcp-server",
+      "snippet": ""
+    }
+  ]
+}

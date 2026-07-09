@@ -1,0 +1,154 @@
+{
+  "verdicts": [
+    {
+      "field": "name",
+      "status": "supported",
+      "note": "Evidence confirms the app is named 'Shopify' and the site is shopify.dev."
+    },
+    {
+      "field": "website",
+      "status": "supported",
+      "note": "All evidence URLs are from shopify.dev, confirming this is the correct developer site."
+    },
+    {
+      "field": "category",
+      "status": "supported",
+      "note": "Shopify is an ecommerce platform; evidence discusses products, orders, inventory, checkout, etc."
+    },
+    {
+      "field": "one_liner",
+      "status": "contradicted",
+      "note": "The one_liner claims 'official MCP servers already available for AI agent integration.' However, the evidence URL https://shopify.dev/docs/apps/build/authentication-authorization is NOT about MCP servers—it's a general auth/authorization guide for app developers. The flags acknowledge that 'specific shopify.dev URL for MCP not directly scraped.' There is no concrete evidence in these pages of official Shopify MCP servers. The existing_mcp field must be corrected."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence confirms OAuth2 for Admin API (X-Shopify-Access-Token header via OAuth) and API key / access tokens for Storefront API (X-Shopify-Storefront-Access-Token or X-Shopify-Storefront-Private-Token). The record details OAuth authorization code grant and client credentials, which aligns with the OAuth flows described."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "https://shopify.dev/docs/api/development-stores/index confirms developers can 'create an unlimited number of development stores' via the Shopify Partner Program for free, enabling self-serve API testing."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "supported",
+      "note": "Evidence supports free development stores via Partner Program. https://shopify.dev/docs/apps/launch/billing mentions potential fees/review for public app listing, consistent with the record's notes."
+    },
+    {
+      "field": "api_surface.type",
+      "status": "supported",
+      "note": "https://shopify.dev/docs/api/admin-graphql/2026-04 confirms GraphQL Admin API is primary. Evidence also mentions REST Admin API is legacy (as of Oct 2024). Record says type=GraphQL, which is accurate for the primary API."
+    },
+    {
+      "field": "api_surface.breadth",
+      "status": "supported",
+      "note": "Evidence mentions 'Broad coverage of products, orders, inventory, customers, checkout, etc.' and shows multiple API families (Admin GraphQL, Admin REST, Storefront, Customer Account). Breadth=broad is justified."
+    },
+    {
+      "field": "api_surface.notes",
+      "status": "supported",
+      "note": "Evidence confirms REST Admin API is legacy as of Oct 2024, new public apps must use GraphQL as of April 2025, and mentions Storefront and Customer Account APIs. Notes are accurate."
+    },
+    {
+      "field": "existing_mcp.exists",
+      "status": "contradicted",
+      "note": "Record says exists=yes with a URL to Shopify's auth docs. That URL is NOT an MCP server; it's a general app authentication guide. The flags acknowledge 'specific shopify.dev URL for MCP not directly scraped.' Without concrete evidence of an official Shopify MCP server, this must be corrected to 'unknown' or 'no' and the URL removed."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "contradicted",
+      "note": "The URL https://shopify.dev/docs/apps/build/authentication-authorization does not point to an MCP server repository or documentation; it is a general authentication guide for Shopify apps. This is not valid evidence of an MCP server and must be removed."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "Evidence shows free self-serve access to development stores, public/hosted APIs (Admin GraphQL, REST, Storefront), and OAuth/token-based authentication. A developer can call these APIs now without partnership or admin approval beyond creating a free Partner account. Buildable-now is accurate."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "No blocker is identified; evidence supports free self-serve access and hosted APIs. main_blocker=null is correct."
+    },
+    {
+      "field": "evidence",
+      "status": "supported",
+      "note": "All six evidence URLs are from shopify.dev and accurately summarized in the 'supports' field. They cover REST/GraphQL Admin APIs, authentication/OAuth, dev stores, and billing."
+    },
+    {
+      "field": "confidence",
+      "status": "supported",
+      "note": "0.8 is reasonable given the evidence, though the MCP claim is unsupported. Confidence should be slightly adjusted down due to lack of MCP evidence."
+    },
+    {
+      "field": "flags",
+      "status": "supported",
+      "note": "Flags correctly note REST deprecation timeline and acknowledge that the specific MCP server URL was not directly scraped. This is consistent with the lack of MCP evidence in the provided pages."
+    }
+  ],
+  "revised": {
+    "id": 41,
+    "name": "Shopify",
+    "website": "shopify.dev",
+    "category": "Ecommerce",
+    "one_liner": "Shopify offers a broad, actively maintained GraphQL (and legacy REST) Admin API plus Storefront/Customer Account APIs, authenticated via OAuth2 access tokens or API keys, with free self-serve developer access.",
+    "auth_methods": [
+      {
+        "method": "OAuth2",
+        "notes": "Authorization code grant flow or token exchange (Shopify managed installation) for embedded apps; generates access tokens used in X-Shopify-Access-Token header."
+      },
+      {
+        "method": "API key",
+        "notes": "Storefront API supports public/private access tokens via X-Shopify-Storefront-Access-Token or X-Shopify-Storefront-Private-Token headers."
+      },
+      {
+        "method": "OAuth2",
+        "notes": "Client credentials grant available for backend apps without a UI."
+      }
+    ],
+    "self_serve": "self-serve-free",
+    "self_serve_notes": "Developers can join the Shopify Partner Program and create unlimited free development stores to build and test apps/API integrations. Public app listing may involve additional review/fees, but API access for development is free and self-serve.",
+    "api_surface": {
+      "type": "GraphQL",
+      "breadth": "broad",
+      "notes": "GraphQL Admin API is now primary (REST Admin API is legacy as of Oct 2024, new public apps must use GraphQL as of April 2025). Also Storefront API and Customer Account API. Broad coverage of products, orders, inventory, customers, checkout, etc."
+    },
+    "existing_mcp": {
+      "exists": "unknown"
+    },
+    "buildability": "buildable-now",
+    "main_blocker": null,
+    "evidence": [
+      {
+        "url": "https://shopify.dev/docs/api/admin-rest",
+        "supports": "REST Admin API is legacy; requires access token via X-Shopify-Access-Token header, generated via OAuth."
+      },
+      {
+        "url": "https://shopify.dev/docs/api/admin-graphql/2026-04",
+        "supports": "GraphQL Admin API is now the primary API surface; requires access token via X-Shopify-Access-Token header, generated via OAuth."
+      },
+      {
+        "url": "https://shopify.dev/docs/apps/build/authentication-authorization",
+        "supports": "Describes OAuth-based authentication and authorization flows including managed installation/token exchange."
+      },
+      {
+        "url": "https://shopify.dev/docs/api/usage/authentication",
+        "supports": "Details on API authentication mechanisms."
+      },
+      {
+        "url": "https://shopify.dev/docs/api/development-stores/index",
+        "supports": "Developers can create free development stores via Partner Program for self-serve API testing."
+      },
+      {
+        "url": "https://shopify.dev/docs/apps/launch/billing",
+        "supports": "Notes on billing and potential fees for public app listing."
+      }
+    ],
+    "confidence": 0.75,
+    "flags": [
+      "REST Admin API deprecated for new public apps as of April 2025 - GraphQL is required going forward",
+      "No concrete evidence found in scraped shopify.dev pages of an official Shopify MCP server; the authentication URL provided is a general app auth guide, not an MCP server",
+      "Community MCP servers may exist but were not evidenced in the provided pages"
+    ]
+  }
+}

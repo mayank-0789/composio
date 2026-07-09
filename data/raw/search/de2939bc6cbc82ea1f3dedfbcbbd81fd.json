@@ -1,0 +1,45 @@
+{
+  "answer": "Several MCP server implementations exist to integrate Twenty CRM with AI assistants like Claude, enabling natural language CRUD operations and schema management [1][2][3]. Most implementations, such as those by mhenry3164 or studio7A, provide standard tools for contacts, companies, tasks, and notes [3][4]. If you are using a self-hosted version of Twenty CRM (specifically v1.19.0), you should use the fork maintained by Praeses0, which addresses specific GraphQL API incompatibilities like UUID requirements and body field changes [2].\n\nTo configure an MCP server, add it to your configuration file:\n\n```json\n{\n  \"mcpServers\": {\n    \"twenty-crm\": {\n      \"command\": \"node\",\n      \"args\": [\"/path/to/server/index.js\"],\n      \"env\": {\n        \"TWENTY_API_KEY\": \"your_api_key_here\",\n        \"TWENTY_BASE_URL\": \"https://api.twenty.com\"\n      }\n    }\n  }\n}\n```\n\nMost versions require your API key and base URL as environment variables [3][5].",
+  "results": [
+    {
+      "title": "jezweb/twenty-mcp",
+      "url": "https://github.com/jezweb/twenty-mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "Praeses0/twenty-mcp-server",
+      "url": "https://github.com/Praeses0/twenty-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "mhenry3164/twenty-crm-mcp-server",
+      "url": "https://github.com/mhenry3164/twenty-crm-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "studio7A/twenty-crm-mcp-server",
+      "url": "https://github.com/studio7A/twenty-crm-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Limely/twenty-crm-mcp-server",
+      "url": "https://github.com/Limely/twenty-crm-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "marciohdo/twenty-mcp",
+      "url": "https://github.com/marciohdo/twenty-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Mikefluff/twenty-mcp-server",
+      "url": "https://github.com/Mikefluff/twenty-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "aurum-ai/twenty-crm-mcp-server",
+      "url": "https://github.com/aurum-ai/twenty-crm-mcp-server",
+      "snippet": ""
+    }
+  ]
+}

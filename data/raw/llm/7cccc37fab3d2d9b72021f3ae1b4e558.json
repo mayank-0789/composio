@@ -1,0 +1,151 @@
+{
+  "verdicts": [
+    {
+      "field": "name",
+      "status": "supported",
+      "note": "Evidence clearly references 'Slack' throughout."
+    },
+    {
+      "field": "website",
+      "status": "supported",
+      "note": "slack.com domain is referenced throughout evidence (pricing page, API docs)."
+    },
+    {
+      "field": "category",
+      "status": "supported",
+      "note": "Evidence describes Slack as a workspace collaboration/messaging platform."
+    },
+    {
+      "field": "one_liner",
+      "status": "supported",
+      "note": "Evidence confirms REST-style Web API, OAuth2/bearer tokens, and existing MCP server at github.com/korotovsky/slack-mcp-server."
+    },
+    {
+      "field": "auth_methods - OAuth2",
+      "status": "supported",
+      "note": "oauth.v2.access method documentation confirms OAuth 2.0 flow for obtaining bearer tokens."
+    },
+    {
+      "field": "auth_methods - Token",
+      "status": "supported",
+      "note": "auth.test documentation and Web API docs confirm bearer token authentication via Authorization header or token parameter."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Pricing page for Free plan shows developers can create apps and integrate for free, supporting 'self-serve-free' classification."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "supported",
+      "note": "Free plan page confirms free app development capability with limitations (3 apps on free plan, 90-day message history), aligning with notes about plan-dependent capabilities."
+    },
+    {
+      "field": "api_surface.type",
+      "status": "supported",
+      "note": "Web API documentation explicitly describes it as 'HTTP RPC-style methods' with REST-like characteristics."
+    },
+    {
+      "field": "api_surface.breadth",
+      "status": "supported",
+      "note": "Documentation references 'a collection of HTTP RPC-style methods' covering messaging, channels, users, files, billing, etc., supporting 'broad' classification."
+    },
+    {
+      "field": "api_surface.notes",
+      "status": "supported",
+      "note": "Evidence confirms RPC-style HTTP API with hundreds of methods, Events API, and SDK support."
+    },
+    {
+      "field": "existing_mcp.exists",
+      "status": "supported",
+      "note": "URL to github.com/korotovsky/slack-mcp-server is provided as evidence of existing MCP server."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "supported",
+      "note": "Specific GitHub repository URL is provided in the record."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "Evidence confirms OAuth2 authentication, broad API, and existing MCP server, supporting 'buildable-now' assessment."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "Evidence does not reveal significant technical blockers; free plan supports app development and OAuth flows are documented."
+    },
+    {
+      "field": "evidence",
+      "status": "supported",
+      "note": "All 5 evidence URLs are valid and support their claimed purposes."
+    },
+    {
+      "field": "confidence",
+      "status": "supported",
+      "note": "0.75 confidence is reasonable given comprehensive API documentation and existing MCP server, though some nuances around ToS and admin approval aren't directly confirmed in evidence."
+    },
+    {
+      "field": "flags",
+      "status": "unsupported",
+      "note": "While flags mention session tokens violating ToS and admin approval requirements, the provided evidence does not directly confirm these specific claims. These are reasonable concerns but lack direct evidence."
+    }
+  ],
+  "revised": {
+    "id": 21,
+    "name": "Slack",
+    "website": "slack.com",
+    "category": "Communications and Messaging",
+    "one_liner": "Slack provides a broad, self-serve REST-style Web API secured via OAuth2/bearer tokens, with existing community MCP servers making agent toolkits buildable today.",
+    "auth_methods": [
+      {
+        "method": "OAuth2",
+        "notes": "Standard OAuth 2.0 flow (oauth.v2.access) to obtain bearer tokens scoped to a workspace; recommended approach for third-party apps."
+      },
+      {
+        "method": "Token",
+        "notes": "Bearer tokens (including test/dev tokens) passed via Authorization header or token param; bot/user tokens generated via app configuration."
+      }
+    ],
+    "self_serve": "self-serve-free",
+    "self_serve_notes": "Developers can create a Slack app and generate OAuth tokens for free on the Free plan to build/test integrations; some capabilities depend on the host workspace's plan (e.g., 3-app limit on free plan, 90-day history) and commercial distribution may require additional agreements/review.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "Slack Web API is a broad RPC-style HTTP API with hundreds of methods for messaging, channels, users, files, etc. Also has Events API, RTM, and SDKs."
+    },
+    "existing_mcp": {
+      "exists": "yes",
+      "url": "https://github.com/korotovsky/slack-mcp-server"
+    },
+    "buildability": "buildable-now",
+    "main_blocker": null,
+    "evidence": [
+      {
+        "url": "https://docs.slack.dev/apis/web-api/",
+        "supports": "Describes Web API as broad REST-like RPC API"
+      },
+      {
+        "url": "https://docs.slack.dev/reference/methods/oauth.v2.access.md",
+        "supports": "OAuth2 token exchange method"
+      },
+      {
+        "url": "https://docs.slack.dev/reference/methods/auth.test.md",
+        "supports": "Token-based auth testing endpoint"
+      },
+      {
+        "url": "https://slack.com/pricing/free",
+        "supports": "Free plan supports app development"
+      },
+      {
+        "url": "https://docs.slack.dev/reference/methods/team.billing.info.md",
+        "supports": "Endpoint to check workspace plan programmatically"
+      }
+    ],
+    "confidence": 0.8,
+    "flags": [
+      "Free plan has 3-app limit (not 10 as originally stated)",
+      "Admin approval may be required for some workspace installations"
+    ]
+  }
+}

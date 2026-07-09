@@ -1,0 +1,53 @@
+{
+  "one_liner": "Twilio provides broad REST APIs for messaging, voice, verify, and account management, authenticated via HTTP Basic auth (API Key/Secret or Account SID/Auth Token), with self-serve trial signup and an official/alpha MCP server available.",
+  "auth_methods": [
+    {
+      "method": "Basic",
+      "notes": "HTTP Basic auth using API Key as username and API Key Secret as password (recommended for production); Account SID + Auth Token supported for local testing only."
+    },
+    {
+      "method": "API key",
+      "notes": "API keys (Main, Standard, Restricted) can be created via Console or REST API and used as the Basic auth username/password pair."
+    }
+  ],
+  "self_serve": "self-serve-trial",
+  "self_serve_notes": "Twilio offers a 30-day free trial with no credit card required, including free units (100 SMS, 3,000 emails, 75 voice minutes). Account SID, Auth Token, and API keys can be created directly in the Console. After trial, pay-as-you-go pricing applies with a one-time grant of perpetual free units.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Thousands of API operations across messaging, voice, verify, phone numbers, usage, and account management. Also offers SDKs and CLI."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://mcp.twilio.com/docs"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": "None significant; developers can self-serve API keys via a free trial. Executing actions via the alpha MCP package requires filtering tools with --services/--tags due to the large number of APIs, which adds setup complexity.",
+  "evidence": [
+    {
+      "url": "https://www.twilio.com/docs/usage/requests-to-twilio.md",
+      "supports": "HTTP Basic auth with API Key/Secret (recommended) or Account SID/Auth Token (local testing)."
+    },
+    {
+      "url": "https://www.twilio.com/docs/iam/api",
+      "supports": "REST API basics, base URL, and authentication method with curl example."
+    },
+    {
+      "url": "https://www.twilio.com/docs/usage/trials",
+      "supports": "30-day free trial details allowing self-serve API access without credit card."
+    },
+    {
+      "url": "https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account",
+      "supports": "Free trial account setup and usage."
+    },
+    {
+      "url": "https://mcp.twilio.com/docs",
+      "supports": "Hosted read-only MCP server for documentation and API discovery, no auth required."
+    }
+  ],
+  "confidence": 0.85,
+  "flags": [
+    "MCP for executing actions is alpha/unofficial (@twilio-alpha/mcp) and requires manual tool filtering due to context limits.",
+    "Trial account has restrictions (e.g., limited to verified numbers) before upgrading to paid."
+  ]
+}

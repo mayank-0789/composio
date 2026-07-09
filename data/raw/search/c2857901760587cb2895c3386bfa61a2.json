@@ -1,0 +1,45 @@
+{
+  "answer": "A Harvest MCP server is a third-party integration that allows AI assistants, such as Claude Desktop, to interact with Harvest time tracking and project management APIs using the Model Context Protocol [1][2][3]. By acting as a bridge, these servers enable you to perform tasks like listing time entries, managing timers, viewing project details, and generating reports via natural language prompts [2][4][5].\n\nMultiple independent implementations exist, including packages distributed via npm and custom Python-based servers [1][2][4][3][5]. To use one, you typically configure your MCP client with the server's command and your Harvest API credentials [2][5].\n\nExample configuration for an MCP client using an npm-based server:\n\n```json\n{\n  \"mcpServers\": {\n    \"harvest\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@ianaleck/harvest-mcp-server\"],\n      \"env\": {\n        \"HARVEST_ACCESS_TOKEN\": \"your_personal_access_token\",\n        \"HARVEST_ACCOUNT_ID\": \"your_account_id\"\n      }\n    }\n  }\n}\n```\n\nThese servers require a valid Harvest personal access token and account ID to authenticate requests to the Harvest API v2 [2][3][5].",
+  "results": [
+    {
+      "title": "harvest-mcp v0.1.1",
+      "url": "https://pypi.org/project/harvest-mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "ianaleck/harvest-mcp-server",
+      "url": "https://github.com/ianaleck/harvest-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "mnicole-dev/harvest-mcp-server",
+      "url": "https://github.com/mnicole-dev/harvest-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "standardbeagle/harvest-mcp",
+      "url": "https://github.com/standardbeagle/harvest-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Building a Harvest Time Tracking Integration with Model Context Protocol  |  Taiste",
+      "url": "https://www.taiste.fi/en/post/building-a-harvest-time-tracking-integration-with-model-context-protocol",
+      "snippet": ""
+    },
+    {
+      "title": "mcpflow/mcp-server-harvest-time-tracking",
+      "url": "https://github.com/mcpflow/mcp-server-harvest-time-tracking",
+      "snippet": ""
+    },
+    {
+      "title": "@standardbeagle/harvest-mcp v0.3.0",
+      "url": "https://registry.npmjs.org/%40standardbeagle%2Fharvest-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Harvest MCP Server - taiste/harvest-mcp-server",
+      "url": "https://playbooks.com/mcp/taiste/harvest-mcp-server",
+      "snippet": ""
+    }
+  ]
+}

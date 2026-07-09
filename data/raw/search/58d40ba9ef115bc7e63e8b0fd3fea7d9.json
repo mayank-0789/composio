@@ -1,0 +1,45 @@
+{
+  "answer": "To authenticate with the Selling Partner API (SP-API), you must use Login with Amazon (LWA) to obtain an access token [1][2]. For most operations, you exchange a long-lived refresh token for a short-lived LWA access token (valid for one hour) by sending a POST request to `https://api.amazon.com/auth/o2/token` with your client credentials and the refresh token [1][3].\n\nFor grantless operations, use the `client_credentials` grant type with a scope parameter instead of a refresh token [1][4][5]. When accessing restricted data (PII), use the Tokens API to retrieve a Restricted Data Token (RDT) [1][6]. Include the resulting `access_token` or `RDT` in the `x-amz-access-token` header for your API requests [1][6][3].\n\n```http\nPOST /auth/o2/token HTTP/1.1\nHost: api.amazon.com\nContent-Type: application/x-www-form-urlencoded;charset=UTF-8\ngrant_type=refresh_token\n&refresh_token=YOUR_REFRESH_TOKEN\n&client_id=YOUR_CLIENT_ID\n&client_secret=YOUR_CLIENT_SECRET\n```",
+  "results": [
+    {
+      "title": "Connect to the SP-API",
+      "url": "https://developer-docs.amazon.com/sp-api/docs/connecting-to-the-selling-partner-api",
+      "snippet": ""
+    },
+    {
+      "title": "Step 6: Set up the Authorization Workflow",
+      "url": "https://developer-docs.amazon.com/sp-api/docs/onboarding-step-6-set-up-the-authorization-workflow",
+      "snippet": ""
+    },
+    {
+      "title": "Authorize Private Applications",
+      "url": "https://developer-docs.amazon.com/sp-api/docs/self-authorization",
+      "snippet": ""
+    },
+    {
+      "title": "Connecting to the Selling Partner API Using a Generated Java SDK",
+      "url": "https://developer-docs.amazon.com/sp-api/docs/connecting-to-the-selling-partner-api-using-a-generated-java-sdk",
+      "snippet": ""
+    },
+    {
+      "title": "Connect to the Selling Partner API Using a Generated C# SDK",
+      "url": "https://developer-docs.amazon.com/sp-api/docs/connect-to-the-selling-partner-api-using-a-generated-c-sharp-sdk",
+      "snippet": ""
+    },
+    {
+      "title": "Tutorial: Test Selling Partner API Endpoints",
+      "url": "https://developer-docs.amazon.com/sp-api/docs/tutorial-test-selling-partner-api-endpoints",
+      "snippet": ""
+    },
+    {
+      "title": "Authorize Public Applications",
+      "url": "https://developer-docs.amazon.com/sp-api/docs/authorize-public-applications",
+      "snippet": ""
+    },
+    {
+      "title": "Amazon Seller Data Access",
+      "url": "https://developer-docs.amazon.com/sp-api/docs/amazon-seller-data-access",
+      "snippet": ""
+    }
+  ]
+}

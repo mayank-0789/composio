@@ -1,0 +1,45 @@
+{
+  "answer": "Freshdesk offers a 14-day free trial that provides full access to all features, including the developer API with a rate limit of 50 calls per minute. After the trial, you can switch to the Freshdesk Free Program, which supports up to two agents for six months. However, the Free Program does not include access to the API, as the rate limit for the Free plan is set to zero calls per minute. To continue using the developer API after your trial ends, you must upgrade to a paid plan.",
+  "results": [
+    {
+      "title": "Freshdesk Pricing & Plans | Freshworks",
+      "url": "https://www.freshworks.com/freshdesk/pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "Freshdesk",
+      "url": "https://developer.freshdesk.com/api/",
+      "snippet": ""
+    },
+    {
+      "title": "Explore Freshdesk Free Program - Key Features, Setup, and Upgrades : Freshdesk Support",
+      "url": "https://support.freshdesk.com/support/solutions/articles/50000010099-explore-freshdesk-free-program-freshdesk-only-",
+      "snippet": ""
+    },
+    {
+      "title": "Understanding Freshdesk Pricing, Plans & Subscription Management : Freshsales",
+      "url": "https://crmsupport.freshworks.com/support/solutions/articles/50000011778-understanding-freshdesk-pricing-plans",
+      "snippet": ""
+    },
+    {
+      "title": "Freshdesk Free vs Paid Plans Overview | Freshworks",
+      "url": "https://www.freshworks.com/freshdesk/pricing/free-vs-paid/",
+      "snippet": ""
+    },
+    {
+      "title": "What are the rate limits for the API calls to Freshdesk? : Freshdesk Support",
+      "url": "https://support.freshdesk.com/support/solutions/articles/225439-what-are-the-rate-limits-for-the-api-calls-to-freshdesk-",
+      "snippet": ""
+    },
+    {
+      "title": "Freshdesk Free Trial: This is How It Works!",
+      "url": "https://www.freshworks.com/freshdesk/pricing/free/",
+      "snippet": ""
+    },
+    {
+      "title": "Freshdesk Review & API Analysis | GTM Tools",
+      "url": "https://gtmtools.dev/tools/freshdesk/",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "Salesforce Commerce Cloud does not offer a free tier [1]. All editions, including B2C and B2B versions, require custom pricing based on your business needs, often involving a percentage of Gross Merchandise Value [2][3][4].\n\nRegarding developer access, while you can manage sandbox environments using a self-service API, this is not free [5][6][7]. To use on-demand sandboxes, you must purchase sandbox credits through a sales representative [6][7]. Once credits are purchased, you can provision and manage sandboxes programmatically using the Sandbox API [6][7].\n\nExample for creating a sandbox via the Sandbox API:\n\n```http\nPOST /sandboxes\nAuthorization: Bearer <your_access_token>\nContent-Type: application/json\n\n{\n  \"resource_profile\": \"medium\",\n  \"ttl\": 24\n}\n```\n\nYou must configure an API client ID in Account Manager and assign the Sandbox API User role to perform these actions [5][7].",
+  "results": [
+    {
+      "title": "Salesforce Commerce Cloud Discounts 2026: Every Way to Save",
+      "url": "https://costbench.com/software/enterprise-ecommerce/salesforce-commerce-cloud/discounts/",
+      "snippet": ""
+    },
+    {
+      "title": "Salesforce Commerce Cloud Pricing and Editions | Salesforce",
+      "url": "https://www.salesforce.com/commerce/pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "Commerce Cloud Growth and Advanced Pricing | Salesforce AP",
+      "url": "https://www.salesforce.com/ap/commerce/b2b-ecommerce/pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "Salesforce Commerce Cloud Pricing in 2026: License Fees, Revenue Share & Total Cost | Swell",
+      "url": "https://www.swell.is/content/salesforce-commerce-cloud-pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Use the Sandbox API to Manage On-Demand Sandboxes | B2C Commerce | B2C Commerce API | Salesforce Developers",
+      "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/b2c-manage-sb.html",
+      "snippet": ""
+    },
+    {
+      "title": "On-Demand Sandboxes | B2C Commerce | B2C Commerce | Salesforce Developers",
+      "url": "https://developer.salesforce.com/docs/commerce/b2c-commerce/guide/b2c-developer-sandboxes.html",
+      "snippet": ""
+    },
+    {
+      "title": "Get Started with On-Demand Sandboxes | B2C Commerce | B2C Commerce API | Salesforce Developers",
+      "url": "https://developer.salesforce.com/docs/commerce/commerce-api/guide/b2c-get-started-sandboxes.html",
+      "snippet": ""
+    },
+    {
+      "title": "Salesforce B2C Commerce Pricing | Salesforce UK",
+      "url": "https://www.salesforce.com/uk/commerce/b2c-ecommerce/pricing/",
+      "snippet": ""
+    }
+  ]
+}

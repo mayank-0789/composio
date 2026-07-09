@@ -1,0 +1,45 @@
+{
+  "answer": "Authentication for the Consensus API depends on the specific integration. For general API usage, you must include an API Key and Secret, which can be generated in the Integrations section of your Consensus account [1][2]. Requests typically require passing these credentials within the request body, along with a user email, source name, and an optional user activity flag [1].\n\n```json\n\"auth\": {\n    \"api_key\": \"your_api_key\",\n    \"api_secret\": \"your_api_secret\",\n    \"user_email\": \"user@example.com\",\n    \"source_name\": \"your_service_name\",\n    \"user_activity\": true\n}\n```\n\nSome integrations, such as the current Salesforce connection, have transitioned from API keys to OAuth 2.0 to improve security [3]. Additionally, the public research search API (v1) utilizes an x-api-key header [4]. You should always verify the specific documentation for your intended endpoint, as methods vary between legacy key-based auth and modern OAuth [1][5][3].",
+  "results": [
+    {
+      "title": "Consensus API",
+      "url": "https://app.goconsensus.com/api-documentation/",
+      "snippet": ""
+    },
+    {
+      "title": "How to Access Consensus API Documentation",
+      "url": "https://support.goconsensus.com/consensus-api-documents",
+      "snippet": ""
+    },
+    {
+      "title": "Connecting Consensus to Salesforce (OAuth 2.0 method) version 11.10+ | REQUIRED | Community",
+      "url": "https://hub.goconsensus.com/salesforce-67/connecting-consensus-to-salesforce-oauth-2-0-method-version-11-10-required-532",
+      "snippet": ""
+    },
+    {
+      "title": "Query for relevant papers.",
+      "url": "https://docs.consensus.app/reference/v1_quick_search",
+      "snippet": ""
+    },
+    {
+      "title": "Consensus API - Complete Developer Guide",
+      "url": "https://agentsapis.com/consensus-api/",
+      "snippet": ""
+    },
+    {
+      "title": "consensus-api-spec",
+      "url": "https://gist.github.com/lukas-holzner/6f575acfa09d26363e01de24f2936bfa",
+      "snippet": ""
+    },
+    {
+      "title": "How To Access Your API Credentials",
+      "url": "https://support.goconsensus.com/how-to-access-your-api-credentials",
+      "snippet": ""
+    },
+    {
+      "title": "Consensus MCP Server - Official Setup Guide | Apigene",
+      "url": "https://apigene.ai/mcp/official/consensus",
+      "snippet": ""
+    }
+  ]
+}

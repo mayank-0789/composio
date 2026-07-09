@@ -1,0 +1,45 @@
+{
+  "answer": "A Binance Model Context Protocol (MCP) server is a bridge that allows AI assistants like Claude, Cursor, or ChatGPT to interact directly with the Binance exchange [1][2][3]. These servers enable users to execute trades, access market data, monitor portfolios, and manage accounts through natural language [1][2][4].\n\nThere are multiple open-source implementations available, such as those by nirholas, yassais, and others, which vary in scope from a focused set of trading tools to comprehensive support covering nearly 500 Binance API endpoints [2][5][4][6]. To use one, you typically configure your MCP client (like Claude Desktop) with your Binance API keys and secret via your MCP settings file [1][6]. \n\nExample configuration:\n```json\n{\n  \"mcpServers\": {\n    \"binance\": {\n      \"command\": \"npx\",\n      \"args\": [\"binance-mcp-server\"],\n      \"env\": {\n        \"BINANCE_API_KEY\": \"your_api_key\",\n        \"BINANCE_API_SECRET\": \"your_api_secret\",\n        \"BINANCE_TESTNET\": \"false\"\n      }\n    }\n  }\n}\n```\nAs shown in the example above, you must define the execution command and provide your credentials as environment variables [6]. Most implementations support both mainnet and testnet environments [1][4][6].",
+  "results": [
+    {
+      "title": "AnalyticAce/binance-mcp-server",
+      "url": "https://github.com/AnalyticAce/binance-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "nirholas/Binance-MCP",
+      "url": "https://github.com/nirholas/Binance-MCP",
+      "snippet": ""
+    },
+    {
+      "title": "tarsislimadev/binance-mcp-server",
+      "url": "https://github.com/tarsislimadev/binance-mcp-server/",
+      "snippet": ""
+    },
+    {
+      "title": "forgequant/mcp-provider-binance",
+      "url": "https://github.com/ForgeTrade/mcp-binance-rs",
+      "snippet": ""
+    },
+    {
+      "title": "yassais/Binance-MCP",
+      "url": "https://github.com/yassais/Binance-MCP",
+      "snippet": ""
+    },
+    {
+      "title": "binance-mcp-server",
+      "url": "https://registry.npmjs.org/binance-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "py7hagoras/binance-mcp",
+      "url": "https://github.com/py7hagoras/binance-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "speraxos/Binance-MCP",
+      "url": "https://github.com/speraxos/Binance-MCP",
+      "snippet": ""
+    }
+  ]
+}

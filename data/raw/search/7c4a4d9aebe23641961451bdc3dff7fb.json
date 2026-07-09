@@ -1,0 +1,45 @@
+{
+  "answer": "Harvest provides API access for all accounts, including the free plan [1]. While some third-party sources suggest limitations, the official Harvest help documentation states that your subscription includes API access to manage your account regardless of your plan [1].\n\nYou can interact with your account programmatically using the REST API v2 at https://api.harvestapp.com/v2 [2][3]. Authentication requires either OAuth2 or a Personal Access Token [2][3]. Every request must include two headers: your token in the Authorization header and your account ID in the Harvest-Account-ID header [3].\n\n```http\nGET /v2/projects HTTP/1.1\nHost: api.harvestapp.com\nAuthorization: Bearer YOUR_TOKEN\nHarvest-Account-ID: YOUR_ACCOUNT_ID\n```\n\nThe API is subject to rate limits, generally 100 requests per 15 seconds [2]. Exceeding these limits will return an HTTP 429 status code [2].",
+  "results": [
+    {
+      "title": "The Harvest API – Harvest Help Center",
+      "url": "https://support.getharvest.com/hc/en-us/articles/360048180732-The-Harvest-API",
+      "snippet": ""
+    },
+    {
+      "title": "Overview – Harvest API V2 Documentation",
+      "url": "https://help.getharvest.com/api-v2/introduction/overview/general/",
+      "snippet": ""
+    },
+    {
+      "title": "Lovable Harvest Integration: Guide 2026 | RapidDev",
+      "url": "https://www.rapidevelopers.com/lovable-integration/harvest",
+      "snippet": ""
+    },
+    {
+      "title": "Time Management & Invoicing at Cost Effective Pricing | Harvest",
+      "url": "https://www.getharvest.com/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Information about pricing plans – Harvest Help Center",
+      "url": "https://support.getharvest.com/hc/en-us/articles/31447072608397-Information-about-pricing-plans",
+      "snippet": ""
+    },
+    {
+      "title": "Is there a free version of Harvest? – Harvest Help Center",
+      "url": "https://support.getharvest.com/hc/en-us/articles/26145254105613-Is-there-a-free-version-of-Harvest",
+      "snippet": ""
+    },
+    {
+      "title": "Is Harvest Free? Yes — Paid Starts at $9/mo (2026)",
+      "url": "https://costbench.com/software/time-tracking/harvest/free-plan/",
+      "snippet": ""
+    },
+    {
+      "title": "Premium free access period FAQ – Harvest Help Center",
+      "url": "https://support.getharvest.com/hc/en-us/articles/35295371443085-Premium-free-access-period-FAQ",
+      "snippet": ""
+    }
+  ]
+}

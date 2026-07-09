@@ -1,0 +1,143 @@
+{
+  "verdicts": [
+    {
+      "field": "name",
+      "status": "unsupported",
+      "note": "Evidence shows two distinct products: 'Consensus' (research search engine at consensus.app) and 'GoConsensus' (sales demo automation at goconsensus.com / app.goconsensus.com). The record conflates these under one name. The agentsapis.com source explicitly states 'there is another unrelated company/product called \"Consensus\" (goconsensus.com)' that provides sales demo tooling. These are separate products."
+    },
+    {
+      "field": "website",
+      "status": "supported",
+      "note": "Evidence confirms consensus.app is the academic research search engine website. Multiple evidence URLs reference both consensus.app and goconsensus.com/app.goconsensus.com as distinct domains."
+    },
+    {
+      "field": "category",
+      "status": "supported",
+      "note": "AI academic research search engine fits 'AI, Research and Media-native' category. Evidence shows it is an AI research platform for peer-reviewed scientific literature."
+    },
+    {
+      "field": "one_liner",
+      "status": "contradicted",
+      "note": "Record states 'enterprise-only API access requiring sales contact' and that 'MCP server already exists'. Evidence shows: (1) MCP server does exist (docs.consensus.app/docs/mcp), (2) BUT the quick_search API endpoint at api.consensus.app exists and is documented publicly with x-api-key header authentication. The agentsapis.com source states 'No free tier available for API access; enterprise accounts must contact Consensus directly for API key', confirming enterprise-only access for the research API. The GoConsensus API is self-serve credentials but is a completely different product. One-liner needs clarification that these are two distinct products."
+    },
+    {
+      "field": "auth_methods",
+      "status": "contradicted",
+      "note": "Record lists both API key (GoConsensus body params + Consensus.app x-api-key header) AND OAuth2 (Salesforce integration + MCP server). Evidence confirms GoConsensus API uses API Key + Secret in request body, Consensus.app research API uses x-api-key header, OAuth 2.0 is used for GoConsensus Salesforce integration (v11.10+), and OAuth is used by the Consensus MCP server. However, these are TWO DIFFERENT PRODUCTS. For Consensus.app research API specifically: only API key (x-api-key header) is documented, OAuth is only for MCP server access, not direct API."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Evidence confirms 'partnership-contact-sales' for Consensus.app research API. agentsapis.com states 'No free tier available for API access; enterprise accounts must contact Consensus directly for API key'. GoConsensus credentials are self-generated but that's a different product."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "supported",
+      "note": "Evidence supports that Consensus.app research API requires contacting Consensus for API key (enterprise-only). GoConsensus API credentials can be self-generated in Integrations section (app.goconsensus.com/api-documentation and support article confirm this), but these are separate products."
+    },
+    {
+      "field": "api_surface",
+      "status": "supported",
+      "note": "Evidence confirms REST APIs exist for both products. GoConsensus has narrow scope (reports, user management) and Consensus.app has v1/quick_search endpoint with filters. Record accurately describes dual APIs with narrow breadth."
+    },
+    {
+      "field": "existing_mcp.exists",
+      "status": "supported",
+      "note": "Evidence at docs.consensus.app/docs/mcp clearly shows an official Consensus MCP server exists for the research tool (consensus.app), not GoConsensus. This is a legitimate MCP server documentation page."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "supported",
+      "note": "URL https://docs.consensus.app/docs/mcp is the official documentation for the Consensus AI Connect MCP server, which is hosted at https://mcp.consensus.app/mcp. This is proper MCP server documentation, not just API docs."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "Evidence confirms 'buildable-with-caveats' is appropriate. The Consensus.app research API requires enterprise account and contacting sales for API key. MCP server exists but custom API integrations require partnership. This is not 'buildable-now' for typical developers."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "Evidence confirms API access requires enterprise account and direct contact with Consensus for the research search API. agentsapis.com explicitly states this, and no self-serve signup is documented."
+    },
+    {
+      "field": "evidence",
+      "status": "supported",
+      "note": "All evidence URLs load successfully and support the claims attributed to them. The MCP URL is genuine MCP documentation, not just API docs or homepage."
+    },
+    {
+      "field": "confidence",
+      "status": "supported",
+      "note": "0.75 confidence is reasonable given the evidence confirms most facts but there is some complexity around two distinct products sharing similar names."
+    },
+    {
+      "field": "flags",
+      "status": "supported",
+      "note": "Flags 'existing-mcp-server', 'enterprise-only-api', 'contact-sales-required', 'dual-products-confusion' are all appropriate and supported by evidence."
+    }
+  ],
+  "revised": {
+    "id": 94,
+    "name": "Consensus",
+    "website": "consensus.app",
+    "category": "AI, Research and Media-native",
+    "one_liner": "AI academic research search engine with 200M+ peer-reviewed papers; API access is enterprise-only requiring sales contact, though an official MCP server exists for OAuth-based integration.",
+    "auth_methods": [
+      {
+        "method": "API key",
+        "notes": "Consensus.app research API (api.consensus.app/v1/quick_search) uses x-api-key header authentication. Enterprise-only access requiring direct contact with Consensus. Note: GoConsensus (goconsensus.com) is a separate unrelated product with its own API using API Key + Secret in request body."
+      },
+      {
+        "method": "OAuth2",
+        "notes": "OAuth 2.0 is used by the official Consensus MCP server (mcp.consensus.app/mcp) for authenticated access to search tools. Opens browser-based OAuth flow on first use with supported MCP clients (Claude Desktop, ChatGPT, Claude Code, etc.)."
+      }
+    ],
+    "self_serve": "partnership-contact-sales",
+    "self_serve_notes": "No free tier or self-serve developer API access for Consensus.app research API (api.consensus.app) - restricted to enterprise accounts only. Must contact Consensus directly to request API key. The official MCP server provides OAuth-based access for supported clients but does not replace the need for enterprise API access for custom integrations. Note: GoConsensus (goconsensus.com) is a separate product with self-serve credentials generation.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "narrow",
+      "notes": "Consensus.app offers REST API with documented v1/quick_search endpoint for searching 200M+ peer-reviewed papers. Supports advanced filters (year range, study types, sample size, journal quartiles, study duration, domain, publisher, clinical guidelines, medical mode) and returns paper metadata with optional semantic scores and full-text chunks (enterprise only). Pagination up to 50 pages for enterprise customers. Note: GoConsensus (goconsensus.com) is a separate unrelated product with its own API for sales demo automation."
+    },
+    "existing_mcp": {
+      "exists": "yes",
+      "url": "https://docs.consensus.app/docs/mcp"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "Direct API access (api.consensus.app) requires enterprise account and sales contact - no self-serve API key generation. The official MCP server (mcp.consensus.app/mcp) provides OAuth-based integration for supported clients (Claude Desktop, ChatGPT, Claude Code, Codex, Cursor, VS Code, Windsurf) but does not replace the need for enterprise API access for custom integrations or production applications.",
+    "evidence": [
+      {
+        "url": "https://app.goconsensus.com/api-documentation/",
+        "supports": "GoConsensus API documentation - NOTE: This is a separate unrelated product (sales demo automation platform) from Consensus.app research engine. Shows API Key + Secret authentication in request body for GoConsensus API."
+      },
+      {
+        "url": "https://support.goconsensus.com/how-to-access-your-api-credentials",
+        "supports": "GoConsensus API credentials can be self-generated in Integrations section - NOTE: This is for GoConsensus (goconsensus.com) sales demo product, not Consensus.app research API."
+      },
+      {
+        "url": "https://hub.goconsensus.com/salesforce-67/connecting-consensus-to-salesforce-oauth-2-0-method-version-11-10-required-532",
+        "supports": "OAuth 2.0 used for GoConsensus Salesforce integration (v11.10+) - NOTE: This is for GoConsensus product, not Consensus.app research API."
+      },
+      {
+        "url": "https://docs.consensus.app/reference/v1_quick_search",
+        "supports": "Consensus.app research search API (api.consensus.app/v1/quick_search) uses x-api-key header authentication. Documents filters including year/month ranges, study types, sample size, journal quartiles, study duration, clinical guidelines, medical mode, semantic scores, and full-text chunks."
+      },
+      {
+        "url": "https://docs.consensus.app/docs/mcp",
+        "supports": "Official Consensus MCP server documentation at mcp.consensus.app/mcp. Uses OAuth 2.0 authentication. Supports Claude Desktop, ChatGPT (including Deep Research with fetch tool), Claude Code, Codex, Cursor, VS Code (GitHub Copilot), Windsurf, and other MCP clients. Provides search and fetch tools for 200M+ peer-reviewed papers."
+      },
+      {
+        "url": "https://agentsapis.com/consensus-api/",
+        "supports": "Confirms no free tier available for Consensus.app API access; enterprise accounts must contact Consensus directly for API key. Clarifies that GoConsensus (goconsensus.com) is 'another unrelated company/product' providing sales demo tooling with its own API - these are separate products."
+      }
+    ],
+    "confidence": 0.8,
+    "flags": [
+      "existing-mcp-server",
+      "enterprise-only-api",
+      "contact-sales-required",
+      "dual-products-confusion",
+      "mcp-oauth-available"
+    ]
+  }
+}

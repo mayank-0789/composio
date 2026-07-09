@@ -1,0 +1,45 @@
+{
+  "answer": "To authenticate with the SE Ranking API, you must use an API key generated from your account dashboard [1][2][3]. You can provide this key in one of two ways: via the Authorization HTTP header (recommended) or as a query parameter [1][4][3].\n\nWhen using the Authorization header, format it as shown below [1][5]:\n\n```\nAuthorization: Token YOUR_API_KEY\n```\n\nAlternatively, you may pass the key as a query parameter in your request URL [6][3]:\n\n```\nhttps://api.seranking.com/v1/endpoint?apikey=YOUR_API_KEY\n```\n\nThe same key is used for both the Project and Data API endpoints [1][2]. You can generate your key by logging into your SE Ranking account and navigating to the API dashboard [1][3].",
+  "results": [
+    {
+      "title": "Getting started - SE Ranking Project API Documentation",
+      "url": "https://seranking.com/api/project/getting-started/",
+      "snippet": ""
+    },
+    {
+      "title": "Getting Started with SE Ranking's API – Knowledge Base",
+      "url": "https://help.seranking.com/hc/en-us/articles/22447958135068-Getting-Started-with-SE-Ranking-s-API",
+      "snippet": ""
+    },
+    {
+      "title": "Se-ranking Python API Docs | dltHub",
+      "url": "https://dlthub.com/context/source/se-ranking",
+      "snippet": ""
+    },
+    {
+      "title": "Data API | Get Started | Postman API Network",
+      "url": "https://www.postman.com/serankingdev/se-ranking-developers/collection/h9m6hd7/data-api",
+      "snippet": ""
+    },
+    {
+      "title": "Use Website Audit API to grow rankings and traffic - SE Ranking API Documentation",
+      "url": "https://seranking.com/api/data/quickstarts/use-website-audit-api-to-grow-rankings-and-traffic/",
+      "snippet": ""
+    },
+    {
+      "title": "seranking/openapi",
+      "url": "https://github.com/seranking/openapi",
+      "snippet": ""
+    },
+    {
+      "title": "SE Ranking API Reference - SE Ranking API Documentation",
+      "url": "https://seranking.com/api/data/reference/",
+      "snippet": ""
+    },
+    {
+      "title": "Build authority with link building - SE Ranking API Documentation",
+      "url": "https://seranking.com/api/data/quickstarts/build-authority-with-link-building/",
+      "snippet": ""
+    }
+  ]
+}

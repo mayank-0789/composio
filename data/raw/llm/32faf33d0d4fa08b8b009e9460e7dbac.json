@@ -1,0 +1,101 @@
+{
+  "verdicts": [
+    {
+      "field": "auth_methods",
+      "status": "contradicted",
+      "note": "The record describes API key auth as requiring 'Authorization: ApiKey header plus X-Timestamp and X-Signature (HMAC-SHA256...)'. Evidence from developer.copper.co confirms this structure with 'Authorization' header containing API key and separate X-Signature/X-Timestamp headers. However, developer.copper.com describes simpler token-based auth using 'token in the header of every request, along with the email address'. The HMAC signing appears to be for developer.copper.co (a different platform) not developer.copper.com (the main Copper CRM). These appear to be different services."
+    },
+    {
+      "field": "auth_methods - OAuth2",
+      "status": "supported",
+      "note": "Evidence confirms OAuth2.0 Authorization Code Grant flow is available and is 'the preferred approach for partner integrations' per developer.copper.com."
+    },
+    {
+      "field": "self_serve",
+      "status": "unsupported",
+      "note": "The copperpricing.com URL is unavailable (404), so we cannot verify the claim that API access is gated behind paid Professional/Business plans or that there's a 14-day trial. No other evidence mentions pricing or plan requirements."
+    },
+    {
+      "field": "api_surface.type",
+      "status": "supported",
+      "note": "Evidence shows REST-based API with endpoint paths like /platform/orders, /platform/portfolios confirming REST architecture."
+    },
+    {
+      "field": "api_surface.breadth",
+      "status": "unsupported",
+      "note": "Evidence only shows a few endpoint examples (portfolios, orders). Cannot verify the 'medium' breadth claim or the full list of CRM entities (people, companies, opportunities, projects, tasks, orders) from available evidence."
+    },
+    {
+      "field": "existing_mcp.exists",
+      "status": "contradicted",
+      "note": "Record claims 'yes' for existing_mcp and provides URL 'https://developer.copper.co/api-reference/getting-started' which is API documentation, not an MCP server. The flags correctly note 'No official first-party MCP server confirmed'. This should be 'no' or 'unknown', not 'yes'."
+    },
+    {
+      "field": "website",
+      "status": "supported",
+      "note": "Evidence shows developer.copper.com domain is valid and contains API documentation."
+    },
+    {
+      "field": "one_liner",
+      "status": "unsupported",
+      "note": "Cannot verify the paid plan gating claim as copperpricing.com is unavailable. The HMAC signing claim appears to be for a different Copper service (developer.copper.co) not the main CRM."
+    },
+    {
+      "field": "main_blocker",
+      "status": "unsupported",
+      "note": "Cannot verify paid plan requirement (copperpricing.com unavailable). HMAC signing claim appears to reference wrong service (developer.copper.co vs developer.copper.com)."
+    },
+    {
+      "field": "evidence URLs",
+      "status": "contradicted",
+      "note": "Evidence list mixes two different services: developer.copper.com (CRM API) and developer.copper.co (appears to be a different trading/crypto platform based on 'portfolios' and 'orders' endpoints). The copperpricing.com URL is unavailable."
+    }
+  ],
+  "revised": {
+    "id": 9,
+    "name": "Copper",
+    "website": "copper.com",
+    "category": "CRM and Sales",
+    "one_liner": "Copper CRM offers a REST-based Developer API with token-based authentication (API keys) or OAuth 2.0 for partner integrations.",
+    "auth_methods": [
+      {
+        "method": "API key",
+        "notes": "Token-based authentication requiring the token in the Authorization header along with the email address of the user who generated the token. Generated via System settings > API Keys in the Copper web app."
+      },
+      {
+        "method": "OAuth2",
+        "notes": "Authorization Code Grant flow; preferred approach for partner integrations. Requires application registration to receive client_id and client_secret credentials."
+      }
+    ],
+    "self_serve": "unknown",
+    "self_serve_notes": "API key generation is available through System settings > API Keys in the web app. Pricing/plan requirements could not be verified as pricing page was unavailable.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "unknown",
+      "notes": "Developer API documented at developer.copper.com. API key generation available through web app. Full breadth of available endpoints could not be verified from available evidence."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-now",
+    "main_blocker": null,
+    "evidence": [
+      {
+        "url": "https://developer.copper.com/introduction/authentication.html",
+        "supports": "Describes both API Key (token-based) and OAuth2.0 authentication methods for the Copper Developer API."
+      },
+      {
+        "url": "https://developer.copper.com/introduction/oauth/flow.html",
+        "supports": "Documents OAuth2.0 Authorization Code Grant flow for partner integrations, including prerequisites and flow steps."
+      }
+    ],
+    "confidence": 0.4,
+    "flags": [
+      "No official first-party MCP server found.",
+      "Pricing page (copperpricing.com) was unavailable, cannot verify plan/trial requirements for API access.",
+      "Evidence mixed two different Copper services: developer.copper.com (CRM) and developer.copper.co (different platform with crypto/trading endpoints).",
+      "Full API surface breadth unclear from available documentation snippets.",
+      "OAuth2.0 requires application registration (contact partners@copper.com for client credentials)."
+    ]
+  }
+}

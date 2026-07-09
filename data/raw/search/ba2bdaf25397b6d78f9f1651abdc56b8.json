@@ -1,0 +1,45 @@
+{
+  "answer": "DealCloud does not have a single, generic public MCP server. Instead, integration is handled through specific vendor-provided solutions or custom implementations [1][2].\n\nIntapp offers an MCP server for its Celeste platform, which natively integrates with DealCloud to provide AI agents with governed access to deals, relationships, and firm context [1]. This is currently in a limited release and requires direct coordination with Intapp for setup and authorization [1]. Additionally, Louisa AI provides an MCP server that integrates with various CRMs, including DealCloud, to facilitate deal origination and relationship mapping [2].",
+  "results": [
+    {
+      "title": "Intapp Celeste MCP Server - Setup, Use Cases & Examples",
+      "url": "https://growthengineer.ai/mcp-servers/intapp-celeste",
+      "snippet": ""
+    },
+    {
+      "title": "Deal Origination & Opportunity Matching MCP Server | Louisa AI",
+      "url": "https://louisa.ai/how-we-work/mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "Deal Cloud and MCP (Model Context Protocol) integration | Workato",
+      "url": "https://www.workato.com/integrations/deal-cloud~mcp",
+      "snippet": ""
+    },
+    {
+      "title": "MCP & ACP: The Protocols Powering the Next Phase of AI in Private Capital  - News - Capsa AI",
+      "url": "https://capsa.ai/news/mcp-acp-the-protocols-powering-the-next-phase-of-ai-in-private-capital",
+      "snippet": ""
+    },
+    {
+      "title": "Understand MCP in 5 Mins: What’s Missing in PE’s Current AI Strategy? - Metal AI for Private Equity",
+      "url": "https://www.metal.ai/blog/understand-mcp-in-5-mins",
+      "snippet": ""
+    },
+    {
+      "title": "Understanding MCP servers",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts",
+      "snippet": ""
+    },
+    {
+      "title": "Architecture overview - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/learn/architecture",
+      "snippet": ""
+    },
+    {
+      "title": "Specification - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/specification/2025-11-25?referrer=grok.com",
+      "snippet": ""
+    }
+  ]
+}

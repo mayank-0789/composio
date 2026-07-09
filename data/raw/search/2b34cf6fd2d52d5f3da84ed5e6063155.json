@@ -1,0 +1,45 @@
+{
+  "answer": "To access the Plaid API, you must provide your client_id and secret, which are obtained from the Plaid Dashboard [1]. These credentials are required for almost all API endpoints and can be included either as headers (PLAID-CLIENT-ID and PLAID-SECRET) or within the request body [1][2]. When using Plaid’s official server-side client libraries, you can initialize the configuration once to automatically include these credentials in all subsequent requests [3]. Alternatively, you can use the Plaid Postman collection to simplify the process of formatting these requests [1].",
+  "results": [
+    {
+      "title": "API Reference",
+      "url": "https://plaid.com/docs/api/index.html.md",
+      "snippet": ""
+    },
+    {
+      "title": "Auth",
+      "url": "https://plaid.com/docs/api/products/auth/index.html.md",
+      "snippet": ""
+    },
+    {
+      "title": "Auth - Add Auth to your app | Plaid Docs",
+      "url": "https://plaid.com/docs/auth/add-to-app/",
+      "snippet": ""
+    },
+    {
+      "title": "Link - Overview | Plaid Docs",
+      "url": "https://plaid.com/docs/link/",
+      "snippet": ""
+    },
+    {
+      "title": "OAuth guide",
+      "url": "https://plaid.com/docs/link/oauth/index.html.md",
+      "snippet": ""
+    },
+    {
+      "title": "Auth - Introduction to Auth | Plaid Docs",
+      "url": "https://plaid.com/docs/auth/",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication | Plaid Docs",
+      "url": "https://plaid.com/plaid-exchange/docs/authentication/",
+      "snippet": ""
+    },
+    {
+      "title": "Implementing the OAuth flow | Plaid Docs",
+      "url": "https://plaid.com/core-exchange/docs/authentication/oauth-flow/",
+      "snippet": ""
+    }
+  ]
+}

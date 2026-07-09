@@ -1,0 +1,45 @@
+{
+  "answer": "Higgsfield MCP is a hosted server at https://mcp.higgsfield.ai/mcp that enables AI agents to access 30+ image and video generation models—including Kling, Veo, Flux, and Sora—through an open standard interface [1][2][3]. It allows you to generate assets, train characters, and manage projects directly within chat interfaces like Claude, Cursor, or Claude Code [1][4][5].\n\nTo connect, add the URL as a custom connector or MCP server in your client's settings [6][4]. Authentication is handled via a one-time OAuth handshake with your Higgsfield account; no API keys are required [1][2][4].",
+  "results": [
+    {
+      "title": "Higgsfield MCP | AI Image & Video Generation for Any Agent",
+      "url": "https://higgsfield.ai/mcp?fp_sid=mcp&fpr=3066",
+      "snippet": ""
+    },
+    {
+      "title": "Higgsfield MCP: Agentic Image and Video Generation (2026) — MCP.Directory",
+      "url": "https://mcp.directory/blog/higgsfield-mcp-guide",
+      "snippet": ""
+    },
+    {
+      "title": "Higgsfield MCP: Sora, Veo, Kling from Claude Code",
+      "url": "https://claudefa.st/blog/tools/mcp-extensions/higgsfield-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Higgsfield MCP for Claude Code: 60-Second Setup | TECHSY",
+      "url": "https://techsy.io/en/blog/higgsfield-mcp-claude-code",
+      "snippet": ""
+    },
+    {
+      "title": "Higgsfield MCP: Connect 30+ AI Models to Claude Code and Cursor (2026 Setup Guide)",
+      "url": "https://www.promptzone.com/elena_martinez_a2d049d5/higgsfield-mcp-connect-30-ai-models-to-claude-code-and-cursor-2026-setup-guide-m4o",
+      "snippet": ""
+    },
+    {
+      "title": "How To Generate AI Videos Straight From Claude with Higgsfield's MCP",
+      "url": "https://higgsfield.ai/blog/Generate-AI-Videos-From-Claude-with-Higgsfield-MCP",
+      "snippet": ""
+    },
+    {
+      "title": "Higgsfield AI MCP: Complete Visual Content Guide for Claude 2026 | SoloSoft",
+      "url": "https://www.solosoft.dev/post/higgsfield-ai-mcp-guide-2026/",
+      "snippet": ""
+    },
+    {
+      "title": "jfikrat/higgsfield-mcp",
+      "url": "https://github.com/jfikrat/higgsfield-mcp",
+      "snippet": ""
+    }
+  ]
+}

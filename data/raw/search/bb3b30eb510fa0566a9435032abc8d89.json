@@ -1,0 +1,45 @@
+{
+  "answer": "The Podio MCP server is a standardized integration that allows AI assistants—such as ChatGPT, Microsoft Copilot, Claude, and Cursor—to read and write data directly within your Podio workspaces using natural language [1]. By implementing the Model Context Protocol (MCP), it enables AI agents to browse organizations, manage tasks, and update Podio items through 22 distinct tools [1].\n\nYou can connect by pointing your AI platform to the official server URL at https://mcp.podio.com/mcp [1]. For testing, the server supports shared default credentials; however, for production, it is recommended to use your own Podio API key for better control and reliability [1]. Alternatively, third-party services like Zapier, viaSocket, and Latenode provide their own MCP endpoints to connect Podio with broader integration ecosystems [2][3][4].",
+  "results": [
+    {
+      "title": "Podio MCP Server — Integration Guide | ShareFile",
+      "url": "https://support.sharefile.com/s/article/Podio-MCP-Server-Integration-Guide-ShareFile-1778762090571",
+      "snippet": ""
+    },
+    {
+      "title": "Podio MCP Server - MCP AI | Zapier",
+      "url": "https://zapier.com/mcp/podio",
+      "snippet": ""
+    },
+    {
+      "title": "Podio MCP | viaSocket",
+      "url": "https://viasocket.com/mcp/podio",
+      "snippet": ""
+    },
+    {
+      "title": "Podio MCP Integration & Workflow Automation | Latenode",
+      "url": "https://latenode.com/integrations/podio?4b77e0b0_page=13&820bb7f0_page=5",
+      "snippet": ""
+    },
+    {
+      "title": "Understanding MCP servers",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts",
+      "snippet": ""
+    },
+    {
+      "title": "Procfu MCP Integration with Claude Code | Composio",
+      "url": "https://composio.dev/toolkits/procfu/framework/claude-code",
+      "snippet": ""
+    },
+    {
+      "title": "Podio MCP | viaSocket",
+      "url": "https://viasocket.com/mcp/podio/page/1",
+      "snippet": ""
+    },
+    {
+      "title": "Procfu MCP Integration with Claude Agent SDK | Composio",
+      "url": "https://composio.dev/toolkits/procfu/framework/claude-agents-sdk",
+      "snippet": ""
+    }
+  ]
+}

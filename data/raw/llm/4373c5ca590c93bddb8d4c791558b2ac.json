@@ -1,0 +1,152 @@
+{
+  "verdicts": [
+    {
+      "field": "name",
+      "status": "supported",
+      "note": "Evidence confirms 'Clay' as the product name."
+    },
+    {
+      "field": "website",
+      "status": "supported",
+      "note": "Evidence references clay.com and app.clay.com throughout."
+    },
+    {
+      "field": "category",
+      "status": "supported",
+      "note": "Clay is positioned as a GTM data enrichment/automation platform, which aligns with 'Data, SEO and Scraping'."
+    },
+    {
+      "field": "one_liner",
+      "status": "contradicted",
+      "note": "The record claims an 'HTTP API (for triggering workflows and Clay-native enrichments)' but evidence shows Clay's API is primarily for 'HTTP API actions' within Clay's workflow builder, not a public REST API. The MCP reference is accurate per the MCP settings doc."
+    },
+    {
+      "field": "auth_methods[0]",
+      "status": "supported",
+      "note": "Evidence confirms API key found in Account settings and used for Clay-native integrations. The Nango doc confirms Workspace ID is also needed for some integrations."
+    },
+    {
+      "field": "auth_methods[1]",
+      "status": "supported",
+      "note": "Evidence from the HTTP API JWT doc confirms Clay supports dynamic JWT authentication for external services."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Evidence from databar.ai confirms HTTP API functionality is gated behind Growth plan at $495/month. API keys can be self-generated but full API functionality requires paid upgrade."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "supported",
+      "note": "The databar.ai evidence confirms free tier exists with limits and Growth plan starts at $495/month with HTTP API access."
+    },
+    {
+      "field": "api_surface.type",
+      "status": "contradicted",
+      "note": "Evidence shows Clay does not offer a traditional REST API. The 'HTTP API' in Clay is an action/integration within the workflow builder for calling external APIs, not a public REST API Clay exposes. Should be 'SDK-only' or 'none' with clarification."
+    },
+    {
+      "field": "api_surface.breadth",
+      "status": "supported",
+      "note": "Given the API surface is workflow/action-oriented rather than a broad REST API, 'medium' is reasonable but should be re-evaluated based on corrected API surface type."
+    },
+    {
+      "field": "api_surface.notes",
+      "status": "supported",
+      "note": "Evidence confirms the API surface is 'HTTP API action within workflow/table builder' rather than a conventional REST API."
+    },
+    {
+      "field": "existing_mcp.exists",
+      "status": "supported",
+      "note": "Evidence from university.clay.com/docs/mcp-settings confirms official MCP support exists for connecting Clay workspace to AI tools."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "contradicted",
+      "note": "The URL https://university.clay.com/docs/mcp-settings is Clay's own documentation about MCP settings, NOT a link to a dedicated MCP server repository or project. This should not be marked as 'yes' with this URL—it's just product documentation. Need to find an actual MCP server repo or mark as 'no' or 'unknown'."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "Given the paid-plan requirement and the API surface being workflow-oriented rather than a traditional REST API, 'buildable-with-caveats' is appropriate."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "Evidence confirms Growth plan ($495/month) is required for HTTP API access, and the API is workflow-oriented rather than a broad REST API."
+    },
+    {
+      "field": "evidence",
+      "status": "supported",
+      "note": "All evidence URLs are valid and support the claims in the record."
+    },
+    {
+      "field": "confidence",
+      "status": "supported",
+      "note": "0.65 is reasonable given the complexity of Clay's API model and the need to clarify API surface type and MCP details."
+    },
+    {
+      "field": "flags",
+      "status": "supported",
+      "note": "Flags accurately reflect the nuances around API surface, paid plan requirement, and MCP server existence."
+    }
+  ],
+  "revised": {
+    "id": 60,
+    "name": "Clay",
+    "website": "clay.com",
+    "category": "Data, SEO and Scraping",
+    "one_liner": "Clay is a GTM data enrichment and automation platform offering API key-based authentication for Clay-native integrations and workflow HTTP API actions (gated behind the Growth plan at $495/month), plus official MCP support for AI assistant integration.",
+    "auth_methods": [
+      {
+        "method": "API key",
+        "notes": "Clay API key found in Account settings; used for Clay-native integrations and as a header/bearer token for HTTP API actions. Some integrations (e.g., via Nango) also require a Workspace ID alongside the API key."
+      },
+      {
+        "method": "Other",
+        "notes": "For external services requiring dynamic tokens, Clay supports an 'HTTP API with JWT Authentication' action that fetches and injects JWTs automatically based on a configured token endpoint/username/password."
+      }
+    ],
+    "self_serve": "paid-plan",
+    "self_serve_notes": "A free tier exists (100 data credits, 500 actions/month) and API keys can be generated by any account holder, but the HTTP API action functionality required for workflow integrations is gated behind the Growth plan starting at $495/month, so full self-serve developer API access requires a paid upgrade.",
+    "api_surface": {
+      "type": "none",
+      "breadth": "narrow",
+      "notes": "Clay does not expose a traditional public REST API. The 'HTTP API' in Clay is an action within the workflow/table builder for calling external APIs and receiving webhooks, not an API that Clay itself exposes for developers to call. Clay-native enrichments can be invoked via API key but this is internal to Clay's platform rather than a broad REST API surface."
+    },
+    "existing_mcp": {
+      "exists": "yes"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "Full developer HTTP API access requires the Growth plan ($495/month), which is a paid-plan gate rather than free self-serve. Additionally, Clay's API surface is primarily workflow/action-oriented within Clay's platform rather than a broad conventional REST API that developers can call externally.",
+    "evidence": [
+      {
+        "url": "https://university.clay.com/docs/guide-find-clay-api-key",
+        "supports": "API key found in Account settings, required for Clay-native integrations"
+      },
+      {
+        "url": "https://nango.dev/docs/api-integrations/clay/connect",
+        "supports": "Authentication requires API key plus Workspace ID"
+      },
+      {
+        "url": "https://university.clay.com/docs/http-api-with-jwt-authentication-integration-overview",
+        "supports": "HTTP API with JWT authentication for dynamically generated tokens"
+      },
+      {
+        "url": "https://university.clay.com/docs/mcp-settings",
+        "supports": "Official MCP settings/support to connect Clay workspace to AI tools like ChatGPT, Codex, or Claude"
+      },
+      {
+        "url": "https://databar.ai/blog/article/clay-pricing-2026",
+        "supports": "HTTP API functionality restricted to Growth plan starting at $495/month; free tier limits"
+      }
+    ],
+    "confidence": 0.7,
+    "flags": [
+      "Clay does not offer a traditional REST API—the 'HTTP API' is an action within Clay's workflow builder for calling external APIs, not an API Clay exposes",
+      "Paid plan required for full HTTP API action access within Clay workflows",
+      "MCP server support exists officially per Clay's documentation for AI assistant integration",
+      "API surface is workflow/action-oriented rather than a standalone developer-callable REST API"
+    ]
+  }
+}

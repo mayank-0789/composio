@@ -1,0 +1,126 @@
+{
+  "verdicts": [
+    {
+      "field": "existing_mcp.exists",
+      "status": "contradicted",
+      "note": "The record says exists='yes', but the evidence shows only an announcement of a 'client preview starting July 2026' (releases page: 'DealCloud now provides a Model Context Protocol (MCP) server... available as part of the DealCloud with Celeste license'). This is DealCloud's own MCP server inside their product, not a dedicated third-party MCP server repository that developers can use to build integrations. An MCP server *inside* the vendor's product is not the same as an *existing* standalone MCP server for developers to use."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "contradicted",
+      "note": "The URL https://api.docs.dealcloud.com/releases points to DealCloud's own release notes, not a standalone MCP server repository. This is not an MCP server developers can use; it's just an announcement page."
+    },
+    {
+      "field": "one_liner",
+      "status": "contradicted",
+      "note": "The one_liner states 'official MCP server in client preview as of mid-2026' which is misleading. The evidence shows the MCP server is *part of* DealCloud (requiring a 'DealCloud with Celeste' license) and in preview starting July 2026, not a standalone open MCP server for developers. The releases page says 'DealCloud now provides a Model Context Protocol (MCP) server which gives AI agents read access to your DealCloud data' - this is an internal feature, not an external developer tool."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence clearly supports OAuth2 Client Credentials flow (POST to /api/rest/v1/oauth/token with client_id, apiKey/client_secret, scope(s); returns bearer token valid 900s) and the use of apiKey as client_secret. Both auth_methods entries are accurate."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Evidence confirms admin-approval model: apikeys doc shows 'Navigate to Admin > User Management... enable API' and 'click User icon... Profile... Enable' API key. No public self-serve signup mentioned; requires existing DealCloud subscription and admin permissions."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "supported",
+      "note": "Accurately describes the admin-issued client_id/apiKey model and enterprise requirement per the apikeys and token documentation."
+    },
+    {
+      "field": "api_surface.type",
+      "status": "supported",
+      "note": "Evidence clearly describes REST APIs across multiple functional areas (token, user management, schema, data, backups, publications, relationship intelligence)."
+    },
+    {
+      "field": "api_surface.breadth",
+      "status": "supported",
+      "note": "Evidence supports 'broad': multiple functional areas (User Management, Schema, Data, Backups, Publications, Relationship Intelligence), Swagger/OpenAPI spec, scopes for different endpoints."
+    },
+    {
+      "field": "api_surface.notes",
+      "status": "supported",
+      "note": "Matches the evidence from /docs page listing the functional areas and Swagger availability."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "buildable-with-caveats is appropriate: REST API is fully functional but requires enterprise subscription and admin-issued credentials."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "Accurately describes the enterprise subscription requirement and admin-issued credentials. The mention of MCP server preview is reasonable context given the one_liner mentioned it, though the MCP server is not directly relevant to REST API buildability."
+    },
+    {
+      "field": "evidence",
+      "status": "supported",
+      "note": "All four evidence URLs are present in the provided evidence and the 'supports' descriptions accurately reflect the content."
+    },
+    {
+      "field": "confidence",
+      "status": "supported",
+      "note": "0.7 is reasonable given the clear API documentation but enterprise-only access model."
+    },
+    {
+      "field": "flags",
+      "status": "supported",
+      "note": "First two flags are supported by evidence. The third flag mentions 'Third-party MCP integrations exist via Intapp Celeste (limited release) and Louisa AI' which is not directly evidenced, but the releases page does mention 'DealCloud with Celeste' license, so partially supported."
+    }
+  ],
+  "revised": {
+    "id": 10,
+    "name": "DealCloud",
+    "website": "api.docs.dealcloud.com",
+    "category": "CRM and Sales",
+    "one_liner": "DealCloud is an enterprise deal/relationship CRM offering a broad REST API (data, schema, user management, publications, backups) secured via OAuth2 client credentials for developers with an existing subscription and admin-issued credentials.",
+    "auth_methods": [
+      {
+        "method": "OAuth2",
+        "notes": "Client Credentials flow; POST client_id, apiKey/client_secret, and scope(s) to /api/rest/v1/oauth/token; returns bearer token valid 900 seconds, used in Authorization header."
+      },
+      {
+        "method": "API key",
+        "notes": "apiKey used as the client_secret in the OAuth2 client credentials request; also referenced as standalone API Keys doc."
+      }
+    ],
+    "self_serve": "admin-approval",
+    "self_serve_notes": "No free tier or public self-serve signup; DealCloud is an enterprise CRM requiring an existing subscription/enterprise agreement. Developers get client_id/apiKey via their DealCloud site admin, not an open developer portal.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "REST APIs organized into functional areas: User Management, Schema, Data, Backups, Publications, Relationship Intelligence, plus Swagger/OpenAPI spec exposed per-site."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "Requires an existing enterprise DealCloud subscription and admin-issued client_id/apiKey; no open self-serve developer signup.",
+    "evidence": [
+      {
+        "url": "https://api.docs.dealcloud.com/docs/token",
+        "supports": "OAuth2 client credentials flow, scopes, 900s token expiry, Authorization header usage"
+      },
+      {
+        "url": "https://api.docs.dealcloud.com/docs",
+        "supports": "Overview of REST API functional areas: auth, user management, schema, data, backups, publications, relationship intelligence; Swagger/Postman/VSCode tooling"
+      },
+      {
+        "url": "https://api.docs.dealcloud.com/docs/apikeys",
+        "supports": "API key acquisition documentation"
+      },
+      {
+        "url": "https://api.docs.dealcloud.com/releases",
+        "supports": "Announcement of DealCloud MCP Server client preview starting July 2026"
+      }
+    ],
+    "confidence": 0.8,
+    "flags": [
+      "No public free-tier/self-serve signup found — enterprise agreement required",
+      "DealCloud provides an internal MCP server (part of 'DealCloud with Celeste' license) in client preview as of July 2026, but this is not a standalone open MCP server for external developers"
+    ]
+  }
+}

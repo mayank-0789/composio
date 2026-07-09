@@ -1,0 +1,45 @@
+{
+  "answer": "GoHighLevel does not offer a free tier for its platform subscriptions, though it provides a 14-day free trial on all plans [1][2]. Developer API access is gated by your subscription tier rather than being available for free [1].\n\nThe $297/month Unlimited plan includes basic API access, while the $497/month Agency Pro plan provides advanced API access [1][2]. Developers building apps for the HighLevel Marketplace can list their own apps for free and implement various pricing models, including free or freemium tiers for their end users [3][4]. To begin, you must maintain an active agency subscription [5].",
+  "results": [
+    {
+      "title": "HighLevel Pricing",
+      "url": "https://www.gohighlevel.com/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "GoHighLevel Pricing 2026: What It Really Costs | Omid Saffari",
+      "url": "https://omidsaffari.com/blog/gohighlevel-pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Marketplace",
+      "url": "https://www.gohighlevel.com/landing-marketplace",
+      "snippet": ""
+    },
+    {
+      "title": "Set Up Your Marketplace App Pricing : HighLevel Support Portal",
+      "url": "https://help.gohighlevel.com/support/solutions/articles/155000001217-set-up-your-marketplacapp-pricing",
+      "snippet": ""
+    },
+    {
+      "title": "HighLevel Pricing & Billing: Wallets, Charges, Rebilling : HighLevel Support Portal",
+      "url": "https://help.gohighlevel.com/support/solutions/articles/155000001156-highlevel-pricing-guide",
+      "snippet": ""
+    },
+    {
+      "title": "How to get started with the Developer's Marketplace : HighLevel Support Portal",
+      "url": "https://help.gohighlevel.com/support/solutions/articles/155000000136-how-to-get-started-with-the-developer-s-marketplace",
+      "snippet": ""
+    },
+    {
+      "title": "GoHighLevel/highlevel-api-sdk",
+      "url": "https://github.com/GoHighLevel/highlevel-api-sdk",
+      "snippet": ""
+    },
+    {
+      "title": "Deprecating the HighLevel API V1 and migrating to V2",
+      "url": "https://www.gohighlevel.com/post/deprecating-the-highlevel-api-v1-and-migrating-to-v2",
+      "snippet": ""
+    }
+  ]
+}

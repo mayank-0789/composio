@@ -1,0 +1,50 @@
+{
+  "one_liner": "Freshdesk is a customer support/helpdesk platform offering a broad, well-documented REST API (v2) secured via HTTP Basic Auth with per-agent API keys, self-serve during trial/paid plans, with several community MCP servers already available.",
+  "auth_methods": [
+    {
+      "method": "Basic",
+      "notes": "HTTP Basic Auth using personal API key as username and any string (e.g. 'X') as password. Key found in agent profile settings."
+    }
+  ],
+  "self_serve": "self-serve-trial",
+  "self_serve_notes": "14-day free trial gives full API access (50 calls/min). The permanent Free Program (up to 2 agents) sets API rate limit to zero, effectively disabling API access. Continued API use requires a paid plan.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "REST API v2 covering tickets, contacts, companies, conversations, agents, groups, knowledge base articles; JSON in/out, supports CORS, standard HTTP verbs. Also has a JS SDK wrapper."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://www.npmjs.com/package/freshdesk-mcp"
+  },
+  "buildability": "buildable-with-caveats",
+  "main_blocker": "API access is disabled on the permanent Free plan (0 calls/min); a paid plan or active trial is required for programmatic access, and self-serve API key generation requires an agent account with sufficient permissions.",
+  "evidence": [
+    {
+      "url": "https://developer.freshdesk.com/api/v1/",
+      "supports": "Freshdesk REST API v2 documentation, Basic Auth via API key"
+    },
+    {
+      "url": "https://developers.freshworks.com/freshdesk-sdk/",
+      "supports": "JS SDK and Basic Auth details, domain + api_key usage"
+    },
+    {
+      "url": "https://www.freshworks.com/freshdesk/pricing/",
+      "supports": "Pricing plans including free trial and Free Program"
+    },
+    {
+      "url": "https://support.freshdesk.com/support/solutions/articles/50000010099-explore-freshdesk-free-program-freshdesk-only-",
+      "supports": "Free Program API rate limit set to zero calls per minute"
+    },
+    {
+      "url": "https://preview.truto.one/blog/how-to-integrate-with-the-freshdesk-api-2026-engineering-guide/",
+      "supports": "REST API architecture, resources, rate limits, pagination details"
+    }
+  ],
+  "confidence": 0.75,
+  "flags": [
+    "Free plan disables API access entirely (0 calls/min)",
+    "Multiple unofficial third-party MCP servers exist; no single official Freshworks-maintained MCP is GA (Enterprise EAP only)",
+    "Rate limits vary significantly by plan tier"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "Asana supports three primary authentication methods: Personal Access Tokens (PATs), OAuth 2.0, and Service Accounts [1]. \n\nPATs are the simplest method, ideal for individual use in scripts, command-line utilities, or prototyping [2][3]. You generate them via the Developer Console and provide them in the Authorization header as a bearer token [4][2].\n\n```shell\ncurl https://app.asana.com/api/1.0/users/me \\\n  -H \"Authorization: Bearer ACCESS_TOKEN\"\n```\n\nOAuth 2.0 is the preferred method for applications that support multiple users or require third-party access without sharing credentials [5][3]. It involves an authorization code grant flow using endpoints at `https://app.asana.com/-/oauth_authorize` and `https://app.asana.com/-/oauth_token` [5]. \n\nService Accounts are an Enterprise-tier feature providing org-wide, programmatic access for specific automation needs [1].",
+  "results": [
+    {
+      "title": "Authentication",
+      "url": "https://developers.asana.com/docs/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Quick start guide",
+      "url": "https://developers.asana.com/docs/quick-start",
+      "snippet": ""
+    },
+    {
+      "title": "Asana API guide | Asana Help Center",
+      "url": "https://help.asana.com/s/article/api?nocache=https%3A%2F%2Fhelp.asana.com%2Fs%2Farticle%2Fapi%3Flanguage%3Den_US",
+      "snippet": ""
+    },
+    {
+      "title": "Personal access token",
+      "url": "https://developers.asana.com/docs/personal-access-token",
+      "snippet": ""
+    },
+    {
+      "title": "OAuth",
+      "url": "https://developers.asana.com/docs/oauth",
+      "snippet": ""
+    },
+    {
+      "title": "Build an app with Asana",
+      "url": "https://asana.com/developers/documentation/getting-started/auth",
+      "snippet": ""
+    },
+    {
+      "title": "JavaScript",
+      "url": "https://developers.asana.com/docs/javascript",
+      "snippet": ""
+    },
+    {
+      "title": "Asana oas.yaml",
+      "url": "https://raw.githubusercontent.com/Asana/developer-docs/master/defs/asana_oas.yaml",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "one_liner": "Binance offers a broad, self-serve REST/WebSocket API for spot trading and market data secured via Ed25519/RSA/HMAC signed requests, with several community-built MCP servers already available.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Ed25519 (recommended), RSA, or HMAC (deprecated) key pairs used to sign requests; API key generated via Binance account API Management section."
+    },
+    {
+      "method": "Other",
+      "notes": "WebSocket session.logon authentication method to avoid re-sending signature per request."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Free and self-serve for verified accounts: create account, complete KYC, enable 2FA, then generate API keys via API Management. No subscription or per-call fees; only standard trading fees apply on executed trades.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Extensive REST and WebSocket API covering spot trading, market data, account management, and hundreds of endpoints across Binance products."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://github.com/nirholas/binance-mcp-server"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": "Requires KYC-verified Binance account and generated API keys (Ed25519/RSA/HMAC) before programmatic access; HMAC deprecated so agents should support asymmetric key signing.",
+  "evidence": [
+    {
+      "url": "https://developers.binance.com/docs/binance-spot-api-docs/faqs/api_key_types",
+      "supports": "Describes Ed25519 (recommended), RSA, and deprecated HMAC API key types and signing approach."
+    },
+    {
+      "url": "https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md",
+      "supports": "REST API documentation showing broad endpoint coverage and request security/signing details."
+    },
+    {
+      "url": "https://developers.binance.com/docs/binance-spot-api-docs/websocket-api/session-authentication",
+      "supports": "WebSocket session.logon authentication method."
+    },
+    {
+      "url": "https://voiceofchain.com/academy/binance-api-pricing",
+      "supports": "Confirms free, self-serve API access with no subscription fees, only standard trading fees."
+    },
+    {
+      "url": "https://www.binance.info/en-NG/support/faq/detail/360002502072",
+      "supports": "Describes steps to create API keys via API Management after KYC and 2FA."
+    }
+  ],
+  "confidence": 0.8,
+  "flags": [
+    "KYC/identity verification required before API key generation",
+    "HMAC auth deprecated in favor of Ed25519/RSA",
+    "Multiple unofficial third-party MCP server implementations exist, no official Binance MCP server"
+  ]
+}

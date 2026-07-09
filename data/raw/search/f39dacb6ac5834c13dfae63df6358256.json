@@ -1,0 +1,45 @@
+{
+  "answer": "Vercel offers a free Hobby plan for personal, non-commercial projects that includes access to the Vercel CLI and Git integrations [1][2]. While these tools enable developer-focused interactions with the platform, Vercel does not provide a dedicated, separate \"Developer API\" tier [3][2]. Advanced features, such as self-serve enterprise-grade tools like SAML SSO or HIPAA compliance, are available to Pro users who pay a monthly platform fee [4][5]. The Hobby plan is free forever but is restricted to personal use and will pause if usage limits are exceeded [3][1][2].",
+  "results": [
+    {
+      "title": "Vercel Hobby Plan",
+      "url": "https://vercel.com/docs/plans/hobby",
+      "snippet": ""
+    },
+    {
+      "title": "Account Plans on Vercel",
+      "url": "https://vercel.com/docs/plans",
+      "snippet": ""
+    },
+    {
+      "title": "Vercel Pricing: Hobby, Pro, and Enterprise plans",
+      "url": "https://vercel.com/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Vercel Pro Plan",
+      "url": "https://vercel.com/docs/plans/pro-plan",
+      "snippet": ""
+    },
+    {
+      "title": "A more flexible Pro plan for modern teams - Vercel",
+      "url": "https://vercel.com/blog/new-pro-pricing-plan",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing on Vercel",
+      "url": "https://vercel.com/docs/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Manage and optimize usage",
+      "url": "https://vercel.com/docs/pricing/manage-and-optimize-usage",
+      "snippet": ""
+    },
+    {
+      "title": "Fluid compute pricing",
+      "url": "https://vercel.com/docs/functions/usage-and-pricing.md",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "Several open-source Model Context Protocol (MCP) servers exist for Freshdesk, allowing AI clients like Claude Desktop, Cursor, and Continue to interact with your helpdesk [1][2][3]. These servers generally provide tools to list, search, create, and update tickets, contacts, and agents by connecting to the Freshdesk REST API using your API key [1][4][2][5].\n\nYou can integrate these by adding the server configuration to your MCP client’s settings file [6][2][3]. Most implementations use stdio for local execution or Streamable HTTP for remote/hosted environments [1][4][7]. \n\nKey options include:\n- hashcott/freshdesk-mcp: A feature-rich server with 194 tools [1].\n- wyre-technology/freshdesk-mcp: Includes decision-tree navigation and destructive-action guardrails [4].\n- mindstone/mcp-server-freshdesk: Focuses on account and ticket management [2].\n- ArcaneSK/freshdesk-mcp-server: Features a two-phase draft/send pattern for replies [5].\n\nFreshworks also offers an official MCP integration currently in Beta via an Early Access Program for Enterprise plans [6].",
+  "results": [
+    {
+      "title": "hashcott/freshdesk-mcp",
+      "url": "https://github.com/hashcott/freshdesk-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "mcp-servers/connectors/freshdesk at main · mindstone/mcp-servers · GitHub",
+      "url": "https://github.com/mindstone/mcp-servers/tree/main/connectors/freshdesk",
+      "snippet": ""
+    },
+    {
+      "title": "effytech/freshdesk_mcp",
+      "url": "https://github.com/effytech/freshdesk%5Fmcp",
+      "snippet": ""
+    },
+    {
+      "title": "wyre-technology/freshdesk-mcp",
+      "url": "https://github.com/wyre-technology/freshdesk-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "ArcaneSK/freshdesk-mcp-server",
+      "url": "https://github.com/arcanesk/freshdesk-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Model Context Protocol (MCP) integration in Freshdesk (EAP) : Freshdesk Support",
+      "url": "https://support.freshdesk.com/support/solutions/articles/50000012670-model-context-protocol-mcp-integration-in-freshdesk-eap-",
+      "snippet": ""
+    },
+    {
+      "title": "romain-devsquare/fresh-desk-mcp",
+      "url": "https://github.com/romain-devsquare/fresh-desk-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "NeuraLegion/freshdesk_mcp",
+      "url": "https://github.com/NeuraLegion/freshdesk_mcp",
+      "snippet": ""
+    }
+  ]
+}

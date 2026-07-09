@@ -1,0 +1,45 @@
+{
+  "answer": "Yes, there is an official Gorgias MCP integration and several community-developed alternatives. The official Gorgias MCP server enables AI assistants like Claude, ChatGPT, and Cursor to securely read, analyze, and manage helpdesk tickets and settings [1][2].\n\nTo connect the official server to an MCP-compatible client, use the endpoint `https://mcp.gorgias.com/mcp?gorgias_subdomain=YOUR-SUBDOMAIN` [1][2].\n\nFor developers, community projects like the `gorgias-mcp-server` provide deeper integration by exposing up to 112 tools—including smart search and analytics—via the Gorgias REST API [3][4][5]. You can install this via npm:\n\n```bash\nnpm install gorgias-mcp-server @modelcontextprotocol/sdk\n```\n\nThis package allows custom implementations using the `createGorgiasServer()` factory [3][5].",
+  "results": [
+    {
+      "title": "Connect your AI assistant to the Gorgias MCP",
+      "url": "https://docs.gorgias.com/en-US/connect-your-ai-assistant-to-the-gorgias-mcp-6310546",
+      "snippet": ""
+    },
+    {
+      "title": "Ask Your Helpdesk Anything: How to Use Claude or ChatGPT with Gorgias",
+      "url": "https://www.gorgias.com/blog/gorgias-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "benpalmer1/Gorgias-MCP-Server",
+      "url": "https://github.com/benpalmer1/Gorgias-MCP-Server",
+      "snippet": ""
+    },
+    {
+      "title": "gorgias-mcp-server",
+      "url": "https://registry.npmjs.org/gorgias-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "README.md",
+      "url": "https://github.com/benpalmer1/Gorgias-MCP-Server/blob/main/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "NoBanks/gorgias-mcp",
+      "url": "https://github.com/NoBanks/gorgias-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "cacosat/test-mcp",
+      "url": "https://github.com/cacosat/test-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Gorgias MCP Server by benpalmer1 | Glama",
+      "url": "https://glama.ai/mcp/servers/benpalmer1/Gorgias-MCP-Server",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "The Otter.ai API uses Bearer token authentication for all requests [1][2]. Depending on your specific integration, authentication is handled in one of two ways:\n\nFor direct API use, generate an API key via the Developer tab in your Otter.ai account settings [1]. Include this key in the Authorization header of your HTTP requests:\n\n```http\nAuthorization: Bearer YOUR_API_KEY\n```\n\nFor Enterprise accounts requiring OAuth 2.0, you must obtain client credentials from your account manager [3]. You then exchange these credentials for an access token via the OAuth token endpoint and provide that token in the Authorization header for subsequent requests [3]. Note that access tokens obtained via OAuth expire and require a refresh strategy [3].",
+  "results": [
+    {
+      "title": "Otter.ai Public API – Help Center",
+      "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+      "snippet": ""
+    },
+    {
+      "title": "api-evangelist/otter-ai",
+      "url": "https://github.com/api-evangelist/otter-ai",
+      "snippet": ""
+    },
+    {
+      "title": "Otter.ai API: Export Your Transcripts | Semarize",
+      "url": "https://semarize.com/resources/get-your-data/otter",
+      "snippet": ""
+    },
+    {
+      "title": "AGENTS.md",
+      "url": "https://github.com/bcharleson/otter-cli/blob/main/AGENTS.md",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://www.withone.ai/knowledge/otter-ai/conn_mod_def%3A%3AGLU0_zZHxQg%3A%3AapD2lO4qR2iqlwnGvS4vuQ",
+      "snippet": ""
+    },
+    {
+      "title": "README.md",
+      "url": "https://github.com/api-evangelist/otter-ai/blob/main/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://docs.otterly.ai/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "omerdn1/otter.ai-api",
+      "url": "https://github.com/omerdn1/otter-api",
+      "snippet": ""
+    }
+  ]
+}

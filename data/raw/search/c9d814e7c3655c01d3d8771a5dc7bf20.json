@@ -1,0 +1,45 @@
+{
+  "answer": "Shopify APIs use access tokens for authentication, typically passed in the X-Shopify-Access-Token header [1][2]. For Admin API apps, the recommended approach is to use Shopify managed installation with token exchange (preferred for embedded apps) or the authorization code grant flow [3][4][5]. Apps can also use client credentials grant for backend applications without a UI [6]. For the Storefront API, use either public access tokens (via X-Shopify-Storefront-Access-Token header) or private access tokens (via X-Shopify-Storefront-Private-Token header) [7]. Shopify provides official client libraries to simplify these processes [3][1][2].",
+  "results": [
+    {
+      "title": "REST Admin API reference",
+      "url": "https://shopify.dev/docs/api/admin-rest",
+      "snippet": ""
+    },
+    {
+      "title": "GraphQL Admin API reference",
+      "url": "https://shopify.dev/docs/api/admin-graphql/2026-04",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication and authorization",
+      "url": "https://shopify.dev/docs/apps/build/authentication-authorization",
+      "snippet": ""
+    },
+    {
+      "title": "packages/shopify-api/docs/guides/oauth.md at main · Shopify/shopify-api-js",
+      "url": "https://github.com/Shopify/shopify-api-js/blob/main/packages/shopify-api/docs/guides/oauth.md",
+      "snippet": ""
+    },
+    {
+      "title": "docs/usage/oauth.md",
+      "url": "https://github.com/Shopify/shopify-api-ruby/blob/main/docs/usage/oauth.md",
+      "snippet": ""
+    },
+    {
+      "title": "packages/apps/shopify-api/docs/guides/oauth.md at HEAD · Shopify/shopify-app-js",
+      "url": "https://github.com/Shopify/shopify-app-js/blob/HEAD/packages/apps/shopify-api/docs/guides/oauth.md",
+      "snippet": ""
+    },
+    {
+      "title": "Shopify API authentication",
+      "url": "https://shopify.dev/docs/api/usage/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Customer Account API reference",
+      "url": "https://shopify.dev/docs/api/customer/latest",
+      "snippet": ""
+    }
+  ]
+}

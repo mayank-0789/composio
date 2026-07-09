@@ -1,0 +1,45 @@
+{
+  "answer": "The Pylon API uses Bearer authentication [1][2]. To authenticate, you must generate an API token from your Pylon dashboard and include it in the Authorization header of your HTTP requests [1][3].\n\nYou must use the following header format, replacing `<token>` with your actual secret API token [1][3]:\n\n```\nAuthorization: Bearer <token>\n```\n\nAll requests must be made over HTTPS, as the API will return an error if a non-HTTPS URL is used [3]. You can verify that your token is configured correctly by making a request to the `/me` endpoint [1].",
+  "results": [
+    {
+      "title": "Authentication | Pylon",
+      "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Accounts",
+      "url": "https://docs.usepylon.com/pylon-docs/developer/api/api-reference/accounts.md",
+      "snippet": ""
+    },
+    {
+      "title": "API Reference - Pylon",
+      "url": "https://app.getpylon.com/docs/api",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://docs.usepylon.com/pylon-docs/developer",
+      "snippet": ""
+    },
+    {
+      "title": "Tasks & Projects",
+      "url": "https://docs.usepylon.com/pylon-docs/developer/api/api-reference/tasks-and-projects.md",
+      "snippet": ""
+    },
+    {
+      "title": "Pylon — API Provider, Schemas | APIs.io Providers",
+      "url": "https://apis.io/providers/pylon/",
+      "snippet": ""
+    },
+    {
+      "title": "Pylon authentication | Airbyte Docs",
+      "url": "https://docs.airbyte.com/ai-agents/connectors/pylon/AUTH",
+      "snippet": ""
+    },
+    {
+      "title": "Pylon | willow",
+      "url": "https://docs.withwillow.ai/docs/mcp-servers/built-in/pylon",
+      "snippet": ""
+    }
+  ]
+}

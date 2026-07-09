@@ -1,0 +1,51 @@
+{
+  "one_liner": "Devin is an AI coding agent platform with a comprehensive REST API, official MCP server, self-serve free tier, and service user authentication via Bearer tokens (cog_ prefix).",
+  "auth_methods": [
+    {
+      "method": "Token",
+      "notes": "Service User API Keys (cog_ prefix) - recommended for automation and CI/CD. Created at organization or enterprise level with RBAC role assignment."
+    },
+    {
+      "method": "Token",
+      "notes": "Personal Access Tokens (PAT) with cog_ prefix - for human programmatic access. Currently in closed beta for non-SSO/non-enterprise accounts, requires contacting support."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Devin offers a Free tier for individuals with limited usage, access to Devin Review, DeepWiki, unlimited inline edits and Tab completions. Self-serve paid plans (Pro, Max, Teams) available with automatic quota refresh. Enterprise requires custom agreements. Service User API keys can be self-generated in organization/enterprise settings UI for users with appropriate permissions.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Devin provides a comprehensive REST API with enterprise (/v3/enterprise/*) and organization-level (/v3/organizations/*) endpoints covering sessions, playbooks, knowledge, schedules, repository management, analytics, audit logs, billing, and member management. Also offers an official MCP server at https://mcp.devin.ai/mcp."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://mcp.devin.ai/mcp"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://docs.devin.ai/api-reference/authentication",
+      "supports": "Service User API Keys (cog_ prefix) for authentication via Bearer token scheme. Personal Access Tokens in closed beta."
+    },
+    {
+      "url": "https://docs.devin.ai/api-reference/getting-started/enterprise-quickstart",
+      "supports": "Enterprise and organization-level service users with RBAC. Self-serve API key generation in Settings UI. Comprehensive REST API endpoints for sessions, knowledge, playbooks, etc."
+    },
+    {
+      "url": "https://devin.ai/pricing",
+      "supports": "Free tier available for individuals with limited usage. Self-serve paid plans (Pro, Max, Teams) with quota-based billing."
+    },
+    {
+      "url": "https://docs.devin.ai/admin/billing/self-serve",
+      "supports": "Self-serve platform with free tier and automatic quota refresh for paid users. Extra usage can be purchased at model-specific API pricing."
+    }
+  ],
+  "confidence": 0.95,
+  "flags": [
+    "official-mcp-server-exists",
+    "free-tier-available",
+    "rbac-support",
+    "enterprise-features"
+  ]
+}

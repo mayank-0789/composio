@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://github.com/googleads/google-ads-mcp",
+  "reason": "Google Ads has an official MCP server maintained by Google at github.com/googleads/google-ads-mcp. This is a Python-based, read-only implementation that allows AI agents to interact with the Google Ads API, providing tools for account discovery, metadata retrieval, and GAQL-based searching. Additionally, several well-known community MCP servers exist (mharnett/mcp-google-ads, FGRibreau/mcp-google-ads, ashathyapriyan/google-ads-mcp) that extend functionality with write operations and campaign management features."
+}

@@ -1,0 +1,103 @@
+{
+  "verdicts": [
+    {
+      "field": "existing_mcp.exists",
+      "status": "contradicted",
+      "note": "The record claims exists='yes' and points to https://docs.ecwid.com/api-reference, but that URL is the Ecwid REST API reference documentation, NOT a Model Context Protocol (MCP) server. There is no evidence of a dedicated MCP server for Ecwid in the provided materials. The flags mention third-party MCP integrations but 'no official first-party Ecwid MCP server confirmed.'"
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "contradicted",
+      "note": "The URL provided (https://docs.ecwid.com/api-reference) is the Ecwid REST API reference, not an MCP server repository or implementation. This should be removed."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence confirms OAuth2 flow for public apps and secret token access for custom single-store apps copied from the app dashboard. The March 2025 changelog confirms Bearer token in Authorization header is now the only supported method (query param tokens disabled)."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "The support page (https://support.ecwid.com/hc/en-us/articles/207100729-Ecwid-plans-and-features) indicates REST API access requires a paid plan. The self_serve_notes mention developers can request a free upgrade via email, which matches the 'paid-plan' designation with caveats."
+    },
+    {
+      "field": "api_surface",
+      "status": "supported",
+      "note": "The API reference page confirms a broad REST API v3 covering products, orders, customers, inventory, store profile, categories, discounts, etc."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "'buildable-with-caveats' is appropriate given that API access requires either a paid plan or a manual email request to support for a free developer upgrade. This is not fully self-serve."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "The main blocker correctly identifies that API access requires a paid plan or manual developer upgrade request, limiting pure self-serve onboarding."
+    },
+    {
+      "field": "one_liner",
+      "status": "supported",
+      "note": "The one_liner accurately summarizes the REST API v3, auth methods (OAuth2 and secret tokens), and the paid plan requirement with developer upgrade option."
+    },
+    {
+      "field": "evidence",
+      "status": "supported",
+      "note": "All four evidence URLs are present in the provided evidence and support the claims they are associated with."
+    }
+  ],
+  "revised": {
+    "id": 47,
+    "name": "Ecwid",
+    "website": "api-docs.ecwid.com",
+    "category": "Ecommerce",
+    "one_liner": "Ecwid provides a broad REST API (v3) secured via OAuth2 or dashboard-issued secret tokens, but full API access typically requires a paid plan or a manually-requested developer upgrade.",
+    "auth_methods": [
+      {
+        "method": "OAuth2",
+        "notes": "Standard OAuth 2.0 flow for external/public apps; exchange code for access token via POST to https://my.ecwid.com/api/oauth/token. Bearer token required in Authorization header; query param tokens disabled as of March 2025."
+      },
+      {
+        "method": "Token",
+        "notes": "For custom, single-store apps, a pre-generated secret access token can be copied directly from the app dashboard, skipping the OAuth flow."
+      }
+    ],
+    "self_serve": "paid-plan",
+    "self_serve_notes": "Standard free-tier Ecwid stores cannot access the REST API; a paid plan is normally required. However, developers building integrations/public apps can request a free upgrade to a paid test store by emailing Ecwid API support, after which tokens can be self-generated via the app dashboard.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "Ecwid REST API v3 covers products, orders, customers, inventory, store profile, categories, discounts, etc. Rate limited to 600 requests per minute per token."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "API access requires a paid Ecwid plan (or a manually-requested free developer upgrade via emailing support), which limits pure self-serve onboarding for agent toolkits.",
+    "evidence": [
+      {
+        "url": "https://docs.ecwid.com/get-started/make-your-first-api-request",
+        "supports": "Describes OAuth2 flow and direct secret token access via app dashboard for custom apps. Confirms no test mode exists and that Bearer token in Authorization header is required."
+      },
+      {
+        "url": "https://docs.ecwid.com/changelog/march-2025/march-20/discontinued-tokens-passing-in-query-params-of-api-calls",
+        "supports": "Confirms Bearer token in Authorization header is now the only supported auth method; query param tokens completely disabled as of March 2025."
+      },
+      {
+        "url": "https://support.ecwid.com/hc/en-us/articles/207100729-Ecwid-plans-and-features",
+        "supports": "Indicates REST API access requires a paid plan on standard tiers."
+      },
+      {
+        "url": "https://docs.ecwid.com/api-reference",
+        "supports": "REST API overview showing broad API surface across store resources including products, orders, customers, categories, discounts, with rate limits of 600 requests per minute per token."
+      }
+    ],
+    "confidence": 0.85,
+    "flags": [
+      "Third-party MCP integrations (viaSocket, Vinkius) exist but no official first-party Ecwid MCP server confirmed.",
+      "Free API access for developers requires manual email request to support, not fully self-serve.",
+      "No sandbox/test mode exists; must use a real (paid or upgraded) store for testing.",
+      "API rate limited to 600 requests per minute per token; exceeding triggers 429 errors with cooldown."
+    ]
+  }
+}

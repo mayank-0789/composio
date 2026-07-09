@@ -1,0 +1,45 @@
+{
+  "answer": "A SendGrid MCP server is an implementation of the Model Context Protocol that allows AI agents to interact with the SendGrid v3 API [1][2]. It enables agents to send transactional emails, manage dynamic templates, perform contact CRUD operations, analyze performance metrics, and handle suppression lists [1][3][4].\n\nTo configure the server in your MCP client, provide your SendGrid API key via environment variables [1][3][5]. For example, in a standard client configuration:\n\n```json\n{\n  \"mcpServers\": {\n    \"sendgrid\": {\n      \"command\": \"sendgrid-mcp\",\n      \"env\": {\n        \"SENDGRID_API_KEY\": \"SG.your_api_key_here\",\n        \"READ_ONLY\": \"true\"\n      }\n    }\n  }\n}\n```\n\nMost implementations default to read-only mode to prevent accidental data changes [1][3][4]. Depending on the specific server version used, write operations may require explicit opt-in via environment variables or runtime approval tokens [1][3][6]. Multiple independent implementations are available in the open-source community [1][3][7][6][5][8].",
+  "results": [
+    {
+      "title": "deyikong/sendgrid-mcp",
+      "url": "https://github.com/deyikong/sendgrid-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "sendgrid-api-mcp-server",
+      "url": "https://registry.npmjs.org/sendgrid-api-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "iPraBhu/mcp-sendgrid-server",
+      "url": "https://github.com/iPraBhu/mcp-sendgrid-server",
+      "snippet": ""
+    },
+    {
+      "title": "sendgrid-mcp",
+      "url": "https://registry.npmjs.org/sendgrid-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "FINCH285/SendGrid-MCP-Server",
+      "url": "https://github.com/FINCH285/SendGrid-MCP-Server",
+      "snippet": ""
+    },
+    {
+      "title": "garethcull/sendgrid-mcp",
+      "url": "https://github.com/garethcull/sendgrid-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "coopersully/sendgrid-mcp",
+      "url": "https://github.com/coopersully/sendgrid-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "mseep-ai/sendgrid-mcp",
+      "url": "https://github.com/mseep-ai/sendgrid-mcp",
+      "snippet": ""
+    }
+  ]
+}

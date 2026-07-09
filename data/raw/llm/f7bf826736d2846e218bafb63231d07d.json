@@ -1,0 +1,50 @@
+{
+  "one_liner": "Intercom offers a broad, well-documented REST API with Bearer token (private) and OAuth (public) auth, a free self-serve developer workspace, and an official hosted MCP server, making it buildable now for AI-agent tooling.",
+  "auth_methods": [
+    {
+      "method": "Token",
+      "notes": "Access Tokens (Bearer) for private apps accessing your own workspace, generated via Developer Hub."
+    },
+    {
+      "method": "OAuth2",
+      "notes": "OAuth flow required for public apps accessing other users' data, using Client ID/Secret to exchange code for access token."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Free, self-serve developer workspace available for building/testing (US region only, limited functionality). Access Tokens can be generated immediately via Developer Hub without sales contact. Full production use requires a paid Intercom subscription.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Broad REST API covering conversations, contacts, admins, AI content, tickets, etc. Multiple regional servers (US/EU/AU)."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://mcp.intercom.com/mcp"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+      "supports": "Access Token vs OAuth authentication methods"
+    },
+    {
+      "url": "https://developers.intercom.com/docs/references/rest-api/api.intercom.io.md",
+      "supports": "Broad REST API surface with bearerAuth security scheme"
+    },
+    {
+      "url": "https://intercom-developer-hub.readme.io/docs/personal-access-tokens",
+      "supports": "Self-serve creation of access tokens via Developer Hub"
+    },
+    {
+      "url": "https://developers.intercom.com/docs/build-an-integration/getting-started",
+      "supports": "Free self-serve developer workspace for building/testing"
+    }
+  ],
+  "confidence": 0.9,
+  "flags": [
+    "Official MCP server limited to US-hosted workspaces",
+    "Developer workspace has functional restrictions (no outbound email/push notifications)",
+    "Production use requires separate paid customer agreement"
+  ]
+}

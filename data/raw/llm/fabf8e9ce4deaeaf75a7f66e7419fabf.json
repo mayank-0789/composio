@@ -1,0 +1,48 @@
+{
+  "one_liner": "AI-powered meeting transcription and note-taking service with automated summaries, action items, and speaker identification.",
+  "auth_methods": [
+    {
+      "method": "Token",
+      "notes": "Bearer token authentication using API keys generated from the Developer tab in account settings"
+    },
+    {
+      "method": "OAuth2",
+      "notes": "OAuth 2.0 available for Enterprise accounts requiring client credentials from account manager. Used for the MCP server integration."
+    }
+  ],
+  "self_serve": "partnership-contact-sales",
+  "self_serve_notes": "The Public API is restricted to Enterprise plan workspaces only. Not available on free Basic tier or individual Pro/Business subscriptions. Organizations must contact sales team for custom pricing and Enterprise contract setup before API access is granted.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "medium",
+    "notes": "REST API with endpoints for channels, conversations, transcripts, audio, action items, insights, outlines, and workspace details. Also supports webhooks for real-time notifications. Includes cursor-based pagination."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://mcp.otter.ai/mcp"
+  },
+  "buildability": "buildable-with-caveats",
+  "main_blocker": "API access requires Enterprise plan with sales contact - not self-serve accessible for developers",
+  "evidence": [
+    {
+      "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+      "supports": "API documentation showing Bearer token auth, Enterprise-only access, rate limits of 10 req/sec, and endpoints for channels, conversations, transcripts, action items"
+    },
+    {
+      "url": "https://mcp.otter.ai/mcp",
+      "supports": "Official MCP server endpoint with OAuth authentication for AI assistants to access meeting transcripts"
+    },
+    {
+      "url": "https://github.com/api-evangelist/otter-ai",
+      "supports": "Third-party documentation repository confirming API existence and structure"
+    }
+  ],
+  "confidence": 0.9,
+  "flags": [
+    "enterprise-only-api",
+    "official-mcp-exists",
+    "requires-sales-contact",
+    "oauth-and-bearer-token",
+    "webhook-support"
+  ]
+}

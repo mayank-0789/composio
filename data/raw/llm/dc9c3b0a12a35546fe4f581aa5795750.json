@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://github.com/firecrawl/firecrawl-mcp-server/",
+  "reason": "Firecrawl has an official MCP server implementation that exposes its web scraping, crawling, and search capabilities over the Model Context Protocol. The server is available both as a hosted remote endpoint (https://mcp.firecrawl.dev/v2/mcp) and as an npm package (firecrawl-mcp-server) that can be run locally via npx. Official documentation is available at docs.firecrawl.dev/mcp-server and the source code is hosted at github.com/firecrawl/firecrawl-mcp-server/."
+}

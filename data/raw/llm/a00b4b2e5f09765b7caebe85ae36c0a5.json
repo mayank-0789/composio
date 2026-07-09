@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://premium.mcp.pitchbook.com/mcp",
+  "reason": "PitchBook has an official Model Context Protocol (MCP) server that provides AI agents with standardized access to private market data. The server is maintained by PitchBook and offers Premium access at https://premium.mcp.pitchbook.com/mcp (requires active PitchBook license) as well as an Essential connector with limited data access. The server enables tools for accessing company details, financials, deals, and investor information."
+}

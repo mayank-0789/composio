@@ -1,0 +1,45 @@
+{
+  "answer": "A Model Context Protocol (MCP) server for YouTube transcripts is a bridge that allows AI assistants (like Claude Desktop) to programmatically fetch, search, and analyze video content [1][2][3]. These servers typically use tools like yt-dlp, YouTube.js, or the YouTube API to extract text without requiring complex OAuth authentication [1][3][4].\n\nTo use one, you add the server configuration to your MCP client's configuration file (e.g., `claude_desktop_config.json`). An example configuration using `npx` for a common implementation looks like this:\n\n```json\n{\n  \"mcpServers\": {\n    \"youtube-transcript\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@gabriel3615/mcp-youtube-transcript\"]\n    }\n  }\n}\n```\n\nMost servers provide tools such as `get_transcript` (fetching raw text), `get_timed_transcript` (including timestamps), and `get_video_info` (for metadata) [1][5][6][4]. Once configured and the client is restarted, the AI can call these tools directly to process video content [2][6].",
+  "results": [
+    {
+      "title": "suckerfish/yttranscript_mcp",
+      "url": "https://github.com/suckerfish/yttranscript_mcp",
+      "snippet": ""
+    },
+    {
+      "title": "toorop/youtube-transcript-mcp",
+      "url": "https://github.com/toorop/youtube-transcript-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "acehoss/youtube-mcp-server",
+      "url": "https://github.com/acehoss/youtube-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "thisis-romar/mcp-youtube-transcript-pro",
+      "url": "https://github.com/thisis-romar/mcp-youtube-transcript-pro",
+      "snippet": ""
+    },
+    {
+      "title": "flying3615/mcp-youtube-transcript",
+      "url": "https://github.com/flying3615/mcp-youtube-transcript",
+      "snippet": ""
+    },
+    {
+      "title": "Anbus2011/mcp-youtube-transcript",
+      "url": "https://github.com/anbus2011/mcp-youtube-transcript",
+      "snippet": ""
+    },
+    {
+      "title": "kyong0612/youtube-mcp",
+      "url": "https://github.com/kyong0612/youtube-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "mourad-ghafiri/youtube-mcp-server",
+      "url": "https://github.com/mourad-ghafiri/youtube-mcp-server",
+      "snippet": ""
+    }
+  ]
+}

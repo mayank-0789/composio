@@ -1,0 +1,45 @@
+{
+  "answer": "Gladly does not offer a free tier for its enterprise-focused developer API. API access is intended for customers with existing platform subscriptions, which typically require annual contracts and multi-seat minimums [1][2][3]. While Gladly recently launched a version for smaller businesses via a Shopify app—which includes a 30-day trial and limited AI interactions—it does not provide a public self-serve developer plan [4]. Developers can test integrations in a secure sandbox environment at https://{organization}.gladly.qa once they have an active account with the necessary API User permissions [5][6].",
+  "results": [
+    {
+      "title": "Gladly review & pricing (2026) | Dirr",
+      "url": "https://dirr.ai/tools/gladly",
+      "snippet": ""
+    },
+    {
+      "title": "Gladly Pricing: Plans, Costs & Best Alternatives (2026)",
+      "url": "https://hiverhq.com/blog/gladly-pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Gladly Pricing 2026 | Plans, Costs & Hidden Fees",
+      "url": "https://useconverge.app/pricing/gladly",
+      "snippet": ""
+    },
+    {
+      "title": "Gladly pricing in 2026: plans, AI costs, and real totals | eesel AI",
+      "url": "https://www.eesel.ai/blog/gladly-pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Gladly API",
+      "url": "https://developer.gladly.com/rest/index.html",
+      "snippet": ""
+    },
+    {
+      "title": "Gladly developer platform: APIs, SDKs & integrations | Gladly",
+      "url": "https://www.gladly.com/app-platform/?ss_ad_code=mbc_introduce",
+      "snippet": ""
+    },
+    {
+      "title": "Customer experience AI built for LTV | Gladly",
+      "url": "https://www.gladly.com/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Gladly developer platform: APIs, SDKs & integrations | Gladly",
+      "url": "https://www.gladly.ai/gladly-developer-platform/",
+      "snippet": ""
+    }
+  ]
+}

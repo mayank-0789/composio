@@ -1,0 +1,45 @@
+{
+  "answer": "The Snowflake-managed MCP server is a fully managed service that allows AI agents to securely interact with Snowflake data and Cortex AI services without needing separate infrastructure [1][2]. It acts as a governed gateway, exposing tools like Cortex Analyst, Cortex Search, Cortex Agents, and SQL execution while enforcing Snowflake's existing OAuth authentication and role-based access control [1][3].\n\nTo create an MCP server, use the CREATE MCP SERVER command with a YAML specification defining the desired tools [4].\n\n```sql\nCREATE MCP SERVER my_mcp_server\n  FROM SPECIFICATION $$\n    tools:\n      - name: \"my-search\"\n        type: \"CORTEX_SEARCH_SERVICE_QUERY\"\n        identifier: \"database.schema.service_name\"\n        description: \"Search service description\"\n        title: \"Search\"\n  $$;\n```\n\nThis managed service supports the MCP revision 2025-11-25 [1]. Users should avoid deprecated community-run projects in favor of this official, Snowflake-supported solution [5].",
+  "results": [
+    {
+      "title": "Snowflake-managed MCP server",
+      "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents-mcp.md",
+      "snippet": ""
+    },
+    {
+      "title": "Snowflake MCP Server: Enterprise AI Agents Guide",
+      "url": "https://dataengineerhub.blog/articles/snowflake-mcp-server-agentic-ai-guide-2025",
+      "snippet": ""
+    },
+    {
+      "title": "Snowflake Cortex Agents + MCP: Exposing agents to external AI clients via Snowflake MCP",
+      "url": "https://www.snowflake.com/en/webinars/virtual-hands-on-lab/snowflake-cortex-agents-mcp-exposing-agents-to-external-ai-clients-via-snowflake-mcp-2026-07-09/",
+      "snippet": ""
+    },
+    {
+      "title": "CREATE MCP SERVER | Snowflake Documentation",
+      "url": "https://docs.snowflake.com/en/en/sql-reference/sql/create-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Snowflake-Labs/mcp",
+      "url": "http://github.com/Snowflake-Labs/mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Snowflake and MCP: The Foundation for Scalable Agentic Data Workflows | by Vikas Malik | Snowflake Builders Blog: Data Engineers, App Developers, AI, & Data Science | Medium",
+      "url": "https://medium.com/snowflake/snowflake-and-mcp-the-foundation-for-scalable-agentic-data-workflows-651e97182375",
+      "snippet": ""
+    },
+    {
+      "title": "Model Context Protocol (MCP): Bridging Agentic AI and Snowflake Data Systems  - Hakkoda",
+      "url": "https://hakkoda.io/model-context-protocol/",
+      "snippet": ""
+    },
+    {
+      "title": "isaacwasserman/mcp-snowflake-server",
+      "url": "https://github.com/isaacwasserman/mcp-snowflake-server?tab=readme-ov-file",
+      "snippet": ""
+    }
+  ]
+}

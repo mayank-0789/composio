@@ -1,0 +1,54 @@
+{
+  "one_liner": "Monday.com offers a broad, self-serve GraphQL API with token/OAuth authentication and an official hosted/local MCP server, making it readily buildable for AI agent toolkits.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Personal API token from profile/Developers section, sent in Authorization header"
+    },
+    {
+      "method": "OAuth2",
+      "notes": "OAuth access tokens with scoped permissions for apps/integrations"
+    },
+    {
+      "method": "Token",
+      "notes": "Short-lived tokens (5 min) for integration recipes and seamless SDK-based auth for view apps"
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Free developer accounts can be created solely for API/app development without a paid subscription. Free plan users get 1,000 API calls/day; developer accounts get high complexity-based rate limits (1,000,000 complexity points/min in playground). Personal API tokens are generated directly from account settings with no approval process needed.",
+  "api_surface": {
+    "type": "GraphQL",
+    "breadth": "broad",
+    "notes": "Single GraphQL endpoint (api.monday.com/v2) covering boards, items, users, docs, files, webhooks, apps framework, etc."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://developer.monday.com/apps/docs/mcp"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://developer.monday.com/api-reference/docs/authentication",
+      "supports": "Token-based auth via Authorization header, personal API tokens, OAuth"
+    },
+    {
+      "url": "https://developer.monday.com/apps/docs/choosing-auth",
+      "supports": "Four auth methods: seamless SDK, short-lived tokens, OAuth, global API token"
+    },
+    {
+      "url": "https://developer.monday.com/api-reference/docs/getting-started",
+      "supports": "Self-serve developer account creation, GraphQL endpoint details"
+    },
+    {
+      "url": "https://developer.monday.com/api-reference/docs/rate-limits",
+      "supports": "Free plan API limits and complexity-based rate limiting"
+    },
+    {
+      "url": "https://monday.com/pricing",
+      "supports": "Free plan includes API access"
+    }
+  ],
+  "confidence": 0.9,
+  "flags": []
+}

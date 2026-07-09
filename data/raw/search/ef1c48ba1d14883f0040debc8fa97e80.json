@@ -1,0 +1,45 @@
+{
+  "answer": "Ecwid API requests are authorized using OAuth 2.0. You must provide an access token as a Bearer token in the Authorization header of your HTTP request [1][2]. Passing tokens via query parameters is disabled [2].\n\nFor custom, single-store applications, you can skip the OAuth flow and use the pre-generated access tokens found in your app dashboard [1][3]. For external or public apps, you must exchange a temporary code for an access token via a POST request to https://my.ecwid.com/api/oauth/token [4][5].\n\nExample request:\n\n```http\nGET /api/v3/{store_id}/profile HTTP/1.1\nHost: app.ecwid.com\nAuthorization: Bearer {access_token}\n```",
+  "results": [
+    {
+      "title": "Make your first API request | Ecwid Documentation",
+      "url": "https://docs.ecwid.com/get-started/make-your-first-api-request",
+      "snippet": ""
+    },
+    {
+      "title": "Discontinued tokens passing in query params of API calls | Changelog | Ecwid Documentation",
+      "url": "https://docs.ecwid.com/changelog/march-2025/march-20/discontinued-tokens-passing-in-query-params-of-api-calls",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://docs.ecwid.com/get-started/set-up-your-dev-environment-in-ecwid",
+      "snippet": ""
+    },
+    {
+      "title": "Native and external apps | Ecwid Documentation",
+      "url": "https://docs.ecwid.com/launch-apps/native-and-external-apps",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://docs.ecwid.com/changelog/march-2025/march-20/oauth-for-public-apps-get-request-type-changed-to-post",
+      "snippet": ""
+    },
+    {
+      "title": "REST API overview | REST API Reference | Ecwid Documentation",
+      "url": "https://docs.ecwid.com/api-reference",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://docs.ecwid.com/develop-apps/app-settings",
+      "snippet": ""
+    },
+    {
+      "title": "includes/_authentication.md at master · Ecwid/ecwid-api-docs",
+      "url": "https://github.com/Ecwid/ecwid-api-docs/blob/master/includes/_authentication.md",
+      "snippet": ""
+    }
+  ]
+}

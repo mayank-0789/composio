@@ -1,0 +1,46 @@
+{
+  "one_liner": "Zoho Cliq offers a broad, self-serve REST API (v2/v3) secured via Zoho OAuth 2.0, with an official MCP server configurable through the Zoho MCP console, making it readily buildable for agent toolkits.",
+  "auth_methods": [
+    {
+      "method": "OAuth2",
+      "notes": "Standard Zoho OAuth 2.0 via Zoho API Console; register app for Client ID/Secret, obtain access token, use 'Zoho-oauthtoken' Bearer-style prefix in Authorization header."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Free tier includes developer API access; register application in Zoho API Console to self-serve Client ID/Secret and OAuth tokens, no sales contact needed.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "REST API v3 (and v2) covering messages, channels, chats, files, bots, reminders, slash commands, etc. Also has OpenAPI spec and a serverless developer platform for building extensions/bots."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://www.zoho.com/cliq/help/platform/getting-started-with-cliq-platform.html"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://www.zoho.com/cliq/help/restapi/v3/introduction/",
+      "supports": "REST API v3 overview and authentication details"
+    },
+    {
+      "url": "https://www.zoho.com/cliq/help/restapi/v3/oauth/",
+      "supports": "OAuth 2.0 authentication flow and scopes"
+    },
+    {
+      "url": "https://www.zoho.com/cliq/help/restapi/v3/registerclient/",
+      "supports": "Self-serve app registration in Zoho API Console for Client ID/Secret"
+    },
+    {
+      "url": "https://www.zoho.com/cliq/pricing.html",
+      "supports": "Free tier includes developer API access"
+    },
+    {
+      "url": "https://www.zoho.com/cliq/help/platform/getting-started-with-cliq-platform.html",
+      "supports": "Zoho Cliq developer platform and MCP server configuration via Zoho MCP console"
+    }
+  ],
+  "confidence": 0.75,
+  "flags": []
+}

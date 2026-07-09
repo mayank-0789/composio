@@ -1,0 +1,45 @@
+{
+  "answer": "Lark uses an access token mechanism to authenticate API calls [1][2]. To authenticate, you must place your access token into the HTTP request header using the Bearer authentication scheme [3][1].\n\nThe header should be formatted as follows:\n\n`Authorization: Bearer <access_token>`\n\nThere are three primary types of access tokens available:\n- tenant_access_token (prefixed with t-): Used for performing actions as an app [3][1].\n- user_access_token (prefixed with u-): Used for performing actions on behalf of a specific user [3][1].\n- app_access_token (prefixed with a- or t-): Used for identifying the app itself [3][1].\n\nBelow is an example of an API request using a tenant_access_token:\n\n```bash\ncurl --location --request GET 'https://open.larksuite.com/open-apis/contact/v3/departments/od-64242a18099d3a31acd24d8fce8d9f9c' \\\n--header 'Authorization: REDACTED_EXAMPLE' \\\n--header 'Content-Type: application/json; charset=utf-8'\n```\n\nEach specific API endpoint documentation will specify which token type is required and how to obtain it [3][1].",
+  "results": [
+    {
+      "title": "",
+      "url": "https://open.larksuite.com/document/server-docs/getting-started/api-access-token/app-access-token-development-guide",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://open.larksuite.com/document/ukTMukTMukTM/uYTM5UjL2ETO14iNxkTN/terminology",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://open.larksuite.com/document/home/introduction-to-scope-and-authorization/access-credentials",
+      "snippet": ""
+    },
+    {
+      "title": "Documentation -  Lark Developer",
+      "url": "https://open.larksuite.com/document/uAjLw4CM/ukTMukTMukTM/authentication-management/access-token/get-user-access-token",
+      "snippet": ""
+    },
+    {
+      "title": "Documentation -  Lark Developer",
+      "url": "https://open.larksuite.com/document/common-capabilities/sso/web-application-end-user-consent/guide",
+      "snippet": ""
+    },
+    {
+      "title": "Documentation -  Lark Developer",
+      "url": "https://open.larksuite.com/document/common-capabilities/sso/api/obtain-oauth-code",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://open.larksuite.com/document/uAjLw4CM/ukTMukTMukTM/reference/authen-v1/user_info/get",
+      "snippet": ""
+    },
+    {
+      "title": "Documentation -  Lark Developer",
+      "url": "https://open.larksuite.com/document/uAjLw4CM/ukTMukTMukTM/authentication-management/access-token/refresh-user-access-token",
+      "snippet": ""
+    }
+  ]
+}

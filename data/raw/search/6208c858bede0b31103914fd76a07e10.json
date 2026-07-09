@@ -1,0 +1,45 @@
+{
+  "answer": "The Stripe Model Context Protocol (MCP) server allows AI agents to interact with the Stripe API and documentation using standardized function calling [1][2]. You can connect to Stripe’s remotely hosted MCP server at https://mcp.stripe.com or run it locally using the @stripe/mcp package [1][3][4].\n\nFor remote connections, OAuth is the recommended authentication method [1][5]. For local installations or agentic software, you can use a restricted API key as a bearer token [1][6].\n\nTo run the server locally via npx:\n```bash\nnpx -y @stripe/mcp --api-key=YOUR_STRIPE_SECRET_KEY\n```\n\nTo configure it in your MCP client configuration file:\n```json\n{\n  \"mcpServers\": {\n    \"stripe\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@stripe/mcp\", \"--api-key=YOUR_STRIPE_SECRET_KEY\"]\n    }\n  }\n}\n```\n\nThe server provides tools for managing customers, products, invoices, refunds, and balances, as well as searching Stripe’s documentation [1][7][4][8].",
+  "results": [
+    {
+      "title": "Model Context Protocol (MCP) | Stripe Documentation",
+      "url": "https://docs.stripe.com/mcp?locale=en-GB",
+      "snippet": ""
+    },
+    {
+      "title": "@stripe/mcp",
+      "url": "https://www.npmjs.com/package/@stripe/mcp",
+      "snippet": ""
+    },
+    {
+      "title": "ai/tools/modelcontextprotocol at main · stripe/ai · GitHub",
+      "url": "https://github.com/stripe/ai/tree/main/tools/modelcontextprotocol",
+      "snippet": ""
+    },
+    {
+      "title": "Stripe MCP Server - Official Model Context Protocol for AI Agents & Stripe API | a2a mcp",
+      "url": "https://a2a-mcp.org/entry/stripe-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Stripe MCP Server — Install & Setup — MCP.Directory",
+      "url": "https://mcp.directory/servers/stripe",
+      "snippet": ""
+    },
+    {
+      "title": "Model Context Protocol (MCP) | Stripe Documentation",
+      "url": "https://docs.stripe.com/mcp?mcp-client=claudecode",
+      "snippet": ""
+    },
+    {
+      "title": "Search code, repositories, users, issues, pull requests...",
+      "url": "https://github.com/stripe/agent-toolkit/tree/main/modelcontextprotocol",
+      "snippet": ""
+    },
+    {
+      "title": "Stripe MCP Server – Setup, Features & Integration Guide",
+      "url": "https://mcpserver.dev/s/stripe_si9ef3j",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "Yes, HubSpot provides free access to its developer platform and APIs. You can access the developer platform by assigning a free Developer seat to users in your account, which does not count toward your CRM seat limits [1]. All REST APIs are available for use via private or public app access tokens [2]. Free-tier accounts have a base API rate limit of 100 requests per 10 seconds and 250,000 requests per day [3]. You can also create up to 10 free developer test accounts to build and experiment without affecting production data [4].",
+  "results": [
+    {
+      "title": "Manage developer seats - HubSpot docs",
+      "url": "https://developers.hubspot.com/docs/apps/developer-platform/developer-seats",
+      "snippet": ""
+    },
+    {
+      "title": "Developer platform",
+      "url": "https://developers.hubspot.com/docs/apps/developer-platform/overview.md",
+      "snippet": ""
+    },
+    {
+      "title": "API usage guidelines and limits - HubSpot docs",
+      "url": "https://developers.hubspot.com/docs/developer-tooling/platform/usage-guidelines",
+      "snippet": ""
+    },
+    {
+      "title": "HubSpot Account Types - HubSpot docs",
+      "url": "https://developers.hubspot.com/docs/getting-started/account-types",
+      "snippet": ""
+    },
+    {
+      "title": "APIs by tier - HubSpot docs",
+      "url": "https://developers.hubspot.com/docs/developer-tooling/platform/apis-by-tier",
+      "snippet": ""
+    },
+    {
+      "title": "Marketing Software Pricing | HubSpot",
+      "url": "https://www.hubspot.com/pricing/marketing",
+      "snippet": ""
+    },
+    {
+      "title": "HubSpot Product & Services Catalog",
+      "url": "https://legal.hubspot.com/hubspot-product-and-services-catalog",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://developers.hubspot.com/docs?pass=1",
+      "snippet": ""
+    }
+  ]
+}

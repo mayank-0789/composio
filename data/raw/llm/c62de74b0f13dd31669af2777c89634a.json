@@ -1,0 +1,54 @@
+{
+  "one_liner": "Help Scout offers a mature REST Mailbox API (OAuth2) and a separate Docs API (API key/Basic auth) for helpdesk data, gated behind paid plans, with a community MCP server already available.",
+  "auth_methods": [
+    {
+      "method": "OAuth2",
+      "notes": "Mailbox API v2 uses OAuth2 Authorization Code (for third-party integrations) and Client Credentials (for internal integrations) flows. Requires creating an OAuth2 app under Your Profile > My apps to get client id/secret. All requests need Authorization: Bearer header."
+    },
+    {
+      "method": "API key",
+      "notes": "Separate Docs API uses per-user API keys passed via HTTP Basic Auth (API key as username, dummy password). Requires 'Docs: Create new, edit settings & Collections' permission granted by account owner/admin."
+    },
+    {
+      "method": "Other",
+      "notes": "Restricted Docs sites use a custom JWT-based callback authentication flow for embedding restricted help content."
+    }
+  ],
+  "self_serve": "paid-plan",
+  "self_serve_notes": "API access (Mailbox API) is not available on Help Scout's Free plan; developers must upgrade to at least the Plus plan to use the API. OAuth app creation and Docs API key generation are self-service within the account UI once on a qualifying paid plan, but require an active invited user and (for Docs API) specific permission granted by an admin.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "medium",
+    "notes": "Mailbox API v2 covers conversations, customers, users, inboxes, organizations, etc. Docs API v1 covers help-site collections/articles separately. No GraphQL; SDKs exist (e.g., PHP) but core surface is REST."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://github.com/helpscout/helpscout-api-php"
+  },
+  "buildability": "buildable-with-caveats",
+  "main_blocker": "API access requires a paid Help Scout plan (Plus or higher), and OAuth2 app credentials must be tied to an active invited user, adding setup friction beyond simple self-serve API key issuance.",
+  "evidence": [
+    {
+      "url": "https://developer.helpscout.com/mailbox-api/overview/authentication/",
+      "supports": "OAuth2 Authorization Code and Client Credentials flows, Bearer token auth, OAuth2 app creation via My Apps"
+    },
+    {
+      "url": "https://developer.helpscout.com/docs-api/",
+      "supports": "Docs API uses per-user API key via HTTP Basic Auth, permission requirements, rate limits"
+    },
+    {
+      "url": "https://developer.helpscout.com/docs-api/restricted-docs/",
+      "supports": "Restricted Docs sites use custom JWT-based callback authentication"
+    },
+    {
+      "url": "https://www.helpscout.com/pricing/",
+      "supports": "API access reserved for paid plans (Plus and above), not available on Free plan"
+    }
+  ],
+  "confidence": 0.75,
+  "flags": [
+    "Existing MCP server found is a community/third-party npm package (help-scout-mcp-server), not an official Help Scout-maintained MCP server; verify maintenance status and security before production use.",
+    "Paid plan requirement (Plus tier) for API access may limit self-serve onboarding for trial/free-tier agent use cases.",
+    "Two distinct APIs (Mailbox OAuth2 vs Docs API key) with different auth mechanisms increases integration complexity for a unified toolkit."
+  ]
+}

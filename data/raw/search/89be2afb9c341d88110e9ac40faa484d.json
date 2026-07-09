@@ -1,0 +1,45 @@
+{
+  "answer": "The Ecwid MCP server is a standardized integration that allows AI agents, such as those in Claude, ChatGPT, or Cursor, to interact directly with your Ecwid store [1][2]. It uses the Model Context Protocol to expose store capabilities—such as searching products, auditing orders, managing customer profiles, and updating inventory—as executable tools [2][3].\n\nYou can connect your store using providers like viaSocket or Vinkius, which supply the necessary MCP endpoint and handle authentication [1][3]. These integrations allow you to manage your e-commerce operations using natural language without using the Ecwid control panel [2].",
+  "results": [
+    {
+      "title": "Ecwid MCP | viaSocket",
+      "url": "https://viasocket.com/mcp/ecwid-by-lightspeed",
+      "snippet": ""
+    },
+    {
+      "title": "Ecwid MCP - Manage Store Inventory & Orders",
+      "url": "https://vinkius.com/apps/ecwid-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "How to Use Ecwid MCP Server with Mastra AI",
+      "url": "https://vinkius.com/apps/ecwid-mcp/with/mastra-ai",
+      "snippet": ""
+    },
+    {
+      "title": "Understanding MCP servers",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts",
+      "snippet": ""
+    },
+    {
+      "title": "server | MCP TypeScript SDK",
+      "url": "https://ts.sdk.modelcontextprotocol.io/documents/server.html",
+      "snippet": ""
+    },
+    {
+      "title": "Architecture overview - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/learn/architecture",
+      "snippet": ""
+    },
+    {
+      "title": "modelcontextprotocol/servers",
+      "url": "https://github.com/modelcontextprotocol/servers?alltoolsdirectory=",
+      "snippet": ""
+    },
+    {
+      "title": "Architecture - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/specification/2025-06-18/architecture",
+      "snippet": ""
+    }
+  ]
+}

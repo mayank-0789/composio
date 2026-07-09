@@ -1,0 +1,45 @@
+{
+  "answer": "An Ecwid MCP server is a specialized tool that connects your Ecwid e-commerce store to AI assistants like Claude, ChatGPT, or Cursor using the Model Context Protocol [1][2]. These servers allow AI agents to manage your store directly via natural language, enabling tasks like searching products, updating inventory, auditing orders, and managing customer profiles without requiring access to the Ecwid control panel [2][3].\n\nThere are two primary ways to access this functionality:\n\nViaSocket provides an MCP server that handles authentication and API limits to connect Ecwid actions to AI platforms [1]. \n\nVinkius offers an Ecwid MCP server that exposes 10 specific tools for e-commerce management [2][3]. This implementation is designed to work natively with AI clients or frameworks like Mastra AI, allowing for complex workflow orchestration [3]. \n\nYou generally configure these by obtaining an MCP endpoint or token provided by the service and adding it to your AI client's configuration [1][3]. These integrations eliminate the need for custom middleware by providing a standardized interface for your LLM to perform read and write operations on your store data [2][3].",
+  "results": [
+    {
+      "title": "Ecwid MCP | viaSocket",
+      "url": "https://viasocket.com/mcp/ecwid-by-lightspeed",
+      "snippet": ""
+    },
+    {
+      "title": "Ecwid MCP - Manage Store Inventory & Orders",
+      "url": "https://vinkius.com/apps/ecwid-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "How to Use Ecwid MCP Server with Mastra AI",
+      "url": "https://vinkius.com/apps/ecwid-mcp/with/mastra-ai",
+      "snippet": ""
+    },
+    {
+      "title": "Build an MCP server - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/develop/build-server",
+      "snippet": ""
+    },
+    {
+      "title": "Understanding MCP servers - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts",
+      "snippet": ""
+    },
+    {
+      "title": "server | MCP TypeScript SDK",
+      "url": "https://ts.sdk.modelcontextprotocol.io/documents/server.html",
+      "snippet": ""
+    },
+    {
+      "title": "modelcontextprotocol/python-sdk",
+      "url": "http://github.com/modelcontextprotocol/python-sdk?tab=readme-ov-file",
+      "snippet": ""
+    },
+    {
+      "title": "modelcontextprotocol/servers",
+      "url": "https://github.com/modelcontextprotocol/servers?alltoolsdirectory=",
+      "snippet": ""
+    }
+  ]
+}

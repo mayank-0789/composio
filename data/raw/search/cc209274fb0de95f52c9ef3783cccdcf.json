@@ -1,0 +1,45 @@
+{
+  "answer": "There are multiple independent projects named Sherlock MCP, each serving a different purpose within the Model Context Protocol ecosystem.\n\nSherlock MCP for.NET [1][2] is a tool for developers that uses reflection to provide LLMs with deep introspection capabilities into.NET assemblies. It offers over 30 tools for analyzing types, members, metadata, and project structures. You can install it via NuGet and configure it in clients like Claude Desktop or Cursor using the command `sherlock-mcp`.\n\nA separate project, often found in OSINT-focused repositories [3][4], provides an MCP server for username enumeration. It integrates the standard Sherlock tool to allow AI assistants to search for social media profiles across hundreds of platforms.\n\nAdditionally, an official MCP server exists for the Covertlabs platform [5], which provides search tools specifically for infostealer intelligence databases, including lookups by email, IP, and malware family.",
+  "results": [
+    {
+      "title": "jcucci/dotnet-sherlock-mcp",
+      "url": "https://github.com/jcucci/dotnet-sherlock-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "NuGet Gallery\n        | Sherlock.MCP.Server.osx-x64 2.6.0",
+      "url": "https://www.nuget.org/packages/Sherlock.MCP.Server.osx-x64/2.6.0",
+      "snippet": ""
+    },
+    {
+      "title": "Burnsedia/sherlock-mcp",
+      "url": "https://github.com/Burnsedia/sherlock-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "frishtik/osint-tools-mcp-server",
+      "url": "https://github.com/frishtik/osint-tools-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "H4RR1SON/sherlock-mcp",
+      "url": "https://github.com/H4RR1SON/sherlock-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Understanding MCP servers",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts",
+      "snippet": ""
+    },
+    {
+      "title": "Architecture overview - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/learn/architecture",
+      "snippet": ""
+    },
+    {
+      "title": "README.md at main · jcucci/dotnet-sherlock-mcp",
+      "url": "https://github.com/jcucci/dotnet-sherlock-mcp/blob/main/README.md",
+      "snippet": ""
+    }
+  ]
+}

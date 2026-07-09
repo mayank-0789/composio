@@ -1,0 +1,45 @@
+{
+  "answer": "Apify is a self-serve platform for web scraping and automation that provides a permanent free tier [1][2][3]. This tier requires no credit card and includes $5 in monthly platform credits that reset each billing cycle and do not roll over [4][2]. When credits are exhausted, the platform blocks further service usage until the next cycle [1][2]. Developers get full access to the Apify API and Store, though free tier proxy usage is limited to the platform [1][2][5]. Paid tiers start at $29/month and include higher resource limits and priority support [1][4].",
+  "results": [
+    {
+      "title": "Apify pricing - plans for data collection at any scale · Apify",
+      "url": "https://apify.com/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Apify Free Tier Pricing 2026: What Can You Do with $5 Credits? | Use Apify",
+      "url": "https://use-apify.com/docs/what-is-apify/apify-free-plan",
+      "snippet": ""
+    },
+    {
+      "title": "Apify — Pricing, Features & Score | Agentic Index",
+      "url": "https://agenticindex.io/vendors/apify",
+      "snippet": ""
+    },
+    {
+      "title": "Apify Pricing 2026: Real Costs, Free Limits & Hidden Fees | Use Apify",
+      "url": "https://use-apify.com/docs/what-is-apify/apify-pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Apify General Terms and Conditions | Apify Documentation",
+      "url": "https://docs.apify.com/legal/general-terms-and-conditions?fpr=lklf0",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://apify.com/pricing?fpr=home",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing and costs | Platform | Apify Documentation",
+      "url": "https://docs.apify.com/platform/actors/publishing/monetize/pricing-and-costs",
+      "snippet": ""
+    },
+    {
+      "title": "Apify Pricing Explained | Try Apify",
+      "url": "https://tryapify.com/docs/pricing",
+      "snippet": ""
+    }
+  ]
+}

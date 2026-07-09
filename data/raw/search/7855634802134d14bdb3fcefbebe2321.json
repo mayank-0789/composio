@@ -1,0 +1,45 @@
+{
+  "answer": "The SE Ranking MCP server is a middleware implementation that connects AI assistants like Claude Desktop, Cursor, and Claude Code to SE Ranking’s SEO data and project management APIs [1][2]. It allows users to perform tasks such as keyword research, backlink analysis, website audits, and rank tracking using natural language [1][3].\n\nThe server supports two primary API tokens:\n- Data API: Uses `DATA_API_TOKEN` (UUID) for tools prefixed with `DATA_` (e.g., keyword research, backlinks, audits) [1][2].\n- Project API: Uses `PROJECT_API_TOKEN` (40-char hex) for tools prefixed with `PROJECT_` (e.g., rank tracking, project management) [1][2].\n\nYou can deploy the server via Docker for stability or run it as a local Node.js server for development [2]. Once configured, AI clients use these tools via the Model Context Protocol’s JSON-RPC 2.0 standard to fetch live SEO data directly within the chat interface [4][5].",
+  "results": [
+    {
+      "title": "README.md at main · seranking/seo-data-api-mcp-server",
+      "url": "https://github.com/seranking/seo-data-api-mcp-server/blob/main/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "SE Ranking MCP Server | Conare",
+      "url": "https://conare.ai/marketplace/mcp/se-ranking",
+      "snippet": ""
+    },
+    {
+      "title": "TeamDay-AI/se-ranking-mcp",
+      "url": "https://github.com/TeamDay-AI/se-ranking-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "What Is MCP (Model Context Protocol)? How It Works for SEO [2026]",
+      "url": "https://theseomcp.com/what-is-mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "Finseo MCP Server — AI Visibility for Claude Desktop, Cursor & ChatGPT | Finseo | Finseo",
+      "url": "https://www.finseo.ai/developers/mcp",
+      "snippet": ""
+    },
+    {
+      "title": "mrgoonie/seo-insights-mcp-server",
+      "url": "https://github.com/mrgoonie/seo-insights-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Architecture overview - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/learn/architecture",
+      "snippet": ""
+    },
+    {
+      "title": "FetchSERP MCP Server: SEO and SERP Intelligence API — MCP Server — MCP Catalog",
+      "url": "https://mcp-hub.ink/servers/fetchserp/",
+      "snippet": ""
+    }
+  ]
+}

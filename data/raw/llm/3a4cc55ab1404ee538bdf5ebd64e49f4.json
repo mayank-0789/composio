@@ -1,0 +1,55 @@
+{
+  "one_liner": "A free messaging platform offering Bot API (token-based), user account MTProto API (phone + auth_key), and paid Gateway API for verification codes.",
+  "auth_methods": [
+    {
+      "method": "Token",
+      "notes": "Bot API uses bot tokens obtained from BotFather; completely free with no limits."
+    },
+    {
+      "method": "Other",
+      "notes": "User account authentication via MTProto: phone number → auth.sendCode → auth.signIn flow, with optional 2FA via SRP protocol (auth.checkPassword). Auth_key_id encryption-based. QR code and passkey flows also supported."
+    },
+    {
+      "method": "Token",
+      "notes": "Gateway API (for verification codes) uses access token passed in header or as parameter; paid credit-based system via Fragment."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Bot API is completely self-serve and free with no restrictions. User MTProto API is also self-serve via phone authentication. Gateway API requires purchasing credits but setup is self-serve.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Multiple API surfaces: Bot API (REST, broad messaging/payments/mini-apps features), MTProto API (native protocol for full user account access including private messages, contacts, media, groups), and Gateway API (REST, for sending verification codes). Bot API is most common for agent integrations."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://github.com/search?q=mcp-telegram"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://core.telegram.org/api/auth",
+      "supports": "MTProto user authentication flow using phone number, auth_key_id, and optional 2FA via SRP"
+    },
+    {
+      "url": "https://core.telegram.org/bots/API",
+      "supports": "Bot API is free with no subscription fees, message costs, or limits"
+    },
+    {
+      "url": "https://core.telegram.org/gateway/api",
+      "supports": "Gateway API uses access token authentication and paid credit-based system"
+    },
+    {
+      "url": "https://core.telegram.org/api",
+      "supports": "Documentation for Telegram's native MTProto API with full user account capabilities"
+    }
+  ],
+  "confidence": 0.95,
+  "flags": [
+    "multiple-api-surfaces",
+    "existing-mcp-implementations",
+    "free-bot-api",
+    "paid-gateway-option"
+  ]
+}

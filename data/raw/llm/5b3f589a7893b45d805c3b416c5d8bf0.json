@@ -1,0 +1,117 @@
+{
+  "verdicts": [
+    {
+      "field": "existing_mcp.exists",
+      "status": "contradicted",
+      "note": "The record claims exists='yes' with url='https://github.com/mharnett/linkedin-ads-mcp'. However, this GitHub URL is a third-party developer's repository, NOT an official LinkedIn MCP server. The evidence contains only official LinkedIn Microsoft Learn documentation about the LinkedIn Marketing API itself. A dedicated MCP server would need to be documented as such; a third-party GitHub repo implementing an MCP wrapper is not evidence of an official MCP server existing. Per instructions, this should be marked exists='no' and the url dropped."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence from getting-started page confirms 'OAuth 2.0 Scopes... Marketing APIs require the rw_ads scope' and mentions 'r_ads, rw_ads' scopes. The lms-generate-an-access-token page describes 3-legged OAuth flow. This aligns with the record's OAuth2 method with notes about 3-legged authorization code flow and r_ads/rw_ads scopes."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Evidence clearly supports 'admin-approval'. The marketing-tiers page shows Development tier requires applying 'Visit your app's Product tab in the Developer Portal to apply for the Advertising API' and Standard tier requires 'Click on View Ad Accounts setting... LinkedIn reserves the right to review applications and select partners at its discretion'. The getting-started page notes 'This step is only required for a developer application with development tier access' and links to 'Increasing Access' which mentions manual vetting. The increasing-access page states access requires meeting 'additional qualification criteria evaluated by LinkedIn'."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "supported",
+      "note": "The marketing-tiers evidence confirms Development tier allows 'Read: No limits... Edit: Make updates related to up to 5 ad accounts' and Standard tier requires clicking a setting in Developer Portal. The getting-started page confirms the 5-account mapping requirement for dev tier. The increasing-access page confirms manual review/approval process. No paid pricing tier is mentioned in evidence."
+    },
+    {
+      "field": "api_surface.type",
+      "status": "supported",
+      "note": "Evidence consistently refers to REST API endpoints. The ads-overview page mentions 'APIs provide all features... creation and management of ad accounts, campaign groups, campaigns, creatives, ad types, and analytics' via API calls. Getting-started references API endpoints."
+    },
+    {
+      "field": "api_surface.breadth",
+      "status": "supported",
+      "note": "The ads-overview evidence confirms broad coverage: 'Ad Accounts, Account Users, Campaign Groups, Campaigns' and mentions 'all features available in LinkedIn Campaign Manager, including creation and management of ad accounts, campaign groups, campaigns, creatives, ad types, and analytics.' This supports 'broad' classification."
+    },
+    {
+      "field": "api_surface.notes",
+      "status": "supported",
+      "note": "Evidence from ads-overview confirms coverage of 'ad accounts, campaign groups, campaigns, creatives, ad types, and analytics' which aligns with the record's notes. The mention of versioning and REST endpoints is consistent with documented API structure."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "The record states 'buildable-with-caveats' which is appropriate given the evidence. The marketing-tiers page shows Development tier is available by applying through Developer Portal (providing some immediate access), but with limitations (5 ad accounts, requires mapping). This is not 'blocked' (some access is available) but has caveats (manual approval for write scopes, tier limitations)."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "Evidence strongly supports this. Getting-started page states 'Marketing APIs require the rw_ads scope' and notes ad account mapping 'is only required for a developer application with development tier access'. Marketing-tiers shows Standard tier requires manual approval and 'LinkedIn reserves the right to review applications'. Increasing-access confirms 'additional qualification criteria evaluated by LinkedIn' and manual vetting process."
+    },
+    {
+      "field": "evidence",
+      "status": "supported",
+      "note": "All five evidence URLs are from official Microsoft Learn LinkedIn Marketing documentation and support the claims made in the record about OAuth, tiers, access tokens, API coverage, and manual vetting requirements."
+    },
+    {
+      "field": "confidence",
+      "status": "supported",
+      "note": "0.75 confidence seems reasonable given comprehensive official documentation is provided, though some specific implementation details (like exact header requirements) are partially documented in the excerpts."
+    },
+    {
+      "field": "flags",
+      "status": "supported",
+      "note": "All three flags are supported: admin-approval-required-for-write-scope (confirmed by getting-started and increasing-access pages), tiered-access-with-manual-review (confirmed by marketing-tiers page), and third-party-mcp-servers-exist-not-official (the GitHub URL is indeed a third-party MCP implementation, not official)."
+    }
+  ],
+  "revised": {
+    "id": 33,
+    "name": "LinkedIn Ads",
+    "website": "learn.microsoft.com/linkedin/marketing",
+    "category": "Marketing, Ads, Email and Social",
+    "one_liner": "LinkedIn Ads (Marketing/Advertising API) lets developers manage Campaign Manager ad accounts, campaigns, creatives, and analytics via a REST API secured with OAuth 2.0, but full access requires LinkedIn's manual developer vetting process.",
+    "auth_methods": [
+      {
+        "method": "OAuth2",
+        "notes": "3-legged OAuth 2.0 authorization code flow; requires r_ads/rw_ads scopes granted via LinkedIn Developer Portal app; access token sent as Bearer token plus a Linkedin-Version header on each request."
+      }
+    ],
+    "self_serve": "admin-approval",
+    "self_serve_notes": "Developers can self-register an app in the LinkedIn Developer Portal and get 'Development tier' access (unlimited read, up to 5 ad accounts) without payment, but this is gated by LinkedIn's app review/vetting for rw_ads scope. Scaling beyond dev tier (Standard tier) requires a manual support-ticket application and approval — no fully self-serve, instant, unrestricted access. No paid public pricing tier exists; it's a free but access-controlled program.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "Covers ad accounts, account users, campaign groups, campaigns, creatives, targeting, and analytics/reporting endpoints, versioned via Linkedin-Version header (e.g., https://api.linkedin.com/rest/adAccountUsers)."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "Access to write scopes (rw_ads) and scaling beyond the 5-account Development tier requires LinkedIn's manual app review/vetting and a support-ticket approval for Standard tier, so full self-serve automation is gated by LinkedIn approval rather than purely technical means.",
+    "evidence": [
+      {
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/getting-started?view=li-lms-2026-05",
+        "supports": "OAuth 2.0 with rw_ads/r_ads scopes required; dev tier limited to 5 ad accounts"
+      },
+      {
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/marketing-tiers?view=li-lms-2026-06",
+        "supports": "Access tiers (Development vs Standard) and approval process"
+      },
+      {
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/authentication/lms-generate-an-access-token?view=li-lms-2026-02",
+        "supports": "Access token generation process via OAuth"
+      },
+      {
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/ads-overview?view=li-lms-2026-03",
+        "supports": "Broad REST API surface covering ad accounts, campaigns, creatives, analytics"
+      },
+      {
+        "url": "https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access?view=li-lms-2025-06",
+        "supports": "Manual vetting/support ticket needed to increase access beyond development tier"
+      }
+    ],
+    "confidence": 0.75,
+    "flags": [
+      "admin-approval-required-for-write-scope",
+      "tiered-access-with-manual-review",
+      "third-party-mcp-servers-exist-not-official"
+    ]
+  }
+}

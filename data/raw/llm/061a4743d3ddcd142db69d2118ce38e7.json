@@ -1,0 +1,138 @@
+{
+  "verdicts": [
+    {
+      "field": "name",
+      "status": "supported",
+      "note": "Evidence confirms the product is named 'Firecrawl'."
+    },
+    {
+      "field": "website",
+      "status": "supported",
+      "note": "Evidence consistently references firecrawl.dev as the main website."
+    },
+    {
+      "field": "category",
+      "status": "supported",
+      "note": "Evidence shows Firecrawl is a web scraping/crawling API service, fitting 'Data, SEO and Scraping'."
+    },
+    {
+      "field": "one_liner",
+      "status": "supported",
+      "note": "Evidence confirms web scraping/crawling to LLM-ready markdown/JSON, self-serve API key signup, free tier, keyless mode, and references to MCP server documentation."
+    },
+    {
+      "field": "auth_methods[0] (API key)",
+      "status": "supported",
+      "note": "Evidence confirms Bearer token format 'Authorization: Bearer fc-YOUR-API-KEY' obtained from Firecrawl dashboard."
+    },
+    {
+      "field": "auth_methods[1] (OAuth2)",
+      "status": "unsupported",
+      "note": "Evidence mentions WorkOS ID-JAG for agent credential registration but does not describe OAuth2 as a standard auth method for developers. The MCP server OAuth mention is unclear. This appears to be a specialized agent integration, not standard OAuth2."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Evidence confirms self-serve-free tier with 1,000 monthly credits via signup or keyless mode."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "supported",
+      "note": "Evidence confirms 1,000 monthly credits free tier, keyless mode (no account, IP-capped, basic scrape/search only), and paid plans starting at $16/month."
+    },
+    {
+      "field": "api_surface.type",
+      "status": "supported",
+      "note": "Evidence confirms REST API endpoints."
+    },
+    {
+      "field": "api_surface.breadth",
+      "status": "supported",
+      "note": "Evidence shows endpoints for scrape, parse, batch/scrape, crawl, map, extract, search, deep-research/agent, browser sessions, and billing/usage, justifying 'medium' breadth."
+    },
+    {
+      "field": "api_surface.notes",
+      "status": "supported",
+      "note": "Evidence confirms listed endpoints and mentions Python and Node SDKs."
+    },
+    {
+      "field": "existing_mcp.exists",
+      "status": "unsupported",
+      "note": "The URL provided (https://docs.firecrawl.dev/mcp-server) points to Firecrawl's own documentation about MCP server usage, not to a dedicated third-party MCP server repository. The evidence shows Firecrawl exposes an MCP endpoint at https://mcp.firecrawl.dev/v2/mcp but this is Firecrawl's own service, not an independent MCP server project."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "contradicted",
+      "note": "The URL points to Firecrawl's documentation about using their service via MCP protocol, not to an independent MCP server implementation. This should not be marked as exists='yes'."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "Evidence confirms REST API available with self-serve signup (free tier or paid), making it buildable-now."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "No blockers evident; API is accessible with free tier or keyless mode."
+    },
+    {
+      "field": "evidence",
+      "status": "supported",
+      "note": "All evidence URLs are valid and support the claims made."
+    },
+    {
+      "field": "confidence",
+      "status": "supported",
+      "note": "0.9 confidence is appropriate given the comprehensive evidence."
+    }
+  ],
+  "revised": {
+    "id": 56,
+    "name": "Firecrawl",
+    "website": "firecrawl.dev",
+    "category": "Data, SEO and Scraping",
+    "one_liner": "Firecrawl is a web scraping/crawling API that turns websites into LLM-ready markdown/JSON, with self-serve API key signup, a free tier, and keyless rate-limited access.",
+    "auth_methods": [
+      {
+        "method": "API key",
+        "notes": "Bearer token format: Authorization: Bearer fc-YOUR-API-KEY, obtained from Firecrawl dashboard"
+      }
+    ],
+    "self_serve": "self-serve-free",
+    "self_serve_notes": "Free tier with 1,000 monthly credits available via signup (API key) or fully keyless mode (no account needed, IP-capped, basic scrape/search only). Paid plans start at $16/month for higher limits.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "medium",
+      "notes": "Endpoints for scrape, batch/scrape, crawl, map, extract, search, deep-research/agent, browser sessions, and billing/usage. SDKs available for Python and Node. MCP protocol endpoint available at https://mcp.firecrawl.dev/v2/mcp"
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-now",
+    "main_blocker": null,
+    "evidence": [
+      {
+        "url": "https://docs.firecrawl.dev/api-reference/v2-introduction",
+        "supports": "Bearer token auth via Authorization header, API key from dashboard, REST endpoints list (scrape, parse, crawl, map, search, agent, browser)"
+      },
+      {
+        "url": "https://firecrawl-firecrawl.mintlify.app/api-reference/introduction",
+        "supports": "Full REST API endpoint list including scrape, batch/scrape, crawl, map, extract, search, deep-research, billing; API key signup process"
+      },
+      {
+        "url": "https://www.firecrawl.dev/pricing.md",
+        "supports": "Free tier with 1,000 monthly credits, keyless mode, paid plans starting $16/month"
+      },
+      {
+        "url": "https://www.firecrawl.dev/blog/firecrawl-keyless-launch",
+        "supports": "Keyless mode allows CLI/MCP/SDK usage without API key or account, capped per IP"
+      },
+      {
+        "url": "https://docs.firecrawl.dev/sdks/python",
+        "supports": "Python SDK usage with API key or FIRECRAWL_API_KEY env var"
+      }
+    ],
+    "confidence": 0.9,
+    "flags": []
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "Authentication for Sherlock APIs depends on the specific service platform you are using.\n\nFor LCL Sherlock's payment services, security is maintained using a secret key provided upon subscription, which is used to generate a request signature to ensure message integrity and participant authentication [1][2]. You must include a keyVersion field in your requests to match the specific secret key version [1][2].\n\nFor the Sherlock platform managed via API tokens, you must first obtain a token by sending a POST request to the Token endpoint with your credentials or a GET request using an access key [3]. This token must then be passed as a Bearer token in the authorization header for subsequent API operations [3].\n\nFor Ansys Sherlock, communication with the gRPC server supports multiple transport modes, including mTLS for encrypted authentication, Windows Named User Authentication (WNUA) for local Windows connections, or an insecure mode [4].",
+  "results": [
+    {
+      "title": "Sherlock's Office JSON",
+      "url": "https://sherlocks-documentation.secure.lcl.fr/en/sherlocks-office-json.html",
+      "snippet": ""
+    },
+    {
+      "title": "Sherlock's Office SOAP",
+      "url": "https://sherlocks-documentation.secure.lcl.fr/en/sherlocks-office-soap.html",
+      "snippet": ""
+    },
+    {
+      "title": "Авторизация для работы с API",
+      "url": "https://support.sherlock.im/knowledge_base/item/292200",
+      "snippet": ""
+    },
+    {
+      "title": "Getting started | Ansys Developer Portal",
+      "url": "https://developer.ansys.com/docs/sherlock-apis-2026-r1/getting-started.md",
+      "snippet": ""
+    },
+    {
+      "title": "Reference documentation | Ansys Developer Portal",
+      "url": "https://developer.ansys.com/docs/sherlock-apis-2026-r1/sherlock-reference.md",
+      "snippet": ""
+    },
+    {
+      "title": "Getting started | Ansys Developer Portal",
+      "url": "https://developer.ansys.com/docs/sherlock-apis-2025-r2/getting-started.md",
+      "snippet": ""
+    },
+    {
+      "title": "cardValidateAuthentication",
+      "url": "https://sherlocks-documentation.secure.lcl.fr/en/data-dictionary/office/cardvalidateauthentication.html",
+      "snippet": ""
+    },
+    {
+      "title": "Reference documentation | Ansys Developer Portal",
+      "url": "https://developer.ansys.com/docs/sherlock-apis-2025-r1/sherlock-reference.md",
+      "snippet": ""
+    }
+  ]
+}

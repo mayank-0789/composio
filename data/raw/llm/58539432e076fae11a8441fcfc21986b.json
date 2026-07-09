@@ -1,0 +1,54 @@
+{
+  "one_liner": "Plaid provides REST API access to financial data including bank accounts, transactions, and identity verification with self-serve API keys and an official MCP server.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Plaid uses client_id and secret obtained from the Plaid Dashboard. These can be sent either in request body or as headers (PLAID-CLIENT-ID and PLAID-SECRET). Required for almost all API endpoints."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Plaid offers a free Sandbox environment for unlimited testing with test data. For production, US and Canada developers can use the free Trial plan supporting up to 10 connected items and access to core products. Beyond that, Pay-as-you-go pricing with no upfront commitments. Developers can create an account and obtain credentials directly from the Plaid Dashboard at dashboard.plaid.com.\"",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Plaid offers a comprehensive REST API with JSON over HTTP POST. The API covers multiple financial products including Auth (bank account/routing numbers), Transactions, Balance, Identity, Assets, Investments, Liabilities, and more. Extensive documentation available at plaid.com/docs/api."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://api.dashboard.plaid.com/mcp/"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://plaid.com/docs/api/index.html.md",
+      "supports": "REST API with JSON over HTTP, authentication via client_id and secret, comprehensive API reference documentation"
+    },
+    {
+      "url": "https://plaid.com/docs/api/products/auth/index.html.md",
+      "supports": "Auth API endpoints for bank account and routing number retrieval"
+    },
+    {
+      "url": "https://plaid.com/docs/account/billing/",
+      "supports": "Free Sandbox environment and Trial plan for production testing"
+    },
+    {
+      "url": "https://support.plaid.com/hc/en-us/articles/16194695660311-Can-I-use-Plaid-for-free",
+      "supports": "Free tier details: unlimited Sandbox testing, Trial plan with 10 connected items"
+    },
+    {
+      "url": "https://support.plaid.com/hc/en-us/articles/39994173227159-What-is-the-Plaid-Trial-plan",
+      "supports": "Trial plan provides access to core products for up to 10 items"
+    },
+    {
+      "url": "https://api.dashboard.plaid.com/mcp/",
+      "supports": "Official Plaid MCP server for diagnostics and analytics using OAuth with mcp:dashboard scope"
+    }
+  ],
+  "confidence": 0.95,
+  "flags": [
+    "official-mcp-exists",
+    "production-ready-api",
+    "free-tier-available"
+  ]
+}

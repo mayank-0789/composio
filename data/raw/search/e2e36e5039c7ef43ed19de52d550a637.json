@@ -1,0 +1,45 @@
+{
+  "answer": "Systeme.io provides an official Model Context Protocol (MCP) server that enables AI assistants like Claude and ChatGPT to interact with your account data using natural language [1][2][3].\n\nThe official server currently focuses on three core areas:\n* Contact management (creating, updating, deleting, and tagging contacts, plus managing custom fields) [1].\n* Newsletter management (creating and retrieving drafts) [1].\n* Funnel management (creating and retrieving opt-in steps) [1].\n\nTo use it, generate an MCP key in your Systeme.io profile settings under MCP and API keys [4]. You can then connect this to your AI tool using the server URL: `https://mcp.systeme.io/mcp?mcpKey=YOURMCPKEY` [2][3]. Note that keys expire after 90 days, and you are limited to two active keys at a time [1][4]. While community-maintained or third-party servers exist, the official integration is accessed via your Systeme.io dashboard [1][5].",
+  "results": [
+    {
+      "title": "How to use the systeme.io MCP server (Model Context Protocol) - Help pages",
+      "url": "https://help.systeme.io/article/9489-how-to-use-systeme-ios-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "How to connect your systeme.io account to Claude using MCP keys - Help pages",
+      "url": "https://help.systeme.io/article/11230-how-to-connect-your-systemeio-account-with-claude-using-mcp-keys",
+      "snippet": ""
+    },
+    {
+      "title": "How to connect your systeme.io account to ChatGPT using MCP keys - Help pages",
+      "url": "https://help.systeme.io/article/11229-how-to-connect-your-systemeio-account-with-chatgpt-using-mcp-keys",
+      "snippet": ""
+    },
+    {
+      "title": "How to use the systeme.io MCP server (Model Context Protocol) | systeme.io tutorials",
+      "url": "https://www.youtube.com/watch?v=RGSWMRBhYio",
+      "snippet": ""
+    },
+    {
+      "title": "details/systemeio-mcp-server.md",
+      "url": "https://github.com/ever-works/awesome-mcp-servers/blob/master/details/systemeio-mcp-server.md",
+      "snippet": ""
+    },
+    {
+      "title": "Model Context Protocol (MCP) - Help pages",
+      "url": "https://help.systeme.io/category/11216-model-context-protocol-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "snzeeee/mcp-server-systemeio",
+      "url": "https://github.com/snzeeee/mcp-server-systemeio",
+      "snippet": ""
+    },
+    {
+      "title": "Systeme.io MCP | viaSocket",
+      "url": "https://viasocket.com/mcp/systemedotio",
+      "snippet": ""
+    }
+  ]
+}

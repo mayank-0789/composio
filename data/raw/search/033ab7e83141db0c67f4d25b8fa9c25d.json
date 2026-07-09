@@ -1,0 +1,45 @@
+{
+  "answer": "Fathom Analytics does not offer a permanent free tier; access requires a paid subscription starting at $15 per month, which includes API access for all plans [1][2][3]. You can start with a 7-day free trial to test the service [1][2]. Once on a paid plan, API access is self-serve, and you can upgrade your API tier via your billing settings [4]. API usage is authenticated using keys generated in your account settings [5]. Please note that Fathom Analytics (analytics for websites) and Fathom AI (meeting assistant) are separate products with different pricing models; Fathom AI does offer a free-forever plan [6].",
+  "results": [
+    {
+      "title": "Simple and sustainable pricing - Fathom Analytics",
+      "url": "https://usefathom.com/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Fathom Analytics Pricing & Review 2026 | SaaSpartout",
+      "url": "https://saaspartout.com/marketplace/fathom-analytics/",
+      "snippet": ""
+    },
+    {
+      "title": "Fathom Analytics Pricing 2026 — $15/mo for 100k Pageviews | StackScored",
+      "url": "https://www.stackscored.com/pricing/analytics/fathom/",
+      "snippet": ""
+    },
+    {
+      "title": "Rate limits and concurrency · Fathom Analytics API",
+      "url": "https://usefathom.com/api/v1/rate-limits",
+      "snippet": ""
+    },
+    {
+      "title": "Api overview - Fathom API",
+      "url": "https://developers.fathom.ai/api-overview",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing",
+      "url": "https://www.fathom.ai/pricing?plan=individuals",
+      "snippet": ""
+    },
+    {
+      "title": "Billing FAQ - Fathom Analytics",
+      "url": "https://usefathom.com/docs/account/faq",
+      "snippet": ""
+    },
+    {
+      "title": "Fathom Analytics API",
+      "url": "https://usefathom.com/api",
+      "snippet": ""
+    }
+  ]
+}

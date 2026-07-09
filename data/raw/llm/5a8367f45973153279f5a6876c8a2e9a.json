@@ -1,0 +1,127 @@
+{
+  "verdicts": [
+    {
+      "field": "name",
+      "status": "supported",
+      "note": "The evidence confirms this is Slack throughout all documents."
+    },
+    {
+      "field": "website",
+      "status": "supported",
+      "note": "Multiple URLs reference slack.com and slack.dev (docs subdomain)."
+    },
+    {
+      "field": "category",
+      "status": "supported",
+      "note": "Slack is clearly a communications/messaging platform based on the API methods for chat, channels, users, messaging, etc."
+    },
+    {
+      "field": "one_liner",
+      "status": "contradicted",
+      "note": "The one_liner claims 'existing community MCP servers' but the evidence shows only a GitHub link to a community repo (korotovsky/slack-mcp-server), not proof of a dedicated MCP server. The link is to a general GitHub repo, not an MCP-specific implementation. The evidence does not demonstrate a functioning MCP server exists."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence confirms OAuth2 (oauth.v2.access method) and bearer token authentication (Authorization header, auth.test method)."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "The pricing page confirms a Free plan exists that supports 'Up to 3 apps', which allows developers to build and test integrations for free."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "supported",
+      "note": "The free plan page confirms 90-day history and app limits; the notes about workspace-level restrictions and commercial distribution requirements are reasonable inferences though not explicitly detailed in evidence."
+    },
+    {
+      "field": "api_surface",
+      "status": "supported",
+      "note": "The Web API documentation explicitly describes it as 'HTTP RPC-style methods' (not strictly REST but REST-like), with 'hundreds of methods' mentioned implicitly through references to chat, channels, users, files, OAuth, billing, etc."
+    },
+    {
+      "field": "existing_mcp",
+      "status": "contradicted",
+      "note": "The URL provided (https://github.com/korotovsky/slack-mcp-server) points to a community GitHub repository, NOT a dedicated MCP server implementation. A GitHub repo link does not constitute proof of an existing MCP server. No evidence shows this is a functioning MCP server. Should be exists='no' or 'unknown'."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "The evidence shows self-serve OAuth2 flow, free plan access, broad API methods—developers can build integrations now."
+    },
+    {
+      "field": "main_blocker",
+      "status": "unsupported",
+      "note": "The claim about 'session tokens which are against Slack's ToS' is not mentioned anywhere in the evidence. The claim about admin approval is plausible but not explicitly stated in the evidence provided."
+    },
+    {
+      "field": "evidence",
+      "status": "supported",
+      "note": "All five evidence URLs are referenced and their content supports the claims made (Web API docs, OAuth method, auth.test, free pricing, billing info method)."
+    },
+    {
+      "field": "confidence",
+      "status": "supported",
+      "note": "0.75 is reasonable given the evidence provided supports most fields, though the MCP server claim is problematic."
+    },
+    {
+      "field": "flags",
+      "status": "unsupported",
+      "note": "Neither flag is supported by the evidence: no mention of session tokens violating ToS, and admin approval requirement is not explicitly documented in the provided evidence."
+    }
+  ],
+  "revised": {
+    "id": 21,
+    "name": "Slack",
+    "website": "slack.com",
+    "category": "Communications and Messaging",
+    "one_liner": "Slack provides a broad, self-serve REST-style Web API secured via OAuth2/bearer tokens for building messaging and collaboration integrations.",
+    "auth_methods": [
+      {
+        "method": "OAuth2",
+        "notes": "Standard OAuth 2.0 flow (oauth.v2.access) to obtain bearer tokens scoped to a workspace; recommended approach for third-party apps."
+      },
+      {
+        "method": "Token",
+        "notes": "Bearer tokens (including test/dev tokens) passed via Authorization header or token param; bot/user tokens generated via app configuration."
+      }
+    ],
+    "self_serve": "self-serve-free",
+    "self_serve_notes": "Developers can create a Slack app and generate OAuth tokens for free on the Free plan to build/test integrations; Free plan limits include 3 apps, 90-day message history, and 30-min audio/video calls.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "Slack Web API is a broad RPC-style HTTP API with hundreds of methods for messaging, channels, users, files, OAuth, billing, and more. Also has Events API, RTM, and SDKs."
+    },
+    "existing_mcp": {
+      "exists": "unknown"
+    },
+    "buildability": "buildable-now",
+    "main_blocker": null,
+    "evidence": [
+      {
+        "url": "https://docs.slack.dev/apis/web-api/",
+        "supports": "Describes Web API as broad RPC-style HTTP API with methods in form slack.com/api/METHOD_FAMILY.method"
+      },
+      {
+        "url": "https://docs.slack.dev/reference/methods/oauth.v2.access.md",
+        "supports": "OAuth2 token exchange method for obtaining access tokens"
+      },
+      {
+        "url": "https://docs.slack.dev/reference/methods/auth.test.md",
+        "supports": "Token-based auth testing endpoint; confirms bearer token usage via Authorization header"
+      },
+      {
+        "url": "https://slack.com/pricing/free",
+        "supports": "Free plan supports up to 3 apps, 90-day message history, file sharing, and notifications for app development"
+      },
+      {
+        "url": "https://docs.slack.dev/reference/methods/team.billing.info.md",
+        "supports": "Endpoint to check workspace billing plan programmatically (free, std, plus, enterprise, compliance)"
+      }
+    ],
+    "confidence": 0.85,
+    "flags": []
+  }
+}

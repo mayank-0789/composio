@@ -1,0 +1,45 @@
+{
+  "answer": "Airtable uses token-based authentication for its API [1]. All requests must be made over HTTPS, and tokens are passed in the HTTP Authorization header using the Bearer scheme [1][2]. \n\nPersonal access tokens are designed for personal integrations or private development and should not be shared [1][2]. OAuth access tokens are required for third-party integrations that allow other users to grant access to their data [1]. Legacy API key URL parameters are not supported [1].\n\nExample of an authenticated request:\n\n```\ncurl https://api.airtable.com/v0/YOUR_BASE_ID/YOUR_TABLE_ID_OR_NAME \\\n  -H \"Authorization: Bearer YOUR_TOKEN\"\n```\n\nYou can manage personal access tokens at the Airtable developer portal [1][2]. OAuth flows are initiated by directing users to the Airtable authorization endpoint [3].",
+  "results": [
+    {
+      "title": "Airtable Web API",
+      "url": "https://airtable.com/developers/web/api/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Airtable Web API",
+      "url": "https://airtable.com/developers/web/guides/personal-access-tokens?adobe_mc=MCMID%3D72000014905405683995335849378418609464%7CMCORGID%3DA8833BC75245AF9E0A490D4D%2540AdobeOrg%7CTS%3D1754352000",
+      "snippet": ""
+    },
+    {
+      "title": "Airtable Web API",
+      "url": "https://airtable.com/developers/web/api/oauth-reference",
+      "snippet": ""
+    },
+    {
+      "title": "Airtable Web API",
+      "url": "https://airtable.com/developers/web/api/introduction",
+      "snippet": ""
+    },
+    {
+      "title": "Airtable Web API",
+      "url": "https://airtable.com/developers/web/api/create-records",
+      "snippet": ""
+    },
+    {
+      "title": "Airtable Web API",
+      "url": "https://airtable.com/developers/web/api/errors",
+      "snippet": ""
+    },
+    {
+      "title": "Create table",
+      "url": "https://airtable.com/developers/web/api/create-table.md",
+      "snippet": ""
+    },
+    {
+      "title": "Getting started with Airtable's Web API | Airtable Support",
+      "url": "https://support.airtable.com/docs/getting-started-with-airtables-web-api",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "A Telegram MCP server is a software bridge that allows AI assistants like Claude, Cursor, or Windsurf to interact with your personal Telegram account using the MTProto protocol instead of the restricted Bot API [1][2][3]. By acting as a userbot, these servers grant your AI full access to your private messages, contacts, media, and group management features [1][4][5].\n\nMultiple implementations exist, such as mcp-telegram and others [1][4][6][5], generally requiring you to authenticate your account—often via QR code or session strings—before exposing tools for tasks like searching dialogs, sending or deleting messages, and downloading media [1][4][2][5]. Most implementations provide local stdio or HTTP transport options to integrate with your MCP-compatible client configuration [6][5][7][8].\n\nFor example, to configure a standard stdio-based server in your Claude Desktop configuration file:\n\n```json\n{\n  \"mcpServers\": {\n    \"telegram\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"mcp-telegram\"]\n    }\n  }\n}\n```\n\nConsult the documentation for your chosen repository, as specific setup commands and tool sets vary by implementation [1][6][7].",
+  "results": [
+    {
+      "title": "mcp-telegram/mcp-telegram",
+      "url": "https://github.com/mcp-telegram/mcp-telegram",
+      "snippet": ""
+    },
+    {
+      "title": "jgalea/telegram-mcp",
+      "url": "https://github.com/jgalea/telegram-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "AlexeyPevz/telegram-mcp",
+      "url": "https://github.com/AlexeyPevz/telegram-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "chigwell/telegram-mcp",
+      "url": "https://github.com/chigwell/telegram-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "mcp-telegram",
+      "url": "https://www.npmjs.com/package/mcp-telegram",
+      "snippet": ""
+    },
+    {
+      "title": "leshchenko1979/fast-mcp-telegram",
+      "url": "https://github.com/leshchenko1979/fast-mcp-telegram",
+      "snippet": ""
+    },
+    {
+      "title": "iflow-mcp/telegram-mcp-server",
+      "url": "https://github.com/iflow-mcp/telegram-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "eraga/telegram-mcp",
+      "url": "https://github.com/eraga/telegram-mcp",
+      "snippet": ""
+    }
+  ]
+}

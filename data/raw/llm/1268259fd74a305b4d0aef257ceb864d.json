@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://github.com/clugtu/pinterest-mcp",
+  "reason": "Multiple dedicated MCP servers exist for Pinterest. While Pinterest maintains an internal MCP ecosystem for employees, there are several well-documented community and third-party MCP servers available for external users, including: clugtu/pinterest-mcp (open-source tool for creating pins, managing boards, and analytics), terryso/mcp-pinterest (focused on image search and information retrieval), collactivelabs/pinterest-mcp-server (API-based board and pin management), and CDataSoftware/pinterest-mcp-server-by-cdata (professional read-write server connecting Pinterest data to LLMs via JDBC). These are distinct MCP server packages, not just the Pinterest product itself or REST API docs."
+}

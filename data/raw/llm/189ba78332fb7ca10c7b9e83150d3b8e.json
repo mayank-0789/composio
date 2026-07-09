@@ -1,0 +1,51 @@
+{
+  "one_liner": "API service that retrieves and transcribes YouTube video captions and metadata with optional translation and ASR fallback.",
+  "auth_methods": [
+    {
+      "method": "Token",
+      "notes": "Bearer token in Authorization header (e.g., 'Bearer YOUR_API_KEY') or x-api-key header depending on provider"
+    }
+  ],
+  "self_serve": "self-serve-trial",
+  "self_serve_notes": "Multiple providers offer self-serve access: youtubetranscript.dev offers 10 free credits monthly; downloadyoutubetranscripts.com provides 10 free credits at signup; youtube-transcript.ai offers keyless fair-use limits; Supadata provides 100 free requests. All require simple sign-up, no credit card for trials.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "medium",
+    "notes": "REST API with endpoints for single/batch transcription, job polling, upload management, channel resolution, and credit estimation. Supports both synchronous caption retrieval and async ASR fallback. Multiple format options (timestamps, paragraphs, word-level). V2 and legacy V1 available."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://github.com/gabriel3615/mcp-youtube-transcript"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://www.youtubetranscript.dev/api-docs",
+      "supports": "REST API with Bearer token auth, V2 endpoints for transcribe, batch, jobs, channels. POST /api/v2/transcribe with Authorization header, includes ASR options, webhook support, format options."
+    },
+    {
+      "url": "https://yttranscript.ai/api-docs",
+      "supports": "REST API authentication via Bearer token (ytk_YOUR_API_KEY). POST /api/v1/transcripts endpoint. Paid plans required (Plus, Pro, Enterprise). Self-serve API key creation from profile page."
+    },
+    {
+      "url": "https://www.youtubetranscript.dev/faq",
+      "supports": "10 free credits monthly, credit-based system, 1 request per second rate limit on free plan. Self-serve signup."
+    },
+    {
+      "url": "https://youtube-transcript.ai/youtube-transcript-api",
+      "supports": "Keyless, zero-setup service with fair-use limits. GET requests to https://youtube-transcript.ai/transcript/{VIDEO_ID}.txt without API key."
+    },
+    {
+      "url": "https://github.com/gabriel3615/mcp-youtube-transcript",
+      "supports": "Existing MCP server implementation for YouTube transcripts using npx deployment. Provides get_transcript, get_timed_transcript, and get_video_info tools."
+    }
+  ],
+  "confidence": 0.9,
+  "flags": [
+    "multiple-providers",
+    "existing-mcp-server",
+    "free-tier-available",
+    "ASR-fallback-available"
+  ]
+}

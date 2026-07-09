@@ -1,0 +1,45 @@
+{
+  "answer": "Pipedrive does not offer a permanent free tier for its CRM platform, though it provides a 14-day free trial for all plans [1]. Every paid subscription plan includes access to the Pipedrive REST API at no additional cost [2].\n\nYou can obtain your personal API token by navigating to Settings, selecting Personal preferences, and choosing the API menu [3]. Access to the API is subject to daily token-based rate limits and burst limits, which scale based on your subscription tier (Lite, Growth, Premium, or Ultimate) [4]. Higher limits can be obtained by upgrading your plan or purchasing API token top-ups [4][5].",
+  "results": [
+    {
+      "title": "CRM Pricing Plans | Affordable CRM Software Costs | Pipedrive",
+      "url": "https://www.pipedrive.com/en/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "CRM API | REST API integration | Pipedrive",
+      "url": "https://www.pipedrive.com/en/features/crm-api",
+      "snippet": ""
+    },
+    {
+      "title": "pipedrive | Rhumb",
+      "url": "https://rhumb.dev/service/pipedrive",
+      "snippet": ""
+    },
+    {
+      "title": "Rate limiting",
+      "url": "https://pipedrive.readme.io/docs/core-api-concepts-rate-limiting",
+      "snippet": ""
+    },
+    {
+      "title": "Usage limits in Pipedrive - Knowledge Base | Pipedrive",
+      "url": "https://support.pipedrive.com/en/article/usage-limits-in-pipedrive",
+      "snippet": ""
+    },
+    {
+      "title": "How does pricing work in Pipedrive? - Knowledge Base | Pipedrive",
+      "url": "https://support.pipedrive.com/en/article/how-does-pricing-work-in-pipedrive",
+      "snippet": ""
+    },
+    {
+      "title": "What’s new in Pipedrive plans? - Knowledge Base | Pipedrive",
+      "url": "https://support.pipedrive.com/en/article/new-pipedrive-plans",
+      "snippet": ""
+    },
+    {
+      "title": "Pipedrive Developer Agreement | Pipedrive",
+      "url": "https://www.pipedrive.com/en/developer-agreement",
+      "snippet": ""
+    }
+  ]
+}

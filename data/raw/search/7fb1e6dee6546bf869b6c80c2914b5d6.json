@@ -1,0 +1,45 @@
+{
+  "answer": "The Model Context Protocol (MCP) server for Freshdesk is a middleware component that enables AI assistants like Claude, Cursor, and others to interact with Freshdesk's REST API. It exposes helpdesk capabilities—such as managing tickets, contacts, agents, and knowledge base articles—as standardized MCP tools [1][2][3][4].\n\nMultiple implementations exist, ranging from minimalist versions with 11–14 tools to comprehensive servers offering nearly 200 tools [1][5][6]. Most servers support both stdio transport for local use and streamable HTTP for remote or hosted environments [1][3][4]. All implementations require your Freshdesk API key and domain for authentication [1][4][7].\n\nTo integrate with a client like Claude Desktop, add the server configuration to your `mcpServers` settings file [2][7]:\n\n```json\n\"mcpServers\": {\n  \"freshdesk\": {\n    \"command\": \"npx\",\n    \"args\": [\"-y\", \"freshdesk-mcp\"],\n    \"env\": {\n      \"FRESHDESK_API_KEY\": \"your_api_key\",\n      \"FRESHDESK_DOMAIN\": \"your_subdomain.freshdesk.com\"\n    }\n  }\n}\n```\n\nAdditionally, Freshdesk currently offers an official Early Access Program (EAP) for MCP integration, which is available to selected Enterprise customers [2].",
+  "results": [
+    {
+      "title": "hashcott/freshdesk-mcp",
+      "url": "https://github.com/hashcott/freshdesk-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Model Context Protocol (MCP) integration in Freshdesk (EAP) : Freshdesk Support",
+      "url": "https://support.freshdesk.com/support/solutions/articles/50000012670-model-context-protocol-mcp-integration-in-freshdesk-eap-",
+      "snippet": ""
+    },
+    {
+      "title": "wyre-technology/freshdesk-mcp",
+      "url": "https://github.com/wyre-technology/freshdesk-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "bcavas/freshdesk-mcp-server",
+      "url": "https://github.com/bcavas/freshdesk-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "mcp-servers/connectors/freshdesk at main · mindstone/mcp-servers · GitHub",
+      "url": "https://github.com/mindstone/mcp-servers/tree/main/connectors/freshdesk",
+      "snippet": ""
+    },
+    {
+      "title": "ArcaneSK/freshdesk-mcp-server",
+      "url": "https://github.com/arcanesk/freshdesk-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "effytech/freshdesk_mcp",
+      "url": "https://github.com/effytech/freshdesk%5Fmcp",
+      "snippet": ""
+    },
+    {
+      "title": "NeuraLegion/freshdesk_mcp",
+      "url": "https://github.com/NeuraLegion/freshdesk_mcp",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "one_liner": "GoHighLevel offers a broad REST API (V2) with Private Integration Token and OAuth 2.0 auth, self-serve via trial/paid plans, and an official HTTP-based MCP server, making it buildable now with minor caveats around subscription tiers and MCP transport compatibility.",
+  "auth_methods": [
+    {
+      "method": "Token",
+      "notes": "Private Integration Tokens (PIT) for internal tools/single-account use, passed as Bearer token in Authorization header."
+    },
+    {
+      "method": "OAuth2",
+      "notes": "OAuth 2.0 with PKCE for public Marketplace apps, supports Location-level and Agency-level access."
+    }
+  ],
+  "self_serve": "self-serve-trial",
+  "self_serve_notes": "No free tier for platform subscription; 14-day free trial available. API access gated by subscription tier ($297/mo Unlimited for basic API, $497/mo Agency Pro for advanced API). Private Integration Tokens can be self-generated within an active paid/trial account. Marketplace app listing is free for developers, requiring an active agency subscription to build/test.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "GoHighLevel V2 API covers CRM, calendars, contacts, opportunities, marketing, conversations, etc. Official SDKs for TypeScript, Python, PHP. V1 API deprecated."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://highlevel.stoplight.io"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": "Requires an active paid (or trial) GoHighLevel agency subscription to generate Private Integration Tokens or register OAuth Marketplace apps; official MCP server is HTTP-based only, requiring community bridges for stdio-based clients like Claude Desktop.",
+  "evidence": [
+    {
+      "url": "https://www.gohighlevel.com/post/deprecating-the-highlevel-api-v1-and-migrating-to-v2",
+      "supports": "V2 API auth paths: Private Integration Tokens for internal tools, OAuth 2.0 for Marketplace apps."
+    },
+    {
+      "url": "https://help.gohighlevel.com/support/solutions/articles/155000000136-how-to-get-started-with-the-developer-s-marketplace",
+      "supports": "OAuth 2.0 with PKCE flow, Location and Agency level access for Marketplace apps."
+    },
+    {
+      "url": "https://registry.npmjs.org/@gohighlevel/api-client",
+      "supports": "Official TypeScript SDK supporting Private Integration Token initialization."
+    },
+    {
+      "url": "https://www.gohighlevel.com/pricing",
+      "supports": "No free tier; 14-day trial; API access gated by $297/mo and $497/mo plans."
+    }
+  ],
+  "confidence": 0.7,
+  "flags": [
+    "Official MCP server is HTTP-based; stdio-based clients need community bridge servers",
+    "No free tier for platform access; requires paid subscription or trial",
+    "V1 API deprecated, must use V2"
+  ]
+}

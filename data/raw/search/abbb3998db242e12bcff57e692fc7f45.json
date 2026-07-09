@@ -1,0 +1,45 @@
+{
+  "answer": "The Firecrawl MCP server is an official implementation that integrates Firecrawl's web scraping, crawling, and search capabilities into any Model Context Protocol (MCP)-compatible AI agent [1][2][3]. It allows LLMs to extract structured data, perform deep research with autonomous agents, and handle dynamic, JavaScript-rendered websites [4][5][3].\n\nYou can use the remote hosted URL or run the server locally [1][6]. To use the remote version, connect to the endpoint `https://mcp.firecrawl.dev/{FIRECRAWL_API_KEY}/v2/mcp` or use the keyless free tier at `https://mcp.firecrawl.dev/v2/mcp` [1][6]. For local execution via npx:\n\n```bash\nenv FIRECRAWL_API_KEY=fc-YOUR_API_KEY npx -y firecrawl-mcp\n```\n\nThis server is compatible with clients like Claude Desktop, Cursor, and Windsurf [3]. Configuration involves adding the command and your API key to your client's MCP settings file [5][3]. For more details, see the official documentation at docs.firecrawl.dev/mcp-server [1][3].",
+  "results": [
+    {
+      "title": "Firecrawl MCP Server",
+      "url": "https://docs.firecrawl.dev/mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "firecrawl/firecrawl-mcp-server",
+      "url": "https://github.com/firecrawl/firecrawl-mcp-server/",
+      "snippet": ""
+    },
+    {
+      "title": "Firecrawl MCP Server - Official Web Scraping & Search for AI Agents | Model Context Protocol | a2a mcp",
+      "url": "https://a2a-mcp.org/entry/firecrawl-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "GitHub - firecrawl/firecrawl-mcp-server at refs/heads/main · GitHub",
+      "url": "https://github.com/firecrawl/firecrawl-mcp-server/tree/refs/heads/main",
+      "snippet": ""
+    },
+    {
+      "title": "MCP Server - Firecrawl",
+      "url": "https://www.mintlify.com/firecrawl/firecrawl/sdks/mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "mcp-server.mdx at 82e953cf4f45fa00808b8315590eb758ff67441a · firecrawl/firecrawl-docs",
+      "url": "https://github.com/firecrawl/firecrawl-docs/blob/82e953cf4f45fa00808b8315590eb758ff67441a/mcp-server.mdx",
+      "snippet": ""
+    },
+    {
+      "title": "Firecrawl MCP Server by firecrawl | Web Scraping Automation",
+      "url": "https://www.augmentcode.com/mcp/firecrawl-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Msparihar/mcp-server-firecrawl",
+      "url": "https://github.com/msparihar/mcp-server-firecrawl",
+      "snippet": ""
+    }
+  ]
+}

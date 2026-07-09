@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://github.com/jacob-bd/notebooklm-mcp",
+  "reason": "Multiple dedicated MCP servers exist for NotebookLM that expose its capabilities (notebook management, source ingestion, grounded queries, and audio overview generation) over the Model Context Protocol. These are community-built implementations that use reverse-engineered APIs with browser automation for authentication. Examples include jacob-bd/notebooklm-mcp-cli, Cezial/notebooklm-mcp-server, myakwang/notebooklm-mcp, mulyg/notebooklm-mcp, and PleasePrompto/notebooklm-mcp."
+}

@@ -1,0 +1,49 @@
+{
+  "one_liner": "NotebookLM is a free, source-grounded AI research assistant from Google with no official public API; unofficial community tools use cookie-based authentication via browser automation.",
+  "auth_methods": [
+    {
+      "method": "Other",
+      "notes": "No official public API. Unofficial integrations use session cookie extraction via browser automation (Playwright/CDP) from active Google account sessions. Authentication requires capturing cookies and CSRF tokens from a managed browser instance."
+    }
+  ],
+  "self_serve": "partnership-contact-sales",
+  "self_serve_notes": "NotebookLM is free to use with any Google account, but there is no public self-serve developer API for consumers. Programmatic access via the NotebookLM Enterprise API is restricted to organizations through Google Cloud via Discovery Engine v1alpha endpoints, requiring enterprise partnership.",
+  "api_surface": {
+    "type": "none",
+    "breadth": "narrow",
+    "notes": "No official public API exists. An Enterprise API is available only to Google Cloud organizations via Discovery Engine v1alpha. Community tools have reverse-engineered unofficial endpoints using browser automation and session cookies."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://github.com/Robiton/notebooklm-mcp-cli"
+  },
+  "buildability": "blocked",
+  "main_blocker": "No official public API is available for self-serve developer use. The only programmatic access (NotebookLM Enterprise API via Google Cloud Discovery Engine v1alpha) requires enterprise partnership and organizational Google Cloud credentials. Unofficial methods rely on fragile cookie-based browser automation that violates typical ToS and may break at any time.",
+  "evidence": [
+    {
+      "url": "https://github.com/Robiton/notebooklm-mcp-cli/blob/main/docs/AUTHENTICATION.md",
+      "supports": "Confirms no official API exists; authentication uses browser cookies extracted via Chrome DevTools Protocol or Playwright from managed browser sessions."
+    },
+    {
+      "url": "https://github.com/HenriqueCosta05/notebooklm-ts-api/blob/main/README.md",
+      "supports": "Unofficial TypeScript wrapper uses undocumented Google RPC endpoints with storage state or environment variable-based authentication via browser automation."
+    },
+    {
+      "url": "https://felloai.com/notebooklm-pricing/",
+      "supports": "NotebookLM is free to use with any Google account. No standalone paid product or self-serve developer API for consumers exists."
+    },
+    {
+      "url": "https://webaistack.com/notebooklm-pricing-explained-a-comprehensive-guide-to-googles-ai-research-tool-costs/",
+      "supports": "Confirms no public self-serve developer API for consumer users. Programmatic access is restricted to NotebookLM Enterprise API via Google Cloud."
+    }
+  ],
+  "confidence": 0.95,
+  "flags": [
+    "no-official-api",
+    "enterprise-only-api",
+    "unofficial-mcp-exists",
+    "cookie-based-auth",
+    "tos-risk",
+    "fragile-integration"
+  ]
+}

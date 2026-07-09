@@ -1,0 +1,45 @@
+{
+  "answer": "Several open-source Model Context Protocol (MCP) servers exist to connect AI assistants to the Shopify Admin API, including options like aserper/shopify-mcp [1], benwmerritt/shopify-mcp [2], and daanjonk/shopify-mcp [3]. These servers provide tools to manage products, orders, customers, inventory, and metafields using natural language [1][3][4].\n\nTo use one, you must first create a Custom App in your Shopify Admin settings to generate an Admin API access token [1][3][5]. You then configure the MCP server by providing your store domain and access token as environment variables [1][2][3].\n\nExample configuration for a local MCP client:\n```json\n{\n  \"mcpServers\": {\n    \"shopify\": {\n      \"command\": \"npx\",\n      \"args\": [\n        \"shopify-mcp\",\n        \"--accessToken\",\n        \"<YOUR_ACCESS_TOKEN>\",\n        \"--domain\",\n        \"<YOUR_SHOP>.myshopify.com\"\n      ]\n    }\n  }\n}\n```\n[2] \n\nFor remote use with platforms like Claude.ai, you typically deploy the server (e.g., via Railway) and add the public URL to your AI client's integration settings [3][4].",
+  "results": [
+    {
+      "title": "aserper/shopify-mcp",
+      "url": "https://github.com/aserper/shopify-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "benwmerritt/shopify-mcp",
+      "url": "https://github.com/benwmerritt/shopify-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "daanjonk/shopify-mcp",
+      "url": "https://github.com/daanjonk/shopify-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "AdnaneAhmimou/shopify-mcp",
+      "url": "https://github.com/adnaneahmimou/shopify-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "kgoyal000/shopify-mcp-server",
+      "url": "https://github.com/kgoyal000/shopify-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "About Storefront MCP",
+      "url": "https://shopify.dev/docs/apps/build/storefront-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "bhavik-dreamz/shopify-mcp-server-graphql",
+      "url": "https://github.com/bhavik-dreamz/shopify-mcp-server-graphql",
+      "snippet": ""
+    },
+    {
+      "title": "arunlakshmikabilan1982/mcp-server",
+      "url": "https://github.com/arunlakshmikabilan1982/mcp-server",
+      "snippet": ""
+    }
+  ]
+}

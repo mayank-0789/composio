@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://mcp.linear.app/mcp",
+  "reason": "Linear has an official MCP server hosted at https://mcp.linear.app/mcp that provides OAuth 2.1 authentication and Streamable HTTP transports. It is documented at https://linear.app/docs/mcp.md and can be used with compatible clients via npx mcp-remote. Additionally, multiple well-known community MCP servers exist, including lsmc-bio/linear-mcp, jerhadf/linear-mcp-server, and alleneubank/linear-mcp."
+}

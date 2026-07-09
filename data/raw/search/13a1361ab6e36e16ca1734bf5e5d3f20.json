@@ -1,0 +1,45 @@
+{
+  "answer": "Vonage does not offer a permanent free tier for its APIs. Instead, new users receive free trial credit upon signing up, which allows for testing and development without an initial payment or credit card requirement [1][2][3][4]. Once this trial credit is exhausted or the trial period ends, you must transition to a paid plan [2]. You can manage your account balance, monitor usage, and view your specific pricing through the self-serve Developer Dashboard [1][5]. Standard pricing information for specific products is available via the Pricing API or by downloading a pricing sheet from your dashboard [6][5][4].",
+  "results": [
+    {
+      "title": "Getting Started With Vonage APIs (New User Guide)",
+      "url": "https://developer.vonage.com/en/getting-started/overview",
+      "snippet": ""
+    },
+    {
+      "title": "API Pricing: Understanding Vonage Communications API Prices | Vonage",
+      "url": "https://www.vonage.com/communications-apis/pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "Messages API Pricing | Vonage",
+      "url": "https://www.vonage.com/communications-apis/messages/pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "Voice API Pricing | Vonage",
+      "url": "https://www.vonage.com/communications-apis/voice/pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing",
+      "url": "https://developer.vonage.com/en/dashboard/control/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Vonage Pricing API Reference | Vonage API Documentation",
+      "url": "https://developer.vonage.com/en/api/pricing.v2",
+      "snippet": ""
+    },
+    {
+      "title": "Vonage API Developer",
+      "url": "https://developer.vonage.com/en/home",
+      "snippet": ""
+    },
+    {
+      "title": "SMS API Pricing | Vonage",
+      "url": "https://www.vonage.com/communications-apis/sms/pricing/",
+      "snippet": ""
+    }
+  ]
+}

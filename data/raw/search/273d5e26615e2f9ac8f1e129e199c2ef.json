@@ -1,0 +1,45 @@
+{
+  "answer": "A Zendesk MCP server acts as a bridge between AI assistants and the Zendesk API, enabling natural language management of tickets, users, organizations, and Help Center content [1][2][3][4][5]. Multiple independent implementations exist, ranging from lightweight ticket-focused servers to comprehensive suites offering 60+ tools [6][7].\n\nThese servers typically support two transport modes: Stdio for local CLI-based clients (e.g., Claude Desktop, Cursor) and HTTP/SSE for remote or web-based integration [1][2][7]. Most support authentication via Zendesk API tokens or OAuth 2.1 with PKCE [1][3][7].\n\nTo use one, configure the server in your MCP client's settings:\n\n```json\n{\n  \"mcpServers\": {\n    \"zendesk\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@markusvankempen/zendesk-mcp-server\"],\n      \"env\": {\n        \"ZENDESK_SUBDOMAIN\": \"your-subdomain\",\n        \"ZENDESK_EMAIL\": \"agent@example.com\",\n        \"ZENDESK_API_TOKEN\": \"your-token\"\n      }\n    }\n  }\n}\n```\n\nImplementation details like tool naming conventions, available functionality, and flag configurations (such as `--mode` for filtering tools) vary by specific repository [1][3][7][5].",
+  "results": [
+    {
+      "title": "SShadowS/zendesk-mcp-server",
+      "url": "https://github.com/SShadowS/zendesk-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "nealrichardson/zendesk-mcp-server",
+      "url": "https://github.com/nealrichardson/zendesk-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "README.md at d69ce1d2b22b32be9d8877e99a2786361ead48e1 · fruggr/zendesk-mcp-server",
+      "url": "https://github.com/fruggr/zendesk-mcp-server/blob/d69ce1d2b22b32be9d8877e99a2786361ead48e1/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "Vertown/zendesk-mcp-server",
+      "url": "https://github.com/Vertown/zendesk-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "koundinya/zd-mcp-server",
+      "url": "https://github.com/koundinya/zd-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Sajiiidddd/zendesk-mcp",
+      "url": "https://github.com/Sajiiidddd/zendesk-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "README.md",
+      "url": "https://github.com/markusvankempen/zendesk-mcp/blob/main/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "reminia/zendesk-mcp-server",
+      "url": "https://github.com/reminia/zendesk-mcp-server",
+      "snippet": ""
+    }
+  ]
+}

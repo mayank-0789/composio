@@ -1,0 +1,49 @@
+{
+  "one_liner": "Systeme.io offers a self-serve REST API (API-key auth) for managing contacts, tags, funnels, and courses, plus an official MCP server for AI-agent access.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Public API key generated in profile settings under 'Public API keys', sent via X-API-Key header on every request."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "API access is available on all plans including the free tier; developers can generate a key directly from dashboard settings with no approval process.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "medium",
+    "notes": "REST API covering contacts, tags, courses, funnels, pages, and webhooks; cursor-based pagination; OpenAPI spec referenced via llms.txt"
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://mcp.systeme.io/mcp?mcpKey=YOURMCPKEY"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://developer.systeme.io/reference/api",
+      "supports": "Describes API key generation, X-API-Key header authentication, rate limiting, and REST conventions."
+    },
+    {
+      "url": "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io",
+      "supports": "Explains self-serve creation of public API key in account settings."
+    },
+    {
+      "url": "https://help.systeme.io/article/2329-how-to-use-systeme-io-public-api",
+      "supports": "Details on using the public API, available on all plans including free tier."
+    },
+    {
+      "url": "https://developer.systeme.io/reference/api_contacts_get_collection-1",
+      "supports": "Example REST endpoint for retrieving contacts collection with filtering and pagination."
+    },
+    {
+      "url": "https://funnelgoodies.com/systeme-io-review",
+      "supports": "Confirms MCP server availability and free plan API/MCP access details."
+    }
+  ],
+  "confidence": 0.85,
+  "flags": [
+    "MCP keys expire after 90 days and are limited to two active keys at a time, requiring periodic rotation.",
+    "Official MCP server currently covers only contacts, newsletters, and funnels—narrower than the full REST API surface."
+  ]
+}

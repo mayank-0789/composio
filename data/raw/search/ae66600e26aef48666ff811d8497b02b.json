@@ -1,0 +1,45 @@
+{
+  "answer": "The Model Context Protocol (MCP) allows AI applications to connect with external tools and data sources through a standardized client-server architecture [1]. Vercel provides a hosting environment for MCP servers that leverages Vercel Functions for efficient, scalable execution [2][3].\n\nWhen deploying to Vercel, you should implement your server using the Streamable HTTP transport, which is the modern, recommended standard for remote MCP servers [4]. You can integrate the `mcp-handler` library to handle the protocol and tool execution automatically [2][3].\n\nTo connect an MCP host (like Cursor) to your Vercel-deployed server, point the client to your deployment URL followed by the path to your handler, typically `/mcp` [2][5].\n\n```json\n{\n  \"mcpServers\": {\n    \"my-server\": {\n      \"url\": \"https://my-mcp-server.vercel.app/api/mcp\"\n    }\n  }\n}\n```\n\nVercel-hosted MCP servers also support built-in OAuth for security, which you can implement using the `withMcpAuth` wrapper to ensure only authorized clients can access your tools [2]. For further security and compliance with the MCP specification, you can expose metadata endpoints within your `/.well-known/` directory [2].",
+  "results": [
+    {
+      "title": "Model Context Protocol",
+      "url": "https://vercel.com/docs/mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Deploy MCP servers to Vercel",
+      "url": "https://vercel.com/docs/mcp/deploy-mcp-servers-to-vercel.md",
+      "snippet": ""
+    },
+    {
+      "title": "examples/starter/hono-mcp at main · vercel/examples · GitHub",
+      "url": "https://github.com/vercel/examples/tree/main/starter/hono-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "server | MCP TypeScript SDK",
+      "url": "https://ts.sdk.modelcontextprotocol.io/documents/server.html",
+      "snippet": ""
+    },
+    {
+      "title": "mind-protocol/model-context-protocol-mcp-with-vercel-functions",
+      "url": "https://github.com/mind-protocol/model-context-protocol-mcp-with-vercel-functions",
+      "snippet": ""
+    },
+    {
+      "title": "Vercel MCP Server - Install & Configure | Model Context Protocol | McpMux - MCP Server Registry",
+      "url": "https://mcpmux.com/servers/com.vercel-mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "How to build an MCP server with HTTP transport (not just stdio) - DEV Community",
+      "url": "https://dev.to/edison_flores_6d2cd381b13/how-to-build-an-mcp-server-with-http-transport-not-just-stdio-4ncl",
+      "snippet": ""
+    },
+    {
+      "title": "Understanding MCP servers",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "verdicts": [
+    {
+      "field": "name",
+      "status": "supported",
+      "note": "Evidence confirms 'PitchBook' as the name."
+    },
+    {
+      "field": "website",
+      "status": "supported",
+      "note": "Evidence references pitchbook.com."
+    },
+    {
+      "field": "category",
+      "status": "supported",
+      "note": "PitchBook is a financial/private market data platform; 'Finance and Fintech' is appropriate."
+    },
+    {
+      "field": "one_liner",
+      "status": "supported",
+      "note": "dlthub evidence confirms REST API, API key auth in header format 'PB-Token {API_KEY}', manual provisioning via account manager, and endpoints for companies, deals, people, investors, funds. dev.writer.com confirms API key access requires contacting support/account."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "dlthub evidence confirms 'PB-Token {API_KEY}' header format and that keys are issued by account manager. dev.writer.com confirms API key authentication and generation via support/account."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "dlthub says 'Contact your PitchBook account manager to purchase API access/credits and request an API key'; dev.writer.com says 'contact PitchBook support for API access'. easyvc.ai confirms no free tier and enterprise custom pricing. No evidence of self-serve signup; must contact sales/account manager."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "supported",
+      "note": "dlthub confirms credit-based usage and that keys are issued by account manager. easyvc.ai confirms no free tier. Evidence supports that access requires enterprise contract and manual provisioning."
+    },
+    {
+      "field": "api_surface",
+      "status": "supported",
+      "note": "dlthub lists base URL https://api.pitchbook.com and multiple endpoints: companies, companies/search, deals, deals/search, people, people/search, investors, funds, and account/credits. REST API v2 is confirmed. 'Medium' breadth is reasonable for this endpoint set."
+    },
+    {
+      "field": "existing_mcp",
+      "status": "contradicted",
+      "note": "The provided URL https://pathlit.mintlify.app/docs/nodes/pitchbook-agent is NOT in the evidence. The dev.writer.com evidence mentions 'MCP gateway overview' only as a general Writer feature; it does not describe a dedicated MCP server for PitchBook. No evidence of a PitchBook-specific MCP server exists; set exists='no'."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "Evidence confirms API access requires a paid enterprise contract and manual provisioning by account manager. 'buildable-with-caveats' is appropriate."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "Evidence confirms API access requires paid enterprise contract, manual provisioning, and contact with account manager/support. No self-serve key generation exists."
+    },
+    {
+      "field": "evidence",
+      "status": "supported",
+      "note": "All three URLs are present in the EVIDENCE and their 'supports' descriptions accurately reflect the content."
+    },
+    {
+      "field": "confidence",
+      "status": "supported",
+      "note": "0.72 is reasonable given clear evidence on auth and access model."
+    },
+    {
+      "field": "flags",
+      "status": "supported",
+      "note": "Evidence supports 'no-self-serve-signup' and 'credit-based-pricing'. The third flag correctly notes no official first-party MCP confirmed."
+    }
+  ],
+  "revised": {
+    "id": 90,
+    "name": "PitchBook",
+    "website": "pitchbook.com",
+    "category": "Finance and Fintech",
+    "one_liner": "PitchBook offers a REST API (companies, deals, people, investors, funds) authenticated via an API key issued by an account manager, but access is enterprise-only with no self-serve signup.",
+    "auth_methods": [
+      {
+        "method": "API key",
+        "notes": "Header format: Authorization: PB-Token {API_KEY}. Key issued by account manager, not self-generated via a dashboard signup flow."
+      }
+    ],
+    "self_serve": "partnership-contact-sales",
+    "self_serve_notes": "No free tier or self-serve API signup; must contact a PitchBook account manager, purchase a custom enterprise contract, and receive credits/API key. Each request consumes purchased credits.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "medium",
+      "notes": "Base URL https://api.pitchbook.com with endpoints for companies, companies/search, deals, deals/search, people, people/search, investors, funds, and account/credits."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "API access requires a paid enterprise contract and manual provisioning by a PitchBook account manager; no self-serve key generation, which limits automated onboarding for an agent toolkit.",
+    "evidence": [
+      {
+        "url": "https://dlthub.com/context/source/pitchbook-api",
+        "supports": "Describes REST API v2, base URL, endpoints, PB-Token auth header, credit-based usage, and manual key provisioning via account manager."
+      },
+      {
+        "url": "https://dev.writer.com/connectors/pitchbook",
+        "supports": "Confirms API key authentication and that access requires contacting PitchBook support/account for API key generation."
+      },
+      {
+        "url": "https://easyvc.ai/vs/pitchbook-pricing/",
+        "supports": "Indicates no free tier and enterprise-level custom pricing for PitchBook."
+      }
+    ],
+    "confidence": 0.72,
+    "flags": [
+      "no-self-serve-signup",
+      "credit-based-pricing",
+      "third-party-mcp-integrations-exist-but-no-official-first-party-MCP-confirmed"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "answer": "Yes, the WhatsApp Business API is available via direct self-serve access through Meta's Cloud API [1][2]. You can set this up through the Meta Developer portal by creating a WhatsApp Business Account (WABA) in Meta Business Manager and generating your own access tokens [3].\n\nWhile Meta does not charge a monthly platform fee for the Cloud API itself, you are billed per delivered template message (marketing, utility, or authentication) based on the recipient's country [4][5]. Service messages (replies to customer-initiated conversations within 24 hours) are free, and you receive 1,000 free service conversations per month per WABA [4][5].\n\nIf you choose the direct path, you are responsible for handling your own webhook verification, message queues, rate limits, and template management [1]. Alternatively, you can use a Business Solution Provider (BSP) or third-party platform; these providers typically charge a markup or a monthly subscription fee in exchange for abstracting the technical infrastructure [6][4][5].",
+  "results": [
+    {
+      "title": "How to Set Up WhatsApp Business API: A 2026 Guide | DMHub Blog",
+      "url": "https://www.dmhub.ai/blog/whatsapp-business-api-setup-guide-2026",
+      "snippet": ""
+    },
+    {
+      "title": "WhatsApp Cloud API: The Complete Business Guide (2026)",
+      "url": "https://ozonetel.com/whatsapp-cloud-api-complete-guide/",
+      "snippet": ""
+    },
+    {
+      "title": "WhatsApp Business API Guide: Access, Pricing & Use Cases",
+      "url": "https://deepclick.com/resources/blog/whatsapp-business-api-guide/",
+      "snippet": ""
+    },
+    {
+      "title": "WhatsApp Business API Pricing 2026: Hidden Fees - SetSmart",
+      "url": "https://setsmart.io/blog/whatsapp-business-api-pricing",
+      "snippet": ""
+    },
+    {
+      "title": "WhatsApp Business API: how it works | bitbybit Studio",
+      "url": "https://bitbybit.studio/guides/whatsapp-business-api/",
+      "snippet": ""
+    },
+    {
+      "title": "WhatsApp Business API: The 2026 Technical Guide (Cloud API, scope, Compliance) | AgenticWhatsup",
+      "url": "https://agentic-whatsup.com/en/blog/whatsapp-business-api-guide",
+      "snippet": ""
+    },
+    {
+      "title": "WhatsApp Business Platform - USD rates and volume tiers effective January 1, 2026",
+      "url": "https://www.gupshup.ai/resources/wp-content/uploads/2025/12/USD_Jan2026.pdf",
+      "snippet": ""
+    }
+  ]
+}

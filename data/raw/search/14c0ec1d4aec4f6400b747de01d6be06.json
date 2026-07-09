@@ -1,0 +1,45 @@
+{
+  "answer": "The mermaid-cli package provides a Node.js API for rendering diagrams locally and does not require authentication [1][2][3]. Authentication methods mentioned in related Mermaid documentation, such as OAuth2 or token-based Authorization headers, apply only to the separate Mermaid Chart API or specific MCP server integrations, not to the mermaid-cli command-line tool or its programmatic Node.js API [4][5][6]. You can use the mermaid-cli Node.js API by importing and executing the run function as shown below [1][2].\n\n```js\nimport { run } from \"@mermaid-js/mermaid-cli\";\n\nawait run(\"input.mmd\", \"output.svg\");\n```",
+  "results": [
+    {
+      "title": "mermaid-js/mermaid-cli",
+      "url": "https://github.com/mermaid-js/mermaid-cli?tab=readme-ov-file",
+      "snippet": ""
+    },
+    {
+      "title": "Installation and Usage | mermaid-js/mermaid-cli | DeepWiki",
+      "url": "https://deepwiki.com/mermaid-js/mermaid-cli/2-installation-and-usage",
+      "snippet": ""
+    },
+    {
+      "title": "@mermaid-js/mermaid-cli - npmx",
+      "url": "https://npmx.dev/package/@mermaid-js/mermaid-cli",
+      "snippet": ""
+    },
+    {
+      "title": "docs/source/authentication.rst at master · data-mermaid/mermaid-api",
+      "url": "https://github.com/data-mermaid/mermaid-api/blob/master/docs/source/authentication.rst",
+      "snippet": ""
+    },
+    {
+      "title": "MCP Server — Mermaid Chart",
+      "url": "https://mermaid.ai/docs/ai/mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://mermaid-api.readthedocs.io/en/latest/getting_started.html",
+      "snippet": ""
+    },
+    {
+      "title": "CLI Implementation | mermaid-js/mermaid-cli | DeepWiki",
+      "url": "https://deepwiki.com/mermaid-js/mermaid-cli/3.1-cli-implementation",
+      "snippet": ""
+    },
+    {
+      "title": "README.md at 36c0bbe575c34d12bab388b5c34a295e1fc2516e · mermaid-js/mermaid-cli",
+      "url": "https://github.com/mermaid-js/mermaid-cli/blob/36c0bbe575c34d12bab388b5c34a295e1fc2516e/README.md",
+      "snippet": ""
+    }
+  ]
+}

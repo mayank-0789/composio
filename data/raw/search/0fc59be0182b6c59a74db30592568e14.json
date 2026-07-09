@@ -1,0 +1,45 @@
+{
+  "answer": "Discord provides free access to its developer API for building apps [1]. While individual Discord user accounts have paid tiers like Nitro, the developer platform itself is not a paid service for basic API access [1][2]. To monetize your application natively, you can use the Premium Apps feature, which allows you to set up SKUs for one-time purchases or recurring subscriptions [3][4]. Eligibility for monetization requires a verified app, a developer team, and compliance with Discord's developer policies [5]. You can then use the Entitlements API to verify user access to premium features [3][4].",
+  "results": [
+    {
+      "title": "Building your first Discord Bot - Documentation - Discord",
+      "url": "https://docs.discord.com/developers/quick-start/getting-started",
+      "snippet": ""
+    },
+    {
+      "title": "Is Discord Free? Yes — Paid Starts at $2.99/mo (2026)",
+      "url": "https://costbench.com/software/communication/discord/free-plan/",
+      "snippet": ""
+    },
+    {
+      "title": "Premium Apps & Activities - Documentation - Discord",
+      "url": "https://docs.discord.com/developers/platform/app-monetization",
+      "snippet": ""
+    },
+    {
+      "title": "Implementing App Subscriptions",
+      "url": "https://docs.discord.com/developers/monetization/implementing-app-subscriptions",
+      "snippet": ""
+    },
+    {
+      "title": "Enabling Monetization - Documentation - Discord",
+      "url": "https://docs.discord.com/developers/monetization/enabling-monetization",
+      "snippet": ""
+    },
+    {
+      "title": "Managing SKUs - Documentation - Discord",
+      "url": "https://docs.discord.com/developers/monetization/managing-skus",
+      "snippet": ""
+    },
+    {
+      "title": "Developer terms of service",
+      "url": "https://raw.githubusercontent.com/discord/discord-api-docs/48d3c2d324796d8236355262ace3b22c1d29acb0/docs/policies_and_agreements/Developer_Terms_of_Service.md",
+      "snippet": ""
+    },
+    {
+      "title": "Developers on Discord: Enjoy Premium App Subscriptions and more!",
+      "url": "https://discordapp.com/blog/premium-app-subscriptions-for-discord-developers",
+      "snippet": ""
+    }
+  ]
+}

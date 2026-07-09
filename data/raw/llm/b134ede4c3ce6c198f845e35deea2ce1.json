@@ -1,0 +1,110 @@
+{
+  "verdicts": [
+    {
+      "field": "existing_mcp.exists",
+      "status": "contradicted",
+      "note": "The evidence contains no mention of 'mcp-hub.ink' or any MCP server for Magento/Adobe Commerce. This appears to be an unsupported claim."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "contradicted",
+      "note": "The provided URL 'https://mcp-hub.ink/' is not mentioned in any evidence. This link should be removed."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence confirms OAuth 1.0a for PaaS third-party apps, OAuth2/Adobe IMS for SaaS, token-based auth, and login credentials for obtaining tokens."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Evidence confirms 'admin-approval' is correct - requires registering integrations via Admin panel per the getting started guide."
+    },
+    {
+      "field": "api_surface",
+      "status": "supported",
+      "note": "Evidence confirms REST, GraphQL, and SOAP support with varying endpoint sets between PaaS and SaaS deployments."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "Evidence confirms 'buildable-with-caveats' is appropriate given the varied auth methods and need for per-instance setup."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "Evidence confirms no unified credential flow and significant differences between deployment types requiring per-instance configuration."
+    },
+    {
+      "field": "confidence",
+      "status": "unsupported",
+      "note": "Confidence of 0.55 seems low given the comprehensive evidence provided. Should be higher (0.85+) as evidence clearly documents the auth, API surface, and self-serve model."
+    }
+  ],
+  "revised": {
+    "id": 45,
+    "name": "Magento (Adobe Commerce)",
+    "website": "developer.adobe.com/commerce",
+    "category": "Ecommerce",
+    "one_liner": "Adobe Commerce (Magento) offers broad REST/GraphQL/SOAP APIs for ecommerce operations, but self-serve access requires admin-level integration setup on an existing (self-hosted or licensed) instance rather than instant signup, with auth varying by deployment type.",
+    "auth_methods": [
+      {
+        "method": "OAuth2",
+        "notes": "Adobe Commerce as a Cloud Service (SaaS) requires Adobe IMS OAuth 2.0 bearer tokens for all REST API requests."
+      },
+      {
+        "method": "Other",
+        "notes": "PaaS/on-premise installations use OAuth 1.0a for third-party apps."
+      },
+      {
+        "method": "Token",
+        "notes": "Mobile/automated apps use token-based authentication (admin or customer login token)."
+      },
+      {
+        "method": "Basic",
+        "notes": "Admin/customer login credentials used to obtain access tokens."
+      }
+    ],
+    "self_serve": "admin-approval",
+    "self_serve_notes": "No free multi-tenant SaaS signup with self-serve API keys; requires an existing Adobe Commerce/Magento instance (self-hosted Open Source or licensed Adobe Commerce/Cloud) and admin panel access to create integrations/tokens. Magento Open Source is free and self-hostable, giving developers full self-serve control once installed, but there's no hosted free tier or instant API key issuance from Adobe.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "Supports REST, GraphQL, and SOAP APIs across catalog, orders, customers, CMS, integrations. Endpoint set varies between PaaS (Adobe Commerce/Magento Open Source) and SaaS (Adobe Commerce as a Cloud Service, GraphQL-focused with reduced REST surface)."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "No unified, official self-serve credential flow; auth method and API surface (REST vs GraphQL, endpoint availability) vary significantly depending on deployment type (Open Source, PaaS Adobe Commerce, or SaaS Cloud Service), requiring per-instance configuration and admin-level integration setup rather than a simple developer signup.",
+    "evidence": [
+      {
+        "url": "https://developer.adobe.com/commerce/webapi/rest/",
+        "supports": "Describes REST API auth methods (OAuth 1.0a, token, login credentials) and differences between PaaS and SaaS endpoint sets."
+      },
+      {
+        "url": "https://developer.adobe.com/commerce/webapi/get-started/",
+        "supports": "Confirms REST/GraphQL/SOAP support, three auth types, and requirement to register a web service/integration via Admin panel (admin-approval self-serve model)."
+      },
+      {
+        "url": "https://developer.adobe.com/commerce/webapi/rest/authentication/",
+        "supports": "Details Adobe IMS OAuth2 requirement for Cloud Service REST API authentication."
+      },
+      {
+        "url": "https://developer.adobe.com/commerce/webapi/graphql/",
+        "supports": "Confirms GraphQL API availability and endpoint structure differences between PaaS and SaaS."
+      },
+      {
+        "url": "https://costbench.com/software/enterprise-ecommerce/adobe-commerce/free-plan/",
+        "supports": "Notes no free hosted tier for Adobe Commerce; free self-hosted Magento Open Source alternative exists with API limitations."
+      }
+    ],
+    "confidence": 0.85,
+    "flags": [
+      "Auth method and API surface differ substantially between Magento Open Source, Adobe Commerce PaaS, and Adobe Commerce SaaS - toolkit must handle multiple auth/endpoint variants",
+      "No official Adobe-hosted MCP server found in evidence",
+      "No free instant sandbox/dev account; requires an actual store instance (self-hosted or licensed) to obtain credentials",
+      "Webhooks not natively supported per docs, which may limit event-driven agent use cases"
+    ]
+  }
+}

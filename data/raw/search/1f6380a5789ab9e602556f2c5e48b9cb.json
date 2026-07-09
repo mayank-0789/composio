@@ -1,0 +1,45 @@
+{
+  "answer": "Several community-built Model Context Protocol (MCP) servers enable AI assistants to interact with the Coda API [1][2][3]. These servers allow tools to perform CRUD operations on Coda documents, pages, tables, and rows, and often provide access to formulas, controls, and automation [1][3][4][5].\n\nYou can integrate these servers into MCP-compatible clients like Claude Desktop, Cursor, or VS Code by adding the server configuration to your client's settings [1][2][3]. Most implementations support setup via `npx` or Docker using a Coda API key [2][3][5]. \n\nExample configuration for an MCP client:\n\n```json\n{\n  \"mcpServers\": {\n    \"coda\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"coda-mcp@latest\"],\n      \"env\": {\n        \"API_KEY\": \"your_api_token_here\"\n      }\n    }\n  }\n}\n```\n\nBecause these are community projects, choose the implementation that best matches your needs regarding the number of tools or specific feature support [1][2][3][4].",
+  "results": [
+    {
+      "title": "vish288/mcp-coda",
+      "url": "https://github.com/vish288/mcp-coda",
+      "snippet": ""
+    },
+    {
+      "title": "orellazri/coda-mcp",
+      "url": "https://github.com/orellazri/coda-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "adeel0x01/coda-mcp-server",
+      "url": "https://github.com/adeel0x01/coda-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "glorynguyen/coda-mcp",
+      "url": "https://github.com/glorynguyen/coda-mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "dustinrgood/coda-mcp",
+      "url": "https://github.com/dustinrgood/coda-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "nkpar/coda-mcp",
+      "url": "https://github.com/nkpar/coda-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Getting started with Superhuman Docs MCP | Guides",
+      "url": "https://coda.io/resources/guides/getting_started_with_coda_mcp",
+      "snippet": ""
+    },
+    {
+      "title": "coda-mcp",
+      "url": "https://registry.npmjs.org/coda-mcp",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://github.com/karbassi/slack-mcp",
+  "reason": "Multiple dedicated MCP servers exist for Slack. There are several open-source implementations available including: karbassi/slack-mcp (https://github.com/karbassi/slack-mcp) which provides comprehensive access to Slack Web API methods, korotovsky/slack-mcp-server (https://github.com/korotovsky/slack-mcp-server) with specialized features, zencoderai/slack-mcp-server (https://github.com/zencoderai/slack-mcp-server), and an official @modelcontextprotocol/server-slack package on npm. Slack also provides official documentation for the MCP server integration. These are distinct MCP server implementations, not just the Slack product itself."
+}

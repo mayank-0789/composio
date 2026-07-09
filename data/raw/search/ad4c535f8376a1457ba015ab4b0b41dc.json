@@ -1,0 +1,45 @@
+{
+  "answer": "LinkedIn does not offer a public pricing tier, as the Advertising API is a free-to-access program for qualified developers, provided they meet specific use case requirements [1][2][3]. All applications begin in the Development tier, which allows unlimited read access and the ability to edit up to five ad accounts [1][3][4]. To scale beyond these limits, you must build your application and subsequently apply for the Standard tier via a support ticket on the Developer Support Portal [1][3][5]. There is no self-serve, paid subscription model for immediate API access; approval is subject to manual review [2][3].",
+  "results": [
+    {
+      "title": "LinkedIn Marketing API Program Access Tiers - LinkedIn | Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/marketing-tiers?view=li-lms-2026-06",
+      "snippet": ""
+    },
+    {
+      "title": "LinkedIn API | Advertising API",
+      "url": "https://developer.linkedin.com/product-catalog/marketing/advertising-api",
+      "snippet": ""
+    },
+    {
+      "title": "Increasing Access - LinkedIn | Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access?view=li-lms-2025-06",
+      "snippet": ""
+    },
+    {
+      "title": "Tips to Get Started - LinkedIn | Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/tips-to-get-started?view=li-lms-2026-04",
+      "snippet": ""
+    },
+    {
+      "title": "Quick Start - LinkedIn | Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/quick-start?view=li-lms-2025-06",
+      "snippet": ""
+    },
+    {
+      "title": "Marketing API FAQ - LinkedIn | Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/lms-faq?view=li-lms-2026-04",
+      "snippet": ""
+    },
+    {
+      "title": "Campaign Management Getting Started - LinkedIn | Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/getting-started?view=li-lms-2026-01",
+      "snippet": ""
+    },
+    {
+      "title": "Key Concepts - LinkedIn | Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/getting-started?view=li-lms-2026-02",
+      "snippet": ""
+    }
+  ]
+}

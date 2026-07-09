@@ -1,0 +1,45 @@
+{
+  "answer": "Close supports two primary authentication methods: API keys and OAuth 2.0.\n\nAPI keys are recommended for internal tools, scripts, and server-side integrations. You authenticate by using HTTP Basic authentication: provide your API key as the username and leave the password empty. You must base64-encode the string \"your_api_key:\" and include it in the Authorization header.\n\nOAuth 2.0 is recommended for user-facing, third-party integrations. It manages access through an authorization flow where users grant specific applications permission to access their Close organization without handling secret keys directly.",
+  "results": [
+    {
+      "title": "Authentication with API keys | Close | Developer API Documentation",
+      "url": "https://developer.close.com/topics/authentication/",
+      "snippet": ""
+    },
+    {
+      "title": "API Overview | Close | Developer API Documentation",
+      "url": "https://developer.close.com/api/overview",
+      "snippet": ""
+    },
+    {
+      "title": "API keys & OAuth",
+      "url": "https://help.close.com/docs/api-keys-oauth",
+      "snippet": ""
+    },
+    {
+      "title": "Merge two leads",
+      "url": "https://developer.close.com/api/resources/leads/merge.md",
+      "snippet": ""
+    },
+    {
+      "title": "Close MCP Server",
+      "url": "https://help.close.com/v1/docs/en/mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Create OAuth Apps",
+      "url": "https://help.close.com/docs/create-oauth-apps",
+      "snippet": ""
+    },
+    {
+      "title": "Close",
+      "url": "https://docs.alterauth.com/reference/oauth-providers/close",
+      "snippet": ""
+    },
+    {
+      "title": "Zapier (API keys to OAuth)",
+      "url": "https://help.close.com/docs/zapier-api-keys-to-oauth",
+      "snippet": ""
+    }
+  ]
+}

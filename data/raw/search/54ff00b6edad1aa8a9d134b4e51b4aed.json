@@ -1,0 +1,45 @@
+{
+  "answer": "The Supabase MCP server is an official integration that allows AI assistants like Cursor, Claude, and Windsurf to interact directly with your Supabase projects. It uses the Model Context Protocol (MCP) to enable LLMs to perform tasks such as querying data, managing database tables, and fetching project configurations.\n\nFor most users, connect via the hosted server URL: `https://mcp.supabase.com/mcp`. If developing locally using the Supabase CLI, use `http://localhost:54321/mcp`. \n\nYou can configure the server by appending URL parameters:\n- `project_ref=<id>`: Scope to a specific project.\n- `read_only=true`: Restrict to read-only operations.\n- `features=<groups>`: Enable specific tool sets like `database` or `docs`.\n\nExample configuration for an MCP client:\n\n```json\n{\n  \"mcpServers\": {\n    \"supabase\": {\n      \"type\": \"http\",\n      \"url\": \"https://mcp.supabase.com/mcp?project_ref=your-project-id&read_only=true\"\n    }\n  }\n}\n```\n\nAuthentication typically happens via a browser-based OAuth flow triggered by your MCP client, though personal access tokens can be used for CI environments.",
+  "results": [
+    {
+      "title": "Supabase MCP Server | Supabase Docs",
+      "url": "https://supabase.com/docs/guides/ai-tools/mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Supabase MCP Server",
+      "url": "https://supabase.com/blog/mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "README.md at main · supabase/mcp",
+      "url": "https://github.com/supabase/mcp/blob/main/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "Announcing the Supabase Remote MCP Server",
+      "url": "https://supabase.com/blog/remote-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Deploy MCP servers | Supabase Docs",
+      "url": "https://supabase.com/docs/guides/ai-tools/byo-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "supabase/mcp",
+      "url": "https://github.com/supabase-community/supabase-mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "apps/docs/content/guides/getting-started/mcp.mdx at master · supabase/supabase",
+      "url": "https://github.com/supabase/supabase/blob/master/apps/docs/content/guides/getting-started/mcp.mdx",
+      "snippet": ""
+    },
+    {
+      "title": "Architecture overview - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/learn/architecture",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "Coda makes its REST API available to all users at no additional charge, regardless of whether you are on a free or paid workspace plan [1]. While API usage is free, access is subject to the permissions of the user associated with the API token [1].\n\nFor most API actions, the token owner must be a Doc Maker or Admin within the workspace [1]. If a workspace allows members to create docs, an Editor using an API key may be automatically promoted to a Doc Maker upon executing certain endpoints, such as creating a document [1]. You can manage your workspace and billing settings through Coda's self-serve account portal [2].",
+  "results": [
+    {
+      "title": "Coda API (v1) Reference Documentation",
+      "url": "http://www.usydcoda.org/v1.html",
+      "snippet": ""
+    },
+    {
+      "title": "Billing and pricing basics – Coda",
+      "url": "https://help.coda.io/hc/en-us/articles/39555725230989-Billing-and-pricing-basics",
+      "snippet": ""
+    },
+    {
+      "title": "Collaboration costs less with Coda, we price differently - Coda",
+      "url": "https://coda.io/product/collaboration-costs-less-with-coda",
+      "snippet": ""
+    },
+    {
+      "title": "Coda Software Pricing & Plans 2026: See Your Cost",
+      "url": "https://www.vendr.com/marketplace/coda",
+      "snippet": ""
+    },
+    {
+      "title": "Coda AI Pricing, Review & AI Fit Score (March 2026) | AI Tools Mentor",
+      "url": "https://www.aitoolsmentor.com/tool/coda",
+      "snippet": ""
+    },
+    {
+      "title": "Coda Review — AI Panel Score 7.9/10 | TopReviewed.ai",
+      "url": "https://topreviewed.ai/products/coda",
+      "snippet": ""
+    },
+    {
+      "title": "Coda Review (2026): Pricing, Features & Honest Verdict - MakerStack",
+      "url": "https://makerstack.co/reviews/coda-review/",
+      "snippet": ""
+    },
+    {
+      "title": "Is Coda Free? Yes — Paid Starts at $12/mo (2026)",
+      "url": "https://costbench.com/software/project-management/coda/free-plan/",
+      "snippet": ""
+    }
+  ]
+}

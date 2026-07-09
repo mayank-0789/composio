@@ -1,0 +1,45 @@
+{
+  "answer": "Supabase offers unlimited API access on all plans, including the Free tier [1][2]. The Free tier allows for two active projects, which are automatically paused after one week of inactivity [1][3][4]. You can access these services through a self-serve model by creating an account and starting a project on the platform without requiring a credit card [5][4]. All Supabase plans, including the Free tier, include a dedicated Postgres database, authentication, and API support [1][5].",
+  "results": [
+    {
+      "title": "Pricing & Fees | Supabase",
+      "url": "https://supabase.com/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing & Fees | Supabase",
+      "url": "https://supabase.com/blog/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "About billing on Supabase | Supabase Docs",
+      "url": "https://supabase.com/docs/guides/platform/billing-on-supabase",
+      "snippet": ""
+    },
+    {
+      "title": "Supabase Pricing 2026: Every Tier Explained for Indie Hackers",
+      "url": "https://www.wearefounders.uk/supabase-pricing-2026-every-tier-explained-for-indie-hackers/",
+      "snippet": ""
+    },
+    {
+      "title": "Supabase Pricing Calculator (2026) — Estimate Your Monthly Bill",
+      "url": "https://makerkit.dev/pricing-calculator/supabase",
+      "snippet": ""
+    },
+    {
+      "title": "Billing FAQ | Supabase Docs",
+      "url": "https://supabase.com/docs/guides/platform/billing-faq",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing | Supabase Docs",
+      "url": "https://supabase.com/docs/guides/functions/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Supabase Pricing 2026: Every Tier, Hidden Costs, vs Firebase + Neon | Toolradar Blog",
+      "url": "https://toolradar.com/blog/supabase-pricing-2026",
+      "snippet": ""
+    }
+  ]
+}

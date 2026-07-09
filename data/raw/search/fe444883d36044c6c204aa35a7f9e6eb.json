@@ -1,0 +1,45 @@
+{
+  "answer": "BigCommerce APIs primarily use the X-Auth-Token header to authenticate requests with OAuth access tokens [1][2]. For REST and GraphQL Admin APIs, include the access token in your request header:\n\n```http\nGET https://api.bigcommerce.com/stores/{{STORE_HASH}}/v3/catalog/products\nX-Auth-Token: {{ACCESS_TOKEN}}\n```\n\nFor GraphQL Storefront APIs, use the Authorization header with a Bearer token:\n\n```http\nAuthorization: Bearer {{TOKEN}}\n```\n\nOther specialized methods exist, such as using an Authorization header with a Bearer prefix for storefront requests [3] or utilizing an X-Store-Hash header alongside X-Auth-Token for B2B server-to-server requests [4].",
+  "results": [
+    {
+      "title": "Authentication | BigCommerce Developer Center",
+      "url": "https://developer-center-bigcommerce-dx.vercel.app/docs/start/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://docs.bigcommerce.com/developer/learn/courses/intro-to-bc-development/apis/admin-apis.md",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication | BigCommerce Docs",
+      "url": "https://docs.bigcommerce.com/developer/learn/courses/graphql-storefront-api/auth/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication for hosted storefronts",
+      "url": "https://docs.bigcommerce.com/developer/docs/b2b-edition/getting-started/authentication.mdx",
+      "snippet": ""
+    },
+    {
+      "title": "API Accounts & OAuth Scopes | BigCommerce Developer Center",
+      "url": "https://developer-center-bigcommerce-dx.vercel.app/docs/start/authentication/api-accounts",
+      "snippet": ""
+    },
+    {
+      "title": "Implementing OAuth | BigCommerce Docs",
+      "url": "https://docs.bigcommerce.com/developer/docs/integrations/apps/guide/auth",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://docs.bigcommerce.com/developer/docs/archive/start/making-requests.mdx",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://docs.bigcommerce.com/developer/docs/integrations/apps/guide.md",
+      "snippet": ""
+    }
+  ]
+}

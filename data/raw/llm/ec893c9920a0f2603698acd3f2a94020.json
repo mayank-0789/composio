@@ -1,0 +1,59 @@
+{
+  "one_liner": "AI-powered image and video generation platform with 30+ models (Kling, Veo, Flux, Sora) accessible via REST API, SDK, CLI, and MCP server.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Primary method uses KEY_ID:KEY_SECRET credentials string, passed via HF_CREDENTIALS environment variable or config function. HTTP API uses Authorization: Key KEY_ID:KEY_SECRET header or Bearer token."
+    },
+    {
+      "method": "OAuth2",
+      "notes": "Used for MCP server integration—one-time OAuth handshake with Higgsfield account, no API keys required for MCP access."
+    }
+  ],
+  "self_serve": "paid-plan",
+  "self_serve_notes": "API access is not available on the free tier. It requires upgrading to a paid professional or studio-level plan. The free plan only supports manual web-based experimentation, not programmatic API access.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "medium",
+    "notes": "Offers REST API with HTTP endpoints, official SDK for Node.js/TypeScript, and a CLI tool. Supports 30+ image and video generation models (Kling, Veo, Flux, Sora). API includes model invocation, project management, and character training capabilities."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://mcp.higgsfield.ai/mcp"
+  },
+  "buildability": "buildable-with-caveats",
+  "main_blocker": "API access requires a paid subscription; not available on the free tier.",
+  "evidence": [
+    {
+      "url": "https://github.com/higgsfield-ai/higgsfield-js",
+      "supports": "Official Node.js SDK exists with v2 API support, authentication via KEY_ID:KEY_SECRET credentials"
+    },
+    {
+      "url": "https://registry.npmjs.org/@higgsfield/client",
+      "supports": "Published NPM package @higgsfield/client v0.2.1 with TypeScript support for image and video generation"
+    },
+    {
+      "url": "https://github.com/higgsfield-ai/cli/",
+      "supports": "Official CLI tool available with 'higgsfield auth login' command for authentication"
+    },
+    {
+      "url": "https://mcp.higgsfield.ai/mcp",
+      "supports": "Hosted MCP server exists with OAuth authentication, supporting 30+ models"
+    },
+    {
+      "url": "https://flowith.io/blog/higgsfield-pricing-free-vs-creator-vs-studio/",
+      "supports": "API access gated to paid plans; not available on free tier"
+    },
+    {
+      "url": "https://github.com/higgsfield-ai/skills/blob/main/CLAUDE.md",
+      "supports": "MCP server integration documentation for Claude and other AI agents"
+    }
+  ],
+  "confidence": 0.85,
+  "flags": [
+    "mcp-server-exists",
+    "paid-api-access-only",
+    "official-sdk-available",
+    "cli-available"
+  ]
+}

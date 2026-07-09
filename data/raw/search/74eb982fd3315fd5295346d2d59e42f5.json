@@ -1,0 +1,45 @@
+{
+  "answer": "The Model Context Protocol (MCP) is an open standard that allows AI applications (hosts) to connect to external data sources and tools through a unified, client-server architecture. It uses JSON-RPC 2.0 over either Stdio or Streamable HTTP transports to exchange three core primitives: tools (executable functions for actions), resources (read-only data sources for context), and prompts (reusable instruction templates).\n\nWhile there is no single entity named Paygent Connect in the provided search results, there are various payment-related implementations, such as the official @payware/mcp-server for payment API integration and the Payneteasy platform, which uses MCP to provide AI agents with secure, read-only access to operational backoffice data.",
+  "results": [
+    {
+      "title": "Understanding MCP servers",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts",
+      "snippet": ""
+    },
+    {
+      "title": "Architecture overview - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/learn/architecture",
+      "snippet": ""
+    },
+    {
+      "title": "GitHub - dreygur/mcp-connect at v0.3.2 · GitHub",
+      "url": "https://github.com/dreygur/mcp-connect/tree/v0.3.2",
+      "snippet": ""
+    },
+    {
+      "title": "@payware/mcp-server",
+      "url": "https://registry.npmjs.org/@payware/mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Payneteasy Brings the Model Context Protocol (MCP) to the Payment Platform — Let AI Agents Safely Read Your Operational Data - DEV Community",
+      "url": "https://dev.to/payneteasy/payneteasy-brings-the-model-context-protocol-mcp-to-the-payment-platform-let-ai-agents-safely-1d0h",
+      "snippet": ""
+    },
+    {
+      "title": "GUIDE.md at acc4627726ea70d43c9770a8ad833da20c3be8e0 · payelink/paylink",
+      "url": "https://github.com/payelink/paylink/blob/acc4627726ea70d43c9770a8ad833da20c3be8e0/GUIDE.md",
+      "snippet": ""
+    },
+    {
+      "title": "MCP Key Concepts and Architecture · Hugging Face",
+      "url": "https://huggingface.co/learn/context-course/en/unit2/key-concepts",
+      "snippet": ""
+    },
+    {
+      "title": "docs/specification/2024-11-05/index.mdx at ff960c9e · modelcontextprotocol/modelcontextprotocol",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/ff960c9e/docs/specification/2024-11-05/index.mdx",
+      "snippet": ""
+    }
+  ]
+}

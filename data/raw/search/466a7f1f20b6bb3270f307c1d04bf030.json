@@ -1,0 +1,45 @@
+{
+  "answer": "Ahrefs provides a remote, hosted Model Context Protocol (MCP) server that allows AI agents to securely access Ahrefs API data [1]. To use it, you must have an Ahrefs Lite plan or higher [1]. The recommended connection method for supported AI tools is the Streamable HTTP transport at `https://api.ahrefs.com/mcp/mcp` [1].\n\nPlease note that the local `@ahrefs/mcp` npm package is deprecated and no longer maintained [2]. You should not use local scripts or standalone clients to access the external MCP endpoint, as this is unsupported; use the official remote server integration provided through your Ahrefs account instead [1].",
+  "results": [
+    {
+      "title": "What is Ahrefs MCP | Ahrefs for Developers",
+      "url": "https://docs.ahrefs.com/en/mcp/docs/introduction",
+      "snippet": ""
+    },
+    {
+      "title": "ahrefs/ahrefs-mcp-server",
+      "url": "https://github.com/Ahrefs/ahrefs-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "@ahrefs/mcp",
+      "url": "https://www.npmjs.com/package/@ahrefs/mcp",
+      "snippet": ""
+    },
+    {
+      "title": "What Is an MCP Server, and Why Should Marketers Care?",
+      "url": "https://ahrefs.com/blog/what-is-mcp-server/",
+      "snippet": ""
+    },
+    {
+      "title": "Ahrefs — MCP server | explainx.ai | explainx.ai",
+      "url": "https://explainx.ai/mcp-servers/ahrefs",
+      "snippet": ""
+    },
+    {
+      "title": "Ahrefs MCP Server - ahrefs/ahrefs-mcp-server",
+      "url": "https://playbooks.com/mcp/ahrefs/ahrefs-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Understanding MCP servers",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts",
+      "snippet": ""
+    },
+    {
+      "title": "Architecture overview - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/learn/architecture",
+      "snippet": ""
+    }
+  ]
+}

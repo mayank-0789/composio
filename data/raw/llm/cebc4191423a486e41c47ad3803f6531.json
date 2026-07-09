@@ -1,0 +1,110 @@
+{
+  "verdicts": [
+    {
+      "field": "existing_mcp.exists",
+      "status": "contradicted",
+      "note": "The record claims exists='yes' with url='https://mcp.twilio.com/docs', but the evidence shows that URL returns a Twilio API error (HTTP 405, resource does not support GET). This is not evidence of a dedicated MCP server; it appears to be a misconfigured Twilio API endpoint. No evidence of an actual MCP server is provided."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "contradicted",
+      "note": "The URL https://mcp.twilio.com/docs returns a Twilio API error rather than an MCP server documentation page. The error message indicates this is a Twilio API endpoint that doesn't support GET requests, not an MCP server."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence clearly describes HTTP Basic auth using API Key/Secret (recommended) or Account SID/Auth Token (local testing only). The record accurately captures both methods and their use cases."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Evidence confirms 30-day free trial with no credit card required, matching 'self-serve-trial'. Users can sign up and get API credentials (Account SID, Auth Token, API keys) directly."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "supported",
+      "note": "Evidence confirms 30-day trial with no credit card, 100 SMS, 3,000 emails, 75 voice minutes free units. The mention of 'perpetual free units after trial' is not contradicted by evidence but also not explicitly confirmed."
+    },
+    {
+      "field": "api_surface.type",
+      "status": "supported",
+      "note": "Evidence clearly shows REST API with base URL https://api.twilio.com/2010-04-01 and references to numerous REST API operations."
+    },
+    {
+      "field": "api_surface.breadth",
+      "status": "supported",
+      "note": "Evidence mentions 'thousands of API operations' and lists multiple product areas (messaging, voice, verify, phone numbers, usage, account management), supporting 'broad' classification."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "Evidence confirms self-serve trial signup, immediate API access with credentials available in Console, REST API with clear authentication. This supports 'buildable-now' status."
+    },
+    {
+      "field": "main_blocker",
+      "status": "contradicted",
+      "note": "The record mentions 'alpha MCP package' and tool filtering requirements, but no evidence supports the existence of any MCP server (alpha or otherwise). The main_blocker references a non-existent MCP implementation."
+    },
+    {
+      "field": "flags",
+      "status": "contradicted",
+      "note": "The first flag references an '@twilio-alpha/mcp' package and MCP-specific concerns, but no evidence supports the existence of any MCP server. The second flag about trial restrictions is supported by evidence."
+    },
+    {
+      "field": "one_liner",
+      "status": "contradicted",
+      "note": "The one_liner states 'official/alpha MCP server available' but evidence shows no such MCP server exists. The rest of the one_liner is accurate."
+    }
+  ],
+  "revised": {
+    "id": 22,
+    "name": "Twilio",
+    "website": "twilio.com",
+    "category": "Communications and Messaging",
+    "one_liner": "Twilio provides broad REST APIs for messaging, voice, verify, and account management, authenticated via HTTP Basic auth (API Key/Secret or Account SID/Auth Token), with self-serve trial signup.",
+    "auth_methods": [
+      {
+        "method": "Basic",
+        "notes": "HTTP Basic auth using API Key as username and API Key Secret as password (recommended for production); Account SID + Auth Token supported for local testing only."
+      },
+      {
+        "method": "API key",
+        "notes": "API keys (Main, Standard, Restricted) can be created via Console or REST API and used as the Basic auth username/password pair."
+      }
+    ],
+    "self_serve": "self-serve-trial",
+    "self_serve_notes": "Twilio offers a 30-day free trial with no credit card required, including free units (100 SMS, 3,000 emails, 75 voice minutes). Account SID, Auth Token, and API keys can be created directly in the Console.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "Thousands of API operations across messaging, voice, verify, phone numbers, usage, and account management. Also offers SDKs and CLI."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-now",
+    "main_blocker": null,
+    "evidence": [
+      {
+        "url": "https://www.twilio.com/docs/usage/requests-to-twilio.md",
+        "supports": "HTTP Basic auth with API Key/Secret (recommended) or Account SID/Auth Token (local testing)."
+      },
+      {
+        "url": "https://www.twilio.com/docs/iam/api",
+        "supports": "REST API basics, base URL, and authentication method with curl example."
+      },
+      {
+        "url": "https://www.twilio.com/docs/usage/trials",
+        "supports": "30-day free trial details allowing self-serve API access without credit card."
+      },
+      {
+        "url": "https://www.twilio.com/docs/usage/tutorials/how-to-use-your-free-trial-account",
+        "supports": "Free trial account setup and usage."
+      }
+    ],
+    "confidence": 0.9,
+    "flags": [
+      "Trial account has restrictions (e.g., limited to verified numbers) before upgrading to paid."
+    ]
+  }
+}

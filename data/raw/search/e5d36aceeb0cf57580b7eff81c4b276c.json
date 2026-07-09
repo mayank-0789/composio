@@ -1,0 +1,45 @@
+{
+  "answer": "Intercom provides a free, self-serve developer workspace specifically for building and testing applications [1][2]. These workspaces are intended for development purposes only, are limited to the US region, and carry specific functional restrictions such as no outbound email or push notifications [1]. To access the API, you can create a private app within your workspace via the Developer Hub and generate an Access Token [1][2]. While these developer workspaces are free, they are separate from paid subscription plans; using the Intercom service itself requires a separate customer agreement [1][3].",
+  "results": [
+    {
+      "title": "Set up a Workspace | Intercom and Fin Developer Platform",
+      "url": "https://developers.intercom.com/docs/build-an-integration/getting-started",
+      "snippet": ""
+    },
+    {
+      "title": "Overview",
+      "url": "https://developers.intercom.com/docs.md",
+      "snippet": ""
+    },
+    {
+      "title": "Intercom Developer Terms | Intercom and Fin Developer Platform",
+      "url": "https://developers.intercom.com/docs/publish-to-the-app-store/intercom-developer-terms",
+      "snippet": ""
+    },
+    {
+      "title": "Intercom Pricing | Plans for every team size",
+      "url": "https://www.intercom.com/pricing?on_pageview_event=pricing_nav&tab=1",
+      "snippet": ""
+    },
+    {
+      "title": "Intercom Pricing | Plans for every team size",
+      "url": "https://www.intercom.com/pricing?current_tab=all_intercom_tab",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing Calculator | Intercom",
+      "url": "https://www.intercom.com/pricing/calculator",
+      "snippet": ""
+    },
+    {
+      "title": "Fin and Intercom plans explained | Intercom Help",
+      "url": "https://www.intercom.com/help/en/articles/9061614-fin-and-intercom-plans-explained",
+      "snippet": ""
+    },
+    {
+      "title": "Early Stage Startup Program | Get 1 year of Fin free + 93% off Intercom",
+      "url": "https://www.intercom.com/early-stage",
+      "snippet": ""
+    }
+  ]
+}

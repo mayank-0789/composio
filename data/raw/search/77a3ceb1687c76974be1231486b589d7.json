@@ -1,0 +1,45 @@
+{
+  "answer": "Close does not offer a free tier for developer API access. API access is a feature included with their paid CRM plans [1][2]. \n\nTo use the API, you must subscribe to a paid plan and use either an API key or OAuth 2.0 for authentication [1][3]. While Close offers a free trial of their CRM that includes $5 of calling and enrichment credits [1][2], it is not a permanent free tier for API developers. Developers can manage their API integration using the base URL `https://api.close.com/api/v1` and following standard REST conventions [3].",
+  "results": [
+    {
+      "title": "Close CRM Pricing | Plans with Calling, SMS & AI Sales Agent",
+      "url": "https://close.com/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Close CRM Pricing | Plans with Calling, SMS & AI Sales Agent",
+      "url": "http://close.io/pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "API Overview | Close | Developer API Documentation",
+      "url": "https://developer.close.com/api/overview",
+      "snippet": ""
+    },
+    {
+      "title": "API Pricing | Data Legion",
+      "url": "https://www.datalegion.ai/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "AI Credits",
+      "url": "https://help.close.com/docs/ai-credits",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing | Commerce Layer",
+      "url": "https://commercelayer.io/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Access & Pricing for Crawlers — ChangeGamer",
+      "url": "https://changegamer.ai/resources/access-and-pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Our New Pricing: Flat-Rate Enrichment, No Sales Call",
+      "url": "https://www.datalegion.ai/blog/post/flat-rate-enrichment-pricing",
+      "snippet": ""
+    }
+  ]
+}

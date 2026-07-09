@@ -1,0 +1,45 @@
+{
+  "answer": "The ClickUp API supports two primary authentication methods, both of which require including a token in the Authorization header of your requests [1][2][3].\n\nFor personal use or testing, use a personal API token [1][3]. These tokens begin with pk_ and are passed directly in the header [1][4].\n\n```http\nAuthorization: {personal_token}\n```\n\nFor applications or integrations intended for other users, you must implement the OAuth 2.0 authorization code flow [1][4][3]. This flow grants each user an individualized token, which must be provided in the header using the Bearer schema [1][4][5].\n\n```http\nAuthorization: Bearer {access_token}\n```",
+  "results": [
+    {
+      "title": "Authentication",
+      "url": "https://developer.clickup.com/docs/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Get Started with the ClickUp API",
+      "url": "https://developer.clickup.com/docs/Getting%20Started.md",
+      "snippet": ""
+    },
+    {
+      "title": "Get Tasks",
+      "url": "https://developer.clickup.com/reference/gettasks",
+      "snippet": ""
+    },
+    {
+      "title": "Create your own app with the ClickUp API – ClickUp Help",
+      "url": "https://help.clickup.com/hc/en-us/articles/6303422883095-Create-your-own-app-with-the-ClickUp-API",
+      "snippet": ""
+    },
+    {
+      "title": "Get Authorized User",
+      "url": "https://developer.clickup.com/reference/getauthorizeduser",
+      "snippet": ""
+    },
+    {
+      "title": "OpenAPI Specification",
+      "url": "https://developer.clickup.com/docs/open-api-spec",
+      "snippet": ""
+    },
+    {
+      "title": "Reference",
+      "url": "https://developer.clickup.com/reference",
+      "snippet": ""
+    },
+    {
+      "title": "How to Build Two-Way Integrations With the ClickUp Public API",
+      "url": "https://clickup.com/blog/clickup-api/",
+      "snippet": ""
+    }
+  ]
+}

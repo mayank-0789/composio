@@ -1,0 +1,111 @@
+{
+  "verdicts": [
+    {
+      "field": "existing_mcp.exists",
+      "status": "unsupported",
+      "note": "The evidence shows https://mcp.higgsfield.ai/mcp returns {\"error\":\"Unauthorized\"}, which is an API endpoint response, not proof of a dedicated MCP server repository or installation package. The CLAUDE.md and skills repo discuss CLI integration and 'skills' that drive the CLI, but do not provide evidence of a standalone MCP server package. The URL in the record is not an MCP server repository; it's a web endpoint that requires authentication."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "contradicted",
+      "note": "The URL https://mcp.higgsfield.ai/mcp is an API endpoint (returns JSON error), not an MCP server repository or package. An MCP server would be a GitHub repo, NPM package, or similar installable artifact, not a web API endpoint."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence confirms API key authentication via KEY_ID:KEY_SECRET credentials (GitHub SDK repo, NPM package metadata). The OAuth2 claim for 'MCP server integration' is mentioned in the record but not directly substantiated by the evidence; the mcp.higgsfield.ai endpoint only shows an 'Unauthorized' error without revealing the auth method. However, the CLAUDE.md references 'higgsfield CLI' skills and the CLI repo shows 'higgsfield auth login', which suggests interactive auth, possibly OAuth."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "The Flowith blog article explicitly states: 'No API access' on the Free plan and that API access requires 'upgrading to a paid professional or studio-level plan.' This confirms paid-plan gating."
+    },
+    {
+      "field": "api_surface.type",
+      "status": "supported",
+      "note": "The GitHub SDK repo (higgsfield-js) and NPM package (@higgsfield/client) confirm a REST-style API with Node.js SDK support."
+    },
+    {
+      "field": "api_surface.breadth",
+      "status": "supported",
+      "note": "The NPM package keywords include 'image-generation', 'video-generation'; the CLAUDE.md mentions 'image/video generation, Marketing Studio, Virality Predictor, Soul Character training, product photography, marketplace cards, websites'. This suggests a medium-breadth API covering multiple AI generation and media use cases."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "The record states 'buildable-with-caveats' due to paid-plan requirement. The evidence supports this: Flowith blog confirms no API access on free tier, requiring paid upgrade."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "The Flowith blog explicitly confirms: 'No API access' on Free plan, and 'No commercial usage rights' for free tier. API access requires paid subscription."
+    },
+    {
+      "field": "one_liner",
+      "status": "supported",
+      "note": "The one_liner mentions 'REST API, SDK, CLI, and MCP server.' Evidence confirms REST API (SDK repo), SDK (NPM package), and CLI (CLI repo). The 'MCP server' claim is not substantiated as a standalone MCP server; instead, the evidence shows API endpoints and CLI 'skills' integration, which is not the same as a dedicated MCP server package."
+    },
+    {
+      "field": "flags",
+      "status": "contradicted",
+      "note": "The flag 'mcp-server-exists' is not supported by the evidence. The evidence does not show a dedicated MCP server package or repository—only an API endpoint that returns 'Unauthorized' and CLI skills documentation. The other flags ('paid-api-access-only', 'official-sdk-available', 'cli-available') are supported."
+    }
+  ],
+  "revised": {
+    "id": 97,
+    "name": "higgsfield",
+    "website": "higgsfield.ai/cli",
+    "category": "AI, Research and Media-native",
+    "one_liner": "AI-powered image and video generation platform with 30+ models (Kling, Veo, Flux, Sora) accessible via REST API, SDK, and CLI.",
+    "auth_methods": [
+      {
+        "method": "API key",
+        "notes": "Primary method uses KEY_ID:KEY_SECRET credentials string, passed via HF_CREDENTIALS environment variable or config function. HTTP API uses Authorization: Key KEY_ID:KEY_SECRET header or Bearer token."
+      }
+    ],
+    "self_serve": "paid-plan",
+    "self_serve_notes": "API access is not available on the free tier. It requires upgrading to a paid professional or studio-level plan. The free plan only supports manual web-based experimentation, not programmatic API access.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "medium",
+      "notes": "Offers REST API with HTTP endpoints, official SDK for Node.js/TypeScript, and a CLI tool. Supports 30+ image and video generation models (Kling, Veo, Flux, Sora). API includes model invocation, project management, character training, Marketing Studio, Virality Predictor, product photography, and website building capabilities."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "API access requires a paid subscription; not available on the free tier.",
+    "evidence": [
+      {
+        "url": "https://github.com/higgsfield-ai/higgsfield-js",
+        "supports": "Official Node.js SDK exists with v2 API support, authentication via KEY_ID:KEY_SECRET credentials"
+      },
+      {
+        "url": "https://registry.npmjs.org/@higgsfield/client",
+        "supports": "Published NPM package @higgsfield/client v0.2.1 with TypeScript support for image and video generation"
+      },
+      {
+        "url": "https://github.com/higgsfield-ai/cli/",
+        "supports": "Official CLI tool available with 'higgsfield auth login' command for authentication"
+      },
+      {
+        "url": "https://mcp.higgsfield.ai/mcp",
+        "supports": "API endpoint exists but returns 'Unauthorized' error; not evidence of a standalone MCP server package"
+      },
+      {
+        "url": "https://flowith.io/blog/higgsfield-pricing-free-vs-creator-vs-studio/",
+        "supports": "API access gated to paid plans; not available on free tier"
+      },
+      {
+        "url": "https://github.com/higgsfield-ai/skills/blob/main/CLAUDE.md",
+        "supports": "Documentation for CLI 'skills' that drive API calls for image/video generation, Marketing Studio, character training, product photography, and website building"
+      }
+    ],
+    "confidence": 0.82,
+    "flags": [
+      "paid-api-access-only",
+      "official-sdk-available",
+      "cli-available"
+    ]
+  }
+}

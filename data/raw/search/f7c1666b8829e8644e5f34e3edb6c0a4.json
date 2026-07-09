@@ -1,0 +1,45 @@
+{
+  "answer": "The Smartsheet Model Context Protocol (MCP) server is an integration layer that connects Smartsheet’s REST API to MCP-compliant AI clients, enabling natural-language interaction with your Smartsheet data [1][2][3]. It allows AI models to perform tasks like summarizing sheets, updating rows, managing workspaces, and searching across assets while respecting user permissions [1][4][5].\n\nTo use it, register the server in your AI client's configuration using your regional URL and a Smartsheet API token (or OAuth) [6][3].\n\nExample configuration for a client's settings file:\n\n```javascript\n{\n  \"mcpServers\": {\n    \"smartsheet-mcp\": {\n      \"httpUrl\": \"https://mcp.smartsheet.com\",\n      \"headers\": {\n        \"Authorization\": \"Bearer ${SMARTSHEET_API_TOKEN}\"\n      }\n    }\n  }\n}\n```\n\nRegional URLs include `https://mcp.smartsheet.com` (US), `https://mcp.smartsheet.eu` (EU), and `https://mcp.smartsheet.au` (Australia) [6].",
+  "results": [
+    {
+      "title": "Smartsheet MCP server introduction",
+      "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Smartsheet MCP Server | Smartsheet Learning Center",
+      "url": "https://help.smartsheet.com/articles/2483670-smartsheet-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Smartsheet MCP Server now generally available! | Smartsheet",
+      "url": "https://www.smartsheet.com/content-center/smartsheet-mcp-server-now-generally-available",
+      "snippet": ""
+    },
+    {
+      "title": "Smartsheet MCP server tools",
+      "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server-tools",
+      "snippet": ""
+    },
+    {
+      "title": "Smartsheet API now speaks AI: Introducing Smartsheet MCP server for every MCP-compliant AI tool | Smartsheet",
+      "url": "https://www.smartsheet.com/content-center/product-insights/product-updates/introducing-smartsheet-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Install the Smartsheet MCP server",
+      "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/install-the-smartsheet-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "xbenng/smartsheet-mcp-server",
+      "url": "https://github.com/xbenng/smartsheet-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "brianterry/smartsheet-mcp",
+      "url": "https://github.com/brianterry/smartsheet-mcp",
+      "snippet": ""
+    }
+  ]
+}

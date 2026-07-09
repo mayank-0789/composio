@@ -1,0 +1,45 @@
+{
+  "answer": "Authentication requirements vary depending on the specific Paygent service being used. \n\nFor Paygentic (paygentic.io), use an API key as a Bearer token in the Authorization header [1][2]. Keys are generated in the dashboard settings and are environment-specific, starting with sk_test_ or sk_live_ [1][3].\n\nFor the Paygent backend (paygent.to), use a Bearer token (starting with pg_live_) in the Authorization header [4][5]. \n\nFor integrations via IXOPAY or traditional Paygent API setups, authentication requires specific credentials including a Merchant ID, Connection ID, Connection Password, and sometimes client certificate details [6][7][8].",
+  "results": [
+    {
+      "title": "Authentication - Paygentic",
+      "url": "https://docs.paygentic.io/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://docs.paygentic.io/api-reference/payments/create-payment",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://paygentic.mintlify.app/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Backend API Reference - Paygent Documentation",
+      "url": "https://docs.paygent.to/reference/api-reference/",
+      "snippet": ""
+    },
+    {
+      "title": "First Metering and Gating - Paygent Documentation",
+      "url": "https://docs.paygent.to/getting-started/quickstart/",
+      "snippet": ""
+    },
+    {
+      "title": "Paygent | IXOPAY User Manual",
+      "url": "https://documentation.ixopay.com/manual/adapters/paygent",
+      "snippet": ""
+    },
+    {
+      "title": "Paygent PCI | IXOPAY Developer Hub",
+      "url": "https://documentation.ixopay.com/adapters/paygent-pci",
+      "snippet": ""
+    },
+    {
+      "title": "DaiNguyen1902/Laravel-Paygent",
+      "url": "https://github.com/DaiNguyen1902/Laravel-Paygent",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "Klaviyo offers a permanent free tier that includes access to developer APIs [1][2]. There are no specific platform or API usage fees, meaning you can integrate and test for free [3]. You can self-serve by signing up for an account on the Klaviyo website without requiring a sales call [2]. To begin, you can create a test account, generate sample data, and authenticate requests using either public keys for client-side APIs or private keys and OAuth for server-side APIs [3][4][5].",
+  "results": [
+    {
+      "title": "Klaviyo Pricing | Start Free with Email & SMS",
+      "url": "https://www.klaviyo.com/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Klaviyo Free Trial (2026) — Signup Steps + Evaluation Checklist — Email Marketing & Conversion Tools",
+      "url": "https://pkpops.com/klaviyo-free-trial",
+      "snippet": ""
+    },
+    {
+      "title": "Join the Klaviyo ecosystem",
+      "url": "https://developers.klaviyo.com/en/v2024-10-15/docs/build_your_integration",
+      "snippet": ""
+    },
+    {
+      "title": "Get started with Klaviyo",
+      "url": "https://developers.klaviyo.com/en/v2026-01-15/docs/get_started",
+      "snippet": ""
+    },
+    {
+      "title": "Authenticate API requests",
+      "url": "https://developers.klaviyo.com/en/v2026-01-15/docs/authenticate_",
+      "snippet": ""
+    },
+    {
+      "title": "API overview",
+      "url": "https://developers.klaviyo.com/en/v2025-07-15/reference/api_overview",
+      "snippet": ""
+    },
+    {
+      "title": "How Klaviyo billing works | Klaviyo Help Center",
+      "url": "https://help.klaviyo.com/hc/en-us/articles/115000976672",
+      "snippet": ""
+    },
+    {
+      "title": "Understand how to use Klaviyo's APIs - Fundamentals of building with Klaviyo - Developer certificate | Klaviyo Academy",
+      "url": "https://academy.klaviyo.com/en-us/certificates/developer-certificate/courses/fundamentals-of-building-with-klaviyo/lessons/understand-how-to-use-klaviyos-apis",
+      "snippet": ""
+    }
+  ]
+}

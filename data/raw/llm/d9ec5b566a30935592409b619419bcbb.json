@@ -1,0 +1,49 @@
+{
+  "one_liner": "Aircall is a cloud phone/call-center platform offering a paid REST API (Basic Auth or OAuth2) for calls, contacts, users, numbers, and webhooks.",
+  "auth_methods": [
+    {
+      "method": "Basic",
+      "notes": "HTTP Basic Auth using api_id and api_token generated in the Aircall Dashboard; Authorization header set to Base64(api_id:api_token). Intended for customers building for their own account."
+    },
+    {
+      "method": "OAuth2",
+      "notes": "Bearer token based OAuth2 for multi-customer integrations, e.g. Aircall App Marketplace partners; requires partner account signup."
+    }
+  ],
+  "self_serve": "paid-plan",
+  "self_serve_notes": "No free tier includes API access; Aircall is a paid subscription (Essentials, Professional, Custom). Basic Auth credentials (api_id/api_token) can be self-generated via the Dashboard by any paying customer, but OAuth2 for multi-customer partner integrations requires applying via the Aircall partner/technology signup process. Advanced API support reserved for Custom/enterprise plans.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "medium",
+    "notes": "REST API base https://api.aircall.io/v1 covering calls, contacts, users, numbers, teams, webhooks; also supports webhooks for real-time events."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://github.com/Riprock/aircall-api"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": "Requires an active paid Aircall subscription to obtain API credentials (Basic Auth) or partner approval for OAuth2 multi-customer integrations.",
+  "evidence": [
+    {
+      "url": "https://support.aircall.io/en-gb/articles/10375355327517",
+      "supports": "Describes REST API, webhooks, and OAuth vs Basic Auth authentication choices."
+    },
+    {
+      "url": "https://dlthub.com/context/source/aircall",
+      "supports": "Details REST endpoints (calls, users, contacts, numbers, teams, webhooks) and Basic Auth/OAuth2 mechanics."
+    },
+    {
+      "url": "https://aircall.io/pricing/",
+      "supports": "Shows paid subscription tiers; no free tier for API access."
+    },
+    {
+      "url": "https://github.com/Riprock/aircall-api",
+      "supports": "Example of existing third-party Aircall API/MCP-adjacent tooling."
+    }
+  ],
+  "confidence": 0.75,
+  "flags": [
+    "No official Aircall-maintained MCP server; existing MCP servers are community/third-party (e.g., themobilefirstco, Pipedream, viaSocket).",
+    "API access gated behind paid subscription plans; free trial may allow limited testing but no persistent free tier."
+  ]
+}

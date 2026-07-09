@@ -1,0 +1,45 @@
+{
+  "answer": "Xero uses OAuth 2.0 for API authentication [1][2]. The standard method is the authorization code flow, where your application redirects users to Xero to authorize access, then exchanges a temporary authorization code for an access token set [3][4]. For machine-to-machine integrations to a single organization, Xero offers Custom Connections, which use the OAuth 2.0 client credentials grant to obtain access tokens without user interaction [3][4]. All API requests must include a valid bearer access token in the header [2][3]. Access tokens expire after 30 minutes and can be refreshed using a stored refresh token [3][4].",
+  "results": [
+    {
+      "title": "Xero identity.yaml",
+      "url": "https://raw.githubusercontent.com/XeroAPI/Xero-OpenAPI/master/xero-identity.yaml",
+      "snippet": ""
+    },
+    {
+      "title": "README.md at master · XeroAPI/xero-python",
+      "url": "https://github.com/XeroAPI/xero-python/blob/master/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "XeroAPI/xero-ruby",
+      "url": "https://github.com/XeroAPI/xero-ruby",
+      "snippet": ""
+    },
+    {
+      "title": "XeroAPI/xero-node",
+      "url": "https://github.com/xeroapi/xero-node",
+      "snippet": ""
+    },
+    {
+      "title": "Xero accounting.yaml",
+      "url": "https://raw.githubusercontent.com/XeroAPI/Xero-OpenAPI/master/xero_accounting.yaml",
+      "snippet": ""
+    },
+    {
+      "title": "Xero Accounting API",
+      "url": "https://xeroapi.github.io/xero-python/v1/accounting/index.html",
+      "snippet": ""
+    },
+    {
+      "title": "README.md",
+      "url": "https://github.com/XeroAPI/Xero-Java/blob/master/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "XeroAPI/Xero-NetStandard",
+      "url": "https://github.com/XeroAPI/Xero-NetStandard/",
+      "snippet": ""
+    }
+  ]
+}

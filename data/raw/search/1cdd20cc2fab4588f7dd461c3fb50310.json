@@ -1,0 +1,45 @@
+{
+  "answer": "Most YouTube Transcript API services authenticate requests using a Bearer token provided in the Authorization header [1][2][3][4][5]. You must include your API key in the format Bearer YOUR_API_KEY [2][6][3].\n\nExample request:\n\n```bash\ncurl -X POST https://www.youtubetranscript.dev/api/v2/transcribe \\\n  -H \"Authorization: Bearer YOUR_API_KEY\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"video\": \"VIDEO_ID\"}'\n```\n\nWhile most services use this standard Bearer scheme [1][2][3][4][5], at least one provider (Scority) requires an x-api-key header instead [7]. Always check the specific documentation for your chosen provider to confirm their header requirement.",
+  "results": [
+    {
+      "title": "API Documentation - YouTube Transcript API",
+      "url": "https://www.youtubetranscript.dev/api-docs",
+      "snippet": ""
+    },
+    {
+      "title": "API Documentation - YouTube Transcript API | YTTranscript.AI",
+      "url": "https://yttranscript.ai/api-docs",
+      "snippet": ""
+    },
+    {
+      "title": "YouTube Transcript API Reference | TranscriptAPI.com",
+      "url": "https://transcriptapi.com/docs/api/",
+      "snippet": ""
+    },
+    {
+      "title": "API Documentation — ScribeTube YouTube Transcript API",
+      "url": "https://api.scribetube.app/docs.html",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://docs.llmlayer.ai/youtube-transcript",
+      "snippet": ""
+    },
+    {
+      "title": "Youtube-Transcript-Dev/Youtube-Transcript-API",
+      "url": "https://github.com/Youtube-Transcript-Dev/Youtube-Transcript-API",
+      "snippet": ""
+    },
+    {
+      "title": "YouTube Transcript API Documentation",
+      "url": "https://scority.ai/docs",
+      "snippet": ""
+    },
+    {
+      "title": "Youtube-Transcript-Dev/youtube-transcript-python-sdk",
+      "url": "https://github.com/Youtube-Transcript-Dev/youtube-transcript-python-sdk",
+      "snippet": ""
+    }
+  ]
+}

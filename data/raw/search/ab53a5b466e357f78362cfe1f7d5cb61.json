@@ -1,0 +1,45 @@
+{
+  "answer": "Discord MCP servers are bridges that expose the Discord API as tools for AI assistants, enabling you to manage servers, channels, messages, and roles using natural language [1][2][3]. Multiple open-source implementations exist, varying in tool count and architecture, such as those by cappylab [4], PaSympa [2], and rayenking [5], which offer extensive tool suites (90+ tools) for production use cases [4][5].\n\nTo use one, install the package via npm or Docker and provide a DISCORD_TOKEN [2][5][6]. Configure your MCP client (e.g., Claude Desktop or Cursor) by adding the server to your configuration file [2][3]:\n\n```json\n{\n  \"mcpServers\": {\n    \"discord\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@pasympa/discord-mcp\"],\n      \"env\": {\n        \"DISCORD_TOKEN\": \"YOUR_TOKEN\"\n      }\n    }\n  }\n}\n```\n\nMost servers use stdio transport and standard Discord bot permissions [4][5][6]. Reference the documentation for specific tool availability, such as message moderation, role management, or forum support [2][5][6].",
+  "results": [
+    {
+      "title": "tristan-kkim/discord-mcp",
+      "url": "https://github.com/tristan-kkim/discord-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "PaSympa/discord-mcp",
+      "url": "https://github.com/PaSympa/discord-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "jb-bz/jb-discord-mcp",
+      "url": "https://github.com/jb-bz/jb-discord-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "cappylab/discord-mcp",
+      "url": "https://github.com/jhm1909/discord-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "rayenking/discord-mcp",
+      "url": "https://github.com/rayenking/discord-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "ngoctranfire/discord-mcp-server",
+      "url": "https://github.com/ngoctranfire/discord-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "TaeRaeKim/discord-mcp",
+      "url": "https://github.com/TaeRaeKim/discord-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "rexendz/discord-mcp",
+      "url": "https://github.com/rexendz/discord-mcp",
+      "snippet": ""
+    }
+  ]
+}

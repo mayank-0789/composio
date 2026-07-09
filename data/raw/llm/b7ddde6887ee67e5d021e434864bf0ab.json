@@ -1,0 +1,50 @@
+{
+  "one_liner": "WhatsApp Business Cloud API lets developers self-serve messaging (text, media, templates, interactive messages) via Meta's Graph API using OAuth/token-based access after business verification.",
+  "auth_methods": [
+    {
+      "method": "OAuth2",
+      "notes": "Meta system user / app access tokens generated via Meta Business Manager / Developer app; standard Meta Graph API OAuth token flow."
+    },
+    {
+      "method": "Token",
+      "notes": "Long-lived access tokens/system user tokens used directly against graph.facebook.com/v{version}/{phone_number_id}/messages endpoints."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Developers can self-serve via Meta Developer portal + Business Manager: create app, WABA, verify phone number, and generate access tokens without needing a BSP. No monthly platform fee for Cloud API itself; billing is per delivered template message (marketing/utility/auth) with 1,000 free service conversations/month. Requires Meta Business Verification (2-5 business days) which adds friction but is still self-serve, not gated behind sales/partnership approval. Alternative is using a BSP for added convenience/markup.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "medium",
+    "notes": "Meta Graph API (Cloud API) exposes messaging (text, media, interactive, templates), phone number/WABA management, webhooks for inbound messages/status. Scoped to WhatsApp Business messaging use cases, not a broad general-purpose API."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://github.com/tkhattar14/whatsapp-business-mcp"
+  },
+  "buildability": "buildable-with-caveats",
+  "main_blocker": "Requires Meta Business Verification (2-5 day approval process) and WABA/phone number setup before API access is usable; developer must handle webhook verification, rate limits, and template approval workflow themselves for direct Cloud API access.",
+  "evidence": [
+    {
+      "url": "https://www.dmhub.ai/blog/whatsapp-business-api-setup-guide-2026",
+      "supports": "Describes self-serve setup via Meta Business Manager, WABA creation, phone verification, and direct Cloud API access with own credentials, plus verification requirement."
+    },
+    {
+      "url": "https://ozonetel.com/whatsapp-cloud-api-complete-guide/",
+      "supports": "Confirms Cloud API is Meta-hosted, developer-ready REST interface with pricing model (free service conversations, paid template messages) and two deployment paths (direct or via BSP)."
+    },
+    {
+      "url": "https://github.com/tkhattar14/whatsapp-business-mcp",
+      "supports": "Existing open-source MCP server implementation for WhatsApp Business Cloud API."
+    },
+    {
+      "url": "https://github.com/ampcome-mcps/whatsapp-mcp",
+      "supports": "Additional existing MCP server exposing WhatsApp Cloud API messaging functionality as tools."
+    }
+  ],
+  "confidence": 0.75,
+  "flags": [
+    "Requires Meta Business Verification (2-5 business days) before full API access, which may block instant self-serve for agent onboarding",
+    "Multiple community MCP servers exist but no official Meta-maintained MCP server confirmed",
+    "Pricing is usage-based (per template message) rather than flat, adding complexity for cost estimation"
+  ]
+}

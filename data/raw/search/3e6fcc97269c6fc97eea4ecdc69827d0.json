@@ -1,0 +1,45 @@
+{
+  "answer": "Zendesk is deprecating API tokens; they will stop working entirely by April 30, 2027. You must migrate to OAuth [1].\n\nOAuth authentication requires setting an Authorization header with a Bearer token:\n\n```\nAuthorization: Bearer {access_token}\n```\n\nTo implement this, register an OAuth client in the Admin Center and use either the Authorization Code flow (for user-facing apps) or the Client Credentials flow (for background/server-to-server processes) to obtain your access token [2][1][3]. OAuth provides improved security through short-lived, refreshable tokens and fine-grained access scopes [2][1].",
+  "results": [
+    {
+      "title": "Announcing the removal of API tokens as an authentication method for API requests – Zendesk help",
+      "url": "https://support.zendesk.com/hc/en-us/articles/10840968198042-Announcing-the-removal-of-API-tokens-as-an-authentication-method-for-API-requests",
+      "snippet": ""
+    },
+    {
+      "title": "Using OAuth to authenticate API requests | Zendesk Developer Docs",
+      "url": "https://developer.zendesk.com/documentation/api-basics/authentication/api-tokens-to-oauth/",
+      "snippet": ""
+    },
+    {
+      "title": "Using OAuth authentication with your application – Zendesk help",
+      "url": "https://support.zendesk.com/hc/en-us/articles/4408845965210-Using-OAuth-authentication-with-your-application",
+      "snippet": ""
+    },
+    {
+      "title": "Security and authentication | Zendesk Developer Docs",
+      "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/",
+      "snippet": ""
+    },
+    {
+      "title": "How can I authenticate API requests? – Zendesk help",
+      "url": "https://support.zendesk.com/hc/en-us/articles/4408831452954-How-can-I-authenticate-API-requests",
+      "snippet": ""
+    },
+    {
+      "title": "Troubleshooting 401 and 403 Errors on the Zendesk Developer Platform – Zendesk help",
+      "url": "https://support.zendesk.com/hc/en-us/articles/10306782115610-Troubleshooting-401-and-403-Errors-on-the-Zendesk-Developer-Platform",
+      "snippet": ""
+    },
+    {
+      "title": "Using the API when SSO or two-factor authentication is enabled | Zendesk Developer Docs",
+      "url": "https://developer.zendesk.com/documentation/api-basics/authentication/using-the-api-with-2-factor-authentication-enabled/",
+      "snippet": ""
+    },
+    {
+      "title": "Using OAuth to authenticate Zendesk API requests in a web app | Zendesk Developer Docs",
+      "url": "https://developer.zendesk.com/documentation/api-basics/authentication/using-oauth-to-authenticate-zendesk-api-requests-in-a-web-app/",
+      "snippet": ""
+    }
+  ]
+}

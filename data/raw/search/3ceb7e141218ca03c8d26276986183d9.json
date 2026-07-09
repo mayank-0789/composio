@@ -1,0 +1,45 @@
+{
+  "answer": "PitchBook does not offer a free tier for its platform or developer API access [1][2][3]. There is no self-serve option for the API; access must be purchased as a paid add-on via a custom enterprise contract [4][1][2].\n\nTo obtain API access, you must contact a PitchBook account manager to discuss your requirements, receive a custom quote, and be issued an API key [5][2][3]. Once provisioned, the API is accessed via the endpoint https://api.pitchbook.com using an Authorization header with your assigned token [5]. Each request incurs a specific credit cost [5].",
+  "results": [
+    {
+      "title": "PitchBook Pricing 2026: $12K-$70K/Year (Full Breakdown)",
+      "url": "https://easyvc.ai/vs/pitchbook-pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "PitchBook Pricing 2026: What Buyers Actually Pay",
+      "url": "https://costbench.com/software/financial-data-terminals/pitchbook/",
+      "snippet": ""
+    },
+    {
+      "title": "What Is PitchBook? Pricing, Features & Review (2026)",
+      "url": "https://prospeo.io/s/what-is-pitchbook",
+      "snippet": ""
+    },
+    {
+      "title": "Products - Business Intelligence Tools - PitchBook",
+      "url": "https://pitchbook.com/products",
+      "snippet": ""
+    },
+    {
+      "title": "PitchBook Python API Docs | dltHub",
+      "url": "https://dlthub.com/context/source/pitchbook-api",
+      "snippet": ""
+    },
+    {
+      "title": "PitchBook’s pricing - PitchBook",
+      "url": "https://pitchbook.com/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "How Direct Data brings PitchBook to your full workflow - PitchBook",
+      "url": "https://pitchbook.com/blog/what-is-direct-data",
+      "snippet": ""
+    },
+    {
+      "title": "Request a Free Trial - PitchBook",
+      "url": "https://pitchbook.com/free-trial",
+      "snippet": ""
+    }
+  ]
+}

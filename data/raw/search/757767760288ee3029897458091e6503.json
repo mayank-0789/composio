@@ -1,0 +1,45 @@
+{
+  "answer": "Zendesk provides an official, early-access program (EAP) to connect Zendesk to external MCP servers directly through its Admin Center for use in action flows [1]. This native integration supports HTTP servers with OAuth 2.0 authentication [1].\n\nAlternatively, multiple open-source MCP servers exist for connecting local AI clients (such as Claude Desktop, Cursor, or VS Code) to Zendesk [2][3][4][5][6][7][8]. These servers use various authentication methods, including API tokens [2][6][7][8] or OAuth 2.1 PKCE [5]. Popular options include:\n\n- @fruggr/zendesk-mcp-server: Focuses on OAuth-only security and two-way Help Center/Support integration [5].\n- mattcoatsworth/zendesk-mcp-server: A feature-complete implementation for tickets, users, macros, and more [2].\n- zendesk-mcp (Sajiiidddd): Provides over 60 tools for extensive Zendesk control [6].\n\nTo use these community servers, configure your MCP client's settings file with the appropriate environment variables [6][7][8]. Example for Claude Desktop:\n\n```json\n{\n  \"mcpServers\": {\n    \"zendesk\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"zd-mcp-server\"],\n      \"env\": {\n        \"ZENDESK_SUBDOMAIN\": \"your-subdomain\",\n        \"ZENDESK_EMAIL\": \"you@example.com\",\n        \"ZENDESK_TOKEN\": \"your-api-token\"\n      }\n    }\n  }\n}\n```",
+  "results": [
+    {
+      "title": "Connecting to MCP servers and using MCP tools in action flows (EAP) – Zendesk help",
+      "url": "https://support.zendesk.com/hc/en-us/articles/10497779528730-Connecting-to-MCP-servers-and-using-MCP-tools-in-action-flows-EAP",
+      "snippet": ""
+    },
+    {
+      "title": "mattcoatsworth/zendesk-mcp-server",
+      "url": "https://github.com/mattcoatsworth/zendesk-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "nealrichardson/zendesk-mcp-server",
+      "url": "https://github.com/nealrichardson/zendesk-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "reminia/zendesk-mcp-server",
+      "url": "https://github.com/reminia/zendesk-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "@fruggr/zendesk-mcp-server",
+      "url": "https://www.npmjs.com/package/@fruggr/zendesk-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Sajiiidddd/zendesk-mcp",
+      "url": "https://github.com/Sajiiidddd/zendesk-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "koundinya/zd-mcp-server",
+      "url": "https://github.com/koundinya/zd-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "README.md",
+      "url": "https://github.com/markusvankempen/zendesk-mcp/blob/main/README.md",
+      "snippet": ""
+    }
+  ]
+}

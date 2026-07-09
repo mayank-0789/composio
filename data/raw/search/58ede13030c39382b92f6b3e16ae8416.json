@@ -1,0 +1,45 @@
+{
+  "answer": "The Apify MCP server allows AI applications and agents to interact with the Apify platform using the Model Context Protocol (MCP). It exposes thousands of Apify Actors as tools, enabling AI agents to perform tasks like web scraping, data extraction, and automation.\n\nYou can connect via the hosted endpoint at https://mcp.apify.com using OAuth or by providing your Apify API token in the Authorization: Bearer header. The server supports dynamic tool discovery, actor execution, and data access. Visit mcp.apify.com to configure the server for clients like Claude Desktop or VS Code.",
+  "results": [
+    {
+      "title": "Apify MCP server",
+      "url": "https://docs.apify.com/platform/integrations/mcp.md",
+      "snippet": ""
+    },
+    {
+      "title": "apify/apify-mcp-server",
+      "url": "https://github.com/apify/actors-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Apify MCP server | Platform | Apify Documentation",
+      "url": "https://pr-1615.preview.docs.apify.com/platform/integrations/mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Specification - Model Context Protocol",
+      "url": "https://modelcontextprotocol.org/specification/2025-11-25",
+      "snippet": ""
+    },
+    {
+      "title": "README.md at 43549a3288f9fc10ee4bd205fe01cb0afb13c323 · apify/apify-mcp-server",
+      "url": "https://github.com/apify/apify-mcp-server/blob/43549a3288f9fc10ee4bd205fe01cb0afb13c323/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "Understanding MCP servers",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts",
+      "snippet": ""
+    },
+    {
+      "title": "The state of MCP: Insights from the Developers Summit",
+      "url": "https://blog.apify.com/what-is-model-context-protocol/",
+      "snippet": ""
+    },
+    {
+      "title": "apify/tester-mcp-client",
+      "url": "https://github.com/apify/tester-mcp-client",
+      "snippet": ""
+    }
+  ]
+}

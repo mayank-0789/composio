@@ -1,0 +1,45 @@
+{
+  "answer": "The Google Ads API uses OAuth 2.0 for authentication [1][2]. To make API calls, you must provide a developer token and an OAuth 2.0 access token in your request headers [1][3]. If you are accessing accounts via a manager account, you must also provide a login customer ID header [1][3].\n\nThe required headers are [1][3]:\n- Authorization: Bearer ACCESS_TOKEN\n- developer-token: DEVELOPER_TOKEN\n- login-customer-id: MANAGER_CUSTOMER_ID (required when using a manager account)\n\n```http\nGET /v24/customers:listAccessibleCustomers HTTP/1.1\nHost: googleads.googleapis.com\nAuthorization: Bearer ACCESS_TOKEN\ndeveloper-token: DEVELOPER_TOKEN\nlogin-customer-id: MANAGER_CUSTOMER_ID\n```\n\nSupported OAuth 2.0 workflows include service account, single-user, and multi-user authentication, all utilizing the scope `https://www.googleapis.com/auth/adwords` [1][4][2].",
+  "results": [
+    {
+      "title": "Authorization and HTTP Headers  |  Google Ads API  |  Google for Developers",
+      "url": "https://developers.google.com/google-ads/api/rest/auth",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication and Authorization  |  Google Ads API  |  Google for Developers",
+      "url": "https://developers-dot-devsite-v2-prod.appspot.com/google-ads/api/docs/client-libs/java/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "API Call Structure  |  Google Ads API  |  Google for Developers",
+      "url": "https://developers.google.com/google-ads/api/docs/concepts/call-structure",
+      "snippet": ""
+    },
+    {
+      "title": "Multi User Authentication Workflow  |  Google Ads API  |  Google for Developers",
+      "url": "https://developers.google.com/google-ads/api/docs/oauth/multi-user-authentication",
+      "snippet": ""
+    },
+    {
+      "title": "User authentication workflow  |  Google Ads API  |  Google for Developers",
+      "url": "https://developers.google.com/google-ads/api/docs/oauth/user-authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Service Account Workflow  |  Google Ads API  |  Google for Developers",
+      "url": "https://developers.google.com/google-ads/api/docs/oauth/service-accounts",
+      "snippet": ""
+    },
+    {
+      "title": "Quick start  |  Google Ads API  |  Google for Developers",
+      "url": "https://developers.google.com/google-ads/api/docs/get-started/make-first-call",
+      "snippet": ""
+    },
+    {
+      "title": "Single User Authentication Workflow  |  Google Ads API  |  Google for Developers",
+      "url": "https://developers.google.cn/google-ads/api/docs/oauth/single-user-authentication",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "Monday.com provides two types of MCP servers to integrate AI agents with its platform [1]. The Platform MCP allows agents to read and write work data such as boards, items, and users [1]. The Apps MCP is a specialized server used by developers to manage, scaffold, and deploy applications within the monday apps framework [1].\n\nYou can connect using the hosted MCP service for a managed experience with no local setup [1][2], or use the @mondaydotcomorg/monday-api-mcp package to run the server locally [3][4].\n\nTo configure the local server in your MCP settings:\n\n```json\n{\n  \"mcpServers\": {\n    \"monday-api-mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"@mondaydotcomorg/monday-api-mcp@latest\"],\n      \"env\": {\n        \"MONDAY_TOKEN\": \"your_api_token\"\n      }\n    }\n  }\n}\n```\n\nWhen using the local server, you can toggle between Platform and Apps functionality by passing the --mode flag, such as --mode apps [1][3]. Note that hosted tool calls count toward your account's daily API limits [1].",
+  "results": [
+    {
+      "title": "Platform MCP overview",
+      "url": "https://developer.monday.com/api-reference/docs/monday-mcp-overview",
+      "snippet": ""
+    },
+    {
+      "title": "mondaycom/mcp",
+      "url": "https://github.com/mondaycom/monday-ai",
+      "snippet": ""
+    },
+    {
+      "title": "@mondaydotcomorg/monday-api-mcp",
+      "url": "https://registry.npmjs.org/%40mondaydotcomorg%2Fmonday-api-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "monday.com MCP Server for AI Agent Integration — MCP Server — MCP Catalog",
+      "url": "https://mcp-hub.ink/servers/monday-com/",
+      "snippet": ""
+    },
+    {
+      "title": "packages/monday-api-mcp/README.md at master · mondaycom/mcp",
+      "url": "https://github.com/mondaycom/mcp/blob/master/packages/monday-api-mcp/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "README.md",
+      "url": "https://github.com/mondaycom/mcp/blob/master/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "ampcome-mcps/monday-mcp",
+      "url": "https://github.com/ampcome-mcps/monday-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Monday MCP Server — Install & Setup — MCP.Directory",
+      "url": "https://mcp.directory/servers/monday",
+      "snippet": ""
+    }
+  ]
+}

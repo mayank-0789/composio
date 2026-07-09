@@ -1,0 +1,49 @@
+{
+  "one_liner": "SE Ranking offers a unified REST API (Data API + Project API) authenticated via a single API key, with self-serve trial/paid access and a community-built MCP server available.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Single API key used for both Data API and Project API, passed via 'Authorization: Token YOUR_API_KEY' header or as 'apikey' query parameter."
+    }
+  ],
+  "self_serve": "self-serve-trial",
+  "self_serve_notes": "No permanent free tier, but a 14-day trial with 100,000 API credits is available. Paid options include pay-as-you-go credit packs (from $50/250k credits), a subscription add-on with monthly credits, or a standalone API plan (~$155-179/month). API key is generated directly from the account API Dashboard without needing to contact sales.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Covers keyword research, competitor analysis, backlinks, website audits, AI Search, and project/rank-tracking management via unified endpoints at api.seranking.com. OpenAPI spec published on GitHub (seranking/openapi)."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://seranking.com/api/project/getting-started/"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://seranking.com/api/project/getting-started/",
+      "supports": "Single API key auth via Authorization header, rate limits, error codes, request format."
+    },
+    {
+      "url": "https://help.seranking.com/hc/en-us/articles/22447958135068-Getting-Started-with-SE-Ranking-s-API",
+      "supports": "Self-serve API key generation, 14-day trial with 100,000 credits, unified key for Data and Project APIs, pricing tiers."
+    },
+    {
+      "url": "https://seranking.com/api-pricing.html",
+      "supports": "Pricing details: pay-as-you-go, subscription add-on, standalone plan."
+    },
+    {
+      "url": "https://github.com/seranking/openapi",
+      "supports": "Published OpenAPI specification indicating broad REST API surface."
+    },
+    {
+      "url": "https://seranking.com/api/data/reference/",
+      "supports": "Data API reference documentation covering multiple endpoint categories."
+    }
+  ],
+  "confidence": 0.8,
+  "flags": [
+    "MCP server appears to be a third-party/community middleware implementation rather than an official first-party SE Ranking product; verify maintenance status and source.",
+    "No permanent free tier; ongoing use requires a paid plan or credit purchase after the trial."
+  ]
+}

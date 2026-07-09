@@ -1,0 +1,62 @@
+{
+  "one_liner": "Neo4j is a graph database platform accessed via Bolt drivers (Java/Python/JS/etc.) or an HTTP API, authenticated with username/password (or Kerberos/bearer/custom), and available self-serve as a free-forever AuraDB cloud instance.",
+  "auth_methods": [
+    {
+      "method": "Basic",
+      "notes": "Default scheme: username/password, either via driver helper (neo4j.auth.basic / GraphDatabase.driver(auth=(user,pass))) or HTTP Authorization: Basic base64(user:pass)."
+    },
+    {
+      "method": "Token",
+      "notes": "Bearer authentication scheme using base64-encoded token from an SSO/IdP integration (Enterprise/Aura SSO feature)."
+    },
+    {
+      "method": "Other",
+      "notes": "Kerberos ticket-based auth (requires Kerberos Add-on) and custom auth schemes/plugins for server-side pluggable auth."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "AuraDB Free tier is self-serve, free forever, no credit card required, sign up at Neo4j Aura console; supports Cypher queries via standard drivers. Management/admin API for provisioning is more geared to paid tiers.",
+  "api_surface": {
+    "type": "SDK-only",
+    "breadth": "broad",
+    "notes": "Primary interface is the Bolt protocol accessed through official language drivers (Java, Python, JS, .NET, Go) for running Cypher queries; an HTTP API also exists (older/legacy docs reference it, e.g. v4.2, v3.4) allowing REST-style query execution with Basic auth. Separate Aura Management REST API exists for cloud instance lifecycle (provisioning, backups, pausing) mainly for paid/automated workflows."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://neo4j.com/docs/api"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": "None significant; core Cypher query capability is fully self-serve via drivers/HTTP API with basic auth, and official + Labs MCP servers already exist. Aura management API automation may require paid tier for full lifecycle control.",
+  "evidence": [
+    {
+      "url": "https://neo4j.com/docs/api/java-driver/current/org.neo4j.driver/org/neo4j/driver/AuthTokens.html",
+      "supports": "Lists supported auth schemes: basic, bearer, kerberos, custom, none."
+    },
+    {
+      "url": "https://neo4j.com/docs/python-manual/5/connect-advanced/",
+      "supports": "Shows basic (username/password), kerberos, and bearer authentication code examples for Python driver."
+    },
+    {
+      "url": "https://neo4j.com/docs/http-api/4.2/security/",
+      "supports": "Documents HTTP API using Basic auth via Authorization header."
+    },
+    {
+      "url": "https://neo4j.com/free-graph-database/",
+      "supports": "AuraDB Free is self-serve, free forever, no credit card needed."
+    },
+    {
+      "url": "https://neo4j.com/cloud/platform/aura-graph-database/faq/",
+      "supports": "Details on AuraDB Free tier limits and self-serve sign-up."
+    },
+    {
+      "url": "https://neo4j.com/docs/operations-manual/2026.02/authentication-authorization/",
+      "supports": "Server-side auth configuration including LDAP, OIDC, custom plugins."
+    }
+  ],
+  "confidence": 0.75,
+  "flags": [
+    "Existing MCP server details (PyPI package name, official vs Labs) not verified from primary docs link, only from search summary.",
+    "HTTP API docs referenced are for older versions (4.2, 3.4); current HTTP API auth details not directly confirmed for latest version.",
+    "Aura Management API scope/self-serve limits for free tier not fully detailed in evidence."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "There are two distinct concepts related to Consensus and the Model Context Protocol (MCP):\n\nConsensus AI Connect offers an MCP server that acts as a secure bridge between AI platforms and Consensus workspaces. It uses OAuth2 for authentication and supports both local and remote deployment [1].\n\nSeparately, the consensus-tools organization provides an MCP server package (@consensus-tools/mcp) designed to expose agent workflows, job management, and human-in-the-loop approvals to MCP clients like Claude Code [2][3].\n\nAdditionally, there are unrelated projects, such as the Ephor Collaboration MCP Server, which focus on multi-agent debate and consensus-based decision-making [4].",
+  "results": [
+    {
+      "title": "Consensus AI Connect - MCP Server Security Information",
+      "url": "https://support.goconsensus.com/mcp-server-security-information",
+      "snippet": ""
+    },
+    {
+      "title": "toolkit/packages/adapters/mcp at main · consensus-tools/toolkit · GitHub",
+      "url": "https://github.com/consensus-tools/toolkit/tree/main/packages/adapters/mcp",
+      "snippet": ""
+    },
+    {
+      "title": "packages/adapters/mcp/README.md at 0a5cd16669a4abb131cf314f29be2d708accd610 · consensus-tools/toolkit",
+      "url": "https://github.com/consensus-tools/toolkit/blob/0a5cd16669a4abb131cf314f29be2d708accd610/packages/adapters/mcp/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "Ephor Collaboration MCP Server - An integrated tool supporting multi-AI agent collaborative debates and realizing consensus decision-making",
+      "url": "https://mcp.aibase.com/server/1916341273654697986",
+      "snippet": ""
+    },
+    {
+      "title": "Understanding MCP servers",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts",
+      "snippet": ""
+    },
+    {
+      "title": "Architecture overview - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/learn/architecture",
+      "snippet": ""
+    },
+    {
+      "title": "Architecture - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/specification/2025-06-18/architecture",
+      "snippet": ""
+    },
+    {
+      "title": "modelcontextprotocol/servers",
+      "url": "https://github.com/ModelContextProtocol/servers",
+      "snippet": ""
+    }
+  ]
+}

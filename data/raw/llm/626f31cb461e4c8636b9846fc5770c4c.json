@@ -1,0 +1,62 @@
+{
+  "one_liner": "Grain is a meeting recording and analytics platform with multiple API services for meeting data, analytics SDK ingestion, and workspace integrations.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Query API requires X-API-Key header, generated from dashboard. Also used for developer API at developers.grain.com."
+    },
+    {
+      "method": "Token",
+      "notes": "SERVER_SIDE strategy uses secret key with 'Authorization: Chase {SECRET}' header for Grain Analytics SDK."
+    },
+    {
+      "method": "OAuth2",
+      "notes": "JWT authentication strategy using 'Authorization: Bearer {TOKEN}' header with configurable issuer/audience. OAuth 2.1 mentioned for some Grain services."
+    },
+    {
+      "method": "Other",
+      "notes": "NONE authentication strategy available for development/public demos with no credentials required."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Dashboard at grainql.com/dashboard allows self-service generation of secret keys and API keys. NONE auth strategy requires only tenant ID from dashboard. JWT auth can be configured in tenant settings. No indication of paid barriers for basic API access.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "medium",
+    "notes": "Multiple API surfaces: Query API for analytics data (X-API-Key auth), Developer API at developers.grain.com, Analytics SDK with three auth strategies for event ingestion. MCP adapter/server also available (@grain.sh/mcp)."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://github.com/eadm/grain-mcp-server"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://docs.grainql.com/authentication",
+      "supports": "Three authentication strategies documented: NONE (development), SERVER_SIDE (secret key), and JWT (token-based). Self-serve dashboard at grainql.com/dashboard for key generation."
+    },
+    {
+      "url": "https://docs.grainql.com/api-reference/query-api/overview",
+      "supports": "Query API exists requiring X-API-Key header authentication for analytics data access."
+    },
+    {
+      "url": "https://developers.grain.com/",
+      "supports": "Developer API endpoint exists for workspace integrations and other services."
+    },
+    {
+      "url": "https://github.com/eadm/grain-mcp-server",
+      "supports": "Community-built MCP server exists for Grain meeting recording service, allows retrieving meetings and transcripts."
+    },
+    {
+      "url": "https://docs.grainql.com/advanced/security",
+      "supports": "Security documentation covers authentication strategies, user ID validation, and best practices for secret key protection."
+    }
+  ],
+  "confidence": 0.8,
+  "flags": [
+    "multiple-api-surfaces",
+    "existing-mcp-server",
+    "analytics-sdk-included"
+  ]
+}

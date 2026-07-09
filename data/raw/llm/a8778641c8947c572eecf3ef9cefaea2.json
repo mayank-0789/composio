@@ -1,0 +1,99 @@
+{
+  "verdicts": [
+    {
+      "field": "existing_mcp.exists",
+      "status": "supported",
+      "note": "The MCP page clearly documents three Ramp MCP servers: Ramp MCP (account-specific), Developer MCP (docs), and Ramp Data MCP (public benchmarks)."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "supported",
+      "note": "The URL points to Ramp's documentation page for their MCP servers, which is appropriate for documenting existing MCP availability."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "The authorization page confirms OAuth 2.0 with Authorization Code, Refresh Token, and Client Credentials grants; token endpoint at /developer/v1/token; Basic auth encoding of client_id:client_secret; Bearer token usage."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "The getting-started guide explicitly states 'This guide assumes you are a Ramp customer with admin access to your dashboard' and shows admin-level UI navigation required (Company → Developer). Sandbox requires a request. This confirms 'admin-approval' requirement."
+    },
+    {
+      "field": "api_surface.type",
+      "status": "supported",
+      "note": "The authorization and getting-started pages document REST endpoints (POST /developer/v1/token, GET /developer/v1/transactions, etc.)."
+    },
+    {
+      "field": "api_surface.breadth",
+      "status": "supported",
+      "note": "The one-liner references 'spend/finance data' and the original record mentions transactions, cards, reimbursements, bills, users. The evidence shows transactions endpoint and references to scopes like 'transactions:read' which supports a broad API, though not all endpoints are enumerated in this evidence."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "The getting-started page states 'This guide assumes you are a Ramp customer' and 'you'll need admin access.' Sandbox access must be requested. This supports 'buildable-with-caveats' since a developer needs a Ramp business account and admin approval."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "The stated blocker matches the evidence: requires Ramp business account, admin access to create OAuth app, sandbox write operations disabled, and sandbox access itself requires a request."
+    },
+    {
+      "field": "one_liner",
+      "status": "supported",
+      "note": "The one-liner states 'broad OAuth2-secured REST Developer API for spend/finance data, plus separate MCP servers for documentation and account data access' which is confirmed by the evidence showing OAuth2, REST API, transaction/expense/bill scopes, and three MCP servers documented."
+    }
+  ],
+  "revised": {
+    "id": 89,
+    "name": "Ramp",
+    "website": "docs.ramp.com",
+    "category": "Finance and Fintech",
+    "one_liner": "Ramp offers a broad OAuth2-secured REST Developer API for spend/finance data, plus separate MCP servers for documentation and account data access.",
+    "auth_methods": [
+      {
+        "method": "OAuth2",
+        "notes": "OAuth 2.0 with Authorization Code, Refresh Token, and Client Credentials grants. Token endpoint at https://api.ramp.com/developer/v1/token, authenticated via HTTP Basic (base64 client_id:client_secret), returns Bearer access token."
+      }
+    ],
+    "self_serve": "admin-approval",
+    "self_serve_notes": "Requires a Ramp business account and app registration (client ID/secret) to obtain OAuth credentials; production API access may require admin permissions or a support/provisioning request. Sandbox available for testing without full production approval.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "Ramp Developer API (v1) covers business financial data: transactions, cards, reimbursements, bills, users, etc. OpenAPI spec published at /openapi/developer-api.json."
+    },
+    "existing_mcp": {
+      "exists": "yes",
+      "url": "https://docs.ramp.com/developer-api/v1/mcp"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "Production API access requires a Ramp business account, OAuth app registration, and potentially admin approval/support ticket for provisioning; write operations are disabled in sandbox.",
+    "evidence": [
+      {
+        "url": "https://docs.ramp.com/developer-api/v1/api/authorization",
+        "supports": "OAuth2 flow details: client credentials, authorization code, refresh token grants; Basic auth for token endpoint; Bearer token usage."
+      },
+      {
+        "url": "https://docs.ramp.com/developer-api/v1/mcp",
+        "supports": "Existence of Ramp MCP server(s) - both account-specific ramp-mcp and unauthenticated Developer MCP for docs."
+      },
+      {
+        "url": "https://docs.ramp.com/developer-api/v1/getting-started",
+        "supports": "Setup guide referenced for obtaining OAuth credentials and getting started with API."
+      },
+      {
+        "url": "https://ramp.com/pricing",
+        "supports": "Developer API access tied to business account plans, not necessarily free self-serve tier."
+      }
+    ],
+    "confidence": 0.75,
+    "flags": [
+      "MCP server confirmed to exist (two variants: ramp-mcp and Developer MCP)",
+      "Self-serve status ambiguous - requires business account and possibly admin approval for production scopes",
+      "Sandbox environment available but write operations disabled, limiting testing depth"
+    ]
+  }
+}

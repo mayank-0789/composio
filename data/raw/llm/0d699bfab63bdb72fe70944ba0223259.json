@@ -1,0 +1,50 @@
+{
+  "one_liner": "MongoDB Atlas provides a broad REST Admin API (plus a Data API and MCP server) for managing clusters and data, secured via OAuth2 service accounts or legacy Digest API keys, self-serve via a free M0 tier.",
+  "auth_methods": [
+    {
+      "method": "OAuth2",
+      "notes": "Recommended: service accounts using client credentials flow, exchanged for short-lived Bearer tokens at https://cloud.mongodb.com/api/oauth/token"
+    },
+    {
+      "method": "API key",
+      "notes": "Legacy method using public/private key pair with HTTP Digest authentication; recommended to pair with IP access lists and key rotation"
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Free-forever M0 shared cluster tier allows self-serve account creation and API key/service account generation without sales contact; full access to Atlas Admin API and Data API included.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Atlas Administration API v2 covers cluster/project/org management; separate Data API provides REST access to database CRUD operations; Atlas CLI and Go SDK also available."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://www.mongodb.com/docs/atlas/architecture/current/auth/authentication/"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/2024-11-13/authentication",
+      "supports": "Describes OAuth2 service account client credentials flow and legacy API key Digest auth for Atlas Admin API"
+    },
+    {
+      "url": "https://www.mongodb.com/docs/atlas/architecture/current/auth/authentication/",
+      "supports": "Details Atlas authentication guidance across UI, database, and API access including workforce vs workload identities"
+    },
+    {
+      "url": "https://dev.to/0012303/mongodb-atlas-has-a-free-tier-512mb-cloud-database-with-full-api-search-and-charts-34hc",
+      "supports": "Confirms free-forever M0 tier with full API, Search, and Data API access enabling self-serve development"
+    },
+    {
+      "url": "https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/",
+      "supports": "Atlas Admin API v2 documentation showing breadth of REST endpoints for cluster and project management"
+    }
+  ],
+  "confidence": 0.85,
+  "flags": [
+    "MCP server exists officially (mongodb-mcp-server) requiring either connection string or Atlas API service account credentials",
+    "Atlas-specific admin tools in MCP require Atlas API credentials, not just DB connection string",
+    "Legacy API key auth uses HTTP Digest, a less common auth pattern for tooling integrations"
+  ]
+}

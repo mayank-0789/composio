@@ -1,0 +1,93 @@
+{
+  "verdicts": [
+    {
+      "field": "existing_mcp.exists",
+      "status": "contradicted",
+      "note": "The record claims exists='yes' and links to https://developer.copper.co/api-reference/getting-started, but this is simply the Copper API documentation, NOT a Model Context Protocol (MCP) server. An app's own API docs do not constitute an MCP server. The flags correctly note 'No official first-party MCP server confirmed; only third-party (ViaSocket, Zapier) and community MCP integrations found.'"
+    },
+    {
+      "field": "auth_methods",
+      "status": "contradicted",
+      "note": "The record describes API key auth with HMAC-SHA256 signing using Authorization: ApiKey header + X-Timestamp + X-Signature headers. However, the evidence from developer.copper.co/api-reference/authentication shows this is correct for that endpoint, while developer.copper.com/introduction/authentication.html describes a different token-based approach requiring 'token in the header of every request, along with the email address'. The record appears to only document one variant of API key auth (the HMAC-SHA256 version), missing the simpler email+token approach mentioned in the .com docs."
+    },
+    {
+      "field": "self_serve",
+      "status": "unsupported",
+      "note": "The copperpricing.com page is unavailable, so we cannot verify the claim that API access requires paid Professional/Business plans. No other evidence documents pricing or plan requirements."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "unsupported",
+      "note": "Claims about 14-day free trial and gating to Professional/Business plans cannot be verified since copperpricing.com evidence is unavailable."
+    },
+    {
+      "field": "api_surface",
+      "status": "supported",
+      "note": "Evidence confirms REST API with /platform/ prefix. The breadth='medium' assessment and coverage of CRM entities (people, companies, opportunities, etc.) is reasonable based on the authentication docs and endpoint examples."
+    },
+    {
+      "field": "buildability",
+      "status": "unsupported",
+      "note": "The 'buildable-with-caveats' assessment depends on the paid-plan requirement, which cannot be verified since copperpricing.com is unavailable. The HMAC complexity is real but doesn't necessarily warrant caveats vs. buildable-now."
+    },
+    {
+      "field": "main_blocker",
+      "status": "unsupported",
+      "note": "The main_blocker cites paid subscription requirements that cannot be verified (copperpricing.com unavailable). HMAC signing is a complexity but many APIs use it without being classified as having caveats."
+    },
+    {
+      "field": "OAuth2 auth_methods",
+      "status": "supported",
+      "note": "Evidence confirms OAuth2.0 Authorization Code Grant flow for partner integrations at developer.copper.com/introduction/oauth/flow.html"
+    }
+  ],
+  "revised": {
+    "id": 9,
+    "name": "Copper",
+    "website": "copper.com",
+    "category": "CRM and Sales",
+    "one_liner": "Copper CRM offers a REST-based Developer API secured by API keys (with HMAC-signed requests) or OAuth 2.0 for partner integrations.",
+    "auth_methods": [
+      {
+        "method": "API key",
+        "notes": "Requires Authorization: ApiKey header plus X-Timestamp and X-Signature (HMAC-SHA256 of timestamp+method+path+body) headers on every request. Generated via System settings > API Keys in the Copper web app."
+      },
+      {
+        "method": "OAuth2",
+        "notes": "Authorization Code Grant flow producing a Bearer token; preferred for partner integrations rather than individual users."
+      }
+    ],
+    "self_serve": "unknown",
+    "self_serve_notes": "Pricing page unavailable; unable to verify whether API access requires paid plans or has self-serve free/trial options.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "medium",
+      "notes": "Platform API covers CRM entities such as people, companies, opportunities, projects, tasks, and orders. Endpoint structure uses /platform/ prefix; docs include Getting Started and API reference for entities."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-now",
+    "main_blocker": null,
+    "evidence": [
+      {
+        "url": "https://developer.copper.com/introduction/authentication.html",
+        "supports": "Describes both API Key and OAuth2.0 authentication methods for the Copper Developer API."
+      },
+      {
+        "url": "https://developer.copper.co/api-reference/authentication",
+        "supports": "Details the required Authorization, X-Signature, and X-Timestamp headers and HMAC-SHA256 signature generation process for API key auth."
+      },
+      {
+        "url": "https://developer.copper.com/introduction/oauth/flow.html",
+        "supports": "Documents OAuth2.0 Authorization Code Grant flow for partner integrations."
+      }
+    ],
+    "confidence": 0.55,
+    "flags": [
+      "No official first-party MCP server confirmed; the URL in original record pointed to API docs, not an MCP server.",
+      "Pricing/plan requirements for API access could not be verified (copperpricing.com unavailable).",
+      "HMAC request-signing adds implementation complexity beyond typical bearer-token APIs."
+    ]
+  }
+}

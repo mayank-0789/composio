@@ -1,0 +1,45 @@
+{
+  "answer": "DealCloud does not offer a free tier for its platform or API access [1][2]. It is a premium enterprise-grade CRM that requires a subscription, with pricing typically determined by firm size, chosen modules, and implementation scope [3][4]. There is no self-serve option for developers to access the API without an existing enterprise agreement [3]. Developers can interact with the platform via the DealCloud REST API using API keys or OAuth2, or by utilizing official SDKs such as the Python SDK [5][2][6].\n\n```\npip install dealcloud-sdk\n```",
+  "results": [
+    {
+      "title": "DealCloud Reviews 2026: Pricing, Features & More",
+      "url": "https://www.selecthub.com/p/financial-services-crm-software/dealcloud/",
+      "snippet": ""
+    },
+    {
+      "title": "DealCloud API Documentation & MCP Config | Salestools Club",
+      "url": "https://salestools.club/apis/dealcloud",
+      "snippet": ""
+    },
+    {
+      "title": "DealCloud Pricing 2026: The True TCO & Hidden Costs | PricingNow",
+      "url": "https://pricingnow.com/question/dealcloud-pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "Fundraising CRM Comparison: Affinity vs DealCloud vs 4Degrees",
+      "url": "https://pipelineroad.com/compare/fundraising-crm-comparison",
+      "snippet": ""
+    },
+    {
+      "title": "DealCloud SDK - Python - DealCloud API Docs",
+      "url": "https://api.docs.dealcloud.com/sdk/python",
+      "snippet": ""
+    },
+    {
+      "title": "Installation - DealCloud API Docs",
+      "url": "https://api.docs.dealcloud.com/sdk/python/installation",
+      "snippet": ""
+    },
+    {
+      "title": "Dealcloud Developer Documentation - DealCloud API Docs",
+      "url": "https://api.docs.dealcloud.com/",
+      "snippet": ""
+    },
+    {
+      "title": "DealCloud Software Pricing 2025 - Get the Lowest Price & Never Overpay",
+      "url": "https://www.vendr.com/buyer-guides/dealcloud",
+      "snippet": ""
+    }
+  ]
+}

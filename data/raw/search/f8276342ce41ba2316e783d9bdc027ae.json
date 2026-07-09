@@ -1,0 +1,45 @@
+{
+  "answer": "The Datadog MCP server is a bridge that connects AI agents to your Datadog observability data, enabling agents to query metrics, logs, monitors, and dashboards directly [1][2]. By using the Model Context Protocol (MCP), it allows AI applications like Claude Desktop, Cursor, and Windsurf to retrieve insights or perform actions through standardized tools [1][2].\n\nDatadog offers an official MCP server, which is recommended for managed onboarding and Datadog SSO [3]. Additionally, several community-developed versions exist that offer expanded features like full CRUD (create, read, update, delete) operations, self-hosting options, or specific performance optimizations [3][4][5][6][7].\n\nWhen using an MCP server with an AI agent, you typically configure it by providing your Datadog API and application keys [3]. To maintain efficiency, most implementations use techniques like tool allowlists or pagination based on token budgets to ensure observability data does not overwhelm the agent's context window [1][8][3].",
+  "results": [
+    {
+      "title": "Datadog MCP Server",
+      "url": "https://docs.datadoghq.com/mcp_server.md",
+      "snippet": ""
+    },
+    {
+      "title": "What Is an MCP Server (Model Context Protocol Server)? | Datadog",
+      "url": "https://www.datadoghq.com/knowledge-center/mcp-server/",
+      "snippet": ""
+    },
+    {
+      "title": "us-all/datadog-mcp-server",
+      "url": "https://github.com/us-all/datadog-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "ppandrangi/datadog-mcp",
+      "url": "https://github.com/ppandrangi/datadog-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "krjoseph/datadog-mcp-server",
+      "url": "https://github.com/krjoseph/datadog-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "viamus/mcp-datadog",
+      "url": "https://github.com/viamus/mcp-datadog",
+      "snippet": ""
+    },
+    {
+      "title": "jimmystridh/datadog-mcp",
+      "url": "https://github.com/jimmystridh/datadog-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Designing MCP tools for agents: Lessons from building Datadog’s MCP server | Datadog",
+      "url": "https://www.datadoghq.com/blog/engineering/mcp-server-agent-tools/",
+      "snippet": ""
+    }
+  ]
+}

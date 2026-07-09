@@ -1,0 +1,45 @@
+{
+  "answer": "Ramp offers a free tier for its platform [1][2], but the Developer API is a distinct feature set for server-to-server or long-lived workflows rather than a self-serve feature included by default in the free account tier [3][4][5]. Access to the Developer API typically involves OAuth 2.0 authentication [3][6] and may require specific administrative permissions [6]. While there is a public Developer MCP server for accessing documentation without authentication [7], production API access for your own applications generally requires a business account and potentially a support ticket for access provisioning [8].",
+  "results": [
+    {
+      "title": "Ramp Pricing and Plans",
+      "url": "https://ramp.com/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Ramp Pricing Plans and Tiers Compared (2026) | CompareTiers",
+      "url": "https://comparetiers.com/tools/ramp",
+      "snippet": ""
+    },
+    {
+      "title": "Ramp API Documentation",
+      "url": "https://docs.ramp.com/developer-api/",
+      "snippet": ""
+    },
+    {
+      "title": "Ramp API Documentation",
+      "url": "https://docs.ramp.com/developer-api/v1/getting-started",
+      "snippet": ""
+    },
+    {
+      "title": "Ramp API Documentation",
+      "url": "https://docs.ramp.com/developer-api/v1",
+      "snippet": ""
+    },
+    {
+      "title": "Authorization",
+      "url": "https://docs.ramp.com/llms-guides/authorization.txt",
+      "snippet": ""
+    },
+    {
+      "title": "Developer mcp",
+      "url": "https://docs.ramp.com/llms-guides/developer-mcp.txt",
+      "snippet": ""
+    },
+    {
+      "title": "Llms full",
+      "url": "https://docs.ramp.com/llms-full.txt",
+      "snippet": ""
+    }
+  ]
+}

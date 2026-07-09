@@ -1,0 +1,45 @@
+{
+  "answer": "LinkedIn Ads APIs utilize OAuth 2.0 for authentication [1][2]. To authorize requests, you must implement the 3-legged (3L) OAuth 2.0 authorization code flow to obtain a member access token [3][4]. \n\nYour application must be configured in the LinkedIn Developer Portal with the appropriate permission scopes assigned, such as r_ads for read-only access or rw_ads for read/write operations [1][2][5]. When making API calls, include the access token in the Authorization header as a Bearer token [6]. Additionally, you must provide a Linkedin-Version header to specify the API version [6].\n\n```\ncurl -X GET 'https://api.linkedin.com/rest/adAccountUsers?q=authenticatedUser' \\\n-H 'Authorization: Bearer {YOUR_ACCESS_TOKEN}' \\\n-H 'Linkedin-Version: 202601'\n```",
+  "results": [
+    {
+      "title": "Campaign Management Getting Started - LinkedIn | Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/getting-started?view=li-lms-2026-05",
+      "snippet": ""
+    },
+    {
+      "title": "Advertising - Overview - LinkedIn | Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/ads-overview?view=li-lms-2026-03",
+      "snippet": ""
+    },
+    {
+      "title": "Generate an Access Token using Postman - LinkedIn | Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/authentication/lms-generate-an-access-token?view=li-lms-2026-02",
+      "snippet": ""
+    },
+    {
+      "title": "Media Planning API Use Cases - LinkedIn | Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/media-planning/media-planning-usecase?view=li-lms-2026-05",
+      "snippet": ""
+    },
+    {
+      "title": "Create and Manage LinkedIn Campaigns - LinkedIn | Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/account-structure/create-and-manage-campaigns?view=li-lms-2026-05",
+      "snippet": ""
+    },
+    {
+      "title": "LMS API Documentation Versioning - LinkedIn | Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/versioning?view=li-lms-2024-06",
+      "snippet": ""
+    },
+    {
+      "title": "Quick Start - LinkedIn | Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/quick-start?view=li-lms-2025-06",
+      "snippet": ""
+    },
+    {
+      "title": "Ad Account Users - LinkedIn | Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/account-structure/create-and-manage-account-users?view=li-lms-2026-04",
+      "snippet": ""
+    }
+  ]
+}

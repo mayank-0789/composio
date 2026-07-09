@@ -1,0 +1,45 @@
+{
+  "answer": "MrScraper offers a free tier that includes 100 API tokens per month, which you can use for self-serve developer access [1]. No credit card is required to sign up for this plan [1][2].\n\nTo access the API, you must first generate an API token via the API Tokens section in your user profile [3]. You can then trigger your scrapers programmatically using the following endpoint [4][5]:\n\n```\nPOST https://api.app.mrscraper.com/api/v1/scrapers-ai\nHeader: x-api-token: <YOUR_TOKEN>\nBody: {\n    \"url\": \"https://example.com\",\n    \"agent\": \"general\",\n    \"message\": \"Extract data\"\n}\n```\n\nThe free tier allows for 10 concurrent requests, though it does not include residential proxies or priority support [6][1]. Tokens reset at the beginning of each month [1].",
+  "results": [
+    {
+      "title": "Billing | MrScraper Documentation",
+      "url": "https://docs.mrscraper.com/docs/getting-started/billing",
+      "snippet": ""
+    },
+    {
+      "title": "MrScraper Web Scraper API | MrScraper",
+      "url": "https://mrscraper.com/ai-api",
+      "snippet": ""
+    },
+    {
+      "title": "Token Plan | MrScraper Documentation",
+      "url": "https://docs.mrscraper.com/docs/getting-started/api-token",
+      "snippet": ""
+    },
+    {
+      "title": "Scraper API | MrScraper Documentation",
+      "url": "https://docs.mrscraper.com/docs/features/activating-api",
+      "snippet": ""
+    },
+    {
+      "title": "Create and Run a Scraper Programmatically | MrScraper Documentation",
+      "url": "https://docs.mrscraper.com/docs/guides/programmatically",
+      "snippet": ""
+    },
+    {
+      "title": "MrScraper Pricing Comparison | MrScraper",
+      "url": "https://mrscraper.com/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Scrape Any Website with AI & Proxies | MrScraper",
+      "url": "https://mrscraper.com/",
+      "snippet": ""
+    },
+    {
+      "title": "Playground | MrScraper Documentation",
+      "url": "https://docs.mrscraper.com/docs/getting-started/playground",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "one_liner": "Stripe offers a broad, mature REST API for payments and fintech operations with self-serve API key access and an official hosted MCP server for AI agent integration.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "HTTP Basic Auth using secret API key as username (no password)."
+    },
+    {
+      "method": "Token",
+      "notes": "Bearer token auth with secret API key, recommended for cross-origin requests."
+    },
+    {
+      "method": "OAuth2",
+      "notes": "Available for Stripe Connect platform integrations and Stripe Apps."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Sign up and get API keys immediately; no free tier fees but pay-as-you-go pricing model with no setup/monthly fee required to start using the API (test mode is free).",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Extremely broad REST API covering payments, billing, connect, customers, disputes, payouts, etc. Also offers SDKs in many languages."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://mcp.stripe.com"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://docs.stripe.com/api/authentication?api-version=2025-03-31.basil",
+      "supports": "Describes HTTP Basic Auth with secret API key and Bearer auth for cross-origin requests."
+    },
+    {
+      "url": "https://docs.stripe.com/stripe-apps/api-authentication",
+      "supports": "Details OAuth 2.0 and Restricted API key options for Stripe Apps."
+    },
+    {
+      "url": "https://stripe.com/pricing",
+      "supports": "Confirms pay-as-you-go pricing with no free tier fees but self-serve signup."
+    },
+    {
+      "url": "https://docs.stripe.com/products-prices/manage-prices?dashboard-or-api=api&locale=en-GB",
+      "supports": "Shows self-serve API usage example for creating prices/products immediately after signup."
+    }
+  ],
+  "confidence": 0.9,
+  "flags": []
+}

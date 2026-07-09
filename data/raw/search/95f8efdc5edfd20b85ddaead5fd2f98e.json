@@ -1,0 +1,45 @@
+{
+  "answer": "Firecrawl uses Bearer token authentication for its API [1][2]. Every request must include an Authorization header containing your API key [1][2].\n\nFormat:\n`Authorization: Bearer fc-YOUR-API-KEY`\n\nYou can obtain your key from the Firecrawl dashboard [1][2]. For programmatic usage, you can pass the key directly to the Firecrawl SDK class or set it as the FIRECRAWL_API_KEY environment variable [3]. AI agents may alternatively use WorkOS ID-JAG identity assertions to register and receive credentials for API access [4].",
+  "results": [
+    {
+      "title": "Introduction - Firecrawl Docs",
+      "url": "https://docs.firecrawl.dev/api-reference/v2-introduction",
+      "snippet": ""
+    },
+    {
+      "title": "API Reference Introduction - Firecrawl",
+      "url": "https://firecrawl-firecrawl.mintlify.app/api-reference/introduction",
+      "snippet": ""
+    },
+    {
+      "title": "Python SDK | Firecrawl",
+      "url": "https://docs.firecrawl.dev/sdks/python",
+      "snippet": ""
+    },
+    {
+      "title": "Firecrawl auth.md",
+      "url": "https://www.firecrawl.dev/auth.md",
+      "snippet": ""
+    },
+    {
+      "title": "Curl Source of Truth - Firecrawl Docs",
+      "url": "https://docs.firecrawl.dev/agent-source-of-truth/curl",
+      "snippet": ""
+    },
+    {
+      "title": "Scrape - Firecrawl Docs",
+      "url": "http://docs.firecrawl.dev/api-reference/endpoint/scrape",
+      "snippet": ""
+    },
+    {
+      "title": "Crawl - Firecrawl Docs",
+      "url": "https://docs.firecrawl.dev/v0/api-reference/endpoint/crawl",
+      "snippet": ""
+    },
+    {
+      "title": "Get Crawl Status - Firecrawl Docs",
+      "url": "https://docs.firecrawl.dev/api-reference/endpoint/crawl-get",
+      "snippet": ""
+    }
+  ]
+}

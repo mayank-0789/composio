@@ -1,0 +1,117 @@
+{
+  "verdicts": [
+    {
+      "field": "existing_mcp.exists",
+      "status": "contradicted",
+      "note": "The record says 'yes' with URL https://github.com/sendgrid, which is SendGrid's own GitHub organization (not an MCP server). The apio.sh evidence mentions 'an official MCP server' but provides no dedicated MCP server URL. Without a specific MCP server repository confirmed in evidence, this should be 'unknown' at best. The URL given is not an MCP server."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "contradicted",
+      "note": "https://github.com/sendgrid is SendGrid's official SDK/library GitHub organization, not a dedicated MCP server repository. This URL should be removed. The apio.sh page mentions an 'official MCP server' but doesn't link to it, so the actual MCP server URL is unknown."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence confirms API key via Bearer token is primary method and Basic auth with 'apikey' username is supported for legacy services. Username/password Basic auth deprecated Q4 2020."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Evidence confirms self-serve signup with a 60-day trial starting May 27, 2025 (apio.sh and support docs)."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "supported",
+      "note": "Evidence confirms API keys can be self-serve created, free tier replaced with 60-day trial (100 emails/day), paid plans start at $19.95/mo, and 2FA is mandatory."
+    },
+    {
+      "field": "api_surface",
+      "status": "supported",
+      "note": "Evidence confirms REST API v3 with broad coverage and SDKs in 7 languages (C#, Go, Java, Node.js, PHP, Python, Ruby)."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "SendGrid provides a hosted REST API with self-serve API key creation and trial access, making it buildable now."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "No blocker identified; service is accessible with self-serve trial and API."
+    },
+    {
+      "field": "one_liner",
+      "status": "unsupported",
+      "note": "The claim about 'multiple community MCP server implementations already available' is mentioned in apio.sh as 'an official MCP server' but no specific MCP server repository is confirmed in evidence. The one_liner overstates what's verified."
+    },
+    {
+      "field": "evidence",
+      "status": "supported",
+      "note": "All evidence URLs support their stated claims about authentication, trial plan, and pricing."
+    },
+    {
+      "field": "flags",
+      "status": "supported",
+      "note": "All flags are supported by evidence: free tier removed May 27, 2025; 2FA required; MCP implementation status unclear but multiple unofficial ones are plausible given apio.sh mention."
+    }
+  ],
+  "revised": {
+    "id": 40,
+    "name": "SendGrid",
+    "website": "sendgrid.com",
+    "category": "Marketing, Ads, Email and Social",
+    "one_liner": "SendGrid provides a broad, well-documented REST API (v3) for transactional/marketing email, authenticated via self-serve API keys, with multiple community MCP server implementations already available.",
+    "auth_methods": [
+      {
+        "method": "API key",
+        "notes": "Primary method: API key passed as Bearer token in Authorization header. Created via account settings UI (app.sendgrid.com/settings/api_keys). Permissions can be scoped per key."
+      },
+      {
+        "method": "Basic",
+        "notes": "Supported for some legacy services using 'apikey' as username and the API key as password (SMTP relay). Username/password basic auth was deprecated as of Q4 2020."
+      }
+    ],
+    "self_serve": "self-serve-trial",
+    "self_serve_notes": "Developers can self-serve create API keys immediately from the dashboard. However, as of May 27, 2025, SendGrid replaced its permanent free tier with a one-time 60-day free trial (100 emails/day) for new accounts; after trial expiry a paid plan (starting at $19.95/mo) is required to continue sending/using API features. Two-factor authentication is mandatory on the account.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "SendGrid v3 REST API with broad coverage: mail send, templates, contacts/marketing campaigns, suppression lists, stats, API key management, etc. SDKs available in 7 languages."
+    },
+    "existing_mcp": {
+      "exists": "unknown",
+      "url": "https://apio.sh/apis/sendgrid"
+    },
+    "buildability": "buildable-now",
+    "main_blocker": null,
+    "evidence": [
+      {
+        "url": "https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication",
+        "supports": "API key via Bearer token is the primary auth method for v3 API; self-serve key creation in account settings."
+      },
+      {
+        "url": "https://www.twilio.com/docs/sendgrid/for-developers/sending-email/authentication.md",
+        "supports": "Details on Bearer API key auth, Basic auth with 'apikey' username, mandatory 2FA."
+      },
+      {
+        "url": "https://www.twilio.com/en-us/changelog/sendgrid-free-plan",
+        "supports": "Free plan replaced with 60-day trial as of May 27, 2025."
+      },
+      {
+        "url": "https://support.sendgrid.com/hc/en-us/articles/35270136965403-Twilio-SendGrid-Trial-Account-Plan",
+        "supports": "Trial account plan details, 100 emails/day for 60 days."
+      },
+      {
+        "url": "https://apio.sh/apis/sendgrid",
+        "supports": "Paid plans start at $19.95/month, self-serve."
+      }
+    ],
+    "confidence": 0.8,
+    "flags": [
+      "free-tier-removed-as-of-2025",
+      "requires-2FA-on-account",
+      "multiple-unofficial-MCP-implementations-no-single-official-one-confirmed"
+    ]
+  }
+}

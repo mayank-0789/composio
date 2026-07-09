@@ -1,0 +1,92 @@
+{
+  "verdicts": [
+    {
+      "field": "existing_mcp.exists",
+      "status": "unsupported",
+      "note": "The URL https://mcp.otter.ai/mcp returns an authentication error JSON, not evidence of a dedicated MCP server repository or documentation. This appears to be an API endpoint, not a Model Context Protocol server implementation. No evidence of an actual MCP server exists in the provided materials."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "contradicted",
+      "note": "The URL returns '{\"error\": \"invalid_token\", \"error_description\": \"Authentication required\"}' which indicates this is an API endpoint requiring authentication, not a publicly documented MCP server. This should not be listed as an MCP server URL."
+    },
+    {
+      "field": "auth_methods[1].notes",
+      "status": "unsupported",
+      "note": "The evidence shows OAuth 2.0 is mentioned for Enterprise accounts, but there is no specific evidence that OAuth is 'Used for the MCP server integration' as claimed. The API documentation only describes Bearer token authentication in detail."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Evidence clearly states 'Otter's Public API is available for all Enterprise workspaces' and 'If you do not see this feature for your workspace, contact your Otter account manager.' This confirms partnership-contact-sales access model."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "supported",
+      "note": "The evidence confirms Enterprise-only access and the need to contact account manager for access."
+    },
+    {
+      "field": "auth_methods[0]",
+      "status": "supported",
+      "note": "Bearer token authentication is clearly documented in the API fundamentals section with steps to create API keys from the Developer tab."
+    },
+    {
+      "field": "api_surface",
+      "status": "supported",
+      "note": "Evidence confirms REST API with endpoints for channels, conversations, transcripts, action items, insights, outlines, workspace details, webhooks, and cursor-based pagination."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "Correctly marked as buildable-with-caveats since API access requires Enterprise plan with account manager contact, not self-serve."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "Accurately describes the requirement for Enterprise plan and sales contact as the main barrier."
+    },
+    {
+      "field": "evidence[2]",
+      "status": "unsupported",
+      "note": "The GitHub repo https://github.com/api-evangelist/otter-ai appears to be a third-party documentation repository but the evidence provided only shows the repository structure, not actual content confirming API existence and structure."
+    }
+  ],
+  "revised": {
+    "id": 92,
+    "name": "Otter AI",
+    "website": "help.otter.ai",
+    "category": "AI, Research and Media-native",
+    "one_liner": "AI-powered meeting transcription and note-taking service with automated summaries, action items, and speaker identification.",
+    "auth_methods": [
+      {
+        "method": "Token",
+        "notes": "Bearer token authentication using API keys generated from the Developer tab in account settings. Limited to 2 API keys per user."
+      }
+    ],
+    "self_serve": "partnership-contact-sales",
+    "self_serve_notes": "The Public API is restricted to Enterprise plan workspaces only. Not available on free Basic tier or individual Pro/Business subscriptions. Organizations must contact their Otter account manager for Enterprise workspace access before API access is granted.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "medium",
+      "notes": "REST API with endpoints for channels, conversations, transcripts, audio, action items, insights, outlines, and workspace details. Also supports webhooks for real-time notifications. Includes cursor-based pagination. Rate limited to 10 requests/second for Enterprise users."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "API access requires Enterprise plan with account manager contact - not self-serve accessible for developers",
+    "evidence": [
+      {
+        "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+        "supports": "API documentation showing Bearer token auth, Enterprise-only access requiring account manager contact, rate limits of 10 req/sec, and endpoints for channels, conversations, transcripts, action items, webhooks with cursor-based pagination"
+      }
+    ],
+    "confidence": 0.85,
+    "flags": [
+      "enterprise-only-api",
+      "requires-account-manager-contact",
+      "bearer-token-only",
+      "webhook-support"
+    ]
+  }
+}

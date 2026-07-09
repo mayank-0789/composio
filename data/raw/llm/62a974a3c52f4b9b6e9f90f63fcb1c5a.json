@@ -1,0 +1,59 @@
+{
+  "one_liner": "AI academic research search engine with enterprise-only API access requiring sales contact; MCP server already exists for the research tool.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "GoConsensus API uses API Key + API Secret passed in request body along with user_email, source_name. Keys generated in Integrations section of account. Research search API (consensus.app) uses x-api-key header."
+    },
+    {
+      "method": "OAuth2",
+      "notes": "OAuth 2.0 used for specific integrations like Salesforce connection (v11.10+). Also mentioned for Consensus AI Connect MCP server."
+    }
+  ],
+  "self_serve": "partnership-contact-sales",
+  "self_serve_notes": "No free tier or self-serve developer API access for Consensus.app research API - restricted to enterprise accounts only. Must contact Consensus directly to request API key. GoConsensus API credentials can be self-generated within account (Integrations section), but unclear if this requires paid account.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "narrow",
+    "notes": "Consensus offers two distinct APIs: (1) GoConsensus (app.goconsensus.com) - a demo/sales automation platform with endpoints for reports, user management, and DemoBoard data; (2) Consensus.app - an AI academic research search API (v1/quick_search endpoint). The evidence primarily covers GoConsensus API which has narrow scope focused on reporting/user management. The research search API appears limited to search queries."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://docs.consensus.app/docs/mcp"
+  },
+  "buildability": "buildable-with-caveats",
+  "main_blocker": "API access requires enterprise account and direct contact with Consensus for the research search API (consensus.app). While an MCP server already exists, building custom integrations requires partnership/sales contact rather than self-serve access.",
+  "evidence": [
+    {
+      "url": "https://app.goconsensus.com/api-documentation/",
+      "supports": "API Key + Secret authentication method for GoConsensus API, REST endpoints for reports/user management"
+    },
+    {
+      "url": "https://support.goconsensus.com/how-to-access-your-api-credentials",
+      "supports": "API credentials can be generated in Integrations section of GoConsensus account"
+    },
+    {
+      "url": "https://hub.goconsensus.com/salesforce-67/connecting-consensus-to-salesforce-oauth-2-0-method-version-11-10-required-532",
+      "supports": "OAuth 2.0 used for Salesforce integration"
+    },
+    {
+      "url": "https://docs.consensus.app/reference/v1_quick_search",
+      "supports": "Research search API (v1) uses x-api-key header authentication"
+    },
+    {
+      "url": "https://docs.consensus.app/docs/mcp",
+      "supports": "Official Consensus MCP server exists for research tool"
+    },
+    {
+      "url": "https://agentsapis.com/consensus-api/",
+      "supports": "No free tier available for API access; enterprise accounts must contact Consensus directly for API key"
+    }
+  ],
+  "confidence": 0.75,
+  "flags": [
+    "existing-mcp-server",
+    "enterprise-only-api",
+    "contact-sales-required",
+    "dual-products-confusion"
+  ]
+}

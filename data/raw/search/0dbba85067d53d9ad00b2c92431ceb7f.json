@@ -1,0 +1,45 @@
+{
+  "answer": "Systeme.io provides a self-serve public REST API available to users on all plans, including the free tier [1][2][3]. To use it, generate an API key within your dashboard under the Public API keys section of your profile settings [1].\n\nYou must include this key in the X-API-Key header of your requests [1]. For security, perform all API calls from a server-side environment rather than public-facing pages [1]. The API supports programmatic management of contacts, tags, courses, funnels, and pages, and includes webhooks [1][2][4].",
+  "results": [
+    {
+      "title": "Public API",
+      "url": "https://developer.systeme.io/reference/api",
+      "snippet": ""
+    },
+    {
+      "title": "Systeme.io Review 2026: Free Plan, White Label, API & MCP Tested",
+      "url": "https://funnelgoodies.com/systeme-io-review",
+      "snippet": ""
+    },
+    {
+      "title": "Systeme.io Pricing 2026: Free, Startup, Webinar & Unlimited Plans Compared | FunnelGoodies",
+      "url": "https://funnelgoodies.com/systeme-io-pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Stop Overpaying for Funnel Builders: A Developer's Honest Guide - DEV Community",
+      "url": "https://dev.to/gentleaffair274/stop-overpaying-for-funnel-builders-a-developers-honest-guide-32e9",
+      "snippet": ""
+    },
+    {
+      "title": "Systeme.io Pricing — Free, Startup, Webinar, Unlimited Plans",
+      "url": "https://systeme.io/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Why choose systeme.io?",
+      "url": "https://systeme.io/why-systeme?sa=sa010874769533596018231cfd111cb93a168d7663",
+      "snippet": ""
+    },
+    {
+      "title": "systeme.io for SaaS Founders: Turn Signups Into Customers",
+      "url": "https://systeme.io/for-saas-founders/",
+      "snippet": ""
+    },
+    {
+      "title": "Send unlimited emails for free",
+      "url": "https://systeme.io/email-marketing?sa=sa0007878317200141bbe3de2b6644176621db2c6580&tk=grow",
+      "snippet": ""
+    }
+  ]
+}

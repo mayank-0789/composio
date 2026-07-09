@@ -1,0 +1,4 @@
+{
+  "self_serve": "unknown",
+  "signal": "This appears to be the main GitHub homepage, not a pricing/signup page for an app called \"Sherlock\". The page shows GitHub's general features and products (GitHub Copilot, Actions, Codespaces, etc.) with a \"Sign up for GitHub\" button, but doesn't contain information about API credentials for a specific app named Sherlock. Unable to determine how to obtain API credentials from this page."
+}

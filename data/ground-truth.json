@@ -1,0 +1,17 @@
+[
+  { "app_id": 61, "fields": { "self_serve": "self-serve-free", "api_surface": "REST", "existing_mcp": "yes", "buildability": "buildable-now" } },
+  { "app_id": 71, "fields": { "self_serve": "self-serve-free", "api_surface": "REST", "existing_mcp": "yes", "buildability": "buildable-now" } },
+  { "app_id": 81, "fields": { "self_serve": "self-serve-free", "api_surface": "REST", "existing_mcp": "yes", "buildability": "buildable-now" } },
+  { "app_id": 73, "fields": { "self_serve": "self-serve-free", "api_surface": "GraphQL", "buildability": "buildable-now" } },
+  { "app_id": 56, "fields": { "self_serve": "self-serve-free", "api_surface": "REST", "buildability": "buildable-now" } },
+  { "app_id": 21, "fields": { "self_serve": "self-serve-free", "api_surface": "REST", "buildability": "buildable-now" } },
+  { "app_id": 22, "fields": { "self_serve": "self-serve-free", "api_surface": "REST", "buildability": "buildable-now" } },
+  { "app_id": 40, "fields": { "self_serve": "self-serve-free", "api_surface": "REST", "buildability": "buildable-now" } },
+  { "app_id": 11, "fields": { "api_surface": "REST", "buildability": "buildable-now" } },
+  { "app_id": 41, "fields": { "self_serve": "self-serve-free", "buildability": "buildable-now" } },
+  { "app_id": 26, "fields": { "self_serve": "self-serve-free", "api_surface": "REST", "buildability": "buildable-now" } },
+  { "app_id": 58, "fields": { "api_surface": "none", "existing_mcp": "no", "buildability": "blocked" } },
+  { "app_id": 98, "fields": { "api_surface": "none", "existing_mcp": "no", "buildability": "blocked" } },
+  { "app_id": 90, "fields": { "self_serve": "partnership-contact-sales", "buildability": "blocked" } },
+  { "app_id": 91, "fields": { "buildability": "blocked" } }
+]

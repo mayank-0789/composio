@@ -1,0 +1,45 @@
+{
+  "answer": "MongoDB Atlas offers a perpetual free-forever M0 shared cluster tier that supports self-serve setup for development and prototyping [1][2][3]. The free tier provides 512MB of storage and includes full access to the MongoDB API, Atlas Search, and the Data API (a REST interface for database operations) [3].\n\nYou can manage your cluster using the Atlas Administration API for programmatic infrastructure control [4]. Integration is supported via the Atlas CLI, Go SDK, or direct REST requests to administrative endpoints [4].\n\nExample of interacting with the Data API using cURL [3]:\n\n```bash\ncurl -X POST \"https://data.mongodb-api.com/app/YOUR_APP/endpoint/data/v1/action/findOne\" \\\n  -H \"Content-Type: application/json\" \\\n  -H \"api-key: YOUR_API_KEY\" \\\n  -d '{\n    \"dataSource\": \"Cluster0\",\n    \"database\": \"mydb\",\n    \"collection\": \"users\",\n    \"filter\": {\"email\": \"alex@example.com\"}\n  }'\n```",
+  "results": [
+    {
+      "title": "Pricing | MongoDB",
+      "url": "https://www.mongodb.com/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "AWS MongoDB Pricing  | MongoDB",
+      "url": "https://www.mongodb.com/products/platform/atlas-cloud-providers/aws/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "MongoDB Atlas Has a Free Tier — 512MB Cloud Database With Full API, Search, and Charts - DEV Community",
+      "url": "https://dev.to/0012303/mongodb-atlas-has-a-free-tier-512mb-cloud-database-with-full-api-search-and-charts-34hc",
+      "snippet": ""
+    },
+    {
+      "title": "Guidance for Atlas Automated Infrastructure Provisioning - Atlas Architecture Center - MongoDB Docs",
+      "url": "https://www.mongodb.com/docs/atlas/architecture/current/automation/",
+      "snippet": ""
+    },
+    {
+      "title": "MongoDB Atlas FAQ | MongoDB",
+      "url": "https://www.mongodb.com/cloud/atlas/faq",
+      "snippet": ""
+    },
+    {
+      "title": "How to Set Up MongoDB Atlas Free Tier for Development",
+      "url": "https://oneuptime.com/blog/post/2026-03-31-mongodb-how-to-set-up-mongodb-atlas-free-tier-for-development/view",
+      "snippet": ""
+    },
+    {
+      "title": "Atlas Database | MongoDB",
+      "url": "https://www.mongodb.com/products/platform/atlas-database?tck=docs_databasetools",
+      "snippet": ""
+    },
+    {
+      "title": "Dynamic Workloads, Predictable Costs: The MongoDB Atlas Flex Tier | MongoDB",
+      "url": "https://www.mongodb.com/company/blog/product-release-announcements/dynamic-workloads-predictable-costs-mongodb-atlas-flex-tier",
+      "snippet": ""
+    }
+  ]
+}

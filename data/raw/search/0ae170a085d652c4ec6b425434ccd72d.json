@@ -1,0 +1,45 @@
+{
+  "answer": "The Pumble Model Context Protocol (MCP) server allows AI agents, such as Claude, Gemini, or Cursor, to interact with your Pumble workspace [1][2]. By connecting an MCP-compatible client to a Pumble MCP server, you enable the AI to perform actions like sending messages, managing channels, searching workspace history, and adding reactions [1][3][4].\n\nYou can connect by adding the server configuration to your client’s settings file (e.g., `claude_desktop_config.json`) using the provided URL, authentication tokens, and headers [1][5]. Various providers offer these servers, ranging from simple API key implementations to comprehensive SDK-based solutions featuring OAuth2 and real-time event support [3][4][2][6].",
+  "results": [
+    {
+      "title": "How to use the Pumble MCP server - Pumble Help",
+      "url": "https://pumble.com/help/integrations/automation-workflow-integrations/how-to-use-the-pumble-mcp-server/",
+      "snippet": ""
+    },
+    {
+      "title": "Pumble MCP | viaSocket",
+      "url": "https://viasocket.com/mcp/pumble",
+      "snippet": ""
+    },
+    {
+      "title": "shoutkol/pumble-mcp-server",
+      "url": "https://github.com/shoutkol/pumble-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "nitindermohan/pumble-mcp",
+      "url": "https://github.com/nitindermohan/pumble-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "How to Use Pumble MCP Server with Claude Desktop",
+      "url": "https://vinkius.com/apps/pumble-mcp/with/claude-desktop",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://zapier.com/mcp/pumble",
+      "snippet": ""
+    },
+    {
+      "title": "Pumble MCP Server Ready to Use!",
+      "url": "https://vinkius.com/apps/pumble-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Understanding MCP servers",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts",
+      "snippet": ""
+    }
+  ]
+}

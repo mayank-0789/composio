@@ -1,0 +1,50 @@
+{
+  "one_liner": "Firecrawl is a web scraping/crawling API that turns websites into LLM-ready markdown/JSON, with self-serve API key signup, a free tier, keyless rate-limited access, and an official MCP server.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Bearer token format: Authorization: Bearer fc-YOUR-API-KEY, obtained from Firecrawl dashboard"
+    },
+    {
+      "method": "OAuth2",
+      "notes": "Some agent platforms may use WorkOS ID-JAG identity assertions for credential registration; MCP server also supports OAuth bearer token"
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Free tier with 1,000 monthly credits available via signup (API key) or fully keyless mode (no account needed, IP-capped, basic scrape/search only). Paid plans start at $16/month for higher limits.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "medium",
+    "notes": "Endpoints for scrape, batch/scrape, crawl, map, extract, search, deep-research/agent, browser sessions, and billing/usage. SDKs available for Python and Node."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://docs.firecrawl.dev/mcp-server"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://docs.firecrawl.dev/api-reference/v2-introduction",
+      "supports": "Bearer token auth via Authorization header, API key from dashboard, WorkOS ID-JAG alternative, REST endpoints list (scrape, parse, crawl, map, search, agent, browser)"
+    },
+    {
+      "url": "https://firecrawl-firecrawl.mintlify.app/api-reference/introduction",
+      "supports": "Full REST API endpoint list including scrape, batch/scrape, crawl, map, extract, search, deep-research, billing; API key signup process"
+    },
+    {
+      "url": "https://www.firecrawl.dev/pricing.md",
+      "supports": "Free tier with 1,000 monthly credits, keyless mode, paid plans starting $16/month"
+    },
+    {
+      "url": "https://www.firecrawl.dev/blog/firecrawl-keyless-launch",
+      "supports": "Keyless mode allows CLI/MCP/SDK usage without API key or account, capped per IP"
+    },
+    {
+      "url": "https://docs.firecrawl.dev/sdks/python",
+      "supports": "Python SDK usage with API key or FIRECRAWL_API_KEY env var"
+    }
+  ],
+  "confidence": 0.9,
+  "flags": []
+}

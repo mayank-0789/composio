@@ -1,0 +1,45 @@
+{
+  "answer": "A DealCloud MCP server is a standardized connector that allows AI agents to interact directly with your DealCloud CRM data [1][2]. It enables AI to retrieve and act on information like deals, relationships, and pipelines without requiring custom integration development [3][1].\n\nCurrently, there is no generic, public-use DealCloud MCP server. Instead, integration is handled through specific enterprise platforms:\n\nIntapp offers an MCP server as part of its Celeste architecture, which is in limited release [3]. It requires enrollment in their guided implementation program to manage security and ethical wall compliance [3].\n\nLouisa AI provides an MCP server that integrates DealCloud with AI clients like Claude, Cursor, and Microsoft Copilot to surface relationship graphs and opportunity data [4].\n\nBecause these servers provide access to sensitive business data, they must be configured by your firm's administrators to ensure proper authentication and compliance [3][5][4]. Implementation typically involves adding a configuration block to your AI client, such as Claude for Desktop, provided by your vendor [3][4]:\n\n```json\n{\n  \"mcpServers\": {\n    \"your-server-name\": {\n      \"url\": \"<provided by vendor>\",\n      \"transport\": \"http\",\n      \"auth\": {\n        \"type\": \"oauth2\",\n        \"client_id\": \"<provided by vendor>\"\n      }\n    }\n  }\n}\n```",
+  "results": [
+    {
+      "title": "MCP & ACP: The Protocols Powering the Next Phase of AI in Private Capital  - News - Capsa AI",
+      "url": "https://capsa.ai/news/mcp-acp-the-protocols-powering-the-next-phase-of-ai-in-private-capital",
+      "snippet": ""
+    },
+    {
+      "title": "Understand MCP in 5 Mins: What’s Missing in PE’s Current AI Strategy? - Metal AI for Private Equity",
+      "url": "https://www.metal.ai/blog/understand-mcp-in-5-mins",
+      "snippet": ""
+    },
+    {
+      "title": "Intapp Celeste MCP Server - Setup, Use Cases & Examples",
+      "url": "https://growthengineer.ai/mcp-servers/intapp-celeste",
+      "snippet": ""
+    },
+    {
+      "title": "Deal Origination & Opportunity Matching MCP Server | Louisa AI",
+      "url": "https://louisa.ai/how-we-work/mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "Shared Context: How an MCP Server Exposed a Private Equity Firm | UpGuard",
+      "url": "https://www.upguard.com/breaches/shared-context-how-an-mcp-server-exposed-a-private-equity-firm",
+      "snippet": ""
+    },
+    {
+      "title": "Deal Cloud and MCP (Model Context Protocol) integration | Workato",
+      "url": "https://www.workato.com/integrations/deal-cloud~mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Understanding MCP servers - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts",
+      "snippet": ""
+    },
+    {
+      "title": "Build an MCP server - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/develop/build-server",
+      "snippet": ""
+    }
+  ]
+}

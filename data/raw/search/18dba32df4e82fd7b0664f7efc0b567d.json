@@ -1,0 +1,45 @@
+{
+  "answer": "Several independent implementations of Mailchimp Model Context Protocol (MCP) servers exist, providing varying levels of API coverage for tasks like audience management, campaign creation, and reporting [1][2][3]. These servers facilitate communication between AI clients and the Mailchimp Marketing API v3 [2][4][3].\n\nTo configure a server, you typically add a block to your MCP client configuration file (such as `claude_desktop_config.json`) specifying the command and environment variables, including your API key [1][4].\n\nExample configuration:\n```json\n{\n  \"mcpServers\": {\n    \"mailchimp\": {\n      \"command\": \"uvx\",\n      \"args\": [\"mailchimp-mcp\"],\n      \"env\": {\n        \"MAILCHIMP_API_KEY\": \"your-key-us8\"\n      }\n    }\n  }\n}\n```\n\nOptions range from comprehensive servers with over 270 tools [2][3] to more specialized versions [5]. Features may include read-only modes, dry-run capabilities, and audit logging for security [1][6].",
+  "results": [
+    {
+      "title": "damientilman/mailchimp-mcp-server",
+      "url": "https://github.com/damientilman/mailchimp-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "richardpowellus/mailchimp-mcp-server",
+      "url": "https://github.com/richardpowellus/mailchimp-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Mailchimp MCP Server: Full Marketing API v3 Integration",
+      "url": "https://mcpmarket.com/server/mailchimp-6",
+      "snippet": ""
+    },
+    {
+      "title": "BusyBee3333/mailchimp-mcp-2026-complete",
+      "url": "https://github.com/BusyBee3333/mailchimp-mcp-2026-complete",
+      "snippet": ""
+    },
+    {
+      "title": "Mailchimp MCP Server — Install & Setup — MCP.Directory",
+      "url": "https://mcp.directory/servers/mailchimp",
+      "snippet": ""
+    },
+    {
+      "title": "ElishaKay/mailchimp-mcp-server",
+      "url": "https://github.com/ElishaKay/mailchimp-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "LokiMCPUniverse/mailchimp-mcp-server",
+      "url": "https://github.com/LokiMCPUniverse/mailchimp-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "mailchimp-mcp-server v0.1.0",
+      "url": "https://pypi.org/project/mailchimp-mcp-server/",
+      "snippet": ""
+    }
+  ]
+}

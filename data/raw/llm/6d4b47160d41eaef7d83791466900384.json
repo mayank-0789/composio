@@ -1,0 +1,53 @@
+{
+  "one_liner": "Close is a sales CRM offering a broad REST API (leads, contacts, opportunities, activities) with API key and OAuth2 auth, gated behind paid plans, and already has an official MCP server.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "HTTP Basic auth with API key as username, empty password. Self-serve via Settings > Developer > API Keys."
+    },
+    {
+      "method": "OAuth2",
+      "notes": "Recommended for user-facing/third-party integrations; requires creating an OAuth app."
+    }
+  ],
+  "self_serve": "paid-plan",
+  "self_serve_notes": "API access requires a paid Close CRM subscription; there is no free tier for developer/API access, though CRM has a free trial. Within a paid plan, API keys can be created immediately without additional approval.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Covers leads, contacts, opportunities, activities, custom fields, webhooks, event log; OpenAPI spec published (experimental)."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://help.close.com/v1/docs/en/mcp-server"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": "Requires a paid Close plan to obtain API credentials; no free self-serve tier for developers.",
+  "evidence": [
+    {
+      "url": "https://developer.close.com/topics/authentication/",
+      "supports": "API key auth via HTTP Basic, self-serve creation in Settings > Developer > API Keys"
+    },
+    {
+      "url": "https://developer.close.com/api/overview",
+      "supports": "REST API with broad resource coverage, OAuth2 and API key auth, OpenAPI spec"
+    },
+    {
+      "url": "https://help.close.com/docs/api-keys-oauth",
+      "supports": "API keys & OAuth documentation"
+    },
+    {
+      "url": "https://close.com/pricing",
+      "supports": "API access included with paid CRM plans, no permanent free tier"
+    },
+    {
+      "url": "https://help.close.com/v1/docs/en/mcp-server",
+      "supports": "Existing Close MCP server documentation"
+    }
+  ],
+  "confidence": 0.85,
+  "flags": [
+    "No free tier for API access - requires paid plan",
+    "Official MCP server already exists"
+  ]
+}

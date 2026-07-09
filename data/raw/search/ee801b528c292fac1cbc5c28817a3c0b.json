@@ -1,0 +1,45 @@
+{
+  "answer": "Consensus does not offer a public, self-serve developer API for general use. While documentation exists for a v1 quick search endpoint, access is restricted to enterprise accounts [1][2]. There is no free tier available for API access; those interested in enterprise-level programmatic access must contact Consensus directly through their website to request an API key [1]. The available platform features, including free-tier usage of the research tool, are intended for end-user web or MCP-based workflows rather than direct programmatic integration [1][3].",
+  "results": [
+    {
+      "title": "Getting Started with the Consensus MCP",
+      "url": "https://docs.consensus.app/docs/mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Consensus API - Complete Developer Guide",
+      "url": "https://agentsapis.com/consensus-api/",
+      "snippet": ""
+    },
+    {
+      "title": "Consensus Review 2026: AI Academic Search Tested | AI Tool Radar",
+      "url": "https://aitoolradar.io/guides/consensus",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing",
+      "url": "https://consensus.app/pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "Query for relevant papers.",
+      "url": "https://docs.consensus.app/reference/v1_quick_search",
+      "snippet": ""
+    },
+    {
+      "title": "AI Tools for Literature Review | Consensus",
+      "url": "https://consensus.app/home/features/start-trial/",
+      "snippet": ""
+    },
+    {
+      "title": "Consensus Pricing 2026: 3 Plans from Free–$45/user/month",
+      "url": "https://costbench.com/software/ai-research-tools/consensus/",
+      "snippet": ""
+    },
+    {
+      "title": "Consensus vs Semantic Scholar: Which Should You Pick in 2026? | RightAIChoice",
+      "url": "https://rightaichoice.com/compare/consensus-vs-semantic-scholar",
+      "snippet": ""
+    }
+  ]
+}

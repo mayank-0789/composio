@@ -1,0 +1,45 @@
+{
+  "answer": "GoHighLevel (GHL) provides an official HTTP-based Model Context Protocol (MCP) server that enables AI agents to read and write GHL data—such as calendars, contacts, and opportunities—without custom SDKs [1]. It uses Private Integration Tokens (PITs) for secure, permission-based access [1].\n\nBecause some clients like Claude Desktop require stdio-based transport, several open-source community MCP servers exist to bridge this gap [2][3][4]. These allow you to integrate GHL via `npx` or local configuration [2]. Example configuration for a community server in Claude Desktop:\n\n```json\n{\n  \"mcpServers\": {\n    \"ghl-mcp\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"ghl-mcp-server\"],\n      \"env\": {\n        \"GHL_API_KEY\": \"pit-your-token-here\",\n        \"GHL_LOCATION_ID\": \"your-location-id\"\n      }\n    }\n  }\n}\n```\n\nThese community implementations offer varying levels of tool coverage, from basic API endpoints to curated \"agency-grade\" workflows and multi-tenant support [2][3][5].",
+  "results": [
+    {
+      "title": "How to Use the HighLevel MCP Server : HighLevel Support Portal",
+      "url": "https://help.gohighlevel.com/support/solutions/articles/155000005741-how-to-use-the-highlevel-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "HighLevelScaling/ghl-mcp-server",
+      "url": "https://github.com/HighLevelScaling/ghl-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "BusyBee3333/Go-High-Level-MCP-2026-Complete",
+      "url": "https://github.com/BusyBee3333/Go-High-Level-MCP-2026-Complete",
+      "snippet": ""
+    },
+    {
+      "title": "MADPANDA3D/GHL-MCP",
+      "url": "https://github.com/MADPANDA3D/GHL-MCP",
+      "snippet": ""
+    },
+    {
+      "title": "nafiurrahmanniloy/gohighlevel-mcp-pro",
+      "url": "https://github.com/nafiurrahmanniloy/gohighlevel-mcp-pro",
+      "snippet": ""
+    },
+    {
+      "title": "drausal/gohighlevel-mcp",
+      "url": "https://github.com/drausal/gohighlevel-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Snack-JPG/ghl-mcp",
+      "url": "https://github.com/snack-jpg/ghl-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Gohighlevel MCP - Model Context Protocol Integration",
+      "url": "https://chatbotkit.com/connections/gohighlevel.com/mcp",
+      "snippet": ""
+    }
+  ]
+}

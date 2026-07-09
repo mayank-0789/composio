@@ -1,0 +1,45 @@
+{
+  "answer": "All authentication for the monday.com GraphQL API at `https://api.monday.com/v2` is handled via token-based authentication [1][2]. Every request must include an access token provided in the `Authorization` header [1][2][3].\n\nThere are four primary ways to obtain an access token:\n\n1. Personal API Tokens: Available via your profile under the Developers or Administration section [4][3].\n2. OAuth: Used to issue access tokens with specific permission scopes [1][5].\n3. Seamless Authentication (SDK): Used for view apps within iframes to avoid manual token management [1].\n4. Short-lived Tokens: Provided for integration recipes, valid for five minutes [1][6].\n\nExample using cURL:\n```curl\ncurl -X POST https://api.monday.com/v2 \\\n  -H \"Authorization: YOUR_API_TOKEN\" \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\"query\": \"query { me { id name } }\"}'\n```",
+  "results": [
+    {
+      "title": "Choosing an authentication method",
+      "url": "https://developer.monday.com/apps/docs/choosing-auth",
+      "snippet": ""
+    },
+    {
+      "title": "Making your first request",
+      "url": "https://developer.monday.com/api-reference/docs/getting-started",
+      "snippet": ""
+    },
+    {
+      "title": "Does monday.com have an API? – Support",
+      "url": "https://support.monday.com/hc/en-us/articles/360005144659-Does-monday-com-have-an-API",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication",
+      "url": "https://developer.monday.com/api-reference/docs/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "OAuth and Permissions",
+      "url": "https://developer.monday.com/apps/docs/oauth",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication",
+      "url": "https://developer.monday.com/apps/docs/integration-authorization",
+      "snippet": ""
+    },
+    {
+      "title": "monday.com Platform API",
+      "url": "https://developer.monday.com/api-reference",
+      "snippet": ""
+    },
+    {
+      "title": "API Quickstart Tutorial - Javascript – Support",
+      "url": "https://support.monday.com/hc/en-us/articles/360013465599-API-Quickstart-Tutorial-Javascript",
+      "snippet": ""
+    }
+  ]
+}

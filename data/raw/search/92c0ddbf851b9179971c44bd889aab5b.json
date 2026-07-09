@@ -1,0 +1,45 @@
+{
+  "answer": "Plain offers an official MCP server that allows AI tools like Claude, ChatGPT, and Cursor to interact directly with your support data [1]. You can connect by pointing your MCP client to the URL https://mcp.plain.com/mcp, which authenticates via your existing Plain account using OAuth, requiring no manual API keys [1].\n\nFor developers building their own Plain-based MCP servers, the plain.mcp package allows you to expose your app via an MCPView subclass mounted in your URLs [2][3]. Tools and resources are defined as subclasses that automatically derive metadata and handle context [2][4].",
+  "results": [
+    {
+      "title": "MCP Server | Plain Help Center",
+      "url": "https://help.plain.com/article/mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "plain/plain-mcp at master · dropseed/plain · GitHub",
+      "url": "https://github.com/dropseed/plain/tree/master/plain-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "plain.mcp v0.2.1",
+      "url": "https://pypi.org/project/plain.mcp/0.2.1/",
+      "snippet": ""
+    },
+    {
+      "title": "plain.mcp v0.0.0",
+      "url": "https://pypi.org/project/plain.mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "Understanding MCP servers",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts",
+      "snippet": ""
+    },
+    {
+      "title": "Build an MCP server - Model Context Protocol",
+      "url": "https://modelcontextprotocol.org/docs/develop/build-server",
+      "snippet": ""
+    },
+    {
+      "title": "modelcontextprotocol/servers",
+      "url": "https://github.com/modelcontextprotocol/servers?alltoolsdirectory=",
+      "snippet": ""
+    },
+    {
+      "title": "Overview - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/specification/2025-11-25/basic",
+      "snippet": ""
+    }
+  ]
+}

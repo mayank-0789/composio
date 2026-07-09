@@ -1,0 +1,119 @@
+{
+  "verdicts": [
+    {
+      "field": "name",
+      "status": "supported",
+      "note": "Evidence confirms this is the sherlock-project/sherlock GitHub OSINT username enumeration tool"
+    },
+    {
+      "field": "website",
+      "status": "supported",
+      "note": "Correct GitHub URL for the actual project"
+    },
+    {
+      "field": "category",
+      "status": "unsupported",
+      "note": "Evidence doesn't explicitly confirm the 'Data, SEO and Scraping' category, though OSINT/username enumeration could fit"
+    },
+    {
+      "field": "one_liner",
+      "status": "supported",
+      "note": "Evidence confirms it's an open-source CLI tool for username enumeration with no hosted API, and other evidence shows unrelated 'Sherlock' products"
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence confirms the GitHub project requires no authentication and other 'Sherlock' products in evidence are unrelated"
+    },
+    {
+      "field": "self_serve",
+      "status": "unsupported",
+      "note": "Evidence doesn't explicitly address self-serve status, though it confirms it's a free open-source tool"
+    },
+    {
+      "field": "api_surface",
+      "status": "supported",
+      "note": "Evidence confirms the GitHub project has no hosted API/service and is a local Python CLI tool"
+    },
+    {
+      "field": "existing_mcp.exists",
+      "status": "contradicted",
+      "note": "The URL points to the main GitHub repo, NOT an MCP server. Evidence shows this is the sherlock-project itself, not an MCP implementation for it"
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "'buildable-with-caveats' is correct - an MCP would need to wrap the local CLI since there's no hosted API"
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "Evidence confirms the search results contain unrelated Sherlock products and that the real tool has no hosted API"
+    },
+    {
+      "field": "evidence",
+      "status": "supported",
+      "note": "All evidence URLs and descriptions match what was retrieved"
+    },
+    {
+      "field": "confidence",
+      "status": "unsupported",
+      "note": "Evidence doesn't directly support the 0.25 confidence value, though the confusion with other products could justify low confidence"
+    },
+    {
+      "field": "flags",
+      "status": "supported",
+      "note": "Evidence confirms name collision with other products, no hosted API, and evidence mismatch issues"
+    }
+  ],
+  "revised": {
+    "id": 58,
+    "name": "Sherlock",
+    "website": "github.com/sherlock-project/sherlock",
+    "category": "Data, SEO and Scraping",
+    "one_liner": "sherlock-project/sherlock is a free, open-source local CLI tool for OSINT username enumeration across social networks with no hosted API or authentication; nearly all search evidence retrieved pertains to unrelated commercial products that coincidentally share the 'Sherlock' name.",
+    "auth_methods": [
+      {
+        "method": "Other",
+        "notes": "The actual sherlock-project/sherlock tool requires no authentication at all - it's a local CLI script. The various 'Sherlock' branded commercial products found in search (LCL payment secret keys, Ansys gRPC mTLS, token-based Sherlock platform) are unrelated namesake products, not this GitHub project."
+      }
+    ],
+    "self_serve": "unknown",
+    "self_serve_notes": "Not applicable in the traditional SaaS sense: sherlock-project/sherlock is a free, open-source CLI tool anyone can clone/pip-install and run locally with no signup or credentials. There is no vendor-hosted API to subscribe to.",
+    "api_surface": {
+      "type": "none",
+      "breadth": "narrow",
+      "notes": "The actual github.com/sherlock-project/sherlock is an open-source OSINT CLI tool for username enumeration across social media platforms - it has no hosted API/service, no accounts, no auth. It is run locally as a Python script/CLI. The search evidence returned is almost entirely about unrelated commercial products that happen to share the 'Sherlock' name (LCL Sherlock's payment gateway, Ansys Sherlock engineering software, Bill Sherlock, Emailsherlock, Sherlocks.ai, Sherlock AI hiring, Sherlock Calls) - none of these are the actual GitHub project in question."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "The search evidence is almost entirely about unrelated products sharing the 'Sherlock' name (payment gateway, engineering software, SRE platform, hiring platform) rather than the actual GitHub OSINT username-search tool. An MCP wrapper for the real tool would need to shell out to or import the local Python sherlock CLI (as noted by one search result mentioning an OSINT-focused MCP wrapping the standard Sherlock tool for username enumeration), rather than calling any hosted REST/GraphQL API, since none exists for this project.",
+    "evidence": [
+      {
+        "url": "https://github.com/sherlock-project/sherlock",
+        "supports": "This is the actual project in question - an open-source CLI tool for hunting usernames across social networks, with no hosted API or authentication."
+      },
+      {
+        "url": "https://support.sherlock.im/knowledge_base/item/292200",
+        "supports": "Example of an unrelated 'Sherlock' branded product (Russian payment platform) using token-based auth - not the GitHub project."
+      },
+      {
+        "url": "https://developer.ansys.com/docs/sherlock-apis-2026-r1/getting-started.md",
+        "supports": "Example of unrelated Ansys Sherlock engineering software using gRPC/mTLS auth - not the GitHub project."
+      },
+      {
+        "url": "https://sherlocks-documentation.secure.lcl.fr/en/sherlocks-office-json.html",
+        "supports": "Example of unrelated LCL Sherlock's payment gateway using secret-key auth - not the GitHub project."
+      }
+    ],
+    "confidence": 0.25,
+    "flags": [
+      "name_collision",
+      "evidence_mismatch",
+      "no_hosted_api_for_actual_project",
+      "low_confidence_due_to_irrelevant_search_results"
+    ]
+  }
+}

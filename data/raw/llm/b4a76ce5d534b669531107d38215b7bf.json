@@ -1,0 +1,58 @@
+{
+  "one_liner": "Datadog offers a broad, self-serve REST API (v1/v2) authenticated via API/application keys or personal/service access tokens, with an official MCP server enabling AI agents to query observability data directly.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "DD-API-KEY header required for write access; DD-APPLICATION-KEY header additionally required for read access on many endpoints."
+    },
+    {
+      "method": "Token",
+      "notes": "Personal Access Tokens (PATs) or Service Access Tokens (SATs) can be used as Bearer token in Authorization header or via dd-application-key header, in place of API key."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Free tier available (up to 5 hosts, 1-day metric retention) plus a 14-day free trial of the full platform; API keys and application keys can be generated self-serve from the account dashboard without needing sales contact. Full feature usage (e.g., Synthetic Monitoring) is metered/billed on top of paid plans.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Extensive REST API (v1/v2) covering metrics, logs, monitors, dashboards, incidents, synthetics, and more; official client libraries in multiple languages."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://docs.datadoghq.com/getting_started/software_delivery_mcp_tools/"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://docs.datadoghq.com/api/latest/authentication/",
+      "supports": "Describes DD-API-KEY and DD-APPLICATION-KEY header authentication."
+    },
+    {
+      "url": "https://docs.datadoghq.com/api/latest.md",
+      "supports": "Confirms REST API structure, JSON responses, authentication via API key and application key, and official client libraries."
+    },
+    {
+      "url": "https://docs.datadoghq.com/account_management/personal-access-tokens.md",
+      "supports": "Describes Personal Access Tokens as alternative auth method usable as Bearer token."
+    },
+    {
+      "url": "https://docs.datadoghq.com/account_management/service-access-tokens.md",
+      "supports": "Describes Service Access Tokens as alternative auth method."
+    },
+    {
+      "url": "https://www.datadoghq.com/free-datadog-trial/",
+      "supports": "Confirms self-serve signup for free trial."
+    },
+    {
+      "url": "https://docs.datadoghq.com/account_management/billing/pricing/",
+      "supports": "Details free tier and pricing structure."
+    },
+    {
+      "url": "https://docs.datadoghq.com/getting_started/software_delivery_mcp_tools/",
+      "supports": "Indicates existence of official Datadog MCP tooling."
+    }
+  ],
+  "confidence": 0.85,
+  "flags": []
+}

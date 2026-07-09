@@ -1,0 +1,50 @@
+{
+  "one_liner": "Sentry provides a broad, well-documented REST API with self-serve bearer-token (and OAuth2) authentication, plus an official hosted MCP server, making it readily buildable for AI-agent tooling today.",
+  "auth_methods": [
+    {
+      "method": "Token",
+      "notes": "Bearer auth tokens: user auth tokens (personal) or organization auth tokens (org-scoped, prefix sntrys_). Passed via Authorization: Bearer header. Scoped permissions (project:read, org:admin, etc)."
+    },
+    {
+      "method": "OAuth2",
+      "notes": "Supported for third-party applications integrating with Sentry, per search result [3]."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Free Developer plan (5,000 errors/10,000 transactions per month, single user) requires no credit card and allows self-serve creation of user or org auth tokens via account/org settings. Paid plans (Team/Business) needed for higher quota or multi-user orgs, but API access itself is not gated behind sales.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Sentry's REST API (api/0) covers organizations, projects, issues, events, teams, members, releases, etc. Full OpenAPI schema available (getsentry/sentry-api-schema)."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://mcp.sentry.dev/mcp"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://docs.sentry.io/api.md",
+      "supports": "REST API reference with broad endpoint coverage"
+    },
+    {
+      "url": "https://sentrydocs.dev/api/authentication",
+      "supports": "Bearer token auth, user and organization auth tokens, scopes, error responses"
+    },
+    {
+      "url": "https://sentrydocs.dev/configuration/api-keys",
+      "supports": "Self-serve creation of auth tokens via User Settings / Organization Settings, scope reference"
+    },
+    {
+      "url": "https://www.sentry.help/en/articles/13964878-how-does-pay-as-you-go-work",
+      "supports": "Free Developer plan details, no credit card required, quota limits"
+    },
+    {
+      "url": "https://mcp.sentry.dev/mcp",
+      "supports": "Official remote MCP server URL supporting OAuth"
+    }
+  ],
+  "confidence": 0.85,
+  "flags": []
+}

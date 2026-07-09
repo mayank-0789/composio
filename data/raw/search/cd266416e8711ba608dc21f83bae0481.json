@@ -1,0 +1,45 @@
+{
+  "answer": "Waterfall.io does not offer a free tier; it operates on a prepaid, usage-based model where you purchase credits to access B2B data services [1][2]. There are no long-term contracts or monthly commitments required [1][2][3].\n\nFor developer API access, you can sign up to receive an API key [3]. You authenticate requests by including this key in the header:\n\n```bash\nx-api-key: <your-api-key>\n```\n\nThe base URL for API requests is `https://api.waterfall.io/v1/` [4]. While usage is billed, certain account-related reporting calls are free and do not consume credits [5][6].",
+  "results": [
+    {
+      "title": "Waterfall | One B2B data solution to connect them all",
+      "url": "https://www.waterfall.io/",
+      "snippet": ""
+    },
+    {
+      "title": "Book a demo | Waterfall",
+      "url": "https://www.waterfall.io/book-a-call",
+      "snippet": ""
+    },
+    {
+      "title": "Waterfall.io Review: Is It worth it? Our Analysis on 100+ User Reviews",
+      "url": "https://www.leadsforge.ai/blog/waterfall-io-review",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://docs.waterfall.io/v1/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Account Reporter v2 - Waterfall.io API Documentation",
+      "url": "https://docs.waterfall.io/v1/account-reporter-v2",
+      "snippet": ""
+    },
+    {
+      "title": "Rate limit - Waterfall.io API Documentation",
+      "url": "https://docs.waterfall.io/v1/rate-limit",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://docs.waterfall.io/v1/introduction",
+      "snippet": ""
+    },
+    {
+      "title": "API Keys Management - Waterfall.io API Documentation",
+      "url": "https://docs.waterfall.io/v1/api-keys-overview",
+      "snippet": ""
+    }
+  ]
+}

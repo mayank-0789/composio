@@ -1,0 +1,45 @@
+{
+  "answer": "Pylon AI API access is pay-per-request and does not feature a traditional free tier or subscription model [1][2]. Every API request requires a micropayment in USDC on the Base blockchain using the x402 protocol; there are no accounts, API keys, or minimum spend requirements [1][3].\n\nNote that Pylon Cloud, a separate service for self-hosting or deploying applications, does offer a Hobby tier that is free of charge [4]. This tier includes specific quotas such as 100,000 requests per month and limited CPU/memory resources [4].",
+  "results": [
+    {
+      "title": "Pricing — Pylon AI",
+      "url": "https://pylonapi.com/pricing.html",
+      "snippet": ""
+    },
+    {
+      "title": "Terms of Service — Pylon AI",
+      "url": "https://pylonapi.com/terms",
+      "snippet": ""
+    },
+    {
+      "title": "Pylon — The Action Layer for AI Agents",
+      "url": "https://pylonapi.com/",
+      "snippet": ""
+    },
+    {
+      "title": "Pylon Cloud - Pylon",
+      "url": "https://docs.pylonsync.com/cloud",
+      "snippet": ""
+    },
+    {
+      "title": "API Catalog — Pylon AI",
+      "url": "https://pylonapi.com/apis.html",
+      "snippet": ""
+    },
+    {
+      "title": "Pylon Agent Gateway",
+      "url": "https://api.pylonapi.com/",
+      "snippet": ""
+    },
+    {
+      "title": "pylonapi/pylon",
+      "url": "https://github.com/pylon-apis/pylon",
+      "snippet": ""
+    },
+    {
+      "title": "README.md at main · pylonapi/pylon-mcp",
+      "url": "https://github.com/pylonapi/pylon-mcp/blob/main/README.md",
+      "snippet": ""
+    }
+  ]
+}

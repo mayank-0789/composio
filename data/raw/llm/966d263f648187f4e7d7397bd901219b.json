@@ -1,0 +1,56 @@
+{
+  "one_liner": "Attio is a modern CRM offering a broad, self-serve REST API (OAuth2 or API key auth) and an official hosted MCP server, making it readily buildable for AI-agent tooling today.",
+  "auth_methods": [
+    {
+      "method": "OAuth2",
+      "notes": "Standard OAuth 2.0 authorization code flow recommended for multi-workspace apps; authorize/token/introspect endpoints documented."
+    },
+    {
+      "method": "API key",
+      "notes": "Single-workspace API key generated in developer settings, used as Bearer token; suitable for single-workspace integrations."
+    },
+    {
+      "method": "Basic",
+      "notes": "HTTP Basic Authentication supported (token as username, blank password) but not recommended over Bearer."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Free tier signup with no credit card required includes API access (rate-limited). API keys can be self-generated in developer settings; OAuth apps can be registered via the developer dashboard (build.attio.com).",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Full REST API covering records (people, companies, deals), lists, tasks, notes, webhooks, plus an App SDK for building apps on the platform."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://mcp.attio.com/mcp"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://docs.attio.com/rest-api/guides/authentication",
+      "supports": "Details OAuth2, API key, and Basic auth methods with Bearer token usage"
+    },
+    {
+      "url": "https://docs.attio.com/rest-api/overview",
+      "supports": "Confirms REST API surface"
+    },
+    {
+      "url": "https://docs.attio.com/rest-api/tutorials/connect-an-app-through-oauth",
+      "supports": "OAuth 2.0 flow implementation guide"
+    },
+    {
+      "url": "https://attio.com/platform/developers",
+      "supports": "Developer platform with self-serve free tier and API access"
+    },
+    {
+      "url": "https://syncgtm.com/blog/attio-review",
+      "supports": "Confirms self-serve free tier without credit card including API access"
+    }
+  ],
+  "confidence": 0.9,
+  "flags": [
+    "Official hosted MCP server exists at mcp.attio.com using OAuth; community-maintained self-hosted alternative (attio-mcp npm package) also available using API key"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "Bright Data's Web MCP server is an open-standard tool that connects AI agents and LLMs to real-time web data while bypassing anti-bot protections, CAPTCHAs, and geo-restrictions [1][2][3]. It functions as a managed adapter layer, providing structured outputs like clean Markdown or JSON, which reduces the need for manual prompt engineering [4][3].\n\nYou can integrate it with clients like Claude Desktop, Cursor, or Windsurf using either a remote hosted URL or a local npx command [5][2][6].\n\nFor a local setup, add this to your MCP configuration:\n\n```json\n{\n  \"mcpServers\": {\n    \"Bright Data\": {\n      \"command\": \"npx\",\n      \"args\": [\"@brightdata/mcp\"],\n      \"env\": {\n        \"API_TOKEN\": \"<your-api-token-here>\"\n      }\n    }\n  }\n}\n```\n\nThe server offers a free Rapid tier (5,000 requests/month) for basic searching and scraping, and a Pro mode for advanced browser automation and structured data extraction [2][7][6].",
+  "results": [
+    {
+      "title": "The Web MCP by Bright Data - Start with a Free Plan",
+      "url": "https://brightdata.com/ai/mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "MCP Server Pricing - Bright Data",
+      "url": "https://brightdata.com/pricing/mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "How to Connect AI Agents to Live Web Data With Bright Data's MCP Server",
+      "url": "https://hackernoon.com/how-to-connect-ai-agents-to-live-web-data-with-bright-datas-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://brightdata.com/blog/ai/web-scraping-with-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "brightdata/brightdata-mcp",
+      "url": "https://github.com/brightdata/brightdata-mcp?tab=readme-ov-file",
+      "snippet": ""
+    },
+    {
+      "title": "README.md at main · brightdata/brightdata-mcp",
+      "url": "https://github.com/brightdata/brightdata-mcp/blob/main/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "Tools - Bright Data Docs",
+      "url": "https://docs.brightdata.com/ai/mcp-server/tools",
+      "snippet": ""
+    },
+    {
+      "title": "FAQ: MCP - Bright Data Docs",
+      "url": "https://docs.brightdata.com/ai/mcp-server/faqs",
+      "snippet": ""
+    }
+  ]
+}

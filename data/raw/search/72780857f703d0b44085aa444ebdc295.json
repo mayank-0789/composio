@@ -1,0 +1,45 @@
+{
+  "answer": "Neo4j AuraDB Free is a self-serve, cloud-based graph database that is free forever and requires no credit card for access [1][2]. It supports up to 200,000 nodes and 400,000 relationships [3]. While you can use standard Neo4j drivers to execute Cypher queries on your database, the management API—which allows for operational tasks like instance provisioning, backups, and pausing—is primarily intended for automated workflows in paid tiers, as AuraDB Free is designed as a manual, self-serve prototyping environment [3]. You can get started by signing up at the Neo4j Aura console [2][4].",
+  "results": [
+    {
+      "title": "Cloud & self-hosted graph database platform pricing | Neo4j",
+      "url": "https://neo4j.com/pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://neo4j.com/free-graph-database/",
+      "snippet": ""
+    },
+    {
+      "title": "Neo4j AuraDB – Frequently Asked Questions",
+      "url": "https://neo4j.com/cloud/platform/aura-graph-database/faq/",
+      "snippet": ""
+    },
+    {
+      "title": "Neo4j Aura Documentation - Neo4j Aura",
+      "url": "https://neo4j.com/docs/aura/auradb/getting-started/create-database/",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://neo4j.com/cloud/get-aura/",
+      "snippet": ""
+    },
+    {
+      "title": "Community Edition",
+      "url": "https://neo4j.com/product/community-edition/",
+      "snippet": ""
+    },
+    {
+      "title": "Neo4j Aura",
+      "url": "https://console.neo4j.io/pricing?version=1.4",
+      "snippet": ""
+    },
+    {
+      "title": "Payment options - Neo4j Aura",
+      "url": "https://neo4j.com/docs/aura/billing/payment-options/",
+      "snippet": ""
+    }
+  ]
+}

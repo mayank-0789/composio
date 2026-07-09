@@ -1,0 +1,45 @@
+{
+  "answer": "Snowflake offers a free trial account, which provides full access to features for testing purposes without requiring payment information at signup [1]. You can register for this via a self-service form on the Snowflake website [1]. Converting a trial account to a paid, self-service account occurs when you add a payment method [1].\n\nDevelopers can access Snowflake programmatically using the Snowflake REST API for resource management [2]. This API is compliant with the OpenAPI 3.1.0 specification, allowing for integration using most programming languages by submitting REST requests via tools like curl or Postman [2].",
+  "results": [
+    {
+      "title": "Trial accounts",
+      "url": "https://docs.snowflake.com/en/user-guide/admin-trial-account.md",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/snowflake-rest-api.md",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing plans and offers",
+      "url": "https://docs.snowflake.com/en/user-guide/collaboration/listings/pricing-plans-offers/pricing-plans-and-offers.md",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing plan manifest reference | Snowflake Documentation",
+      "url": "https://docs.snowflake.com/en/en/user-guide/collaboration/listings/pricing-plans-offers/pricing-plan-manifest-reference",
+      "snippet": ""
+    },
+    {
+      "title": "Paid listings pricing models | Snowflake Documentation",
+      "url": "https://docs.snowflake.com/en/en/collaboration/provider-listings-pricing-model",
+      "snippet": ""
+    },
+    {
+      "title": "THE SIMPLE GUIDE TO SNOWFLAKE PRICING",
+      "url": "https://www.snowflake.com/wp-content/uploads/2023/12/The-Simple-Guide-to-Snowflake-Pricing.pdf",
+      "snippet": ""
+    },
+    {
+      "title": "Understanding overall cost | Snowflake Documentation",
+      "url": "https://docs.snowflake.com/en/user-guide/cost-understanding-overall",
+      "snippet": ""
+    },
+    {
+      "title": "Pay for Snowflake Marketplace listings | Snowflake Documentation",
+      "url": "https://docs.snowflake.com/en/collaboration/consumer-listings-paying",
+      "snippet": ""
+    }
+  ]
+}

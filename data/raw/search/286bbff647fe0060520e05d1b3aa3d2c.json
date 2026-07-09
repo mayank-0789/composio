@@ -1,0 +1,45 @@
+{
+  "answer": "Meta offers an official, first-party Model Context Protocol (MCP) server for ads at `mcp.facebook.com/ads` [1]. It is designed for single advertisers and is accessible directly within supported AI clients like Claude, ChatGPT, and Perplexity [1].\n\nFor agencies or power users requiring advanced features, multiple open-source MCP servers are available. Notable options include Pipeboard’s remote server at `https://meta-ads.mcp.pipeboard.co/` [2], which supports cross-platform ad management, and the `byadsco/meta-ads-mcp` server, which provides multi-tenant agency capabilities and aligns its naming conventions with Meta’s official MCP [1].",
+  "results": [
+    {
+      "title": "byadsco/meta-ads-mcp",
+      "url": "https://github.com/MaxterPC/meta-ads-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "GitHub - pipeboard-co/meta-ads-mcp: MCP server to manage Facebook and Instagram Ads (Meta Ads) · GitHub",
+      "url": "https://github.com/pipeboard-co/meta-ads-mcp/tree/main",
+      "snippet": ""
+    },
+    {
+      "title": "richardpowellus/meta-ads-mcp-server",
+      "url": "https://github.com/richardpowellus/meta-ads-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "serkanhaslak/meta-mcp",
+      "url": "https://github.com/serkanhaslak/meta-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "brmh/Meta-MCP",
+      "url": "https://github.com/brmh/Meta-MCP",
+      "snippet": ""
+    },
+    {
+      "title": "brijr/meta-mcp",
+      "url": "https://github.com/wiiip/meta-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "0xfabrica/mcp-meta-ads",
+      "url": "https://github.com/0xfabrica/mcp-meta-ads",
+      "snippet": ""
+    },
+    {
+      "title": "dengineproblem/meta-ads-mcp-extended",
+      "url": "https://github.com/dengineproblem/meta-ads-mcp-extended",
+      "snippet": ""
+    }
+  ]
+}

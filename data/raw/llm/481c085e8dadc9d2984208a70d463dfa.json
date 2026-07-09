@@ -1,0 +1,53 @@
+{
+  "one_liner": "HubSpot offers a broad, self-serve REST API (CRM, marketing, sales) secured via OAuth2 or private app access tokens, with an official MCP server already available for AI agent integration.",
+  "auth_methods": [
+    {
+      "method": "OAuth2",
+      "notes": "Required for multi-account/public/marketplace apps; Authorization Code grant, Bearer token in header."
+    },
+    {
+      "method": "API key",
+      "notes": "Private app access tokens / static auth tokens used as Bearer tokens for single-account apps."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Free developer seats and private app tokens can be created directly in a HubSpot account without approval; free-tier rate limits apply (100 req/10s, 250k/day). OAuth apps for marketplace distribution require app creation but no gatekeeping beyond developer account signup.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Comprehensive CRM REST API (contacts, deals, engagements, associations, etc.) plus broader developer platform APIs across marketing, sales, service."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://developers.hubspot.com/docs/apps/legacy-apps/authentication/intro-to-auth",
+      "supports": "Describes OAuth and private app access token authentication methods with Bearer header usage."
+    },
+    {
+      "url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/overview",
+      "supports": "Details OAuth vs static auth token requirements for app distribution."
+    },
+    {
+      "url": "https://developers.hubspot.com/docs/apps/developer-platform/developer-seats",
+      "supports": "Free developer seat access for self-serve API usage."
+    },
+    {
+      "url": "https://developers.hubspot.com/docs/developer-tooling/platform/usage-guidelines",
+      "supports": "Free-tier rate limits confirming self-serve free access."
+    },
+    {
+      "url": "https://developers.hubspot.com/docs/developer-tooling/platform/apis-by-tier",
+      "supports": "Broad REST API surface across HubSpot platform."
+    }
+  ],
+  "confidence": 0.85,
+  "flags": [
+    "Official remote MCP server exists (HubSpot MCP Server) plus npm package @hubspot/mcp-server for local use, per search results though not directly cited in scraped docs.",
+    "Sensitive data properties excluded from MCP access per search summary."
+  ]
+}

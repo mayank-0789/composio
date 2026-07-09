@@ -1,0 +1,1410 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Composio — 100-App Buildability Research</title>
+<style>
+:root{--ground:#FAFBFB;--surface:#FFF;--surface-2:#F0F4F3;--border:#DBE3E2;--ink:#0F1E1C;--muted:#566564;--accent:#0C8578;--accent-soft:rgba(12,133,120,.09);--good:#0E8A5F;--good-soft:rgba(14,138,95,.10);--warn:#A35A08;--warn-soft:rgba(163,90,8,.10);--crit:#C6392C;--crit-soft:rgba(198,57,44,.09);--mono:ui-monospace,"SF Mono",Menlo,monospace;--sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+@media (prefers-color-scheme:dark){:root{--ground:#080B0C;--surface:#0F1517;--surface-2:#141C1F;--border:#212E32;--ink:#E7EEEC;--muted:#93A3A1;--accent:#2DD4BF;--accent-soft:rgba(45,212,191,.11);--good:#34D399;--good-soft:rgba(52,211,153,.12);--warn:#FBBF24;--warn-soft:rgba(251,191,36,.13);--crit:#F87171;--crit-soft:rgba(248,113,113,.12)}}
+:root[data-theme="dark"]{--ground:#080B0C;--surface:#0F1517;--surface-2:#141C1F;--border:#212E32;--ink:#E7EEEC;--muted:#93A3A1;--accent:#2DD4BF;--accent-soft:rgba(45,212,191,.11);--good:#34D399;--good-soft:rgba(52,211,153,.12);--warn:#FBBF24;--warn-soft:rgba(251,191,36,.13);--crit:#F87171;--crit-soft:rgba(248,113,113,.12)}
+:root[data-theme="light"]{--ground:#FAFBFB;--surface:#FFF;--surface-2:#F0F4F3;--border:#DBE3E2;--ink:#0F1E1C;--muted:#566564;--accent:#0C8578;--accent-soft:rgba(12,133,120,.09);--good:#0E8A5F;--good-soft:rgba(14,138,95,.10);--warn:#A35A08;--warn-soft:rgba(163,90,8,.10);--crit:#C6392C;--crit-soft:rgba(198,57,44,.09)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+.topbar{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--ground) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.topbar-in{display:flex;align-items:center;justify-content:space-between;height:52px}
+.brand{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;gap:9px;align-items:center}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.toggle{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);background:var(--surface-2);border:1px solid var(--border);border-radius:999px;padding:6px 12px;cursor:pointer}
+.hero{padding:56px 0 36px;border-bottom:1px solid var(--border)}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0 0 16px}
+h1{font-size:clamp(28px,5vw,44px);line-height:1.07;letter-spacing:-.02em;margin:0 0 16px;font-weight:680;text-wrap:balance}
+.lede{font-size:clamp(15px,2vw,18px);color:var(--muted);max-width:64ch;margin:0}
+section{padding:44px 0;border-bottom:1px solid var(--border)}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+h2{font-size:clamp(20px,3vw,26px);letter-spacing:-.015em;margin:0 0 18px;font-weight:640}
+.headlines{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.headlines li{font-size:clamp(16px,2.4vw,20px);font-weight:560;padding-left:20px;position:relative}
+.headlines li::before{content:"◆";position:absolute;left:0;color:var(--accent);font-size:12px;top:5px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media (max-width:760px){.grid2{grid-template-columns:1fr}}
+.cat-row{display:grid;grid-template-columns:150px 1fr 52px;gap:12px;align-items:center;margin-bottom:8px;font-size:13px}
+.cat-name{color:var(--muted)}
+.cat-bar{height:8px;background:var(--surface-2);border-radius:999px;overflow:hidden}
+.cat-fill{display:block;height:100%;background:var(--accent)}
+.cat-num{text-align:right;color:var(--muted)}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.controls input,.controls select{font-family:var(--sans);font-size:13px;padding:8px 12px;border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--ink)}
+.controls input{flex:1;min-width:180px}
+.tbl-scroll{overflow-x:auto;border:1px solid var(--border);border-radius:12px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+thead th{text-align:left;padding:10px 12px;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border-bottom:1px solid var(--border);cursor:pointer;white-space:nowrap;background:var(--surface-2)}
+tbody td{padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+tbody tr:last-child td{border-bottom:none}
+.num{font-family:var(--mono);color:var(--muted);width:1%}
+.mono{font-family:var(--mono);font-size:12px}
+.app-name{display:block;font-weight:600}
+.one-liner{display:block;color:var(--muted);font-size:12px;max-width:32ch}
+.cat{color:var(--muted);white-space:nowrap}
+.dim{color:var(--muted)}
+.blocker{color:var(--muted);max-width:24ch}
+a{color:var(--accent)}
+.badge{font-family:var(--mono);font-size:11px;padding:2px 7px;border-radius:5px;border:1px solid var(--border);white-space:nowrap}
+.badge.good{color:var(--good);background:var(--good-soft);border-color:color-mix(in srgb,var(--good) 40%,transparent)}
+.badge.warn{color:var(--warn);background:var(--warn-soft);border-color:color-mix(in srgb,var(--warn) 40%,transparent)}
+.badge.crit{color:var(--crit);background:var(--crit-soft);border-color:color-mix(in srgb,var(--crit) 40%,transparent)}
+.badge.neutral{color:var(--muted);background:var(--surface-2)}
+.lift{display:flex;align-items:center;gap:20px;flex-wrap:wrap;background:var(--accent-soft);border:1px solid var(--accent);border-radius:12px;padding:20px 24px}
+.lift .big{font-family:var(--mono);font-size:clamp(24px,5vw,34px);font-weight:700;color:var(--accent);font-variant-numeric:tabular-nums}
+.lift .big .arrow{opacity:.5;margin:0 8px}
+.lift p{margin:0;color:var(--ink);max-width:44ch;font-size:14px}
+.tag{font-family:var(--mono);font-size:11px;padding:2px 6px;border-radius:5px;background:var(--surface-2);border:1px solid var(--border);color:var(--muted)}
+.limits{padding-left:0;list-style:none;display:grid;gap:10px}
+.limits li{padding:10px 14px;background:var(--surface);border:1px solid var(--border);border-radius:8px;font-size:14px}
+.misses{margin-top:8px}
+.demo{display:flex;gap:8px;flex-wrap:wrap}
+.demo .step{font-family:var(--mono);font-size:12px;padding:6px 10px;border:1px solid var(--border);border-radius:7px;background:var(--surface-2)}
+code{font-family:var(--mono);font-size:12px;background:var(--surface-2);padding:2px 6px;border-radius:5px}
+footer{padding:30px 0 60px;color:var(--muted);font-family:var(--mono);font-size:12px}
+.flow{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.flow .node{font-family:var(--mono);font-size:12px;padding:8px 12px;border:1px solid var(--border);border-radius:8px;background:var(--surface)}
+.flow .arrow{align-self:center;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap topbar-in"><div class="brand"><span class="dot"></span> Composio · Buildability Research</div><button class="toggle" id="tg" type="button">Theme</button></div></div>
+<div class="wrap">
+<header class="hero">
+<p class="eyebrow">100 apps · researched by an agent · accuracy-verified</p>
+<h1>Which of these 100 apps can be an agent toolkit today — and which need a sales call?</h1>
+<p class="lede">An agent (Claude + Composio's SDK &amp; managed toolkits + Firecrawl) researched every app's auth, self-serve path, API surface and existing MCP, then verified its own answers against live docs and a hand-audited sample.</p>
+</header>
+
+<section>
+<p class="kicker">The headline</p>
+<h2>What the 100 apps tell us</h2>
+<ul class="headlines">
+<li>OAuth2 is the dominant auth method (71 of 100 apps) — a managed-auth layer covers most of the field.</li>
+<li>76/100 apps are self-serve — the easy wins; the rest need paid plans or outreach.</li>
+<li>72/100 apps are buildable into an agent toolkit today; 26 come with caveats and 2 are blocked outright.</li>
+<li>70/100 apps are instant wins — self-serve credentials AND buildable now — while 14 need a paid plan, admin approval, or a sales conversation first.</li>
+</ul>
+<div class="grid2" style="margin-top:26px">
+<div><p class="kicker">Self-serve share by category</p><div class="cat-row"><span class="cat-name">CRM and Sales</span>
+      <span class="cat-bar"><span class="cat-fill" style="width:80%"></span></span>
+      <span class="cat-num mono">8/10</span></div>
+<div class="cat-row"><span class="cat-name">Support and Helpdesk</span>
+      <span class="cat-bar"><span class="cat-fill" style="width:80%"></span></span>
+      <span class="cat-num mono">8/10</span></div>
+<div class="cat-row"><span class="cat-name">Communications and Messaging</span>
+      <span class="cat-bar"><span class="cat-fill" style="width:80%"></span></span>
+      <span class="cat-num mono">8/10</span></div>
+<div class="cat-row"><span class="cat-name">Marketing, Ads, Email and Social</span>
+      <span class="cat-bar"><span class="cat-fill" style="width:60%"></span></span>
+      <span class="cat-num mono">6/10</span></div>
+<div class="cat-row"><span class="cat-name">Ecommerce</span>
+      <span class="cat-bar"><span class="cat-fill" style="width:60%"></span></span>
+      <span class="cat-num mono">6/10</span></div>
+<div class="cat-row"><span class="cat-name">Data, SEO and Scraping</span>
+      <span class="cat-bar"><span class="cat-fill" style="width:60%"></span></span>
+      <span class="cat-num mono">6/10</span></div>
+<div class="cat-row"><span class="cat-name">Developer, Infra and Data platforms</span>
+      <span class="cat-bar"><span class="cat-fill" style="width:100%"></span></span>
+      <span class="cat-num mono">10/10</span></div>
+<div class="cat-row"><span class="cat-name">Productivity and Project Management</span>
+      <span class="cat-bar"><span class="cat-fill" style="width:90%"></span></span>
+      <span class="cat-num mono">9/10</span></div>
+<div class="cat-row"><span class="cat-name">Finance and Fintech</span>
+      <span class="cat-bar"><span class="cat-fill" style="width:80%"></span></span>
+      <span class="cat-num mono">8/10</span></div>
+<div class="cat-row"><span class="cat-name">AI, Research and Media-native</span>
+      <span class="cat-bar"><span class="cat-fill" style="width:70%"></span></span>
+      <span class="cat-num mono">7/10</span></div></div>
+<div><p class="kicker">Buildable today</p><div class="lift"><div class="big">72<span class="dim" style="font-size:16px"> / 100</span></div><p>apps a developer could turn into an agent toolkit right now with self-serve credentials.</p></div></div>
+</div>
+</section>
+
+<section>
+<p class="kicker">The findings</p>
+<h2>All 100 apps</h2>
+<p class="dim" style="margin:-8px 0 16px;font-size:14px;max-width:70ch">Filterable and sortable. Colour marks self-serve access and buildability. <b>Caveat:</b> the <span class="tag">MCP</span> column is the agent's least-reliable call (~60% on our audit) — it over-detects "yes"; treat it as a lead to verify, not ground truth.</p>
+<div class="controls">
+<input id="q" type="text" placeholder="Search app…" aria-label="Search apps">
+<select id="cat" aria-label="Filter by category"><option value="">All categories</option><option value="CRM and Sales">CRM and Sales</option><option value="Support and Helpdesk">Support and Helpdesk</option><option value="Communications and Messaging">Communications and Messaging</option><option value="Marketing, Ads, Email and Social">Marketing, Ads, Email and Social</option><option value="Ecommerce">Ecommerce</option><option value="Data, SEO and Scraping">Data, SEO and Scraping</option><option value="Developer, Infra and Data platforms">Developer, Infra and Data platforms</option><option value="Productivity and Project Management">Productivity and Project Management</option><option value="Finance and Fintech">Finance and Fintech</option><option value="AI, Research and Media-native">AI, Research and Media-native</option></select>
+</div>
+<div class="tbl-scroll">
+<table id="matrix">
+<thead><tr>
+<th data-sort="num">#</th><th data-sort="str">App</th><th data-sort="str">Category</th><th data-sort="str">Auth</th><th data-sort="str">Self-serve</th><th data-sort="str">API</th><th data-sort="str">MCP</th><th data-sort="str">Buildable</th><th data-sort="str">Blocker</th><th>Evidence</th>
+</tr></thead>
+<tbody>
+<tr data-category="CRM and Sales" data-name="salesforce">
+      <td class="num">1</td>
+      <td class="app"><span class="app-name">Salesforce</span><span class="one-liner">Salesforce provides a broad, mature REST/SOAP/GraphQL API surface with self-serve free Developer Edition access and OAuth2 authentication, plus emerging (pilot/beta) official MCP servers for AI agent integration.</span></td>
+      <td class="cat">CRM and Sales</td>
+      <td class="mono">OAuth2, Basic</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker">Salesforce's official Hosted MCP Server is still in pilot, so production-grade MCP integration may require using the Beta DX MCP server or building a custom MCP wrapper around the stable REST/GraphQL/SOAP APIs in the interim.</td>
+      <td><a href="https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_oauth_and_connected_apps.htm" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="CRM and Sales" data-name="hubspot">
+      <td class="num">2</td>
+      <td class="app"><span class="app-name">HubSpot</span><span class="one-liner">HubSpot offers a broad, self-serve REST API (CRM, marketing, sales) secured via OAuth2 or private app access tokens, with an official MCP server already available for AI agent integration.</span></td>
+      <td class="cat">CRM and Sales</td>
+      <td class="mono">OAuth2, API key</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://developers.hubspot.com/docs/apps/legacy-apps/authentication/intro-to-auth" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="CRM and Sales" data-name="pipedrive">
+      <td class="num">3</td>
+      <td class="app"><span class="app-name">Pipedrive</span><span class="one-liner">Pipedrive is a sales CRM offering a broad REST API secured via personal API tokens or OAuth 2.0, with self-serve token access on any paid plan and both official and community MCP servers available.</span></td>
+      <td class="cat">CRM and Sales</td>
+      <td class="mono">API key, OAuth2</td>
+      <td><span class="badge good">self-serve-trial</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://pipedrive.readme.io/docs/core-api-concepts-authentication" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="CRM and Sales" data-name="attio">
+      <td class="num">4</td>
+      <td class="app"><span class="app-name">Attio</span><span class="one-liner">Modern CRM platform with comprehensive REST API, OAuth 2.0/API key authentication, free tier access, and an official MCP server already available.</span></td>
+      <td class="cat">CRM and Sales</td>
+      <td class="mono">OAuth2, API key, Basic</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://docs.attio.com/rest-api/guides/authentication" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="CRM and Sales" data-name="twenty">
+      <td class="num">5</td>
+      <td class="app"><span class="app-name">Twenty</span><span class="one-liner">Twenty is an open-source CRM offering full REST/GraphQL API access via API keys, OAuth2 (with dynamic client registration + PKCE), or JWT, self-serve on both free self-hosted and paid cloud plans.</span></td>
+      <td class="cat">CRM and Sales</td>
+      <td class="mono">API key, OAuth2, Token</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://twentyhq-twenty.mintlify.app/developers/api/authentication" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="CRM and Sales" data-name="podio">
+      <td class="num">6</td>
+      <td class="app"><span class="app-name">Podio</span><span class="one-liner">Podio is a customizable work/CRM platform offering a broad REST API with OAuth2, API key (app), and basic auth options, self-serve free-tier API access, and an official MCP server for AI-agent integration.</span></td>
+      <td class="cat">CRM and Sales</td>
+      <td class="mono">OAuth2, API key, Basic</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="http://podio.github.io/podio-dotnet/authentication/" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="CRM and Sales" data-name="zoho crm">
+      <td class="num">7</td>
+      <td class="app"><span class="app-name">Zoho CRM</span><span class="one-liner">Zoho CRM offers a broad, mature REST API (v8) with OAuth2 authentication, self-serve developer registration, official SDKs, and both official and community MCP servers, making it buildable now for AI-agent toolkits.</span></td>
+      <td class="cat">CRM and Sales</td>
+      <td class="mono">OAuth2</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://www.zoho.com/crm/developer/docs/api/v8/auth-request.html" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="CRM and Sales" data-name="close">
+      <td class="num">8</td>
+      <td class="app"><span class="app-name">Close</span><span class="one-liner">Close is a sales CRM offering a broad REST API (leads, contacts, opportunities, activities) with API key and OAuth2 auth, gated behind paid plans, and already has an official MCP server.</span></td>
+      <td class="cat">CRM and Sales</td>
+      <td class="mono">API key, OAuth2</td>
+      <td><span class="badge warn">paid-plan</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker">Requires a paid Close plan to obtain API credentials; no free self-serve tier for developers.</td>
+      <td><a href="https://developer.close.com/topics/authentication/" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="CRM and Sales" data-name="copper">
+      <td class="num">9</td>
+      <td class="app"><span class="app-name">Copper</span><span class="one-liner">Copper CRM offers a REST-based Developer API secured by API keys (with HMAC-signed requests) or OAuth 2.0 for partner integrations.</span></td>
+      <td class="cat">CRM and Sales</td>
+      <td class="mono">API key, OAuth2</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / medium</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge warn">buildable-with-caveats</span></td>
+      <td class="blocker">API access requires a paid Professional/Business subscription (though a no-credit-card 14-day trial can provide temporary self-serve access), and the API key auth scheme requires implementing HMAC-SHA256 request signing rather than simple bearer token auth.</td>
+      <td><a href="https://developer.copper.com/introduction/authentication.html" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="CRM and Sales" data-name="dealcloud">
+      <td class="num">10</td>
+      <td class="app"><span class="app-name">DealCloud</span><span class="one-liner">DealCloud is an enterprise deal/relationship CRM offering a broad REST API (data, schema, user management, publications, backups) secured via OAuth2 client credentials for developers with an existing subscription and admin-issued credentials.</span></td>
+      <td class="cat">CRM and Sales</td>
+      <td class="mono">OAuth2, API key</td>
+      <td><span class="badge warn">admin-approval</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge warn">buildable-with-caveats</span></td>
+      <td class="blocker">Requires an existing enterprise DealCloud subscription and admin-issued client_id/apiKey; no open self-serve developer signup, and the official MCP server is only in limited client preview (July 2026).</td>
+      <td><a href="https://api.docs.dealcloud.com/docs/token" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Support and Helpdesk" data-name="zendesk">
+      <td class="num">11</td>
+      <td class="app"><span class="app-name">Zendesk</span><span class="one-liner">Zendesk offers a mature, broad REST API (Ticketing, Help Center, Voice, etc.) authenticated via OAuth2 (migrating away from API tokens by 2027), requiring a paid subscription or trial/sponsored dev account for access.</span></td>
+      <td class="cat">Support and Helpdesk</td>
+      <td class="mono">OAuth2, API key, Basic</td>
+      <td><span class="badge good">self-serve-trial</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker">None significant; developers need either a paid plan, trial, or sponsored dev account, and must plan migration from API token auth to OAuth2 before April 2027 deprecation deadline.</td>
+      <td><a href="https://support.zendesk.com/hc/en-us/articles/10840968198042-Announcing-the-removal-of-API-tokens-as-an-authentication-method-for-API-requests" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Support and Helpdesk" data-name="intercom">
+      <td class="num">12</td>
+      <td class="app"><span class="app-name">Intercom</span><span class="one-liner">Intercom offers a broad, well-documented REST API with Bearer token (private) and OAuth (public) auth, a free self-serve developer workspace, and an official hosted MCP server, making it buildable now for AI-agent tooling.</span></td>
+      <td class="cat">Support and Helpdesk</td>
+      <td class="mono">Token, OAuth2</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://developers.intercom.com/docs/build-an-integration/learn-more/authentication" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Support and Helpdesk" data-name="freshdesk">
+      <td class="num">13</td>
+      <td class="app"><span class="app-name">Freshdesk</span><span class="one-liner">Freshdesk is a customer support/helpdesk platform offering a broad, well-documented REST API (v2) secured via HTTP Basic Auth with per-agent API keys, self-serve during trial/paid plans.</span></td>
+      <td class="cat">Support and Helpdesk</td>
+      <td class="mono">Basic</td>
+      <td><span class="badge good">self-serve-trial</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge warn">buildable-with-caveats</span></td>
+      <td class="blocker">API access is disabled on the permanent Free plan (0 calls/min); a paid plan or active trial is required for programmatic access, and self-serve API key generation requires an agent account with sufficient permissions.</td>
+      <td><a href="https://developer.freshdesk.com/api/v1/" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Support and Helpdesk" data-name="front">
+      <td class="num">14</td>
+      <td class="app"><span class="app-name">Front</span><span class="one-liner">Front is a customer communication/helpdesk platform with a well-documented REST Core API supporting Bearer token and OAuth2 authentication, a free developer sandbox for building integrations, and an official MCP server for AI agent access to conversation data.</span></td>
+      <td class="cat">Support and Helpdesk</td>
+      <td class="mono">OAuth2, API key</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://dev.frontapp.com/me/docs/authentication" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Support and Helpdesk" data-name="pylon">
+      <td class="num">15</td>
+      <td class="app"><span class="app-name">Pylon</span><span class="one-liner">Pylon is a support/helpdesk platform offering a token-based REST API (accounts, tickets, tasks, custom fields) plus an official hosted MCP server for AI agent integration.</span></td>
+      <td class="cat">Support and Helpdesk</td>
+      <td class="mono">API key, OAuth2</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / medium</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://docs.usepylon.com/pylon-docs/developer/api/authentication" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Support and Helpdesk" data-name="liveagent">
+      <td class="num">16</td>
+      <td class="app"><span class="app-name">LiveAgent</span><span class="one-liner">LiveAgent is a helpdesk/live-chat platform offering REST APIs (v1 deprecated, v3 current) with API-key auth, plus a native remote MCP server for AI-agent integration.</span></td>
+      <td class="cat">Support and Helpdesk</td>
+      <td class="mono">API key, OAuth2, Token</td>
+      <td><span class="badge good">self-serve-trial</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker">None significant; API requires a paid plan (or trial) rather than being fully free, and developers must be careful to match API key version (v1 vs v3) to the correct endpoints.</td>
+      <td><a href="https://faq.liveagent.com/535002-LiveAgent-API-v1-vs-v3-Authentication-Differences-API-Key-Management-and-Resolving-403-Errors" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Support and Helpdesk" data-name="plain">
+      <td class="num">17</td>
+      <td class="app"><span class="app-name">Plain</span><span class="one-liner">Plain is a B2B support/helpdesk platform exposing a full self-serve GraphQL API with API-key auth and an official OAuth-based MCP server, making it readily buildable for agent tooling today.</span></td>
+      <td class="cat">Support and Helpdesk</td>
+      <td class="mono">API key, OAuth2</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">GraphQL<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://plain.mintlify.app/graphql/authentication" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Support and Helpdesk" data-name="help scout">
+      <td class="num">18</td>
+      <td class="app"><span class="app-name">Help Scout</span><span class="one-liner">Help Scout offers a mature REST Mailbox API (OAuth2) and a separate Docs API (API key/Basic auth) for helpdesk data, gated behind paid plans, with a community MCP server already available.</span></td>
+      <td class="cat">Support and Helpdesk</td>
+      <td class="mono">OAuth2, API key, Other</td>
+      <td><span class="badge warn">paid-plan</span></td>
+      <td class="mono">REST<span class="dim"> / medium</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge warn">buildable-with-caveats</span></td>
+      <td class="blocker">API access requires a paid Help Scout plan (Plus or higher), and OAuth2 app credentials must be tied to an active invited user, adding setup friction beyond simple self-serve API key issuance.</td>
+      <td><a href="https://developer.helpscout.com/mailbox-api/overview/authentication/" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Support and Helpdesk" data-name="gorgias">
+      <td class="num">19</td>
+      <td class="app"><span class="app-name">Gorgias</span><span class="one-liner">Gorgias is a customer support/helpdesk platform offering a REST API (Basic auth via API key or OAuth2 for public apps) that is self-serve for existing customers and has an official MCP server.</span></td>
+      <td class="cat">Support and Helpdesk</td>
+      <td class="mono">Basic, OAuth2</td>
+      <td><span class="badge good">self-serve-trial</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://developers.gorgias.com/reference/authentication" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Support and Helpdesk" data-name="gladly">
+      <td class="num">20</td>
+      <td class="app"><span class="app-name">Gladly</span><span class="one-liner">Gladly offers a broad, well-documented REST API (Basic auth via email + API token) for customer service data, but API access requires an existing paid enterprise account with admin-granted permissions rather than open self-serve signup.</span></td>
+      <td class="cat">Support and Helpdesk</td>
+      <td class="mono">Basic</td>
+      <td><span class="badge warn">admin-approval</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge warn">buildable-with-caveats</span></td>
+      <td class="blocker">Requires an existing paid Gladly subscription and admin-granted 'API User' permission to generate API tokens; no public self-serve signup for API access.</td>
+      <td><a href="https://developer.gladly.com/rest/index.html" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Communications and Messaging" data-name="slack">
+      <td class="num">21</td>
+      <td class="app"><span class="app-name">Slack</span><span class="one-liner">Slack provides a broad, self-serve REST-style Web API secured via OAuth2/bearer tokens for building messaging and collaboration integrations.</span></td>
+      <td class="cat">Communications and Messaging</td>
+      <td class="mono">OAuth2, Token</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker">None significant; official OAuth-based apps may require admin approval for installation in some workspaces, and some community MCP servers rely on session tokens which are against Slack's ToS.</td>
+      <td><a href="https://docs.slack.dev/apis/web-api/" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Communications and Messaging" data-name="twilio">
+      <td class="num">22</td>
+      <td class="app"><span class="app-name">Twilio</span><span class="one-liner">Twilio provides broad REST APIs for messaging, voice, verify, and account management, authenticated via HTTP Basic auth (API Key/Secret or Account SID/Auth Token), with self-serve trial signup.</span></td>
+      <td class="cat">Communications and Messaging</td>
+      <td class="mono">Basic, API key</td>
+      <td><span class="badge good">self-serve-trial</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker">None significant; developers can self-serve API keys via a free trial. Executing actions via the alpha MCP package requires filtering tools with --services/--tags due to the large number of APIs, which adds setup complexity.</td>
+      <td><a href="https://www.twilio.com/docs/usage/requests-to-twilio.md" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Communications and Messaging" data-name="zoho cliq">
+      <td class="num">23</td>
+      <td class="app"><span class="app-name">Zoho Cliq</span><span class="one-liner">Zoho Cliq offers a broad, self-serve REST API (v2/v3) secured via Zoho OAuth 2.0, with an official MCP server configurable through the Zoho MCP console, making it readily buildable for agent toolkits.</span></td>
+      <td class="cat">Communications and Messaging</td>
+      <td class="mono">OAuth2</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://www.zoho.com/cliq/help/restapi/v3/introduction/" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Communications and Messaging" data-name="lark (larksuite)">
+      <td class="num">24</td>
+      <td class="app"><span class="app-name">Lark (Larksuite)</span><span class="one-liner">Lark (Larksuite) offers a broad REST API with tenant/app/user access tokens and OAuth2 flows, self-serve via developer console, and has an official open-source MCP server for AI agent integration.</span></td>
+      <td class="cat">Communications and Messaging</td>
+      <td class="mono">OAuth2, Token</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker">None significant for basic use; advanced API tiers require a paid Lark plan and purchased quota package, which could gate some functionality behind admin/paid approval.</td>
+      <td><a href="https://open.larksuite.com/document/server-docs/getting-started/api-access-token/app-access-token-development-guide" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Communications and Messaging" data-name="pumble">
+      <td class="num">25</td>
+      <td class="app"><span class="app-name">Pumble</span><span class="one-liner">Pumble is a team messaging platform offering a REST API (with Node SDK) supporting OAuth2 app tokens or workspace-generated API keys for bots/messages/channels, with integration access gated by paid plans.</span></td>
+      <td class="cat">Communications and Messaging</td>
+      <td class="mono">OAuth2, API key</td>
+      <td><span class="badge warn">paid-plan</span></td>
+      <td class="mono">REST<span class="dim"> / medium</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge warn">buildable-with-caveats</span></td>
+      <td class="blocker">Full API/integration access is gated behind paid Pro/Business plans, and OAuth2 app creation requires going through Pumble's app manifest/marketplace process rather than instant self-serve key generation.</td>
+      <td><a href="https://cake-com.github.io/pumble-node-sdk/api-client.html" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Communications and Messaging" data-name="discord">
+      <td class="num">26</td>
+      <td class="app"><span class="app-name">Discord</span><span class="one-liner">Discord provides a broad, free, self-serve REST + Gateway API authenticated via bot tokens or OAuth2 bearer tokens for building bots and integrations.</span></td>
+      <td class="cat">Communications and Messaging</td>
+      <td class="mono">Token, OAuth2</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://docs.discord.com/developers/reference" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Communications and Messaging" data-name="telegram">
+      <td class="num">27</td>
+      <td class="app"><span class="app-name">Telegram</span><span class="one-liner">A free messaging platform offering Bot API (token-based), user account MTProto API (phone + auth_key), and paid Gateway API for verification codes.</span></td>
+      <td class="cat">Communications and Messaging</td>
+      <td class="mono">Token, Other</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://core.telegram.org/api/auth" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Communications and Messaging" data-name="whatsapp business">
+      <td class="num">28</td>
+      <td class="app"><span class="app-name">WhatsApp Business</span><span class="one-liner">WhatsApp Business Cloud API lets developers self-serve messaging (text, media, templates, interactive messages) via Meta's Graph API using OAuth/token-based access after business verification.</span></td>
+      <td class="cat">Communications and Messaging</td>
+      <td class="mono">OAuth2, Token</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / medium</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge warn">buildable-with-caveats</span></td>
+      <td class="blocker">Requires Meta Business Verification (2-5 day approval process) and WABA/phone number setup before API access is usable; developer must handle webhook verification, rate limits, and template approval workflow themselves for direct Cloud API access.</td>
+      <td><a href="https://www.dmhub.ai/blog/whatsapp-business-api-setup-guide-2026" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Communications and Messaging" data-name="aircall">
+      <td class="num">29</td>
+      <td class="app"><span class="app-name">Aircall</span><span class="one-liner">Aircall is a cloud phone/call-center platform offering a paid REST API (Basic Auth or OAuth2) for calls, contacts, users, numbers, and webhooks.</span></td>
+      <td class="cat">Communications and Messaging</td>
+      <td class="mono">Basic, OAuth2</td>
+      <td><span class="badge warn">paid-plan</span></td>
+      <td class="mono">REST<span class="dim"> / medium</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker">Requires an active paid Aircall subscription to obtain API credentials (Basic Auth) or partner approval for OAuth2 multi-customer integrations.</td>
+      <td><a href="https://support.aircall.io/en-gb/articles/10375355327517" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Communications and Messaging" data-name="vonage">
+      <td class="num">30</td>
+      <td class="app"><span class="app-name">Vonage</span><span class="one-liner">Vonage (developer.vonage.com) is a broad communications API platform (SMS, Voice, Messages, Verify, Video, Numbers, etc.) using API Key/Secret Basic Auth or JWT depending on product, with self-serve signup and trial credit, and an existing official MCP server offering.</span></td>
+      <td class="cat">Communications and Messaging</td>
+      <td class="mono">Basic, Token, Other</td>
+      <td><span class="badge good">self-serve-trial</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://developer.vonage.com/en/getting-started/concepts/authentication" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Marketing, Ads, Email and Social" data-name="google ads">
+      <td class="num">31</td>
+      <td class="app"><span class="app-name">Google Ads</span><span class="one-liner">Google Ads API provides broad REST/gRPC access to campaign management and reporting via OAuth2 + developer-token auth, free to use but gated by a manager-account developer token application and access-level approval.</span></td>
+      <td class="cat">Marketing, Ads, Email and Social</td>
+      <td class="mono">OAuth2</td>
+      <td><span class="badge warn">admin-approval</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge warn">buildable-with-caveats</span></td>
+      <td class="blocker">Developer token approval process (manager account setup + access level application) adds friction before an agent toolkit can call the live API; official MCP server is read-only, so write-capable workflows require community forks or custom implementation.</td>
+      <td><a href="https://developers.google.com/google-ads/api/rest/auth" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Marketing, Ads, Email and Social" data-name="meta ads">
+      <td class="num">32</td>
+      <td class="app"><span class="app-name">Meta Ads</span><span class="one-liner">Meta Ads (Marketing API) lets developers programmatically manage Facebook/Instagram advertising campaigns via a broad REST API secured by OAuth2, free to use but gated by tiered rate limits requiring Meta App Review for production-scale access.</span></td>
+      <td class="cat">Marketing, Ads, Email and Social</td>
+      <td class="mono">OAuth2</td>
+      <td><span class="badge warn">admin-approval</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge warn">buildable-with-caveats</span></td>
+      <td class="blocker">Full production access requires Meta App Review and business verification; default dev access is heavily rate-limited (60 points/300s) and only usable for testing on owned accounts.</td>
+      <td><a href="https://github.com/gupsammy/meta-ads-cli/blob/master/api-inventory.md" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Marketing, Ads, Email and Social" data-name="linkedin ads">
+      <td class="num">33</td>
+      <td class="app"><span class="app-name">LinkedIn Ads</span><span class="one-liner">LinkedIn Ads (Marketing/Advertising API) lets developers manage Campaign Manager ad accounts, campaigns, creatives, and analytics via a REST API secured with OAuth 2.0, but full access requires LinkedIn's manual developer vetting process.</span></td>
+      <td class="cat">Marketing, Ads, Email and Social</td>
+      <td class="mono">OAuth2</td>
+      <td><span class="badge warn">admin-approval</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge warn">buildable-with-caveats</span></td>
+      <td class="blocker">Access to write scopes (rw_ads) and scaling beyond the 5-account Development tier requires LinkedIn's manual app review/vetting and a support-ticket approval for Standard tier, so full self-serve automation is gated by LinkedIn approval rather than purely technical means.</td>
+      <td><a href="https://learn.microsoft.com/en-us/linkedin/marketing/integrations/ads/getting-started?view=li-lms-2026-05" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Marketing, Ads, Email and Social" data-name="gohighlevel">
+      <td class="num">34</td>
+      <td class="app"><span class="app-name">GoHighLevel</span><span class="one-liner">GoHighLevel offers a broad REST API (V2) with Private Integration Token and OAuth 2.0 auth, self-serve via trial/paid plans, and an official HTTP-based MCP server, making it buildable now with minor caveats around subscription tiers and MCP transport compatibility.</span></td>
+      <td class="cat">Marketing, Ads, Email and Social</td>
+      <td class="mono">Token, OAuth2</td>
+      <td><span class="badge good">self-serve-trial</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker">Requires an active paid (or trial) GoHighLevel agency subscription to generate Private Integration Tokens or register OAuth Marketplace apps; official MCP server is HTTP-based only, requiring community bridges for stdio-based clients like Claude Desktop.</td>
+      <td><a href="https://www.gohighlevel.com/post/deprecating-the-highlevel-api-v1-and-migrating-to-v2" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Marketing, Ads, Email and Social" data-name="mailchimp">
+      <td class="num">35</td>
+      <td class="app"><span class="app-name">Mailchimp</span><span class="one-liner">Mailchimp's Marketing API (v3, REST) offers broad, self-serve API key access on all plans plus OAuth2 for third-party integrations, with several community-built MCP servers already available.</span></td>
+      <td class="cat">Marketing, Ads, Email and Social</td>
+      <td class="mono">API key, OAuth2</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://mailchimp.com/developer/marketing/docs/fundamentals/" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Marketing, Ads, Email and Social" data-name="klaviyo">
+      <td class="num">36</td>
+      <td class="app"><span class="app-name">Klaviyo</span><span class="one-liner">Klaviyo is a marketing/email/SMS platform offering a broad REST API with private-key, OAuth, and public-key auth, free self-serve developer access, and an official remote-hosted MCP server.</span></td>
+      <td class="cat">Marketing, Ads, Email and Social</td>
+      <td class="mono">API key, OAuth2, Other</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://developers.klaviyo.com/en/docs/authenticate_" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Marketing, Ads, Email and Social" data-name="systeme.io">
+      <td class="num">37</td>
+      <td class="app"><span class="app-name">systeme.io</span><span class="one-liner">Systeme.io offers a self-serve REST API (API-key auth) for managing contacts, tags, funnels, and courses, plus an official MCP server for AI-agent access.</span></td>
+      <td class="cat">Marketing, Ads, Email and Social</td>
+      <td class="mono">API key</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / medium</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://developer.systeme.io/reference/api" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Marketing, Ads, Email and Social" data-name="pinterest">
+      <td class="num">38</td>
+      <td class="app"><span class="app-name">Pinterest</span><span class="one-liner">Pinterest provides a public REST API (v5) with OAuth 2.0 authentication, requiring app registration and manual approval (Trial then Standard access) rather than instant self-serve keys.</span></td>
+      <td class="cat">Marketing, Ads, Email and Social</td>
+      <td class="mono">OAuth2</td>
+      <td><span class="badge warn">admin-approval</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge warn">buildable-with-caveats</span></td>
+      <td class="blocker">Requires manual app approval (Trial then Standard access review with video demo) before production-level API/OAuth access is granted, which slows self-serve automation.</td>
+      <td><a href="https://developers.pinterest.com/docs/getting-started/authentication/" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Marketing, Ads, Email and Social" data-name="threads (meta)">
+      <td class="num">39</td>
+      <td class="app"><span class="app-name">Threads (Meta)</span><span class="one-liner">Meta's official Threads API lets developers publish posts/replies and read engagement data via OAuth2-authenticated REST calls, free of charge but gated by App Review and strict rate/publishing caps.</span></td>
+      <td class="cat">Marketing, Ads, Email and Social</td>
+      <td class="mono">OAuth2</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / narrow</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge warn">buildable-with-caveats</span></td>
+      <td class="blocker">Production use requires passing Meta's App Review to move beyond development/tester mode, and usage is capped by strict rate limits (e.g., 250 posts/1,000 replies per 24 hours) and a 4,800x-impressions rate formula, plus 60-day token refresh requirements.&quot;</td>
+      <td><a href="https://www.blotato.com/blog/threads-api-pricing" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Marketing, Ads, Email and Social" data-name="sendgrid">
+      <td class="num">40</td>
+      <td class="app"><span class="app-name">SendGrid</span><span class="one-liner">SendGrid provides a broad, well-documented REST API (v3) for transactional/marketing email, authenticated via self-serve API keys, with multiple community MCP server implementations already available.</span></td>
+      <td class="cat">Marketing, Ads, Email and Social</td>
+      <td class="mono">API key, Basic</td>
+      <td><span class="badge good">self-serve-trial</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://www.twilio.com/docs/sendgrid/api-reference/how-to-use-the-sendgrid-v3-api/authentication" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Ecommerce" data-name="shopify">
+      <td class="num">41</td>
+      <td class="app"><span class="app-name">Shopify</span><span class="one-liner">Shopify offers a broad, actively maintained GraphQL (and legacy REST) Admin API plus Storefront/Customer Account APIs, authenticated via OAuth2 access tokens or API keys, with free self-serve developer access.</span></td>
+      <td class="cat">Ecommerce</td>
+      <td class="mono">OAuth2, API key</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">GraphQL<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://shopify.dev/docs/api/admin-rest" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Ecommerce" data-name="woocommerce">
+      <td class="num">42</td>
+      <td class="app"><span class="app-name">WooCommerce</span><span class="one-liner">WooCommerce (self-hosted WordPress plugin) offers a full REST API for store management authenticated via Consumer Key/Secret (Basic Auth or OAuth1.0a), with self-serve key generation in the WP admin and emerging native MCP support.</span></td>
+      <td class="cat">Ecommerce</td>
+      <td class="mono">Basic, OAuth2, API key</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker">None significant for self-hosted stores; REST API and self-serve key generation are fully available today. Native MCP support is still gated behind a feature flag (mcp_integration) and depends on self-hosting WordPress/WooCommerce with the Abilities API/MCP adapter, so per-store setup effort varies. Headless-specific tooling may require premium add-ons in newer versions.</td>
+      <td><a href="https://developer.woocommerce.com/docs/apis/rest-api/authentication/" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Ecommerce" data-name="bigcommerce">
+      <td class="num">43</td>
+      <td class="app"><span class="app-name">BigCommerce</span><span class="one-liner">BigCommerce offers broad, self-serve REST and GraphQL Admin/Storefront APIs authenticated via OAuth-issued access tokens, with an official MCP server already available.</span></td>
+      <td class="cat">Ecommerce</td>
+      <td class="mono">OAuth2, Token</td>
+      <td><span class="badge good">self-serve-trial</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://developer-center-bigcommerce-dx.vercel.app/docs/start/authentication" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Ecommerce" data-name="salesforce commerce cloud">
+      <td class="num">44</td>
+      <td class="app"><span class="app-name">Salesforce Commerce Cloud</span><span class="one-liner">Salesforce Commerce Cloud (B2C/B2B) exposes REST APIs (SCAPI/OCAPI) for shoppers and admins, secured via OAuth2 through Account Manager and SLAS, but access requires an enterprise contract with no free/self-serve developer tier.</span></td>
+      <td class="cat">Ecommerce</td>
+      <td class="mono">OAuth2, Other</td>
+      <td><span class="badge warn">admin-approval</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge warn">buildable-with-caveats</span></td>
+      <td class="blocker">No free/self-serve trial: obtaining API access requires an existing commercial Salesforce Commerce Cloud contract and purchased sandbox credits, plus Account Manager client setup, before OAuth2 credentials can be issued for either Admin (SCAPI Admin) or Shopper (SLAS) APIs.</td>
+      <td><a href="https://developer.salesforce.com/docs/commerce/commerce-api/guide/authorization-for-admin-apis.html" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Ecommerce" data-name="magento (adobe commerce)">
+      <td class="num">45</td>
+      <td class="app"><span class="app-name">Magento (Adobe Commerce)</span><span class="one-liner">Adobe Commerce (Magento) offers broad REST/GraphQL/SOAP APIs for ecommerce operations, but self-serve access requires admin-level integration setup on an existing (self-hosted or licensed) instance rather than instant signup, with auth varying by deployment type.</span></td>
+      <td class="cat">Ecommerce</td>
+      <td class="mono">OAuth2, Other, Token, Basic</td>
+      <td><span class="badge warn">admin-approval</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge warn">buildable-with-caveats</span></td>
+      <td class="blocker">No unified, official self-serve credential flow; auth method and API surface (REST vs GraphQL, endpoint availability) vary significantly depending on deployment type (Open Source, PaaS Adobe Commerce, or SaaS Cloud Service), requiring per-instance configuration and admin-level integration setup rather than a simple developer signup.</td>
+      <td><a href="https://developer.adobe.com/commerce/webapi/rest/" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Ecommerce" data-name="squarespace">
+      <td class="num">46</td>
+      <td class="app"><span class="app-name">Squarespace</span><span class="one-liner">Squarespace Commerce APIs let developers manage products, orders, inventory and website/store data using API keys or OAuth 2.0, but access requires a paid Commerce Advanced plan.</span></td>
+      <td class="cat">Ecommerce</td>
+      <td class="mono">API key, OAuth2</td>
+      <td><span class="badge warn">paid-plan</span></td>
+      <td class="mono">REST<span class="dim"> / medium</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge warn">buildable-with-caveats</span></td>
+      <td class="blocker">Requires a paid Commerce Advanced plan for full API access; some third-party MCP implementations rely on unofficial/internal API scraping rather than official endpoints.</td>
+      <td><a href="https://commerce-apis.squarespace.com/commerce-apis/authentication-and-permissions" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Ecommerce" data-name="ecwid">
+      <td class="num">47</td>
+      <td class="app"><span class="app-name">Ecwid</span><span class="one-liner">Ecwid provides a broad REST API (v3) secured via OAuth2 or dashboard-issued secret tokens, but full API access typically requires a paid plan or a manually-requested developer upgrade.</span></td>
+      <td class="cat">Ecommerce</td>
+      <td class="mono">OAuth2, Token</td>
+      <td><span class="badge warn">paid-plan</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge warn">buildable-with-caveats</span></td>
+      <td class="blocker">API access requires a paid Ecwid plan (or a manually-requested free developer upgrade via emailing support), which limits pure self-serve onboarding for agent toolkits.</td>
+      <td><a href="https://docs.ecwid.com/get-started/make-your-first-api-request" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Ecommerce" data-name="gumroad">
+      <td class="num">48</td>
+      <td class="app"><span class="app-name">Gumroad</span><span class="one-liner">Gumroad's REST API (api.gumroad.com/v2) offers self-serve OAuth2 or personal access tokens for managing products, sales, subscribers, and offer codes, with an existing community MCP server (gumroad-mcp) already available.</span></td>
+      <td class="cat">Ecommerce</td>
+      <td class="mono">OAuth2, Token</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / medium</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://www.mintlify.com/antiwork/gumroad/api/authentication" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Ecommerce" data-name="amazon selling partner">
+      <td class="num">49</td>
+      <td class="app"><span class="app-name">Amazon Selling Partner</span><span class="one-liner">Amazon Selling Partner API (SP-API) lets developers manage Amazon Seller/Vendor Central data (orders, listings, inventory, reports) via OAuth-based (Login with Amazon) REST APIs, with self-serve registration for private apps and OAuth flow for public apps.</span></td>
+      <td class="cat">Ecommerce</td>
+      <td class="mono">OAuth2</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker">None fundamental; requires Amazon developer account registration, app approval (for public apps), and OAuth/LWA credential management, plus new annual fee ($1,400) for third-party developers starting 2026. Multiple community MCP server implementations already exist.</td>
+      <td><a href="https://developer-docs.amazon.com/sp-api/docs/connecting-to-the-selling-partner-api" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Ecommerce" data-name="fanbasis">
+      <td class="num">50</td>
+      <td class="app"><span class="app-name">fanbasis</span><span class="one-liner">FanBasis provides a self-serve REST API (with sandbox) secured by a simple x-api-key header for managing checkout sessions, products, subscriptions, and payments in its creator-monetization/ecommerce platform.</span></td>
+      <td class="cat">Ecommerce</td>
+      <td class="mono">API key</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / medium</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://raw.githubusercontent.com/otniel-bit/fbnewapi/main/api-docs.md" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Data, SEO and Scraping" data-name="dataforseo">
+      <td class="num">51</td>
+      <td class="app"><span class="app-name">DataForSEO</span><span class="one-liner">DataForSEO offers a broad self-serve REST API suite for SEO, SERP, keyword, backlink, and business data with Basic Auth and an official MCP server for AI agent integration.</span></td>
+      <td class="cat">Data, SEO and Scraping</td>
+      <td class="mono">Basic</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://docs.dataforseo.com/v3/auth/" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Data, SEO and Scraping" data-name="se ranking">
+      <td class="num">52</td>
+      <td class="app"><span class="app-name">SE Ranking</span><span class="one-liner">SE Ranking offers a unified REST API (Data API + Project API) authenticated via a single API key, with self-serve trial/paid access and a community-built MCP server available.</span></td>
+      <td class="cat">Data, SEO and Scraping</td>
+      <td class="mono">API key</td>
+      <td><span class="badge good">self-serve-trial</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://seranking.com/api/project/getting-started/" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Data, SEO and Scraping" data-name="ahrefs">
+      <td class="num">53</td>
+      <td class="app"><span class="app-name">Ahrefs</span><span class="one-liner">Ahrefs offers a broad REST API (v3) for SEO/marketing data plus an official hosted MCP server, but both require an active paid subscription (no free tier).</span></td>
+      <td class="cat">Data, SEO and Scraping</td>
+      <td class="mono">API key, OAuth2</td>
+      <td><span class="badge warn">paid-plan</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge warn">buildable-with-caveats</span></td>
+      <td class="blocker">API access requires a paid Ahrefs subscription (no free tier); production use is gated behind eligible paid plans, and MCP requires Lite plan or higher.</td>
+      <td><a href="https://docs.ahrefs.com/en/api/docs/api-keys-creation-and-management" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Data, SEO and Scraping" data-name="mrscraper">
+      <td class="num">54</td>
+      <td class="app"><span class="app-name">MrScraper</span><span class="one-liner">MrScraper is an AI-powered web scraping platform with a REST API and hosted MCP server, authenticated via API tokens, for programmatically creating and running scrapers and retrieving structured data.</span></td>
+      <td class="cat">Data, SEO and Scraping</td>
+      <td class="mono">API key</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / medium</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://docs.mrscraper.com/docs/api/authentication" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Data, SEO and Scraping" data-name="apify">
+      <td class="num">55</td>
+      <td class="app"><span class="app-name">Apify</span><span class="one-liner">Apify is a self-serve web scraping/automation platform with a broad REST API secured by personal API tokens, plus an official hosted MCP server exposing Actors as agent tools.</span></td>
+      <td class="cat">Data, SEO and Scraping</td>
+      <td class="mono">API key, OAuth2, Other</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://docs.apify.com/api/v2" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Data, SEO and Scraping" data-name="firecrawl">
+      <td class="num">56</td>
+      <td class="app"><span class="app-name">Firecrawl</span><span class="one-liner">Firecrawl is a web scraping/crawling API that turns websites into LLM-ready markdown/JSON, with self-serve API key signup, a free tier, and keyless rate-limited access.</span></td>
+      <td class="cat">Data, SEO and Scraping</td>
+      <td class="mono">API key, OAuth2</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / medium</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://docs.firecrawl.dev/api-reference/v2-introduction" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Data, SEO and Scraping" data-name="bright data">
+      <td class="num">57</td>
+      <td class="app"><span class="app-name">Bright Data</span><span class="one-liner">Bright Data offers web scraping, proxy, SERP, and unlocker APIs with self-serve API key authentication and an official MCP server for AI agent integration.</span></td>
+      <td class="cat">Data, SEO and Scraping</td>
+      <td class="mono">API key, Other</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://docs.brightdata.com/api-reference/authentication" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Data, SEO and Scraping" data-name="sherlock">
+      <td class="num">58</td>
+      <td class="app"><span class="app-name">Sherlock</span><span class="one-liner">sherlock-project/sherlock is a free, open-source local CLI tool for OSINT username enumeration across social networks with no hosted API or authentication; nearly all search evidence retrieved pertains to unrelated commercial products that coincidentally share the 'Sherlock' name.</span></td>
+      <td class="cat">Data, SEO and Scraping</td>
+      <td class="mono">Other</td>
+      <td><span class="badge neutral">unknown</span></td>
+      <td class="mono">none<span class="dim"> / narrow</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge warn">buildable-with-caveats</span></td>
+      <td class="blocker">The search evidence is almost entirely about unrelated products sharing the 'Sherlock' name (payment gateway, engineering software, SRE platform, hiring platform) rather than the actual GitHub OSINT username-search tool. An MCP wrapper for the real tool would need to shell out to or import the local Python sherlock CLI (as noted by one search result mentioning an OSINT-focused MCP wrapping the standard Sherlock tool for username enumeration), rather than calling any hosted REST/GraphQL API, since none exists for this project.&quot;&gt;
+</td>
+      <td><a href="https://github.com/sherlock-project/sherlock" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Data, SEO and Scraping" data-name="waterfall.io">
+      <td class="num">59</td>
+      <td class="app"><span class="app-name">Waterfall.io</span><span class="one-liner">Waterfall.io is a B2B contact/company data enrichment API offering prospecting, search, enrichment, and verification endpoints accessed via a REST API secured with x-api-key headers.</span></td>
+      <td class="cat">Data, SEO and Scraping</td>
+      <td class="mono">API key</td>
+      <td><span class="badge warn">paid-plan</span></td>
+      <td class="mono">REST<span class="dim"> / medium</span></td>
+      <td class="mono">no</td>
+      <td><span class="badge warn">buildable-with-caveats</span></td>
+      <td class="blocker">No self-serve free access; requires purchasing prepaid credits/contract to obtain an API key, and no existing MCP server was found.</td>
+      <td><a href="https://docs.waterfall.io/v1/authentication" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Data, SEO and Scraping" data-name="clay">
+      <td class="num">60</td>
+      <td class="app"><span class="app-name">Clay</span><span class="one-liner">Clay is a GTM data enrichment/automation platform offering an API key-based HTTP API (for triggering workflows and Clay-native enrichments) gated behind its paid Growth plan, plus an official MCP server for AI assistant integration.</span></td>
+      <td class="cat">Data, SEO and Scraping</td>
+      <td class="mono">API key, Other</td>
+      <td><span class="badge warn">paid-plan</span></td>
+      <td class="mono">REST<span class="dim"> / medium</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge warn">buildable-with-caveats</span></td>
+      <td class="blocker">Full developer HTTP API access requires the Growth plan ($495/month), which is a paid-plan gate rather than free self-serve; also the API surface is primarily oriented around Clay's internal workflow/table automation rather than a broad conventional REST API.</td>
+      <td><a href="https://university.clay.com/docs/guide-find-clay-api-key" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Developer, Infra and Data platforms" data-name="github">
+      <td class="num">61</td>
+      <td class="app"><span class="app-name">GitHub</span><span class="one-liner">GitHub's REST/GraphQL APIs offer broad, free self-serve programmatic access to repos, issues, and workflows via token or OAuth authentication, with an existing official MCP server making agent integration buildable today.</span></td>
+      <td class="cat">Developer, Infra and Data platforms</td>
+      <td class="mono">Token, OAuth2, Basic</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api?apiVersion=2026-03-10" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Developer, Infra and Data platforms" data-name="vercel">
+      <td class="num">62</td>
+      <td class="app"><span class="app-name">Vercel</span><span class="one-liner">Vercel's REST API and TypeScript SDK let developers manage deployments, projects, and domains using self-serve Bearer access tokens, with an official pattern for building/hosting MCP servers on Vercel Functions.</span></td>
+      <td class="cat">Developer, Infra and Data platforms</td>
+      <td class="mono">Token, OAuth2</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">no</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://vercel.com/docs/sign-in-with-vercel/tokens" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Developer, Infra and Data platforms" data-name="netlify">
+      <td class="num">63</td>
+      <td class="app"><span class="app-name">Netlify</span><span class="one-liner">Netlify offers a broad, self-serve REST API (OAuth2/PAT auth) for managing sites, deploys, and infra, with an official MCP server already available for AI agent integration.</span></td>
+      <td class="cat">Developer, Infra and Data platforms</td>
+      <td class="mono">OAuth2, Token</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://docs.netlify.com/api-and-cli-guides/api-guides/get-started-with-api" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Developer, Infra and Data platforms" data-name="cloudflare">
+      <td class="num">64</td>
+      <td class="app"><span class="app-name">Cloudflare</span><span class="one-liner">Cloudflare offers a broad, self-serve REST API (v4) for managing DNS, Workers, Pages, KV, D1, Durable Objects, and more, authenticated via scoped Bearer API tokens, with an official MCP server platform and managed MCP catalog already available.</span></td>
+      <td class="cat">Developer, Infra and Data platforms</td>
+      <td class="mono">API key, Other</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://developers.cloudflare.com/fundamentals/api/how-to/make-api-calls/" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Developer, Infra and Data platforms" data-name="supabase">
+      <td class="num">65</td>
+      <td class="app"><span class="app-name">Supabase</span><span class="one-liner">Supabase provides a self-serve Postgres-backed backend platform (REST/GraphQL API, Auth, Storage, Realtime) secured via API keys and JWTs, with an official hosted MCP server for AI agent integration.</span></td>
+      <td class="cat">Developer, Infra and Data platforms</td>
+      <td class="mono">API key, Token, OAuth2</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://supabase-supabase.mintlify.app/api/rest/authentication" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Developer, Infra and Data platforms" data-name="neo4j">
+      <td class="num">66</td>
+      <td class="app"><span class="app-name">Neo4j</span><span class="one-liner">Neo4j is a graph database platform accessed via Bolt drivers (Java/Python/JS/etc.) or an HTTP API, authenticated with username/password (or Kerberos/bearer/custom), and available self-serve as a free-forever AuraDB cloud instance.</span></td>
+      <td class="cat">Developer, Infra and Data platforms</td>
+      <td class="mono">Basic, Token, Other</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">SDK-only<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker">None significant; core Cypher query capability is fully self-serve via drivers/HTTP API with basic auth, and official + Labs MCP servers already exist. Aura management API automation may require paid tier for full lifecycle control.</td>
+      <td><a href="https://neo4j.com/docs/api/java-driver/current/org.neo4j.driver/org/neo4j/driver/AuthTokens.html" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Developer, Infra and Data platforms" data-name="snowflake">
+      <td class="num">67</td>
+      <td class="app"><span class="app-name">Snowflake</span><span class="one-liner">Snowflake is a cloud data platform offering REST/SQL APIs and Cortex AI services, authenticated via OAuth, key-pair JWT, PATs, or workload identity federation, with a self-serve free trial and an official managed MCP server.</span></td>
+      <td class="cat">Developer, Infra and Data platforms</td>
+      <td class="mono">OAuth2, Token, Other</td>
+      <td><span class="badge good">self-serve-trial</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://docs.snowflake.com/en/en/developer-guide/snowflake-rest-api/authentication" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Developer, Infra and Data platforms" data-name="mongodb atlas">
+      <td class="num">68</td>
+      <td class="app"><span class="app-name">MongoDB Atlas</span><span class="one-liner">MongoDB Atlas provides a broad REST Admin API (plus a Data API and MCP server) for managing clusters and data, secured via OAuth2 service accounts or legacy Digest API keys, self-serve via a free M0 tier.</span></td>
+      <td class="cat">Developer, Infra and Data platforms</td>
+      <td class="mono">OAuth2, API key</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://www.mongodb.com/docs/api/doc/atlas-admin-api-v2/2024-11-13/authentication" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Developer, Infra and Data platforms" data-name="datadog">
+      <td class="num">69</td>
+      <td class="app"><span class="app-name">Datadog</span><span class="one-liner">Datadog offers a broad, self-serve REST API (v1/v2) authenticated via API/application keys or personal/service access tokens, with an official MCP server enabling AI agents to query observability data directly.</span></td>
+      <td class="cat">Developer, Infra and Data platforms</td>
+      <td class="mono">API key, Token</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://docs.datadoghq.com/api/latest/authentication/" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Developer, Infra and Data platforms" data-name="sentry">
+      <td class="num">70</td>
+      <td class="app"><span class="app-name">Sentry</span><span class="one-liner">Sentry provides a broad, well-documented REST API with self-serve bearer-token (and OAuth2) authentication, plus an official hosted MCP server, making it readily buildable for AI-agent tooling today.</span></td>
+      <td class="cat">Developer, Infra and Data platforms</td>
+      <td class="mono">Token, OAuth2</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://docs.sentry.io/api.md" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Productivity and Project Management" data-name="notion">
+      <td class="num">71</td>
+      <td class="app"><span class="app-name">Notion</span><span class="one-liner">Notion offers a free, self-serve REST API with bearer-token (internal/PAT) or OAuth2 (public connection) authentication and broad coverage of pages, databases, blocks, users, and comments.</span></td>
+      <td class="cat">Productivity and Project Management</td>
+      <td class="mono">OAuth2, API key</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://developers.notion.com/reference/authentication" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Productivity and Project Management" data-name="airtable">
+      <td class="num">72</td>
+      <td class="app"><span class="app-name">Airtable</span><span class="one-liner">Airtable offers a well-documented REST Web API for managing bases, tables, and records, authenticated via personal access tokens or OAuth2, self-serve on the Free plan with rate/usage limits.</span></td>
+      <td class="cat">Productivity and Project Management</td>
+      <td class="mono">Token, OAuth2</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker">None significant; Free plan API call limits (1,000/month) may require paid plan for higher-volume agent usage.</td>
+      <td><a href="https://airtable.com/developers/web/api/authentication" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Productivity and Project Management" data-name="linear">
+      <td class="num">73</td>
+      <td class="app"><span class="app-name">Linear</span><span class="one-liner">Linear offers a GraphQL API with personal API keys or OAuth2 for building integrations/agents, available self-serve on the Free plan.</span></td>
+      <td class="cat">Productivity and Project Management</td>
+      <td class="mono">API key, OAuth2</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">GraphQL<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://linear.app/developers/graphql?noRedirect=1" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Productivity and Project Management" data-name="jira">
+      <td class="num">74</td>
+      <td class="app"><span class="app-name">Jira</span><span class="one-liner">Jira offers a mature, well-documented REST API (Cloud and Data Center) with self-serve API token or OAuth2 access on all plans including free, making it highly buildable for agent toolkits; multiple community MCP servers already exist.</span></td>
+      <td class="cat">Productivity and Project Management</td>
+      <td class="mono">OAuth2, API key, Token, Other</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://developer.atlassian.com/cloud/jira/software/rest/intro/" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Productivity and Project Management" data-name="asana">
+      <td class="num">75</td>
+      <td class="app"><span class="app-name">Asana</span><span class="one-liner">Asana's Work Graph API offers full REST CRUD access with self-serve Personal Access Tokens (free tier included) or OAuth2 for multi-user apps, plus an official first-party MCP server.</span></td>
+      <td class="cat">Productivity and Project Management</td>
+      <td class="mono">API key, OAuth2, Other</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://developers.asana.com/docs/authentication" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Productivity and Project Management" data-name="monday.com">
+      <td class="num">76</td>
+      <td class="app"><span class="app-name">Monday.com</span><span class="one-liner">Monday.com offers a broad, self-serve GraphQL API with token/OAuth authentication and an official hosted/local MCP server, making it readily buildable for AI agent toolkits.</span></td>
+      <td class="cat">Productivity and Project Management</td>
+      <td class="mono">API key, OAuth2, Token</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">GraphQL<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://developer.monday.com/api-reference/docs/authentication" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Productivity and Project Management" data-name="clickup">
+      <td class="num">77</td>
+      <td class="app"><span class="app-name">ClickUp</span><span class="one-liner">ClickUp is a project management platform with a broad REST API (v2/v3) supporting personal API tokens or OAuth2 for building integrations.</span></td>
+      <td class="cat">Productivity and Project Management</td>
+      <td class="mono">API key, OAuth2</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://developer.clickup.com/docs/authentication" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Productivity and Project Management" data-name="coda">
+      <td class="num">78</td>
+      <td class="app"><span class="app-name">Coda</span><span class="one-liner">Coda offers a free, self-serve REST API (Bearer token auth) covering docs/tables/rows/automations, with several community MCP servers already available, making agent toolkits buildable now.</span></td>
+      <td class="cat">Productivity and Project Management</td>
+      <td class="mono">API key</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://docs.nexla.com/user-guides/connectors/coda_api/coda_api_auth" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Productivity and Project Management" data-name="smartsheet">
+      <td class="num">79</td>
+      <td class="app"><span class="app-name">Smartsheet</span><span class="one-liner">Smartsheet offers a comprehensive REST API (OAuth2 or personal access tokens) for project management and collaboration, but API access requires a paid Business/Enterprise/Advanced Work Management plan.</span></td>
+      <td class="cat">Productivity and Project Management</td>
+      <td class="mono">OAuth2, API key</td>
+      <td><span class="badge warn">paid-plan</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge warn">buildable-with-caveats</span></td>
+      <td class="blocker">API access is gated behind a paid Business/Enterprise/Advanced Work Management plan; no free-tier self-serve credentials.</td>
+      <td><a href="https://developers.smartsheet.com/api/smartsheet/guides/basics/authentication" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Productivity and Project Management" data-name="harvest">
+      <td class="num">80</td>
+      <td class="app"><span class="app-name">Harvest</span><span class="one-liner">Harvest offers a full REST API (v2) for time tracking and project management, supporting Personal Access Tokens for self-serve scripting and OAuth2 for public integrations, with API access included on all plans.</span></td>
+      <td class="cat">Productivity and Project Management</td>
+      <td class="mono">API key, OAuth2</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / medium</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://help.getharvest.com/api-v2/authentication-api/authentication/authentication/" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Finance and Fintech" data-name="stripe">
+      <td class="num">81</td>
+      <td class="app"><span class="app-name">Stripe</span><span class="one-liner">Stripe offers a REST API for payments and fintech operations with self-serve API key access and pay-as-you-go pricing.</span></td>
+      <td class="cat">Finance and Fintech</td>
+      <td class="mono">API key, Token, OAuth2</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://stripe.com/pricing" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Finance and Fintech" data-name="plaid">
+      <td class="num">82</td>
+      <td class="app"><span class="app-name">Plaid</span><span class="one-liner">Plaid provides REST API access to financial data including bank accounts, transactions, and identity verification with self-serve API keys and an official MCP server.</span></td>
+      <td class="cat">Finance and Fintech</td>
+      <td class="mono">API key</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://plaid.com/docs/api/index.html.md" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Finance and Fintech" data-name="binance">
+      <td class="num">83</td>
+      <td class="app"><span class="app-name">Binance</span><span class="one-liner">Binance offers a broad, self-serve REST/WebSocket API for spot trading and market data secured via Ed25519/RSA/HMAC signed requests, with several community-built MCP servers already available.</span></td>
+      <td class="cat">Finance and Fintech</td>
+      <td class="mono">API key, Other</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker">Requires KYC-verified Binance account and generated API keys (Ed25519/RSA/HMAC) before programmatic access; HMAC deprecated so agents should support asymmetric key signing.</td>
+      <td><a href="https://developers.binance.com/docs/binance-spot-api-docs/faqs/api_key_types" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Finance and Fintech" data-name="paygent connect">
+      <td class="num">84</td>
+      <td class="app"><span class="app-name">Paygent Connect</span><span class="one-liner">AI agent monetization and cost-tracking platform with usage-based billing, metering, and gating via API</span></td>
+      <td class="cat">Finance and Fintech</td>
+      <td class="mono">API key</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / medium</span></td>
+      <td class="mono">no</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://docs.paygentic.io/authentication" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Finance and Fintech" data-name="ipayx">
+      <td class="num">85</td>
+      <td class="app"><span class="app-name">iPayX</span><span class="one-liner">iPayX provides an FX forensic-audit MCP server (free, mostly no-signup). IXOPAY is a separate payment platform with Transaction/Provisioning/Settlement/Gateway APIs using Basic Auth and HMAC signing.</span></td>
+      <td class="cat">Finance and Fintech</td>
+      <td class="mono">API key, Basic, Other</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / medium</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://github.com/iPAYX-Technologies/mcp-fx-audit/blob/main/README.md" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Finance and Fintech" data-name="quickbooks">
+      <td class="num">86</td>
+      <td class="app"><span class="app-name">QuickBooks</span><span class="one-liner">QuickBooks Online offers a broad REST accounting API secured via OAuth 2.0 (with legacy OAuth 1.0a support), a free self-serve Builder tier with substantial API credits, and both official and third-party MCP servers already available, making it readily buildable today.</span></td>
+      <td class="cat">Finance and Fintech</td>
+      <td class="mono">OAuth2, Other</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Finance and Fintech" data-name="xero">
+      <td class="num">87</td>
+      <td class="app"><span class="app-name">Xero</span><span class="one-liner">Xero offers a broad REST accounting/finance API secured via OAuth2 (authorization code or client-credentials Custom Connections), with a free self-serve developer Starter tier, official multi-language SDKs, and an existing official MCP server, making it buildable now for agent toolkits.</span></td>
+      <td class="cat">Finance and Fintech</td>
+      <td class="mono">OAuth2</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://developer.xero.com/pricing" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Finance and Fintech" data-name="brex">
+      <td class="num">88</td>
+      <td class="app"><span class="app-name">Brex</span><span class="one-liner">Brex offers a broad REST API (with an official MCP server) for managing corporate card, expense, and accounting data, secured via self-serve bearer tokens or OAuth2 for partners.</span></td>
+      <td class="cat">Finance and Fintech</td>
+      <td class="mono">Token, OAuth2</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://developer.brex.com/guides/authentication.md" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Finance and Fintech" data-name="ramp">
+      <td class="num">89</td>
+      <td class="app"><span class="app-name">Ramp</span><span class="one-liner">Ramp offers a broad OAuth2-secured REST Developer API for spend/finance data, plus separate MCP servers for documentation and account data access.</span></td>
+      <td class="cat">Finance and Fintech</td>
+      <td class="mono">OAuth2</td>
+      <td><span class="badge warn">admin-approval</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge warn">buildable-with-caveats</span></td>
+      <td class="blocker">Production API access requires a Ramp business account, OAuth app registration, and potentially admin approval/support ticket for provisioning; write operations are disabled in sandbox.</td>
+      <td><a href="https://docs.ramp.com/developer-api/v1/api/authorization" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="Finance and Fintech" data-name="pitchbook">
+      <td class="num">90</td>
+      <td class="app"><span class="app-name">PitchBook</span><span class="one-liner">PitchBook offers a REST API (companies, deals, people, investors, funds) authenticated via an API key issued by an account manager, but access is enterprise-only with no self-serve signup.</span></td>
+      <td class="cat">Finance and Fintech</td>
+      <td class="mono">API key</td>
+      <td><span class="badge crit">partnership-contact-sales</span></td>
+      <td class="mono">REST<span class="dim"> / medium</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge warn">buildable-with-caveats</span></td>
+      <td class="blocker">API access requires a paid enterprise contract and manual provisioning by a PitchBook account manager; no self-serve key generation, which limits automated onboarding for an agent toolkit.</td>
+      <td><a href="https://dlthub.com/context/source/pitchbook-api" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="AI, Research and Media-native" data-name="notebooklm">
+      <td class="num">91</td>
+      <td class="app"><span class="app-name">NotebookLM</span><span class="one-liner">NotebookLM is a free, source-grounded AI research assistant from Google with no official public API; unofficial community tools use cookie-based authentication via browser automation.</span></td>
+      <td class="cat">AI, Research and Media-native</td>
+      <td class="mono">Other</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">none<span class="dim"> / narrow</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge crit">blocked</span></td>
+      <td class="blocker">No official public API is available for self-serve developer use. The only programmatic access (NotebookLM Enterprise API via Google Cloud Discovery Engine v1alpha) requires enterprise partnership and organizational Google Cloud credentials. Unofficial methods rely on fragile cookie-based browser automation that violates typical ToS and may break at any time.</td>
+      <td><a href="https://github.com/Robiton/notebooklm-mcp-cli/blob/main/docs/AUTHENTICATION.md" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="AI, Research and Media-native" data-name="otter ai">
+      <td class="num">92</td>
+      <td class="app"><span class="app-name">Otter AI</span><span class="one-liner">AI-powered meeting transcription and note-taking service with automated summaries, action items, and speaker identification.</span></td>
+      <td class="cat">AI, Research and Media-native</td>
+      <td class="mono">Token, OAuth2</td>
+      <td><span class="badge crit">partnership-contact-sales</span></td>
+      <td class="mono">REST<span class="dim"> / medium</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge warn">buildable-with-caveats</span></td>
+      <td class="blocker">API access requires Enterprise plan with sales contact - not self-serve accessible for developers</td>
+      <td><a href="https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="AI, Research and Media-native" data-name="fathom">
+      <td class="num">93</td>
+      <td class="app"><span class="app-name">Fathom</span><span class="one-liner">AI-powered meeting assistant that records, transcribes, and summarizes video meetings with searchable transcripts and team collaboration features.</span></td>
+      <td class="cat">AI, Research and Media-native</td>
+      <td class="mono">API key, Token, OAuth2</td>
+      <td><span class="badge good">self-serve-trial</span></td>
+      <td class="mono">REST<span class="dim"> / medium</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://developers.fathom.ai/sdks/authentication" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="AI, Research and Media-native" data-name="consensus">
+      <td class="num">94</td>
+      <td class="app"><span class="app-name">Consensus</span><span class="one-liner">AI academic research search engine with 200M+ peer-reviewed papers, offering API access and an official MCP server for research workflows.</span></td>
+      <td class="cat">AI, Research and Media-native</td>
+      <td class="mono">API key, OAuth2</td>
+      <td><span class="badge crit">partnership-contact-sales</span></td>
+      <td class="mono">REST<span class="dim"> / narrow</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge warn">buildable-with-caveats</span></td>
+      <td class="blocker">API access requires enterprise account and direct contact with Consensus for the research search API (consensus.app). While an MCP server already exists, building custom integrations requires partnership/sales contact rather than self-serve access.</td>
+      <td><a href="https://app.goconsensus.com/api-documentation/" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="AI, Research and Media-native" data-name="reducto">
+      <td class="num">95</td>
+      <td class="app"><span class="app-name">Reducto</span><span class="one-liner">Reducto is an agentic document platform for parsing, extracting, splitting, and editing files (PDFs, images, spreadsheets, etc.) via API.</span></td>
+      <td class="cat">AI, Research and Media-native</td>
+      <td class="mono">API key</td>
+      <td><span class="badge good">self-serve-trial</span></td>
+      <td class="mono">REST<span class="dim"> / medium</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://docs.reducto.ai/agent-guide" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="AI, Research and Media-native" data-name="devin">
+      <td class="num">96</td>
+      <td class="app"><span class="app-name">Devin</span><span class="one-liner">Devin is an AI coding agent platform with a comprehensive REST API, official MCP server, self-serve free tier, and service user authentication via Bearer tokens (cog_ prefix).</span></td>
+      <td class="cat">AI, Research and Media-native</td>
+      <td class="mono">Token</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / broad</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://docs.devin.ai/api-reference/authentication" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="AI, Research and Media-native" data-name="higgsfield">
+      <td class="num">97</td>
+      <td class="app"><span class="app-name">higgsfield</span><span class="one-liner">AI-powered image and video generation platform with 30+ models (Kling, Veo, Flux, Sora) accessible via REST API, SDK, and CLI.</span></td>
+      <td class="cat">AI, Research and Media-native</td>
+      <td class="mono">API key, OAuth2</td>
+      <td><span class="badge warn">paid-plan</span></td>
+      <td class="mono">REST<span class="dim"> / medium</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge warn">buildable-with-caveats</span></td>
+      <td class="blocker">API access requires a paid subscription; not available on the free tier.</td>
+      <td><a href="https://github.com/higgsfield-ai/higgsfield-js" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="AI, Research and Media-native" data-name="mermaid cli">
+      <td class="num">98</td>
+      <td class="app"><span class="app-name">Mermaid CLI</span><span class="one-liner">Open-source CLI tool and Node.js API for rendering Mermaid diagrams locally without authentication</span></td>
+      <td class="cat">AI, Research and Media-native</td>
+      <td class="mono">Other</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">SDK-only<span class="dim"> / narrow</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge crit">blocked</span></td>
+      <td class="blocker">No hosted API; Mermaid CLI is a local command-line tool that must be installed and run on the user's machine. There is no public/hosted service endpoint to call remotely.</td>
+      <td><a href="https://github.com/mermaid-js/mermaid-cli?tab=readme-ov-file" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="AI, Research and Media-native" data-name="youtube transcript">
+      <td class="num">99</td>
+      <td class="app"><span class="app-name">YouTube Transcript</span><span class="one-liner">API service that retrieves and transcribes YouTube video captions and metadata with optional translation and ASR fallback.</span></td>
+      <td class="cat">AI, Research and Media-native</td>
+      <td class="mono">Token</td>
+      <td><span class="badge good">self-serve-trial</span></td>
+      <td class="mono">REST<span class="dim"> / medium</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://www.youtubetranscript.dev/api-docs" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+<tr data-category="AI, Research and Media-native" data-name="grain">
+      <td class="num">100</td>
+      <td class="app"><span class="app-name">Grain</span><span class="one-liner">Grain is a meeting recording and analytics platform with multiple API services for meeting data, analytics SDK ingestion, and workspace integrations.</span></td>
+      <td class="cat">AI, Research and Media-native</td>
+      <td class="mono">API key, Token, OAuth2, Other</td>
+      <td><span class="badge good">self-serve-free</span></td>
+      <td class="mono">REST<span class="dim"> / medium</span></td>
+      <td class="mono">yes</td>
+      <td><span class="badge good">buildable-now</span></td>
+      <td class="blocker"><span class="dim">—</span></td>
+      <td><a href="https://docs.grainql.com/authentication" target="_blank" rel="noopener">docs ↗</a></td>
+    </tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section>
+<p class="kicker">The agent</p>
+<h2>What it does, and where a human was needed</h2>
+<div class="flow">
+<span class="node">100 apps</span><span class="arrow">→</span>
+<span class="node">Composio Search + Firecrawl</span><span class="arrow">→</span>
+<span class="node">Claude extract → schema</span><span class="arrow">→</span>
+<span class="node">verify loops</span><span class="arrow">→</span>
+<span class="node">this page</span>
+</div>
+<p>Per app, Claude runs a short tool-calling loop over Composio's search toolkit and Firecrawl-scraped docs, then extracts a strict, evidence-cited record. <b>A human was needed</b> for the deliberately hard cases — obscure fintech, OSS-vs-SaaS ambiguity, and enterprise-gated apps — where the agent flagged low confidence and a person adjudicated against real docs.</p>
+</section>
+
+<section>
+<p class="kicker">The proof</p>
+<h2>A real Composio toolkit, live</h2>
+<p>To prove a "buildable" verdict actually builds, a Claude agent connected Notion through Composio and performed a real action:</p>
+<div class="demo"><div class="step"><span class="mono">NOTION_SEARCH_NOTION_PAGE</span></div><div class="step"><span class="mono">NOTION_ADD_MULTIPLE_PAGE_CONTENT → published page</span></div><div class="step"><span class="mono">NOTION_CREATE_NOTION_PAGE</span></div><div class="step"><span class="mono">NOTION_ADD_MULTIPLE_PAGE_CONTENT → new sub-page</span></div></div><p><a href="https://mica-bat-f8b.notion.site/Composio-Toolkit-Demo-398bf69013b180fbb1f1d6592b8f153b" target="_blank" rel="noopener">Open the live Notion page the agent wrote to ↗</a><span class="dim" style="font-family:var(--mono);font-size:12px"> · live-run 2026-07-09 03:04 UTC</span></p>
+</section>
+
+<section>
+<p class="kicker">The verification</p>
+<h2>How we know it's trustworthy — and where it isn't</h2>
+<div class="grid2">
+<div>
+<div class="lift"><div class="big">81%<span class="arrow">→</span>84%</div><p>Accuracy on a 43-field hand-audit — a 15-app stratified sample (≥1 per category, plus every trap app), first pass versus after the verification loops.</p></div>
+<p style="margin-top:14px;font-size:14px;color:var(--muted)">The loops corrected <b>1</b> field with <b>0</b> regressions. The catch: <b>Mermaid CLI</b> looks like a SaaS but is an open-source library with no hosted API — correctly downgraded from <span class="badge good">buildable-now</span> to <span class="badge crit">blocked</span>.</p>
+</div>
+<div>
+<p class="kicker">Per-field accuracy, after verification</p>
+<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px"><span class="tag">self_serve: 82% (9/11)</span> <span class="tag">api_surface: 92% (11/12)</span> <span class="tag">existing_mcp: 60% (3/5)</span> <span class="tag">buildability: 87% (13/15)</span></div>
+<p style="font-size:14px;color:var(--muted)"><b>The honest finding:</b> a naive LLM self-critic <i>lowered</i> accuracy — it wrongly flipped Stripe to "contact sales." So a correction is accepted only when the critic marks a field <span class="tag">contradicted</span> (evidence disagrees), never on a bare <span class="tag">unsupported</span>. Verification's real value here is <b>triage</b> — flagging what a human must check — not blanket auto-correction. <code>existing_mcp</code> stays our weakest field and we show it. <span class="dim">(The audit scores the four decision fields above; <code>auth_methods</code> is reported but not formally scored.)</span></p>
+</div>
+</div>
+<p class="kicker" style="margin-top:26px">The misses we still get wrong — shown honestly</p>
+<table class="misses"><thead><tr><th>App</th><th>Field</th><th>Agent said</th><th>Truth</th></tr></thead><tbody><tr><td class="num">22</td><td class="mono">self_serve</td><td><span class="badge crit">self-serve-trial</span></td><td><span class="badge good">self-serve-free</span></td></tr><tr><td class="num">40</td><td class="mono">self_serve</td><td><span class="badge crit">self-serve-trial</span></td><td><span class="badge good">self-serve-free</span></td></tr><tr><td class="num">98</td><td class="mono">api_surface</td><td><span class="badge crit">SDK-only</span></td><td><span class="badge good">none</span></td></tr><tr><td class="num">58</td><td class="mono">existing_mcp</td><td><span class="badge crit">yes</span></td><td><span class="badge good">no</span></td></tr><tr><td class="num">98</td><td class="mono">existing_mcp</td><td><span class="badge crit">yes</span></td><td><span class="badge good">no</span></td></tr><tr><td class="num">58</td><td class="mono">buildability</td><td><span class="badge crit">buildable-with-caveats</span></td><td><span class="badge good">blocked</span></td></tr><tr><td class="num">90</td><td class="mono">buildability</td><td><span class="badge crit">buildable-with-caveats</span></td><td><span class="badge good">blocked</span></td></tr></tbody></table>
+</section>
+
+<section>
+<p class="kicker">Honesty</p>
+<h2>Limitations &amp; the apps that fought back</h2>
+<p class="dim" style="margin:-6px 0 18px;font-size:14px;max-width:70ch">Two things we'd flag to a reviewer before trusting this at scale: <b>(1) MCP over-detection</b> — the agent marks <code>existing_mcp: yes</code> far too readily (97/100), because it conflates "has an API you could wrap" with "ships a real MCP server"; our audit puts this field at ~60% (on a 5-app slice). <b>(2) Determinism</b> — a transient scrape/LLM error used to silently drop an app to its first-pass answer; the pipeline now logs every fallback, and the committed cache makes the reported run byte-reproducible. Below, the 8 apps the agent itself was least sure of.</p>
+<ul class="limits"><li><b>Sherlock</b> — <span class="badge warn">confidence 0.25</span> The search evidence is almost entirely about unrelated products sharing the 'Sherlock' name (payment gateway, engineering software, SRE platform, hiring platform) rather than the actual GitHub OSINT username-search tool. An MCP wrapper for the real tool would need to shell out to or import the local Python sherlock CLI (as noted by one search result mentioning an OSINT-focused MCP wrapping the standard Sherlock tool for username enumeration), rather than calling any hosted REST/GraphQL API, since none exists for this project.&quot;&gt;
+</li><li><b>Stripe</b> — <span class="badge warn">confidence 0.50</span> Sign up and get API keys immediately; no free tier fees but pay-as-you-go pricing model with no setup/monthly fee required to start using the API (test mode is free).</li><li><b>Copper</b> — <span class="badge warn">confidence 0.55</span> API access requires a paid Professional/Business subscription (though a no-credit-card 14-day trial can provide temporary self-serve access), and the API key auth scheme requires implementing HMAC-SHA256 request signing rather than simple bearer token auth.</li><li><b>Magento (Adobe Commerce)</b> — <span class="badge warn">confidence 0.55</span> No unified, official self-serve credential flow; auth method and API surface (REST vs GraphQL, endpoint availability) vary significantly depending on deployment type (Open Source, PaaS Adobe Commerce, or SaaS Cloud Service), requiring per-instance configuration and admin-level integration setup rather than a simple developer signup.</li><li><b>Waterfall.io</b> — <span class="badge warn">confidence 0.60</span> No self-serve free access; requires purchasing prepaid credits/contract to obtain an API key, and no existing MCP server was found.</li><li><b>Ecwid</b> — <span class="badge warn">confidence 0.62</span> API access requires a paid Ecwid plan (or a manually-requested free developer upgrade via emailing support), which limits pure self-serve onboarding for agent toolkits.</li><li><b>Mermaid CLI</b> — <span class="badge crit">blocked</span> No hosted API; Mermaid CLI is a local command-line tool that must be installed and run on the user's machine. There is no public/hosted service endpoint to call remotely.</li><li><b>NotebookLM</b> — <span class="badge crit">blocked</span> No official public API is available for self-serve developer use. The only programmatic access (NotebookLM Enterprise API via Google Cloud Discovery Engine v1alpha) requires enterprise partnership and organizational Google Cloud credentials. Unofficial methods rely on fragile cookie-based browser automation that violates typical ToS and may break at any time.</li></ul>
+</section>
+
+<footer>Generated from data/verified.json · research agent source in the repo README · self-contained, no external requests.</footer>
+</div>
+<script>
+(function(){
+var root=document.documentElement,tg=document.getElementById("tg");
+function cur(){var s=root.getAttribute("data-theme");return s||(window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light")}
+tg.addEventListener("click",function(){root.setAttribute("data-theme",cur()==="dark"?"light":"dark")});
+var q=document.getElementById("q"),cat=document.getElementById("cat"),tb=document.querySelector("#matrix tbody");
+var rows=[].slice.call(tb.querySelectorAll("tr"));
+function filter(){var t=q.value.toLowerCase(),c=cat.value;rows.forEach(function(r){var ok=(!t||r.getAttribute("data-name").indexOf(t)>=0)&&(!c||r.getAttribute("data-category")===c);r.style.display=ok?"":"none"})}
+q.addEventListener("input",filter);cat.addEventListener("change",filter);
+var ths=document.querySelectorAll("#matrix thead th"),dir={};
+ths.forEach(function(th,i){if(!th.getAttribute("data-sort"))return;th.addEventListener("click",function(){var kind=th.getAttribute("data-sort");dir[i]=!dir[i];var vis=rows.slice();vis.sort(function(a,b){var x=a.children[i].innerText.trim(),y=b.children[i].innerText.trim();var r=kind==="num"?(parseFloat(x)||0)-(parseFloat(y)||0):x.localeCompare(y);return dir[i]?r:-r});vis.forEach(function(r){tb.appendChild(r)})})});
+})();
+</script>
+</body>
+</html>

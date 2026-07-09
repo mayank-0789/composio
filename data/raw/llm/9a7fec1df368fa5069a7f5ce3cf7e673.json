@@ -1,0 +1,115 @@
+{
+  "verdicts": [
+    {
+      "field": "existing_mcp.exists",
+      "status": "contradicted",
+      "note": "The URL https://github.com/korotovsky/slack-mcp-server points to a community GitHub repository, not evidence of an official Slack MCP server. A link to a third-party GitHub repo does not constitute 'yes' for existing_mcp; should be 'no' with no url."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "contradicted",
+      "note": "This URL is a community repo, not an official MCP server from Slack. Per guidelines, we should drop the url field when exists='no'."
+    },
+    {
+      "field": "one_liner",
+      "status": "unsupported",
+      "note": "The original claims 'REST-style' but evidence clearly states it is 'RPC-style' not REST. Also claims 'existing community MCP servers making agent toolkits buildable today' but no evidence provided shows MCP servers exist or work. Revised to accurate terminology."
+    },
+    {
+      "field": "api_surface.notes",
+      "status": "supported",
+      "note": "Evidence confirms Web API is broad RPC-style HTTP API with hundreds of methods, Events API, RTM, and SDKs."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence confirms OAuth2 flow via oauth.v2.access and bearer token usage via Authorization header or token parameter."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Free plan pricing page confirms developers can create apps and integrate for free."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "unsupported",
+      "note": "Original mentions '10-app limit' but evidence shows 'Up to 3 apps' on free tier. Corrected to reflect actual evidence."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "Evidence shows self-serve API access with OAuth2, making it buildable-now for developers."
+    },
+    {
+      "field": "main_blocker",
+      "status": "unsupported",
+      "note": "Original states 'None significant' but then lists blockers. Since API is genuinely accessible and buildable, main_blocker should be null. The notes about session tokens and admin approval are valid flags but not blockers to API buildability."
+    },
+    {
+      "field": "flags",
+      "status": "unsupported",
+      "note": "First flag about 'Community MCP servers using session tokens violate Slack ToS' is unsupported by evidence - no evidence provided about MCP servers or session token violations. Second flag about admin approval is reasonable. Revised flags to reflect actual evidence."
+    },
+    {
+      "field": "confidence",
+      "status": "supported",
+      "note": "Increased confidence to 0.85 given strong evidence for all core claims about API, auth, and self-serve access."
+    }
+  ],
+  "revised": {
+    "id": 21,
+    "name": "Slack",
+    "website": "slack.com",
+    "category": "Communications and Messaging",
+    "one_liner": "Slack provides a broad, self-serve RPC-style Web API secured via OAuth2/bearer tokens; community MCP servers exist but no official MCP support.",
+    "auth_methods": [
+      {
+        "method": "OAuth2",
+        "notes": "Standard OAuth 2.0 flow (oauth.v2.access) to obtain bearer tokens scoped to a workspace; recommended approach for third-party apps."
+      },
+      {
+        "method": "Token",
+        "notes": "Bearer tokens (including test/dev tokens) passed via Authorization header or token param; bot/user tokens generated via app configuration."
+      }
+    ],
+    "self_serve": "self-serve-free",
+    "self_serve_notes": "Developers can create a Slack app and generate OAuth tokens for free on the Free plan to build/test integrations; some capabilities depend on the host workspace's plan (e.g., up to 3 apps on free tier, 90-day history) and commercial distribution may require additional agreements/review.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "Slack Web API is a broad RPC-style HTTP API with hundreds of methods for messaging, channels, users, files, etc. Also has Events API, RTM, and SDKs."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-now",
+    "main_blocker": null,
+    "evidence": [
+      {
+        "url": "https://docs.slack.dev/apis/web-api/",
+        "supports": "Describes Web API as RPC-style HTTP API with collection of methods"
+      },
+      {
+        "url": "https://docs.slack.dev/reference/methods/oauth.v2.access",
+        "supports": "OAuth2 token exchange method"
+      },
+      {
+        "url": "https://docs.slack.dev/reference/methods/auth.test.md",
+        "supports": "Token-based auth testing endpoint"
+      },
+      {
+        "url": "https://slack.com/pricing/free",
+        "supports": "Free plan supports app development with up to 3 apps"
+      },
+      {
+        "url": "https://docs.slack.dev/reference/methods/team.billing.info.md",
+        "supports": "Endpoint to check workspace plan programmatically"
+      }
+    ],
+    "confidence": 0.85,
+    "flags": [
+      "Free plan limited to 3 apps per workspace",
+      "Official OAuth apps may need workspace admin approval for installation"
+    ]
+  }
+}

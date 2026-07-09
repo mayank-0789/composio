@@ -1,0 +1,45 @@
+{
+  "answer": "Clay offers a free tier, but it does not include developer-focused HTTP API access. HTTP API functionality is restricted to the Growth plan, which starts at $495 per month [1][2].\n\nThe free tier is self-serve and provides 100 data credits and 500 actions per month for testing and low-volume workflows, with a limit of 200 rows per table [2]. While you can perform basic enrichment and use Clay’s AI agents, you must upgrade to the Growth tier or higher to access CRM integrations and HTTP API capabilities [1][2].",
+  "results": [
+    {
+      "title": "Clay Pricing 2026: March Updates | Databar.ai",
+      "url": "https://databar.ai/blog/article/clay-pricing-2026",
+      "snippet": ""
+    },
+    {
+      "title": "Clay Pricing 2026: Plans, Costs, and What You Pay | Landbase",
+      "url": "https://www.landbase.com/blog/clay-pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Compare plans, features & costs | Clay.com",
+      "url": "https://www.clay.com/pricing?2b5ec386_page=2",
+      "snippet": ""
+    },
+    {
+      "title": "Plans & billing - Clay Docs",
+      "url": "https://university.clay.com/docs/plans-and-billing",
+      "snippet": ""
+    },
+    {
+      "title": "Actions & Data Credits  - Clay Docs",
+      "url": "https://university.clay.com/docs/actions-data-credits",
+      "snippet": ""
+    },
+    {
+      "title": "Can the app be used for free? - FAQ | Clay.com",
+      "url": "https://www.clay.com/faq/can-the-app-be-used-for-free",
+      "snippet": ""
+    },
+    {
+      "title": "How AI is priced - Clay Docs",
+      "url": "https://university.clay.com/docs/ai-pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Today, we’re launching a pricing update that reduces data costs, and simplifies and improves the value of our plans. Our goal is to have Clay be your default tool for GTM Engineering. - The GTM with Clay Blog",
+      "url": "https://www.clay.com/blog/introducing-clays-new-pricing?dub_id=VFjxHb1Y0LNyLhQO",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "Gumroad does not have tiered pricing or a dedicated free tier; it uses a flat 10 percent platform fee plus 0.50 dollars per direct sale, with no monthly subscription cost [1][2]. Free products incur no fees [3][4]. \n\nDeveloper API access is self-serve and available to all accounts [5]. You can generate credentials by navigating to Advanced Settings in your Gumroad dashboard to create an application or generate a personal access token for your own account [5]. The API is RESTful, and documentation is located at app.gumroad.com/api [6][3].",
+  "results": [
+    {
+      "title": "Gumroad pricing: 10% flat fee",
+      "url": "https://gumroad.com/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Gumroad Pricing 2026: Fees, Costs, and Real Take-Home Revenue Explained | Swell",
+      "url": "https://www.swell.is/content/gumroad-pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Gumroad Product Publish · Tarka GTM Fundamental",
+      "url": "https://tarka.ai/playbook/fundamentals/gumroad-product-publish",
+      "snippet": ""
+    },
+    {
+      "title": "Gumroad Fees on Free Products 2026: $0 to List, $0 to Deliver",
+      "url": "https://insightraider.com/en/answers/does-gumroad-charge-fees-on-free-products",
+      "snippet": ""
+    },
+    {
+      "title": "Gumroad API Essentials",
+      "url": "https://rollout.com/integration-guides/gumroad/api-essentials",
+      "snippet": ""
+    },
+    {
+      "title": "Gumroad Review & API Analysis | GTM Tools",
+      "url": "https://gtmtools.dev/tools/gumroad/",
+      "snippet": ""
+    },
+    {
+      "title": "Gumroad API Review, Pricing & Docs",
+      "url": "https://www.findapi.dev/api/gumroad",
+      "snippet": ""
+    },
+    {
+      "title": "Gumroad Review 2026: The Best Way to Sell Digital Products?",
+      "url": "https://www.passivekit.com/gumroad-review/",
+      "snippet": ""
+    }
+  ]
+}

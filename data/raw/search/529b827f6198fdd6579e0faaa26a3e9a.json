@@ -1,0 +1,45 @@
+{
+  "answer": "The Model Context Protocol (MCP) is an open standard that enables AI applications, such as Claude Desktop, to connect to external data sources and tools through a client-server architecture [1][2]. An MCP server acts as a provider that exposes capabilities—specifically tools for actions, resources for reading data, and prompts for templates—to an MCP host [3][1][4].\n\nThe FanBasis MCP server is a specific implementation that provides integration with the FanBasis digital marketplace [5]. You can access it via the MCP host at mcp.zapier.com [5]. \n\nTo build your own MCP server, you typically use an official SDK (available in languages like Python, TypeScript, and Go) to define tools and resources [6][7]. In Python, the FastMCP framework simplifies this process by using type hints and decorators to automatically handle protocol communication and tool registration [8][4]. \n\n```python\nfrom mcp.server.fastmcp import FastMCP\n\n# Initialize the server\nmcp = FastMCP(\"MyServer\")\n\n# Define a tool for the LLM to call\n@mcp.tool()\ndef add(a: int, b: int) -> int:\n    \"\"\"Add two numbers.\"\"\"\n    return a + b\n\n# Run the server\nif name == \"main\":\n    mcp.run(transport='stdio')\n```\n\nOnce defined, you configure the server in your MCP host’s configuration file (e.g., `claude_desktop_config.json`), which allows the host to connect via transports like Stdio or HTTP [1][4].",
+  "results": [
+    {
+      "title": "Architecture overview - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/learn/architecture",
+      "snippet": ""
+    },
+    {
+      "title": "Architecture - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/specification/2025-06-18/architecture",
+      "snippet": ""
+    },
+    {
+      "title": "Understanding MCP servers",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts",
+      "snippet": ""
+    },
+    {
+      "title": "quickstart/server.mdx at 573dc60c · modelcontextprotocol/docs",
+      "url": "https://github.com/modelcontextprotocol/docs/blob/573dc60c/quickstart/server.mdx",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://zapier.com/mcp/fanbasis",
+      "snippet": ""
+    },
+    {
+      "title": "modelcontextprotocol/servers",
+      "url": "https://github.com/modelcontextprotocol/servers?alltoolsdirectory=",
+      "snippet": ""
+    },
+    {
+      "title": "modelcontextprotocol/python-sdk",
+      "url": "http://github.com/modelcontextprotocol/python-sdk?tab=readme-ov-file",
+      "snippet": ""
+    },
+    {
+      "title": "Building Servers - MCP Python SDK",
+      "url": "https://modelcontextprotocol.github.io/python-sdk/server/",
+      "snippet": ""
+    }
+  ]
+}

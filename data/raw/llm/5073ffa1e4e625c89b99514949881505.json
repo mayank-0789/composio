@@ -1,0 +1,45 @@
+{
+  "one_liner": "FanBasis provides a self-serve REST API (with sandbox) secured by a simple x-api-key header for managing checkout sessions, products, subscriptions, and payments in its creator-monetization/ecommerce platform.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Single x-api-key header required on all requests; separate sandbox (qa.dev-fan-basis.com) and production (www.fanbasis.com) base URLs. No OAuth or client ID/secret pairs supported."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "API key is obtained directly from the FanBasis dashboard with no apparent approval process; a sandbox environment (qa.dev-fan-basis.com) is available for testing, and official SDKs exist for Node, Python, PHP, Ruby, and TypeScript.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "medium",
+    "notes": "Public REST API covering checkout sessions, products, customers, subscribers, discount codes, transactions, refunds, and webhook subscriptions. SDKs available for Node, Python, PHP, Ruby, TypeScript, plus dedicated checkout-sdk and checkout-react npm packages."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://mcp.zapier.com"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://raw.githubusercontent.com/otniel-bit/fbnewapi/main/api-docs.md",
+      "supports": "Documents x-api-key auth, base URLs for production/sandbox, and REST endpoints for webhooks, products, checkout sessions."
+    },
+    {
+      "url": "https://github.com/subtain-haider/laravel-payments/blob/main/docs/gateways/fanbasis.md",
+      "supports": "Confirms API key is obtained from FanBasis Dashboard, no OAuth/client-secret, covers checkout sessions, customers, subscribers, discount codes, products, transactions, refunds, webhooks."
+    },
+    {
+      "url": "https://registry.npmjs.org/%40fanbasis%2Fcheckout-sdk",
+      "supports": "Official Checkout SDK for Node/TypeScript initialized with apiKey."
+    },
+    {
+      "url": "https://zapier.com/apps/fanbasis/integrations/webhook",
+      "supports": "Existing Zapier integration referencing an MCP server hosted at mcp.zapier.com for FanBasis."
+    }
+  ],
+  "confidence": 0.75,
+  "flags": [
+    "MCP server existence is via third-party Zapier MCP host (mcp.zapier.com), not an official FanBasis-maintained MCP server",
+    "Pricing/free-tier claims for API access are from a single search snippet and not independently verified against FanBasis's official pricing page"
+  ]
+}

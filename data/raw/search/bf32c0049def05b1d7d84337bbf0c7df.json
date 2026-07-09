@@ -1,0 +1,45 @@
+{
+  "answer": "DealCloud uses the OAuth2 Client Credentials flow for authentication [1]. To authenticate, send a POST request to the token endpoint with your client ID, secret, and requested scopes [1]. The server returns an access token valid for 900 seconds [1]. You must include this bearer token in the Authorization header of your subsequent API requests [1].\n\n```\nPOST {baseUrl}/api/rest/v1/oauth/token\nContent-Type: application/x-www-form-urlencoded\n\nscope=data\n&grant_type=client_credentials\n&client_id={your_client_id}\n&client_secret={your_client_secret}\n```\n\nInclude the token in headers as `Authorization: Bearer {{token}}` [1].",
+  "results": [
+    {
+      "title": "Requesting an OAuth2 Bearer Token - DealCloud API Docs",
+      "url": "https://api.docs.dealcloud.com/docs/token",
+      "snippet": ""
+    },
+    {
+      "title": "Docs - DealCloud API Docs",
+      "url": "https://api.docs.dealcloud.com/docs",
+      "snippet": ""
+    },
+    {
+      "title": "Obtaining an API Key - DealCloud API Docs",
+      "url": "https://api.docs.dealcloud.com/docs/apikeys",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication - DealCloud API Docs",
+      "url": "https://api.docs.dealcloud.com/sdk/python/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Data APIs - DealCloud API Docs",
+      "url": "https://api.docs.dealcloud.com/docs/data",
+      "snippet": ""
+    },
+    {
+      "title": "Getting Started - DealCloud API Docs",
+      "url": "https://api.docs.dealcloud.com/docs/publications/getting_started",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication - DealCloud API Docs",
+      "url": "https://api.docs.dealcloud.com/sdk/csharp/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Dealcloud Developer Documentation - DealCloud API Docs",
+      "url": "https://api.docs.dealcloud.com/",
+      "snippet": ""
+    }
+  ]
+}

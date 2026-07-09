@@ -1,0 +1,45 @@
+{
+  "answer": "The Model Context Protocol (MCP) is an open standard that allows AI assistants to securely connect with external tools and data [1][2]. In the context of Copper CRM, an MCP server acts as an intermediary that enables AI models to interact with your CRM data [2][3].\n\nSeveral providers offer MCP solutions for Copper:\n\nViaSocket provides an MCP server that connects Copper actions to AI tools like Claude, ChatGPT, and Cursor, featuring built-in authentication and simplified setup [1].\n\nZapier also offers an MCP integration for Copper, allowing AI to perform specific write actions, such as associating existing projects with CRM objects [4].\n\nAdditional community-developed MCP bundles exist that provide access to Copper entities like people, companies, opportunities, projects, and tasks [3].\n\nThese servers function by exposing specific capabilities to your AI host—typically via Tools (for actions like updating records), Resources (for reading CRM data), and Prompts (for task templates) [5][6][7]. They communicate using JSON-RPC, enabling the AI to query your CRM and execute tasks directly within the AI interface [8][7].",
+  "results": [
+    {
+      "title": "Copper MCP | viaSocket",
+      "url": "https://viasocket.com/mcp/copper",
+      "snippet": ""
+    },
+    {
+      "title": "What Is Copper CRM MCP? Exploring the Model Context Protocol and AI Integration",
+      "url": "https://www.getguru.com/reference/copper-crm-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Copper MCP Server & Skill — 39 Tools",
+      "url": "https://www.mcpbundles.com/skills/copper",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://zapier.com/mcp/copper",
+      "snippet": ""
+    },
+    {
+      "title": "Understanding MCP servers",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts",
+      "snippet": ""
+    },
+    {
+      "title": "Build an MCP server - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/develop/build-server",
+      "snippet": ""
+    },
+    {
+      "title": "Architecture overview - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/learn/architecture",
+      "snippet": ""
+    },
+    {
+      "title": "Specification - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/specification/2025-11-25",
+      "snippet": ""
+    }
+  ]
+}

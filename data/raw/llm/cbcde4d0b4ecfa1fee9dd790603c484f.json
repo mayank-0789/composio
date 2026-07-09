@@ -1,0 +1,47 @@
+{
+  "one_liner": "Reducto is an agentic document platform for parsing, extracting, splitting, and editing files (PDFs, images, spreadsheets, etc.) via API.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "API key generated in Reducto Studio, passed as Bearer token in Authorization header or set as REDUCTO_API_KEY environment variable"
+    }
+  ],
+  "self_serve": "self-serve-trial",
+  "self_serve_notes": "Self-serve account creation and API key generation in Reducto Studio. New users receive 15,000 credits one-time onboarding allotment, then usage-based pricing at $0.015 per credit. Startups may qualify for additional production credits.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "medium",
+    "notes": "REST API with endpoints for parse, extract, split, edit, classification, and upload. SDKs available for Python, Node.js, and Go. Base URL: https://platform.reducto.ai. Supports 30+ file formats including PDFs, images, spreadsheets, presentations, and documents."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://mcp.reducto.ai/mcp"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://docs.reducto.ai/agent-guide",
+      "supports": "API key authentication with Bearer token, REST API base URL, SDK availability for Python/Node.js/Go, supported file types and endpoints"
+    },
+    {
+      "url": "https://docs.reducto.ai/sdk/python/overview",
+      "supports": "API key authentication via REDUCTO_API_KEY environment variable, SDK methods for parse, extract, split, upload"
+    },
+    {
+      "url": "https://reducto.ai/pricing",
+      "supports": "Self-serve access, 15,000 credits one-time onboarding allotment, $0.015 per credit pricing, startup credit eligibility"
+    },
+    {
+      "url": "https://mcp.reducto.ai/mcp",
+      "supports": "MCP server exists with both hosted (https://mcp.reducto.ai/mcp) and local deployment options, supports document processing workflows"
+    }
+  ],
+  "confidence": 0.95,
+  "flags": [
+    "has-official-mcp-server",
+    "startup-credits-available",
+    "multiple-sdks",
+    "comprehensive-docs"
+  ]
+}

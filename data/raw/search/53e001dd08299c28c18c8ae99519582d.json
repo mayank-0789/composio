@@ -1,0 +1,45 @@
+{
+  "answer": "Cloudflare provides a platform for building and deploying remote Model Context Protocol (MCP) servers using the Streamable HTTP transport standard [1][2][3].\n\nFor stateless implementations, use the `createMcpHandler()` function in a standard Worker [1][4]. For stateful requirements, such as persistent session data, use the `McpAgent` class, which utilizes Durable Objects for storage and provides built-in support for elicitation and hibernation [1][5][3].\n\nCloudflare also hosts a catalog of managed, domain-specific MCP servers (e.g., for Observability or Workers Bindings) that you can connect to using OAuth [6][7].",
+  "results": [
+    {
+      "title": "Build a Remote MCP server · Cloudflare Agents docs",
+      "url": "https://developers.cloudflare.com/agents/model-context-protocol/guides/remote-mcp-server/",
+      "snippet": ""
+    },
+    {
+      "title": "Model Context Protocol (MCP) · Cloudflare Agents docs",
+      "url": "https://developers.cloudflare.com/agents/model-context-protocol/",
+      "snippet": ""
+    },
+    {
+      "title": "Transport · Cloudflare Agents docs",
+      "url": "https://developers.cloudflare.com/agents/model-context-protocol/protocol/transport/",
+      "snippet": ""
+    },
+    {
+      "title": "createMcpHandler · Cloudflare Agents docs",
+      "url": "https://developers.cloudflare.com/agents/model-context-protocol/apis/handler-api/",
+      "snippet": ""
+    },
+    {
+      "title": "McpAgent · Cloudflare Agents docs",
+      "url": "https://developers.cloudflare.com/agents/model-context-protocol/apis/agent-api/",
+      "snippet": ""
+    },
+    {
+      "title": "Cloudflare's own MCP servers · Cloudflare Agents docs",
+      "url": "https://developers.cloudflare.com/agents/model-context-protocol/cloudflare/servers-for-cloudflare/",
+      "snippet": ""
+    },
+    {
+      "title": "Readme",
+      "url": "https://raw.githubusercontent.com/cloudflare/mcp-server-cloudflare/HEAD/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "What is the Model Context Protocol (MCP)? | Cloudflare",
+      "url": "https://www.cloudflare.com/en-ca/learning/ai/what-is-model-context-protocol-mcp/",
+      "snippet": ""
+    }
+  ]
+}

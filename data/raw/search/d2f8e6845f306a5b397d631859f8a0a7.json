@@ -1,0 +1,40 @@
+{
+  "answer": "Vercel API requests are authenticated using an Access Token provided in the Authorization header as a Bearer token [1][2]. When making direct REST API calls, include the token in your header as shown below [1]:\n\n```http\nAuthorization: Bearer <your_access_token>\n```\n\nIf you are using the Vercel SDK, pass the token during client initialization [2]:\n\n```typescript\nimport { Vercel } from \"@vercel/sdk\";\n\nconst vercel = new Vercel({\n  bearerToken: \"<YOUR_BEARER_TOKEN_HERE>\",\n});\n```\n\nOther authentication methods, such as OpenID Connect (OIDC) tokens, are used for specific contexts like Vercel Connect, internal integrations, or automated service-to-service communication [3][4][5].",
+  "results": [
+    {
+      "title": "Tokens",
+      "url": "https://vercel.com/docs/sign-in-with-vercel/tokens",
+      "snippet": ""
+    },
+    {
+      "title": "vercel/sdk",
+      "url": "https://github.com/vercel/sdk?tab=readme-ov-file",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication",
+      "url": "https://vercel.com/docs/connect/concepts/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Using the Integrations REST API",
+      "url": "https://vercel.com/docs/integrations/create-integration/marketplace-api",
+      "snippet": ""
+    },
+    {
+      "title": "Connect to your own API",
+      "url": "https://vercel.com/docs/oidc/api",
+      "snippet": ""
+    },
+    {
+      "title": "Marketplace Partner API Reference",
+      "url": "https://vercel.com/docs/integrations/create-integration/marketplace-api/reference/partner",
+      "snippet": ""
+    },
+    {
+      "title": "docs/sdks/authentication/README.md at HEAD · vercel/sdk",
+      "url": "https://github.com/vercel/sdk/blob/HEAD/docs/sdks/authentication/README.md",
+      "snippet": ""
+    }
+  ]
+}

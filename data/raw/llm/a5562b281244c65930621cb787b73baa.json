@@ -1,0 +1,94 @@
+{
+  "verdicts": [
+    {
+      "field": "existing_mcp.exists",
+      "status": "contradicted",
+      "note": "The GitHub URL provided (https://github.com/sherlock-project/sherlock) is the main project repository, NOT an MCP server. The evidence shows this is a CLI tool for username enumeration with no hosted API. There is no evidence of a Model Context Protocol server for this tool."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "The record correctly identifies this as 'buildable-with-caveats' - it's a local CLI tool that would need to be wrapped/imported locally rather than called via hosted API."
+    },
+    {
+      "field": "self_serve",
+      "status": "unsupported",
+      "note": "The record lists 'unknown' but evidence clearly shows this is a free, open-source tool anyone can download and run with no signup - should be 'self-serve-free'."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Correctly identifies that the actual sherlock-project tool requires no authentication, and that all auth-related evidence is from unrelated products."
+    },
+    {
+      "field": "api_surface.type",
+      "status": "supported",
+      "note": "Correctly identifies type as 'none' - this is a local CLI tool with no hosted API."
+    },
+    {
+      "field": "category",
+      "status": "supported",
+      "note": "Data scraping/OSINT category is appropriate for a username enumeration tool."
+    },
+    {
+      "field": "one_liner",
+      "status": "supported",
+      "note": "Accurately describes the tool as a free, open-source CLI for OSINT username enumeration with no hosted API."
+    },
+    {
+      "field": "confidence",
+      "status": "supported",
+      "note": "Low confidence (0.25) is appropriate given the name collision issues and irrelevant search results."
+    }
+  ],
+  "revised": {
+    "id": 58,
+    "name": "Sherlock",
+    "website": "github.com/sherlock-project/sherlock",
+    "category": "Data, SEO and Scraping",
+    "one_liner": "sherlock-project/sherlock is a free, open-source local CLI tool for OSINT username enumeration across social networks with no hosted API or authentication; nearly all search evidence retrieved pertains to unrelated commercial products that coincidentally share the 'Sherlock' name.",
+    "auth_methods": [
+      {
+        "method": "Other",
+        "notes": "The actual sherlock-project/sherlock tool requires no authentication at all - it's a local CLI script. The various 'Sherlock' branded commercial products found in search (LCL payment secret keys, Ansys gRPC mTLS, token-based Sherlock platform) are unrelated namesake products, not this GitHub project."
+      }
+    ],
+    "self_serve": "self-serve-free",
+    "self_serve_notes": "Free, open-source CLI tool anyone can clone/pip-install and run locally with no signup or credentials. There is no vendor-hosted API to subscribe to.",
+    "api_surface": {
+      "type": "none",
+      "breadth": "narrow",
+      "notes": "The actual github.com/sherlock-project/sherlock is an open-source OSINT CLI tool for username enumeration across social media platforms - it has no hosted API/service, no accounts, no auth. It is run locally as a Python script/CLI. The search evidence returned is almost entirely about unrelated commercial products that happen to share the 'Sherlock' name (LCL Sherlock's payment gateway, Ansys Sherlock engineering software, Bill Sherlock, Emailsherlock, Sherlocks.ai, Sherlock AI hiring, Sherlock Calls) - none of these are the actual GitHub project in question."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "The search evidence is almost entirely about unrelated products sharing the 'Sherlock' name (payment gateway, engineering software, SRE platform, hiring platform) rather than the actual GitHub OSINT username-search tool. An MCP wrapper for the real tool would need to shell out to or import the local Python sherlock CLI (as noted by one search result mentioning an OSINT-focused MCP wrapping the standard Sherlock tool for username enumeration), rather than calling any hosted REST/GraphQL API, since none exists for this project.",
+    "evidence": [
+      {
+        "url": "https://github.com/sherlock-project/sherlock",
+        "supports": "This is the actual project in question - an open-source CLI tool for hunting usernames across social networks, with no hosted API or authentication."
+      },
+      {
+        "url": "https://support.sherlock.im/knowledge_base/item/292200",
+        "supports": "Example of an unrelated 'Sherlock' branded product (Russian payment platform) using token-based auth - not the GitHub project."
+      },
+      {
+        "url": "https://developer.ansys.com/docs/sherlock-apis-2026-r1/getting-started.md",
+        "supports": "Example of unrelated Ansys Sherlock engineering software using gRPC/mTLS auth - not the GitHub project."
+      },
+      {
+        "url": "https://sherlocks-documentation.secure.lcl.fr/en/sherlocks-office-json.html",
+        "supports": "Example of unrelated LCL Sherlock's payment gateway using secret-key auth - not the GitHub project."
+      }
+    ],
+    "confidence": 0.25,
+    "flags": [
+      "name_collision",
+      "evidence_mismatch",
+      "no_hosted_api_for_actual_project",
+      "low_confidence_due_to_irrelevant_search_results"
+    ]
+  }
+}

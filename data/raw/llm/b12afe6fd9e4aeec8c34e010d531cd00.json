@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://developers.smartsheet.com/ai-mcp/smartsheet/mcp-server",
+  "reason": "Smartsheet has an official dedicated MCP server that enables MCP-compliant AI clients to interact with Smartsheet data. The server is hosted at https://mcp.smartsheet.com (for US region) and provides tools for querying, summarizing, and modifying sheets, rows, and workspaces. It requires a Smartsheet Business or Enterprise plan and authentication via OAuth 2.0 or personal API token. The server is documented at developers.smartsheet.com/ai-mcp/smartsheet/mcp-server and is now generally available."
+}

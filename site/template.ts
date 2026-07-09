@@ -3,7 +3,7 @@ import type { Clusters } from "../src/cluster.js";
 import type { AccuracyReport } from "../src/verify/audit.js";
 
 type Accuracy = { firstPass: AccuracyReport; afterLoops: AccuracyReport };
-type Demo = { pageUrl?: string; steps?: Array<{ tool?: string; input?: unknown; output?: unknown }> };
+type Demo = { publicUrl?: string; pageUrl?: string; ranAt?: string; steps?: Array<{ tool?: string; input?: unknown; output?: unknown }> };
 type PageData = { records: AppResearch[]; clusters: Clusters; accuracy: Accuracy; demo?: Demo };
 
 const esc = (s: unknown): string =>
@@ -70,10 +70,18 @@ function missesTable(a: Accuracy): string {
 }
 
 function limitations(records: AppResearch[]): string {
-  const flagged = records.filter((r) => r.flags.length || r.buildability === "blocked");
-  if (!flagged.length) return `<p class="dim">No apps flagged as traps or blockers.</p>`;
-  return `<ul class="limits">${flagged.map((r) =>
-    `<li><b>${esc(r.name)}</b> — ${r.flags.map((f) => `<span class="tag">${esc(f)}</span>`).join(" ")} ${r.main_blocker ? esc(r.main_blocker) : ""}</li>`).join("")}</ul>`;
+  // "Fought back" = genuinely hard: blocked, low-confidence, no clear API, or unknown access — not every flagged nuance.
+  const hard = records
+    .filter((r) => r.buildability === "blocked" || r.confidence < 0.65 || r.self_serve === "unknown" || r.api_surface.type === "none")
+    .sort((a, b) => a.confidence - b.confidence);
+  if (!hard.length) return `<p class="dim">No apps flagged as traps or blockers.</p>`;
+  const item = (r: AppResearch): string => {
+    const why = r.buildability === "blocked"
+      ? `<span class="badge crit">blocked</span> ${esc(r.main_blocker ?? "no viable public API")}`
+      : `<span class="badge warn">confidence ${r.confidence.toFixed(2)}</span> ${esc(r.main_blocker ?? r.self_serve_notes ?? "low-confidence — flagged for human review")}`;
+    return `<li><b>${esc(r.name)}</b> — ${why}</li>`;
+  };
+  return `<ul class="limits">${hard.map(item).join("")}</ul>`;
 }
 
 function demoBlock(demo?: Demo): string {
@@ -82,8 +90,9 @@ function demoBlock(demo?: Demo): string {
   }
   const steps = demo.steps.map((s) =>
     `<div class="step"><span class="mono">${esc(s.tool ?? "tool")}</span></div>`).join("");
-  const linkUrl = safeUrl(demo.pageUrl);
-  const link = linkUrl ? `<p><a href="${esc(linkUrl)}" target="_blank" rel="noopener">Open the page the agent created ↗</a></p>` : "";
+  const linkUrl = safeUrl(demo.publicUrl ?? demo.pageUrl);
+  const when = demo.ranAt ? `<span class="dim" style="font-family:var(--mono);font-size:12px"> · live-run ${esc(demo.ranAt)}</span>` : "";
+  const link = linkUrl ? `<p><a href="${esc(linkUrl)}" target="_blank" rel="noopener">Open the live Notion page the agent wrote to ↗</a>${when}</p>` : "";
   return `<div class="demo">${steps}</div>${link}`;
 }
 
@@ -91,6 +100,16 @@ export function renderPage(data: PageData): string {
   const { records, clusters, accuracy } = data;
   const first = pct(accuracy.firstPass.overall);
   const after = pct(accuracy.afterLoops.overall);
+  const sample = accuracy.firstPass.perField
+    ? Object.values(accuracy.firstPass.perField).reduce((n, v) => n + v.total, 0)
+    : 0;
+  const perField = accuracy.afterLoops.perField as Record<string, { correct: number; total: number; accuracy: number }>;
+  const fieldChips = Object.keys(perField).filter((f) => perField[f]?.total)
+    .map((f) => `<span class="tag">${esc(f)}: ${Math.round(perField[f].accuracy * 100)}% (${perField[f].correct}/${perField[f].total})</span>`).join(" ");
+  const firstMiss = new Set(accuracy.firstPass.misses.map((m) => `${m.app_id}/${m.field}`));
+  const afterMiss = new Set(accuracy.afterLoops.misses.map((m) => `${m.app_id}/${m.field}`));
+  const fixed = [...firstMiss].filter((x) => !afterMiss.has(x)).length;
+  const regressions = [...afterMiss].filter((x) => !firstMiss.has(x)).length;
   const buildableNow = clusters.buildability["buildable-now"] ?? 0;
   const categories = [...new Set(records.map((r) => r.category))];
 
@@ -174,7 +193,7 @@ footer{padding:30px 0 60px;color:var(--muted);font-family:var(--mono);font-size:
 <header class="hero">
 <p class="eyebrow">100 apps · researched by an agent · accuracy-verified</p>
 <h1>Which of these 100 apps can be an agent toolkit today — and which need a sales call?</h1>
-<p class="lede">An agent (Claude + Composio's own SDK &amp; MCP + Firecrawl) researched every app's auth, self-serve path, API surface and existing MCP, then verified its own answers against live docs and a hand-audited sample.</p>
+<p class="lede">An agent (Claude + Composio's SDK &amp; managed toolkits + Firecrawl) researched every app's auth, self-serve path, API surface and existing MCP, then verified its own answers against live docs and a hand-audited sample.</p>
 </header>
 
 <section>
@@ -192,6 +211,7 @@ ${headlineList(clusters)}
 <section>
 <p class="kicker">The findings</p>
 <h2>All ${records.length} apps</h2>
+<p class="dim" style="margin:-8px 0 16px;font-size:14px;max-width:70ch">Filterable and sortable. Colour marks self-serve access and buildability. <b>Caveat:</b> the <span class="tag">MCP</span> column is the agent's least-reliable call (~60% on our audit) — it over-detects "yes"; treat it as a lead to verify, not ground truth.</p>
 <div class="controls">
 <input id="q" type="text" placeholder="Search app…" aria-label="Search apps">
 <select id="cat" aria-label="Filter by category"><option value="">All categories</option>${categories.map((c) => `<option value="${esc(c)}">${esc(c)}</option>`).join("")}</select>
@@ -230,14 +250,26 @@ ${demoBlock(data.demo)}
 
 <section>
 <p class="kicker">The verification</p>
-<h2>How we know it's trustworthy</h2>
-<div class="lift"><div class="big">${first}%<span class="arrow">→</span>${after}%</div><p>Accuracy on the hand-audited sample, first pass versus after the verification loops. Below, the misses we didn't catch on the first pass — shown honestly.</p></div>
+<h2>How we know it's trustworthy — and where it isn't</h2>
+<div class="grid2">
+<div>
+<div class="lift"><div class="big">${first}%<span class="arrow">→</span>${after}%</div><p>Accuracy on a ${sample}-field hand-audit — a 15-app stratified sample (≥1 per category, plus every trap app), first pass versus after the verification loops.</p></div>
+<p style="margin-top:14px;font-size:14px;color:var(--muted)">The loops corrected <b>${fixed}</b> field${fixed === 1 ? "" : "s"} with <b>${regressions}</b> regression${regressions === 1 ? "" : "s"}. The catch: <b>Mermaid CLI</b> looks like a SaaS but is an open-source library with no hosted API — correctly downgraded from <span class="badge good">buildable-now</span> to <span class="badge crit">blocked</span>.</p>
+</div>
+<div>
+<p class="kicker">Per-field accuracy, after verification</p>
+<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px">${fieldChips}</div>
+<p style="font-size:14px;color:var(--muted)"><b>The honest finding:</b> a naive LLM self-critic <i>lowered</i> accuracy — it wrongly flipped Stripe to "contact sales." So a correction is accepted only when the critic marks a field <span class="tag">contradicted</span> (evidence disagrees), never on a bare <span class="tag">unsupported</span>. Verification's real value here is <b>triage</b> — flagging what a human must check — not blanket auto-correction. <code>existing_mcp</code> stays our weakest field and we show it. <span class="dim">(The audit scores the four decision fields above; <code>auth_methods</code> is reported but not formally scored.)</span></p>
+</div>
+</div>
+<p class="kicker" style="margin-top:26px">The misses we still get wrong — shown honestly</p>
 ${missesTable(accuracy)}
 </section>
 
 <section>
 <p class="kicker">Honesty</p>
 <h2>Limitations &amp; the apps that fought back</h2>
+<p class="dim" style="margin:-6px 0 18px;font-size:14px;max-width:70ch">Two things we'd flag to a reviewer before trusting this at scale: <b>(1) MCP over-detection</b> — the agent marks <code>existing_mcp: yes</code> far too readily (97/100), because it conflates "has an API you could wrap" with "ships a real MCP server"; our audit puts this field at ~60% (on a 5-app slice). <b>(2) Determinism</b> — a transient scrape/LLM error used to silently drop an app to its first-pass answer; the pipeline now logs every fallback, and the committed cache makes the reported run byte-reproducible. Below, the ${records.filter((r) => r.buildability === "blocked" || r.confidence < 0.65 || r.self_serve === "unknown" || r.api_surface.type === "none").length} apps the agent itself was least sure of.</p>
 ${limitations(records)}
 </section>
 

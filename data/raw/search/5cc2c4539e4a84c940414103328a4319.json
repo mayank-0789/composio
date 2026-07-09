@@ -1,0 +1,45 @@
+{
+  "answer": "Twenty provides API access across its paid cloud plans and its free self-hosted offering. If you use the self-hosted version, which is free and open-source, you receive the same Pro-tier features, including full REST and GraphQL API access. On the managed cloud platform, API access is included in the Pro plan starting at $9 per user per month. There are no separate \"API-only\" plans; API usage is bundled into these subscriptions. All custom objects and fields you create in Twenty are automatically exposed via the API without additional configuration.",
+  "results": [
+    {
+      "title": "Twenty CRM Pricing — Plans from $9 per User per Month",
+      "url": "https://twenty.com/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Billing - Twenty Documentation",
+      "url": "https://docs.twenty.com/user-guide/billing/overview",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing Plans - Twenty Documentation",
+      "url": "https://twenty.mintlify.app/user-guide/billing/capabilities/pricing-plans",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://twenty.mintlify.app/user-guide/billing/how-tos/billing-faq",
+      "snippet": ""
+    },
+    {
+      "title": "Twenty CRM Pricing Teardown: Open Source CRM | Beton",
+      "url": "https://www.getbeton.ai/blog/twenty-crm-pricing-teardown/",
+      "snippet": ""
+    },
+    {
+      "title": "Twenty CRM Review (2026): Pricing, Features & Honest Verdict - MakerStack",
+      "url": "https://makerstack.co/reviews/twenty-crm-review/",
+      "snippet": ""
+    },
+    {
+      "title": "Twenty CRM Review: The Open Source HubSpot Alternative — The Dench Blog",
+      "url": "https://www.dench.com/blog/twenty-crm-review",
+      "snippet": ""
+    },
+    {
+      "title": "Twenty CRM Pricing (From $9/mo): All 3 Plans Explained [2026] | ProPicked",
+      "url": "https://propicked.com/saas/twenty-crm/pricing",
+      "snippet": ""
+    }
+  ]
+}

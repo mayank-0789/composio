@@ -1,0 +1,45 @@
+{
+  "answer": "Yes, Asana provides self-serve access to its REST API on all plans, including the free Personal tier. You can begin by creating a Personal Access Token (PAT) within your account settings to authenticate requests. While free accounts can access the API, they are subject to a rate limit of 150 requests per minute, compared to 1500 for paid tiers. For testing purposes, you can use your existing workspace or request a developer sandbox to access premium features. Detailed documentation, authentication methods, and an interactive API explorer are available at the Asana developer portal.",
+  "results": [
+    {
+      "title": "Asana Pricing | Personal, Starter, Advanced, & Enterprise plans • Asana",
+      "url": "https://asana.com/pricing?dce2=true",
+      "snippet": ""
+    },
+    {
+      "title": "Asana subscriptions & pricing guide | Asana Help Center",
+      "url": "https://help.asana.com/s/article/asana-subscriptions-and-pricing?language=en_US",
+      "snippet": ""
+    },
+    {
+      "title": "Build an app with Asana",
+      "url": "https://asana.com/developers/documentation",
+      "snippet": ""
+    },
+    {
+      "title": "Developer sandbox",
+      "url": "https://developers.asana.com/docs/developer-sandbox",
+      "snippet": ""
+    },
+    {
+      "title": "Authentication",
+      "url": "https://developers.asana.com/docs/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Rate limits",
+      "url": "https://developers.asana.com/docs/rate-limits",
+      "snippet": ""
+    },
+    {
+      "title": "Plans, pricing, and billing FAQ",
+      "url": "https://help.asana.com/s/topic/0TOPc0000001KwUOAU/plans-pricing-and-billing-faq?language=en_US",
+      "snippet": ""
+    },
+    {
+      "title": "FAQ",
+      "url": "https://developers.asana.com/docs/faq",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "one_liner": "Xero offers a broad REST accounting/finance API secured via OAuth2 (authorization code or client-credentials Custom Connections), with a free self-serve developer Starter tier, official multi-language SDKs, and an existing official MCP server, making it buildable now for agent toolkits.",
+  "auth_methods": [
+    {
+      "method": "OAuth2",
+      "notes": "Standard authorization code flow for user-delegated access; also supports OAuth2 client credentials grant via 'Custom Connections' for single-org machine-to-machine access. Access tokens are bearer tokens expiring in 30 minutes, refreshable via refresh tokens."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Free Starter developer tier available with no monthly fee, up to 5 connections, full access to docs/SDKs/demo company. Moving beyond Starter tier (more connections/features) requires adding a credit card.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Xero Accounting API plus additional APIs (Payroll, Files, Assets, Projects, Identity) with official OpenAPI specs and SDKs in Python, Ruby, Node, Java, .NET"
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://github.com/XeroAPI/xero-mcp-server"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://developer.xero.com/pricing",
+      "supports": "Free Starter tier for developers with no monthly fee, up to 5 connections"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/XeroAPI/Xero-OpenAPI/master/xero-identity.yaml",
+      "supports": "OAuth2 auth flows, bearer AccessToken, RefreshToken schema, Connections endpoints"
+    },
+    {
+      "url": "https://github.com/XeroAPI/xero-python/blob/master/README.md",
+      "supports": "Official Python SDK exists for Xero API"
+    },
+    {
+      "url": "https://developer.xero.com/faq/pricing-and-policy-updates",
+      "supports": "Details on pricing tiers and credit card requirement beyond Starter tier"
+    }
+  ],
+  "confidence": 0.85,
+  "flags": []
+}

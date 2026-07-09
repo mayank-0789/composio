@@ -1,0 +1,45 @@
+{
+  "answer": "A ClickUp MCP server is a bridge that enables AI assistants like Claude to interact directly with your ClickUp workspace using the Model Context Protocol [1][2][3]. These servers expose ClickUp API endpoints as typed tools, allowing AI to perform actions such as creating or updating tasks, tracking time, managing docs, and posting chat messages using natural language [1][4][3].\n\nSeveral open-source implementations exist, varying in feature depth:\n\nThe taazkareem and helbertparanhos versions are highly comprehensive, offering multi-account support, intelligent name-to-ID resolution, and support for complex domains like goals and custom fields [1][4]. Helbertparanhos specifically provides over 160 typed tools plus a clickup_raw escape hatch for full API access [4]. Other implementations, such as those by Kirra01, Nazruden, and bravoure, focus on core task and hierarchy management with varying degrees of complexity [2][5][6].\n\nTo connect, you typically configure your MCP client (like Claude Desktop or Cursor) with your ClickUp Personal API Token and the server's execution command [3][7]:\n\n```json\n{\n  \"mcpServers\": {\n    \"clickup\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"@taazkareem/clickup-mcp-server\"],\n      \"env\": {\n        \"CLICKUP_API_TOKEN\": \"pk_...\"\n      }\n    }\n  }\n}\n```\n\nMost servers support standard features like automatic rate-limit handling (429 backoff) and environment-based configuration [4][2][3]. Ensure you verify the specific toolset provided by your chosen repository, as some are optimized for simple task tracking while others support full workspace automation [1][3][6].",
+  "results": [
+    {
+      "title": "taazkareem/clickup-mcp-server",
+      "url": "https://github.com/TaazKareem/clickup-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Kirra01/clickup-mcp-server",
+      "url": "https://github.com/Kirra01/clickup-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "arslan8122/clickup-mcp",
+      "url": "https://github.com/arslan8122/clickup-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "helbertparanhos/clickup-mcp-pro",
+      "url": "https://github.com/helbertparanhos/clickup-mcp-pro",
+      "snippet": ""
+    },
+    {
+      "title": "Nazruden/clickup-mcp-server",
+      "url": "https://github.com/nazruden/clickup-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "bravoure/clickup-mcp",
+      "url": "https://github.com/bravoure/clickup-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "sksudeepvarma/clickup-mcp",
+      "url": "https://github.com/sksudeepvarma/clickup-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "@taazkareem/clickup-mcp-server",
+      "url": "https://www.npmjs.com/package/@taazkareem/clickup-mcp-server",
+      "snippet": ""
+    }
+  ]
+}

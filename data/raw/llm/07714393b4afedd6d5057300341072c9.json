@@ -1,0 +1,62 @@
+{
+  "one_liner": "Jira offers a mature, well-documented REST API (Cloud and Data Center) with self-serve API token or OAuth2 access on all plans including free, making it highly buildable for agent toolkits; multiple community MCP servers already exist.",
+  "auth_methods": [
+    {
+      "method": "OAuth2",
+      "notes": "Recommended for Cloud and Data Center integrations; 3LO OAuth2 for Cloud."
+    },
+    {
+      "method": "API key",
+      "notes": "Basic auth using email + API token, generated via Atlassian account settings; recommended only for scripts/bots, not production."
+    },
+    {
+      "method": "Token",
+      "notes": "Personal Access Tokens (PATs) supported for Data Center instances."
+    },
+    {
+      "method": "Other",
+      "notes": "JWT used for Atlassian Connect apps; OAuth 1.0a is deprecated but still available."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Full REST API access is included on Jira's free Cloud plan; developers can self-generate API tokens from account settings with no special developer license required.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Extensive REST API covering issues, projects, boards, sprints, backlogs, epics, deployments, builds, feature flags, security info, and more across both Cloud and Data Center platforms."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://github.com/liteart/jira-mcp"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://developer.atlassian.com/cloud/jira/software/rest/intro/",
+      "supports": "Describes REST API authentication methods including JWT for Connect apps and overall API structure."
+    },
+    {
+      "url": "https://docs.atlassian.com/software/jira/docs/api/REST/9.14.0/",
+      "supports": "Details supported authentication methods for Data Center: OAuth2, PAT, OAuth1.0a, Basic HTTP."
+    },
+    {
+      "url": "https://developer.atlassian.com/cloud/jira/software/basic-auth-for-rest-apis/",
+      "supports": "Explains basic auth using email and API token via Base64 encoding."
+    },
+    {
+      "url": "https://community.atlassian.com/forums/Jira-questions/Use-REST-API-with-Jira-instance-on-Free-Plan/qaq-p/2955396",
+      "supports": "Confirms REST API access is available on Jira's free plan."
+    },
+    {
+      "url": "https://www.atlassian.com/software/free",
+      "supports": "Describes free Atlassian Cloud software plans including Jira."
+    }
+  ],
+  "confidence": 0.9,
+  "flags": [
+    "Multiple unofficial/community MCP servers exist rather than an official Atlassian-maintained MCP server",
+    "Basic auth explicitly discouraged for production use",
+    "OAuth 1.0a deprecated but still listed as an option"
+  ]
+}

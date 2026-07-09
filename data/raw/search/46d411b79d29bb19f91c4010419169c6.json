@@ -1,0 +1,45 @@
+{
+  "answer": "The Aircall API supports two authentication methods: HTTP Basic Auth and OAuth2 [1][2].\n\nUse Basic Auth if you are an Aircall customer building for your own account [1]. Generate your API ID and API Token via the Aircall Dashboard under Integrations & API [3][4]. Authenticate by setting the Authorization header to a Base64-encoded string of your credentials [2][5]:\n\n```bash\nAuthorization: Basic <base64(api_id:api_token)>\n```\n\nUse OAuth2 for integrations intended for multiple customers, such as those listed in the Aircall App Marketplace [1]. This method utilizes a Bearer token for authorization [2].",
+  "results": [
+    {
+      "title": "Aircall Help Center | Aircall API and Webhooks",
+      "url": "https://support.aircall.io/en-gb/articles/10375355327517",
+      "snippet": ""
+    },
+    {
+      "title": "Aircall Python API Docs | dltHub",
+      "url": "https://dlthub.com/context/source/aircall",
+      "snippet": ""
+    },
+    {
+      "title": "Aircall Help Center | Getting your Aircall API key",
+      "url": "https://support.aircall.io/en-gb/articles/10375395181853",
+      "snippet": ""
+    },
+    {
+      "title": "Set up a connection to Aircall – Celigo Help Center",
+      "url": "https://docs.celigo.com/hc/en-us/articles/29180623613723-Set-up-a-connection-to-Aircall",
+      "snippet": ""
+    },
+    {
+      "title": "Getting Started With the Aircall API: Developer Documentation • AeroLeads",
+      "url": "https://aeroleads.com/blog/getting-started-with-aircall-api-developer-documentation/",
+      "snippet": ""
+    },
+    {
+      "title": "Authorization | Nexla Docs",
+      "url": "https://docs.nexla.com/user-guides/connectors/aircall_api/aircall_api_auth",
+      "snippet": ""
+    },
+    {
+      "title": "Riprock/aircall-api",
+      "url": "https://github.com/Riprock/aircall-api",
+      "snippet": ""
+    },
+    {
+      "title": "github.com/dinistavares/go-aircall-api v1.0.9",
+      "url": "https://pkg.go.dev/github.com/dinistavares/go-aircall-api",
+      "snippet": ""
+    }
+  ]
+}

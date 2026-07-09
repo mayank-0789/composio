@@ -1,0 +1,45 @@
+{
+  "answer": "Several Mermaid Model Context Protocol (MCP) servers are available, all of which use the Mermaid CLI or Puppeteer to validate and render diagrams into formats like SVG or PNG [1][2][3][4][5]. While implementations vary by programming language (Node.js, Python, or Java) and configuration, they generally provide tools for syntax validation and image generation [1][3][6][7].\n\nTo set one up, you typically install the package (often via npm or npx) and add the server configuration to your MCP client's settings file (e.g., Claude Desktop or VS Code) [1][2][8][5].\n\nExample configuration for a Node.js-based server:\n```json\n{\n  \"mcpServers\": {\n    \"mermaid-server\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"package-name-here\"]\n    }\n  }\n}\n```\n\nKey features across these servers include theme customization, background color selection, and multiple output formats [4][6][5]. Some servers allow saving files directly to disk, while others return base64-encoded image data for direct use in chat [3][5].",
+  "results": [
+    {
+      "title": "abekdwight/mermaid-mcp-server",
+      "url": "https://github.com/abekdwight/mermaid-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "rtuin/mcp-mermaid-validator",
+      "url": "https://github.com/rtuin/mcp-mermaid-validator",
+      "snippet": ""
+    },
+    {
+      "title": "andrewginns/mermaid-mcp-server",
+      "url": "https://github.com/andrewginns/mermaid-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "mermaid-mcp v0.1.2",
+      "url": "https://pypi.org/project/mermaid-mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "README.md at 26f515bcfba0121d5b30c298c112ee4dd2e8be3f · peng-shawn/mermaid-mcp-server",
+      "url": "https://github.com/peng-shawn/mermaid-mcp-server/blob/26f515bcfba0121d5b30c298c112ee4dd2e8be3f/README.md",
+      "snippet": ""
+    },
+    {
+      "title": "aviciot/mcp_mermaid",
+      "url": "https://github.com/aviciot/mcp_mermaid",
+      "snippet": ""
+    },
+    {
+      "title": "unravel-team/mcp-mermaidjs-server",
+      "url": "https://github.com/unravel-team/mcp-mermaidjs-server",
+      "snippet": ""
+    },
+    {
+      "title": "Narasimhaponnada/mermaid-mcp",
+      "url": "https://github.com/Narasimhaponnada/mermaid-mcp",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "one_liner": "Twenty is an open-source CRM offering full REST/GraphQL API access via API keys, OAuth2 (with dynamic client registration + PKCE), or JWT, self-serve on both free self-hosted and paid cloud plans.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Created via Settings > API & Webhooks; used as Bearer token; full workspace access."
+    },
+    {
+      "method": "OAuth2",
+      "notes": "Authorization code + PKCE for user-facing apps, client credentials for server-to-server; dynamic client registration per RFC 7591 (no manual dashboard setup)."
+    },
+    {
+      "method": "Token",
+      "notes": "JWT tokens for session-based web app auth; personal access tokens also available for long-lived personal use."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Free self-hosted version includes full Pro-tier REST/GraphQL API access with no restrictions. On managed cloud, API access requires Pro plan starting at $9/user/month; no separate API-only tier. API keys and OAuth client registration are fully self-serve (no approval process needed).",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Both REST and GraphQL APIs are available and fully documented, plus a JavaScript SDK. Custom objects/fields are automatically exposed via the API."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://github.com/Praeses0/twenty-mcp"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://twentyhq-twenty.mintlify.app/developers/api/authentication",
+      "supports": "Details API key, OAuth, JWT, and personal access token authentication methods with examples."
+    },
+    {
+      "url": "https://docs.twenty.com/developers/extend/oauth",
+      "supports": "Describes OAuth2 authorization code+PKCE and client credentials flows, dynamic client registration via RFC 7591, and scopes."
+    },
+    {
+      "url": "https://twentyhq-twenty.mintlify.app/developers/api/rest-api",
+      "supports": "Confirms REST API surface."
+    },
+    {
+      "url": "https://twentyhq-twenty.mintlify.app/developers/api/graphql-api",
+      "supports": "Confirms GraphQL API surface."
+    },
+    {
+      "url": "https://twenty.com/pricing",
+      "supports": "Confirms Pro plan at $9/user/month includes API access; self-hosted free tier includes full API access."
+    }
+  ],
+  "confidence": 0.8,
+  "flags": [
+    "Multiple third-party MCP server implementations exist (mhenry3164, studio7A, Praeses0 fork) but none appear to be an official first-party Twenty MCP server.",
+    "Self-hosted vs cloud API parity should be double-checked for edge cases (e.g., OAuth dynamic registration availability on self-hosted instances)."
+  ]
+}

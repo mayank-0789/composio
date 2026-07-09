@@ -1,4 +1,5 @@
 import Anthropic from "@anthropic-ai/sdk";
+import { AnthropicBedrock } from "@anthropic-ai/bedrock-sdk";
 import { z } from "zod";
 import { zodToJsonSchema } from "zod-to-json-schema";
 import type { Cache } from "./cache.js";
@@ -12,8 +13,23 @@ export type ExtractArgs<T> = {
 };
 export interface Llm { extract<T>(args: ExtractArgs<T>): Promise<T>; }
 
-export function createLlm(deps: { apiKey: string; client?: AnthropicLike }, cache: Cache): Llm {
-  const client = deps.client ?? (new Anthropic({ apiKey: deps.apiKey }) as unknown as AnthropicLike);
+const BEDROCK_MODELS: Record<string, string | undefined> = {
+  "claude-sonnet-5": process.env.BEDROCK_MODEL_SONNET,
+  "claude-opus-4-8": process.env.BEDROCK_MODEL_OPUS ?? process.env.BEDROCK_MODEL_SONNET,
+};
+
+function buildClient(deps: { apiKey?: string; client?: AnthropicLike }): { client: AnthropicLike; mapModel: (m: string) => string } {
+  if (deps.client) return { client: deps.client, mapModel: (m) => m };
+  if (process.env.LLM_PROVIDER === "bedrock") {
+    const client = new AnthropicBedrock({ awsRegion: process.env.AWS_REGION }) as unknown as AnthropicLike;
+    return { client, mapModel: (m) => BEDROCK_MODELS[m] ?? m };
+  }
+  const client = new Anthropic({ apiKey: deps.apiKey }) as unknown as AnthropicLike;
+  return { client, mapModel: (m) => m };
+}
+
+export function createLlm(deps: { apiKey?: string; client?: AnthropicLike }, cache: Cache): Llm {
+  const { client, mapModel } = buildClient(deps);
   return {
     async extract(args) {
       const key = cache.keyFor({ m: args.model, s: args.system, u: args.user, n: args.schemaName });
@@ -25,7 +41,7 @@ export function createLlm(deps: { apiKey: string; client?: AnthropicLike }, cach
       let lastErr = "";
       for (let attempt = 0; attempt < 2; attempt++) {
         const res = await client.messages.create({
-          model: args.model, max_tokens: 4096,
+          model: mapModel(args.model), max_tokens: 4096,
           system: args.system,
           tools: [{ name: tool, description: "Emit the structured result.", input_schema: inputSchema }],
           tool_choice: { type: "tool", name: tool },

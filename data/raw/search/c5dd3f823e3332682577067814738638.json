@@ -1,0 +1,45 @@
+{
+  "answer": "NotebookLM is a source-grounded AI research assistant that is free to use with any Google account [1][2][3]. There is no standalone paid product; instead, higher usage limits and features are unlocked by subscribing to Google AI plans (Plus, Pro, or Ultra), qualifying Google Workspace editions, or enterprise Google Cloud licenses [4][1][5].\n\nThere is no public, self-serve developer API for consumer users [6][3]. Programmatic access is restricted to the NotebookLM Enterprise API, which is available only to organizations through Google Cloud via Discovery Engine v1alpha endpoints [6].",
+  "results": [
+    {
+      "title": "NotebookLM Pricing 2026: Free vs Plus vs Pro vs Ultra",
+      "url": "https://felloai.com/notebooklm-pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "NotebookLM Pricing Explained: Free and Paid Tier Costs in 2026",
+      "url": "https://webaistack.com/notebooklm-pricing-explained-a-comprehensive-guide-to-googles-ai-research-tool-costs/",
+      "snippet": ""
+    },
+    {
+      "title": "Google NotebookLM Review & Pricing (2026)",
+      "url": "https://toolcurrent.com/tools/google-notebooklm",
+      "snippet": ""
+    },
+    {
+      "title": "Upgrade NotebookLM - NotebookLM Help",
+      "url": "https://support.google.com/notebooklm/answer/16213268?hl=en&ref_topic=16175214",
+      "snippet": ""
+    },
+    {
+      "title": "NotebookLM Review (2026): Citations, Audio Overviews & Pricing",
+      "url": "https://www.toolworthy.ai/tool/notebooklm-google",
+      "snippet": ""
+    },
+    {
+      "title": "Mastering the Notebook LM API: Developer Guide 2026",
+      "url": "https://webaistack.com/mastering-the-notebook-lm-api-a-comprehensive-guide-for-developers-and-data-scientists/",
+      "snippet": ""
+    },
+    {
+      "title": "NotebookLM announces NotebookLM Plus and other new features",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/notebooklm-new-features-december-2024/",
+      "snippet": ""
+    },
+    {
+      "title": "NotebookLM Review 2026: Is It Worth Paying For?",
+      "url": "https://saaszap.com/notebooklm-review/",
+      "snippet": ""
+    }
+  ]
+}

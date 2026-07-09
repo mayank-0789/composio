@@ -1,0 +1,96 @@
+{
+  "verdicts": [
+    {
+      "field": "existing_mcp",
+      "status": "contradicted",
+      "note": "The record claims 'official_meta_mcp_exists' and links to 'https://mcp.facebook.com/ads', but no evidence shows Meta hosts an MCP server at that URL. The only MCP evidence is the open-source community implementation at https://github.com/pipeboard-co/meta-ads-mcp, which is NOT an official Meta server. The URL 'https://mcp.facebook.com/ads' appears fabricated."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence from api-inventory.md confirms OAuth2 with User/System User/Page tokens, ads_management/ads_read scopes, and access_token parameter or Bearer header. Matches record."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Evidence confirms Development Access is self-serve but Standard/Advanced Access requires App Review and business verification (singhamandeep.com, get-ryze.ai). 'admin-approval' is correct."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "supported",
+      "note": "Evidence from get-ryze.ai confirms Development Access is 60 points/300s, Standard Access requires App Review. The record's description aligns."
+    },
+    {
+      "field": "api_surface",
+      "status": "supported",
+      "note": "api-inventory.md and DEVELOPER_GUIDE.md confirm REST API (Graph API-based Marketing API) with broad surface covering campaigns, ads, insights, audiences. Official PHP SDK exists."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "Evidence supports 'buildable-with-caveats': Development Access is self-serve but heavily rate-limited (60 points/300s), production requires App Review. Matches the stated blocker."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "Evidence confirms dev access is 60 points/300s and only for testing on owned accounts; production requires App Review and business verification (singhamandeep.com, get-ryze.ai)."
+    },
+    {
+      "field": "flags",
+      "status": "contradicted",
+      "note": "Flag 'official_meta_mcp_exists' is false; no evidence shows Meta hosts an MCP server. Only community open-source MCP (pipeboard-co/meta-ads-mcp) exists."
+    }
+  ],
+  "revised": {
+    "id": 32,
+    "name": "Meta Ads",
+    "website": "developers.facebook.com/docs/marketing-apis",
+    "category": "Marketing, Ads, Email and Social",
+    "one_liner": "Meta Ads (Marketing API) lets developers programmatically manage Facebook/Instagram advertising campaigns via a broad REST API secured by OAuth2, free to use but gated by tiered rate limits requiring Meta App Review for production-scale access.",
+    "auth_methods": [
+      {
+        "method": "OAuth2",
+        "notes": "User, System User, or Page access tokens with ads_management/ads_read scopes; passed as access_token query param or Authorization: Bearer header."
+      }
+    ],
+    "self_serve": "admin-approval",
+    "self_serve_notes": "Development Access tier is self-serve with a Facebook developer app (limited quota, 60 points/300s), but production-grade Standard/Advanced Access requires Meta App Review, business verification, and use-case approval.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "Graph API-based Marketing API covering campaigns, ad sets, ads, creatives, insights, audiences, etc. Also has an official PHP Business SDK and other language SDKs."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "Full production access requires Meta App Review and business verification; default dev access is heavily rate-limited (60 points/300s) and only usable for testing on owned accounts.",
+    "evidence": [
+      {
+        "url": "https://github.com/gupsammy/meta-ads-cli/blob/master/api-inventory.md",
+        "supports": "OAuth2 auth details, scopes, rate limits, REST API surface"
+      },
+      {
+        "url": "https://github.com/facebook/facebook-php-business-sdk/blob/main/DEVELOPER_GUIDE.md",
+        "supports": "Official SDK usage with app ID/secret/access token"
+      },
+      {
+        "url": "https://singhamandeep.com/what-is-meta-advanced-access/",
+        "supports": "App Review process required for Advanced Access"
+      },
+      {
+        "url": "https://www.get-ryze.ai/blog/meta-marketing-api-free-tier-limitations-and-quotas",
+        "supports": "Tiered access model: Development, Standard, Advanced"
+      },
+      {
+        "url": "https://github.com/pipeboard-co/meta-ads-mcp/tree/main",
+        "supports": "Existence of open-source Meta Ads MCP servers"
+      }
+    ],
+    "confidence": 0.85,
+    "flags": [
+      "requires_app_review_for_production",
+      "multiple_competing_open_source_mcp_implementations"
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "The Ahrefs MCP server is an official, remote service that allows AI assistants like Claude, ChatGPT, and Cursor to securely access Ahrefs SEO and marketing data [1][2][3]. It enables automated workflows for keyword research, backlink analysis, rank tracking, and site audits [2][4].\n\nTo use the service, you must have an active Ahrefs plan (Lite or higher) [1][2]. The server is hosted at the following endpoint:\n\n`https://api.ahrefs.com/mcp/mcp`\n\nConfigure your MCP client by adding this URL to your configuration file [2][5]. For clients requiring authentication, generate an MCP-scoped API key in your Ahrefs workspace settings and provide it as a Bearer token [2]. Note that older, self-hosted npm packages (such as `@ahrefs/mcp`) were archived in February 2026 and should not be used [6][2].",
+  "results": [
+    {
+      "title": "What is Ahrefs MCP | Ahrefs for Developers",
+      "url": "https://docs.ahrefs.com/en/mcp/docs/introduction",
+      "snippet": ""
+    },
+    {
+      "title": "Ahrefs MCP Server - Setup, Use Cases & Examples",
+      "url": "https://growthengineer.ai/mcp-servers/ahrefs",
+      "snippet": ""
+    },
+    {
+      "title": "What Is an MCP Server, and Why Should Marketers Care?",
+      "url": "https://ahrefs.com/blog/what-is-mcp-server/",
+      "snippet": ""
+    },
+    {
+      "title": "Official Ahrefs MCP Server | PulseMCP",
+      "url": "https://www.pulsemcp.com/servers/ahrefs",
+      "snippet": ""
+    },
+    {
+      "title": "Ahrefs MCP Server - Official Setup Guide | Apigene",
+      "url": "https://apigene.ai/mcp/official/ahrefs",
+      "snippet": ""
+    },
+    {
+      "title": "ahrefs/ahrefs-mcp-server",
+      "url": "https://github.com/ahrefs/ahrefs-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "@ahrefs/mcp",
+      "url": "https://www.npmjs.com/package/@ahrefs/mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Ahrefs — MCP server | explainx.ai | explainx.ai",
+      "url": "https://explainx.ai/mcp-servers/ahrefs",
+      "snippet": ""
+    }
+  ]
+}

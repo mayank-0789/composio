@@ -1,0 +1,45 @@
+{
+  "answer": "Bright Data offers two primary authentication methods: API Access and Native Access [1].\n\nAPI Access uses an API key as a Bearer token in the request header [1]. This is required for REST API operations, such as using the Web Unlocker or SERP API [1][2]. You must include the key in your requests as shown below [1][3]:\n\n```sh\nAuthorization: Bearer YOUR_API_KEY\n```\n\nNative Access uses a proxy username and password combination, which is typically reserved for direct proxy connections in browsers or third-party tools that do not support REST API operations [1][2]. These credentials are provided as a single string parameter, usually via a proxy-compatible configuration [1][2].",
+  "results": [
+    {
+      "title": "Authentication - Bright Data Docs",
+      "url": "https://docs.brightdata.com/api-reference/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Proxy API Authentication - Bright Data Docs",
+      "url": "https://docs.brightdata.com/api-reference/proxy/proxy_api_auth",
+      "snippet": ""
+    },
+    {
+      "title": "Unlocker async request - Bright Data Docs",
+      "url": "https://docs.brightdata.com/api-reference/rest-api/unlocker/request",
+      "snippet": ""
+    },
+    {
+      "title": "Send your first SERP API request - Bright Data Docs",
+      "url": "https://docs.brightdata.com/scraping-automation/serp-api/send-your-first-request",
+      "snippet": ""
+    },
+    {
+      "title": "Python SDK - Bright Data Docs",
+      "url": "https://docs.brightdata.com/api-reference/SDK",
+      "snippet": ""
+    },
+    {
+      "title": "Scraper async requests - Bright Data Docs",
+      "url": "https://docs.brightdata.com/api-reference/rest-api/scraper/asynchronous-requests",
+      "snippet": ""
+    },
+    {
+      "title": "SERP API - Bright Data Docs",
+      "url": "https://docs.brightdata.com/api-reference/rest-api/serp/serp-api",
+      "snippet": ""
+    },
+    {
+      "title": "Synchronous requests - Bright Data Docs",
+      "url": "https://docs.brightdata.com/api-reference/scrapers/synchronous-requests",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "Reducto uses API key-based authentication [1][2]. To authenticate, create an API key in Reducto Studio and set it as the REDUCTO_API_KEY environment variable [1][3].\n\nFor REST API calls, include the key in the Authorization header as a Bearer token [1]:\n\n```bash\n-H \"Authorization: Bearer $REDUCTO_API_KEY\"\n```\n\nThe Python and Node.js SDKs automatically detect and use this environment variable [1][2][3]. For the Go SDK, you must pass the key explicitly to the client initialization [1][4]:\n\n```go\nclient := reducto.NewClient(option.WithAPIKey(os.Getenv(\"REDUCTO_API_KEY\")))\n```",
+  "results": [
+    {
+      "title": "Reducto API Reference for Coding Agents - Reducto",
+      "url": "https://docs.reducto.ai/agent-guide",
+      "snippet": ""
+    },
+    {
+      "title": "Python SDK Overview - Reducto",
+      "url": "https://docs.reducto.ai/sdk/python/overview",
+      "snippet": ""
+    },
+    {
+      "title": "API Quickstart",
+      "url": "https://reducto.mintlify.app/quickstart",
+      "snippet": ""
+    },
+    {
+      "title": "Go SDK Overview",
+      "url": "https://docs.reducto.ai/sdk/go/overview",
+      "snippet": ""
+    },
+    {
+      "title": "Parse - Reducto",
+      "url": "https://docs.reducto.ai/api-reference/parse",
+      "snippet": ""
+    },
+    {
+      "title": "Upload - Reducto",
+      "url": "https://docs.reducto.ai/upload/overview",
+      "snippet": ""
+    },
+    {
+      "title": "Presigned URL Upload method - Reducto",
+      "url": "https://docs.reducto.ai/recipes/presigned-url-upload-method",
+      "snippet": ""
+    },
+    {
+      "title": "Uploading Large Files - Reducto",
+      "url": "https://docs.reducto.ai/upload/large-files",
+      "snippet": ""
+    }
+  ]
+}

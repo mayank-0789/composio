@@ -1,0 +1,57 @@
+{
+  "one_liner": "Zoho CRM offers a broad, mature REST API (v8) with OAuth2 authentication, self-serve developer registration, official SDKs, and both official and community MCP servers, making it buildable now for AI-agent toolkits.",
+  "auth_methods": [
+    {
+      "method": "OAuth2",
+      "notes": "Standard OAuth2 grant/access/refresh token flow via Zoho API Console; also supports Self Client (server-side, no redirect) and Client Credentials flow for machine-to-machine use. Access token passed as 'Zoho-oauthtoken {access_token}' header."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Developers can self-register clients at api-console.zoho.com and use free Developer Edition (free forever, dev/testing only) or Free Edition (3 users, 5,000 API credits/day, concurrency 5). Additional API credits purchasable pay-as-you-go via API Dashboard for production use.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Extensive REST API (v8) covering CRM modules, metadata, customization, workflow automation, plus official SDKs (Python, Node.js, PHP, Java, C#, Ruby, Scala, TypeScript, JavaScript) and OpenAPI spec available."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://www.zoho.com/crm/developer/"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://www.zoho.com/crm/developer/docs/api/v8/auth-request.html",
+      "supports": "OAuth2 authorization request flow (grant tokens, self-client, client credentials)"
+    },
+    {
+      "url": "https://www.zoho.com/crm/developer/docs/api/v8/client-credentials.html",
+      "supports": "Client Credentials OAuth2 flow support"
+    },
+    {
+      "url": "https://www.zoho.com/crm/developer/docs/sdk/server-side/python-sdk.html",
+      "supports": "Self-serve client registration via Zoho API Console, SDK usage, OAuth2 token handling"
+    },
+    {
+      "url": "https://www.zoho.com/crm/zohocrm-pricing.html",
+      "supports": "Free edition for up to 3 users"
+    },
+    {
+      "url": "https://www.zoho.com/crm/developer/developer-edition.html",
+      "supports": "Free-forever Developer Edition for building/testing"
+    },
+    {
+      "url": "https://www.zoho.com/crm/developer/docs/api/v8/api-limits.html",
+      "supports": "API credit limits and purchase details"
+    },
+    {
+      "url": "https://www.zoho.com/crm/developer/docs/api/v8/openapi-specification.html",
+      "supports": "Full OpenAPI 3.0 spec covering broad REST API surface including modules, fields, layouts, metadata"
+    }
+  ],
+  "confidence": 0.85,
+  "flags": [
+    "MCP servers exist both officially (Zoho-hosted, four pre-built servers) and via open-source community projects (Python/Node.js), per search summary though not independently verified via a dedicated Zoho MCP doc URL in evidence.",
+    "Production API usage requires a paid Zoho CRM plan beyond the free/dev edition once credit limits are exceeded."
+  ]
+}

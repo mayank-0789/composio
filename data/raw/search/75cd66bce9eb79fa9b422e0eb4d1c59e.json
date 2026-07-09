@@ -1,0 +1,45 @@
+{
+  "answer": "Ahrefs API v3 utilizes two primary authentication methods: long-lived API keys and OAuth 2.0 [1][2][3].\n\nFor API keys, generate them in your Account settings and provide the key in the HTTP Authorization header [1][4]:\n`Authorization: Bearer YOUR_API_KEY`\n\nFor applications, Ahrefs Connect uses OAuth 2.0 with PKCE [3]. This flow requires authorizing the application via a redirect to Ahrefs, followed by a POST request to exchange the authorization code for an access token [3]. The access token is then used as a Bearer token in the Authorization header [3]. \n\nPublic crawler endpoints do not require any authentication [5][6].",
+  "results": [
+    {
+      "title": "API keys creation and management | Ahrefs for Developers",
+      "url": "https://docs.ahrefs.com/en/api/docs/api-keys-creation-and-management",
+      "snippet": ""
+    },
+    {
+      "title": "Ahrefs for Developers",
+      "url": "https://docs.ahrefs.com/",
+      "snippet": ""
+    },
+    {
+      "title": "OAuth guide | Ahrefs for Developers",
+      "url": "https://docs.ahrefs.com/en/ahrefs-connect/docs/oauth-guide",
+      "snippet": ""
+    },
+    {
+      "title": "Introduction | Ahrefs for Developers",
+      "url": "https://docs.ahrefs.com/en/api/docs/introduction",
+      "snippet": ""
+    },
+    {
+      "title": "ahrefs/ahrefs-python",
+      "url": "https://github.com/ahrefs/ahrefs-python",
+      "snippet": ""
+    },
+    {
+      "title": "Public | Ahrefs Docs",
+      "url": "https://docs.ahrefs.com/api/reference/public",
+      "snippet": ""
+    },
+    {
+      "title": "API guide | Ahrefs for Developers",
+      "url": "https://docs.ahrefs.com/ahrefs-connect/docs/api-guide",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://authsome.ai/docs/integrations/api-key/ahrefs",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "answer": "The Google Ads API is free to use at all access levels, including Basic and Standard access [1][2]. There is no paid tier for the API itself; however, you must obtain a developer token through your Google Ads manager account and apply for the appropriate access level based on your operational needs [2][3]. While there are no charges for API usage, you may be subject to non-compliance fees if you fail to meet Required Minimum Functionality requirements during an audit of your tool [1][2]. You can manage your access and token application via the API Center in your Google Ads manager account [3][4].",
+  "results": [
+    {
+      "title": "Rate Sheet  |  Google Ads API  |  Google for Developers",
+      "url": "https://developers.google.com/google-ads/api/docs/rate-sheet",
+      "snippet": ""
+    },
+    {
+      "title": "Access levels and RMF  |  Google Ads API  |  Google for Developers",
+      "url": "https://developers.google.com/google-ads/api/docs/productionize/access-levels",
+      "snippet": ""
+    },
+    {
+      "title": "Developer Token  |  Google Ads API  |  Google for Developers",
+      "url": "https://developers.google.com/google-ads/api/docs/api-policy/developer-token",
+      "snippet": ""
+    },
+    {
+      "title": "Quick start  |  Google Ads API  |  Google for Developers",
+      "url": "https://developers.google.com/google-ads/api/docs/get-started/make-first-call",
+      "snippet": ""
+    },
+    {
+      "title": "Access Levels and Permissible Use  |  Google Ads API  |  Google for Developers",
+      "url": "https://developers.google.com/google-ads/api/docs/api-policy/access-levels",
+      "snippet": ""
+    },
+    {
+      "title": "Cloud-managed access levels  |  Google Ads API  |  Google for Developers",
+      "url": "https://developers-dot-devsite-v2-prod.appspot.com/google-ads/api/docs/concepts/no-developer-token",
+      "snippet": ""
+    },
+    {
+      "title": "Access Levels and Permissible Use  |  Google Ads API  |  Google for Developers",
+      "url": "https://developers.google.com/google-ads/api/docs/access-levels",
+      "snippet": ""
+    },
+    {
+      "title": "API Limits and Quotas  |  Google Ads API  |  Google for Developers",
+      "url": "https://developers.google.com/google-ads/api/docs/best-practices/quotas",
+      "snippet": ""
+    }
+  ]
+}

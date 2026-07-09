@@ -1,0 +1,45 @@
+{
+  "answer": "The official Linear MCP server is a centrally hosted, managed interface designed to connect AI models like Claude and Cursor to Linear data [1]. It supports OAuth 2.1 authentication and Streamable HTTP transports at the endpoint https://mcp.linear.app/mcp [1].\n\nTo use it in a compatible client, add the server using the following configuration [1]:\n\n```json\n{\n  \"mcpServers\": {\n    \"linear\": {\n      \"command\": \"npx\",\n      \"args\": [\"-y\", \"mcp-remote\", \"https://mcp.linear.app/mcp\"]\n    }\n  }\n}\n```\n\nBeyond the official server, several community-maintained alternatives exist for specific use cases, such as the lsmc-bio/linear-mcp server, which provides more comprehensive support for Linear hierarchies like initiatives, milestones, and workspace-wide search [2].",
+  "results": [
+    {
+      "title": "MCP server",
+      "url": "https://linear.app/docs/mcp.md",
+      "snippet": ""
+    },
+    {
+      "title": "lsmc-bio/linear-mcp",
+      "url": "https://github.com/lsmc-bio/linear-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "GitHub - jerhadf/linear-mcp-server: A server that integrates Linear's project management system with the Model Context Protocol (MCP) to allow LLMs to interact with Linear. · GitHub",
+      "url": "https://p.rst.im/q/github.com/jerhadf/linear-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "linear-mcp-server",
+      "url": "https://registry.npmjs.org/linear-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "alleneubank/linear-mcp",
+      "url": "https://github.com/alleneubank/linear-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "@sylphx/linear-mcp",
+      "url": "https://registry.npmjs.org/%40sylphx%2Flinear-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "@mkusaka/mcp-server-linear",
+      "url": "https://www.npmjs.com/package/@mkusaka/mcp-server-linear",
+      "snippet": ""
+    },
+    {
+      "title": "linear-mcp v0.1.7",
+      "url": "https://pypi.org/project/linear-mcp/",
+      "snippet": ""
+    }
+  ]
+}

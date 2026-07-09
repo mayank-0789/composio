@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://viasocket.com/mcp/ecwid-by-lightspeed",
+  "reason": "There are dedicated MCP servers for Ecwid. The evidence shows at least two well-known community implementations: (1) ViaSocket provides an MCP server at https://viasocket.com/mcp/ecwid-by-lightspeed that handles authentication and API limits to connect Ecwid actions to AI platforms, and (2) Vinkius offers an Ecwid MCP server at https://vinkius.com/apps/ecwid-mcp that exposes 10 specific tools for e-commerce management including searching products, updating inventory, auditing orders, and managing customer profiles. These are distinct MCP server packages that expose Ecwid's capabilities over the Model Context Protocol, allowing AI assistants to manage Ecwid stores via natural language."
+}

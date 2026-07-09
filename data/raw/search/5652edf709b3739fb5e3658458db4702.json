@@ -1,0 +1,45 @@
+{
+  "answer": "Zoho CRM MCP allows AI agents to perform CRM operations through the Model Context Protocol, enabling natural language interaction without manual API coding [1][2]. You can use either official, pre-built servers hosted by Zoho or community-developed open-source servers [1][3][4][5].\n\nThe official Zoho implementation provides four pre-built, hosted servers—Data Insights, Data Operations, Module Customization, and Workflow & Process Automation—which you connect by adding a generated URL to your AI client's configuration [5]. Alternatively, open-source community servers are available for self-hosting via Python or Node.js, providing comprehensive CRUD, search, and metadata management tools [3][4][6][7].\n\nFor clients like Claude Desktop, add the server details to your configuration file:\n\n```json\n{\n  \"mcpServers\": {\n    \"zoho-crm\": {\n      \"url\": \"https://<your-unique-zoho-mcp-server-url>\"\n    }\n  }\n}\n```\n\nAuthentication is handled via OAuth, and operations are limited by your existing CRM user permissions [1][5].",
+  "results": [
+    {
+      "title": "Zoho CRM MCP - An Overview | Developer Tools",
+      "url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+      "snippet": ""
+    },
+    {
+      "title": "Zoho MCP | Zoho's Model Context Protocol to empower AI Agents",
+      "url": "https://www.zoho.com/mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "hemichaeli/zoho-crm-mcp-server",
+      "url": "https://github.com/hemichaeli/zoho-crm-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "MohamedEl-naagar/zoho-mcp-server",
+      "url": "https://github.com/MohamedEl-naagar/zoho-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "Zoho CRM MCP Server - Setup, Use Cases & Examples",
+      "url": "https://growthengineer.ai/mcp-servers/zoho-crm",
+      "snippet": ""
+    },
+    {
+      "title": "Rezasz/MCP-Zoho-CRM",
+      "url": "https://github.com/Rezasz/MCP-Zoho-CRM",
+      "snippet": ""
+    },
+    {
+      "title": "junnaisystems/Zoho-CRM-MCP",
+      "url": "https://github.com/junnaisystems/Zoho-CRM-MCP",
+      "snippet": ""
+    },
+    {
+      "title": "Supported Zoho services | Zoho MCP",
+      "url": "https://www.zoho.com/mcp/services/zoho-services.html",
+      "snippet": ""
+    }
+  ]
+}

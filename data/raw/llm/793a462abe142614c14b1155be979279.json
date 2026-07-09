@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://github.com/aserper/shopify-mcp",
+  "reason": "Multiple dedicated community-built MCP servers exist for Shopify, including aserper/shopify-mcp, benwmerritt/shopify-mcp, daanjonk/shopify-mcp, and others. These are distinct packages that expose Shopify's capabilities (products, orders, customers, inventory management) over the Model Context Protocol by connecting to the Shopify Admin API. They are not just API docs or the product homepage, but actual MCP server implementations."
+}

@@ -1,0 +1,116 @@
+{
+  "verdicts": [
+    {
+      "field": "existing_mcp.exists",
+      "status": "contradicted",
+      "note": "The evidence at https://mcp.higgsfield.ai/mcp returns only {\"error\":\"Unauthorized\"}, which is an API endpoint response, not proof of a dedicated MCP server. The GitHub repo https://github.com/higgsfield-ai/skills/blob/main/CLAUDE.md describes 'skills' that drive the CLI and API endpoints, but does not document an MCP server implementation. No MCP server code repository or npm package is shown. The URL is not an MCP server, just a REST endpoint."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "contradicted",
+      "note": "https://mcp.higgsfield.ai/mcp is a REST API endpoint (returns JSON error), not an MCP server repository or package. Should be removed."
+    },
+    {
+      "field": "auth_methods[1] - OAuth2 for MCP",
+      "status": "unsupported",
+      "note": "No evidence in the provided documents shows OAuth2 authentication for an MCP server. The MCP URL only returns an Unauthorized error with no authentication documentation. The CLI and SDK use API key authentication (KEY_ID:KEY_SECRET). Without confirmed MCP server existence, the OAuth2 method for MCP cannot be verified."
+    },
+    {
+      "field": "auth_methods[0] - API key",
+      "status": "supported",
+      "note": "GitHub repo higgsfield-ai/higgsfield-js confirms authentication via KEY_ID:KEY_SECRET credentials passed via HF_CREDENTIALS environment variable or config function. This matches the record."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "The flowith.io article clearly states 'API access is not available on the free tier' and requires upgrading to paid Creator or Studio plans. This confirms paid-plan requirement."
+    },
+    {
+      "field": "api_surface.type",
+      "status": "supported",
+      "note": "GitHub repos show REST API with HTTP endpoints, Node.js SDK (@higgsfield/client on npm), and CLI tool. Confirms REST API type."
+    },
+    {
+      "field": "api_surface.breadth",
+      "status": "supported",
+      "note": "Evidence shows SDK with v2 API support, CLI tool, image/video generation with 30+ models, project management, and character training capabilities. 'Medium' breadth is reasonable."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "The record correctly states 'buildable-with-caveats' with the caveat being paid subscription requirement. This is accurate based on the flowith.io pricing evidence."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "The flowith.io article explicitly states API access requires paid Creator or Studio plan, not available on free tier. This matches the stated blocker."
+    },
+    {
+      "field": "one_liner - 30+ models and MCP server claim",
+      "status": "contradicted",
+      "note": "While the SDK and API existence is confirmed, the claim of an accessible MCP server is not supported by evidence. The one_liner should remove or qualify the MCP server reference since no actual MCP server implementation is proven."
+    },
+    {
+      "field": "flags - mcp-server-exists",
+      "status": "contradicted",
+      "note": "No evidence of a functioning MCP server. The URL returns an API error, and the skills repo describes CLI integration, not MCP server infrastructure."
+    }
+  ],
+  "revised": {
+    "id": 97,
+    "name": "higgsfield",
+    "website": "higgsfield.ai/cli",
+    "category": "AI, Research and Media-native",
+    "one_liner": "AI-powered image and video generation platform with 30+ models (Kling, Veo, Flux, Sora) accessible via REST API, SDK, and CLI.",
+    "auth_methods": [
+      {
+        "method": "API key",
+        "notes": "Primary method uses KEY_ID:KEY_SECRET credentials string, passed via HF_CREDENTIALS environment variable or config function. HTTP API uses Authorization: Key KEY_ID:KEY_SECRET header or Bearer token."
+      }
+    ],
+    "self_serve": "paid-plan",
+    "self_serve_notes": "API access is not available on the free tier. It requires upgrading to a paid professional or studio-level plan. The free plan only supports manual web-based experimentation, not programmatic API access.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "medium",
+      "notes": "Offers REST API with HTTP endpoints, official SDK for Node.js/TypeScript (@higgsfield/client on npm), and a CLI tool. Supports 30+ image and video generation models (Kling, Veo, Flux, Sora). API includes model invocation, project management, and character training capabilities."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "API access requires a paid subscription; not available on the free tier.",
+    "evidence": [
+      {
+        "url": "https://github.com/higgsfield-ai/higgsfield-js",
+        "supports": "Official Node.js SDK exists with v2 API support, authentication via KEY_ID:KEY_SECRET credentials"
+      },
+      {
+        "url": "https://registry.npmjs.org/@higgsfield/client",
+        "supports": "Published NPM package @higgsfield/client v0.2.1 with TypeScript support for image and video generation"
+      },
+      {
+        "url": "https://github.com/higgsfield-ai/cli/",
+        "supports": "Official CLI tool available with 'higgsfield auth login' command for authentication"
+      },
+      {
+        "url": "https://mcp.higgsfield.ai/mcp",
+        "supports": "Returns {\"error\":\"Unauthorized\"} - appears to be a REST API endpoint, not an MCP server"
+      },
+      {
+        "url": "https://flowith.io/blog/higgsfield-pricing-free-vs-creator-vs-studio/",
+        "supports": "API access gated to paid plans; not available on free tier"
+      },
+      {
+        "url": "https://github.com/higgsfield-ai/skills/blob/main/CLAUDE.md",
+        "supports": "Skills for CLI integration with API endpoints, not MCP server implementation"
+      }
+    ],
+    "confidence": 0.8,
+    "flags": [
+      "paid-api-access-only",
+      "official-sdk-available",
+      "cli-available"
+    ]
+  }
+}

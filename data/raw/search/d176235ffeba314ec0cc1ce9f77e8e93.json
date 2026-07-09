@@ -1,0 +1,45 @@
+{
+  "answer": "Otter.ai does not offer self-serve developer API access. The Otter.ai public API is restricted to Enterprise plan workspaces [1][2]. It is not available on the free Basic tier or individual Pro/Business subscriptions [3][4].\n\nTo access the API, organizations must typically have an Enterprise contract, which requires contacting their sales team for custom pricing and setup [1][5]. Once an Enterprise account is active, you can manage API keys through the Developer tab in your account integration settings [1][2].",
+  "results": [
+    {
+      "title": "Otter.ai Public API – Help Center",
+      "url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+      "snippet": ""
+    },
+    {
+      "title": "Otter.ai Complete Guide 2026: Features, Pricing, API, and How to Use | AI Tools DevPro",
+      "url": "https://aitoolsdevpro.com/ai-tools/otter-ai-guide/",
+      "snippet": ""
+    },
+    {
+      "title": "Otter.ai Pricing 2026 — Pro $8.33/user/month Annual | StackScored",
+      "url": "https://www.stackscored.com/pricing/ai-meeting-notes/otter-ai/",
+      "snippet": ""
+    },
+    {
+      "title": "Otter.ai Pricing 2026: Plans, Free Tier, and Alternatives",
+      "url": "https://spokenly.app/blog/otter-ai-pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Otter.ai API — Developer API access to Otter.ai's transcription engine. | Whipscribe tools",
+      "url": "https://whipscribe.com/tools/otter-business-api",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing | Otter.ai",
+      "url": "https://home.otter.ai/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Start for Free | Otter.ai",
+      "url": "https://otter.ai/start-for-free",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing | Otter.ai",
+      "url": "https://dev.otter.ai/pricing?0db891cc_page=18",
+      "snippet": ""
+    }
+  ]
+}

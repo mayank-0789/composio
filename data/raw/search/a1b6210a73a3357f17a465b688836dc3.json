@@ -1,0 +1,45 @@
+{
+  "answer": "Intercom uses Bearer token authentication [1][2]. For all API requests, you must provide your token in the Authorization header: `Authorization: Bearer <TOKEN>` [1][3][4].\n\nYou must choose between two methods based on your app type:\n\nUse Access Tokens for private apps accessing your own workspace data. You can generate these in the Developer Hub [1][5].\n\nUse OAuth for public integrations that access other users' data. This requires implementing an authorization flow to exchange a code for an access token using your app's Client ID and Client Secret [1][3][6].",
+  "results": [
+    {
+      "title": "Authentication | Intercom and Fin Developer Platform",
+      "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Intercom API",
+      "url": "https://developers.intercom.com/docs/references/rest-api/api.intercom.io.md",
+      "snippet": ""
+    },
+    {
+      "title": "Setting up OAuth | Intercom and Fin Developer Platform",
+      "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/authentication/setting-up-oauth",
+      "snippet": ""
+    },
+    {
+      "title": "Make an API call | Intercom and Fin Developer Platform",
+      "url": "https://developers.intercom.com/docs/build-an-integration/learn-more/rest-apis/make-an-api-call",
+      "snippet": ""
+    },
+    {
+      "title": "Create an Access Token",
+      "url": "https://intercom-developer-hub.readme.io/docs/personal-access-tokens",
+      "snippet": ""
+    },
+    {
+      "title": "Intercom API Authentication: Methods, Credentials, and Security",
+      "url": "https://apispine.com/intercom-api/authentication",
+      "snippet": ""
+    },
+    {
+      "title": "Intercom API | Intercom and Fin Developer Platform",
+      "url": "https://developers.intercom.com/docs/references/preview/rest-api/api.intercom.io",
+      "snippet": ""
+    },
+    {
+      "title": "Intercom API | Intercom and Fin Developer Platform",
+      "url": "https://developers.intercom.com/docs/references/2.13/rest-api/api.intercom.io",
+      "snippet": ""
+    }
+  ]
+}

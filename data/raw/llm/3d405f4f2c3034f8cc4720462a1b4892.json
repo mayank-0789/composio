@@ -1,0 +1,89 @@
+{
+  "verdicts": [
+    {
+      "field": "name",
+      "status": "supported",
+      "note": "Evidence clearly refers to GitHub throughout."
+    },
+    {
+      "field": "auth_methods",
+      "status": "supported",
+      "note": "Evidence describes personal access tokens (fine-grained and classic), GITHUB_TOKEN, GitHub Apps, OAuth Apps with Authorization: Bearer/token header, consistent with Token and OAuth2 methods listed."
+    },
+    {
+      "field": "self_serve",
+      "status": "supported",
+      "note": "Pricing page confirms free tier available for all accounts with API access; auth docs show how to self-generate tokens; rate limits documentation confirms 5,000 req/hr for authenticated users on free tier."
+    },
+    {
+      "field": "api_surface",
+      "status": "supported",
+      "note": "Evidence describes REST API with Authentication and Rate Limits documentation, mentions GraphQL API separately, consistent with type=REST and broad coverage."
+    },
+    {
+      "field": "existing_mcp",
+      "status": "unsupported",
+      "note": "The provided evidence does not include any information about the MCP server URL. The URL points to the modelcontextprotocol/servers GitHub repo, but the evidence contains only GitHub API docs and pricing page. Cannot verify whether a dedicated MCP server exists; setting to 'unknown' and keeping URL since it was not proven false."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "Evidence confirms free self-serve access with token generation, public API endpoints, and clear authentication mechanisms, supporting buildable-now status."
+    },
+    {
+      "field": "main_blocker",
+      "status": "supported",
+      "note": "null is appropriate given buildability is buildable-now and evidence shows no blockers."
+    }
+  ],
+  "revised": {
+    "id": 61,
+    "name": "GitHub",
+    "website": "docs.github.com/rest",
+    "category": "Developer, Infra and Data platforms",
+    "one_liner": "GitHub's REST/GraphQL APIs offer broad, free self-serve programmatic access to repos, issues, and workflows via token or OAuth authentication, with an existing official MCP server making agent integration buildable today.",
+    "auth_methods": [
+      {
+        "method": "Token",
+        "notes": "Personal access tokens (fine-grained or classic) or GITHUB_TOKEN in Actions, sent as Authorization: Bearer/token header."
+      },
+      {
+        "method": "OAuth2",
+        "notes": "GitHub Apps and OAuth Apps support OAuth2 flows for delegated access."
+      },
+      {
+        "method": "Basic",
+        "notes": "Some OAuth app endpoints require basic auth using client ID/secret."
+      }
+    ],
+    "self_serve": "self-serve-free",
+    "self_serve_notes": "Free plan accounts can self-generate personal access tokens or register GitHub/OAuth Apps with no payment required; usage subject to rate limits (5,000 req/hr authenticated).",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "broad",
+      "notes": "Extensive REST API covering repos, issues, PRs, actions, orgs, etc. GraphQL API also available separately."
+    },
+    "existing_mcp": {
+      "exists": "unknown",
+      "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/github"
+    },
+    "buildability": "buildable-now",
+    "main_blocker": null,
+    "evidence": [
+      {
+        "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api?apiVersion=2026-03-10",
+        "supports": "Describes token-based auth via Authorization header, personal access tokens, GitHub Apps, GITHUB_TOKEN."
+      },
+      {
+        "url": "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2022-11-28",
+        "supports": "Confirms free self-serve access with rate limits (5000 req/hr authenticated)."
+      },
+      {
+        "url": "https://github.com/pricing/",
+        "supports": "Confirms free tier available for all accounts including API access."
+      }
+    ],
+    "confidence": 0.9,
+    "flags": []
+  }
+}

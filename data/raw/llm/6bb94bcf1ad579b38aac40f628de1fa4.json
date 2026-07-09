@@ -1,0 +1,108 @@
+{
+  "verdicts": [
+    {
+      "field": "existing_mcp.exists",
+      "status": "contradicted",
+      "note": "The record states exists='yes' with url='https://developers.squarespace.com/', but the evidence shows this is just Squarespace's official API developer documentation, not a dedicated MCP (Model Context Protocol) server. No evidence of an actual MCP server exists."
+    },
+    {
+      "field": "existing_mcp.url",
+      "status": "contradicted",
+      "note": "The URL points to Squarespace's general developer documentation, not to an MCP server repository or implementation."
+    },
+    {
+      "field": "auth_methods",
+      "status": "unsupported",
+      "note": "The evidence for the authentication page (https://commerce-apis.squarespace.com/commerce-apis/authentication-and-permissions) is unavailable, so we cannot verify the specific auth methods. However, the OAuth page evidence does support OAuth2, and the record's description of OAuth2 for Extensions and webhooks is consistent with what's shown."
+    },
+    {
+      "field": "self_serve",
+      "status": "unsupported",
+      "note": "The pricing page evidence shows various paid plans exist but does not explicitly state that Commerce API access requires the Commerce Advanced plan specifically. The evidence is insufficient to verify the 'paid-plan' designation or the specific Commerce Advanced requirement."
+    },
+    {
+      "field": "self_serve_notes",
+      "status": "supported",
+      "note": "The pricing page confirms no free tier exists (only paid plans are shown), which aligns with the record's statement about no free tier and paid plan requirement."
+    },
+    {
+      "field": "api_surface.type",
+      "status": "supported",
+      "note": "The Website API overview page describes REST endpoints (GET requests), supporting the REST API type."
+    },
+    {
+      "field": "api_surface.breadth",
+      "status": "supported",
+      "note": "Evidence mentions Website API, Products API, Orders, Inventory, and Webhooks, which supports a 'medium' breadth assessment."
+    },
+    {
+      "field": "api_surface.notes",
+      "status": "supported",
+      "note": "The Website API overview explicitly states 'The Website API provides read-only access to several core resource objects,' confirming read-only restrictions in some areas."
+    },
+    {
+      "field": "buildability",
+      "status": "supported",
+      "note": "'buildable-with-caveats' is appropriate given the paid plan requirement documented in the evidence."
+    },
+    {
+      "field": "main_blocker",
+      "status": "unsupported",
+      "note": "While the pricing evidence supports paid plans existing, it doesn't specifically confirm that 'Commerce Advanced' is required for full API access. The second part about MCP implementations using unofficial API scraping is not supported by any evidence."
+    }
+  ],
+  "revised": {
+    "id": 46,
+    "name": "Squarespace",
+    "website": "developers.squarespace.com",
+    "category": "Ecommerce",
+    "one_liner": "Squarespace Commerce APIs let developers manage products, orders, inventory and website/store data using API keys or OAuth 2.0, but access requires a paid Commerce Advanced plan.",
+    "auth_methods": [
+      {
+        "method": "API key",
+        "notes": "Generated in site developer settings; used as Bearer token for custom applications (not verified in available evidence)."
+      },
+      {
+        "method": "OAuth2",
+        "notes": "Required for Squarespace Extensions and third-party apps; also required for webhook subscriptions which don't support API keys."
+      }
+    ],
+    "self_serve": "paid-plan",
+    "self_serve_notes": "No free tier; Commerce API access requires a paid subscription plan. Evidence shows only paid plans are available (Basic, Core, Plus, Advanced) but specific Commerce Advanced requirement for API access is not confirmed in available evidence.",
+    "api_surface": {
+      "type": "REST",
+      "breadth": "medium",
+      "notes": "Covers Commerce APIs: Website, Products, Orders, Inventory, Webhooks, etc. Read-only in some areas (e.g., Website API)."
+    },
+    "existing_mcp": {
+      "exists": "no"
+    },
+    "buildability": "buildable-with-caveats",
+    "main_blocker": "Requires a paid plan for API access; no free tier available.",
+    "evidence": [
+      {
+        "url": "https://commerce-apis.squarespace.com/commerce-apis/authentication-and-permissions",
+        "supports": "Authentication methods (page unavailable in evidence check)."
+      },
+      {
+        "url": "https://developers.squarespace.com/commerce-apis/website-overview",
+        "supports": "Details Website API resources with read-only access to core resource objects."
+      },
+      {
+        "url": "https://developers.squarespace.com/commerce-apis/oauth",
+        "supports": "OAuth2 flow required for third-party applications and Extensions."
+      },
+      {
+        "url": "https://www.websitebuilderexpert.com/website-builders/squarespace-pricing/",
+        "supports": "No free tier; only paid plans available (Basic, Core, Plus, Advanced)."
+      }
+    ],
+    "confidence": 0.65,
+    "flags": [
+      "No free tier - paid plan required for API access",
+      "Specific Commerce Advanced plan requirement not confirmed in available evidence",
+      "Primary authentication page unavailable for verification",
+      "API key authentication method not verified in available evidence"
+    ]
+  }
+}

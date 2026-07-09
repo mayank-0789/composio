@@ -1,0 +1,45 @@
+{
+  "answer": "Because there are multiple, distinct services using the name Sherlock, pricing and API availability depend on which tool you are using:\n\nBill Sherlock offers a free, unauthenticated REST API for medical billing analysis at the endpoint POST https://www.billsherlock.app/api/v1/investigate, limited to 10 requests per hour [1].\n\nEmailsherlock provides an API for email verification with a free tier of 1,000 verifications per month [2].\n\nSherlocks.ai, an AI-powered SRE platform, includes a self-serve free plan with 30 investigations per month and no credit card required [3][4].\n\nSherlock Calls, a Slack-native AI voice investigator, offers a free tier providing 100 credits per Slack workspace to start [5][6].\n\nAnsys Sherlock provides gRPC-based APIs for engineering analysis, which require a project to exist within the desktop client to operate [7].\n\nSherlock AI, a hiring platform, does not offer a free tier, with paid plans starting at $100 per month [8].",
+  "results": [
+    {
+      "title": "Investigate API | Bill Sherlock",
+      "url": "https://www.billsherlock.app/docs",
+      "snippet": ""
+    },
+    {
+      "title": "Email Verification API · Emailsherlock",
+      "url": "https://www.emailsherlock.com/api",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing - Sherlocks AI | AI-Powered SRE Platform",
+      "url": "https://www.sherlocks.ai/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Sherlocks.ai 2026: Traffic, Pricing & Features",
+      "url": "https://aitoolstime.com/tool/sherlocks-ai",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing — Sherlock Calls | Free to Start, Scale as You Grow | Sherlock Calls",
+      "url": "https://www.usesherlock.ai/pricing",
+      "snippet": ""
+    },
+    {
+      "title": "Sherlock Calls vs EvaluAgent — AI Voice Investigation vs Contact Center Auto-QA | Sherlock Calls",
+      "url": "https://www.usesherlock.ai/compare/vs/evaluagent",
+      "snippet": ""
+    },
+    {
+      "title": "Getting started | Ansys Developer Portal",
+      "url": "https://developer.ansys.com/docs/sherlock-apis-2025-r2/getting-started.md",
+      "snippet": ""
+    },
+    {
+      "title": "Pricing - Sherlock AI",
+      "url": "https://www.withsherlock.ai/pricing",
+      "snippet": ""
+    }
+  ]
+}

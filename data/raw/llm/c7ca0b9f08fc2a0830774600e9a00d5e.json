@@ -1,0 +1,42 @@
+{
+  "one_liner": "Plain is a B2B support/helpdesk platform exposing a full self-serve GraphQL API with API-key auth and an official OAuth-based MCP server, making it readily buildable for agent tooling today.",
+  "auth_methods": [
+    {
+      "method": "API key",
+      "notes": "Machine Users generate API keys with fine-grained permissions; used as Bearer token in Authorization header (Authorization: Bearer plainApiKey_xxx)."
+    },
+    {
+      "method": "OAuth2",
+      "notes": "The official hosted MCP server (mcp.plain.com/mcp) authenticates via OAuth using your existing Plain account, no manual API key needed."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Free tier (3 seats, 1,000 threads/month) includes API access; API keys self-generated via Settings > Machine Users, no credit card required to start.",
+  "api_surface": {
+    "type": "GraphQL",
+    "breadth": "broad",
+    "notes": "Full GraphQL API (core-api.uk.plain.com/graphql/v1) with no limitations vs the UI; typed TypeScript SDK also available."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://mcp.plain.com/mcp"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": null,
+  "evidence": [
+    {
+      "url": "https://plain.mintlify.app/graphql/authentication",
+      "supports": "API key generation via Machine Users and Bearer token auth scheme"
+    },
+    {
+      "url": "https://plain.mintlify.app/graphql/introduction",
+      "supports": "Full GraphQL API details, endpoint URL, schema access, and reference to MCP server"
+    },
+    {
+      "url": "https://www.plain.com/pricing",
+      "supports": "Free tier with self-serve signup and API access, no credit card required"
+    }
+  ],
+  "confidence": 0.9,
+  "flags": []
+}

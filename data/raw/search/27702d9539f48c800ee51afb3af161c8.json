@@ -1,0 +1,45 @@
+{
+  "answer": "Higgsfield AI does not provide developer API access on its free tier [1]. API access is a gated feature reserved for higher-tier professional or studio-level plans [1][2].\n\nWhile a free plan exists for manual, web-based experimentation [1][2], programmatic API access requires a paid subscription [1]. Documentation notes that API usage is intended for automated workflows and production pipelines, which are not supported under free account limitations [1][2]. If you require API integration, you must upgrade to a plan that explicitly lists API access as a feature [1][2]. Always verify the current tier benefits on the official Higgsfield pricing page before subscribing [3][4].",
+  "results": [
+    {
+      "title": "Higgsfield Pricing Explained: Free vs. Creator vs. Studio Plans - Flowith Blog",
+      "url": "https://flowith.io/blog/higgsfield-pricing-free-vs-creator-vs-studio/",
+      "snippet": ""
+    },
+    {
+      "title": "Higgsfield AI Pricing Plans: Complete Guide & Comparison",
+      "url": "https://sozee.ai/resources/higgsfield-pricing-plans-comparison-higgsfield/",
+      "snippet": ""
+    },
+    {
+      "title": "Higgsfield AI vs Runway 2026: Plans and Pricing Compared",
+      "url": "https://higgsfield.ai/blog/higgsfield-vs-runway-2026",
+      "snippet": ""
+    },
+    {
+      "title": "Higgsfield AI API Guide: Pricing, Features, and Setup",
+      "url": "https://webaistack.com/unlocking-advanced-ai-capabilities-a-comprehensive-guide-to-the-higgsfield-ai-api/",
+      "snippet": ""
+    },
+    {
+      "title": "higgsfield-ai/higgsfield-js",
+      "url": "https://github.com/higgsfield-ai/higgsfield-js/",
+      "snippet": ""
+    },
+    {
+      "title": "Higgsfield API: Features, Pricing & Setup",
+      "url": "https://gptproto.com/blog/higgsfield-api",
+      "snippet": ""
+    },
+    {
+      "title": "Higgsfield AI — AI-native creative suite",
+      "url": "https://higgsfield.ai/?content=cid-23792784207_agi-193771123857_adi-806897268471_tid-kwd-1675269397839_dev-c_reg-9210663&gad_campaignid=23792784207",
+      "snippet": ""
+    },
+    {
+      "title": "Higgsfield AI Pricing, Review & AI Fit Score (March 2026) | AI Tools Mentor",
+      "url": "https://www.aitoolsmentor.com/tool/higgsfield",
+      "snippet": ""
+    }
+  ]
+}

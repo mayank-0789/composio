@@ -1,0 +1,5 @@
+{
+  "exists": "yes",
+  "url": "https://github.com/thomastx05/magento-mcp",
+  "reason": "Multiple dedicated MCP servers exist for Magento/Adobe Commerce:\n1. thomastx05/magento-mcp - Provides comprehensive business-level administration tools (catalog, promotions, CMS, orders) with OAuth 1.0/Bearer token authentication\n2. Magendooro/magemcp - Similar administrative capabilities for Magento 2\n3. rafaelstz/adobe-commerce-dev-mcp - Development-focused server for GraphQL/REST API introspection and integration development\n4. seandearnaley/mcp-warden-magento-ts - Warden-based local environment server for CLI operations\n\nThese are distinct MCP server packages (not the product itself) that expose Magento/Adobe Commerce capabilities over the Model Context Protocol."
+}

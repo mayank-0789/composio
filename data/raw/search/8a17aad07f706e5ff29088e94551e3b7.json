@@ -1,0 +1,45 @@
+{
+  "answer": "Salesforce supports two primary authentication methods for its APIs. OAuth 2.0 is the recommended, most secure approach for all API types [1][2][3]. It uses an external client app or connected app to exchange credentials for access tokens [1]. For REST and GraphQL APIs, you provide this access token in the authorization header [4][5].\n\nAlternatively, the SOAP API login call is available [6]. This method authenticates via a username and password (with a security token appended if not on a trusted IP) to return a session ID and server URL [7][6]. Note that login is disabled by default in new organizations [6].",
+  "results": [
+    {
+      "title": "Authorization Through External Client Apps or Connected Apps and OAuth 2.0 | SOAP API Developer Guide | Salesforce Developers",
+      "url": "https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_oauth_and_connected_apps.htm",
+      "snippet": ""
+    },
+    {
+      "title": "Authenticate API Calls with Salesforce Scheduler APIs | Salesforce Scheduler Developer Guide | Salesforce Developers",
+      "url": "https://developer.salesforce.com/docs/atlas.en-us.salesforce_scheduler_developer_guide.meta/salesforce_scheduler_developer_guide/uc8_scheduler_api_auth.htm",
+      "snippet": ""
+    },
+    {
+      "title": "Salesforce REST API Integration Guide: 2 Simple Methods | Airbyte",
+      "url": "https://airbyte.com/data-engineering-resources/integrate-with-salesforce-api",
+      "snippet": ""
+    },
+    {
+      "title": "GraphQL API | Salesforce Developers",
+      "url": "https://developer.salesforce.com/docs/platform/graphql/references/graphql",
+      "snippet": ""
+    },
+    {
+      "title": "Set Self-Service User Password | REST API Developer Guide | Salesforce Developers",
+      "url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/resources_sobject_self_service_user_password_post.htm",
+      "snippet": ""
+    },
+    {
+      "title": "login() | SOAP API Developer Guide | Salesforce Developers",
+      "url": "https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_calls_login.htm",
+      "snippet": ""
+    },
+    {
+      "title": "Security and the API | SOAP API Developer Guide | Salesforce Developers",
+      "url": "https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_concepts_security.htm",
+      "snippet": ""
+    },
+    {
+      "title": "GraphQL API | Salesforce Developers",
+      "url": "https://developer.salesforce.com/docs/platform/graphql/references/graphql?meta=Summary",
+      "snippet": ""
+    }
+  ]
+}

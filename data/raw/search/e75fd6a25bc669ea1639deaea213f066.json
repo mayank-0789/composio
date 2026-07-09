@@ -1,0 +1,45 @@
+{
+  "answer": "Yes, Salesforce offers free developer access through the Salesforce Developer Edition [1][2]. This environment is self-serve, requires no contract, and does not expire as long as you log in periodically [2][3]. It includes the full Salesforce platform, providing access to APIs for building and testing applications, integrating external systems, and developing AI agents with Agentforce [1][3]. To check your current API limits within an environment, you can query the REST API Limits resource:\n\n```http\nGET /services/data/vXX.X/limits\n```\n\nThis request returns your maximum and remaining API allocations [4]. You can sign up for a free Developer Edition org directly via the Salesforce developer website [1][2].",
+  "results": [
+    {
+      "title": "Developer Edition with Agentforce and Data 360 | Salesforce",
+      "url": "https://developer.salesforce.com/signup?d=70130000000EjH",
+      "snippet": ""
+    },
+    {
+      "title": "New in Salesforce Developer Edition: Agentforce Vibes IDE, Claude 4.5, MCP | Salesforce Developers Blog",
+      "url": "https://developer.salesforce.com/blogs/2026/04/new-developer-edition-agentforce-vibes-claude-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Introducing the New Salesforce Developer Edition, Now with Agentforce and Data Cloud | Salesforce Developers Blog",
+      "url": "https://developer.salesforce.com/blogs/2025/03/introducing-the-new-salesforce-developer-edition-now-with-agentforce-and-data-cloud",
+      "snippet": ""
+    },
+    {
+      "title": "API Limits and Monitoring Your API Usage | Salesforce Developers Blog",
+      "url": "https://developer.salesforce.com/blogs/2024/11/api-limits-and-monitoring-your-api-usage",
+      "snippet": ""
+    },
+    {
+      "title": "Agentforce and AI App Development Pricing | Salesforce",
+      "url": "https://www.salesforce.com/platform/enterprise-app-development/pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "CRM Pricing Plans | Salesforce",
+      "url": "https://www.salesforce.com/crm/pricing/",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://www.salesforce.com/content/dam/web/en_us/www/documents/pricing/salesforce-platform-pricing-editions.pdf?bc=HA",
+      "snippet": ""
+    },
+    {
+      "title": "Salesforce Small Business Pricing: All-in-One CRM Solutions | Salesforce",
+      "url": "https://www.salesforce.com/small-business/pricing/",
+      "snippet": ""
+    }
+  ]
+}

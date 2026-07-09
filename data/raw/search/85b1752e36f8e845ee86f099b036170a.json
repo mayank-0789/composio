@@ -1,0 +1,45 @@
+{
+  "answer": "To close an MCP server session, the connection is terminated during the shutdown phase of the protocol lifecycle [1]. No specific shutdown message exists in the protocol; instead, the connection is closed using the underlying transport mechanism [1].\n\nFor Stdio transport, the client initiates shutdown by closing the input stream to the server process [1]. If the server does not exit, the client should send a SIGTERM and subsequently a SIGKILL [1]. For HTTP transports, shutdown is indicated by closing the associated HTTP connections [1]. When using the Go SDK, you can call the Close method on the client session [2].",
+  "results": [
+    {
+      "title": "Lifecycle - Model Context Protocol",
+      "url": "https://mcp.mintlify.app/specification/2024-11-05/basic/lifecycle",
+      "snippet": ""
+    },
+    {
+      "title": "docs/protocol.md at main · modelcontextprotocol/go-sdk",
+      "url": "https://github.com/modelcontextprotocol/go-sdk/blob/main/docs/protocol.md",
+      "snippet": ""
+    },
+    {
+      "title": "Understanding MCP servers",
+      "url": "https://modelcontextprotocol.io/docs/learn/server-concepts",
+      "snippet": ""
+    },
+    {
+      "title": "Build an MCP server - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/develop/build-server",
+      "snippet": ""
+    },
+    {
+      "title": "Architecture overview - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/learn/architecture",
+      "snippet": ""
+    },
+    {
+      "title": "Building MCP servers for ChatGPT Apps and API integrations",
+      "url": "https://developers.openai.com/api/docs/mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Building Servers - MCP Python SDK",
+      "url": "https://modelcontextprotocol.github.io/python-sdk/server/",
+      "snippet": ""
+    },
+    {
+      "title": "Architecture - Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/specification/2025-06-18/architecture",
+      "snippet": ""
+    }
+  ]
+}

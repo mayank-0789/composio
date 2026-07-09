@@ -1,0 +1,45 @@
+{
+  "answer": "A Squarespace Model Context Protocol (MCP) server allows AI agents to interact directly with your website and commerce data, enabling tasks like querying orders, managing products, updating content, and analyzing site traffic [1][2][3].\n\nSeveral providers offer these servers, typically functioning as a bridge between your Squarespace API credentials and your AI client (such as Claude Desktop, Cursor, or VS Code) [4][3][5]. Options vary in scope and functionality:\n\n- BusyBee3333 offers a comprehensive TypeScript-based server with 67 tools covering full API features [1].\n- timncox provides an extensive server with over 141 tools for deep site editing, including page structure, CSS, and menu parsing [2].\n- StackOne, MCPEngage, and DataFaucet offer simplified setups for commerce and content management, often requiring minimal or no code configuration [4][3][6].\n- Vinkius focuses on a read-only auditing approach for transactions, inventory, and customer data [7].\n\nTo use one, you typically configure your `claude_desktop_config.json` file with the provider’s URL or command and your Squarespace API keys [1][3][5]. Authentication is handled via OAuth2 or API keys, depending on the specific implementation chosen [1][4][6].",
+  "results": [
+    {
+      "title": "BusyBee3333/squarespace-mcp-2026-complete",
+      "url": "https://github.com/BusyBee3333/squarespace-mcp-2026-complete",
+      "snippet": ""
+    },
+    {
+      "title": "timncox/squarespace-mcp",
+      "url": "https://github.com/timncox/squarespace-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Squarespace MCP Server: Give AI Agents Access to Your Website and Store Data | DataFaucet",
+      "url": "https://datafaucet.dev/blog/squarespace-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "",
+      "url": "https://www.stackone.com/connectors/squarespace/mcp/",
+      "snippet": ""
+    },
+    {
+      "title": "Squarespace MCP Server & Skill — 24 Tools",
+      "url": "https://www.mcpbundles.com/skills/squarespace",
+      "snippet": ""
+    },
+    {
+      "title": "MCPEngage for Squarespace — AI-Power Your Squarespace in 2 Clicks",
+      "url": "https://mcpengage.com/squarespace/",
+      "snippet": ""
+    },
+    {
+      "title": "Squarespace MCP Server Ready to Use!",
+      "url": "https://vinkius.com/apps/squarespace-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "Squarespace MCP | viaSocket",
+      "url": "https://viasocket.com/mcp/squarespace",
+      "snippet": ""
+    }
+  ]
+}

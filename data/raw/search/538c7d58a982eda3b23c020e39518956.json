@@ -1,0 +1,45 @@
+{
+  "answer": "The Help Scout Model Context Protocol (MCP) server enables AI assistants to interact with your Help Scout account to search conversations, pull customer profiles, and retrieve thread histories. You can use it with any MCP-compatible client like Claude Desktop, Cursor, or VS Code [1][2][3].\n\nTo set it up, create a Private App in your Help Scout account settings to obtain your App ID and App Secret. Add the server to your MCP configuration file using the following structure:\n\n```json\n{\n  \"mcpServers\": {\n    \"helpscout\": {\n      \"command\": \"npx\",\n      \"args\": [\"@gravitykit/help-scout-mcp\"],\n      \"env\": {\n        \"HELPSCOUT_APP_ID\": \"your-app-id\",\n        \"HELPSCOUT_APP_SECRET\": \"your-app-secret\"\n      }\n    }\n  }\n}\n```\n\nThis server supports features like PII redaction, automatic API rate limit handling, and advanced search filters for tickets and customers [1][2][3]. Note that Help Scout exclusively uses the OAuth2 Client Credentials flow for authentication [1][2].",
+  "results": [
+    {
+      "title": "Help Scout",
+      "url": "https://mcpservers.org/servers/drewburchfield/help-scout-mcp-server",
+      "snippet": ""
+    },
+    {
+      "title": "@gravitykit/help-scout-mcp",
+      "url": "https://registry.npmjs.org/@gravitykit/help-scout-mcp",
+      "snippet": ""
+    },
+    {
+      "title": "GitHub - drewburchfield/help-scout-mcp-server at ea5ee1b327ceb127157899a944a166716e78df3d · GitHub",
+      "url": "https://github.com/drewburchfield/help-scout-mcp-server/tree/ea5ee1b327ceb127157899a944a166716e78df3d",
+      "snippet": ""
+    },
+    {
+      "title": "guides/architecture/mcp-tool-contract.md",
+      "url": "https://github.com/drewburchfield/help-scout-mcp-server/blob/main/guides/architecture/mcp-tool-contract.md",
+      "snippet": ""
+    },
+    {
+      "title": "GitHub - drewburchfield/help-scout-mcp-server at 8ce5e7f80a9b65a7ec88a421e8184bb40bcb85ca · GitHub",
+      "url": "https://github.com/drewburchfield/help-scout-mcp-server/tree/8ce5e7f80a9b65a7ec88a421e8184bb40bcb85ca",
+      "snippet": ""
+    },
+    {
+      "title": "GitHub - drewburchfield/help-scout-mcp-server at 240f3a1e35c41ce22874e023f6ccdb28b138d51c · GitHub",
+      "url": "https://github.com/drewburchfield/help-scout-mcp-server/tree/240f3a1e35c41ce22874e023f6ccdb28b138d51c",
+      "snippet": ""
+    },
+    {
+      "title": "src/index.ts at aec1f578 · drewburchfield/help-scout-mcp-server",
+      "url": "https://github.com/drewburchfield/help-scout-mcp-server/blob/aec1f578/src/index.ts",
+      "snippet": ""
+    },
+    {
+      "title": "GitHub - drewburchfield/help-scout-mcp-server at dfbf3d11a6a54aa3761f002f718bf4c97906a307 · GitHub",
+      "url": "https://github.com/drewburchfield/help-scout-mcp-server/tree/dfbf3d11a6a54aa3761f002f718bf4c97906a307",
+      "snippet": ""
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "one_liner": "Slack provides a broad, self-serve REST-style Web API secured via OAuth2/bearer tokens, with existing community MCP servers making agent toolkits buildable today.",
+  "auth_methods": [
+    {
+      "method": "OAuth2",
+      "notes": "Standard OAuth 2.0 flow (oauth.v2.access) to obtain bearer tokens scoped to a workspace; recommended approach for third-party apps."
+    },
+    {
+      "method": "Token",
+      "notes": "Bearer tokens (including test/dev tokens) passed via Authorization header or token param; bot/user tokens generated via app configuration."
+    }
+  ],
+  "self_serve": "self-serve-free",
+  "self_serve_notes": "Developers can create a Slack app and generate OAuth tokens for free on the Free plan to build/test integrations; some capabilities depend on the host workspace's plan (e.g., 10-app limit, 90-day history) and commercial distribution may require additional agreements/review.",
+  "api_surface": {
+    "type": "REST",
+    "breadth": "broad",
+    "notes": "Slack Web API is a broad RPC-style HTTP API with hundreds of methods for messaging, channels, users, files, etc. Also has Events API, RTM, and SDKs."
+  },
+  "existing_mcp": {
+    "exists": "yes",
+    "url": "https://github.com/korotovsky/slack-mcp-server"
+  },
+  "buildability": "buildable-now",
+  "main_blocker": "None significant; official OAuth-based apps may require admin approval for installation in some workspaces, and some community MCP servers rely on session tokens which are against Slack's ToS.",
+  "evidence": [
+    {
+      "url": "https://docs.slack.dev/apis/web-api/",
+      "supports": "Describes Web API as broad REST-like RPC API"
+    },
+    {
+      "url": "https://docs.slack.dev/reference/methods/oauth.v2.access.md",
+      "supports": "OAuth2 token exchange method"
+    },
+    {
+      "url": "https://docs.slack.dev/reference/methods/auth.test.md",
+      "supports": "Token-based auth testing endpoint"
+    },
+    {
+      "url": "https://slack.com/pricing/free",
+      "supports": "Free plan supports app development"
+    },
+    {
+      "url": "https://docs.slack.dev/reference/methods/team.billing.info.md",
+      "supports": "Endpoint to check workspace plan programmatically"
+    }
+  ],
+  "confidence": 0.75,
+  "flags": [
+    "Community MCP servers using session tokens violate Slack ToS",
+    "Official OAuth apps may need workspace admin approval for installation"
+  ]
+}
